@@ -54,7 +54,7 @@ For each SmartClient class or object (classes inherit from Class, objects do not
 
 * *ClassName*: This interface defines the properties and methods of an instance of the class (what SmartClient calls **Instance APIs**). Example: __Label__
 * *ClassName*Static: This interface defines the properties and methods of the static class (what SmartClient calls **Class APIs**). Example: __LabelStatic__ which is what __isc.Label__ is.
-* *ClassName*Properties: This interface exposes all of the instance methods (for overriding) and all of the instance properties that are marked with the I flag. All methods and properties are defined as optional. The static .create() methods are all inherited from ClassStatic.create() defined as:
+* *ClassName*Properties: This interface defines all of the instance methods (for overriding) and all of the instance properties that are marked with the I flag. All methods and properties are defined as optional. The static .create() methods are all inherited from ClassStatic.create(), defined as:
 
 ```TypeScript
 export interface ClassStatic<T, P>  {
@@ -91,7 +91,7 @@ If you want to use a SmartClient method that is not defined yet, you have a coup
  // MyIscExtensions.d.ts
  declare namespace Isc {
     export interface Label {
-        setIcon(): void;  // This is a real method that is not defined yet.
+        setIcon(icon: string): void;  // This is a real method that is not defined yet.
     }
  }
  ```
