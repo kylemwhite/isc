@@ -1,18 +1,3142 @@
-SmartClientTypeScriptDefinitionGenerator
-By Kyle White (http://kmwTech.com)
 
-Errors during generation
-Generated: 4/28/2017 4:36:09 PM by kwhite
+// Type definitions for Isomorphic SmartClient 11.1
+// Project: https://gihub.com/kylemwhite/isc
+// Definitions by: Kyle White <http://kmwTech.com>
+// Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
+// Generated: 4/30/2017 4:05:18 PM by kwhite
 
-Summary
-Total Types  : 225
-Total Classes: 308
-Total Objects: 67
-Total Methods: 3063
+declare namespace Isc {
 
-Methods with flag: 6
-class:StretchImgButton.action, object:validatorDefinition.action, class:Button.action, object:MenuItem.action, class:ImgButton.action, class:Canvas.adaptHeightBy, class:Canvas.adaptWidthBy, class:Tree.add, object:Array.add, interface:List.add, object:Array.addAt, interface:List.addAt, class:Class.addAutoChild, class:Toolbar.addButtons, class:Calendar.addCalendarEvent, class:Canvas.addChild, class:FilterBuilder.addClause, class:PortalLayout.addColumn, class:CubeGrid.addColumnFacet, class:ToolStripGroup.addControl, class:ToolStripGroup.addControls, class:FilterBuilder.addCriterion, class:DataSource.addData, class:TileGrid.addData, class:ListGrid.addData, class:DrawPane.addDrawItem, class:ListGrid.addEmbeddedComponent, class:Calendar.addEvent, class:CubeGrid.addFacet, class:DynamicForm.addFieldErrors, class:ValuesManager.addFieldErrors, class:ToolStrip.addFormItem, interface:DataBoundComponent.addFormulaField, class:EditPane.addFromPaletteNode, class:EditTree.addFromPaletteNode, class:EditContext.addFromPaletteNode, class:EditTree.addFromPaletteNodes, class:EditContext.addFromPaletteNodes, class:EditPane.addFromPaletteNodes, class:DrawPane.addGradient, class:RibbonBar.addGroup, class:Calendar.addIndicator, class:SectionStack.addItem, class:Window.addItem, class:Window.addItems, class:Calendar.addLane, class:Calendar.addLaneEvent, interface:List.addList, class:Tree.addList, object:Array.addList, interface:List.addListAt, object:Array.addListAt, class:ValuesManager.addMember, class:Layout.addMember, class:Window.addMember, class:Window.addMembers, class:Layout.addMembers, class:ValuesManager.addMembers, class:MenuBar.addMenus, class:EditPane.addNode, class:EditTree.addNode, class:EditContext.addNode, class:EditPane.addPaletteNodesFromJS, class:EditTree.addPaletteNodesFromJS, class:EditContext.addPaletteNodesFromJS, class:EditContext.addPaletteNodesFromJSON, class:EditPane.addPaletteNodesFromJSON, class:EditTree.addPaletteNodesFromJSON, class:EditPane.addPaletteNodesFromXML, class:EditContext.addPaletteNodesFromXML, class:EditTree.addPaletteNodesFromXML, class:Canvas.addPeer, class:PortalLayout.addPortlet, class:Class.addProperties, class:Class.addPropertyList, class:CubeGrid.addRowFacet, class:DataSource.addSearchOperator, class:SectionStack.addSection, class:Gauge.addSector, class:Canvas.addSnapAlignCandidate, class:ListGrid.addSort, interface:DataBoundComponent.addSummaryField, class:TabSet.addTab, class:TabSet.addTabClicked, class:TabSet.addTabs, class:TileLayout.addTile, class:TileGrid.addTile, class:StretchImgButton.addToRadioGroup, class:Button.addToRadioGroup, class:StatefulCanvas.addToRadioGroup, class:ImgButton.addToRadioGroup, class:Calendar.addZone, class:Canvas.adjustForContent, class:Tree.allChildrenLoaded, class:ResultSet.allMatchingRowsCached, class:ResultSet.allRowsCached, object:Array.and, class:Canvas.animateFade, class:Canvas.animateHide, class:Canvas.animateMove, class:Canvas.animateRect, class:Canvas.animateResize, class:Canvas.animateScroll, class:Canvas.animateShow, class:Callbacks.AnimationCallback, class:CubeGrid.anyCellSelected, class:ListGrid.anySelected, interface:DataBoundComponent.anySelected, class:TileGrid.anySelected, class:ColumnTree.anySelected, class:CellSelection.anySelected, class:Selection.anySelected, class:ListGrid.applyCellData, class:ListPropertiesDialog.applyClick, class:Dialog.applyClick, class:ResultSet.applyFilter, class:DataSource.applyFilter, class:ResultTree.applyFilter, class:FormItem.applyFormula, class:RichTextCanvas.applyListProperties, class:ListGrid.applyRecordData, class:ListGrid.applySortToData, class:ListGrid.askForSort, interface:DataBoundComponent.askForSort, class:DynamicForm.assignItemsTabPositions, class:ListGrid.autoFitField, class:ListGrid.autoFitFields, class:Calendar.backgroundClick, class:Calendar.backgroundMouseDown, class:Calendar.backgroundMouseUp, class:Canvas.blur, class:FormItem.blur, class:FormItem.blurItem, class:ListGrid.bodyKeyPress, class:DrawItem.bringToFront, class:Canvas.bringToFront, class:Dialog.buttonClick, class:FieldPicker.callback, class:WebService.callOperation, class:DynamicForm.cancel, class:ValuesManager.cancel, class:DateChooser.cancelClick, class:ListPropertiesDialog.cancelClick, class:Dialog.cancelClick, class:Calendar.cancelEditing, class:DynamicForm.cancelEditing, class:UserTask.cancelEditing, class:AdvancedHiliteEditor.cancelEditing, class:ListGrid.cancelEditing, class:TabSet.cancelTabTitleEditing, class:TreeGrid.canEditCell, class:ListGrid.canEditCell, class:CanvasItem.canEditChanged, class:DateRangeItem.canEditCriterion, class:FormItem.canEditCriterion, class:ComboBoxItem.canEditCriterion, class:MiniDateRangeItem.canEditCriterion, class:CanvasItem.canEditCriterion, class:ListGrid.canExpandRecord, class:Callbacks.CanPlayCallback, class:ListGrid.canSelectCell, class:ListGrid.canSelectRecord, object:ListGridField.cellChanged, class:ListGrid.cellChanged, class:ListGrid.cellClick, class:GridRenderer.cellClick, class:ListGrid.cellContextClick, class:GridRenderer.cellContextClick, class:GridRenderer.cellDoubleClick, class:ListGrid.cellDoubleClick, class:ListGrid.cellErrorIconHover, class:ListGrid.cellErrorIconOut, class:ListGrid.cellErrorIconOver, class:ListGrid.cellHasChanges, class:ListGrid.cellHasErrors, class:GridRenderer.cellHover, class:ListGrid.cellHover, class:ListGrid.cellHoverHTML, class:GridRenderer.cellHoverHTML, class:GridRenderer.cellIsEnabled, class:CellSelection.cellIsSelected, class:CubeGrid.cellIsSelected, class:GridRenderer.cellMouseDown, class:ListGrid.cellMouseDown, class:GridRenderer.cellMouseUp, class:ListGrid.cellMouseUp, class:ListGrid.cellOut, class:GridRenderer.cellOut, class:GridRenderer.cellOver, class:ListGrid.cellOver, class:ListGrid.cellSelectionChanged, class:GridRenderer.cellSelectionChanged, class:CubeGrid.cellSelectionChanged, class:GridRenderer.cellValueHover, class:ListGrid.cellValueHover, class:ListGrid.cellValueHoverHTML, class:GridRenderer.cellValueHoverHTML, class:GridRenderer.cellValueIsClipped, class:ListGrid.cellValueIsClipped, class:Window.centerInPage, class:FormItem.change, object:ListGridField.change, class:RangeSlider.changed, class:FormItem.changed, object:ListGridField.changed, class:FacetChart.chartBackgroundDrawn, class:ListGrid.chartColumn, class:ListGrid.chartData, class:FacetChart.chartDrawn, class:ListGrid.chartRow, class:DynamicForm.checkForValidationErrors, object:MenuItem.checkIf, class:Canvas.clear, class:FilterBuilder.clearCriteria, class:ListGrid.clearCriteria, class:ListGrid.clearEditValue, class:CubeGrid.clearEditValue, class:DynamicForm.clearErrors, class:FormItem.clearErrors, class:ValuesManager.clearErrors, class:Canvas.clearExplicitTabIndex, class:ListGrid.clearFieldError, class:ValuesManager.clearFieldErrors, class:DynamicForm.clearFieldErrors, class:HiliteEditor.clearHilites, class:Class.clearLogPriority, object:Array.clearProperty, class:FacadeDataSource.clearQueue, class:ListGrid.clearRowErrors, class:ListGrid.clearSort, class:ValuesManager.clearValue, class:FormItem.clearValue, class:DynamicForm.clearValue, class:DynamicForm.clearValues, class:ValuesManager.clearValues, object:FormItemIcon.click, class:Canvas.click, class:IconButton.click, object:MenuItem.click, class:ButtonItem.click, class:DrawGroup.click, class:FormItem.click, class:DrawItem.click, class:Canvas.clickMaskUp, class:Callbacks.ClientOnlyDataSourceCallback, class:DataSource.cloneDSRequest, class:DataSource.cloneDSResponse, class:Portlet.close, class:Window.close, class:Tree.closeAll, class:Dialog.closeClick, class:Portlet.closeClick, class:Window.closeClick, class:TabSet.closeClick, class:CubeGrid.closeColumn, class:CubeGrid.closeFacet, class:Tree.closeFolder, class:TreeGrid.closeFolder, class:Tree.closeFolders, class:ListGrid.closeGroup, class:CubeGrid.collapseField, class:ListGrid.collapseRecord, class:ListGrid.collapseRecords, class:SectionStack.collapseSection, class:SectionItem.collapseSection, class:Callbacks.CollapseSectionCallback, class:ColorPicker.colorChanged, class:ColorPicker.colorSelected, class:ResultTree.compareCriteria, class:DataSource.compareCriteria, object:Operator.compareCriteria, class:ResultSet.compareCriteria, class:DataSource.compareDates, class:SimpleType.compareValues, class:DynamicForm.completeEditing, class:UserTask.completeEditing, class:DrawItem.computeAngle, class:Validator.condition, object:validatorDefinition.condition, object:Operator.condition, class:ListGrid.configureGrouping, object:Array.contains, class:Canvas.contains, class:String.contains, interface:List.contains, object:Array.containsAll, interface:List.containsAll, class:Canvas.containsEvent, class:Canvas.containsFocus, class:Canvas.containsPoint, object:Array.containsProperty, class:HTMLFlow.contentLoaded, class:DataSource.convertDataSourceCriteria, class:DataSource.convertRelativeDates, class:RichTextCanvas.convertSelectionToOrderedList, class:RichTextCanvas.convertSelectionToUnorderedList, class:EditContext.copyEditNodes, class:EditTree.copyEditNodes, class:EditPane.copyEditNodes, class:DataSource.copyRecord, class:DataSource.copyRecords, class:Class.createAutoChild, class:CanvasItem.createCanvas, class:RibbonGroup.createControl, class:DrawPane.createLinearGradient, class:DrawPane.createRadialGradient, class:ListGrid.createRecordComponent, class:DrawPane.createSimpleGradient, class:TileGrid.createTile, class:Calendar.currentViewChanged, interface:PickList.dataArrived, class:ComboBoxItem.dataArrived, class:TileGrid.dataArrived, class:ListGrid.dataArrived, class:ResultSet.dataArrived, class:CubeGrid.dataArrived, class:TreeGrid.dataArrived, class:ResultTree.dataArrived, class:SelectItem.dataArrived, class:DateChooser.dataChanged, object:Array.dataChanged, interface:List.dataChanged, class:Tree.dataChanged, class:FacetChart.dataLabelClick, class:FacetChart.dataLabelHover, class:Callbacks.DataURLCallback, class:DataView.dataViewLoaded, class:Calendar.dateChanged, class:Calendar.dateIsWorkday, class:Calendar.dayBodyClick, class:Calendar.dayHeaderClick, object:ListGridField.defaultDynamicValue, class:SelectItem.defaultDynamicValue, class:FormItem.defaultDynamicValue, class:ComboBoxItem.defaultDynamicValue, class:Class.delayCall, class:Canvas.deparent, class:Canvas.depeer, class:Selection.deselect, class:ImgButton.deselect, class:Button.deselect, class:StretchImgButton.deselect, class:StatefulCanvas.deselect, class:Selection.deselectAll, class:CubeGrid.deselectAll, class:CubeGrid.deselectAllCells, class:EditContext.deselectAllEditNodes, class:CubeGrid.deselectAllFacetValues, class:TileGrid.deselectAllRecords, interface:DataBoundComponent.deselectAllRecords, class:ColumnTree.deselectAllRecords, class:ListGrid.deselectAllRecords, class:Toolbar.deselectButton, class:CellSelection.deselectCell, class:CubeGrid.deselectCell, class:CellSelection.deselectCellList, class:CubeGrid.deselectCells, class:EditContext.deselectEditNodes, class:CubeGrid.deselectFacetValue, class:CubeGrid.deselectFacetValues, class:Selection.deselectItem, class:Selection.deselectList, class:TileGrid.deselectRange, interface:DataBoundComponent.deselectRange, class:ListGrid.deselectRange, class:Selection.deselectRange, class:ListGrid.deselectRecord, class:TileGrid.deselectRecord, class:ColumnTree.deselectRecord, interface:DataBoundComponent.deselectRecord, interface:DataBoundComponent.deselectRecords, class:ListGrid.deselectRecords, class:ColumnTree.deselectRecords, class:TileGrid.deselectRecords, class:TextItem.deselectValue, class:UploadItem.deselectValue, class:TextAreaItem.deselectValue, class:DateItem.deselectValue, class:TimeItem.deselectValue, class:Canvas.destroy, class:DrawItem.destroy, class:Class.destroy, class:EditTree.destroyAll, class:EditPane.destroyAll, class:EditContext.destroyAll, class:DrawPane.destroyItems, class:FormItem.disable, class:Canvas.disable, interface:DataBoundComponent.disableHilite, interface:DataBoundComponent.disableHiliting, class:FormItem.disableIcon, class:TabSet.disableTab, class:CubeGrid.discardAllEdits, class:ListGrid.discardAllEdits, class:ListGrid.discardEdits, class:ListGrid.displayHeaderContextMenu, class:ListGrid.displaySort, class:Dialog.doneClick, class:Canvas.doubleClick, class:FormItem.doubleClick, class:RichTextEditor.doWarn, class:MiniNavControl.downClick, class:NavigationBar.downClick, class:SplitPane.downClick, class:DataSource.downloadFile, interface:DataBoundComponent.dragComplete, class:Canvas.dragMove, class:DrawGroup.dragMove, class:DrawItem.dragMove, class:Canvas.dragRepositionMove, class:Canvas.dragRepositionStart, class:Canvas.dragRepositionStop, class:Canvas.dragResizeMove, class:DrawItem.dragResizeMove, class:Canvas.dragResizeStart, class:Canvas.dragResizeStop, class:DrawGroup.dragStart, class:DrawItem.dragStart, class:Canvas.dragStart, class:DrawItem.dragStop, class:Canvas.dragStop, class:DrawGroup.dragStop, class:Canvas.draw, class:DrawItem.draw, class:ListGrid.drawAreaChanged, class:DrawPane.drawEnd, class:DrawItem.drawEnd, class:FacetChart.drawnValueContainsPoint, class:DrawItem.drawStart, class:DrawPane.drawStart, class:Layout.drop, class:Canvas.drop, interface:DataBoundComponent.dropComplete, class:Canvas.dropMove, class:Canvas.dropOut, class:Canvas.dropOver, class:Callbacks.DSCallback, class:ResultSet.duplicate, class:Date.duplicate, object:Array.duplicate, interface:List.duplicate, object:MenuItem.dynamicIcon, object:MenuItem.dynamicTitle, class:Class.echo, class:Class.echoAll, class:Class.echoLeaf, class:ListGrid.editComplete, class:ListGrid.editFailed, interface:DataBoundComponent.editFields, class:SimpleType.editFormatter, interface:DataBoundComponent.editFormulaField, interface:DataBoundComponent.editHilites, class:EditContext.editMaskClicked, class:ValuesManager.editNewRecord, class:DynamicForm.editNewRecord, class:EditContext.editNodeUpdated, class:FormItem.editorEnter, object:ListGridField.editorEnter, class:ListGrid.editorEnter, object:ListGridField.editorExit, class:ListGrid.editorExit, class:FormItem.editorExit, class:ValuesManager.editRecord, class:DynamicForm.editRecord, class:DynamicForm.editSelectedData, class:ValuesManager.editSelectedData, interface:DataBoundComponent.editSummaryField, class:TabSet.editTabTitle, class:DetailViewer.emptyMessageHTML, class:Canvas.enable, class:FormItem.enable, class:EditContext.enableEditing, class:EditTree.enableEditing, class:EditPane.enableEditing, interface:DataBoundComponent.enableHilite, interface:DataBoundComponent.enableHiliting, class:FormItem.enableIcon, object:MenuItem.enableIf, class:TabSet.enableTab, class:Canvas.encloses, class:Canvas.enclosesRect, class:JSONEncoder.encode, class:JSONEncoder.encodeDate, class:ListGrid.endEditing, class:String.endsWith, object:Array.equals, interface:List.equals, class:DrawGroup.erase, class:DrawPane.erase, class:DrawItem.erase, class:Class.evaluate, class:DataSource.evaluateCriterion, class:Calendar.eventAdded, class:Calendar.eventChanged, class:Calendar.eventClick, class:Calendar.eventMoved, class:Calendar.eventRemoveClick, class:Calendar.eventRemoved, class:Calendar.eventRepositionMove, class:Calendar.eventRepositionStop, class:Calendar.eventResized, class:Calendar.eventResizeMove, class:Calendar.eventResizeStop, class:Calendar.eventsRendered, class:DataSource.execute, class:ScriptTask.execute, class:CubeGrid.expandField, class:ListGrid.expandRecord, class:ListGrid.expandRecords, class:SectionStack.expandSection, class:SectionItem.expandSection, class:Callbacks.ExpandSectionCallback, class:ListGrid.exportClientData, class:TreeGrid.exportClientData, class:CubeGrid.exportClientData, class:DataSource.exportClientData, class:DetailViewer.exportClientData, class:DetailViewer.exportData, class:TileGrid.exportData, class:DataSource.exportData, class:ListGrid.exportData, interface:DataBoundComponent.exportData, class:DataSourceField.exportForceText, class:Callbacks.ExportImageCallback, class:CubeGrid.facetAdded, class:CubeGrid.facetHasSelection, class:CubeGrid.facetLabelHover, class:CubeGrid.facetLabelHoverHTML, class:CubeGrid.facetLabelOut, class:CubeGrid.facetLabelOver, class:CubeGrid.facetMoved, class:CubeGrid.facetRemoved, class:CubeGrid.facetValueContextClick, class:CubeGrid.facetValueHover, class:CubeGrid.facetValueHoverHTML, class:CubeGrid.facetValueOut, class:CubeGrid.facetValueOver, class:CubeGrid.facetValueReordered, class:CubeGrid.facetValueSelectionChanged, class:CubeGrid.facetValuesSelected, class:DynamicForm.fetchData, class:ValuesManager.fetchData, class:ListGrid.fetchData, class:TreeGrid.fetchData, class:TileGrid.fetchData, class:PickTreeItem.fetchData, interface:PickList.fetchData, class:Calendar.fetchData, class:SelectItem.fetchData, class:ColumnTree.fetchData, class:DataSource.fetchData, class:ComboBoxItem.fetchData, class:Menu.fetchData, class:DataSource.fetchRecord, class:HTMLFlow.fetchRelatedData, class:DynamicForm.fetchRelatedData, class:ListGrid.fetchRelatedData, class:DetailViewer.fetchRelatedData, class:DynamicForm.fieldIsEditable, class:ListGrid.fieldIsEditable, interface:DataBoundComponent.fieldIsEditable, class:DetailViewer.fieldIsVisible, class:ListGrid.fieldIsVisible, class:DataSource.fieldMatchesFilter, class:ListGrid.fieldStateChanged, class:ListGrid.filterByEditor, class:FilterBuilder.filterChanged, interface:PickList.filterClientPickListData, class:ComboBoxItem.filterClientPickListData, class:TileGrid.filterData, class:DataSource.filterData, class:ValuesManager.filterData, class:TreeGrid.filterData, class:ColumnTree.filterData, class:ListGrid.filterData, class:DynamicForm.filterData, class:Calendar.filterData, class:ListGrid.filterEditorSubmit, class:ResultSet.filterLocalData, object:Array.find, class:ResultSet.find, class:Tree.find, interface:List.find, interface:DataBoundComponent.find, interface:DataBoundComponent.findAll, object:Array.findAll, class:ResultSet.findAll, interface:List.findAll, class:Tree.findById, class:ResultSet.findByKey, interface:DataBoundComponent.findByKey, class:GridRenderer.findColNum, interface:DataBoundComponent.findIndex, interface:List.findIndex, class:Tree.findIndex, object:Array.findIndex, class:ResultSet.findIndex, class:ListGrid.findNextEditCell, class:Tree.findNextIndex, object:Array.findNextIndex, interface:List.findNextIndex, interface:DataBoundComponent.findNextIndex, class:ResultSet.findNextIndex, class:Tree.findNextNodeIndex, class:Tree.findNodeIndex, class:GridRenderer.findRowNum, class:Process.finished, class:Class.fireCallback, class:SummaryBuilder.fireOnClose, class:FormulaBuilder.fireOnClose, object:Array.first, interface:List.first, class:CubeGrid.fixedFacetValueChanged, class:Window.flash, class:DynamicForm.focus, class:Canvas.focus, class:FormItem.focus, class:Canvas.focusAfterGroup, class:FormItem.focusAfterItem, class:Canvas.focusAtEnd, class:Canvas.focusChanged, class:ListGrid.focusInCell, class:ListGrid.focusInFilterEditor, class:FormItem.focusInItem, class:DynamicForm.focusInItem, class:Canvas.focusInNextTabElement, class:Canvas.focusInPreviousTabElement, class:ListGrid.focusInRow, class:TreeGrid.folderClick, class:TreeGrid.folderClosed, class:TreeGrid.folderContextClick, class:TreeGrid.folderDrop, class:TreeGrid.folderOpened, class:FacetChart.formatAxisValue, object:MetricSettings.formatAxisValue, object:ListGridField.formatCellValue, class:FacetValue.formatCellValue, class:ListGrid.formatCellValue, object:DetailViewerField.formatCellValue, class:DetailViewer.formatCellValue, object:MetricSettings.formatDataValue, class:FacetChart.formatDataValue, class:ListGrid.formatEditorValue, object:ListGridField.formatEditorValue, class:RelativeDateItem.formatEditorValue, class:FormItem.formatEditorValue, class:DateItem.formatEditorValue, class:FacetChart.formatFacetValueId, class:Gauge.formatLabelContents, class:TableView.formatRecord, class:FacetChart.formatSegmentLabel, class:FormItem.formatValue, class:DynamicForm.formSubmitFailed, class:ListGrid.formulaUpdated, class:ListGrid.freezeField, class:Callbacks.Function, class:ResultSet.get, interface:List.get, class:ResultTree.get, object:Array.get, class:StatefulCanvas.getActionType, class:StretchImgButton.getActionType, class:Button.getActionType, class:ImgButton.getActionType, class:Calendar.getActiveDay, class:Calendar.getActiveTime, class:ResultSet.getAllCachedRows, class:CubeGrid.getAllEditCells, class:ListGrid.getAllEditRows, class:ListGrid.getAllFields, class:Tree.getAllNodes, class:ResultSet.getAllVisibleRows, class:TreeGrid.getAnimateFolderMaxRows, class:DrawSector.getArcMidpoint, class:SimpleType.getAtomicValue, class:ListGrid.getAutoFitMaxWidth, object:ListGridField.getAutoFreezePosition, class:DataSource.getAutoTitle, class:CubeGrid.getBaseStyle, class:GridRenderer.getBaseStyle, class:ListGrid.getBaseStyle, class:DrawPane.getBitmap, class:ColorPicker.getBlue, class:ListGrid.getBody, class:EventCanvas.getBodyHTML, class:Canvas.getBottom, class:DrawItem.getBoundingBox, class:DrawImage.getBoundingBox, class:DrawRect.getBoundingBox, class:DrawLinePath.getBoundingBox, class:DrawPath.getBoundingBox, class:DrawGroup.getBoundingBox, class:DrawCurve.getBoundingBox, class:DrawLine.getBoundingBox, class:DrawSector.getBoundingBox, class:DrawLabel.getBoundingBox, class:DrawOval.getBoundingBox, class:Progressbar.getBreadth, class:Toolbar.getButton, class:Toolbar.getButtonNumber, class:Canvas.getByLocalId, class:DataSource.getCacheData, class:Class.getCallTrace, class:FormItem.getCanEdit, class:FormItem.getCanFocus, class:TreeGrid.getCellAlign, class:ListGrid.getCellAlign, class:CubeGrid.getCellColumn, class:CubeGrid.getCellCoordinates, class:ListGrid.getCellCSSText, class:GridRenderer.getCellCSSText, class:DetailViewer.getCellCSSText, class:Calendar.getCellDate, class:ListGrid.getCellErrors, class:CubeGrid.getCellFacetValues, class:GridRenderer.getCellFromDomElement, class:ListGrid.getCellHoverComponent, class:GridRenderer.getCellHoverComponent, class:Calendar.getCellHoverHTML, class:GridRenderer.getCellPageRect, class:ListGrid.getCellPageRect, class:GridRenderer.getCellRecord, class:CubeGrid.getCellRecord, class:ListGrid.getCellRecord, class:CubeGrid.getCellRow, class:ListGrid.getCellRowSpan, class:GridRenderer.getCellRowSpan, class:ListGrid.getCellSelection, class:ListGrid.getCellStartRow, class:GridRenderer.getCellStartRow, object:DetailViewerField.getCellStyle, class:GridRenderer.getCellStyle, class:DetailViewer.getCellStyle, class:ListGrid.getCellStyle, class:CubeGrid.getCellStyle, class:ListGrid.getCellVAlign, object:ListGridField.getCellValue, class:GridRenderer.getCellValue, class:ListGrid.getCellValue, class:FacetValue.getCellValue, class:DrawSector.getCenter, class:DrawLinePath.getCenter, class:DrawItem.getCenter, class:DrawPath.getCenter, class:DrawRect.getCenter, class:DrawLine.getCenter, class:DrawOval.getCenter, class:DrawTriangle.getCenter, class:DrawLabel.getCenter, class:DrawCurve.getCenter, class:DrawGroup.getCenter, class:DrawImage.getCenter, class:ValuesManager.getChangedValues, class:DynamicForm.getChangedValues, class:FacetChart.getChartCenter, class:FacetChart.getChartHeight, class:FacetChart.getChartLeft, class:FacetChart.getChartRadius, class:FacetChart.getChartTop, class:FacetChart.getChartWidth, class:ListGrid.getCheckboxField, class:FilterBuilder.getChildFilters, class:Tree.getChildren, class:Tree.getChildrenResultSet, class:Layout.getChildTabPosition, class:Canvas.getChildTabPosition, class:Class.getClass, class:Class.getClassName, class:DataSource.getClientOnlyDataSource, class:DataSource.getClientOnlyResponse, interface:PickList.getClientPickListData, class:ComboBoxItem.getClientPickListData, class:ColumnTree.getColumn, class:CubeGrid.getColumnFacetLayout, class:CubeGrid.getColumnFacetValues, class:GridRenderer.getColumnLeft, class:ListGrid.getColumnLeft, class:GridRenderer.getColumnPageLeft, class:ListGrid.getColumnPageLeft, class:ColumnTree.getColumnProperties, class:ColumnTree.getColumnTitle, class:PortalLayout.getColumnWidth, class:ListGrid.getColumnWidth, class:GridRenderer.getColumnWidth, class:Canvas.getContentElement, class:Canvas.getContents, class:ToolStripGroup.getControlColumn, class:FilterBuilder.getCriteria, class:ResultSet.getCriteria, class:ListGrid.getCriteria, class:FilterClause.getCriterion, class:CanvasItem.getCriterion, class:ComboBoxItem.getCriterion, class:MiniDateRangeItem.getCriterion, class:DateRangeItem.getCriterion, class:PresetCriteriaItem.getCriterion, class:PresetDateRangeItem.getCriterion, class:FormItem.getCriterion, object:Operator.getCriterion, class:RelativeDateItem.getCriterion, class:ListGrid.getCurrentExpansionComponent, class:ListGrid.getCurrentFieldWidths, class:TileGrid.getCurrentTile, class:Sound.getCurrentTime, class:Calendar.getCurrentViewName, class:FormItem.getCursorPosition, class:PresetCriteriaItem.getCustomCriteria, class:FormItem.getCustomState, class:ColumnTree.getData, class:DateChooser.getData, class:FacetChart.getDataColor, object:MetricSettings.getDataColor, class:FusionChart.getDataColor, class:FacetChart.getDataGradient, object:MetricSettings.getDataGradient, class:FacetChart.getDataLabelFacet, class:FacetChart.getDataLabelHoverHTML, class:FacetChart.getDataLineColor, object:MetricSettings.getDataLineColor, object:MetricSettings.getDataLineWidth, class:FacetChart.getDataLineWidth, class:FormItem.getDataPath, interface:DataBoundComponent.getDataPathField, class:DataSource.getDataProtocol, class:ValuesManager.getDataSource, class:DrawPane.getDataURL, class:Calendar.getDateCellAlign, class:Calendar.getDateCellVAlign, class:Calendar.getDateCSSText, class:Calendar.getDateFromPoint, class:Calendar.getDateHeaderTitle, class:Calendar.getDateHTML, class:Calendar.getDateLabelText, class:Calendar.getDateStyle, class:Calendar.getDayBodyHTML, class:Date.getDayName, class:DateItem.getDefaultChooserDate, class:Date.getDefaultDateSeparator, class:ListGrid.getDefaultFieldWidth, class:Gauge.getDefaultFillColor, class:ListGrid.getDefaultFormattedFieldValue, class:ListGrid.getDefaultFormattedValue, class:Class.getDefaultLogPriority, class:EditContext.getDefaultPalette, class:EditTree.getDefaultPalette, class:EditPane.getDefaultPalette, class:Tree.getDescendantFolders, class:Tree.getDescendantLeaves, class:Tree.getDescendants, class:ComboBoxItem.getDisplayFieldName, class:FormItem.getDisplayFieldName, class:SelectItem.getDisplayFieldName, interface:PickList.getDisplayFieldName, class:FormItem.getDisplayValue, class:DataSource.getDisplayValue, class:ListGrid.getDisplayValue, class:TileGrid.getDragData, interface:DataBoundComponent.getDragData, class:TileLayout.getDragData, class:ListGrid.getDragData, class:Calendar.getDragHoverHTML, class:TreeGrid.getDragTrackerIcon, class:ListGrid.getDragTrackerIcon, class:ListGrid.getDragTrackerTitle, class:TileGrid.getDragTrackerTitle, class:ListGrid.getDrawArea, class:DrawPane.getDrawingPoint, class:DrawPane.getDrawingX, class:DrawPane.getDrawingY, class:ListGrid.getDrawnRowHeight, class:GridRenderer.getDrawnRows, class:ListGrid.getDrawnRows, class:FacetChart.getDrawnValue, class:FacetChart.getDrawnValueAtPoint, class:FacetChart.getDrawnValues, class:FacetChart.getDrawnValuesAtPoint, class:Layout.getDropComponent, class:TreeGrid.getDropFolder, class:ListGrid.getDropIndex, class:PortalLayout.getDropPortlet, class:Layout.getDropPosition, interface:DataBoundComponent.getDropValues, class:TimeItem.getDuration, class:Sound.getDuration, class:ListGrid.getEditCol, class:EditPane.getEditContext, class:EditTree.getEditContext, class:ListGrid.getEditedCell, class:CubeGrid.getEditedCell, class:ListGrid.getEditedRecord, class:CubeGrid.getEditedRecord, class:ListGrid.getEditField, class:ListGrid.getEditFormItem, class:EditContext.getEditNodeTree, class:EditTree.getEditNodeTree, class:EditPane.getEditNodeTree, class:ListGrid.getEditorProperties, class:DynamicForm.getEditorType, class:FilterBuilder.getEditorType, class:ListGrid.getEditorType, class:ListGrid.getEditorValueIcons, object:ListGridField.getEditorValueMap, class:ListGrid.getEditorValueMap, class:ListGrid.getEditRow, class:CubeGrid.getEditValue, class:ListGrid.getEditValue, class:ListGrid.getEditValues, class:CubeGrid.getEditValues, class:Process.getElement, class:DateItem.getEnteredValue, class:TimeItem.getEnteredValue, class:ComboBoxItem.getEnteredValue, class:RelativeDateItem.getEnteredValue, class:TextAreaItem.getEnteredValue, class:TextItem.getEnteredValue, class:FormItem.getErrorHTML, class:FormItem.getErrors, class:DynamicForm.getErrors, class:ValuesManager.getErrors, class:DynamicForm.getErrorsHTML, class:Calendar.getEventBodyHTML, class:Calendar.getEventCanvasGripperIcon, class:Calendar.getEventCanvasMenuItems, class:Calendar.getEventCanvasStyle, class:ListGrid.getEventColumn, class:GridRenderer.getEventColumn, class:CubeGrid.getEventColumn, class:Calendar.getEventEndDate, class:Calendar.getEventHeaderHTML, class:Calendar.getEventHoverHTML, class:DynamicForm.getEventItem, class:DynamicForm.getEventItemInfo, class:Calendar.getEventLane, class:Calendar.getEventLength, class:TreeGrid.getEventRow, class:ListGrid.getEventRow, class:CubeGrid.getEventRow, class:GridRenderer.getEventRow, class:Calendar.getEventStartDate, class:Calendar.getEventSublane, class:ListGrid.getExpandedRecords, class:SectionStack.getExpandedSections, class:ListGrid.getExpansionComponent, class:ListGrid.getExpansionField, class:ListGrid.getExportBGColor, class:ListGrid.getExportColumnBGColor, class:ListGrid.getExportRowBGColor, class:TreeGrid.getExtraIcon, interface:Chart.getFacet, class:CubeGrid.getFacet, class:FacetChart.getFacet, class:CubeGrid.getFacetsHavingSelection, class:FacetChart.getFacetValue, class:CubeGrid.getFacetValue, interface:Chart.getFacetValue, class:CubeGrid.getFacetValueLayout, class:CubeGrid.getFacetValuesColumn, class:CubeGrid.getFacetValuesRow, class:DataSource.getFetchDataURL, class:WebService.getFetchDS, class:DynamicForm.getField, interface:DataBoundComponent.getField, class:DataSource.getField, class:ListGrid.getField, interface:DataBoundComponent.getFieldAlignments, class:ListGrid.getFieldByName, class:ListGrid.getFieldContentWidth, class:DataSource.getFieldCriterion, class:DynamicForm.getFieldErrors, class:ValuesManager.getFieldErrors, class:DataSource.getFieldForDataPath, class:FormItem.getFieldName, class:ListGrid.getFieldName, class:DataSource.getFieldNames, interface:DataBoundComponent.getFieldNum, class:ListGrid.getFieldNum, class:DataSource.getFieldOperatorMap, class:DataSource.getFieldOperators, class:FilterBuilder.getFieldOperators, class:FilterClause.getFieldOperators, class:DynamicForm.getFields, class:ListGrid.getFieldState, class:TileGrid.getFieldState, class:ListGrid.getFieldTitle, object:ListGridField.getFieldTitle, class:DataSourceField.getFieldValue, class:ListGrid.getFieldWidth, class:DataSource.getFile, class:Callbacks.GetFileCallback, class:DataSource.getFileURL, class:DataSource.getFileVersion, class:Callbacks.GetFileVersionCallback, class:FilterClause.getFilterBuilder, class:FilterBuilder.getFilterDescription, class:ListGrid.getFilterEditorCriteria, class:ListGrid.getFilterEditorType, class:ListGrid.getFilterEditorValueMap, class:Tree.getFilteredTree, class:RelativeDateItem.getFiscalCalendar, class:DateItem.getFiscalCalendar, class:DateChooser.getFiscalCalendar, class:Date.getFiscalWeek, class:Date.getFiscalYear, class:DynamicForm.getFocusItem, class:ListGrid.getFocusRow, class:Tree.getFolders, class:ListGrid.getFormulaFieldValue, interface:DataBoundComponent.getFormulaFieldValue, class:ListGrid.getFrozenRollOverCanvas, class:ListGrid.getFrozenRollUnderCanvas, class:Canvas.getFullDataPath, class:FormItem.getFullDataPath, class:DatabaseBrowser.getGeneratedDataSource, class:HibernateBrowser.getGeneratedDataSource, object:MetricSettings.getGradations, class:FacetChart.getGradations, class:DrawPane.getGradient, class:ColorPicker.getGreen, class:FormItem.getGridColNum, class:FormItem.getGridRowNum, class:ListGrid.getGridSummary, object:ListGridField.getGridSummary, class:ListGrid.getGridSummaryData, class:ListGrid.getGridSummaryFunction, class:MultiGroupPanel.getGroup, class:MultiGroupDialog.getGroup, class:ListGrid.getGroupByFields, class:ListGrid.getGroupByText, class:SimpleType.getGroupingModes, class:ListGrid.getGroupMembers, class:ListGrid.getGroupNodeHTML, class:DrawGroup.getGroupRect, class:ListGrid.getGroupState, object:ListGridField.getGroupSummary, class:ListGrid.getGroupSummaryData, class:SimpleType.getGroupTitle, object:ListGridField.getGroupTitle, class:ListGrid.getGroupTreeSelection, class:SimpleType.getGroupValue, object:ListGridField.getGroupValue, class:ListGrid.getHeaderContextMenuItems, class:WebService.getHeaderData, class:Calendar.getHeaderHoverHTML, class:EventCanvas.getHeaderHTML, class:ListGrid.getHeaderSpanContextMenuItems, class:DateChooser.getHeaderYearTitle, class:Canvas.getHeight, class:FormulaBuilder.getHelpText, class:SummaryBuilder.getHelpText, class:HiliteRule.getHilite, interface:DataBoundComponent.getHilites, interface:DataBoundComponent.getHiliteState, class:TextItem.getHint, class:TimeItem.getHourValues, class:Canvas.getHoverComponent, class:Img.getHoverHTML, class:Canvas.getHoverHTML, class:DrawItem.getHoverHTML, class:Canvas.getHSnapOrigin, class:Canvas.getHSnapPosition, class:ColorPicker.getHtmlColor, class:ColorPicker.getHue, class:TreeGrid.getIcon, class:FormItem.getIcon, class:ColumnTree.getIcon, class:FormItem.getIconHeight, class:isc.getIconLeft, class:isc.getIconPageRect, class:isc.getIconRect, class:FormItem.getIconTabPosition, class:isc.getIconTop, class:FormItem.getIconWidth, class:Class.getID, class:Canvas.getID, class:Canvas.getImage, class:Canvas.getImgURL, class:Calendar.getIndicatorCanvasStyle, class:Calendar.getIndicatorHoverHTML, class:CheckboxItemEditProxy.getInlineEditText, class:TabSetEditProxy.getInlineEditText, class:DateItemEditProxy.getInlineEditText, class:DetailViewerEditProxy.getInlineEditText, class:FacetChartEditProxy.getInlineEditText, class:SelectItemEditProxy.getInlineEditText, class:EditProxy.getInlineEditText, class:MenuEditProxy.getInlineEditText, class:LabelEditProxy.getInlineEditText, class:GridEditProxy.getInlineEditText, class:StatefulCanvasEditProxy.getInlineEditText, class:DrawItemEditProxy.getInlineEditText, class:ProgressbarEditProxy.getInlineEditText, class:DrawLabelEditProxy.getInlineEditText, class:WindowEditProxy.getInlineEditText, class:TextItemEditProxy.getInlineEditText, class:Canvas.getInnerContentHeight, class:Canvas.getInnerContentWidth, class:Canvas.getInnerHeight, class:SimpleTile.getInnerHTML, class:Canvas.getInnerHTML, class:EventCanvas.getInnerHTML, class:Canvas.getInnerWidth, class:ScriptTask.getInputData, class:WebService.getInputDS, class:DateItem.getInputFormat, class:RelativeDateItem.getInputFormat, class:WebService.getInputHeaderSchema, class:ScriptTask.getInputRecord, class:DynamicForm.getItem, class:ValuesManager.getItem, class:Menu.getItem, class:DynamicForm.getItemErrorHTML, class:Menu.getItemNum, interface:List.getItems, class:DynamicForm.getItems, class:Menu.getItems, object:Array.getItems, class:Calendar.getLane, class:Calendar.getLaneEvents, class:Calendar.getLaneFromPoint, class:Calendar.getLanePadding, class:Tree.getLeaves, class:FormItem.getLeft, class:Canvas.getLeft, class:DataSource.getLegalChildTags, class:FacetChart.getLegendFacet, class:FacetChart.getLegendHoverHTML, class:Progressbar.getLength, interface:List.getLength, class:Selection.getLength, class:Tree.getLength, object:Array.getLength, class:ResultSet.getLength, class:Tree.getLevel, class:Tree.getLoadState, class:Canvas.getLocalId, class:ColorPicker.getLuminosity, class:Canvas.getMasterCanvas, class:FacetChart.getMax, class:FacetChart.getMean, class:FacetChart.getMedian, class:ValuesManager.getMember, class:Layout.getMember, class:Layout.getMemberDefaultBreadth, class:ValuesManager.getMemberForField, class:Layout.getMemberNumber, class:Layout.getMemberOffset, class:ValuesManager.getMembers, class:Layout.getMembers, class:Layout.getMemberSizes, class:Layout.getMembersLength, class:ValuesManager.getMemberValues, class:TimeItem.getMillisecondValues, class:FacetChart.getMin, class:FacetChart.getMinClusterSize, class:TimeItem.getMinuteValues, class:Date.getMonthName, class:Calendar.getMonthViewHoverHTML, class:Tree.getName, class:GridRenderer.getNearestColToEvent, class:FacetChart.getNearestDrawnValue, class:FacetChart.getNearestDrawnValues, class:GridRenderer.getNearestRowToEvent, class:SpinnerItem.getNextValue, class:ColumnTree.getNodeTitle, class:TreeGrid.getNodeTitle, class:PortalLayout.getNumColumns, class:FacetChart.getNumDataPoints, class:MultiGroupDialog.getNumLevels, class:MultiSortPanel.getNumLevels, class:MultiSortDialog.getNumLevels, class:MultiGroupPanel.getNumLevels, class:Gauge.getNumSectors, class:Canvas.getOffsetX, class:Canvas.getOffsetY, class:ValuesManager.getOldValues, class:DynamicForm.getOldValues, class:ColorPicker.getOpacity, class:TreeGrid.getOpenIcon, class:Tree.getOpenList, class:ResultTree.getOpenState, class:TreeGrid.getOpenState, class:WebService.getOperationNames, class:FormItem.getOptionDataSource, interface:PickList.getOptionDataSource, class:ListGrid.getOriginalData, class:Canvas.getOuterElement, class:WebService.getOutputHeaderSchema, class:Canvas.getPageBottom, class:FormItem.getPageLeft, class:DrawItem.getPageLeft, class:Canvas.getPageLeft, class:FormItem.getPageRect, class:Canvas.getPageRight, class:FormItem.getPageTop, class:DrawItem.getPageTop, class:Canvas.getPageTop, class:EditContext.getPaletteNodesFromJS, class:EditTree.getPaletteNodesFromXML, class:EditContext.getPaletteNodesFromXML, class:EditPane.getPaletteNodesFromXML, class:TabSet.getPaneContainerEdges, class:Canvas.getPanelContainer, class:Tree.getParent, class:Canvas.getParentCanvas, class:Canvas.getParentElements, class:Tree.getParentPath, class:Tree.getParents, class:Tree.getPath, class:FacetChart.getPercentile, class:Calendar.getPeriodEndDate, class:Calendar.getPeriodStartDate, class:FormItem.getPickerIconTabPosition, interface:PickList.getPickListFilterCriteria, class:ComboBoxItem.getPickListFilterCriteria, class:FormItem.getPixelHeight, class:FormItem.getPixelWidth, class:Applet.getPluginHandle, class:ActiveXControl.getPluginHandle, class:Flashlet.getPluginHandle, class:Applet.getPluginID, class:ActiveXControl.getPluginID, class:FacetChart.getPointHoverHTML, object:MetricSettings.getPointHoverHTML, class:FacetChart.getPolynomialRegressionFunction, class:Portlet.getPortalLayout, class:Portlet.getPortalPosition, class:PortalLayout.getPortalPosition, class:PortalLayout.getPortletArray, class:PortalLayout.getPortlets, class:SpinnerItem.getPreviousValue, class:DataSource.getPrimaryKeyField, class:DataSource.getPrimaryKeyFieldName, class:DataSource.getPrimaryKeyFieldNames, class:DataSource.getPrimaryKeyFields, class:Canvas.getPrintHTML, class:DrawPane.getPrintHTML, class:FacetChart.getPrintHTML, class:CubeGrid.getPrintHTML, class:FormItem.getPrintValueIcon, class:FormItem.getPrintValueIconStyle, class:ResultSet.getProperty, object:Array.getProperty, interface:List.getProperty, class:DrawOval.getRadiusX, class:DrawOval.getRadiusY, object:Array.getRange, interface:List.getRange, class:ResultTree.getRange, class:FacetChart.getRange, class:ResultSet.getRange, class:ColumnTree.getRecord, class:SimpleTile.getRecord, class:ListGrid.getRecord, class:ListGrid.getRecordComponent, class:ListGrid.getRecordDropPosition, interface:DataBoundComponent.getRecordHiliteCSSText, interface:DataBoundComponent.getRecordIndex, class:DetailViewer.getRecordIndex, class:ListGrid.getRecordIndex, object:ListGridField.getRecordSummary, class:ListGrid.getRecordSummary, class:FormItem.getRect, class:ColorPicker.getRed, class:ListGrid.getRelatedDataSource, class:RelativeDateItem.getRelativeDate, class:ListGrid.getRequiredFieldMessage, class:DrawItem.getResizeBoundingBox, class:HibernateBrowser.getResults, class:DatabaseBrowser.getResults, class:Canvas.getRight, class:ListGrid.getRollOverCanvas, class:ListGrid.getRollUnderCanvas, class:CubeGrid.getRollupValue, class:Tree.getRoot, class:EditContext.getRootEditNode, class:EditTree.getRootEditNode, class:EditPane.getRootEditNode, class:ListGrid.getRowErrors, class:CubeGrid.getRowFacetLayout, class:CubeGrid.getRowFacetValues, class:GridRenderer.getRowHeight, class:ListGrid.getRowHeight, class:ListGrid.getRowNum, class:ListGrid.getRowPageTop, class:GridRenderer.getRowPageTop, class:GridRenderer.getRowSpan, class:ListGrid.getRowSpan, class:GridRenderer.getRowTop, class:ListGrid.getRowTop, class:Canvas.getRuleContext, class:FormulaBuilder.getSamplePrompt, class:ColorPicker.getSaturation, class:EditPane.getSaveData, class:DynamicForm.getSaveOperationType, class:ValuesManager.getSaveOperationType, class:SchemaSet.getSchema, class:WebService.getSchema, class:Canvas.getScrollbarSize, class:Canvas.getScrollBottom, class:Canvas.getScrollHeight, class:Canvas.getScrollLeft, class:Canvas.getScrollRight, class:Canvas.getScrollTop, class:Canvas.getScrollWidth, class:DataSource.getSearchOperator, class:TimeItem.getSecondValues, class:SectionStack.getSectionHeader, class:SectionStack.getSectionNumber, class:SectionStack.getSections, class:SectionHeader.getSectionStack, class:ImgSectionHeader.getSectionStack, class:Gauge.getSectorFillColor, class:Gauge.getSectorLabelContents, class:Gauge.getSectorValue, class:ListGrid.getSelectedCellData, class:CubeGrid.getSelectedCellIds, class:CubeGrid.getSelectedCells, class:CellSelection.getSelectedCells, class:FilterBuilder.getSelectedClauses, class:EditContext.getSelectedEditNode, class:EditContext.getSelectedEditNodes, class:CubeGrid.getSelectedFacetValues, class:EditContext.getSelectedLabelText, class:TreeGrid.getSelectedPaths, class:ColumnTree.getSelectedRecord, class:FormItem.getSelectedRecord, class:TileGrid.getSelectedRecord, class:SelectItem.getSelectedRecord, class:ComboBoxItem.getSelectedRecord, class:ListGrid.getSelectedRecord, class:Selection.getSelectedRecord, class:CellSelection.getSelectedRecord, class:SelectItem.getSelectedRecords, class:ListGrid.getSelectedRecords, class:ListGrid.getSelectedState, class:TabSet.getSelectedTab, class:TabSet.getSelectedTabNumber, class:Calendar.getSelectedView, class:TileGrid.getSelection, class:ListGrid.getSelection, class:Selection.getSelection, interface:DataBoundComponent.getSelectionLength, class:TimeItem.getSelectionRange, class:TextItem.getSelectionRange, class:TextAreaItem.getSelectionRange, class:UploadItem.getSelectionRange, class:DateItem.getSelectionRange, class:DrawItem.getShapeData, class:Date.getShortDayName, class:Date.getShortMonthName, class:Date.getShortYear, class:FacetChart.getSimpleLinearRegressionFunction, class:Canvas.getSnapEdge, class:Canvas.getSnapTo, class:WebService.getSoapMessage, interface:DataBoundComponent.getSort, class:MultiSortPanel.getSort, class:ListGrid.getSort, class:ResultSet.getSort, class:MultiSortDialog.getSort, class:ListGrid.getSortByGroupFirst, class:ListGrid.getSortField, class:ListGrid.getSortFieldCount, class:MultiSortPanel.getSortLevel, class:MultiSortDialog.getSortLevel, class:ListGrid.getSortNumeralHTML, class:ListGrid.getSortSpecifier, class:ListGrid.getSortState, class:Class.getStackTrace, class:Button.getState, class:StretchImgButton.getState, class:ImgButton.getState, class:StatefulCanvas.getState, class:StatefulCanvas.getStateSuffix, class:FacetChart.getStdDev, class:Calendar.getSublane, class:Calendar.getSublaneEvents, class:Calendar.getSublaneFromPoint, class:Menu.getSubmenu, interface:DataBoundComponent.getSummaryFieldValue, class:ListGrid.getSummaryFieldValue, class:ListGrid.getSummaryTitle, object:ListGridField.getSummaryTitle, class:Class.getSuperClass, class:DrawItem.getSvgString, class:DrawPane.getSvgString, class:TabSet.getTab, class:TabSet.getTabNumber, class:TabSet.getTabObject, class:TabSet.getTabPane, class:FormulaBuilder.getTestRecord, class:TileLayout.getTile, class:TileGrid.getTile, class:TileGrid.getTileHTML, class:TileGrid.getTileIndex, class:TileGrid.getTileRecord, class:Tree.getTitle, class:ImgButton.getTitle, class:Button.getTitle, class:StatefulCanvas.getTitle, class:StretchImgButton.getTitle, class:FormItem.getTitle, class:DynamicForm.getTitleAlign, class:TileGrid.getTitleField, interface:DataBoundComponent.getTitleField, class:ListGrid.getTitleField, interface:DataBoundComponent.getTitleFieldValue, class:DynamicForm.getTitleOrientation, class:ListGrid.getToggleFreezeText, class:FormItem.getTop, class:Canvas.getTop, class:GridRenderer.getTotalRows, class:ListGrid.getTotalRows, class:DataSource.getTypeOperatorMap, class:DataSource.getTypeOperators, object:Array.getUniqueItems, class:DataSource.getUpdatedData, class:FormulaBuilder.getUpdatedFieldObject, class:ValuesManager.getValidatedValues, class:DynamicForm.getValidatedValues, class:Slider.getValue, interface:Chart.getValue, class:FormItem.getValue, class:DynamicForm.getValue, class:MiniDateRangeItem.getValue, class:ValuesManager.getValue, class:RichTextEditor.getValue, class:DateRangeItem.getValue, class:CheckboxItem.getValueAsBoolean, class:DoubleItem.getValueAsDouble, class:FloatItem.getValueAsFloat, class:IntegerItem.getValueAsInteger, interface:PickList.getValueFieldName, class:SelectItem.getValueFieldName, class:ComboBoxItem.getValueFieldName, class:FormItem.getValueFieldName, class:FilterClause.getValueFieldProperties, class:FilterBuilder.getValueFieldProperties, class:FormItem.getValueIcon, class:ListGrid.getValueIcon, class:FormItem.getValueIconStyle, object:Array.getValueMap, class:ResultSet.getValueMap, interface:List.getValueMap, class:ValuesManager.getValues, class:DynamicForm.getValues, class:ValuesManager.getValuesAsAdvancedCriteria, class:DynamicForm.getValuesAsAdvancedCriteria, class:ValuesManager.getValuesAsCriteria, class:DynamicForm.getValuesAsCriteria, class:FacetChart.getVariance, class:ViewLoader.getView, class:Calendar.getView, class:Canvas.getViewportHeight, class:Canvas.getViewportWidth, class:DetailViewer.getViewState, class:TreeGrid.getViewState, class:ListGrid.getViewState, class:Calendar.getVisibleEndDate, class:FormItem.getVisibleHeight, class:Canvas.getVisibleHeight, class:ListGrid.getVisibleRows, class:GridRenderer.getVisibleRows, class:SectionStack.getVisibleSections, class:Calendar.getVisibleStartDate, class:FormItem.getVisibleTitleWidth, class:FormItem.getVisibleWidth, class:Canvas.getVisibleWidth, class:Canvas.getVSnapOrigin, class:Canvas.getVSnapPosition, class:Date.getWeek, class:Canvas.getWidth, class:FormItem.getWidth, class:Calendar.getWorkdayEnd, class:Calendar.getWorkdayStart, class:FacetChart.getXCoord, object:MetricSettings.getXCoord, class:DataSource.getXMLRequestBody, object:MetricSettings.getYCoord, class:FacetChart.getYCoord, class:DateChooser.getYearTitle, class:Canvas.getZIndex, class:DrawItem.getZIndex, class:Calendar.getZoneCanvasStyle, class:Calendar.getZoneHoverHTML, class:UserTask.goToPrevious, class:ListGrid.groupBy, class:ListGrid.groupByComplete, class:MultiGroupPanel.groupChanged, class:Calendar.groupLanesBy, class:ListGrid.groupStateChanged, class:DynamicForm.handleAsyncValidationReply, class:ValuesManager.handleAsyncValidationReply, class:ViewLoader.handleError, class:DataSource.handleError, class:HTMLFlow.handleError, class:ListGrid.handleGroupBy, class:DynamicForm.handleHiddenValidationErrors, class:ValuesManager.handleHiddenValidationErrors, class:Canvas.handleHover, class:MiniDateRangeItem.hasAdvancedCriteria, class:FormItem.hasAdvancedCriteria, class:ComboBoxItem.hasAdvancedCriteria, class:CanvasItem.hasAdvancedCriteria, class:DateRangeItem.hasAdvancedCriteria, class:DataSource.hasAllData, class:ListGrid.hasChanges, class:CubeGrid.hasChanges, class:Tree.hasChildren, class:ValuesManager.hasErrors, class:DynamicForm.hasErrors, class:FormItem.hasErrors, class:ListGrid.hasErrors, class:DynamicForm.hasFieldErrors, class:ValuesManager.hasFieldErrors, class:DataSource.hasFile, class:Callbacks.HasFileCallback, class:DataSource.hasFileVersion, class:Callbacks.HasFileVersionCallback, class:Tree.hasFolders, class:Tree.hasLeaves, class:Layout.hasMember, class:ListGrid.headerClick, class:ListGrid.headerDoubleClick, class:ListGrid.headerHover, class:ListGrid.headerHoverHTML, class:ListGrid.headerTitleClipped, class:FormItem.hide, class:Canvas.hide, class:DrawItem.hide, class:DrawItem.hideAllKnobs, class:Canvas.hideClickMask, class:Canvas.hideComponentMask, class:Canvas.hideContextMenu, class:Menu.hideContextMenu, class:Deck.hideCurrentPane, class:Layout.hideDropLine, class:ListGrid.hideField, class:ListGrid.hideFields, class:FormItem.hideIcon, class:DynamicForm.hideItem, class:DrawItem.hideKnobs, class:Layout.hideMember, class:SectionStack.hideSection, class:Callbacks.HideSectionCallback, class:SyntaxHiliter.hilite, class:CubeGrid.hiliteCell, class:CubeGrid.hiliteCellList, class:CubeGrid.hiliteFacetValue, class:ListGrid.hilitesChanged, class:DrawItem.hover, class:Canvas.hover, class:Canvas.hoverHidden, object:ListGridField.hoverHTML, class:IconButton.iconClick, class:StretchImgButton.iconClick, class:Button.iconClick, class:FormItem.iconClick, class:FormItem.iconKeyPress, class:Class.ignore, class:TableView.imageClick, class:Canvas.imgHTML, class:RichTextCanvas.indentSelection, class:ResultSet.indexOf, interface:List.indexOf, object:Array.indexOf, class:Tree.indexOf, class:Class.init, class:Canvas.init, class:Canvas.initWidget, object:Array.intersect, interface:List.intersect, class:Canvas.intersects, class:Canvas.intersectsRect, class:ResultSet.invalidateCache, class:ResultTree.invalidateCache, class:ListGrid.invalidateCache, class:TileGrid.invalidateCache, class:DataSource.invalidateCache, class:FormItem.invalidateDisplayValueCache, class:ListGrid.invalidateRecordComponents, class:Class.isA, object:Number.isBetween, class:ListGrid.isCheckboxField, class:FormItem.isCutEvent, class:CalendarView.isDayView, class:Tree.isDescendantOf, class:Canvas.isDirty, class:FormItem.isDisabled, class:Canvas.isDisabled, class:FormItem.isDrawn, class:Canvas.isDrawn, class:EditContext.isEditNodeSelected, object:Array.isEmpty, interface:List.isEmpty, class:Canvas.isEnabled, class:SectionItem.isExpanded, class:ListGrid.isExpanded, class:ListGrid.isExpansionField, class:ListGrid.isExportingClientData, class:TreeGrid.isExportingClientData, class:DetailViewer.isExportingClientData, class:Canvas.isFocused, class:CanvasItem.isFocused, class:FormItem.isFocused, class:DynamicForm.isFocused, class:Tree.isFolder, class:ListGrid.isGroupNode, class:DrawItem.isInBounds, class:FormItem.isInGrid, class:Tree.isLeaf, class:Tree.isLoaded, class:CalendarView.isMonthView, class:ValuesManager.isNewRecord, class:DynamicForm.isNewRecord, class:EditPane.isNodeEditingOn, class:EditContext.isNodeEditingOn, class:EditTree.isNodeEditingOn, class:Class.isObserving, interface:DataBoundComponent.isOffline, class:Tree.isOpen, class:TreeGrid.isOverExtraIcon, class:TreeGrid.isOverOpenArea, class:Selection.isPartiallySelected, class:ListGrid.isPartiallySelected, class:FormItem.isPasteEvent, class:DynamicForm.isPendingAsyncValidation, class:ValuesManager.isPendingAsyncValidation, class:DrawRect.isPointInPath, class:DrawItem.isPointInPath, class:DrawLine.isPointInPath, class:Tree.isRoot, class:ListGrid.isRowNumberField, class:ListGrid.isSelected, class:Selection.isSelected, class:Button.isSelected, class:StatefulCanvas.isSelected, class:StretchImgButton.isSelected, class:ImgButton.isSelected, class:CalendarView.isSelectedView, class:ListGrid.isSortField, class:ListGrid.isSummaryRecord, class:CalendarView.isTimelineView, class:Canvas.isVisible, class:FormItem.isVisible, class:CalendarView.isWeekView, class:DynamicForm.itemChange, class:ValuesManager.itemChanged, class:DynamicForm.itemChanged, class:Toolbar.itemClick, class:Menu.itemClick, class:Toolbar.itemDoubleClick, class:Toolbar.itemDragResized, class:FormItem.itemHover, class:DynamicForm.itemHoverHTML, class:FormItem.itemHoverHTML, class:DynamicForm.itemKeyPress, class:FormItem.keyDown, class:Canvas.keyDown, object:FormItemIcon.keyPress, class:ListGrid.keyPress, class:FormItem.keyPress, class:Canvas.keyPress, class:FormItem.keyUp, class:Canvas.keyUp, object:Array.last, interface:List.last, interface:List.lastIndexOf, class:Tree.lastIndexOf, object:Array.lastIndexOf, class:Canvas.layoutChildren, class:Layout.layoutIsDirty, class:TreeGrid.leafClick, class:TreeGrid.leafContextClick, class:FacetChart.legendClick, class:FacetChart.legendHover, class:ResultSet.lengthIsKnown, class:Canvas.linkHTML, class:Tree.linkNodes, class:DataSource.listFiles, class:DataSource.listFileVersions, class:ListPropertiesPane.listPropertiesChanged, class:Sound.load, class:Tree.loadChildren, class:ResultTree.loadChildren, class:HTMLFlow.loadingContent, class:Callbacks.LoadScreenCallback, class:Class.logDebug, class:Class.logError, class:Class.logFatal, class:Class.logInfo, class:LoginDialog.loginFunc, class:Class.logIsDebugEnabled, class:Class.logIsEnabledFor, class:Class.logIsErrorEnabled, class:Class.logIsInfoEnabled, class:Class.logIsWarnEnabled, class:Class.logWarn, class:LoginDialog.lostPassword, class:CubeGrid.makeChart, class:EditPane.makeEditNode, interface:Palette.makeEditNode, class:EditTree.makeEditNode, class:EditContext.makeEditNode, object:Array.makeIndex, class:EditTree.makePaletteNode, class:EditPane.makePaletteNode, class:EditContext.makePaletteNode, class:EditContext.makePaletteNodeTree, class:EditPane.makePaletteNodeTree, class:EditTree.makePaletteNodeTree, object:Array.map, class:Class.map, class:FormItem.mapDisplayToValue, class:FormItem.mapValueToDisplay, class:Canvas.markForDestroy, class:ListGrid.markForRedraw, class:Canvas.markForRedraw, class:ListGrid.markRecordRemoved, class:ListGrid.markRecordsRemoved, class:ListGrid.markSelectionRemoved, object:Array.max, class:Window.maximize, class:Layout.membersChanged, class:IconButton.menuIconClick, class:Callbacks.MessagingCallback, object:Array.min, class:Window.minimize, class:DrawGroup.mouseDown, class:DrawItem.mouseDown, class:Canvas.mouseDown, class:DrawGroup.mouseMove, class:Canvas.mouseMove, class:DrawItem.mouseMove, class:DrawItem.mouseOut, class:DrawGroup.mouseOut, class:Canvas.mouseOut, class:DrawGroup.mouseOver, class:DrawItem.mouseOver, class:Canvas.mouseOver, class:Canvas.mouseStillDown, class:Canvas.mouseUp, class:DrawGroup.mouseUp, class:DrawItem.mouseUp, class:Canvas.mouseWheel, class:Tree.move, class:Canvas.moveAbove, class:Canvas.moveBelow, class:DrawItem.moveBy, class:Canvas.moveBy, class:DrawSector.moveBy, class:DrawGroup.moveBy, class:DrawLine.moveBy, class:DrawPath.moveBy, class:DrawLinePath.moveBy, class:DrawShape.moveBy, class:DrawRect.moveBy, class:DrawOval.moveBy, class:DrawImage.moveBy, class:DrawCurve.moveBy, class:DrawItem.moved, class:Canvas.moved, class:DrawPath.moveFirstPointTo, class:SectionStack.moveSection, class:DrawLinePath.moveStartPointTo, class:DrawLine.moveStartPointTo, class:DrawCurve.moveStartPointTo, class:Canvas.moveTo, class:DrawGroup.moveTo, class:DrawRect.moveTo, class:DrawOval.moveTo, class:DrawImage.moveTo, class:DrawItem.moveTo, class:Calendar.moveToEvent, class:Selection.multipleSelected, class:ColumnTree.navigateBack, class:SplitPane.navigateDetailPane, class:SplitPane.navigateListPane, class:SplitPane.navigatePane, class:NavigationBar.navigationClick, class:SplitPane.navigationClick, class:Calendar.next, class:Dialog.noClick, class:EditContext.nodeAdded, class:TreeGrid.nodeClick, class:TreeGrid.nodeContextClick, class:ColumnTree.nodeSelected, class:SimpleType.normalDisplayFormatter, class:Class.observe, class:Dialog.okClick, class:Tree.openAll, class:Tree.openFolder, class:TreeGrid.openFolder, class:Tree.openFolders, class:ListGrid.openGroup, class:TreeGrid.openLeaf, object:Array.or, class:RichTextCanvas.outdentSelection, class:Canvas.pageScrollDown, class:Canvas.pageScrollUp, class:Callbacks.PaletteNodeCallback, class:SplitPane.paneChanged, class:Canvas.parentMoved, class:Canvas.parentResized, class:FormItem.parseEditorValue, class:RelativeDateItem.parseEditorValue, object:ListGridField.parseEditorValue, class:ListGrid.parseEditorValue, class:DateItem.parseEditorValue, class:SimpleType.parseInput, class:EditPane.pasteEditNodes, class:EditTree.pasteEditNodes, class:EditContext.pasteEditNodes, class:Sound.pause, class:SliderItem.pendingStatusChanged, class:RadioGroupItem.pendingStatusChanged, class:MultiComboBoxItem.pendingStatusChanged, class:DateItem.pendingStatusChanged, class:TimeItem.pendingStatusChanged, class:TextItem.pendingStatusChanged, class:SelectItem.pendingStatusChanged, class:CheckboxItem.pendingStatusChanged, class:FormItem.pendingStatusChanged, class:PickTreeItem.pendingStatusChanged, class:Progressbar.percentChanged, class:RecordEditor.performAction, class:DataSource.performCustomOperation, class:ColorItem.pickerColorSelected, class:FormItem.pickerIconClick, class:Canvas.placeNear, class:Sound.play, class:Callbacks.PlaybackCompleteCallback, class:FacetChart.pointClick, object:MetricSettings.pointClick, class:PortalLayout.portletMaximized, class:PortalLayout.portletMinimized, class:PortalLayout.portletRestored, class:PortalLayout.portletsChanged, class:PortalLayout.portletsResized, class:Calendar.previous, class:PrintCanvas.print, class:Callbacks.PrintCanvasCallback, class:Callbacks.ProcessCallback, class:DataSource.processResponse, class:Canvas.provideRuleContext, class:ResultSet.rangeIsLoaded, class:CanvasItem.readOnlyDisplayChanged, class:CalendarView.rebuild, class:ListGrid.recalculateGridSummary, class:ListGrid.recalculateSummaries, class:TileGrid.recordClick, object:ListGridField.recordClick, class:ListGrid.recordClick, class:TileGrid.recordContextClick, object:ListGridField.recordDoubleClick, class:TreeGrid.recordDoubleClick, class:ListGrid.recordDoubleClick, class:TileGrid.recordDoubleClick, class:TreeGrid.recordDrop, class:ListGrid.recordDrop, class:CubeGrid.recordHasChanges, class:ListGrid.recordMarkedAsRemoved, class:TableView.recordNavigationClick, class:DataSource.recordsAreEqual, class:DataSource.recordsAsText, class:DataSource.recordsFromText, class:DataSource.recordsFromXML, class:Canvas.redraw, class:FormItem.redraw, class:ListGrid.redrawHeader, class:Layout.reflow, class:ToolStripGroup.reflowControls, class:Layout.reflowNow, class:Gauge.reformatLabelContents, class:ListGrid.refreshCell, class:GridRenderer.refreshCell, class:GridRenderer.refreshCellStyle, class:ListGrid.refreshCellStyle, class:ListGrid.refreshData, class:Calendar.refreshEvent, class:ListGrid.refreshFields, class:DrawPane.refreshNow, class:ListGrid.refreshRecordComponent, class:GridRenderer.refreshRow, class:ListGrid.refreshRow, class:LoginDialog.register, class:ListGrid.regroup, class:Tree.reloadChildren, class:DynamicForm.rememberValues, class:ValuesManager.rememberValues, class:Tree.remove, class:HiliteRule.remove, interface:List.remove, object:Array.remove, class:FilterClause.remove, class:EditContext.removeAll, class:EditTree.removeAll, class:EditPane.removeAll, object:Array.removeAt, interface:List.removeAt, class:Toolbar.removeButtons, class:Canvas.removeChild, class:Tree.removeChildren, class:FilterBuilder.removeClause, class:PortalLayout.removeColumn, class:ToolStripGroup.removeControl, class:DataSource.removeData, class:ListGrid.removeData, class:TileGrid.removeData, class:ListGrid.removeEmbeddedComponent, class:Calendar.removeEvent, class:CubeGrid.removeFacet, class:DataSource.removeFile, class:DataSource.removeFileVersion, class:StretchImgButton.removeFromRadioGroup, class:StatefulCanvas.removeFromRadioGroup, class:Button.removeFromRadioGroup, class:ImgButton.removeFromRadioGroup, class:DrawPane.removeGradient, class:Calendar.removeIndicator, class:SectionStack.removeItem, class:Window.removeItem, class:Window.removeItems, class:Calendar.removeLane, class:TabSet.removeLastTab, interface:List.removeList, object:Array.removeList, class:Tree.removeList, class:Layout.removeMember, class:ValuesManager.removeMember, class:Layout.removeMembers, class:ValuesManager.removeMembers, class:MenuBar.removeMenus, class:EditPane.removeNode, class:EditTree.removeNode, class:EditContext.removeNode, class:EditTree.removeNodeProperties, class:EditContext.removeNodeProperties, class:EditPane.removeNodeProperties, class:Canvas.removePeer, class:PortalLayout.removePortlet, class:ListGrid.removeRecordClick, class:HiliteEditor.removeRule, class:SectionStack.removeSection, class:Gauge.removeSector, class:TileGrid.removeSelectedData, class:ListGrid.removeSelectedData, class:Canvas.removeSnapAlignCandidate, class:TabSet.removeTab, class:TabSet.removeTabs, class:TileLayout.removeTile, class:TileGrid.removeTile, class:Calendar.removeZone, class:DataSource.renameFile, class:ListGrid.reorderField, class:ListGrid.reorderFields, class:Layout.reorderMember, class:Layout.reorderMembers, class:EditTree.reorderNode, class:EditPane.reorderNode, class:SectionStack.reorderSection, class:TabSet.reorderTab, class:Process.reset, class:DynamicForm.reset, class:Sound.reset, class:Img.resetSrc, class:DynamicForm.resetValues, class:ValuesManager.resetValues, class:DrawOval.resizeBy, class:Canvas.resizeBy, class:DrawPath.resizeBy, class:DrawRect.resizeBy, class:DrawItem.resizeBy, class:DrawShape.resizeBy, class:DrawTriangle.resizeBy, class:DrawItem.resized, class:Canvas.resized, class:CubeGrid.resizeFacetValue, class:ListGrid.resizeField, class:DrawRect.resizeTo, class:DrawItem.resizeTo, class:Canvas.resizeTo, class:DrawPath.resizeTo, class:DrawOval.resizeTo, class:ResultSet.resort, class:ListGrid.resort, class:Window.restore, class:Canvas.revealChild, class:TabSet.revealChild, class:Layout.revealChild, class:Window.revealChild, class:SectionStack.revealChild, class:RichTextEditor.richEditorSupported, class:Canvas.rightMouseDown, class:DrawPane.rotate, class:DrawItem.rotateBy, class:DrawGroup.rotateBy, class:DrawGroup.rotateTo, class:DrawItem.rotateTo, class:TreeGrid.rowClick, class:GridRenderer.rowClick, class:ListGrid.rowClick, class:GridRenderer.rowContextClick, class:ListGrid.rowContextClick, class:ListGrid.rowDoubleClick, class:GridRenderer.rowDoubleClick, class:ListGrid.rowEditorEnter, class:ListGrid.rowEditorExit, class:ListGrid.rowHasChanges, class:ListGrid.rowHasErrors, class:ListGrid.rowHover, class:GridRenderer.rowHover, class:ResultSet.rowIsLoaded, class:GridRenderer.rowMouseDown, class:ListGrid.rowMouseDown, class:ListGrid.rowMouseUp, class:GridRenderer.rowMouseUp, class:GridRenderer.rowOut, class:ListGrid.rowOut, class:ListGrid.rowOver, class:GridRenderer.rowOver, class:Callbacks.RPCCallback, class:Callbacks.RPCQueueCallback, class:Canvas.ruleContextChanged, class:SummaryBuilder.save, class:FormulaBuilder.save, class:FormulaBuilder.saveAddAnother, class:ListGrid.saveAllEdits, class:CubeGrid.saveAllEdits, class:ValuesManager.saveData, class:Dialog.saveData, class:DynamicForm.saveData, class:CubeGrid.saveEdits, class:ListGrid.saveEdits, class:DataSource.saveFile, class:AdvancedHiliteEditor.saveHilite, class:HiliteEditor.saveHilites, class:TabSet.saveTabTitle, class:DrawItem.scaleBy, class:DrawGroup.scaleBy, class:DrawGroup.scaleTo, class:DrawItem.scaleTo, class:TabSet.scrollBack, class:Canvas.scrollBy, class:Canvas.scrollByPercent, class:Canvas.scrolled, class:TabSet.scrollForward, class:Canvas.scrollTo, class:Canvas.scrollToBottom, class:ListGrid.scrollToCell, class:ListGrid.scrollToColumn, class:Canvas.scrollToLeft, class:Canvas.scrollToPercent, class:Canvas.scrollToRight, class:ListGrid.scrollToRow, class:Calendar.scrollToTime, class:Canvas.scrollToTop, class:SearchForm.search, class:FilterBuilder.search, class:SectionStack.sectionForItem, class:SectionStack.sectionHeaderClick, class:SectionStack.sectionIsExpanded, class:SectionStack.sectionIsVisible, class:Button.select, class:ImgButton.select, class:StatefulCanvas.select, class:Selection.select, class:StretchImgButton.select, class:Selection.selectAll, class:CubeGrid.selectAllCells, class:EditContext.selectAllEditNodes, class:CubeGrid.selectAllFacetValues, interface:DataBoundComponent.selectAllRecords, class:ListGrid.selectAllRecords, class:TileGrid.selectAllRecords, class:ColumnTree.selectAllRecords, class:Toolbar.selectButton, class:CellSelection.selectCell, class:CubeGrid.selectCell, class:CellSelection.selectCellList, class:CubeGrid.selectCells, class:EditContext.selectedEditNodesUpdated, class:EditContext.selectEditNode, class:CubeGrid.selectFacetValue, class:CubeGrid.selectFacetValues, class:ListGrid.selectionChanged, class:TileGrid.selectionChanged, class:CellSelection.selectionChanged, class:GridRenderer.selectionChanged, interface:DataBoundComponent.selectionUpdated, class:ListGrid.selectionUpdated, class:Selection.selectItem, class:Selection.selectList, interface:DataBoundComponent.selectRange, class:TileGrid.selectRange, class:Selection.selectRange, class:ListGrid.selectRange, class:ListGrid.selectRecord, class:TileGrid.selectRecord, class:ColumnTree.selectRecord, interface:DataBoundComponent.selectRecord, class:ColumnTree.selectRecords, class:TileGrid.selectRecords, interface:DataBoundComponent.selectRecords, class:ListGrid.selectRecords, class:Selection.selectSingle, class:CellSelection.selectSingleCell, class:EditContext.selectSingleEditNode, class:ListGrid.selectSingleRecord, interface:DataBoundComponent.selectSingleRecord, class:Calendar.selectTab, class:TabBar.selectTab, class:TabSet.selectTab, class:TimeItem.selectValue, class:UploadItem.selectValue, class:TextAreaItem.selectValue, class:TextItem.selectValue, class:DateItem.selectValue, class:DrawItem.sendToBack, class:Canvas.sendToBack, class:EditPane.serializeAllEditNodes, class:EditTree.serializeAllEditNodes, class:EditContext.serializeAllEditNodes, class:EditPane.serializeAllEditNodesAsJSON, class:EditContext.serializeAllEditNodesAsJSON, class:EditTree.serializeAllEditNodesAsJSON, class:EditPane.serializeEditNodes, class:EditTree.serializeEditNodes, class:EditContext.serializeEditNodes, class:EditContext.serializeEditNodesAsJSON, class:EditPane.serializeEditNodesAsJSON, class:EditTree.serializeEditNodesAsJSON, object:Array.set, interface:List.set, class:Canvas.setAccessKey, class:DynamicForm.setAction, class:ImgButton.setActionType, class:Button.setActionType, class:StatefulCanvas.setActionType, class:StretchImgButton.setActionType, class:SplitPane.setAddHistoryEntries, class:Button.setAlign, class:ImgSectionHeader.setAlign, class:Layout.setAlign, class:ListGrid.setAlternateBodyStyleName, class:ListGrid.setAlternateRecordStyles, class:NavigationBar.setAlwaysShowLeftButtonTitle, class:Canvas.setAriaState, class:EBay.setAuthToken, class:ImgButton.setAutoFit, class:StatefulCanvas.setAutoFit, class:StretchImgButton.setAutoFit, class:Button.setAutoFit, class:MultiComboBoxItem.setAutoFitButtons, class:ListGrid.setAutoFitData, class:ListGrid.setAutoFitExtraRecords, class:ListGrid.setAutoFitFieldWidths, class:ListGrid.setAutoFitMaxColumns, class:ListGrid.setAutoFitMaxHeight, class:ListGrid.setAutoFitMaxRecords, class:ListGrid.setAutoFitMaxWidth, class:ListGrid.setAutoFitWidth, class:ListGrid.setAutoFitWidthApproach, class:FacetChart.setAutoScrollData, class:FacetChart.setAutoScrollDataApproach, class:Window.setAutoSize, class:MiniDateRangeItem.setAutoValidate, class:FieldPicker.setAvailableFields, class:Canvas.setBackgroundColor, class:Canvas.setBackgroundImage, class:Button.setBaseStyle, class:StretchImgButton.setBaseStyle, class:StatefulCanvas.setBaseStyle, class:ImgButton.setBaseStyle, class:ColorPicker.setBlue, class:Window.setBodyColor, class:ListGrid.setBodyOverflow, class:Window.setBodyStyle, class:ListGrid.setBodyStyleName, class:Canvas.setBorder, class:Canvas.setBottom, class:Progressbar.setBreadth, class:Dialog.setButtons, class:MenuBar.setButtons, class:Toolbar.setButtons, class:DataSource.setCacheAllData, class:DataSource.setCacheData, class:TileGrid.setCanAcceptDroppedRecords, class:TabSet.setCanCloseTab, class:TabSet.setCanCloseTabs, class:DrawItem.setCanDrag, class:TileGrid.setCanDragTilesOut, class:FormItem.setCanEdit, class:DynamicForm.setCanEdit, class:ListGrid.setCanExpandRecords, class:Canvas.setCanFocus, class:ListGrid.setCanFreezeFields, class:ListGrid.setCanReorderRecords, class:TileGrid.setCanReorderTiles, class:PortalLayout.setCanResizeColumns, class:ListGrid.setCanResizeFields, class:Toolbar.setCanResizeItems, class:PortalLayout.setCanResizePortlets, class:PortalLayout.setCanResizeRows, class:EditProxy.setCanSelectChildren, class:PortalLayout.setCanShrinkColumnWidths, class:PortalLayout.setCanStretchColumnWidths, class:CanvasItem.setCanvas, class:FormItem.setCellStyle, class:DrawRect.setCenter, class:DrawSector.setCenterPoint, class:DrawOval.setCenterPoint, class:DrawKnob.setCenterPoint, class:DrawItem.setCenterPoint, object:MetricSettings.setChartType, class:FacetChart.setChartType, class:Tree.setChildren, class:ResultTree.setChildren, class:Calendar.setChosenDate, class:Canvas.setClassName, class:DataSource.setClientOnly, class:PortalLayout.setColumnBorder, class:PortalLayout.setColumnOverflow, class:PortalLayout.setColumnPreventUnderflow, class:GridRenderer.setColumnWidth, class:PortalLayout.setColumnWidth, class:GridRenderer.setColumnWidths, class:DrawShape.setCommands, class:HTMLFlow.setContents, class:DrawLabel.setContents, class:Label.setContents, class:Canvas.setContents, class:HTMLFlow.setContentsURL, class:DrawCurve.setControlPoint1, class:DrawLinePath.setControlPoint1, class:DrawCurve.setControlPoint2, class:DrawLinePath.setControlPoint2, class:ToolStripGroup.setControls, class:ListGrid.setCriteria, class:ResultTree.setCriteria, class:ResultSet.setCriteria, class:Menu.setCriteria, class:FilterBuilder.setCriteria, class:FormItem.setCriterion, class:MiniDateRangeItem.setCriterion, class:DateRangeItem.setCriterion, class:CanvasItem.setCriterion, class:ComboBoxItem.setCriterion, class:NavPanel.setCurrentItem, class:NavPanel.setCurrentItemId, class:SplitPane.setCurrentPane, class:Deck.setCurrentPane, class:ColorPicker.setCurrentPickMode, class:Sound.setCurrentTime, class:Calendar.setCurrentViewName, class:DrawItem.setCursor, class:Canvas.setCursor, class:NavigationBar.setCustomNavControl, interface:Chart.setData, class:Menu.setData, class:ColumnTree.setData, class:DateChooser.setData, class:TreeGrid.setData, class:ListGrid.setData, class:DetailViewer.setData, class:Calendar.setData, class:FacetChart.setDataColors, object:MetricSettings.setDataColors, class:FacetChart.setDataLineType, class:Canvas.setDataPath, class:ListGrid.setDataSource, interface:DataBoundComponent.setDataSource, class:ValuesManager.setDataSource, class:Date.setDefaultDateSeparator, interface:Palette.setDefaultEditContext, class:Class.setDefaultLogPriority, class:EditPane.setDefaultPalette, class:EditContext.setDefaultPalette, class:EditTree.setDefaultPalette, class:SplitPane.setDetailNavigationControl, class:SplitPane.setDetailPane, class:SplitPane.setDetailPaneTitleTemplate, class:SplitPane.setDetailTitle, class:SplitPane.setDetailToolButtons, class:Gauge.setDialRadius, class:StatefulCanvas.setDisabled, class:ImgButton.setDisabled, class:Canvas.setDisabled, class:Button.setDisabled, class:FormItem.setDisabled, class:StretchImgButton.setDisabled, class:ListGrid.setDontAutoDestroyComponent, class:TileGrid.setDragTracker, interface:DataBoundComponent.setDragTracker, class:Canvas.setDragTracker, class:ListGrid.setDragTracker, class:Gauge.setDrawnClockwise, class:DrawItem.setDrawPane, class:Canvas.setEdgeOpacity, class:Canvas.setEditMode, class:ListGrid.setEditorValueMap, class:EditContext.setEditProxyProperties, class:CubeGrid.setEditValue, class:ListGrid.setEditValue, class:ListGrid.setEditValues, class:CubeGrid.setEditValues, class:PickTreeItem.setEmptyDisplayValue, class:CubeGrid.setEnableCharting, class:Canvas.setEnabled, class:DrawItem.setEndArrow, class:DateItem.setEndDate, class:DrawLine.setEndPoint, class:DrawLinePath.setEndPoint, class:DrawCurve.setEndPoint, class:DynamicForm.setError, class:FormItem.setErrors, class:DynamicForm.setErrors, class:ValuesManager.setErrors, class:DrawLabel.setEscapeContents, class:EventCanvas.setEvent, class:Calendar.setEventStyle, class:CubeGrid.setFacetTitle, class:CubeGrid.setFacetTitleAlign, class:CubeGrid.setFacetValueTitle, class:CubeGrid.setFacetValueTitleAlign, class:GridRenderer.setFastCellUpdates, class:ListGrid.setFastCellUpdates, class:ListGrid.setFieldButtonProperties, class:ListGrid.setFieldCellIcon, class:ListGrid.setFieldError, class:DynamicForm.setFieldErrors, class:ValuesManager.setFieldErrors, class:ListGrid.setFieldHeaderBaseStyle, class:ListGrid.setFieldHeaderTitleStyle, class:ListGrid.setFieldIcon, class:ListGrid.setFieldMaxWidth, class:ListGrid.setFieldMinWidth, class:ListGrid.setFieldProperties, class:DynamicForm.setFields, class:ListGrid.setFields, class:TileGrid.setFieldState, class:ListGrid.setFieldState, class:ListGrid.setFieldTitle, class:DrawItem.setFillColor, class:FacetChart.setFilled, object:MetricSettings.setFilled, class:DrawItem.setFillGradient, class:DrawItem.setFillOpacity, class:ListGrid.setFilterEditorCriteria, class:RelativeDateItem.setFiscalCalendar, class:DateItem.setFiscalCalendar, class:DateChooser.setFiscalCalendar, class:CubeGrid.setFixedFacetValue, class:Slider.setFlipValues, class:DrawLabel.setFontSize, class:Date.setFormatter, class:FormulaBuilder.setFormula, class:DateRangeItem.setFromDate, class:FacetChart.setGradationGaps, class:ColorPicker.setGreen, class:ListGrid.setGroupByFieldSummaries, class:Canvas.setGroupLabelBackgroundColor, class:ListGrid.setGroupState, class:Canvas.setGroupTitle, class:ListGrid.setHeaderHeight, class:Calendar.setHeaderLevels, class:ListGrid.setHeaderSpanBaseStyle, class:ListGrid.setHeaderSpanButtonProperties, class:ListGrid.setHeaderSpanHeaderTitle, class:ListGrid.setHeaderSpans, class:ListGrid.setHeaderSpanTitle, class:ListGrid.setHeaderSpanTitleStyle, class:Window.setHeaderStyle, class:DrawOval.setHeight, class:DrawRect.setHeight, class:Portlet.setHeight, class:DrawImage.setHeight, class:DrawGroup.setHeight, class:Canvas.setHeight, class:Window.setHiliteBodyColor, interface:DataBoundComponent.setHilites, class:HiliteEditor.setHilites, interface:DataBoundComponent.setHiliteState, class:FormItem.setHint, class:FormItem.setHintStyle, class:TimeItem.setHours, class:TimeItem.setHourValues, class:PrintCanvas.setHTML, class:ColorPicker.setHtmlColor, class:Canvas.setHtmlElement, class:Canvas.setHtmlPosition, class:ColorPicker.setHue, class:ImgButton.setIcon, class:ImgSectionHeader.setIcon, class:Label.setIcon, class:StretchImgButton.setIcon, class:StatefulCanvas.setIcon, class:Button.setIcon, class:IconButton.setIcon, class:FormItem.setIconDisabled, class:Button.setIconOrientation, class:Label.setIconOrientation, class:ImgButton.setIconOrientation, class:StretchImgButton.setIconOrientation, class:StatefulCanvas.setIconOrientation, class:ImgSectionHeader.setIconOrientation, class:FormItem.setIconShowOnFocus, class:StatefulCanvas.setIconStyle, class:StretchImg.setIgnoreRTL, class:StatefulCanvas.setIgnoreRTL, class:Canvas.setImage, class:Img.setImageType, class:Calendar.setIndicators, class:SelectItemEditProxy.setInlineEditText, class:LabelEditProxy.setInlineEditText, class:FacetChartEditProxy.setInlineEditText, class:GridEditProxy.setInlineEditText, class:TabSetEditProxy.setInlineEditText, class:EditProxy.setInlineEditText, class:ProgressbarEditProxy.setInlineEditText, class:WindowEditProxy.setInlineEditText, class:StatefulCanvasEditProxy.setInlineEditText, class:DrawItemEditProxy.setInlineEditText, class:CheckboxItemEditProxy.setInlineEditText, class:TextItemEditProxy.setInlineEditText, class:DetailViewerEditProxy.setInlineEditText, class:DrawLabelEditProxy.setInlineEditText, class:MenuEditProxy.setInlineEditText, class:DateItemEditProxy.setInlineEditText, class:Menu.setItemChecked, class:Menu.setItemEnabled, class:Menu.setItemIcon, class:Menu.setItemProperties, class:AdaptiveMenu.setItems, class:StretchImg.setItems, class:Menu.setItems, class:DynamicForm.setItems, class:Menu.setItemTitle, class:TextItem.setKeyPressFilter, class:Slider.setLabelHeight, class:Gauge.setLabelPrefix, class:StretchImgButton.setLabelSkinImgDir, class:Slider.setLabelSpacing, class:Gauge.setLabelSuffix, class:Slider.setLabelWidth, class:Calendar.setLanes, class:IconButton.setLargeIcon, class:Layout.setLayoutMargin, class:MultiComboBoxItem.setLayoutStyle, class:Canvas.setLeavePageSpace, class:FormItem.setLeft, class:DrawGroup.setLeft, class:DrawImage.setLeft, class:DrawOval.setLeft, class:DrawRect.setLeft, class:Canvas.setLeft, class:NavigationBar.setLeftButtonIcon, class:NavigationBar.setLeftButtonTitle, class:SplitPane.setLeftButtonTitle, object:Array.setLength, interface:List.setLength, class:Progressbar.setLength, class:DrawItem.setLineCap, class:DrawItem.setLineColor, class:DrawLabel.setLineColor, class:DrawItem.setLineOpacity, class:DrawItem.setLinePattern, class:DrawItem.setLineWidth, class:LinkItem.setLinkTitle, class:SplitPane.setListPane, class:SplitPane.setListPaneTitleTemplate, class:SplitPane.setListTitle, class:WebService.setLocation, class:Class.setLogPriority, class:ColorPicker.setLuminosity, class:FacetChart.setMajorTickGradations, class:FacetChart.setMajorTickTimeIntervals, class:Canvas.setMargin, class:TextItem.setMask, class:Slider.setMaxValue, class:Gauge.setMaxValue, class:SliderItem.setMaxValue, class:Slider.setMaxValueLabel, class:Layout.setMembers, class:ValuesManager.setMemberValues, class:MenuBar.setMenus, class:DynamicForm.setMethod, class:TimeItem.setMilliseconds, class:TimeItem.setMillisecondValues, class:ListGrid.setMinFieldWidth, class:Canvas.setMinHeight, class:FacetChart.setMinorTickLength, class:TimeItem.setMinutes, class:TimeItem.setMinuteValues, class:Gauge.setMinValue, class:SliderItem.setMinValue, class:Slider.setMinValue, class:Canvas.setMinWidth, class:RichTextItem.setMoveFocusOnTab, class:RichTextEditor.setMoveFocusOnTab, class:DrawItem.setMoveKnobOffset, class:FileItem.setMultiple, class:SplitPane.setNavigationPane, class:SplitPane.setNavigationTitle, class:TreeGrid.setNodeIcon, class:EditContext.setNodeProperties, class:EditTree.setNodeProperties, class:EditPane.setNodeProperties, class:Gauge.setNumMajorTicks, class:Gauge.setNumMinorTicks, class:Slider.setNumValues, class:SliderItem.setNumValues, class:Canvas.setOpacity, class:ColorPicker.setOpacity, class:TreeGrid.setOpenState, class:ResultTree.setOpenState, class:FormItem.setOptionDataSource, class:FacetChart.setOtherAxisGradationGaps, class:FacetChart.setOtherAxisGradationTimes, class:FacetChart.setOtherAxisPixelsPerGradation, class:ScriptTask.setOutputData, class:ScriptTask.setOutputRecord, class:DrawOval.setOval, class:Canvas.setOverflow, class:Canvas.setPadding, class:Canvas.setPageLeft, class:SplitPane.setPageOrientation, class:Canvas.setPageTop, class:TabSet.setPaneContainerOverflow, class:Canvas.setPanelContainer, class:AdaptiveMenu.setPartialInlining, class:Progressbar.setPercentDone, class:Canvas.setPercentSource, class:Gauge.setPivotPoint, class:FacetChart.setPixelsPerGradation, class:Applet.setPluginID, class:PortalLayout.setPortletDropTypes, class:PortalLayout.setPreventRowUnderflow, class:PortalLayout.setPreventUnderflow, class:PrintWindow.setPrintButtonTitle, class:EBay.setProductionToken, class:CanvasItem.setPrompt, class:FormItem.setPrompt, class:ImgSectionHeader.setPrompt, class:Class.setProperties, class:Class.setProperty, object:Array.setProperty, class:DrawItem.setPropertyValue, object:MetricSettings.setProportional, class:FacetChart.setProportional, class:FacadeDataSource.setQueueRequests, class:DrawOval.setRadii, class:DrawOval.setRadius, class:FormItem.setReadOnlyDisplay, class:DynamicForm.setReadOnlyDisplay, class:ListGrid.setRecordComponentHeight, class:DrawImage.setRect, class:Canvas.setRect, class:DrawRect.setRect, class:DrawDiamond.setRect, class:DrawOval.setRect, class:ColorPicker.setRed, class:FacetChart.setRegressionLineType, class:FacetChart.setRegressionPolynomialDegree, class:Canvas.setRelativeTabPosition, class:FormItem.setRequired, class:Calendar.setResolution, class:Canvas.setRight, class:NavigationBar.setRightButtonIcon, class:NavigationBar.setRightButtonTitle, class:SplitPane.setRightButtonTitle, class:Tree.setRoot, class:DOMGrid.setRootElement, class:DrawPane.setRotation, class:DrawRect.setRounding, class:Slider.setRoundPrecision, class:Slider.setRoundValues, class:ListGrid.setRowErrors, class:Portlet.setRowHeight, class:EBay.setSandboxToken, class:ColorPicker.setSaturation, class:DynamicForm.setSaveOperationType, class:ValuesManager.setSaveOperationType, class:FacetChart.setScaleEndColor, class:FacetChart.setScaleStartColor, class:NativeScrollbar.setScrollTarget, class:Scrollbar.setScrollTarget, class:TimeItem.setSeconds, class:TimeItem.setSecondValues, class:SectionStack.setSectionProperties, class:SectionStack.setSectionTitle, class:Gauge.setSectorFillColor, class:Gauge.setSectors, class:StatefulCanvas.setSelected, class:Button.setSelected, class:Selection.setSelected, class:ImgButton.setSelected, class:StretchImgButton.setSelected, class:TreeGrid.setSelectedPaths, class:ListGrid.setSelectedState, class:ListGrid.setSelectionAppearance, class:DateItem.setSelectionRange, class:TimeItem.setSelectionRange, class:TextItem.setSelectionRange, class:TextAreaItem.setSelectionRange, class:UploadItem.setSelectionRange, class:ListGrid.setSelectionType, class:Tree.setSeparateFolders, class:DrawItem.setShadow, class:NavigationBar.setShortLeftButtonTitle, class:Window.setShowCloseButton, class:ListGrid.setShowCollapsedGroupSummary, class:PortalLayout.setShowColumnMenus, class:Calendar.setShowDayLanes, class:FormItem.setShowDisabled, class:ListGrid.setShowFilterEditor, class:ButtonItem.setShowFocusedAsOver, class:ListGrid.setShowGridSummary, class:ListGrid.setShowGroupSummary, class:ListGrid.setShowGroupSummaryInHeader, class:ListGrid.setShowHeader, class:Window.setShowHeaderIcon, class:Menu.setShowIcons, class:FormItem.setShowIconsOnFocus, class:SplitPane.setShowLeftButton, class:NavigationBar.setShowLeftButton, class:Window.setShowMaximizeButton, class:MenuButton.setShowMenuBelow, class:IMenuButton.setShowMenuBelow, class:IMenuButton.setShowMenuButtonImage, class:MenuButton.setShowMenuButtonImage, class:Window.setShowMinimizeButton, class:FacetChart.setShowMinorTicks, class:FormItem.setShowPickerIconOnFocus, class:Slider.setShowRange, class:ListGrid.setShowRecordComponents, class:FacetChart.setShowRegressionLine, class:Canvas.setShowResizeBar, class:NavigationBar.setShowRightButton, class:SplitPane.setShowRightButton, class:Tree.setShowRoot, class:FacetChart.setShowScatterLines, class:Canvas.setShowShadow, class:Canvas.setShowSnapGrid, class:Menu.setShowSubmenus, class:Slider.setShowTitle, class:ToolStripGroup.setShowTitle, class:Slider.setShowValue, class:Calendar.setShowViewHovers, class:Calendar.setShowWeekends, class:FacetChart.setShowXTicks, class:FacetChart.setShowYTicks, class:Canvas.setSnapEdge, class:Canvas.setSnapOffsetLeft, class:Canvas.setSnapOffsetTop, class:Canvas.setSnapTo, object:Array.setSort, class:ResultSet.setSort, interface:DataBoundComponent.setSort, class:ListGrid.setSort, class:ListGrid.setSortByGroupFirst, class:Tree.setSortFoldersBeforeLeaves, class:ListGrid.setSortHandler, class:ListGrid.setSortState, class:Sound.setSrc, class:Flashlet.setSrc, class:DrawImage.setSrc, class:StretchImg.setSrc, class:Window.setSrc, class:Img.setSrc, class:FacetChart.setStacked, object:MetricSettings.setStacked, class:DrawItem.setStartArrow, class:DateItem.setStartDate, class:DrawCurve.setStartPoint, class:DrawLine.setStartPoint, class:DrawLinePath.setStartPoint, class:StretchImg.setState, class:ImgButton.setState, class:StatefulCanvas.setState, class:StretchImgButton.setState, class:Process.setState, class:Button.setState, class:Window.setStatus, class:Slider.setStepPercent, class:PortalLayout.setStretchColumnWidthsProportionally, class:Label.setStyleName, class:Canvas.setStyleName, class:DrawLabel.setStyleName, class:SummaryBuilder.setSummary, class:ColorPicker.setSupportsTransparency, class:TabSet.setTabIcon, class:Canvas.setTabIndex, class:FormItem.setTabIndex, class:TabSet.setTabPane, class:TabSet.setTabProperties, class:TabSet.setTabTitle, class:DynamicForm.setTarget, class:DataSource.setTestData, class:RadioGroupItem.setTextBoxStyle, class:Slider.setThumbSrc, class:Slider.setThumbThickWidth, class:Slider.setThumbThinWidth, class:FacetChart.setTickLength, class:TileLayout.setTileHeight, class:TileLayout.setTileHMargin, class:TileLayout.setTileMargin, class:TileLayout.setTileSize, class:TileLayout.setTilesPerLine, class:TileLayout.setTileVMargin, class:TileLayout.setTileWidth, class:Calendar.setTimelineRange, class:NavigationBar.setTitle, class:ImgButton.setTitle, class:StatefulCanvas.setTitle, class:ButtonItem.setTitle, class:ToolStripGroup.setTitle, class:DrawItem.setTitle, class:StretchImgButton.setTitle, class:Slider.setTitle, class:Button.setTitle, class:Window.setTitle, class:ToolStripGroup.setTitleAlign, class:ToolStripGroup.setTitleHeight, class:DynamicForm.setTitleOrientation, class:ToolStripGroup.setTitleOrientation, class:ToolStripGroup.setTitleStyle, class:StretchImgButton.setTitleStyle, class:DateRangeItem.setToDate, class:Dialog.setToolbarButtons, class:DrawRect.setTop, class:DrawImage.setTop, class:FormItem.setTop, class:DrawOval.setTop, class:Canvas.setTop, class:DrawGroup.setTop, class:FilterBuilder.setTopOperator, class:FilterBuilder.setTopOperatorAppearance, class:Slider.setTrackCapSize, class:Slider.setTrackImageType, class:Slider.setTrackSrc, class:Slider.setTrackWidth, class:DataSource.setTypeOperators, interface:Chart.setupChart, class:Canvas.setUpdateTabPositionOnReparent, class:FacetChart.setUseMultiplePointShapes, class:EBay.setUseProduction, class:ListGrid.setUserFormula, class:ListGrid.setUserFormulaText, class:ListGrid.setUserSummary, class:ListGrid.setUserSummaryText, class:Button.setVAlign, class:TimeItem.setValue, class:FormItem.setValue, class:DateRangeItem.setValue, class:RichTextEditor.setValue, class:ValuesManager.setValue, class:DynamicForm.setValue, class:UploadItem.setValue, class:Slider.setValue, class:SelectItem.setValue, class:MiniDateRangeItem.setValue, class:Gauge.setValue, class:RadioGroupItem.setValueDisabled, class:FormItem.setValueIcons, class:DynamicForm.setValueMap, class:CheckboxItem.setValueMap, class:SelectItem.setValueMap, class:FormItem.setValueMap, class:ListGrid.setValueMap, class:DynamicForm.setValues, class:ValuesManager.setValues, class:DynamicForm.setValuesAsCriteria, class:DynamicForm.setValuesManager, class:Canvas.setValuesManager, class:PickTreeItem.setValueTree, class:Slider.setVertical, class:TreeGrid.setViewState, class:DetailViewer.setViewState, class:ListGrid.setViewState, class:NavigationBar.setViewState, class:ViewLoader.setViewURL, class:SectionStack.setVisibilityMode, class:Layout.setVisibleMember, class:Canvas.setWidth, class:DrawOval.setWidth, class:DrawRect.setWidth, class:DrawImage.setWidth, class:DrawGroup.setWidth, class:Button.setWrap, class:DrawItem.setZIndex, class:FacetChart.setZIndexMetric, class:Calendar.setZones, class:FacetChart.setZoomEndValue, class:DrawPane.setZoomLevel, class:FacetChart.setZoomStartValue, class:Callbacks.ShiftFocusCallback, class:SimpleType.shortDisplayFormatter, class:TreeGrid.shouldAnimateFolder, class:FormItem.shouldApplyHeightToTextBox, class:CanvasItem.shouldDisableCanvas, class:Calendar.shouldDisableDate, class:Window.shouldDismissOnEscape, class:Canvas.shouldDragScroll, class:TextItem.shouldFetchMissingValue, class:FormItem.shouldFetchMissingValue, class:ComboBoxItem.shouldGenerateExactMatchCriteria, class:ListGrid.shouldIncludeHiliteInSummaryField, interface:DataBoundComponent.shouldIncludeHiliteInSummaryField, class:FormItem.shouldSaveOnEnter, class:Calendar.shouldShowDate, class:Calendar.shouldShowEvent, class:ColumnTree.shouldShowHeader, class:Calendar.shouldShowLane, class:Canvas.shouldSnapOnDrop, class:FormItem.shouldStopKeyPressBubbling, class:FormItem.show, class:DrawItem.show, class:Canvas.show, class:DrawItem.showAllKnobs, class:Canvas.showClickMask, class:Canvas.showComponentMask, class:Canvas.showContextMenu, class:FormItem.showContextMenu, class:Menu.showContextMenu, class:DrawItem.showContextMenu, class:SplitPane.showDetailPane, class:ValuesManager.showErrors, class:DynamicForm.showErrors, class:Calendar.showEventDialog, class:Calendar.showEventEditor, class:ListGrid.showField, class:DynamicForm.showFieldErrors, class:ValuesManager.showFieldErrors, class:ListGrid.showFields, class:FormItem.showIcon, object:ListGridField.showIf, object:DetailViewerField.showIf, class:FormItem.showIf, object:FormItemIcon.showIf, class:DynamicForm.showItem, class:DynamicForm.showItemContextMenu, class:DrawItem.showKnobs, class:SplitPane.showListPane, class:Layout.showMember, class:MenuBar.showMenu, class:IconMenuButton.showMenu, class:MenuButton.showMenu, class:SplitPane.showNavigationPane, class:Calendar.showNewEventDialog, class:Calendar.showNewEventEditor, class:Canvas.showNextTo, class:SelectItem.showPicker, class:FormItem.showPicker, class:ListGrid.showRecordComponent, class:Canvas.showRecursively, class:SectionStack.showSection, class:Callbacks.ShowSectionCallback, class:EditProxy.showSelectedAppearance, class:Menu.showSubmenu, class:TabSet.showTabContextMenu, class:MultiComboBoxItem.showValue, class:CanvasItem.showValue, object:Array.slide, object:Array.slideRange, interface:List.sort, class:ListGrid.sort, class:CubeGrid.sortByFacetId, class:CubeGrid.sortByFacetValues, interface:List.sortByProperty, object:Array.sortByProperty, class:ResultSet.sortByProperty, class:MultiSortPanel.sortChanged, class:ListGrid.sortChanged, class:ListGrid.sorterClick, class:ListGrid.sorterContextClick, class:DynamicForm.sortItemsIntoTabOrder, object:ListGridField.sortNormalizer, class:DataSource.splitCriteria, class:Process.start, class:ListGrid.startEditing, class:TreeGrid.startEditingNew, class:ListGrid.startEditingNew, class:EditProxy.startInlineEditing, class:String.startsWith, class:FormItem.stopHover, class:ListGrid.stopHover, class:FormItem.storeValue, class:CanvasItem.storeValue, object:Number.stringify, class:ValuesManager.submit, class:DynamicForm.submit, class:DynamicForm.submitForm, class:ValuesManager.submitValues, class:DynamicForm.submitValues, object:Array.sum, class:ListGrid.summaryUpdated, class:Class.Super, class:DataSource.supportsAdvancedCriteria, class:DrawItem.supportsEndArrow, class:DrawItem.supportsStartArrow, class:DataSource.supportsTextMatchStyle, class:ValuesManager.synchronizeMember, class:ValuesManager.synchronizeMembers, class:ValuesManager.synchronizeMembersOnDataPath, class:TabSet.tabDeselected, object:Tab.tabDeselected, class:TabSet.tabForPane, class:TabSet.tabIconClick, class:Callbacks.TabIndexUpdatedCallback, object:Tab.tabSelected, class:TabSet.tabSelected, class:TabSet.tabsReordered, class:FormulaBuilder.testFunction, class:Sound.timeChanged, class:Calendar.timelineEventMoved, class:Calendar.timelineEventResized, class:TabSet.titleChanged, class:FormItem.titleClick, class:ImgButton.titleClipped, class:DynamicForm.titleClipped, class:SectionHeader.titleClipped, class:Button.titleClipped, class:ImgSectionHeader.titleClipped, class:StretchImgButton.titleClipped, class:FormItem.titleDoubleClick, object:HeaderLevel.titleFormatter, class:ImgSectionHeader.titleHover, class:Button.titleHover, class:StretchImgButton.titleHover, class:SectionHeader.titleHover, class:FormItem.titleHover, class:ImgButton.titleHover, class:FormItem.titleHoverHTML, class:SectionHeader.titleHoverHTML, class:StretchImgButton.titleHoverHTML, class:ImgSectionHeader.titleHoverHTML, class:DynamicForm.titleHoverHTML, class:ImgButton.titleHoverHTML, class:Button.titleHoverHTML, object:Number.toCurrencyString, class:Date.toDateStamp, class:DateChooser.todayClick, class:Date.toEuropeanShortDate, class:Date.toEuropeanShortDateTime, class:CubeGrid.toggleFieldOpenState, class:TreeGrid.toggleFolder, class:ListGrid.toggleFrozen, class:ListGrid.toggleSort, class:Date.toJapanShortDate, class:Date.toJapanShortDateTime, class:Date.toNormalDate, class:Date.toNormalDatetime, class:Date.toPrettyString, class:Date.toSerializeableDate, class:Date.toShortDate, class:Date.toShortDateTime, class:Class.toString, class:Date.toUSShortDate, class:Date.toUSShortDateTime, interface:DataBoundComponent.transferDragData, class:ListGrid.transferDragData, class:TileGrid.transferDragData, class:TileLayout.transferDragData, class:TreeGrid.transferDragData, class:TreeGrid.transferNodes, interface:DataBoundComponent.transferRecords, interface:DataBoundComponent.transferSelectedData, class:ListGrid.transferSelectedData, class:TileGrid.transferSelectedData, class:TreeGrid.transferSelectedData, class:ResultSet.transformData, class:HTMLFlow.transformHTML, class:FormItem.transformInput, class:TextAreaItem.transformPastedValue, class:TextItem.transformPastedValue, class:DataSource.transformRequest, class:RestDataSource.transformRequest, class:DataSource.transformResponse, class:RestDataSource.transformResponse, class:ListGrid.unfreezeField, class:ListGrid.ungroup, class:ResultTree.unloadChildren, class:Tree.unloadChildren, class:ListGrid.unmarkRecordRemoved, class:ListGrid.unsort, object:Array.unsort, class:SplitPane.upClick, class:MiniNavControl.upClick, class:NavigationBar.upClick, class:SimpleType.updateAtomicValue, class:DataSource.updateCaches, class:Calendar.updateCalendarEvent, class:CanvasItem.updateCanvasTabPosition, class:Canvas.updateChildTabPosition, class:Canvas.updateChildTabPositions, class:DataSource.updateData, class:ListGrid.updateData, class:Canvas.updateEditNode, class:Calendar.updateEvent, class:Canvas.updateHover, class:DrawKnob.updatePoints, class:ListGrid.updateRecordComponent, class:FormItem.updateState, class:TabSet.updateTab, class:Canvas.updateTabPositionForDraw, class:TileGrid.updateTile, class:DataSource.useOfflineResponse, interface:DataBoundComponent.userAddedField, class:ListGrid.userSelectAllRecords, class:ResultSet.usingFilteredData, class:FilterBuilder.validate, class:MultiGroupDialog.validate, class:FilterClause.validate, class:MultiGroupPanel.validate, class:ValuesManager.validate, class:FormItem.validate, class:MultiSortPanel.validate, class:MultiSortDialog.validate, class:DynamicForm.validate, class:ListGrid.validateCell, class:DataSource.validateData, class:DynamicForm.validateData, class:DateRangeItem.validateRange, class:ListGrid.validateRow, class:Callbacks.ValidationStatusCallback, class:Slider.valueChanged, class:FacetChart.valueClick, class:FormItem.valueClipped, class:FormItem.valueHover, class:FormItem.valueHoverHTML, class:RadioGroupItem.valueHoverHTML, class:DynamicForm.valueHoverHTML, class:FormItem.valueIconClick, object:ListGridField.valueIconClick, class:Slider.valueIsChanging, class:DynamicForm.valuesAreValid, class:DynamicForm.valuesChanged, class:ValuesManager.valuesHaveChanged, class:DynamicForm.valuesHaveChanged, class:DataSource.viewFile, class:ViewLoader.viewLoaded, class:DetailViewer.viewSelectedData, class:ListGrid.viewStateChanged, class:Canvas.visibilityChanged, class:Canvas.visibleAtPoint, class:TreeGrid.willAcceptDrop, class:Canvas.willAcceptDrop, class:ListGrid.willAcceptDrop, class:PortalLayout.willAcceptPortletDrop, class:PortalLayout.willClosePortlet, class:ResultTree.willFetchData, class:ListGrid.willFetchData, interface:DataBoundComponent.willFetchData, class:ResultSet.willFetchData, class:PortalLayout.willMaximizePortlet, class:PortalLayout.willMinimizePortlet, class:PortalLayout.willRestorePortlet, class:DataSource.xmlSerialize, class:Dialog.yesClick, class:DrawPane.zoom, class:FacetChart.zoomChanged, class:FacetChart.zoomTo, 
+    
+	/**
+	 * Controls the navigation mode of records.
+	 */
+	export type NavigationMode = 
+		/** Clicking anywhere on the record navigates */
+		"wholeRecord"
+		/** Only clicking directly on the navigation icon triggers navigation */
+		| "naviconOnly"
+		;
 
-Classes without inheritsFrom attribute: 191
-AdvancedHiliteEditor, AutoFitButton, AutoTest, BooleanItem, Browser, Callbacks, CanvasEditProxy, CanvasItem, CellSelection, CheckboxItemEditProxy, Class, ColorItem, ColorPicker, ColumnTree, Comm, CubeGrid, DatabaseBrowser, DataSourceField, DataView, Date, DateChooser, DateGrid, DateItemEditProxy, DateRangeDialog, DateUtil, DecisionGateway, Deck, DetailViewerEditProxy, DMI, DOMGrid, DrawItemEditProxy, DrawLabelEditProxy, DrawPaneEditProxy, EBay, EditContext, EditPane, EditProxy, EditTree, EventCanvas, EventHandler, EventWindow, Facet, FacetChartEditProxy, FacetValue, FieldPicker, FieldPickerField, FieldPickerWindow, FileLoader, FilterClause, FlowLayout, FormEditProxy, FormItem, FormItemEditProxy, GridEditProxy, GridRenderer, GroupingMessages, HibernateBrowser, HiddenPalette, HiliteRule, History, Hover, HStack, IButton, IconButton, IconMenuButton, IMenuButton, ImgButton, ImgEditProxy, ImgSectionHeader, ImgSplitbar, ImgTab, IndicatorCanvas, IPickTreeItem, isc, ITreeMenuButton, JSON, JSONEncoder, JSSyntaxHiliter, LabelEditProxy, LayoutEditProxy, ListPalette, ListPropertiesDialog, ListPropertiesPane, Log, LoginDialog, Mail, MathFunction, MenuButton, MenuEditProxy, MenuPalette, Messaging, MiniDateRangeItem, MockDataSource, MultiFilePicker, MultiGroupDialog, MultiGroupPanel, MultiSortDialog, MultiSortPanel, NativeScrollbar, NavPanel, NumberUtil, Offline, OperationBinding, Operators, Page, PickListMenu, PortalLayout, Portlet, PresetDateRangeItem, PrintCanvas, PrintWindow, Process, ProcessElement, ProcessSequence, Progressbar, ProgressbarEditProxy, PropertySheet, RangeSlider, RecordEditor, ResultSet, ResultTree, RibbonBar, RibbonGroup, RichTextCanvas, RichTextEditor, RPCManager, RPCRequest, RPCResponse, SchemaSet, ScriptTask, Scrollbar, ScrollThumb, SectionHeader, SectionStackEditProxy, Selection, SelectionOutline, SelectionTreeMenu, SelectItemEditProxy, SelectOtherItem, ServerObject, ServiceTask, SimpleTabButton, SimpleTile, SimpleType, Snapbar, Sound, Splitbar, SplitPaneEditProxy, StatefulCanvasEditProxy, StateTask, StretchImgButton, String, SummaryBuilder, SyntaxHiliter, TabBar, TabIndexManager, TableView, TabSetEditProxy, Task, TextAreaItemEditProxy, TextExportSettings, TextImportSettings, TextItemEditProxy, TextSettings, TilePalette, Time, Timeline, Timer, ToolStripGroup, ToolStripMenuButton, ToolStripResizer, ToolStripSeparator, TooLStripSeparatorEditProxy, ToolStripSpacer, Tree, TreeGrid, TreePalette, UserTask, Validator, ValuesManager, VisualBuilder, VStack, WebService, WindowEditProxy, WSDataSource, WSRequest, XJSONDataSource, XMLSyntaxHiliter, XMLTools, XORGateway, ZoneCanvas, 
+	export type Selected = 
+		/** StatefulCanvas should show focused state */
+		"focused"
+		/** StatefulCanvas is selected */
+		| "selected"
+		/** StatefulCanvas is not selected */
+		| "unselected"
+		;
 
+
+	/**
+	 * An "Object literal" is JavaScript shorthand for defining a JavaScript Object with a set of properties. For example, code like this: var request = { actionURL : "/foo.do", showPrompt:false }; .. is equivalent to .. var request = new Object(); request.actionURL = "/foo.do"; request.showPrompt = false; In situations where a set of Properties','properties may be passed to a method, the Object literal notation is much more compact. For example: isc.RPCManager.sendRequest({ actionURL : "/foo.do", showPrompt:false }); NOTE: if you have a 'trailing comma' in an object literal, like so: var request = { actionURL : "/foo.do", showPrompt:false, // TRAILING COMMA }; This is considered a syntax error by Internet Explorer, but not by Firefox. This is by far the #1 cause of Internet Explorer-specific errors that do not occur in other browsers. Pay special attention to this error, and, if you can, install the JSSyntaxScannerFilter into your development environment (as described in the iscInstall','deployment instructions).
+	 */
+	export type ObjectLiteral = any;
+
+
+	/**
+	 * CSS class name to apply to some HTML element on this page. This is a string that should match the css class defined for the page in an external stylesheet or in inline html &lt;STYLE&gt; tags. As a general rule, wherever it is possible to provide a CSS styleName (such as Canvas.styleName or Button.baseStyle, your CSS style can specify border, margins, padding, and any CSS attributes controlling background or text styling. You should not specify any CSS properties related to positioning, clipping, sizing or visibility (such as "overflow", "position", "display", "visibility" and "float") - use SmartClient APIs for this kind of control. Because text wrapping cannot be consistently controlled cross-browser from CSS alone, you should use SmartClient properties such as Button.wrap instead of the corresponding CSS properties, when provided. Content contained within SmartClient components can use arbitrary CSS, with the caveat that the content should be tested on all supported browsers, just as content outside of SmartClient must be. Special note on CSS margins: wherever possible, use CSS padding and border in lieu of CSS margins, or non-CSS approaches such as Layout.layoutMargin, Canvas.snapTo, or absolute positioning (including specifying percentage left/top coordinates). We recommend this because CSS specifies a very complicated and widely criticized "margin-collapse" behavior which has surprising effects when margins exist on both parents and children. Compounding the problem, margins are implemented very differently on different browsers, especially when it comes to HTML margins. Note about CSS "box models" The CSS "box model" defines whether the size applied to a DOM element includes padding, borders or margins, or whether such settings effectively increase the size of the component beyond the size specified in CSS. In SmartClient, the size configured for a component includes border, padding and margins if specified (in CSS terminology, the box model is "margin-box"). This allows CSS borders, margins and padding to be treated as purely visual properties with no effect on sizing or layout.
+	 */
+	export type CSSStyleName = string;
+
+
+	/**
+	 * An object containing the stored grouping information for a listGrid. Note that this object is not intended to be interrogated directly, but may be stored (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridGroupState = string;
+
+
+	/**
+	 * 3 character string containing the "M", "D" and "Y" characters to indicate the format of strings being parsed into Date instances via DateUtil.parseInput(). As an example - an input format of "MDY" would parse "01/02/1999" to Jan 2nd 1999 Note: In addition to these standard formats, a custom date string parser function may be passed directly to DateUtil.setInputFormat or passed into DateUtil.parseInput as the inputFormat parameter. 
+	 */
+	export type DateInputFormat = any;
+
+	export type PreserveOpenState = 
+		/** Never try to automatically preserve the openState. Nodes will be initially open or closed based solely on the Tree.openProperty optionally set by the server. */
+		"never"
+		/** If either the Tree.idField or Tree.nameProperty has been set on the Tree, (so that nodes have either unique ids or unique paths), preserve openState by respecting the Tree.openProperty set by the server, then applying the openState. */
+		| "whenUnique"
+		/** Like "whenUnique" but automatically preserves openState even if nodes cannot be uniquely identified. This means that nodes at the same tree positions (eg 3rd child of 5th node under root) will be placed in the same openState, regardless of whether that node has anything to do with the node that previously was at that tree position. */
+		| "always"
+		;
+
+
+	/**
+	 * A means of identifying the properties in an exported dataset - either the property name or its title.
+	 */
+	export type PropertyIdentifier = 
+		/** Identify properties by internal name */
+		"name"
+		/** Identify properties by localized descriptive title */
+		| "title"
+		;
+
+
+	/**
+	 * Used to name a validator or reference a standard, built-in Validator - see list below. To make use of a standard validator type for a field in a DataSource, or DynamicForm instance, specify the validators property to an array containing a validator definition where the type property is set to the appropriate type. A custom error message can be specified for any validator type by setting the errorMessage property on the validator definition object, and some validator types make use of additional properties on the validator definition object such as max or min. For example, to use the integerRange validator type: &nbsp;&nbsp;field:{ &nbsp;&nbsp;&nbsp;&nbsp;validators:[ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{type:"integerRange", min:1, max:100} &nbsp;&nbsp;&nbsp;&nbsp;] &nbsp;&nbsp;} Custom validators can be reused on the client by adding them to the global validator list, via the Validator.addValidatorDefinition method.
+	 */
+	export type ValidatorType = 
+		/** Validation will fail if this field is non-empty and has a non-boolean value. */
+		"isBoolean"
+		/** Validation will fail if the value is not a string value. */
+		| "isString"
+		/** Tests whether the value for this field is a whole number. If validator.convertToInteger is true, float values will be converted into integers and validation will succeed. */
+		| "isInteger"
+		/** Tests whether the value for this field is a valid floating point number. */
+		| "isFloat"
+		/** Tests whether the value for this field is a valid expression or function; if it is valid, creates a stringMethods','stringMethod object with the value and set the resultingValue to the StringMethod. */
+		| "isFunction"
+		/** RequiredIf type validators should be specified with an expression property set to a stringMethods','stringMethod, which takes four parameters: item - the DynamicForm item on which the error occurred (may be null) validator - a pointer to the validator object value - the value of the field in question record - the "record" object - the set of values being edited by the widget When validation is performed, the expression will be evaluated (or executed). If it returns true, the field will be treated as a required field, so validation will fail if the field has no value, or, in the case of a FileItem or UploadItem and if client-side validation is supported by the browser, if no file is selected for upload or the selected file is empty. To allow server-side enforcement, a required validator can be used instead. With the exception of "binary" fields, conditional criteria can be specified with the Validator.applyWhen','applyWhen property. See conditionallyRequired. <strong>NOTE:</strong> A requiredIf validator cannot be used to guarantee that a non-empty file is uploaded. The user's browser might not support client-side file validation. Using a requiredIf validator on a "binary" field may be appropriate in scenarios where the application does not technically require a non-empty file to be uploaded by the user. For example, in a bug tracking application, a file upload may be required if the "Have a test case?" checkbox is checked, but the value of the "Have a test case?" checkbox is not actually saved by the application; instead, whether the user is providing a test case is inferred by whether a non-empty test case file was uploaded. */
+		| "requiredIf"
+		/** Tests whether the value for this field matches the value of some other field. The field to compare against is specified via the otherField property on the validator object (should be set to a field name). See matchValue. */
+		| "matchesField"
+		/** Tests whether the value for this field matches any value from an arbitrary list of acceptable values. The set of acceptable values is specified via the list property on the validator, which should be set to an array of values. If validator.list is not supplied, the valueMap for the field will be used. If there is no valueMap, not providing validator.list is an error. */
+		| "isOneOf"
+		/** Tests whether the value for this field is a whole number within the range specified. The max and min properties on the validator are used to determine the acceptable range, inclusive. To specify the range as exclusive of the min/mix values, set exclusive to true. See validationBuiltins. */
+		| "integerRange"
+		/** This validator type applies to string values only. If the value is a string value validation will fail if the string's length falls outside the range specified by validator.max and validator.min. Note that non-string values will always pass validation by this validator type. Note that the errorMessage for this validator will be evaluated as a dynamicString - text within &#36;{...} will be evaluated as JS code when the message is displayed, with max and min available as variables mapped to validator.max and validator.min. */
+		| "lengthRange"
+		/** Determine whether a string value contains some substring specified via validator.substring. */
+		| "contains"
+		/** Determine whether a string value does not contain some substring specified via validator.substring. */
+		| "doesntContain"
+		/** Determine whether a string value contains some substring multiple times. The substring to check for is specified via validator.substring. The validator.operator property allows you to specify how to test the number of substring occurrences. Valid values for this property are ==, !=, &lt;, &lt;=, &gt;, &gt;=. The number of matches to check for is specified via validator.count. */
+		| "substringCount"
+		/** regexp type validators will determine whether the value specified matches a given regular expression. The expression should be specified on the validator object as the expression property. See formsRegularExpression. */
+		| "regexp"
+		/** Validate against a regular expression mask, specified as validator.mask. If validation is successful a transformation can also be specified via the validator.transformTo property. This should be set to a string in the standard format for string replacement via the native JavaScript replace() method. See formsValueTransform. */
+		| "mask"
+		/** Tests whether the value for a date field is within the range specified. Range is inclusive, and is specified via validator.min and validator.max, which should be specified in <a target=_blank href="http://www.w3.org/TR/xmlschema-2/#dateTime">XML Schema date format</a> or as a live JavaScript Date object (for client-only validators only). To specify the range as exclusive of the min/mix values, set exclusive to true. Note that the errorMessage for this validator will be evaluated as a dynamicString - text within &#36;{...} will be evaluated as JS code when the message is displayed, with max and min available as variables mapped to validator.max and validator.min. */
+		| "dateRange"
+		/** Validate a field as a valid floating point value within a value range. Range is specified via validator.min and validator.max. Also checks precision, specified as number of decimal places in validator.precision. If validator.roundToPrecision is set a value that doesn't match the specified number of decimal places will be rounded to the nearest value that does. For backwards compatibility only. Use "floatRange" and/or "floatPrecision" instead. */
+		| "floatLimit"
+		/** Tests whether the value for this field is a floating point number within the range specified. The max and min properties on the validator are used to determine the acceptable range, inclusive. To specify the range as exclusive of the min/mix values, set exclusive to true. Note that the errorMessage for this validator will be evaluated as a dynamicString - text within &#36;{...} will be evaluated as JS code when the message is displayed, with max and min available as variables mapped to validator.max and validator.min. */
+		| "floatRange"
+		/** Tests whether the value for this field is a floating point number with the appropriate number of decimal places - specified in validator.precision If the value is of higher precision and validator.roundToPrecision is specified, the value will be rounded to the specified number of decimal places and validation will pass, otherwise validation will fail. */
+		| "floatPrecision"
+		/** A non-empty value is required for this field to pass validation. In the case of a "binary" field, a non-empty file must be uploaded. */
+		| "required"
+		/** Change the state/appearance of this field. Desired appearance is specified via the fieldAppearance property on the validator object. See FieldAppearance type for choices. If fieldAppearance is not specified, the default is "readOnly". */
+		| "readOnly"
+		/** Change the visibility of this field. */
+		| "visibility"
+		/** Change the enable/disable state of this field. */
+		| "enable"
+		/** Returns true if the value for this field is unique. The uniqueness check is performed across the whole DataSource unless you specify property validator.criteriaFields as a comma-separated string of field names; in that case, the uniqueness check is done in the context of those extra criteria, allowing you to check, for example, whether an employee number is unique for the department and location found on the record being validated. By default the uniqueness check is not case sensitive but this can be controlled through the Validator.caseSensitive','caseSensitive attribute. You can specify the DataSource.operationBindings','operation to use for the uniqueness check with the Validator.operationId','operationId attribute. Validators of this type have validatorDefinition.requiresServer','requiresServer set to true and do not run on the client. Note when isUnique validator is executed as part of validation process during update operation, it will perform uniqueness check only for single row updates. If update targets OperationBinding.allowMultiUpdate','multiple records, then isUnique validator will be skipped. If uniqueness check is needed when updating multiple records, consider using dmiOverview','custom DMI approach to add this check manually. See uniqueCheckValidation. */
+		| "isUnique"
+		/** Returns true if the record implied by a relation exists. The relation can be derived automatically from the DataSourceField.foreignKey attribute of the field being validated, or you can specify it manually via validator.relatedDataSource and validator.relatedField. You can specify at DataSource level that this validator should be automatically applied to all fields that specify a DataSourceField.foreignKey','foreignKey - see DataSource.validateRelatedRecords. Validators of this type have validatorDefinition.requiresServer','requiresServer set to true and do not run on the client. Note that this validation is generally unnecessary for data coming from a UI. The typical UI uses a SelectItem or ComboBoxItem with an FormItem.optionDataSource','optionDataSource for user entry, such that the user can't accidentally enter a related record if that doesn't exist, and a typical SQL schema will include constraints that prevent a bad insert if the user attempts to circumvent the UI. The primary purpose of declaring this validation explicitly is to provide clear, friendly error messages for use cases such as BatchUploader, where values aren't individually chosen by the user. See also the example hasRelatedValidation', 'Related Records. */
+		| "hasRelatedRecord"
+		/** This validator type is not for direct usage, instead DataSourceField.maxFileSize can be set and maxFileSize validator will be added automatically. Use DataSource.maxFileSizeExceededMessage to customize validation error message. In supported browsers (Internet Explorer 10+, Chrome, Firefox, Safari 6+, Opera 11.1+), returns true if the file(s) selected by the user are not larger than the field's DataSourceField.maxFileSize. If not supported by the browser, the validator will always return true. Note that server-side enforcement of the maxFileSize is always required because the user's browser might not support client-side file size checks. Also, any client-side check can be bypassed by a malicious user. */
+		| "maxFileSize"
+		/** Custom client-side validator. Validator.condition will be called to verify data.  */
+		| "custom"
+		/** Custom server-side validator that either evaluates the Velocity expression provided in Validator.serverCondition','serverCondition (see velocityValidation) or makes DMI call to Validator.serverObject','serverObject to evaluate condition (see dmiValidation). Validators of this type have validatorDefinition.requiresServer','requiresServer set to true and do not run on the client. */
+		| "serverCustom"
+		;
+
+	export type TEXTAREA_WRAP = 
+		/** don't allow wrapping at all */
+		"off"
+		/** when the entered text reaches the edge of the text area, wrap visibly but don't include line breaks in the textarea value */
+		| "soft"
+		/** when the entered text reaches the edge of the text area, insert a line break */
+		| "hard"
+		;
+
+
+	/**
+	 * Names for the standard controls built into the RichTextEditor. You can use these ControlNames in APIs like RichTextEditor.styleControls to control the order in which controls appear, to omit default controls or to show controls that are not shown by default. Every ControlName is also the name of an AutoChild, so all the built-in controls can be skinned or otherwise customized via the autoChildUsage','AutoChild system. 
+	 */
+	export type ControlName = 
+		/** A button to make the current selection bold. */
+		"boldSelection"
+		/** A button to make the current selection italic. */
+		| "italicSelection"
+		/** A button to make the current selection underlined. */
+		| "underlineSelection"
+		/** A select item allowing the user to change the font of the current text selection. */
+		| "fontSelector"
+		/** A select item allowing the user to change the font size of the current text selection. */
+		| "fontSizeSelector"
+		/** A button to left-align the selected text. */
+		| "alignLeft"
+		/** A button to right-align the selected text. */
+		| "alignRight"
+		/** A button to center the selected text. */
+		| "alignCenter"
+		/** A button to justify the selected line of text. */
+		| "justify"
+		/** A color-picker allowing the user to set the text color. */
+		| "color"
+		/** A color picker allowing the user to set the text background color. */
+		| "backgroundColor"
+		/** Within text, indents the paragraph. Within a list, increases the list level. */
+		| "indent"
+		/** Within text, outdents the paragraph. Within a list, decreases the list level. */
+		| "outdent"
+		/** Turns the current selection into an ordered list (HTML &lt;ol&gt;) or converts an unordered list to an ordered list. */
+		| "orderedList"
+		/** Turns the current selection into an unordered list (HTML &lt;ul&gt;) or converts an ordered list to an unordered list. */
+		| "unorderedList"
+		/** Shows the RichTextEditor.listPropertiesDialog','listPropertiesDialog to allow configuring the options of the currently selected HTML list. */
+		| "listProperties"
+		;
+
+
+	/**
+	 * Behavior of selection when row spanning is active. See ListGrid.useRowSpanStyling.
+	 */
+	export type RowSpanSelectionMode = 
+		/** when a cell is clicked on, select any cells in subsequent columns which are at least partially spanned by the clicked cell */
+		"forward"
+		/** when a cell is clicked on, selects any cells in any other columns which are at least partially spanned by the clicked cell */
+		| "both"
+		/** behaves like "forward", except as though the cell in the first column was clicked instead. If the largest row spans are in the first column and all cells in subsequent columns do not extend out of the first cell's span, this creates a row-like selection model where the span of the left-most cell defines the "row" of cells being selected. */
+		| "outerSpan"
+		;
+
+
+	/**
+	 * Selection model for CubeGrid indicating which cells in the body should be selected when row or column headers are selected.
+	 */
+	export type AutoSelectionModel = 
+		/** Rows and Columns will be selected on header selection */
+		"both"
+		/** Rows will be selected on row-header selection */
+		| "rows"
+		/** Columns will be selected on column-header selection */
+		| "cols"
+		/** Selecting row or column headers will not select cells in the body. */
+		| "none"
+		;
+
+
+	/**
+	 * Supported styles of drawing lines.
+	 */
+	export type LinePattern = 
+		/** Solid line */
+		"solid"
+		/** Dotted line */
+		| "dot"
+		/** Dashed line */
+		| "dash"
+		/** Dotted line, with more tightly spaced dots */
+		| "shortdot"
+		/** Dashed line, with shorter, more tightly spaced dashes */
+		| "shortdash"
+		/** Dashed line, with longer, more widely spaced dashes */
+		| "longdash"
+		;
+
+
+	/**
+	 * For DataSources of type "sql" and "hibernate", specifies the kind of inheritance to use when a dataSource specifies DataSource.inheritsFrom','inheritsFrom.
+	 */
+	export type DSInheritanceMode = 
+		/** Inherit fields by copying them onto the inheriting DataSource's underlying table. When we import a DataSource with this inheritanceMode, we create actual columns for inherited fields on the table we create. With this inheritanceMode, inherited fields are updatable. */
+		"full"
+		/** Do not physically inherit fields onto the inheriting DataSource's SQL table. Columns will not be created for inherited fields on import, and all generated SQL operations will exclude inherited fields. However, those fields are still part of the DataSource's schema so you can, for example, write customQuerying','custom SQL that returns values for the inherited fields, and they will be delivered to the client. */
+		| "none"
+		;
+
+
+	/**
+	 * Entries for the DrawItem.knobs array. Each specified knobType will enable some UI allowing the user to manipulate the DrawItem directly. NOTE: Not all knob types are supported by each DrawItem type. Refer to the DrawItem type's DrawItem.knobs','knobs attribute documentation for a list of the supported knob types.
+	 */
+	export type KnobType = 
+		/** Display up to 8 control knobs at the corners specified by DrawItem.resizeKnobPoints, allowing the user to drag-resize the item. See also DrawItem.cornerResizeKnob and DrawItem.sideResizeKnob. */
+		"resize"
+		/** Display a control knob for moving the item around. See also DrawItem.moveKnobPoint and DrawItem.moveKnobOffset */
+		| "move"
+		/** Control knob to manipulate DrawLine.startPoint. */
+		| "startPoint"
+		/** Control knob to manipulate DrawLine.endPoint. */
+		| "endPoint"
+		/** Display a draggable control knob along with a DrawLine indicating the angle between controlPoint1 and the startPoint. Dragging the knob will adjust controlPoint1. */
+		| "controlPoint1"
+		/** Display a draggable control knob along with a DrawLine indicating the angle between controlPoint2 and the endPoint. Dragging the knob will adjust controlPoint2. */
+		| "controlPoint2"
+		/** Display a rotation knob above the top resize knob, allowing the user to rotate the item. See also DrawItem.rotateKnob. */
+		| "rotate"
+		;
+
+
+	/**
+	 * One of the four basic operations that can be performed on DataSource data: "fetch", "add", "update", "remove". Elsewhere called CRUD operations, where CRUD stands for "create", "retrieve", "update", "delete", which correspond to "add", "fetch", "update" and "remove" in SmartClient terminology. See dataSourceOperations for a full description. There are also additional, non-CRUD operations explained below.
+	 */
+	export type DSOperationType = 
+		/** Fetch one or more records that match a set of search criteria. */
+		"fetch"
+		/** Store new records */
+		| "add"
+		/** Update an existing record */
+		| "update"
+		/** Remove (delete) an existing record */
+		| "remove"
+		/** perform some arbitrary custom logic that is not a CRUD operation. Format of the inputs and outputs is unconstrained, and the operation will be ignored for cache sync purposes by ResultSets. See DataSource.performCustomOperation. */
+		| "custom"
+		/** Run server-side validation for "add" or "update" without actually adding or updating anything. See DataSource.validateData. */
+		| "validate"
+		/** Retrieve a file stored in a binary field in a DataSource record, and allow the browser to choose whether to view it directly or prompt the user to save. See binaryFields. */
+		| "viewFile"
+		/** Like "viewFile", but the HTTP header Content-Disposition is used to suggest that the browser show a save dialog. See binaryFields. */
+		| "downloadFile"
+		/** Takes a List of Maps and stores the data in Admin Console XML test data format */
+		| "storeTestData"
+		/** Upload formatted client data and export it to Excel, XML and other formats. Used automatically by DataSource.exportClientData','exportClientData() and cannot be used directly. Usable only with the SmartClient server framework. */
+		| "clientExport"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.getFile, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "getFile"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.hasFile, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "hasFile"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.listFiles, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "listFiles"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.removeFile, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "removeFile"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.saveFile, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "saveFile"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.renameFile, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "renameFile"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.getFileVersion, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "getFileVersion"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.hasFileVersion, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "hasFileVersion"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.listFileVersions, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "listFileVersions"
+		/** Use the DataSource as a fileSource','source for files. Used automatically by DataSource.removeFileVersion, and would not normally be used directly. Usable only with the SmartClient server framework. */
+		| "removeFileVersion"
+		;
+
+
+	/**
+	 * Form METHOD parameters - how the form fields are submitted to the server
+	 */
+	export type FormMethod = 
+		/** GET request -- URL encoding (~4K max) */
+		"get"
+		/** POST request -- separate field encoding (no max) */
+		| "post"
+		;
+
+
+	/**
+	 * The technique SmartClient Server's SQL DataSource should use to select a "page" of data from a table.
+	 */
+	export type SQLPagingStrategy = 
+		/** Specify the paging directly in the SQL query we generate. The way this is done varies considerably from database to database: with some it is a straightforward built-in facility while others require arcane tricks or simply don't support the idea. This is the most efficient method, where available. Note that this strategy is not supported for operations that make use of a OperationBinding.customSQL','customSQL clause, because it depends upon being able to determine the size of the whole dataset without actually retrieving the whole dataset. Ordinary operations do this by means of an automatically-generated "row count query", but we cannot generate such a query for a customSQL operation. */
+		"sqlLimit"
+		/** Implement the paging behavior by use of the absolute() method of the JDBC ResultSet. */
+		| "jdbcScroll"
+		/** Implement the paging behavior by fetching the entire resultset from the database and dropping any unnecessary rows on the server before returning the data to the client. This approach is extremely inefficient, but also extremely straightforward; it is intended as a fallback option, for situations where the more sophisticated approaches cause problems (a JDBC driver that throws vague exceptions when absolute() is called, for example) */
+		| "dropAtServer"
+		/** No paging behavior: we always return the entire resultset to the client. */
+		| "none"
+		;
+
+
+	/**
+	 * The different ways in which the DrawItem.titleLabel','titleLabel of a DrawItem can be rotated with the item. <strong>NOTE:</strong> The effect of the "withItemAlwaysUp" and "withLineAlwaysUp" settings is not affected by the global rotation, if any (see DrawPane.rotation).
+	 */
+	export type TitleRotationMode = 
+		/** the titleLabel is never rotated with the item. */
+		"neverRotate"
+		/** the titleLabel is rotated exactly to match the item's rotation (see DrawItem.rotation). */
+		| "withItem"
+		/** the titleLabel is rotated exactly to match the item's rotation, except that at certain rotations, the titleLabel is flipped by 180&deg; so that the title text is never upside down. */
+		| "withItemAlwaysUp"
+		/** (applies only to DrawLine and DrawLinePath) the titleLabel is rotated to match the line or center segment. If used on a DrawItem that is not a DrawLine or DrawLinePath, then the effect is the same as "withItem".  */
+		| "withLine"
+		/** (applies only to DrawLine and DrawLinePath) the titleLabel is rotated to match the line or center segment, except that at certain rotations, the titleLabel is flipped by 180&deg; so that the title text is never upside down. If used on a DrawItem that is not a DrawLine or DrawLinePath, then the effect is the same as "withItemAlwaysUp".  */
+		| "withLineAlwaysUp"
+		;
+
+
+	/**
+	 * The type of join to make between two SQL tables when resolving DataSourceField.includeFrom','includeFrom fields.
+	 */
+	export type JoinType = 
+		/** A regular inner join, whereby rows are only included in the resultset where the join can be satisified, so a missing row in the table being joined to results in the entire row being omitted. */
+		"inner"
+		/** An outer join. All outer joins generated by SmartClient's SQL subsystem are left outer joins, meaning that every row in the join-from (or "left") table that matches the criteria is included, and missing rows in the join-to (or "right") table cause columns to be set to null. */
+		| "outer"
+		;
+
+
+	/**
+	 * What event / user interaction type caused cell editing to complete.
+	 */
+	export type EditCompletionEvent = 
+		/** User clicked outside editor during edit. */
+		"clickOutside"
+		/** User started editing another row by clicking on it */
+		| "click"
+		/** User started editing another row by double clicking */
+		| "doubleClick"
+		/** Enter pressed. */
+		| "enterKeypress"
+		/** User pressed Escape. */
+		| "escapeKeypress"
+		/** Up arrow key pressed. */
+		| "upArrowKeypress"
+		/** down arrow key. */
+		| "downArrowKeypress"
+		/** User pressed Tab. */
+		| "tabKeypress"
+		/** User pressed Shift+Tab. */
+		| "shiftTabKeypress"
+		/** Edit moved to a different field (same row) */
+		| "editFieldChange"
+		/** Edit completed via explicit function call */
+		| "programmatic"
+		;
+
+
+	/**
+	 * Controls where a drag-item should be dropped in relation to the target row
+	 */
+	export type ReorderPosition = 
+		/** Drop the drag-item before the target-row */
+		"before"
+		/** Drop the drag-item after the target-row */
+		| "after"
+		/** Drop the drag-item over (onto) the target-row */
+		| "over"
+		;
+
+
+	/**
+	 * Controls how an object changes state when clicked
+	 */
+	export type SelectionType = 
+		/** object moves to "down" state temporarily (normal button) */
+		"button"
+		/** object remains in "down" state until clicked again (checkbox) */
+		| "checkbox"
+		/** object moves to "down" state, causing another object to go up (radio) */
+		| "radio"
+		;
+
+
+	/**
+	 * Controls the output of the JSONEncoder when instances of SmartClient classes (eg a ListGrid) are included in the data to be serialized.
+	 */
+	export type JSONInstanceSerializationMode = 
+		/** instances will be shown as a specially formatted JSON listing the most relevant properties of the instance. Result is not expected to decode()/eval() successfully if instances are included. */
+		"long"
+		/** instances will be shown in a shorter format via a call to isc.echoLeaf. Result is not expected to decode()/eval() successfully if instances are included. */
+		| "short"
+		/** no output will be shown for instances (as though they were not present in the data). Result should decode()/eval() successfully (depending on other settings) */
+		| "skip"
+		;
+
+
+	/**
+	 * Where a DataBoundComponent.hiliteIcons','hilite icon will be placed relative to normal cell content.
+	 */
+	export type HiliteIconPosition = 
+		/** icon will be placed before the normal cell contents */
+		"before"
+		/** icon will be placed after the normal cell contents */
+		| "after"
+		/** icon will be shown instead of the normal cell contents */
+		| "replace"
+		;
+
+
+	/**
+	 * Controls the display mode of TableView record display
+	 */
+	export type TableMode = 
+		/** The default mode which displays a list of rows */
+		"plain"
+		/** Grouped table is a set of rows embedded in a rounded rectangle */
+		| "grouped"
+		;
+
+
+	/**
+	 * An object containing the stored grouping information for a detailViewer. Note that this object is not intended to be interrogated directly, but may be stored (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type DetailViewerViewState = any;
+
+
+	/**
+	 * A String of HTML, such as "<span class='somestyle'>text</span>". In many contexts, such as Button.title and ListGrid.formatCellValue, an HTML String can be specified, allowing you to use normal HTML tags and CSS to do formatting or styling. However, bear in mind that if you attempt any kind of layout or advanced styling in such an HTML string, different browsers may render the HTML differently - use SmartClient Layout','layout and Canvas.styleName','styling features wherever possible to avoid this. See also CSSStyleName.
+	 */
+	export type HTMLString = string;
+
+
+	/**
+	 * What do we do with data that's been dropped into another list?
+	 */
+	export type DragDataAction = 
+		/** Don't do anything, resulting in the same data being in both lists. */
+		"none"
+		/** Copy the data leaving the original in our list. */
+		| "copy"
+		/** Remove the data from this list so it can be moved into the other list. */
+		| "move"
+		;
+
+
+	/**
+	 * Name of a SmartClient Class, that is, a Class that has been created via isc.defineClass, including Classes built into SmartClient, such as "ListGrid".
+	 */
+	export type SCClassName = string;
+
+
+	/**
+	 * Passed as a parameter to Canvas.showClickMask to determine the masks behavior when clicked.
+	 */
+	export type ClickMaskMode = 
+		/** When the mask receives a click, it will fire its click action, and cancel the event, leaving the clickMask up. */
+		"hard"
+		/** When the mask receives a click, it will fire its click action, then dismiss the clickMask and allow the event to proceed to its target. */
+		| "soft"
+		;
+
+
+	/**
+	 * Trees that dynamically load nodes keep track of whether each node has loaded its children.
+	 */
+	export type LoadState = 
+		/** children have not been loaded and are not loading */
+		"unloaded"
+		/** currently in the process of loading */
+		| "loading"
+		/** folders only are already loaded */
+		| "foldersLoaded"
+		/** already fully loaded */
+		| "loaded"
+		/** children form a ResultSet having only a partial cache (applies only to the "paged" ResultTree.fetchMode','fetchMode) */
+		| "loadedPartialChildren"
+		;
+
+
+	/**
+	 * A String to be used as a format specifier for a date, datetime, time or numeric field, via the DataSourceField.format','format and DataSourceField.exportFormat','exportFormat properties. For fields with a numeric type, the format string is similar to java.text.NumberFormat (see <a href='http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html' target='_blank'>DecimalFormat JavaDoc</a>), and for date, time, and datetime types, the format string is similar to java.text.SimpleDateFormat (see <a href='http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html' target='_blank'>SimpleDateFormat JavaDoc</a>). Note that all the client-side formatting described in this section is is done by the NumberUtil.format','NumberUtil.format() and DateUtil.format','DateUtil.format() methods. These are static utility methods that your own code can call if you need to programmatically format a date or number using a FormatString There are 3 possible contexts where a FormatString may be interpreted, and each has slightly different limitations: <h4>in-browser rendering &amp; client-driven exports</h4> Almost complete support for Java's SimpleDateFormat/DecimalFormat, as described below, with some small extensions for formatting with awareness of a FiscalCalendar. This category includes cases where code running in the browser does the rendering and the rendered result is passed to the server, such as ListGrid.exportClientData','client-driven export and RPCManager.exportContent','PDF export of the printed view. <h4>Excel export</h4> Almost the same as in-browser rendering, with minor limitations due to missing features in Excel. Exact differences are described under DataSourceField.exportFormat. <h4>non-Excel server export</h4> For example, CSV, XML or JSON ExportFormat','export formats provided via DataSource.exportData. Full support for SimpleDateFormat/DecimalFormat as provided by whichever Java version you have installed on the server. However note that depending on the context of the export, the default behavior may be to ignore format strings, since formatting intended for end users wouldn't be desirable if data exchange is the goal. See the exportFormatting','Export Formatting overview for details. <h3>Date Format</h3> <table width="700" style="font-size:11px;border:1px solid black;"> <tr><td style="color:white;background-color:black;">Format token</td> <td style="color:white;background-color:black;">Description</td> <td style="color:white;background-color:black;width:150px;">Sample value</td></tr> <tr><td>yy </td><td>Year as a two-digit number </td><td>"99" or "07"</td></tr> <tr><td>yyyy </td><td>Year as a four-digit number </td><td>"1999" or "2007"</td></tr> <tr><td>YY </td><td>Week year as a two-digit number (week year is the year associated with the entire week deemed to contain a given date, and it may differ from calendar year. For example, the week year of December 31 2012 is 2013)</td><td>"99" or "07"</td></tr> <tr><td>YYYY </td><td>Week year as a four-digit number </td><td>"1999" or "2007"</td></tr> <tr><td>LL </td><td>Fiscal year as a two-digit number (FiscalCalendar)</td><td>"99" or "07"</td></tr> <tr><td>LLLL </td><td>Fiscal year as a four-digit number </td><td>"1999" or "2007"</td></tr> <tr><td>M </td><td>Month in year </td><td>"1" to "12"</td></tr> <tr><td>MM </td><td>Month in year with leading zero if required </td><td>"01" to "12"</td></tr> <tr><td>MMM </td><td>Short month name (DateUtil.shortMonthNames) </td><td>"Jan" to "Dec"</td></tr> <tr><td>MMMM </td><td>Full month name (DateUtil.monthNames) </td><td>"January" to "December"</td></tr> <tr><td>w </td><td>Week in year </td><td>"1" to "52"</td></tr> <tr><td>ww </td><td>Week in year with leading zero if required </td><td>"01" to "52"</td></tr> <tr><td>C </td><td>Week in fiscal year (FiscalCalendar) </td><td>"7" or "29"</td></tr> <tr><td>CC </td><td>Week in fiscal year with leading zero if required </td><td>"07" or "29"</td></tr> <tr><td>d </td><td>Day of the month </td><td>"1" to "31"</td></tr> <tr><td>dd </td><td>Day of the month with leading zero if required </td><td>"01" to "31"</td></tr> <tr><td>ddd </td><td>Short day name (DateUtil.shortDayNames) </td><td>"Mon" to "Sun"</td></tr> <tr><td>dddd </td><td>Full day name. (DateUtil.dayNames) </td><td>"Monday" to "Sunday"</td></tr> <tr><td>E </td><td>Short day name ("EE" and "EEE" are equivalent; all are exactly the same as "ddd" - "E" is supported purely to conform with SimpleDateFormat)</td><td>"Mon" to "Sun"</td></tr> <tr><td>EEEE </td><td>Full day name (exactly the same as "dddd") </td><td>"Monday" to "Sunday"</td></tr> <tr><td>D </td><td>Day in year </td><td>"1" to "366"</td></tr> <tr><td>DD </td><td>Day in year with leading zero if required </td><td>"01" to "366"</td></tr> <tr><td>c </td><td>Day in fiscal year (FiscalCalendar) </td><td>"5" or "204"</td></tr> <tr><td>cc </td><td>Day in fiscal year with leading zero if required </td><td>"05" or "204"</td></tr> <tr><td>u </td><td>Day number in week (1 is Monday) </td><td>"1" to "7"</td></tr> <tr><td>H </td><td>Hour in day, 0-23 (24-hour clock) </td><td>"0" to "23"</td></tr> <tr><td>HH </td><td>Hour in day with leading zero if required (24-hour) </td><td>"00" to "23"</td></tr> <tr><td>h </td><td>Hour in day, 1-12 (12-hour clock) </td><td>"1" to "12"</td></tr> <tr><td>hh </td><td>Hour in day with leading zero if required (12-hour) </td><td>"01" to "12"</td></tr> <tr><td>m </td><td>Minute in hour </td><td>"0" to "59"</td></tr> <tr><td>mm </td><td>Minute in hour with leading zero if required </td><td>"00" to "59"</td></tr> <tr><td>s </td><td>Second in minute </td><td>"0" to "59"</td></tr> <tr><td>ss </td><td>Second in minute with leading zero if required </td><td>"00" to "59"</td></tr> <tr><td>S </td><td>Millisecond in minute </td><td>"0" to "999"</td></tr> <tr><td>SSS </td><td>Millisecond in minute with leading zero(s) if required</td><td>"000" to "999"</td></tr> <tr><td>a </td><td>The AM/PM designator (Time.AMIndicator) </td><td>" am" or " pm"</td></tr> </table> Note that all text that doesn't represent tokens specified above will be passed through to the output, but such unmapped character sequences are reserved for future use. To future-proof your code, you may single quote "'" any text to escape it to ensure no formatting is applied, guaranting that it's passed through unaltered. Thus, a format of "h'h'" might end up as "5h". To create a single quote itself, use two in a row - for example "h o''clock". <h3>Examples - various formatted versions of the datetime "2006-08-03 11:26:18"</h3> <table> <tr><td width="150">"M/d/yy"</td><td width="300">8/3/06</td></tr> <tr><td>"MMMM yyyy"</td><td>August 2006</td></tr> <tr><td>"HH:mm"</td><td>11:26</td></tr> <tr><td>"d MMM yyyy, H:ma"</td><td>3 Aug 2006, 11:26 am</td></tr> <tr><td>"dd/MM/yyyy"</td><td>03/08/2006</td></tr> <tr><td>"CC/LLLL"</td><td>53/2006 (assuming the fiscal year ends in the first week of August)</td></tr> </table> <h3>SimpleDateFormat specifiers that we do not support:</h3> Era designator, BC/AD (G) Day of week in month (F) Hour in day, 24-hour, with 1-based instead of normal 0-based numbering (hours are 1-24) (k) Hour in day, 12-hour, with 0-based instead of normal 1-based numbering (hours are 0-11) (K) Timezone (z, Z, X) &nbsp; <h3>Number Format</h3> <table width="700" style="font-size:11px;border:1px solid black;"> <tr><td style="color:white;background-color:black;">Format char</td> <td style="color:white;background-color:black;">Description</td> <tr><td>0 </td><td>Digit, zero is displayed</td></tr> <tr><td># </td><td>Digit, zero is not displayed</td></tr> <tr><td>- </td><td>Minus sign</td></tr> <tr><td>. </td><td>Decimal separator</td></tr> <tr><td>% </td><td>Multiply by 100 and show as percentage</td></tr> <tr><td>&#x2030; (\u2030) </td><td>Multiply by 1000 and show as per mille. See below.</td></tr> <tr><td>, </td><td>Indicates digit grouping should be used - eg 1,000,000. See below.</td></tr> <tr><td>; </td><td>Separates positive and negative subpatterns. See below.</td></tr> <tr><td>&#x00a4; (\u00A4) </td><td>As a prefix or suffix, indicates the local currency symbol should be used. Note that you must use special notation to include this character in an XML file (such as a .ds.xml file). See below.</td></tr> <tr><td>' </td><td>Used to quote special characters in a prefix or suffix, for example, "'#'#" formats 123 to "#123". To create a single quote itself, use two in a row: "# o''clock".</td></tr> </table> All other characters in the format string are taken literally and output unchanged. <h3>Examples</h3> <table style="font-size:11px;border:1px solid black;"> <tr><td width="150" style="color:white;background-color:black;">Format string</td> <td width="150" style="color:white;background-color:black;">Zero value</td> <td width="150" style="color:white;background-color:black;">Positive value: 12345.678</td> <td width="150" style="color:white;background-color:black;">Negative value: -2345.123</td> <tr><td>"0.00"</td><td>0.00</td><td>12345.68</td><td>-2345.12</td></tr> <tr><td>",##0.00"</td><td>0.00</td><td>12,345.68</td><td>-2,345.12</td></tr> <tr><td>"0.###"</td><td>0</td><td>12345.678</td><td>-2345.123</td></tr> <tr><td>"&#x00a4;,0.00"</td><td>$0.00</td><td>$12,345.68</td><td>-$2345.12</td></tr> <tr><td>"0.0#%"</td><td>0.0%</td><td>1234567.8%</td><td>-234512.3%</td></tr> <tr><td>"0.0#&#x2030;"</td><td>0.0&#x2030;</td><td>12345678.0&#x2030;</td><td>-2345123.0&#x2030;</td></tr> <tr><td>"0.0#'%'"</td><td>0.0%</td><td>12345.68%</td><td>-2345.12%</td></tr> <tr><td>"0.00;(0.00)"</td><td>0.0%</td><td>12345.68</td><td>(2345.12)</td></tr> </table> Note, the above examples include cases where there are multiple '#' characters in the integer part of the number format (ie, to the left of the decimal separator, or the entire format if there is no separator). We support this pattern simply because DecimalFormat does: the extra '#' characters are not significant. In other words, the format "##0.00" produces exactly the same formatting as "0.00", and "##,###,###.##" produces exactly the same formatting as ",#.##". However, multiple '0' characters in the integer part of the format <em>are</em> significant, as are both '#' and '0' characters in the decimal part of the format (ie, to the right of any decimal separator). The ";" character marks the boundary between two subpatterns - the first to be used for formatting positive numbers (and 0), the second for negative numbers. Specifying a separate pattern for negative numbers is optional: if no negative subpattern is specified, negative numbers are formatted like positive numbers, but with a leading "-" sign. The "&#x00a4;" symbol (\u00A4) is documented in the Java DecimalFormat class as a placeholder for the currency symbol appropriate to the current locale. For client-driven exports, we replace it with the NumberUtil.currencySymbol','localized currency symbol. Likewise, we use NumberUtil.decimalSymbol','decimalSymbol and NumberUtil.groupingSymbol','groupingSymbol to localize the formatting of numbers. Note that "\u00A4" is the correct way to specify this character in Javascript code. If you need to specify the character in an XML file - the common requirement is in a .ds.xml DataSource descriptor file - you must use the code "&amp;#x00A4;" instead. The "&permil;" per mille symbol is specified as "\u2030" in Javascript code; in XML or HTML you can use either the equivalent notation "&amp;#x2030;" or the special HTML code "&amp;permil;". <h3>DecimalFormat features that we do not support:</h3> Scientific notation Doubled currency symbol means "use international currency symbol" We do not support arbitrary digit grouping, by providing patterns of the '#' and ',' characters, like DecimalFormat does. Grouping in SmartClient FormatStrings is enabled with a single "," character somewhere before or within the number-formatting part of the string - extra "," characters within the number-formatting part of the string are tolerated, but they have no effect. Grouping in SmartClient always causes digits to be gathered in groups of three 
+	 */
+	export type FormatString = string;
+
+	export type Overflow = 
+		/** Content that extends beyond the widget's width or height is displayed. Note: To have the content be sized only by the drawn size of the content set the overflow to be Canvas.VISIBLE and specify a small size, allowing the size to expand to the size required by the content. Leaving the width / height for the widget undefined will use the default value of 100, and setting the size to zero may cause the widget not to draw. */
+		"visible"
+		/** Content that extends beyond the widget's width or height is clipped (hidden). */
+		| "hidden"
+		/** Horizontal and/or vertical scrollbars are displayed only if necessary. Content that extends beyond the remaining visible area is clipped. */
+		| "auto"
+		/** Horizontal and vertical scrollbars are always drawn inside the widget. Content that extends beyond the remaining visible area is clipped, and can be accessed via scrolling. */
+		| "scroll"
+		/** Clip horizontally but extend the canvas's clip region vertically if necessary. Note: only supported for specific widget subclasses. */
+		| "clipH"
+		/** Clip vertically but extend the canvas's clip region horizontally if necessary. Note: only supported for specific widget subclasses. */
+		| "clipV"
+		;
+
+
+	/**
+	 * Standard component-type displayed within a ListGrid, as contained by ListGrid.gridComponents.
+	 */
+	export type ListGridComponent = 
+		/** The standard filter-component displayed when ListGrid.showFilterEditor is true */
+		"filterEditor"
+		/** The header-component displayed when ListGrid.showHeader is true. */
+		| "header"
+		/** The body component for the grid. */
+		| "body"
+		/** The summary-row component displayed when ListGrid.showGridSummary is true. */
+		| "summaryRow"
+		;
+
+
+	/**
+	 * Algorithms for drawing lines between points.
+	 */
+	export type DataLineType = 
+		/** simple straight lines between points that are adjacent in the dataset */
+		"straight"
+		/** smooth spline curve between points that are adjacent in the dataset */
+		| "smooth"
+		;
+
+
+	/**
+	 * Mode of validation used for running validation on partially entered data.
+	 */
+	export type ValidationMode = 
+		/** Assume provided data is complete and run all validation rules */
+		"full"
+		/** Validate only the data values that are present ignoring the absence of required fields, validators that refer to fields that are not present, and any conditional validators dependent on fields that are not present. */
+		| "partial"
+		;
+
+
+	/**
+	 * Event on a listGrid header to trigger auto-fit of the listgrid field.
+	 */
+	export type AutoFitEvent = 
+		/** React to a double click on the listGrid header. */
+		"doubleClick"
+		/** React to a click on the listGrid header. */
+		| "click"
+		/** No event will trigger auto-fit. */
+		| "none"
+		;
+
+
+	/**
+	 * For PickList items with PickListItemIconPlacement set such that the pickList does not render near-origin, possible location for rendering formItemIcons.
+	 */
+	export type PickListItemIconPlacement = 
+		/** icon will be displayed in the ComboBoxItem.pickerNavigationBar','pickerNavigationBar only (and not rendered inline within the formItem itself) */
+		"pickerNavigationBar"
+		/** icon will be displayed inline within the form item itself (and not within the ComboBoxItem.pickerNavigationBar','pickerNavigationBar */
+		| "formItem"
+		/** icon will be displayed both inline (within the form item itself) and within the ComboBoxItem.pickerNavigationBar','pickerNavigationBar */
+		| "both"
+		;
+
+
+	/**
+	 * Supported styles for arrowheads.
+	 */
+	export type ArrowStyle = 
+		/** Filled triangle. */
+		"block"
+		/** Two lines are drawn on each side of the path. */
+		| "open"
+		;
+
+
+	/**
+	 * How data selection should be presented to the user.
+	 */
+	export type SelectionAppearance = 
+		/** selected rows should be shown with different appearance - see ListGrid.getCellStyle and optionally ListGrid.selectionCanvas. */
+		"rowStyle"
+		/** an extra, non-data column should be automatically added to the ListGrid, showing checkboxes that can be toggled to select rows. See ListGrid.getCheckboxField. */
+		| "checkbox"
+		;
+
+
+	/**
+	 * Algorithms to use when hashing field values (see DataSourceField.storeWithHash)
+	 */
+	export type HashAlgorithm = 
+		/** Message Digest algorithm 5 */
+		"MD5"
+		/** Secure Hashing Algorithm (SHA-1) */
+		| "SHA"
+		;
+
+
+	/**
+	 * Strings to identify the various keys on the keyboard. For alpha keys, the single (uppercase) character value is used, such as "Q" For Numeric keys, the number is used as in a single character string, like "1" Function keys are identified as "f1" - "f12" Non alpha-numeric character keys (such as the key for "[" / "{") are identified by their unmodified character value (the value obtained by hitting the key without holding shift down), by default - exceptions are listed below. Additional key names: - Space - Tab - Enter - Escape - Backspace - Insert - Delete - Arrow_Up - Arrow_Down - Arrow_Left - Arrow_Right - Home - End - Page_Up - Page_Down - Shift - Ctrl - Alt [Note: Some keys may not be available for capture on every platform]
+	 */
+	export type KeyName = string;
+
+
+	/**
+	 * A Callback is an arbitrary action to be fired - usually passed into a method to be fired asynchronously as a notificaction of some event. The callback can be defined in the following formats: a function A string containing an expression to evaluate An object with the following properties: - target: fire in the scope of this target - when the action fires, the target will be available as this. - methodName: if specified we'll check for a method on the target object with this name. Callbacks are fired via the Class.fireCallback method, which allows named parameters to be passed into the callback at runtime. If the Callback was specified as a string of script, these parameters are available as local variables at eval time. For specific SmartClient methods that make use of Callback objects, see local documentation for information on parameters and scope.
+	 */
+	export type Callback = any;
+
+
+	/**
+	 * Simple string identifiers for standard menu fields.
+	 */
+	export type MenuFieldID = 
+		/** Displays the icon field for the menu. This field contains the items specified icon (if there is one), or if the item is checked, the checkmark icon for the item. */
+		"icon"
+		/** Displays the item's title */
+		| "title"
+		/** Displays the key field for the menu. This field contains the name or title of any shortcut keys for this menu item. */
+		| "key"
+		/** Field to display the submenu image for items that have a submenu. */
+		| "subMenu"
+		;
+
+
+	/**
+	 * An operator is used as part of a Criterion when specifying AdvancedCriteria. This list of operators indicates the set of operators built into SmartClient DataSources, which can be used for both client and server-side filtering. You can extend the list of operators with DataSource.addSearchOperator.
+	 */
+	export type OperatorId = 
+		/** exactly equal to */
+		"equals"
+		/** not equal to */
+		| "notEqual"
+		/** exactly equal to, if case is disregarded */
+		| "iEquals"
+		/** not equal to, if case is disregarded */
+		| "iNotEqual"
+		/** Greater than */
+		| "greaterThan"
+		/** Less than */
+		| "lessThan"
+		/** Greater than or equal to */
+		| "greaterOrEqual"
+		/** Less than or equal to */
+		| "lessOrEqual"
+		/** Contains as sub-string (match case) */
+		| "contains"
+		/** Starts with (match case) */
+		| "startsWith"
+		/** Ends with (match case) */
+		| "endsWith"
+		/** Contains as sub-string (case insensitive) */
+		| "iContains"
+		/** Starts with (case insensitive) */
+		| "iStartsWith"
+		/** Ends with (case insensitive) */
+		| "iEndsWith"
+		/** Does not contain as sub-string (match case) */
+		| "notContains"
+		/** Does not start with (match case) */
+		| "notStartsWith"
+		/** Does not end with (match case) */
+		| "notEndsWith"
+		/** Does not contain as sub-string (case insensitive) */
+		| "iNotContains"
+		/** Does not start with (case insensitive) */
+		| "iNotStartsWith"
+		/** Does not end with (case insensitive) */
+		| "iNotEndsWith"
+		/** shortcut for "greaterOrEqual" + "and" + "lessOrEqual" (case insensitive) */
+		| "iBetweenInclusive"
+		/** Basic GLOB matching using wildcards (see DataSource.translatePatternOperators for more information on available patterns) */
+		| "matchesPattern"
+		/** Basic GLOB matching using wildcards (case insensitive) (see DataSource.translatePatternOperators for more information on available patterns) */
+		| "iMatchesPattern"
+		/** GLOB matching using wildcards. Value is considered to meet the criterion if it contains the pattern. See DataSource.translatePatternOperators for more information on available patterns) */
+		| "containsPattern"
+		/** GLOB mathcing using wildcards. Value is considered to meet the criterion if it starts with the pattern.See DataSource.translatePatternOperators for more information on available patterns) */
+		| "startsWithPattern"
+		/** GLOB mathcing using wildcards. Value is considered to meet the criterion if it starts with the pattern.See DataSource.translatePatternOperators for more information on available patterns) */
+		| "endsWithPattern"
+		/** GLOB matching using wildcards. Value is considered to meet the criterion if it contains the pattern. Matching is case insensitive. See DataSource.translatePatternOperators for more information on available patterns) */
+		| "iContainsPattern"
+		/** GLOB matching using wildcards. Value is considered to meet the criterion if it starts with the pattern. Matching is case insensitive.See DataSource.translatePatternOperators for more information on available patterns) */
+		| "iStartsWithPattern"
+		/** GLOB matching using wildcards.Value is considered to meet the criterion if it ends with the pattern. Matching is case insensitive. See DataSource.translatePatternOperators for more information on available patterns) */
+		| "iEndsWithPattern"
+		/** Regular expression match */
+		| "regexp"
+		/** Regular expression match (case insensitive) */
+		| "iregexp"
+		/** value is either null or the empty string. For numeric fields it behaves as isNull */
+		| "isBlank"
+		/** value is neither null nor the empty string ("") */
+		| "notBlank"
+		/** value is null */
+		| "isNull"
+		/** value is non-null. Note empty string ("") is non-null */
+		| "notNull"
+		/** value is in a set of values. Specify criterion.value as an Array */
+		| "inSet"
+		/** value is not in a set of values. Specify criterion.value as an Array */
+		| "notInSet"
+		/** matches another field (match case, specify fieldName as criterion.value) */
+		| "equalsField"
+		/** does not match another field (match case, specify fieldName as criterion.value) */
+		| "notEqualField"
+		/** matches another field (case insensitive, specify fieldName as criterion.value) */
+		| "iEqualsField"
+		/** does not match another field (case insensitive, specify fieldName as criterion.value) */
+		| "iNotEqualField"
+		/** Greater than another field (specify fieldName as criterion.value) */
+		| "greaterThanField"
+		/** Less than another field (specify fieldName as criterion.value) */
+		| "lessThanField"
+		/** Greater than or equal to another field (specify fieldName as criterion.value) */
+		| "greaterOrEqualField"
+		/** Less than or equal to another field (specify fieldName as criterion.value) */
+		| "lessOrEqualField"
+		/** Contains as sub-string (match case) another field value (specify fieldName as criterion.value) */
+		| "containsField"
+		/** Starts with (match case) another field value (specify fieldName as criterion.value) */
+		| "startsWithField"
+		/** Ends with (match case) another field value (specify fieldName as criterion.value) */
+		| "endsWithField"
+		/** Contains as sub-string (case insensitive) another field value (specify fieldName as criterion.value) */
+		| "iContainsField"
+		/** Starts with (case insensitive) another field value (specify fieldName as criterion.value) */
+		| "iStartsWithField"
+		/** Ends with (case insensitive) another field value (specify fieldName as criterion.value) */
+		| "iEndsWithField"
+		/** Does not contain as sub-string (match case) another field value (specify fieldName as criterion.value) */
+		| "notContainsField"
+		/** Does not start with (match case) another field value (specify fieldName as criterion.value) */
+		| "notStartsWithField"
+		/** Does not end with (match case) another field value (specify fieldName as criterion.value) */
+		| "notEndsWithField"
+		/** Does not contain as sub-string (case insensitive) another field value (specify fieldName as criterion.value) */
+		| "iNotContainsField"
+		/** Does not start with (case insensitive) another field value (specify fieldName as criterion.value) */
+		| "iNotStartsWithField"
+		/** Does not end with (case insensitive) another field value (specify fieldName as criterion.value) */
+		| "iNotEndsWithField"
+		/** all subcriteria (criterion.criteria) are true */
+		| "and"
+		/** all subcriteria (criterion.criteria) are false */
+		| "not"
+		/** at least one subcriteria (criterion.criteria) is true */
+		| "or"
+		/** shortcut for "greaterThan" + "lessThan" + "and". Specify criterion.start and criterion.end */
+		| "between"
+		/** shortcut for "greaterOrEqual" + "lessOrEqual" + "and". Specify criterion.start and criterion.end */
+		| "betweenInclusive"
+		;
+
+
+	/**
+	 * The names of the Calendar views.
+	 */
+	export type ViewName = 
+		/** day view */
+		"day"
+		/** week view */
+		| "week"
+		/** month view */
+		| "month"
+		/** timeline view */
+		| "timeline"
+		;
+
+
+	/**
+	 * The data URL MIME type to use when DrawPane.getDataURL is called to convert the drawing to a data URL.
+	 */
+	export type DataURLFormat = 
+		/** Any MIME type supported by the browser is acceptable. Note: The exact MIME type used may depend on the browser, and may change from version to version of SmartClient. */
+		"any"
+		/** Generate an image/png data URL. */
+		| "png"
+		;
+
+
+	/**
+	 * Indicates the kind of value expected in a Criterion that uses this operator.
+	 */
+	export type OperatorValueType = 
+		/** Criterion.value should contain a value of the same type as the field. */
+		"fieldType"
+		/** Criterion.value should be the name of another field in the record */
+		| "fieldName"
+		/** no criterion.value or other setting required (used for operators like isBlank or isNull). */
+		| "none"
+		/** Criterion.criteria should be an Array of criteria (used for logical operators like "and"). */
+		| "criteria"
+		/** Criterion.start and Criterion.end should contain start and end values, both of the same type as the field. */
+		| "valueRange"
+		/** Criterion.value should contain an Array of valid field values. */
+		| "valueSet"
+		/** Criterion.value should contain a value which is not necessarily the same type as the field (used for regexp and similar operators). Operator.editorType can be specified as a FormItem to use to enter a value for the criterion. */
+		| "custom"
+		;
+
+
+	/**
+	 * Flag passed to functions as displayNodeType, telling the function whether it should work on folders, leaves or both at once.
+	 */
+	export type DisplayNodeType = 
+		/** operate on both folders and leaves */
+		"null"
+		/** operate on folders only, ignoring leaves */
+		| "folders"
+		/** operate on leaves only, ignoring folders */
+		| "leaves"
+		;
+
+
+	/**
+	 * A RelativeDateShortcut is a special string that represents a shortcut to a date phrase that can be automatically mapped to a RelativeDateString for use in widgets that leverage relative-dates, such as the RelativeDateItem. Note that some shortcuts indicate a time period but do not directly indicate whether the value refers to the start or end of the time period in question. This ambiguity can be resolved by specifying an explicit RelativeDateRangePosition when calling APIs that convert from RelativeDates to absolute date values. This is the case for $today, $tomorrow, $yesterday, $weekAgo, $weekFromNow, $monthAgo and $monthFromNow. If a range position is not explicitly passed, these will all default to the start of the day in question. Builtin options include $now - this moment $today - the current day. By default this resolves to the start of the current day though an explicit RelativeDateRangePosition may be used to specify the end of the current day. $startOfToday - the start of today $endOfToday - the end of today (one millisecond before the $startOfTomorrow) $yesterday - the previous day. $startOfYesterday - the start of yesterday $endOfYesterday - the end of yesterday (one millisecond before the $startOfToday) $tomorrow - the following day $startOfTomorrow - the start of tomorrow $endOfTomorrow - the end of tomorrow $weekAgo - the current day of the previous week $weekFromNow - the current day of the next week $startOfWeek - the start of the current week $endOfWeek - the end of the current week $monthAgo - the current day of the previous month $monthFromNow - the current day of the following month $startOfMonth - the start of the current month $endOfMonth - the end of the current month $startOfYear - the start of the current year $endOfYear - the end of the current year 
+	 */
+	export type RelativeDateShortcut = any;
+
+
+	/**
+	 * What type of content is found at the HTMLFlow's HTMLFlow.contentsURL','contentsURL?
+	 */
+	export type ContentsType = 
+		/** the contentsURL is assumed to be a standalone HTML page, and is loaded in an IFRAME. */
+		"page"
+		/** the default setting - indicates that HTML loaded from the contentsURL is assumed to be an HTML fragment rather than a complete page. */
+		| "fragment"
+		;
+
+
+	/**
+	 * Supported data point shapes for FacetChart.pointShapes are:
+	 */
+	export type PointShape = 
+		"Oval"
+		| "Square"
+		| "Diamond"
+		| "Triangle"
+		;
+
+
+	/**
+	 * XMLDocument is the "parsed" or object form of XML, which allows XML to be navigated as a tree of nodes with attributes, namespaces and other metadata, as opposed to being manipulated as just a String. XMLDocument is a native object supplied directly by the browser. The SmartClient-supported interfaces for this object are methods that take an XMLDocument as an argument (such as XMLTools.selectNodes). If you want to retrieve XML data and display it in a SmartClient component, read about clientDataIntegration','XML Data Binding. To extract data as JavaScript Objects from XML, see XMLTools.toJS. Direct manipulation of XMLDocument is subject to cross-browser inconsistencies, bugs, memory leaks and performance issues.
+	 */
+	export type XMLDocument = any;
+
+
+	/**
+	 * Orientation of titles relative to the FormItem being labeled. Can be set a the DynamicForm level as a default, or on individual items.
+	 */
+	export type TitleOrientation = 
+		"left"
+		| "top"
+		| "right"
+		;
+
+
+	/**
+	 * An object containing the stored selection information for a listGrid. Note that this object is not intended to be interrogated directly, but may be stored (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridSelectedState = string;
+
+
+	/**
+	 * When records are being dragged from within a ListGrid, what sort of drag-tracker should be displayed?
+	 */
+	export type DragTrackerMode = 
+		/** Don't display a drag tracker at all */
+		"none"
+		/** Display an icon to represent the record(s) being dragged. Icon src is derived from ListGrid.getDragTrackerIcon */
+		| "icon"
+		/** Display a title for the record being dragged. Title derived from ListGrid.getDragTrackerTitle */
+		| "title"
+		/** Display the entire record being dragged */
+		| "record"
+		;
+
+
+	/**
+	 * Function to produce a summary value based on field values within a record. Example usage is record-level summaries in ListGridFieldType','"summary" type ListGrid fields. SummaryFunctions may be specified in one of 2 ways: as an explicit function or executable stringMethods','StringMethod. Takes 3 parameters: record the record for which the value is being calculated fields Array of listGridFields from which summaries should be calculated summaryField pointer to the summary type field on which the summary function is being run. As a registered RecordSummaryFunction identifier Note that DataSource.registerRecordSummaryFunction may be used to expand the set of registered RecordSummaryFunctions.
+	 */
+	export type RecordSummaryFunction = 
+		/** Iterates through each field, picking up the numeric field values from the record and summing them. */
+		"sum"
+		/** Iterates through each field, picking up the numeric field values from the record and calculating the mean value. */
+		| "avg"
+		/** Iterates through each field, picking up the numeric field values from the record and calculating the maximum value. */
+		| "max"
+		/** Iterates through each field, picking up the numeric field values from the record and calculating the minimum value. */
+		| "min"
+		/** Iterates through each field, picking up the numeric field values from the record and multiplying them together. */
+		| "multiplier"
+		;
+
+	export type ImageStyle = 
+		/** Center (and don't stretch at all) the image if smaller than its enclosing frame.CENTER:"center", */
+		"center"
+		/** Tile (repeat) the image if smaller than its enclosing frame. */
+		| "tile"
+		/** Stretch the image to the size of its enclosing frame. */
+		| "stretch"
+		/** Allow the image to have natural size */
+		| "normal"
+		;
+
+
+	/**
+	 * Strategy for determining how to place maximum-sized labels for DrawItem.titleAutoFit.
+	 */
+	export type TitleAutoFitRotationMode = 
+		/** do not rotate */
+		"never"
+		/** rotate only if doing so would allow label to be larger */
+		| "auto"
+		/** always rotate */
+		| "always"
+		;
+
+
+	/**
+	 * This string is the base CSS class name applied to a FormItem (or some part of a form item). See the formItemStyling','formItem styling overview for more information about styling formItems. The specified style name will be modified as the 'state' of the form item changes. Developers should provide appropriately named CSS classes for each stateful style described below: If FormItem.showPending is true, when the current value differs from the value that would be restored by a call to DynamicForm.resetValues, this style will have the suffix "Pending" appended to it. If FormItem.showFocused is true, when the form item receives focus, this style will have the suffix "Focused" appended to it. If FormItem.showOver is true, roll-over will be indicated by appending the suffix "Over" appended to the style name. This applies to the FormItem.textBoxStyle','textBoxStyle and FormItem.controlStyle','controlStyle only. If FormItem.showErrorStyle is true, if the form item has errors, this style will have the suffix "Error" appended to it. If FormItem.showDisabled is true, when the form item is disabled, this style will have the suffix "Disabled" appended to it. Finally, if FormItem.showRTL is true, when the form item is in RTL mode, this style will have the suffix "RTL" appended to it. So for example if the cellStyle for some form item is set to "formCell" and showFocused is true, when the form item receives focus, the form item's cell will have the "formCellFocused" style applied to it.
+	 */
+	export type FormItemBaseStyle = any;
+
+
+	/**
+	 * Policy for laying out tiles. Because a TileLayout can be either horizontally or vertically oriented, the general term "line" is used to mean either a row or column of tiles. NOTE: for typical form layouts (a variety of input fields and buttons in a tabular layout with col-spanning and row-spanning support), use a DynamicForm and see the formLayout topic.
+	 */
+	export type TileLayoutPolicy = 
+		/** Each line has the same number of tiles, based on TileLayout.tilesPerLine if set, otherwise, based on fitting as many tiles per line as possible consistent with TileLayout.tileSize','tileSize and TileLayout.tileMargin. Tiles that do not specify a size will be sized to fill available space. */
+		"fit"
+		/** Tiles are laid out with varying numbers of tiles per line according to each tile's size, the TileLayout.tileMargin','tileMargin, and the available space. Tiles are never resized by the TileLayout and TileLayout.tileSize is ignored. */
+		| "flow"
+		;
+
+	export type MultiAutoChild = any;
+
+
+	/**
+	 * Mode for escaping text values when using DataSource.recordsAsText or DataSource.recordsFromText.
+	 */
+	export type EscapingMode = 
+		/** Literal double quotes in data values are doubled (""), as expected by Microsoft Excel when pasting text values */
+		"double"
+		/** double quotes in data values have a blackslash (\) prepended, similar to String escaping in JavaScript and Java */
+		| "backslash"
+		;
+
+
+	/**
+	 * Order of pickers and which pickers are present when using a DateItem with DateItem.useTextField false.
+	 */
+	export type DateItemSelectorFormat = 
+		/** Output fields in day, month, year order. */
+		"dayMonthYear"
+		/** Output fields in month, day, year order. */
+		| "monthDayYear"
+		/** Output fields in year, month, day order. */
+		| "yearMonthDay"
+		/** Output only day, month fields. */
+		| "dayMonth"
+		/** Output only month, day fields. */
+		| "monthDay"
+		/** Output only year, month fields. */
+		| "yearMonth"
+		/** Output only month, year fields. */
+		| "monthYear"
+		;
+
+
+	/**
+	 * Format for encoding dates in JSON. Note you can override JSONEncoder.encodeDate for a custom format.
+	 */
+	export type JSONDateFormat = 
+		/** dates are is encoded as a String in <a target=_blank href="http://www.w3.org/TR/xmlschema-2/#dateTime">XML Schema date format</a> in UTC, for example, "2005-08-02" for logical date fields or "2005-08-01T21:35:48.350" for datetime fields. See dateFormatAndStorage','Date format and\n storage for more information. */
+		"xmlSchema"
+		/** dates are encoded as raw JavaScript code for creating a Date object, that is: new Date(1238792738633) This is not strictly valid JSON, but if eval()d, will result in an identical date object, regardless of timezone. However, it does not preserve the distinction between logical dates vs full datetime values - use "logicalDateConstructor" mode for that. */
+		| "dateConstructor"
+		/** serializes Date instances in a way that preserves the distinction between logical dates, logical times, and full datetime values, as explained dateFormatAndStorage','here. Like 'dateConstructor' mode, this does not produce strictly valid JSON, and instead embeds JavaScript calls. In addition, unlike 'dateConstructor' mode, using eval() to reconstruct the original JavaScript objects will only work in the presence of SmartClient, and not just in a generic JavaScript interpreter. */
+		| "logicalDateConstructor"
+		;
+
+
+	/**
+	 * String designating a standard time format for displaying the times associated with dates strings.
+	 */
+	export type TimeDisplayFormat = 
+		/** String will display with seconds and am/pm indicator:[H]H:MM:SS am|pm. Example: 3:25:15 pm */
+		"toTime"
+		/** String will display with seconds in 24 hour time: [H]H:MM:SS. Example: 15:25:15 */
+		| "to24HourTime"
+		/** String will display with seconds, with a 2 digit hour and am/pm indicator: HH:MM:SS am|pm Example: 03:25:15 pm */
+		| "toPaddedTime"
+		/** String will display with seconds, with a 2 digit hour in 24 hour format: HH:MM:SS Examples: 15:25:15, 03:16:45 */
+		| "toPadded24HourTime"
+		/** String will have no seconds and be in 12 hour format:[H]H:MM am|pm Example: 3:25 pm */
+		| "toShortTime"
+		/** String will have no seconds and be in 24 hour format: [H]H:MM Example:15:25 */
+		| "toShort24HourTime"
+		/** String will have no seconds and will display a 2 digit hour, in 12 hour clock format: HH:MM am|pm Example: 03:25 pm */
+		| "toShortPaddedTime"
+		/** String will have no seconds and will display with a 2 digit hour in 24 hour clock format: HH:MM Examples: 15:25, 03:16 */
+		| "toShortPadded24HourTime"
+		;
+
+	export type SortDirection = 
+		/** Sort in ascending order (eg: A-Z, larger items later in the list) */
+		"ascending"
+		/** Sort in descending order (eg: Z-A, larger items earlier in the list) */
+		| "descending"
+		;
+
+
+	/**
+	 * For "fetch" operations, how simple search criteria should be interpreted for text fields (and to some extent numeric fields, see the notes below). For greater flexibility, use AdvancedCriteria.
+	 */
+	export type TextMatchStyle = 
+		/** case-insensitive exact match ("foo" matches "foo" and "FoO", but not "FooBar") */
+		"exact"
+		/** case-sensitive exact match ("foo" matches only "foo") */
+		| "exactCase"
+		/** case-insenstive substring match ("foo" matches "foobar" and "BarFoo") */
+		| "substring"
+		/** case-insensitive prefix match ("foo" matches "FooBar" but not "BarFoo") textMatchStyle behavior is consistent across the client and all three of the built-in server DataSource implementations - SQL, Hibernate and JPA - to the maximum extent that is practical. Known inconsistencies, some of which can be tweaked with configuration settings, are described below textMatchStyle can be disabled for any individual field with the DataSourceField.ignoreTextMatchStyle declaration. This behavior is consistent across client and server implementations, with the proviso that case-sensitive behavior is inherently inconsistent in the server-side implementations (see below for a more detailed discussion of this) textMatchStyle is forced to "exactCase" for DataSourceField.primaryKey','primaryKey fields on update and remove operations, unless OperationBinding.allowMultiUpdate is in force. This means that a normal update or remove operation - which is constrained by a unique primaryKey value or combination, to affect only a single data row - will use an equality match on all primaryKey fields. This is desirable because it makes index usage more likely. Note that this means the key values "foo" and "FOO" are distinct, which is a change from previous behavior. For most databases, this change will have no effect because most databases do not by default allow primaryKey values that only differ in case anyway - if a table has a row with a PK of "foo" and you try to insert a row with a PK of "FOO", most databases will fail with a constraint violation. However, if you are using a database hat allows key values that differ only in case, and you need to support this for some reason, you can switch the framework back to the previous behavior by setting property allow.case.sensitive.pks to true in your server.properties file. Note, we do not recommend this; in fact, we do not recommend the use of text primaryKey fields at all. Where you have control ,we would always recommend the use of automatically incrementing numeric sequence keys. textMatchStyle does not apply to boolean or temporal (date, datetime, time) DataSourceField.type','field types. Such fields are always checked for equality. If you have a need for more complex matching, such as date-range checking, use AdvancedCriteria Critiera values for temporal fields must be real dates (Javascript Date objects on the client, instances of java.util.Date on the server). Attempting to match against a string or any other type of value will result in an "always fails" clause being generated. This behavior is how the client code has always worked, but is a change for the server-side DataSources, in the interests of consistency. The previous behavior was: SQLDataSource used to attempt to match the date column to the criteria value provided; if that value was an appropriately-formatted string, that attempt might have worked, but it would be database-specific. If you have an application that depends on this old behavior, you can switch it back on by adding the following to your server.properties file: sql.temporal.fields.require.date.criteria: false HibernateDataSource and JPADataSource used to skip such clauses altogether, which results in the opposite behavior (there is an implied "always succeeds" clause, because the clause is not present in the query at all). If you have an application that depends on this old behavior, you can switch it back on by adding the following to your server.properties file: jpa.temporal.fields.require.date.criteria: false or hibernate.temporal.fields.require.date.criteria: false, as appropriate textMatchStyle does not apply to fields used in the joins generated to satisfy DataSourceField.includeFrom','includeFrom declarations or entity relations in Hibernate or JPA. Again, such comparisons are always for equality textMatchStyle is applied to numeric fields only if the supplied criteria value is a string. So for a numeric field "myNumber", we will match 10, 100, 110 and 1000 if a criteria value of "10" (the quoted string) is supplied, but we will only match 10 if a criteria value of 10 (the actual number) is supplied This is a change in behavior for the server-side DataSource implementations, in the interests of consistency with the client behavior. Previously, all three of the built-in DataSource implementations applied textMatchStyle to numeric fields regardless of the criteria value's type. If you have an application that depends on this old behavior, you can switch it back on by adding the following to your server.properties file: sql.substring.numeric.criteria: true or hibernate.substring.numeric.criteria: true or jpa.substring.numeric.criteria: true, as appropriate "exactCase" matching cannot be made consistent across all database providers because each database has its own idea of whether case-sensitive matching should be the default, and how to switch it on and off (if that is even possible) Microsoft SQL Server must have case-sensitive matching enabled by setting a case-sensitive collation when the database is created (there are more fine-grained options, but we do not recommend them because of the scope for further inconsistency, where "exactCase" works correctly on table A but not on table B). See <a href=http://msdn.microsoft.com/en-us/library/ms175835.aspx>MSDN</a> for details HSQLDB has case sensitivity set with the SET IGNORECASE directive - <a href=http://www.hsqldb.org/doc/guide/ch09.html#set_ignorecase-section>see here</a> MySQL is case-insensitive, but since it provides an easy way to do per-query, case-sensitive matching in SQL, we work around it for that database, but only in SQL DataSources If you are using Hibernate or JPA, whether "exactCase" works as expected depends entirely on the underlying database. Unlike the SQL DataSource, where we have fine-grained control of the SQL that the database executes, we are constrained by what the ORM will allow. This prevents us from compensating for database quirks, like we do with MySQL's case-insensitivity in the SQL DataSource  */
+		| "startsWith"
+		;
+
+
+	/**
+	 * Hoop selection modes.
+	 */
+	export type HoopSelectionStyle = 
+		/** Components completely enclosed by the hoop are selected */
+		"encloses"
+		/** Components enclosed or intersected by the hoop are selected */
+		| "intersects"
+		;
+
+
+	/**
+	 * What kind of mask to use for masking dragged element.
+	 */
+	export type DragMaskType = 
+		/** creates an element with ordinary HTML content that will block events */
+		"div"
+		/** creates an iframe with empty content */
+		| "iframe"
+		/** hides the contents of this widget temporarily */
+		| "hide"
+		;
+
+
+	/**
+	 * Event that will trigger inline editing.
+	 */
+	export type ListGridEditEvent = 
+		/** A single mouse click triggers inline editing */
+		"click"
+		/** A double click triggers inline editing */
+		| "doubleClick"
+		/** No mouse event will trigger editing. Editing must be programmatically started via ListGrid.startEditing (perhaps from an external button) or may be triggered by keyboard navigation if ListGrid.editOnFocus is set. */
+		| "none"
+		;
+
+
+	/**
+	 * When the type for a parameter mentions "properties" as in "ListGrid Properties" or "RPCRequest Properties", it means that the expected value is a JavaScript Object containing any set of properties generally legal when creating an object of that type. For example, the first parameter of RPCManager.sendRequest is of type "RPCRequest Properties". This means it should be called like: isc.RPCManager.sendRequest({ actionURL : "/foo.do", showPrompt:false }); RPCRequest.actionURL','actionURL and RPCRequest.showPrompt','showPrompt are properties of RPCRequest. Note that the notation shown above is an example of a ObjectLiteral','JavaScript object literal.
+	 */
+	export type Properties = any;
+
+	export type ColorPickerMode = 
+		/** Display a palette of 40 basic colors from which to pick. */
+		"simple"
+		/** In addition to the 40 basic colors, the user can specify a color from anywhere in the spectrum, with an optional alpha component. */
+		| "complex"
+		;
+
+
+	/**
+	 * Indicates the format to be used for HTTP requests and responses when fulfilling DSRequests (eg, when DataSource.fetchData is called). Note that RPCManager.startQueue','request queuing is only available for "iscServer" requests.
+	 */
+	export type DSDataFormat = 
+		/** Make an HTTP request in a format recognized by the ISC server and expect ISC server response format. serverDataIntegration','Server-side integration can then be used to connect to any kind of data store or web service. */
+		"iscServer"
+		/** Expect XML responses. Request format depends on the setting for OperationBinding.dataProtocol','protocol. This is the correct setting when consuming RSS feeds, XML web services (whether SOAP, REST, XML-RPC or custom format), and XML flat files directly from the browser. Values for "date", "time" or "datetime" fields in responses should be specified in the applicable <a target=_blank href="http://www.w3.org/TR/xmlschema-2/#dateTime">XML Schema date format</a>. If no timezone is explicitly specified, dates / datetimes received by the client are assumed to be GMT. Note that "date" type fields represent logical dates and may omit time information entirely, and "time" type fields may omit date information. See dateFormatAndStorage','Date and Time Format and storage for more information on how date values are serialized in requests sent to the server. A DSResponse will be derived from the returned XML via the process described under DataSource.transformResponse. */
+		| "xml"
+		/** Expect response in JSON <a href='http://json.org' target='_blank'>(Java Script Object Notation)</a> format, ready to be eval()'d. Response should either be a naked object literal: { "property":"value1", "property2" : "value2", ... } or a string that evals to return a valid response object: var response = { "property":"value1", "property2" : "value2", ... } response; A DSResponse will be derived from the returned JSON via the process described under DataSource.transformResponse. As with "xml" responses, values for "date" or "datetime" fields should be specified as a String in <a target=_blank href="http://www.w3.org/TR/xmlschema-2/#dateTime">XML Schema date format</a> and may include a timezone. In the absence of a timezone they will be assumed to be GMT. Request format depends on the setting for OperationBinding.dataProtocol','protocol. See also XJSONDataSource. */
+		| "json"
+		/** SmartClient will not attempt to parse the response, instead, DataSource.transformResponse must be implemented. transformResponse will receive the "data" parameter as a String, and must parse this String into an Array of Objects, which should be set as DSResponse.data. Request format depends on the setting for OperationBinding.dataProtocol','protocol. Note that, unlike either the "json" or "xml" settings of dataFormat, you are responsible for ensuring that parsed values are the correct type, for example, using the JavaScript built-ins parseInt and parseFloat on integer and decimal values respectively, and using new Date() to construct valid Dates. */
+		| "custom"
+		;
+
+	export type Positioning = 
+		/** The canvas is absolutely positioned with respect to its parent. */
+		"absolute"
+		/** The canvas is relatively positioned according to the document flow. */
+		| "relative"
+		;
+
+
+	/**
+	 * This is used for client-side or server-side summaries Client-side: Function to produce a summary value based on an array of records and a field definition. An example usage is the ListGrid.showGridSummary','listGrid summary row, where a row is shown at the bottom of the listGrid containing summary information about each column. Server-side: Function used for getting summarized field value using serverSummaries','Server Summaries feature or when DataSourceField.includeFrom','Including values from multiple records For the client-side SummaryFunctions may be specified in one of 2 ways: as an explicit function or executable stringMethods','StringMethod, which will be passed records (an array of records) and field (the field definition for which the summary is required). as a standard SummaryFunction identifier For valid ways to configure SummaryFunctions to use server-side feature see the serverSummaries','Server Summaries overview.
+	 */
+	export type SummaryFunction = 
+		/** Client: iterates through the set of records, picking up and summing all numeric values for the specified field. Returns null to indicate invalid summary value if any non numeric field values are encountered. Server: acts exactly like SQL SUM function. */
+		"sum"
+		/** Client: iterates through the set of records, picking up all numeric values for the specified field and determining the mean value. Returns null to indicate invalid summary value if any non numeric field values are encountered. Server: acts exactly like SQL AVG function. */
+		| "avg"
+		/** Client: iterates through the set of records, picking up all values for the specified field and finding the maximum value. Handles numeric fields and date type fields only. Returns null to indicate invalid summary value if any non numeric/date field values are encountered. Server: acts exactly like SQL MAX function. */
+		| "max"
+		/** Client: iterates through the set of records, picking up all values for the specified field and finding the minimum value. Handles numeric fields and date type fields only. Returns null to indicate invalid summary value if any non numeric field values are encountered. Server: acts exactly like SQL MIN function. */
+		| "min"
+		/** Client: iterates through the set of records, picking up all numeric values for the specified field and multiplying them together. Returns null to indicate invalid summary value if any non numeric field values are encountered. Server: not supported. */
+		| "multiplier"
+		/** Client: returns a numeric count of the total number of records passed in. Server: acts exactly like SQL COUNT function. */
+		| "count"
+		/** Client: returns field.summaryValueTitle if specified, otherwise field.title Server: not supported. */
+		| "title"
+		/** Client: Currently the same as the min function. Server: implemented as SQL MIN function. */
+		| "first"
+		/** Client: iterates through the set of records, producing a string with each value concatenated to the end. Server: implemented as SQL CONCAT function. Supported only by SQLDataSource. Note that it is natively supported only by Oracle DB driver, other drivers perform additional query to fetch values for concatenation. See also DataSourceField.joinPrefix','joinPrefix, DataSourceField.joinString','joinString and DataSourceField.joinSuffix','joinSuffix related datasource field attributes. */
+		| "concat"
+		;
+
+	export type SkipJSONValidation = 
+		/** Skip validation for all fields. In this mode, valueXPaths and getFieldValue implementations are skipped. */
+		"full"
+		/** Skip validation for fields with boolean, numeric, or string-drived types. Note that you must deliver all DataSourceField.multiple:true values as arrays. */
+		| "partial"
+		/** Always do validation. */
+		| "none"
+		;
+
+
+	/**
+	 * Dictates the appearance of form items when FormItem.canEdit is set to false.
+	 */
+	export type ReadOnlyDisplayAppearance = 
+		/** Item value should appear within the form as a static block of text, similar to the default appearance of a StaticTextItem. This appearance may be modified via FormItem.readOnlyTextBoxStyle and FormItem.clipStaticValue. */
+		"static"
+		/** Item should appear unchanged, but user interaction to edit the item will be disallowed. Note that some interactions will be allowed, such as selecting text within a read-only TextItem for copy and paste. Exact implementation may vary by form item type. */
+		| "readOnly"
+		/** Item will appear disabled. */
+		| "disabled"
+		;
+
+
+	/**
+	 * Is this page being viewed in landscape or portrait orientation? Typically used with mobile devices.
+	 */
+	export type PageOrientation = 
+		/** Landscape orientation: page is wider than it is tall. */
+		"landscape"
+		/** Portrait orientation: page is taller than it is wide. */
+		| "portrait"
+		;
+
+	export type LabelAlignment = 
+		/** Justify label's left edge against its left coordinate (right in RTL configurations) */
+		"start"
+		/** Justify label's right edge against its left coordinate (left in RTL configurations) */
+		| "end"
+		/** Center label about its left coordinate */
+		| "center"
+		/** Justify label's left edge against its left coordinate */
+		| "left"
+		/** Justify label's right edge against its left coordinate */
+		| "right"
+		;
+
+
+	/**
+	 * When ListGrid.canHover','canHover and ListGrid.showHoverComponents','showHoverComponents are both true, HoverMode dictates the type of UI to be displayed when a user hovers over a row or cell. There are a number of builtin HoverModes and you can override ListGrid.getCellHoverComponent','getCellHoverComponent() to create your own hover behaviors.
+	 */
+	export type HoverMode = 
+		/** Show a single field's value in an HTMLFlow. Field to use is ListGrid.detailField. */
+		"detailField"
+		/** Show a DetailViewer displaying those fields from the record which are not already displayed in the grid. */
+		| "details"
+		/** Show a separate ListGrid containing related-records. See ListGridRecord.detailDS and ListGrid.recordDetailDSProperty for more information. */
+		| "related"
+		/** Show a DetailViewer displaying those fields from the record not already displayed in the grid, together with a separate ListGrid containing related-records. */
+		| "detailRelated"
+		;
+
+	export type CriteriaPolicy = 
+		/** Cache is dropped whenever criteria changes. */
+		"dropOnChange"
+		/** Cache is retained as long as the only changes to criteria make the criteria more restrictive as determined by ResultSet.compareCriteria. */
+		| "dropOnShortening"
+		;
+
+
+	/**
+	 * Supported styles of connector orientations.
+	 */
+	export type ConnectorOrientation = 
+		/** Tail segments are always horizontal; best for left-to-right connectors */
+		"horizontal"
+		/** Tail segments are always vertical; best for top-to-bottom connectors */
+		| "vertical"
+		/** Tail segments flip orientation according to longer axis of bounding box: if the bounding box is wider than it is tall, center segment is vertical */
+		| "auto"
+		;
+
+	export type Alignment = 
+		/** Center within container. */
+		"center"
+		/** Stick to left side of container. */
+		| "left"
+		/** Stick to right side of container. */
+		| "right"
+		;
+
+	export type ProcessValueType = 
+		/** values that are not already strings are converted via toString() */
+		"string"
+		/** the strings "true" and "false" become boolean true and false. All other Strings non-empty String values are true, all numbers are true except 0, and all other non-null values are true */
+		| "boolean"
+		/** values are converted via toString() and parsing as a decimal number. Invalid values trigger a transition to the StateTask.failureElement */
+		| "decimal"
+		/** values are converted via toString(), parsing as a number, and rounding to nearest integer. Invalid values trigger a transition to the StateTask.failureElement */
+		| "integer"
+		/** any input which is not already a Record or Map becomes null */
+		| "record"
+		/** generic array type - will convert value to an array of the same type as the existing value */
+		| "array"
+		;
+
+
+	/**
+	 * When ListGrid.canExpandRecords','canExpandRecords is true, ExpansionMode dictates the type of UI to be displayed in the expanded portion of the row. There are a number of builtin ExpansionModes and you can override ListGrid.getExpansionComponent','getExpansionComponent() to create your own expansion behaviors.
+	 */
+	export type ExpansionMode = 
+		/** Show a single field's value in an HTMLFlow. Field to use is ListGrid.detailField. */
+		"detailField"
+		/** Show a DetailViewer displaying those fields from the record which are not already displayed in the grid. */
+		| "details"
+		/** Show a separate ListGrid containing related-records. See ListGridRecord.detailDS and ListGrid.recordDetailDSProperty for more information. */
+		| "related"
+		/** Show a DynamicForm to edit those fields from the record which are not already present in the grid. If the record is collapsed with unsaved changes and ListGrid.expansionEditorShowSaveDialog is not set, Edits will be saved automatically, or stored as editing','editValues if ListGrid.autoSaveEdits is false. Otherwise, a confirmation dialog is displayed. Can optionally show a ListGrid.showExpansionEditorSaveButton','save button and ListGrid.expansionEditorCollapseOnSave','auto-collapse when save is pressed. If a record fails validation on save and the field in question is not visible in the grid, the record is automatically expanded and validated to show the errors. */
+		| "editor"
+		/** Show a DetailViewer displaying those fields from the record not already displayed in the grid, together with a separate ListGrid containing related-records. */
+		| "detailRelated"
+		;
+
+
+	/**
+	 * String specifying a nested data field structure. Each dataPath string is a slash-delimited set of field identifiers, for example "id1/id2/id3". DataPaths may be applied directly to a Canvas.dataPath','component, and/or to a databound component field specification. A datapath denotes a path to a nested field value in a hierarchical structure, giving developers the opportunity to easily view or edit nested data structures. Specifically: if the component is viewing or editing a record, the value for fields will be derived from a nested structure of records if the component is bound to a dataSource, field attributes may be picked up by following the dataPath to a field definition on another dataSource Examples: If a dynamicForm is defined with the following fields: [ { name:"name" }, { name:"street", dataPath:"address/street" } ] If the "name" field is set to "Joe Smith" and the "street" field is set to "1221 High Street", when the values for this form are retrieved via a getValues() call they will return an object in the following format: {name:"Joe Smith", address:{street:"1221 High Street"}} For databound components, dataPath also provides a way to pick up field attributes from nested dataSources. Given the following dataSource definitions: isc.DataSource.create({ ID:"contacts", fields:[ {name:"name"}, {name:"email"}, {name:"organization"}, {name:"phone"}, {name:"address", type:"Address"} ] }); isc.DataSource.create({ ID:"Address", fields:[ {name:"street"}, {name:"city"}, {name:"state"}, {name:"zip"} ] }); and a databound component bound to the 'contacts' dataSource, specifying a field with a dataPath of "address/street" would ensure the field attributes were derived from the "street" field of the 'Address' dataSource. dataPaths are also cumulative. In other words if a component has a specified dataPath, the dataPath of any fields it contains will be appended to that component level path when accessing data. For example the following form: isc.DynamicForm.create({ dataPath:"contact", fields:[ {dataPath:"address/email"} ] }); Might be used to edit a data structure similar to this: {contact:{name:'Ed Jones', address:{state:"CA", email:"ed@ed.jones.com"}}} Nested canvases can also have dataPaths specified, which will similarly be combined. See the Canvas.dataPath attribute for more information and examples of this.
+	 */
+	export type DataPath = any;
+
+
+	/**
+	 * The types listed below are built-in types that DataBoundComponent','databound\n components understand and treat specially (using type-specific form controls, validators, formatters, sorting logic, etc). You can declare custom types via SimpleType','SimpleType.create(), with settings that will influence DataBound components. You can also create your own subclasses of databound components to add further custom, reusable behaviors based on field.type. field.type can also be the ID of another DataSource, which allows you to model nested structures such as XML documents (in fact, XMLTools.loadXMLSchema models XML schema in this way). Nested DataSource declarations affect how XML and JSON data is deserialized into JavaScript objects in the clientDataIntegration','client-side integration pipeline, so that you can load complex XML documents and have them deserialized into a correctly typed nested data structure. Note: to declare related but separate objects, as in an "Account" object that can be related to both a "Contact" object and "Order" objects, use DataSourceField.foreignKey, not a nested structure declaration.
+	 */
+	export type FieldType = 
+		/** Generic text, e.g. "John Doe". This is the default field type. Use field.length to set length. */
+		"text"
+		/** A boolean value, e.g. true */
+		| "boolean"
+		/** A whole number, e.g. 123 */
+		| "integer"
+		/** A floating point (decimal) number, e.g. 1.23 */
+		| "float"
+		/** A logical date, with no time value (such as a holiday or birthday). Represented on the client as a JavaScript Date object where time values are ignored. See dateFormatAndStorage for more information on date display and serialization formats. */
+		| "date"
+		/** A time of day, with no date. Represented on the client as a JavaScript Date object in UTC/GMT by default (see also dateFormatAndStorage and the Time class). */
+		| "time"
+		/** A date and time, accurate to the second. Represented on the client as a JavaScript Date object. See also dateFormatAndStorage. */
+		| "datetime"
+		/** A text value constrained to a set of legal values specified by the field's DataSourceField.valueMap','valueMap, as though a ValidatorType of "isOneOf" had been declared. */
+		| "enum"
+		/** An enum whose values are numeric. */
+		| "intEnum"
+		/** If you are using the SmartClient SQL datasource connector, a sequence is a unique, increasing whole number, incremented whenever a new record is added. Otherwise, sequence behaves identically to integer. This type is typically used with field.primaryKey to auto-generate unique primary keys. See also DataSourceField.sequenceName and DataSource.sequenceMode */
+		| "sequence"
+		/** A string representing a well-formed URL. Some components will render this as an HTML link (using an anchor tag for example). */
+		| "link"
+		/** A string representing a well-formed URL that points to an image. Some components will render an IMG tag with the value of this field as the 'src' attribute to render the image. */
+		| "image"
+		/** Arbitrary binary data. When this field type is present, three additional fields are automatically generated. They are: &lt;fieldName&gt;_filename, &lt;fieldName&gt;_filesize, and &lt;fieldName&gt;_date_created where &lt;fieldName&gt; is the value of the name attribute of this field. These fields are marked as DataSourceField.hidden:true to suppress their rendering by default. You can show one or more of these fields by specifying the field with a hidden:false override in the fields array of the databound component. Stream / view file support for custom DataSources: a custom DataSource or DMI must implement the "viewFile" and "downloadFile" operationTypes and return a single Record with a byte[] as the field value for the binary field. For more detail see the overview of binaryFields','Binary Fields. */
+		| "binary"
+		/** Binary data comprising an image. Causes ViewFileItem to be used when the field is displayed in a form, allowing the image to optionally be displayed inline. */
+		| "imageFile"
+		/** Fields of this type can contain any data value and have no default formatting or validation behavior. This is useful as the SimpleType.inheritsFrom','parent type for SimpleTypes where you do not want any of the standard validation or formatting logic to be inherited from the standard built-in types. */
+		| "any"
+		/** Synonymous with "any". */
+		| "custom"
+		/** Fields of this type are automatically populated by the SmartClient Server with the current authenticated userId as part of "add" and "update" operations. By default, fields of this type are hidden and not editable; the server ignores any value that the client sends in a field of this type. Note that the "authenticated user" can be set explicitly on the server-side RPCManager using the setUserId() method, or it can come from the servlet API if you are using its built-in authentication scheme. See the server-side Javadocs for RPCManager. */
+		| "modifier"
+		/** Fields of this type are automatically populated by the SmartClient Server with the current date and time as part of "add" and "update" operations. By default, fields of this type are hidden and not editable; the server ignores any value that the client sends in a field of this type. */
+		| "modifierTimestamp"
+		/** Fields of this type are automatically populated by the SmartClient Server with the current authenticated userId as part of "add" operations. By default, fields of this type are hidden and not editable; the server ignores any value that the client sends in a field of this type. The notes about type "modifier" also apply to fields of this type. */
+		| "creator"
+		/** Fields of this type are automatically populated by the SmartClient Server with the current date and time as part of an "add" operation (when the record is first created). By default, fields of this type are hidden and not editable; the server ignores any value that the client sends in a field of this type. */
+		| "creatorTimestamp"
+		/** Same as "text", but causes PasswordItem to be used by default for editing (hides typed-in value). */
+		| "password"
+		/** A special field type specifically for use with Unicode data in conjunction with the Microsoft SQL Server database. Field type "ntext" implies the use of DataSourceField.sqlStorageStrategy','sqlStorageStrategy "ntext"; other than that, this type is identical to "text" */
+		| "ntext"
+		/** An integer number with locale-based formatting, e.g. 12,345,678. See localizedNumberFormatting','Localized Number Formatting for more info. */
+		| "localeInt"
+		/** A float number with locale-based formatting, e.g. 12,345.67. See localizedNumberFormatting','Localized Number Formatting for more info. */
+		| "localeFloat"
+		/** A float number with locale-based formatting and using currency symbol, e.g. $12,345.67. See localizedNumberFormatting','Localized Number Formatting for more info. */
+		| "localeCurrency"
+		/** A telephone number. Uses FormItem.browserInputType "tel" to hint to the device to restrict input. On most mobile devices that have software keyboards, this cause a specialized keyboard to appear which only allows entry of normal phone numbers. When displayed read-only, a "phoneNumber" renders as an HTML link with the "tel:" URL scheme, which will invoke the native phone dialing interface on most mobile devices. In addition, the CSS style "sc_phoneNumber" is applied. By default, "phoneNumber" fields do not include validators, however the following validator definition would limit to digits, dashes and the "+" character: xml: &lt;validator type="regexp" expression="^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$" errorMessage="Phone number should be in the correct format e.g. +#(###)###-##-##" /&gt; or directly in JavaScript: {type:"regexp", expression:"^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$", errorMessage:"Phone number should be in the correct format e.g. +#(###)###-##-##"} and adding "#" and "*" to the regular expressions above would allow for users to enter special keys sometimes used for extension numbers or pauses */
+		| "phoneNumber"
+		;
+
+
+	/**
+	 * The strategy to use when generating field names - for example, for new formula or summary fields created using the built-in editors.
+	 */
+	export type FieldNamingStrategy = 
+		/** generate names in the format fieldTypeX, where field type might be "formulaField" and X is an index specific to the field-type and component instance */
+		"simple"
+		/** generates a UUID for all generated field names */
+		| "uuid"
+		;
+
+
+	/**
+	 * Events registerable via Page.setEvent
+	 */
+	export type PageEvent = 
+		/** Fires repeatedly (every 10 ms by default) when the system is idle (i.e., not busy running other scripts) after the page is loaded. */
+		"idle"
+		/** Fires when the page has finished loading. It corresponds to the browser 'load' event normally handled by window.onload. */
+		| "load"
+		/** Fires when the page is exited or unloaded. It corresponds to the browser 'unload' event normally handled by window.onunload. */
+		| "unload"
+		/** Fires when the browser window is resized by the user. It corresponds to the browser 'resize' event normally handled by window.onresize. */
+		| "resize"
+		/** Fires when the left mouse button is pressed on the Page. */
+		| "mouseDown"
+		/** Fires when the right mouse button is pressed on the Page. */
+		| "rightMouseDown"
+		/** Fires when the mouse moves on the Page. */
+		| "mouseMove"
+		/** Fires when the left mouse button released on the Page. */
+		| "mouseUp"
+		/** Fires when the user clicks the mouse on the Page. */
+		| "click"
+		/** Fires when the uesr double-clicks on the Page. */
+		| "doubleClick"
+		/** Fires when the right mouse button is clicked on the page. If your event handler for this event returns false, the native browser context menu will be suppressed. Note: On the Macintosh platform, Command+Click may be used instead of right-button click to trigger a context menu event. On the Opera browser, Ctrl+Shift+Click should be used instead of right-button click. */
+		| "showContextMenu"
+		/** Fires when a user presses a key on the keyboard. */
+		| "keyPress"
+		/** Fires when the Page.getOrientation changes due to browser-window resize or rotation of a mobile device. see classMethod:Page.setEvent() see classMethod:Page.clearEvent() */
+		| "orientationChange"
+		;
+
+
+	/**
+	 * The AutoTest subsystem relies on generating and parsing identifier strings to identify components on the page. A very common pattern is identifying a specific component within a list of possible candidates. There are many many cases where this pattern is used, for example - members in a layout,tabs in a tabset, sections in a section stack. In order to make these identifiers as robust as possible across minor changes to an application, (such as skin changes, minor layout changes, etc) the system will store multiple pieces of information about a component when generating an identification string to retrieve it from a list of candidates. The system has a default strategy for choosing the order in which to look at these pieces of information but in some cases this can be overridden by setting a LocatorStrategy. By default we use the following strategies in order to identify a component from a list of candidates: name: Does not apply in all cases but in cases where a specified name attribute has meaning we will use it - for example for SectionStackSection.name','sections in a section stack. title: If a title is specified for the component this may be used as a legitimate identifier if it is unique within the component - for example differently titled tabs within a tabset. index: Locating by index is typically less robust than by name or title as it is likely to be affected by layout changes on the page. If an explicit strategy is specified, that will be used to locate the component if possible. If no matching component is found using that strategy, we will continue to try the remaining strategies in order as described above. In other words setting a locatorStrategy to "title" will skip attempting to find a component by name, and instead attempt to find by title - or failing that by index. Note that we also support matching by type (see LocatorTypeStrategy). Matching by type is used if we were unable to match by name or title or to disambiguate between multiple components with a matching title.
+	 */
+	export type LocatorStrategy = 
+		/** Match by name if possible. */
+		"name"
+		/** Match by title if possible. */
+		| "title"
+		/** Match by index */
+		| "index"
+		;
+
+
+	/**
+	 * You can use whatever cursors are valid for your deployment platforms, but keep in mind that visual representation may vary by browser and OS. See the <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/cursor' target='_blank'>MDN cursor page</a> for a live demonstration.
+	 */
+	export type Cursor = 
+		/** Use the default arrow cursor for this browser/OS. */
+		"default"
+		/** Use the default cursor for this element type in this browser/OS */
+		| "auto"
+		/** Use the wait cursor. */
+		| "wait"
+		/** Use the hand cursor. */
+		| "hand"
+		/** Use the "move" (crosshairs) cursor. */
+		| "move"
+		/** Use the 'help' cursor. */
+		| "help"
+		/** Use the 'text' (i-beam) cursor. */
+		| "text"
+		/** Use the normal hand pointer that appears when you hover over a link */
+		| "POINTER"
+		| "arrow"
+		| "all-scroll"
+		/** Use the 'crosshair' ( + ) cursor. */
+		| "crosshair"
+		/** Use the column resize cursor (horizontal double-tipped arrow) */
+		| "col-resize"
+		/** Use the row resize cursor (vertical double-tipped arrow) */
+		| "row-resize"
+		/** Use the "east resize" cursor. */
+		| "e-resize"
+		/** Use the "west resize" cursor. */
+		| "w-resize"
+		/** Use the "north resize" cursor. */
+		| "n-resize"
+		/** Use the "south resize" cursor. */
+		| "s-resize"
+		/** Use the "south-east resize" cursor. */
+		| "se-resize"
+		/** Use the "north-east resize" cursor. */
+		| "ne-resize"
+		/** Use the "north-west resize" cursor. */
+		| "nw-resize"
+		/** Use the "south-west resize" cursor. */
+		| "sw-resize"
+		/** Use the "not-allowed" cursor. */
+		| "not-allowed"
+		;
+
+
+	/**
+	 * The possible types of sequence handling SmartClient Server can apply. This refers to the technique used to obtain the primary keys of the most recent insert, which the product uses to enable automatic cache synchronization (updating client-side components bound to a dataSource to reflect updates to that dataSource). Only applicable to DataSourceField','fields of FieldType','type "sequence". 
+	 */
+	export type SequenceMode = 
+		/** Use the JDBC 3.0 API "getGeneratedKeys()" to get the most recent sequence value. Obviously, this is only an option for JDBC 3.0+ drivers */
+		"jdbcDriver"
+		/** Use a database-specific native technique to obtain the most recent sequence value. The actual technique used varies widely depending on the vagaries of the underlying database (and sometimes the vagaries of particular releases of a database product) */
+		| "native"
+		/** No automatic attempt is made to retrieve the most recent sequence value. You are expected to handle this by providing a OperationBinding.cacheSyncOperation','cacheSyncOperation that is able to return the entire row without needing generated PK values for context. For example, a query that uses MAX(pk) would be capable of this. To give a more complex example, say you have a sequence value that is retrieved from a legacy system: you could store that sequence value in the HTTP session and then have your custom cacheSyncOperation reference that session attribute in its WHERE clause. Also note that cacheSyncOperations, like any other OperationBinding','DataSource operation, can be OperationBinding.serverObject','written in Java or any OperationBinding.script','JSR223-compliant scripting language - you do not have to use SQL */
+		| "none"
+		;
+
+
+	/**
+	 * Mode of fetching records from the server. Generally, "paged" mode should be used unless the maximum number of records is guaranteed to be small.
+	 */
+	export type FetchMode = 
+		/** All records that match the current filter are fetched. Sorting is performed on the client. */
+		"basic"
+		/** Only requested ranges of records are fetched, with predictive fetch ahead. Sorting is performed on the server. */
+		| "paged"
+		/** All records available from the DataSource are fetched. Filtering by search criteria and sorting are both performed on the client. */
+		| "local"
+		;
+
+
+	/**
+	 * When relative dates are specified in a date range, typically in a RelativeDateItem or DateRangeItem, in order to make the range inclusive or exclusive, it is useful to be able to specify whether we're referring to the start or end of the date in question.
+	 */
+	export type RelativeDateRangePosition = 
+		/** Indicates this relative date should be treated as the start of the specified logical date. */
+		"start"
+		/** Indicates this relative date should be treated as the end of the specified logical date. */
+		| "end"
+		;
+
+
+	/**
+	 * The method of pooling to employ for ListGrid.canExpandRecords','expansionComponents. 
+	 */
+	export type ExpansionComponentPoolingMode = 
+		/** auto-created, built-in components are destroyed when record are ListGrid.collapseRecord','collapsed. */
+		"destroy"
+		/** all expansion components are deparented from the grid when a record is ListGrid.collapseRecord','collapsed but are not destroyed. It is the responsibility of the developer to handle component destruction */
+		| "none"
+		;
+
+
+	/**
+	 * What to do when a user hits enter while editing a cell
+	 */
+	export type EnterKeyEditAction = 
+		/** end editing (will save edit values if ListGrid.autoSaveEdits is true). */
+		"done"
+		/** edit the next editable cell in the record */
+		| "nextCell"
+		/** edit the same field in the next editable record */
+		| "nextRow"
+		/** edit the first editable cell in next editable record */
+		| "nextRowStart"
+		;
+
+
+	/**
+	 * How should field width be determined when ListGridField.autoFitWidth is true?
+	 */
+	export type AutoFitWidthApproach = 
+		/** Size field to fit to the data value(s) contained in the field. */
+		"value"
+		/** Size field to fit the field title */
+		| "title"
+		/** Size field to fit either the field title or the data values in the field (whichever requires more space). */
+		| "both"
+		;
+
+
+	/**
+	 * HTML elements that make up a complete FormItem (note, not all FormItems use all of these elements) 
+	 */
+	export type FormItemElementType = 
+		/** The form item as a whole, including the text element, any icons, and any hint text for the item. This is the cell containing the form item */
+		"cell"
+		/** The "control" cell containing the text box and picker */
+		| "control"
+		/** The cell containing the item's picker icon, if it has one */
+		| "pickerIcon"
+		/** The item's native text box, if it has one */
+		| "textBox"
+		/** The cell containing the title */
+		| "title"
+		;
+
+	export type SendMethod = 
+		/** GET method (regular URL encoding) */
+		"GET"
+		/** POST method (form field encoding) */
+		| "POST"
+		;
+
+
+	/**
+	 * Mode for applying criteria to a tree.
+	 */
+	export type TreeFilterMode = 
+		/** only nodes that actually match criteria are shown. If a parent does not match the criteria, it will not be shown, even if it has children that do match the criteria */
+		"strict"
+		/** parent nodes are kept if they have children which match the criteria, or, in a tree with ResultTree.loadDataOnDemand','loadDataOnDemand:true, if they have not loaded children yet. */
+		| "keepParents"
+		;
+
+
+	/**
+	 * Valid display formats for dates. These strings are the names of formatters which can be passed to DateUtil.setNormalDisplayFormat() or DateUtil.setShortDisplayFormat() and will be subsequently used as default long or short formatters for date objects by SmartClient components. Default set of valid display formats is as follows:
+	 */
+	export type DateDisplayFormat = 
+		/** Default native browser 'toString()' implementation. May vary by browser. Example: Fri Nov 04 2005 11:03:00 GMT-0800 (Pacific Standard Time) */
+		"toString"
+		/** Default native browser 'toLocaleString()' implementation. May vary by browser. Example: Friday, November 04, 2005 11:03:00 AM */
+		| "toLocaleString"
+		/** Short date in format MM/DD/YYYY. Example: 11/4/2005 */
+		| "toUSShortDate"
+		/** Short date with time in format MM/DD/YYYY HH:MM Example: 11/4/2005 11:03 */
+		| "toUSShortDatetime"
+		/** Short date in format DD/MM/YYYY. Example: 4/11/2005 */
+		| "toEuropeanShortDate"
+		/** Short date with time in format DD/MM/YYYY HH:MM Example: 4/11/2005 11:03 */
+		| "toEuropeanShortDatetime"
+		/** Short date in format YYYY/MM/DD. Example: 2005/11/4 */
+		| "toJapanShortDate"
+		/** Short date with time in format YYYY/MM/DD HH:MM Example: 2005/11/4 11:03 */
+		| "toJapanShortDatetime"
+		/** Date in the format YYYY-MM-DD HH:MM:SS Example: 2005-11-04 11:09:15 */
+		| "toSerializeableDate"
+		/** Date in the format &lt;YYYYMMDD&gt;T&lt;HHMMSS&gt;Z Example: 20051104T111001Z Note: In addition to these standard formats, custom formatting can be set by passing a function directly to DateUtil.setNormalDisplayFormat et al. This function will then be executed whenever the appropriate formatter method is called [eg Date.toNormalDate], in the scope of the date instance in question. Custom formatting can also be applied by passing a FormatString instead of a DateDisplayFormat string to DateUtil.setNormalDisplayFormat et al. See the FormatString docs for details. */
+		| "toDateStamp"
+		;
+
+
+	/**
+	 * The direction in which an item should lay out it's fields.
+	 */
+	export type DateFieldLayout = 
+		/** fields are placed horizontally */
+		"horizontal"
+		/** fields are placed vertically */
+		| "vertical"
+		;
+
+	export type Visibility = 
+		/** The widget visibility will match that of its parent (usually visible). */
+		"inherit"
+		/** The widget will always be visible whether its parent is or not. */
+		| "visible"
+		/** The widget will always be hidden even when its parent is visible. */
+		| "hidden"
+		;
+
+
+	/**
+	 * An XMLElement represents one complete XML tag, including any subelements contained between the start and end tags. XMLElement is a native object supplied directly by the browser. The SmartClient-supported interfaces for this object include methods that take an XMLElement as an argument (such as XMLTools.selectNodes). If you want to retrieve XML data and display it in a SmartClient component, read about clientDataIntegration','XML Data Binding. To extract data as JavaScript Objects from XML, see XMLTools.toJS. Direct manipulation of XMLElements objects is subject to cross-browser inconsistencies, bugs, memory leaks and performance issues.
+	 */
+	export type XMLElement = any;
+
+
+	/**
+	 * While editing a ListGrid, what cell should we edit when the user attempts to navigate into a cell past the end of an editable row, via a Tab keypress, or a programmatic saveAndEditNextCell() call?
+	 */
+	export type RowEndEditAction = 
+		/** navigate to the first editable cell in the same record */
+		"same"
+		/** navigate to the first editable cell in the next record */
+		| "next"
+		/** complete the edit. */
+		| "done"
+		/** Leave focus in the cell being edited (take no action) */
+		| "stop"
+		/** take no action */
+		| "none"
+		;
+
+	export type DrawShapeCommandType = 
+		/** Draws a straight line from the current point to the last "moveto" point. There are no arguments. */
+		"close"
+		/** Start a new sub-path at a given (x,y) coordinate. The args array for this command type is a two-element array of the X and Y coordinates. */
+		| "moveto"
+		/** Draw a line from the current point to the given (x,y) coordinate which becomes the new current point. Multiple (x,y) coordinates may be specified to draw a path, in which case the last point becomes the new current point. The args array for this command type is an array of one or more Points (two-element arrays of the X and Y coordinates). */
+		| "lineto"
+		/** Draw a segment of a specified circle. A straight line (the "initial line segment") is drawn from the current point to the start of the circular arc. The args array for this command type contains 4 values: <ol start="0"> The center (cx,cy) Point (two-element array) of the circle. radius startAngle - Start angle in degrees endAngle - End angle in degrees Note that the circletoCommand', '"circleto" Command example can be very helpful when learning how to write "circleto" commands. */
+		| "circleto"
+		;
+
+
+	/**
+	 * Acceleration effect for animations. Can either be a ratio function or a string. Ratio functions take a value between 0 and 1 which represents how much of the animation's duration has elapsed, and return another value between 0 and 1 indicating how close the animation is to completion. For a completely linear animation, the function would return the value it was passed. This allows you to bias animations to [for example] speed up toward the end of the animation. The following strings are also supported for common ratio bias effects:
+	 */
+	export type AnimationAcceleration = 
+		/** - animation will speed up as time elapses */
+		"smoothStart"
+		/** - animation will slow down as time elapses */
+		| "smoothEnd"
+		/** - animation will speed up in the middle */
+		| "smoothStartEnd"
+		/** - no bias */
+		| "none"
+		;
+
+
+	/**
+	 * What the JSONEncoder should do when it encounters a circular reference in an object structure.
+	 */
+	export type JSONCircularReferenceMode = 
+		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
+		"omit"
+		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
+		| "marker"
+		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized. This potentially allows the original object graph to be reconstructed. */
+		| "path"
+		;
+
+
+	/**
+	 * Specifies the layout of the combo box and buttons in a MultiComboBoxItem.
+	 */
+	export type MultiComboBoxLayoutStyle = 
+		/** use a FlowLayout, showing values first, then the text entry area */
+		"flow"
+		/** use a FlowLayout, with the text entry first and values shown afterwards */
+		| "flowReverse"
+		/** Use a horizontal layout with the combo box on the right */
+		| "horizontal"
+		/** Use a horizontal layout with the combo box on the left */
+		| "horizontalReverse"
+		/** Use a vertical layout */
+		| "vertical"
+		/** Use a vertical layout with the combo box at the bottom */
+		| "verticalReverse"
+		;
+
+
+	/**
+	 * Controls whether and when individual items are selected when clicking on a form in editMode.
+	 */
+	export type SelectItemsMode = 
+		/** select an individual item if the item itself it clicked on, but not its title cell */
+		"item"
+		/** select an individual item if either the item or its title cell is clicked on. NOTE: this mode is not the default because it can be make it difficult to select the form as a whole */
+		| "itemOrTitle"
+		/** never allow selection of an individual item */
+		| "never"
+		;
+
+
+	/**
+	 * Settings for whether multiple sections can be in the expanded state simultaneously.
+	 */
+	export type VisibilityMode = 
+		/** Only one section can be expanded at a time. */
+		"mutex"
+		/** Multiple sections can be expanded at the same time, and will share space. */
+		| "multiple"
+		;
+
+
+	/**
+	 * Form encoding types - these translate to Form ENCTYPE parameters.
+	 */
+	export type Encoding = 
+		/** normal form encoding ("application/x-www-form-urlencoded") */
+		"normal"
+		/** form encoding for forms with INPUT file elements, that is, forms that upload files ("multipart/form-data") */
+		| "multipart"
+		;
+
+
+	/**
+	 * Type for controlling when a "recategorize" is applied to records being dropped on a databound component from another databound component.
+	 */
+	export type RecategorizeMode = 
+		/** recategorize is always applied */
+		"always"
+		/** recategorize if normal checks pass */
+		| "checked"
+		/** never recategorize */
+		| "never"
+		;
+
+
+	/**
+	 * An object containing the open state for a treeGrid. Note that this object is not intended to be interrogated directly, but may be stored (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type TreeGridOpenState = string;
+
+
+	/**
+	 * Controls when primary keys are required for "update" and "remove" server operations, when allowMultiUpdate has not been explicitly configured on either the OperationBinding.allowMultiUpdate','operationBinding.allowMultiUpdate or via the server-side API DSRequest.setAllowMultiUpdate().
+	 */
+	export type MultiUpdatePolicy = 
+		/** having a PK is never required, even for requests from a browser. Note: dangerous setting that allows end users to wipe out entire tables */
+		"never"
+		/** having a PK is required for requests that come from the client or are specifically marked via dsRequest.setClientRequest(true) */
+		| "clientRequest"
+		/** having a PK is required for any request that is associated with an RPCManager, which includes clientRequests and server-created DSRequests where an RPCManager was explicitly provided */
+		| "rpcManager"
+		/** having a PK is always required no matter what */
+		| "always"
+		;
+
+
+	/**
+	 * Supported styles of drawing the endpoints of a line
+	 */
+	export type LineCap = 
+		/** Semicircular rounding */
+		"round"
+		/** Squared-off endpoint */
+		| "square"
+		/** Square endpoint, stops exactly at the line's end coordinates instead of extending 1/2 lineWidth further as "round" and "square" do */
+		| "butt"
+		;
+
+
+	/**
+	 * Property to govern when the 'over' styling is applied to a formItemIcon.
+	 */
+	export type IconOverTrigger = 
+		/** Show rollover styling and media when the user is over the icon only */
+		"icon"
+		/** Show rollover styling and media when the user is over the icon or over the textBox (or control-table, if present) for this icon. Only has an effect when FormItem.showOver is true. */
+		| "textBox"
+		;
+
+
+	/**
+	 * Supported positioning of the chart Title.
+	 */
+	export type titleAlign = 
+		/** Align to the left of the chart title header */
+		"left"
+		/** Align centrally in the chart title header */
+		| "center"
+		/** Align to the right of the chart title header */
+		| "right"
+		;
+
+
+	/**
+	 * Determines sizing model when sizing / positioning a canvas relative to its Canvas.percentBox','percentBox.
+	 */
+	export type PercentBoxModel = 
+		/** use coordinates relative to the {Canvas.getVisibleHeight,visibleHeight} and width of the other canvas */
+		"visible"
+		/** use coordinates relative to the {Canvas.getViewportHeight,viewportHeight} and width of the other canvas */
+		| "viewport"
+		;
+
+
+	/**
+	 * An object containing the stored presentation information for the fields of a listGrid. Information contained in a ListGridFieldState object includes the visibility and widths of the listGrid's fields. Note that this object is a JavaScript string, and may be stored (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridFieldState = string;
+
+
+	/**
+	 * Known chart types. These are visual representations of data, not separate data models, although some chart types are only capable of showing a single facet of data. Concrete charting implementations may use any value for chartType but should support the provided chartType values for charts that correspond to the visual presentation described below, to enable easy switching between charting engines.
+	 */
+	export type ChartType = 
+		/** Values represented by area, with stacked values representing multiple facet values. This is equivalent to ChartType "Line" with stacking enabled. */
+		"Area"
+		/** Values represented by vertical columns. Typically supports stacking to represent two facets. May support simultaneous stacking and clustering for 3 facets. */
+		| "Column"
+		/** Values represented by horizontal bars. Typically supports stacking to represent two facets. May support simultaneous stacking and clustering for 3 facets. */
+		| "Bar"
+		/** Values represented by a lines between data points, or stacked areas for multiple facets. */
+		| "Line"
+		/** Values represented on a circular background by a line around the center, or stacked areas for multiple facets */
+		| "Radar"
+		/** Circular chart with wedges representing values. Multiple or stacked pies for multiple facets. */
+		| "Pie"
+		/** Like a pie chart with a central hole. Multiple or stacked doughnuts for multiple facets. */
+		| "Doughnut"
+		/** A chart with two continuous numeric axes and up to one discrete facet. */
+		| "Scatter"
+		/** A chart with two continuous numeric axes and up to one discrete facet that also displays values from a third continuous, numeric domain represented as the sizes of the data point shapes. */
+		| "Bubble"
+		/** Like a column chart, except instead of showing stacked or clustered values for each position on the horizontal axis, the data values are used together with the associated FacetChart.endValueMetric values to show a series of line segments. */
+		| "Histogram"
+		;
+
+
+	/**
+	 * Determines how Java enums are translated to and from Javascript by the SmartClient server.
+	 */
+	export type EnumTranslateStrategy = 
+		/** Translates to/from a String matching the constant name. This is the default if not set. */
+		"name"
+		/** Translates to/from a String matching the enum.toString(). */
+		| "string"
+		/** Translates to/from an integer matching the ordinal number of the constant within the enumeration */
+		| "ordinal"
+		/** Translates to/from a Javascript object containing one property for each property defined within the enum. The constant itself and the ordinal number are included in the JS object. By default they are called "_constant" and "_ordinal", but this can be overridden with the DataSource.enumOrdinalProperty and DataSource.enumConstantProperty properties */
+		| "bean"
+		;
+
+
+	/**
+	 * Position of a ListGrid.recordDrop operation with respect to the target record.
+	 */
+	export type RecordDropPosition = 
+		/** User dropped directly onto the record */
+		"over"
+		/** User dropped before the record */
+		| "before"
+		/** User dropped after the record */
+		| "after"
+		/** Drop position is not over a record */
+		| "none"
+		;
+
+
+	/**
+	 * Supported positioning of the chart Legend.
+	 */
+	export type legendAlign = 
+		/** Align to the left of the legend section */
+		"left"
+		/** Align centrally in the legend section */
+		| "center"
+		/** Align to the right of the legend section */
+		| "right"
+		;
+
+
+	/**
+	 * Policy for whether resize bars are shown on members by default.
+	 */
+	export type LayoutResizeBarPolicy = 
+		/** resize bars are only shown on members marked Canvas.showResizeBar','showResizeBar:true */
+		"marked"
+		/** resize bars are shown on all resizable members that are not explicitly marked showResizeBar:false, except the last member. Appropriate for a LayoutPolicy of "fill" (VLayout, HLayout) since the overall space will always be filled. */
+		| "middle"
+		/** resize bars are shown on all resizable members that are not explicitly marked showResizeBar:false, including the last member. Can be appropriate for a LayoutPolicy of "none" (VStack, HStack) since the overall size of the layout is dictated by it's member's sizes. */
+		| "all"
+		/** resize bars are not shown even if members are marked with Canvas.showResizeBar','showResizeBar:true */
+		| "none"
+		;
+
+	export type DrawPosition = 
+		/** insert before the target element */
+		"beforeBegin"
+		/** insert as the target element's first child */
+		| "afterBegin"
+		/** insert as the target element's last child */
+		| "beforeEnd"
+		/** insert after the target element */
+		| "afterEnd"
+		/** replace the target element */
+		| "replace"
+		;
+
+
+	/**
+	 * Appearance for a SelectItem that allows multiple selection
+	 */
+	export type MultipleAppearance = 
+		/** a drop-down picklist that allows multiple choices by clicking on a checkbox next to each item */
+		"picklist"
+		/** a grid that displays all items in-place. Multiple selection is accomplished by ctrl-click or shift-click. */
+		| "grid"
+		;
+
+
+	/**
+	 * Navigation direction.
+	 */
+	export type NavigationDirection = 
+		/** Back */
+		"back"
+		/** Forward */
+		| "forward"
+		/** none */
+		| "none"
+		;
+
+
+	/**
+	 * Enum to indicate selection change notification types. Used by ListGrid.reselectOnUpdateNotifications
+	 */
+	export type SelectionNotificationType = 
+		/** No selection change notification should fire */
+		"none"
+		/** ListGrid.selectionChanged should fire but ListGrid.selectionUpdated should not fire. */
+		| "selectionChanged"
+		/** ListGrid.selectionChanged and ListGrid.selectionUpdated should both fire. */
+		| "selectionUpdated"
+		;
+
+
+	/**
+	 * Possible placements for pop-up choosers, menus, dialogs or other temporary UIs, which may need to expand to take up additional room for smaller screens.
+	 */
+	export type PanelPlacement = 
+		/** classic placement for menus, pop-up lists and pickers in desktop interfaces: near the control that was clicked (a search field, MenuButton, etc). Note: this setting does not apply when there is no originating control (such as a dialog that appears due to session timeout), in which case centering will generally be used */
+		"nearOrigin"
+		/** fill the nearest containing panel managed by a device-aware layout such as SplitPane, which will generally be equivalent to "fillScreen" for a Browser.isHandset','handset-sized device. Note: this setting does not apply if there is no clear container for the component originating the UI, in which case, "fillScreen" will generally be used. */
+		| "fillPanel"
+		/** fill the entire screen */
+		| "fillScreen"
+		/** fill the bottom half of the screen. This is the default behavior on iOS6/7 for plain HTML &lt;select&gt;, but note that native apps rarely use this interface for picking from lists and it is not generally recommended. */
+		| "halfScreen"
+		/** this setting disables all panelPlacement sizing and positioning logic. Explicitly specified size and positioning will be used. */
+		| "none"
+		;
+
+
+	/**
+	 * Criteria for selecting only a matching set of records from a DataSource. Criteria can be applied on the client and server. Unless configured otherwise, criteria will generally be applied client-side by ResultSets via ResultSet.applyFilter. Client- and server-side systems built into SmartClient understand two criteria formats by default: simple key-value pairs (Criteria) or the AdvancedCriteria format. Simple key-value Criteria are represented via a JavaScript Object where each property specifies the name and required value for a field. Multiple legal values for a field can be provided as an Array. For example: var criteria = { field1 : "value1", field2 : ["value2", "value3"] } Would select all records where field1 has value "value1" and where field2 has either "value2" or "value3". Use DataSource.combineCriteria to combine two Criteria objects (including Criteria and AdvancedCriteria) or DataSource.convertCriteria to convert simple Criteria to the AdvancedCriteria format. When writing custom client and server-side filtering logic, criteria must be a JavaScript Object but the properties of that Object can contain whatever data you want. When sent to the SmartClient server, the Java representation of the criteria is described RPCRequest.data','here. When sent to other servers, the DSProtocol','operationBinding.dataProtocol affects the format.
+	 */
+	export type Criteria = any;
+
+
+	/**
+	 * Possible values for the state of ListGrid groups when groupBy is called
+	 */
+	export type GroupStartOpen = 
+		/** open all groups */
+		"all"
+		/** open the first group */
+		| "first"
+		/** start with all groups closed */
+		| "none"
+		;
+
+
+	/**
+	 * The type of date/time editing style to use when editing an event.
+	 */
+	export type DateEditingStyle = 
+		/** allows editing of the logical start and end dates of the event */
+		"date"
+		/** allows editing of both date and time */
+		| "datetime"
+		/** allows editing of the time portion of the event only */
+		| "time"
+		;
+
+	export type StandardControlGroup = 
+		/** RichTextEditor.fontControls','Font controls */
+		"fontControls"
+		/** RichTextEditor.formatControls','Text formatting controls */
+		| "formatControls"
+		/** RichTextEditor.styleControls','Text styling controls */
+		| "styleControls"
+		/** RichTextEditor.colorControls','Color controls */
+		| "colorControls"
+		/** RichTextEditor.bulletControls','HTML list controls */
+		| "bulletControls"
+		;
+
+
+	/**
+	 * A standard XPath expression as a string. To learn about XPath, try the following search: <a href="http://www.google.com/search?q=xpath+tutorial" target="_blank" >http://www.google.com/search?q=xpath+tutorial</a>
+	 */
+	export type XPathExpression = any;
+
+
+	/**
+	 * Possible values to change the behavior of how data will fill the ListGrid.
+	 */
+	export type Autofit = 
+		/** expand vertically to accommodate records. */
+		"vertical"
+		/** expand horizontally to accommodate fields. */
+		| "horizontal"
+		/** expand horizontally and vertically to accommodate content. */
+		| "both"
+		;
+
+
+	/**
+	 * A ValueMap defines the set of legal values for a field, and optionally allows you to provide a mapping from stored values to values as seen by the end user. A valueMap can be specified as either an Array of legal values, or as an Object where each property maps a stored value to a user-displayable value. See DataSourceField.valueMap for how to express a ValueMap in componentXML','Component XML. A ValueMap can be entirely static or entirely dynamic, with many options in between. For example, a ValueMap may be: statically defined in a JavaScript or XML file. Such a valueMap changes only when application code is upgraded. generated dynamically by server code when the application first loads, for example, by generating JavaScript or XML dynamically in a .jsp or .asp file. Such a valueMap may be different for each session and for each user. loaded on demand from a DataSource, via the PickList.optionDataSource','optionDataSource property, or via a call to DataSource.fetchData where a valueMap is derived dynamically from the returned data (see DataSource.fetchData for an example). Such a valueMap may be updated at any time, for example, every time the user changes a related field while editing data. See also the smartArchitecture','SmartClient Architecture Overview to understand the best architecture from a performance and caching perspective.
+	 */
+	export type ValueMap = any;
+
+
+	/**
+	 * Different styles of selection that a list, etc. might support
+	 */
+	export type SelectionStyle = 
+		/** don't select at all */
+		"none"
+		/** select only one item at a time */
+		| "single"
+		/** select one or more items */
+		| "multiple"
+		/** select one or more items as a toggle so you don't need to hold down control keys to select more than one object */
+		| "simple"
+		;
+
+
+	/**
+	 * Interface to use for showing and editing the FilterBuilder.topOperator','top-level operator of a FilterBuilder.
+	 */
+	export type TopOperatorAppearance = 
+		/** radio buttons appear at the top of the form */
+		"radio"
+		/** a SelectItem appears with a "bracket" spanning all top-level clauses, exactly the same appearance used for showing FilterBuilder.showSubClauseButton','subClauses, if enabled. */
+		| "bracket"
+		/** each line in the FilterBuilder is a top-level item, with a SelectItem shown on the left that allows the user to choose between the main operator in force (either "and" or "or", depending on the setting of topOperator) and "and not". */
+		| "inline"
+		/** no interface is shown. The top-level operator is expected to be shown to the user outside the FilterBuilder, and, if editable, FilterBuilder.setTopOperator should be called to update it */
+		| "none"
+		;
+
+
+	/**
+	 * When discovering a tree, the scanMode determines how to scan for the childrenProperty "node": take each node individually "branch": scan direct siblings as a group, looking for best fit "level": scan entire tree levels as a group, looking for best fit
+	 */
+	export type ScanMode = 
+		/** take each node individually */
+		"node"
+		/** scan direct siblings as a group, looking for best fit */
+		| "branch"
+		/** scan entire tree levels as a group, looking for best fit */
+		| "level"
+		;
+
+
+	/**
+	 * An event that triggers title editing in a TabSet.
+	 */
+	export type TabTitleEditEvent = 
+		/** Start editing when the user single-clicks a tab title */
+		"click"
+		/** Start editing when the user double-clicks a tab title */
+		| "doubleClick"
+		;
+
+
+	/**
+	 * Policy controlling how the window will manage content within its body.
+	 */
+	export type ContentLayoutPolicy = 
+		/** Window does not try to size members at all on either axis. Window body defaults to a Canvas if not autosizing. Otherwise a Layout is used with policies on both axes set to LayoutPolicy "none".NONE: "none", // NOTE: constant declared by Canvas */
+		"none"
+		/** Window body defaults to VLayout behavior. (Body is actually just a Layout with Layout.vertical: true.)VERTICAL: "vertical", // NOTE: constant declared by Canvas */
+		| "vertical"
+		/** Window body defaults to HLayout behavior. (Body is actually just a Layout with Layout.vertical: false.)HORIZONTAL: "horizontal" // NOTE: constant declared by Canvas */
+		| "horizontal"
+		;
+
+
+	/**
+	 * One of the supported formats for data-export. If you are doing a ListGrid.exportClientData','client export to one of the native spreadsheet formats (xls or ooxml), we also export Hilite','hilite-based coloring. So, if Hilites are causing a particular cell to be rendered as green text on a blue background, the corresponding cell in the exported spreadsheet document will also be colored that way.
+	 */
+	export type ExportFormat = 
+		/** Export data as XML records */
+		"xml"
+		/** Export data as JSON objects */
+		| "json"
+		/** Export data in comma-separated format */
+		| "csv"
+		/** Export data in native Microsoft Excel 97 format */
+		| "xls"
+		/** Export data in native Microsoft Excel 2007 format (also called XLSX) */
+		| "ooxml"
+		;
+
+	export type Orientation = 
+		/** members laid out vertically */
+		"vertical"
+		/** members laid out horizontally */
+		| "horizontal"
+		;
+
+
+	/**
+	 * String specifying effect to apply during an animated show or hide.
+	 */
+	export type animateShowEffectId = 
+		/** content slides into or out of view as the widget grows or shrinks */
+		"slide"
+		/** content is revealed or wiped as the widget grows or shrinks */
+		| "wipe"
+		/** widget's opacity smoothly fades into or out of view */
+		| "fade"
+		/** widget moves into position from offscreen */
+		| "fly"
+		;
+
+
+	/**
+	 * An autoChild is an automatically generated subcomponent that a component creates to handle part of its presentation or functionality. An example is the Window component and its subcomponent the "header". See autoChildUsage','Using AutoChildren for more information.
+	 */
+	export type AutoChild = any;
+
+
+	/**
+	 * Enum used within the FilterBuilder class to indicate the role of a particular value-field form item within a filter clause.
+	 */
+	export type ValueItemType = 
+		/** This is the single form item that will populate the generated Criterion.value for this clause. This applies for operators with Operator.valueType of "fieldType" or "custom". */
+		"value"
+		/** This is the single form item that will populate the generated Criterion.value for Operator.valueType of "fieldName". */
+		| "name"
+		/** Indicates this item will generate the lower-bound value (or "start") when generating criteria with Operator.valueType "valueRange". */
+		| "start"
+		/** Indicates this item will generate the higher-bound value (or "end") when generating criteria with Operator.valueType "valueRange". */
+		| "end"
+		;
+
+
+	/**
+	 * Visual Builder's ApplicationMode determines the behavior of the visual components in the application you are building
+	 */
+	export type ApplicationMode = 
+		/** Components behave as they would in the running application; clicking a component in the visual design window will cause the response an end-user would expect */
+		"live"
+		/** Components have special design-time behavior layered on top of ordinary run-time behavior; clicking a component in the visual design window will cause the response an application builder would expect, if any such special behavior is defined for that component */
+		| "edit"
+		;
+
+
+	/**
+	 * Strategy for determining whether to rotate the X-axis labels by 90 degrees.
+	 */
+	export type LabelRotationMode = 
+		/** do not rotate labels */
+		"never"
+		/** rotate labels if needed in order to make them legible and non-overlapping */
+		| "auto"
+		/** always rotate labels */
+		| "always"
+		;
+
+
+	/**
+	 * Specifies the starting point of a move knob with respect to its draw item. The move knob is positioned relative to the move knob point at the DrawItem.moveKnobOffset.
+	 */
+	export type MoveKnobPoint = 
+		/** Top Left corner */
+		"TL"
+		/** Top Right corner */
+		| "TR"
+		/** Bottom Left corner */
+		| "BL"
+		/** Bottom Right corner */
+		| "BR"
+		;
+
+
+	/**
+	 * The method of component-pooling to employ for ListGrid.showRecordComponents','recordComponents. 
+	 */
+	export type RecordComponentPoolingMode = 
+		/** components are destroyed when the record is not being rendered. Best for large datasets where embedded components differ greatly per record. */
+		"viewport"
+		/** components are Canvas.clear','clear()ed when not in the viewport, but stay with a record until the record is dropped from cache. Best for guaranteed small datasets. */
+		| "data"
+		/** components are pooled and will be passed to ListGrid.updateRecordComponent','updateRecordComponent() with the recordChanged parameter set to true. Best for large datasets where embedded components are uniform across different records and can be efficiently reconfigured to work with a new record */
+		| "recycle"
+		;
+
+
+	/**
+	 * ListGrids format data for viewing and editing based on the type attribute of the field. This table describes how the ListGrid deals with the various built-in types.
+	 */
+	export type ListGridFieldType = 
+		/** Simple text rendering for view. For editing a text entry field is shown. If the length of the field (as specified by the DataSourceField.length attribute) is larger than the value specified by ListGrid.longTextEditorThreshold, a text input icon is shown that, when clicked on (or field is focused in) opens a larger editor that expands outside the boundaries of the cell (textarea by default, but overrideable via ListGrid.longTextEditorType). */
+		"text"
+		/** For viewing and editing a checkbox is shown with a check mark for the true value and no check mark for the false value. This behavior may be suppressed by setting ListGridField.suppressValueIcon for the field. See ListGrid.booleanTrueImage for customization. */
+		| "boolean"
+		/** A whole number, e.g. 123. Consider setting ListGridField.editorType','editorType to use a SpinnerItem. */
+		| "integer"
+		/** A floating point (decimal) number, e.g. 1.23. Consider setting ListGridField.editorType','editorType to use a SpinnerItem. */
+		| "float"
+		/** Field value should be a Date instance representing a logical date, with no time of day information. See dateFormatAndStorage for details of the logical date type and how it is represented and manipulated. Dates will be formatted using ListGridField.dateFormatter','ListGridField.dateFormatter if specified, otherwise ListGrid.dateFormatter','ListGrid.dateFormatter. If both these attributes are unset, dates are formatted using the standard DateUtil.setShortDisplayFormat','short display format for dates. For editing, by default a DateItem is used with DateItem.useTextField set to true, providing textual date entry plus a pop-up date picker. The DateItem.dateFormatter','dateFormatter and DateItem.inputFormat','inputFormat for the editor will be picked up from the ListGridField, if specified. */
+		| "date"
+		/** Field value should be a Date instance representing a logical time, meaning time value that does not have a specific day and also has no timezone. See dateFormatAndStorage for details of the logical time type and how it is represented and manipulated. Times will be formatted using ListGridField.timeFormatter','ListGridField.timeFormatter if specified, otherwise ListGrid.timeFormatter','ListGrid.timeFormatter. If both these attributes are unset, times are formatted using the standard Time.shortDisplayFormat','short display format for times. For editing, by default a TimeItem is used. The TimeItem.timeFormatter','timeFormatter for the editor will be picked up from the ListGridField, if specified. */
+		| "time"
+		/** Field value should be a Date instance representing a specific date and time value. See dateFormatAndStorage for details of the datetime type and how it is represented and manipulated. Dates will be formatted using ListGridField.dateFormatter','ListGridField.dateFormatter if specified, otherwise ListGrid.datetimeFormatter','ListGrid.datetimeFormatter. If both these attributes are unset, dates are formatted using the standard DateUtil.setShortDatetimeDisplayFormat','short display format for datetime values. For editing, by default a DateTimeItem is used, providing textual date entry plus a pop-up date picker. The DateItem.dateFormatter','dateFormatter and DateItem.inputFormat','inputFormat for the editor will be picked up from the ListGridField, if specified. */
+		| "datetime"
+		/** Same as text */
+		| "sequence"
+		/** Renders a clickable html link (using an HTML anchor tag: &lt;A&gt;). The target URL is the value of the field, which is also the default display value. You can override the display value by setting ListGridRecord.linkText or ListGridField.linkText. Clicking the link opens the URL in a new window by default. To change this behavior, you can set field.target, which works identically to the "target" attribute on an HTML anchor (&lt;A&gt;) tag. See ListGridField.target for more information. In inline edit mode, this type works like a text field. To create a link not covered by this feature, consider using ListGridField.formatCellValue along with Canvas.linkHTML, or simply ListGrid.getCellStyle','styling the field to look like a link, and providing interactivity via ListGridField.recordClick','field.recordClick(). */
+		| "link"
+		/** Renders a different image in each row based on the value of the field. If this URL is not absolute, it is assumed to be relative to ListGridField.imageURLPrefix if specified. The size of the image is controlled by ListGridField.imageSize, ListGridField.imageWidth, ListGridField.imageHeight (and by the similarly-named global default attributes on the ListGrid itself). You can also specify the following attributes on the field: activeAreaHTML, and extraStuff - these are passed to Canvas.imgHTML to generate the final URL. Note if you want to display icons in addition to the normal cell value, you can use ListGridField.valueIcons','valueIcons instead. */
+		| "image"
+		/** Shows ListGridField.icon','field.icon in every cell, and also in the header. Useful for a field that is used as a button, for example, launches a detail window or removes a row. Implement a ListGridField.recordClick','field.recordClick to define a behavior for the button. NOTE: for a field that shows different icons depending on the field value, see ListGridField.valueIcons. type:"icon" also defaults to a small field width, accommodating just the icon with padding, and to a blank header title, so that the header shows the icon only. ListGridField.iconWidth','field.iconWidth and related properties configure the size of the icon both in the header and in body cells. If you want the icon to appear only in body cells and not in the header, set ListGridField.cellIcon','field.cellIcon instead, leaving field.icon null. */
+		| "icon"
+		/** For viewing, the grid renders a 'view' icon (looking glass) followed by a 'download' icon and then the name of the file is displayed in text. If the user clicks the 'view' icon, a new browser window is opened and the file is streamed to that browser instance, using DataSource.viewFile. For images and other file types with known handlers, the content is typically displayed inline - otherwise the browser will ask the user how to handle the content. If the download icon is clicked, DataSource.downloadFile is used to cause the browser to show a "save" dialog. There is no inline editing mode for this field type. */
+		| "binary"
+		/** Same as binary */
+		| "imageFile"
+		/** Show a calculated summary based on other field values within the current record. See ListGridField.recordSummaryFunction for more information */
+		| "summary"
+		/** Fields of this type can contain any data value and have no default formatting or validation behavior. This is useful as the SimpleType.inheritsFrom','parent type for SimpleTypes where you do not want any of the standard validation or formatting logic to be inherited from the standard built-in types. */
+		| "any"
+		/** An integer number with locale-based formatting, e.g. 12,345,678. See localizedNumberFormatting','Localized Number Formatting for more info. */
+		| "localeInt"
+		/** A float number with locale-based formatting, e.g. 12,345.67. See localizedNumberFormatting','Localized Number Formatting for more info. */
+		| "localeFloat"
+		/** A float number with locale-based formatting and using currency symbol, e.g. $12,345.67. See localizedNumberFormatting','Localized Number Formatting for more info. */
+		| "localeCurrency"
+		/** A telephone number. Uses FormItem.browserInputType "tel" to hint to the device to restrict input. On most mobile devices that have software keyboards, this cause a specialized keyboard to appear which only allows entry of normal phone numbers. When displayed read-only, a "phoneNumber" renders as an HTML link with the "tel:" URL scheme, which will invoke the native phone dialing interface on most mobile devices. In addition, the CSS style "sc_phoneNumber" is applied. By default, "phoneNumber" fields do not include validators, however the following validator definition would limit to digits, dashes and the "+" character: xml: &lt;validator type="regexp" expression="^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$" errorMessage="Phone number should be in the correct format e.g. +#(###)###-##-##" /&gt; or directly in JavaScript: {type:"regexp", expression:"^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$", errorMessage:"Phone number should be in the correct format e.g. +#(###)###-##-##"} and adding "#" and "*" to the regular expressions above would allow for users to enter special keys sometimes used for extension numbers or pauses */
+		| "phoneNumber"
+		;
+
+
+	/**
+	 * Object used to specify custom edge sizes or offsets. Specified as an object where defaultSize will map to the default edge size or offset for the canvas (Canvas.edgeSize, or Canvas.edgeOffset and top, left, right and bottom will map to the EdgedCanvas.edgeTop','edgeTop/EdgedCanvas.edgeOffsetTop','edgeOffsetTop, EdgedCanvas.edgeLeft','edgeLeft/EdgedCanvas.edgeOffsetLeft','edgeOffsetLeft, EdgedCanvas.edgeRight','edgeRight/EdgedCanvas.edgeOffsetRight','edgeOffsetRight, and EdgedCanvas.edgeBottom','edgeBottom/EdgedCanvas.edgeOffsetBottom','edgeOffsetBottom attributes on the paneContainer respectively. Note that not all these properties have to be set - if unset standard edge sizing rules will apply.
+	 */
+	export type EdgeSizes = any;
+
+
+	/**
+	 * An object containing the "view state" information for a listGrid. This object contains state information reflecting - ListGridFieldState - ListGridSortState - ListGridSelectedState for the grid. Note that this object is a JavaScript string, and may be stored (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridViewState = string;
+
+
+	/**
+	 * An autoTestLocator is an xpath-like string used by the AutoTest subsystem to robustly identify DOM elements within a SmartClient application. Typically AutoTestLocators will not be hand-written - they should be retrieved by a call to AutoTest.getLocator. Note also that the debugging','Developer Console has built-in functionality to create and display autoTestLocators for a live app.
+	 */
+	export type AutoTestLocator = any;
+
+	export type PromptStyle = 
+		/** Displays a centered modal prompt with text specified by RPCRequest.prompt */
+		"dialog"
+		/** Changes the current cursor to the style specified by RPCRequest.promptCursor */
+		| "cursor"
+		;
+
+	export type ProportionalResizeMode = 
+		/** proportional resizing is never used */
+		"none"
+		/** proportional resizing is always used */
+		| "always"
+		/** proportional resize is off by default, but holding down one of the Canvas.proportionalResizeModifiers turns proportional resize on for a given resize interaction */
+		| "modifier"
+		/** proportional resize is on by default, but holding down one of the Canvas.proportionalResizeModifiers turns proportional resize off for a given resize interaction */
+		| "modifierOff"
+		;
+
+
+	/**
+	 * A String of CSS that can be added directly to a style attribute.
+	 */
+	export type CSSText = any;
+
+
+	/**
+	 * A Callback to evaluate when a DataSource request completes. The parameters available in the DSCallback expression are: dsResponse: a DSResponse instance with metadata about the returned data data: data returned to satisfy the DataSource request. See the dataSourceOperations','DataSource operations topic for expected results for each type of DataSource operation dsRequest: the DSRequest that was sent. You can use DSRequest.clientContext to track state during the server turnaround. For example, if you had a DynamicForm with ID "myForm" and you wanted to retrieve a record from a DataSource "myUsers", where each record has a "userId" field: myUsers.fetchData({ userId : "fred" }, "myForm.setValues(data)"); or myUsers.fetchData({ userId : "fred" }, function (dsResponse, data, dsRequest) { myForm.setValues(data); }); Note that if the request encounters a low-level error (such as 500 server error), by default the callback will not be fired, instead, DataSource.handleError is called to invoke the default system-wide error handling. Set RPCRequest.willHandleError','willHandleError:true to have your callback invoked regardless of whether there are errors, however, make sure your callback properly handles malformed responses when DSResponse.status is non-zero.
+	 */
+	export type DSCallback = any;
+
+	export type VerticalAlignment = 
+		/** At the top of the container */
+		"top"
+		/** Center within container. */
+		| "center"
+		/** At the bottom of the container */
+		| "bottom"
+		;
+
+	export type TreeModelType = 
+		/** In this model, each node has an ID unique across the whole tree and a parent ID that points to its parent. The name of the unique ID property can be specified via Tree.idField and the name of the parent ID property can be specified via Tree.parentIdField. The initial set of nodes can be passed in as a list to Tree.data and also added as a list later via Tree.linkNodes. Whether or not a given node is a folder is determined by the value of the property specified by Tree.isFolderProperty. The "parent" modelType is best for integrating with relational storage (because nodes can map easily to rows in a table) and collections of Beans and is the model used for DataBound trees. */
+		"parent"
+		/** In this model, nodes specify their children as a list of nodes. The property that holds the children nodes is determined by Tree.childrenProperty. Nodes are not required to have an ID that is unique across the whole tree (in fact, no ID is required at all). Node names (specified by the Tree.nameProperty, unique within their siblings, are optional but not required. Whether or not a given node is a folder is determined by the presence of the children list (Tree.childrenProperty). */
+		| "children"
+		;
+
+
+	/**
+	 * Priority levels for log messages
+	 */
+	export type LogPriority = 
+		/** unrecoverable error */
+		"fatal"
+		/** error, may be recoverable */
+		| "error"
+		/** apparent problem, misused API, partial result */
+		| "warn"
+		/** significant events in normal operation */
+		| "info"
+		/** diagnostics for developers */
+		| "debug"
+		;
+
+
+	/**
+	 * Supported styles of connector styles.
+	 */
+	export type ConnectorStyle = 
+		/** Center segment is drawn diagonally between tail connector segments */
+		"diagonal"
+		/** Center segment is drawn perpendicular to tail connector segments */
+		| "rightAngle"
+		;
+
+
+	/**
+	 * An object containing the stored sort information for a listGrid. Note that this object is not intended to be interrogated directly, but may be stored (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridSortState = string;
+
+
+	/**
+	 * The style of list item marker for a list.
+	 */
+	export type ListStyleType = 
+		/** A filled, black dot (&bull;) */
+		"disc"
+		/** An unfilled circle (&#9702;) */
+		| "circle"
+		/** A filled, black square (&#9632;) */
+		| "square"
+		/** Numbers (1., 2., 3., etc.) */
+		| "decimal"
+		/** Uppercase Roman numerals (I., II., III., IV., etc.) */
+		| "upper-roman"
+		/** Lowercase Roman numerals (i., ii., iii., iv., etc.) */
+		| "lower-roman"
+		/** Uppercase letters (A., B., C., etc.) */
+		| "upper-alpha"
+		/** Lowercase letters (a., b., c., etc.) */
+		| "lower-alpha"
+		/** An image used in place of a marker. */
+		| "custom-image"
+		;
+
+
+	/**
+	 * An enum of time-units available for use with the RelativeDateItem, TimeItem and Calendar widgets.
+	 */
+	export type TimeUnit = 
+		/** a millisecond time-unit */
+		"millisecond"
+		/** a second time-unit */
+		| "second"
+		/** a minute time-unit */
+		| "minute"
+		/** an hour time-unit */
+		| "hour"
+		/** a day time-unit */
+		| "day"
+		/** a week time-unit */
+		| "week"
+		/** a month time-unit */
+		| "month"
+		/** a quarter (3 month) time-unit */
+		| "quarter"
+		/** a year time-unit */
+		| "year"
+		;
+
+
+	/**
+	 * Event that will trigger inline editing. See EditProxy.inlineEditEvent.
+	 */
+	export type InlineEditEvent = 
+		/** A single mouse click triggers inline editing */
+		"click"
+		/** A double click triggers inline editing */
+		| "doubleClick"
+		/** No mouse event will trigger inline editing, but it can still be triggered by a call to EditProxy.startInlineEditing. */
+		| "none"
+		/** A double click triggers inline editing. In addition, if the widget is selected, starting to type triggers inline editing. */
+		| "dblOrKeypress"
+		;
+
+
+	/**
+	 * What to do if the user hits escape while editing a cell.
+	 */
+	export type EscapeKeyEditAction = 
+		/** cancels the current edit and discards edit values */
+		"cancel"
+		/** end editing (will save edit values if ListGrid.autoSaveEdits is true). */
+		| "done"
+		/** exit the editor (edit values will be left intact but not saved). */
+		| "exit"
+		/** do nothing special when the Escape key is pressed (ie, just ignore it) */
+		| "ignore"
+		;
+
+
+	/**
+	 * Policy controlling how the Layout will manage member sizes on this axis. Note that, by default, Layouts do not automatically expand the size of all members to match a member that overflows the layout on the breadth axis. This means that a DynamicForm or other component that can't shrink beyond a minimum width will "stick out" of the Layout, wider than any other member and wider than automatically generated components like resizeBars or sectionHeaders (in a SectionStack). This is by design: matching the size of overflowing members would cause expensive redraws of all members in the Layout, and with two or more members potentially overflowing, could turn minor browser size reporting bugs or minor glitches in custom components into infinite resizing loops. If you run into this situation, you can either: set the overflowing member to Canvas.overflow','overflow: "auto", so that it scrolls if it needs more space set the Layout as a whole to Canvas.overflow','overflow:"auto", so that the whole Layout scrolls when the member overflows define a Canvas.resized','resized() handler to manually update the breadth of the layout set Layout.minBreadthMember to ensure that the available breadth used to expand all (other) members is artificially increased to match the current breadth of the minBreadthMember member; the layout will still be overflowed in this case and the reported size from Canvas.getWidth or Canvas.getHeight won't change, but all members should fill the visible width or height along the breadth axis For the last approach, given the VLayout myLayout and a member myWideMember, then we could define the following Canvas.resized','resized() handler on myLayout: resized : function () { var memberWidth = myWideMember.getVisibleWidth(); this.setWidth(Math.max(this.getWidth(), memberWidth + offset)); } where offset reflects the difference in width (due to margins, padding, etc.) between the layout and its widest member. In most cases, a fixed offset can be used, but it can also be computed via the calculation: myLayout.getWidth() - myLayout.getViewportWidth() in an override of Canvas.draw','draw() for myLayout. (That calculation is not always valid inside the Canvas.resized','resized() handler itself.) Note: the HLayout case is similar- just substitute height where width appears above. See also Layout.overflow.
+	 */
+	export type LayoutPolicy = 
+		/** Layout does not try to size members on the axis at all, merely stacking them (length axis) and leaving them at default breadth. */
+		"none"
+		/** Layout sizes members so that they fill the specified size of the layout. The rules are: Any component given an initial pixel size, programmatically resized to a specific pixel size, or drag resized by user action is left at that exact size Any component that Button.autoFit','autofits is given exactly the space it needs, never forced to take up more. All other components split the remaining space equally, or according to their relative percentages. Any component that declares a Canvas.minWidth or Canvas.minHeight will never be sized smaller than that size Any component that declares a Canvas.maxWidth or Canvas.maxHeight will never be sized larger than that size In addition, components may declare that they have Canvas.canAdaptWidth','adaptive sizing, and may coordinate with the Layout to render at different sizes according to the amount of available space. */
+		| "fill"
+		;
+
+
+	/**
+	 * Possible values for the current pane showing in a SplitPane. See SplitPane.currentPane for details.
+	 */
+	export type CurrentPane = 
+		/** SplitPane.navigationPane is the most recently shown */
+		"navigation"
+		/** SplitPane.listPane is the most recently shown */
+		| "list"
+		/** SplitPane.detailPane is the most recently shown */
+		| "detail"
+		;
+
+
+	/**
+	 * How a component should be embedded within its record or cell
+	 */
+	export type EmbeddedPosition = 
+		/** component should be placed underneath normal record or cell content, expanding the records. Expanding records can result in variable height rows, in which case ListGrid.virtualScrolling','virtualScrolling should be enabled. */
+		"expand"
+		/** component should be placed within the normal area of the record or cell. Percentage sizes will be treated as percentages of the record and Canvas.snapTo positioning settings are also allowed and refer to the rectangle of the record or cell. Note that for components embedded within cells, cell align and vAlign will be used if snapTo is unset (so top / left alignment of cell content will map to snapTo of "TL", etc). */
+		| "within"
+		;
+
+
+	/**
+	 * Supported regression algorithms for fitting the data points of a scatter plot.
+	 */
+	export type RegressionLineType = 
+		/** linear regression */
+		"line"
+		/** polynomial regression */
+		| "polynomial"
+		;
+
+
+	/**
+	 * Method to use for displaying the exported data.
+	 */
+	export type ExportDisplay = 
+		/** Show the Save As dialog and download the file */
+		"download"
+		/** Show the data in a new browser window */
+		| "window"
+		/** Return the data for further programmatic processing in the browser */
+		| "return"
+		;
+
+
+	/**
+	 * OperationBinding.dataProtocol affects how the data in the DSRequest (DSRequest.data) is sent to the DataSource.dataURL. Listed below are the valid values for OperationBinding.dataProtocol and their behavior. Note that, when using the SmartClient server, data is automatically translated from JavaScript to Java according to the rules described RPCRequest.data','here; dataProtocol does not apply and is ignored. If you are integrating with a RestDataSource','REST server that requires the more obscure RPCRequest.httpMethods of "PUT", "DELETE" or "HEAD", you can specify these httpMethod settings via OperationBinding.requestProperties. dataProtocol settings that mention "GET" or "POST" are compatible with these additional HTTP methods as well. Typical DataSource.operationBindings','operationBindings for a REST server that uses "PUT" and "DELETE" are as follows: operationBindings:[ {operationType:"fetch", dataProtocol:"getParams"}, {operationType:"add", dataProtocol:"postParams"}, {operationType:"remove", dataProtocol:"getParams", requestProperties:{httpMethod:"DELETE"}}, {operationType:"update", dataProtocol:"postParams", requestProperties:{httpMethod:"PUT"}} ], 
+	 */
+	export type DSProtocol = 
+		/** Data is added to the dataURL, with each property in the data becoming an HTTP parameter, eg http://service.com/search?keyword=foo */
+		"getParams"
+		/** Data is POST'd to the dataURL, with each property becoming an HTTP parameter, exactly as an HTML form would submit them if it had one input field per property in the data. */
+		| "postParams"
+		/** Data is serialized as XML via DataSource.xmlSerialize and POST'd as the HTTP request body with contentType "text/xml". */
+		| "postXML"
+		/** Data is serialized as XML via DataSource.xmlSerialize, wrapped in a SOAP envelope, and POST'd as the HTTP request body with contentType "text/xml". Generally only used in connection with a wsdlBinding','WSDL web service. */
+		| "soap"
+		/** dsRequest.data is assumed to be a String set up by DataSource.transformRequest and is POST'd as the HTTP request body. */
+		| "postMessage"
+		/** This setting entirely bypasses the SmartClient comm system. Instead of the DataSource sending an HTTP request to a URL, the developer is expected to implement DataSource.transformRequest to perform their own custom logic, and then call DataSource.processResponse to handle the results of this action. This dataProtocol setting can be used to implement access to in-browser resources such as HTML5 "localStorage", native APIs available to applications mobileDevelopment','packaged as native applications, or to implement the dsFacade','DataSource Facade pattern. */
+		| "clientCustom"
+		;
+
+	export type CharacterCasing = 
+		/** No character translation */
+		"default"
+		/** Map characters to uppercase */
+		| "upper"
+		/** Map characters to lowercase */
+		| "lower"
+		;
+
+
+	/**
+	 * Constants for the standard states for a StatefulCanvas.
+	 */
+	export type State = 
+		/** state when mouse is not acting on this StatefulCanvas */
+		"stateUp"
+		/** state when mouse is down */
+		| "stateDown"
+		/** state when mouse is over */
+		| "stateOver"
+		/** disabled */
+		| "stateDisabled"
+		;
+
+
+	/**
+	 * Indicates what SmartClient Server will do with a DataSource request if you call dsRequest.execute() in server code. If you use a Java-based persistence layer not provided by SmartClient, such as EJB or your own custom object model, you don't need to set dataSource.serverType and should follow the serverDataIntegration','integration instructions.
+	 */
+	export type DSServerType = 
+		/** Use SmartClient's sqlDataSource','built-in SQL connectors to talk directly to relational databases. */
+		"sql"
+		/** Use Hibernate, either using a real mapped bean or by automatically generating a Hibernate configuration based on a SmartClient DataSource file (dataSourceID.ds.xml). See hibernateIntegration for details. */
+		| "hibernate"
+		/** Use SmartClient's built-in JPA 2.0 connector. */
+		| "jpa"
+		/** Use SmartClient's built-in JPA 1.0 connector. */
+		| "jpa1"
+		/** Requests will be delivered to the server and you are expected to write Java code to create a valid response. Throws an error if the server side method dsRequest.execute() is called. This is appropriate if you intend an entirely custom implementation, and you want an error thrown if there is an attempt to call an operation you have not implemented. */
+		| "generic"
+		/** Requests will be delivered to the server and processed as fileSource','FileSource operations, using directories or other DataSources which you configure via DataSource.projectFileKey or DataSource.projectFileLocations */
+		| "projectFile"
+		;
+
+
+	/**
+	 * Some interfaces, for example the FieldPicker','FieldPicker and HiliteEditor','HiliteEditor widgets, can use data from an associated DataBoundComponent to express live sample values at runtime.
+	 */
+	export type DefaultSampleRecord = 
+		/** Uses the first record in the DataBoundComponent as sample data */
+		"first"
+		/** Uses the first open leaf-node in the DataBoundComponent as sample data */
+		| "firstOpenLeaf"
+		;
+
+
+	/**
+	 * When attempting to identify a component from within a list of possible candidates as described LocatorStrategy','here, if we are unable to find a unique match by name or title, we will use the recorded "type" of the component to verify an apparent match. By default we check the following properties in order: Does the Class match? If this is not a Class.isFrameworkClass','framework class, does the core framework superclass match? Does the role match? In some cases an explicit locatorTypeStrategy can be specified to modify this behavior. As with LocatorStrategy, if we are unable to match using the specified type strategy we continue to test against the remaining strategies in order - so if a type strategy of "scClass" was specified but we were unable to find a match with the appropriate core superclass, we will attempt to match by role. Possible values are:
+	 */
+	export type LocatorTypeStrategy = 
+		/** Match by class if possible */
+		"Class"
+		/** Ignore specific class and match by the SmartClient framework superclass. */
+		| "scClass"
+		/** Ignore class altogether and attempt to match by role */
+		| "role"
+		/** Don't attempt to compare type in any way */
+		| "none"
+		;
+
+
+	/**
+	 * Options for how values in the import dataset (for example, the CSV file) are transformed during import if the field is a DataSourceField.foreignKey','foreignKey mapped to a DataSourceField.displayField','displayField
+	 */
+	export type FieldImportStrategy = 
+		/** The import process expects values in the import dataset to be the real underlying key values, and performs no transformation */
+		"key"
+		/** The import process expects values in the import dataset to be display values, and it will transform them to the corresponding underlying keys */
+		| "display"
+		/** The import process will attempt to discover the best setting to use, based on the values in the first record, and use that setting for every remaining record in the import dataset */
+		| "auto"
+		;
+
+
+	/**
+	 * One of the supported formats for image export.
+	 */
+	export type ExportImageFormat = 
+		/** Export as PNG */
+		"png"
+		/** Export as JPEG */
+		| "jpeg"
+		;
+
+
+	/**
+	 * Boundary type for limiting where contiguous selection (via shift+click or drag selection) can be applied across Facet.selectionBoundary','facets or FacetValue.selectionBoundary','facetValues.
+	 */
+	export type SelectionBoundary = 
+		/** selection boundary applies to the bottom / right of the cells */
+		"after"
+		/** selection boundary applies to the top / left of the cells */
+		| "before"
+		/** selection boundary applies to both edges. */
+		| "both"
+		;
+
+	export type Direction = 
+		/** above */
+		"up"
+		/** below */
+		| "down"
+		/** to the left of */
+		| "left"
+		/** to the right of */
+		| "right"
+		;
+
+
+	/**
+	 * when heuristically finding a property that appears to contain child objects, the ChildrenPropertyMode determines how to chose the property appears to contain child objects
+	 */
+	export type ChildrenPropertyMode = 
+		/** assume the first object or array value we find is the children property */
+		"any"
+		/** assume the first array we find is the children property, no matter the contents */
+		| "array"
+		/** assume the first object or array of objects we find is the children property (don't allow arrays that don't have objects) */
+		| "object"
+		/** accept only an array of objects as the children property */
+		| "objectArray"
+		;
+
+
+	/**
+	 * The logical operator to use when combining criteria objects with the DataSource.combineCriteria method.
+	 */
+	export type CriteriaCombineOperator = 
+		"and"
+		| "or"
+		;
+
+
+	/**
+	 * Side of a component.
+	 */
+	export type Side = 
+		/** Left side */
+		"left"
+		/** Right side */
+		| "right"
+		/** Top side */
+		| "top"
+		/** Bottom side */
+		| "bottom"
+		;
+
+
+	/**
+	 * An expression in the <a href=http://velocity.apache.org/engine/releases/velocity-1.5/user-guide.html> Velocity Template Language</a> (VTL). For more information on SmartClient's Velocity support, see velocitySupport','Velocity support. Note that a VelocityExpression must often evaluate to a particular type of value to be useful. For example, DataSource.requires must evaluate to true or false (Boolean objects or strings containing those two words), and Mail.messageData must evaluate to a Java Map object, or a Java List containing only Maps.
+	 */
+	export type VelocityExpression = any;
+
+
+	/**
+	 * Controls how ListGrid record drop events report their ListGrid.getRecordDropPosition','dropPosition, and where the drop indicator will be displayed if appropriate.
+	 */
+	export type RecordDropAppearance = 
+		/** When the user drops onto a record, dropPosition will always be "over" */
+		"over"
+		/** When the user drops onto a record, dropPosition will be either "before" or "after" depending on whether the mouse was over the top or bottom of the target record */
+		| "between"
+		/** When the user drops onto a record, if the drop occurs centered over the record, the dropPosition will be reported as "over", otherwise it will be "before" or "after" depending on whether the mouse was over the top or bottom of the target record. */
+		| "both"
+		/** No dropPosition will be reported */
+		| "body"
+		;
+
+
+	/**
+	 * The type of drawing back-end used by a DrawPane to draw its DrawPane.drawItems','draw items on screen. <h3>SVG and bitmap tradeoffs</h3> <ul style="list-style-type: lower-alpha;"> SVG is best supported in IE9+ and Opera 12.16 and earlier, but may also be used in Chrome, Opera 15+, Firefox 4+, and Safari. SVG tends to be higher quality, especially when it comes to text and drawing on high-DPI displays and mobile devices. DrawItem.zIndex, DrawItem.bringToFront, and DrawItem.sendToBack are not supported on iOS devices in bitmap drawing mode due to platform limitations. These APIs are supported on iOS in SVG drawing mode. Incremental updates to just a few elements of a drawing are faster in SVG, whereas whole drawing refreshes are faster in bitmap mode. Browsers have limits on the maximum dimensions or area of the &lt;canvas&gt; element used in bitmap drawing. The limits on a &lt;canvas&gt; imposed by the browser translate to the same limits on the dimensions or area of a DrawPane using bitmap drawing. Internet Explorer, for example, limits the width and height of a &lt;canvas&gt; to 8192 pixels: <a href='http://msdn.microsoft.com/en-us/library/ie/ff975062(v=vs.85).aspx' target='_blank'>http://msdn.microsoft.com/en-us/library/ie/ff975062(v=vs.85).aspx</a>; therefore, in IE using bitmap drawing, a DrawPane can be at most 8192&times;8192 in size. To make larger drawings, you can either switch to SVG drawing, use multiple DrawPanes, or enable DrawPane.canDragScroll','drag-scrolling. In bitmap drawing, each pixel uses around 4 to 8 bytes of memory. Large bitmap drawings can therefore use a lot of memory. A 4000&times;2000 bitmap drawing will use around 31 to 61 Megabytes of memory. Note: To minimize memory use when using bitmap drawing for a large drawing, it may be useful to employ <a href='http://en.wikipedia.org/wiki/Slicing_(interface_design)' target='_blank'>slicing</a> if possible. For example, if the drawing is mostly a solid color except for content located at a few small-area places on screen, a Canvas can be created with the solid background color and one DrawPane can be created for each content area. Each DrawPane is Canvas.addChild','added as a child to the Canvas. The Canvas.left','left and Canvas.top','top properties of the DrawPanes are used to absolutely-position them within the Canvas parent. 
+	 */
+	export type DrawingType = 
+		/** Use Scalable Vector Graphics (SVG). SVG is a W3C standard supported by IE9+, Chrome, Firefox 4+, Safari, and Opera. */
+		"svg"
+		/** Use an HTML5 &lt;canvas&gt; element. "bitmap" drawing is supported by IE9+, Chrome, Firefox, Safari, and Opera. */
+		| "bitmap"
+		/** Use Vector Markup Language (VML). VML is a deprecated vector graphics technology supported only by Internet Explorer 6 through 9. In IE 6, 7, and 8, "vml" drawing is the only supported drawing back-end. */
+		| "vml"
+		;
+
+
+	/**
+	 * When ListGrid.allowRowSpanning is enabled, certain cells may span multiple rows. In this case, the cell displays the value from the record in the first row. If the grid is ListGrid.canEdit','editable (and the ListGridField.canEdit','field is also editable), these settings allow the user to specify what happens to the data when the user edits this cell. Note that in this scenario, a user may begin an edit on the row-spanning cell directly (via double-click for example), or on a cell in another column in any of the rows spanned by the cell. The appropriate behavior with respect to user-experience and how the data is manipulated will depend on the application in question. Developers may of course entirely disable editing for the field via ListGridField.canEdit or ListGrid.canEditCell. See also: ListGrid.useRowSpanStyling
+	 */
+	export type RowSpanEditMode = 
+		/** This setting assumes that only the field-value for the first record spanned by this cell is significant. In this case the editor will only show for this cell if the user is editing the first spanned record. If the user initialized the edit on another spanned row, the editor will not show for this field. */
+		"first"
+		/** This setting assumes that each row's values are logically separate, so if a cell spans multiple rows, and a user initializes an edit on some cell in the second spanned row, the spanning cell will show an editor containing the value for the second spanned row. This may differ from the value displayed when not in edit mode (which is derived from the first spanned row by default). This setting may be useful for developers who which to implement their own logic on how to handle spanning cell display values and/or edit values (for example by using custom ListGridField.formatCellValue','formatting and applying custom logic to handle editing on ListGridField.editorEnter and ListGridField.editorExit). */
+		| "each"
+		;
+
+	export type FieldAppearance = 
+		/** Show in read-only appearance */
+		"readonly"
+		/** Hide field */
+		| "hidden"
+		/** Disable field */
+		| "disabled"
+		;
+
+
+	/**
+	 * what to do if there is more than one possible childrenProperty when using scanMode "branch" or "level" "node": continue, but pick childrenProperty on a per-node basis (will detect mixed) "highest": continue, picking the childrenProperty that occurred most as the single choice "stop": if there's a tie, stop at this level (assume no further children)
+	 */
+	export type TieMode = 
+		/** continue, but pick childrenProperty on a per-node basis (will detect mixed) */
+		"node"
+		/** continue, picking the childrenProperty that occurred most as the single choice */
+		| "highest"
+		/** if there's a tie, stop at this level (assume no further children) */
+		| "stop"
+		;
+
+
+	/**
+	 * Operators that can evaluate a set of criteria and produce a combined result.
+	 */
+	export type LogicalOperator = 
+		/** true if all criteria are true */
+		"and"
+		/** true if any criteria are true */
+		| "or"
+		/** true if all criteria are false */
+		| "not"
+		;
+
+
+	/**
+	 * Possible values for Canvas.backgroundRepeat.
+	 */
+	export type BackgroundRepeat = 
+		/** Tile the background image horizontally and vertically. */
+		"repeat"
+		/** Don't tile the background image at all. */
+		| "noRepeat"
+		/** Repeat the background image horizontally but not vertically. */
+		| "repeatX"
+		/** Repeat the background image vertically but not horizontally. */
+		| "repeatY"
+		;
+
+
+	/**
+	 * SmartClient supports multiple RPC transports for maximum compatibility and feature richness. All of transports use HTTP as the underlying protocol, but use different mechanisms for sending the HTTP request and processing the response. The transport is typically auto-selected for by based on the feature being used and the current browser settings. For advanced use cases, RPCRequest.transport and RPCManager.defaultTransport are exposed as override points. 
+	 */
+	export type RPCTransport = 
+		/** Uses the XMLHttpRequest object to make the request to the server. Note that in some browsers with certain configurations, this transport may not be available. See platformDependencies for more information. This transport is not useful with file uploads. Cannot be used to target cross-domain URLs directly. */
+		"xmlHttpRequest"
+		/** Write a SCRIPT tag into the DOM with a SRC attribute that targets an arbitrary URL. This transport is the only one that allows direct cross-domain URL access. For RPCRequest.callback to work, the server being contacted must support the ability to generate JavaScript code in the response that will call a JavaScript function generated by SmartClient. SmartClient passes the name of the function to call via a URL parameter, which can be controlled with RPCRequest.callbackParam. This callback mechanism is sometimes called the "JSONP" (JSON with Padding) approach. */
+		| "scriptInclude"
+		/** Available with SmartClient Server only. An HTML form is dynamically assembled that targets a hidden IFRAME. This mechanism is supported on all browsers and cannot be disabled by end users. If using the SmartClient Server and using serverDataIntegration','Server-side data integration, the "hiddenFrame" transport is automatically used for all RPCManager and DataSource requests if the "xmlHttpRequest" transport is not available. Cannot be used to target cross-domain URLs directly. */
+		| "hiddenFrame"
+		;
+
+
+	/**
+	 * Do we display an arrow for the sorted field ?
+	 */
+	export type SortArrow = 
+		/** Don't show a sort arrow at all. */
+		"none"
+		/** Display sort arrow in the upper-right corner (above the scrollbar) only. */
+		| "corner"
+		/** Display sort arrow above each field header only. */
+		| "field"
+		/** Display sort arrow above each field header AND in corner above scrollbar.BOTH:"both", // NOTE: Canvas establishes this constant */
+		| "both"
+		;
+
+
+	/**
+	 * Different types of effects for showing dragging behavior.
+	 */
+	export type DragAppearance = 
+		/** No default drag appearance is indicated. Your custom dragging routines should implement some behavior that indicates that the user is in a dragging situation, and where the mouse is. */
+		"none"
+		/** A "drag tracker" object is automatically shown and moved around with the mouse. This is generally set to an icon that represents what is being dragged. The default tracker is a 10 pixel black square, but you can customize this icon. This dragAppearance is not recommended for use with drag resizing or drag moving. */
+		| "tracker"
+		/** The target object is actually moved, resized, etc. in real time. This is recommended for drag repositioning, but not for drag resizing of complex objects. */
+		| "target"
+		/** An outline the size of the target object is moved, resized, etc. with the mouse. This is recommended for drag resizing, especially for objects that take a significant amount of time to draw. */
+		| "outline"
+		;
+
+
+	/**
+	 * Whether the mock data is for a flat grid-like dataset or for a tree. If "grid" is specified, text shortcuts that would cause a hierarchy to be created (such as starting a line with "[+]") will not have special meaning and be considered to be just a normal data value.
+	 */
+	export type MockDataType = 
+		/** Mock data for a ListGrid */
+		"grid"
+		/** Mock data for a TreeGrid */
+		| "tree"
+		;
+
+
+	/**
+	 * Strategies for calculating the FiscalYear within a FiscalCalendar from the specified FiscalCalendar.defaultDate and FiscalCalendar.defaultMonth If the specified fiscal year date starts in one calendar year and ends in the next.
+	 */
+	export type FiscalYearMode = 
+		/** The fiscalYear value for the date range will match the calendar year in which the period ends. For example if the defaultDate and defaultMonth were set to represent April 1st, the fiscal year starting on April 1st 2020 would end on April 1st 2021. Setting the fiscalYearMode to end would mean the fiscalYear value for this block would be 2021. */
+		"end"
+		/** The fiscalYear value for the date range will match the calendar year in which the period starts. For example if the defaultDate and defaultMonth were set to represent April 1st, the fiscal year starting on April 1st 2020 would end on April 1st 2021. Setting the fiscalYearMode to start would mean the fiscalYear value for this block would be 2020. */
+		| "start"
+		;
+
+
+	/**
+	 * Properties that refer to images by URL, such as Img.src and Button.icon, are specially interpreted in SmartClient to allow for simpler and more uniform image URLs, and to allow applications to be restructured more easily. the application image directory When specifying URLs to image files via SmartClient component properties such as StretchImg.src, any relative path is assumed to be relative to the "application image directory" (appImgDir). The application image directory can be set via Page.setAppImgDir, and defaults to "images/", representing the typical practice of placing images in a subdirectory relative to the URL at which the application is accessed. For applications that may be launched from multiple URLs, the appImgDir can be set to the correct relative path to the image directory by calling Page.setAppImgDir before any SmartClient components are created. This enables applications or components of an application to be launched from multiple locations, or to be relocated, without changing any image URLs supplied to SmartClient components. the "[SKIN]" URL prefix The special prefix "[SKIN]" can be used to refer to images within the skin folder whenever image URLs are supplied to SmartClient components. The value of "[SKIN]" is the combination of: the "skin directory", established in load_skin.js via Page.setSkinDir, plus.. the setting for Canvas.skinImgDir','skinImgDir on the component where you set an image URL property skinImgDir defaults to "images/", so creating an Img component with Img.src set to "[SKIN]myButton/button.gif" will expand to Page.getSkinDir() + "/images/myButton/button.gif". Some components that use a large number of images use skinImgDir to group them together and make it possible to relocate all the media for the component with a single setting. For example, the TreeGrid class sets skinImgDir to "images/TreeGrid/". This allows TreeGrid.folderIcon to be set to just "[SKIN]folder.gif" but refer to Page.getSkinDir() + "/images/TreeGrid/folder.gif". A custom subclass of TreeGrid can set skinImgDir to a different path, such as "/images/MyTreeGrid", to source all media from a different location. TIPS: subcomponents may not share the parent component's setting for skinImgDir. For example, the Window.minimizeButton has the default setting for "skinImgDir" ("images/"), so the Img.src','src property used with this component is set to "[SKIN]/Window/minimize.png" (in the "SmartClient" sample skin). for a particular image, the skinImgDir setting on the component may not be convenient. The prefix "[SKINIMG]" can be used to refer to Page.getSkinDir() + "/images" regardless of the setting for skinImgDir Stateful image URLs Many image URLs in SmartClient are "stateful", meaning that the actual URL used to fetch an image will vary according to the component's state (eg, "Disabled"), generally, by adding a suffix to the image URL. See the skinning','Skinning Overview for more information on statefulness and the Img.src documentation for information on how stateful image URLs are formed.
+	 */
+	export type SCImgURL = any;
+
+
+	/**
+	 * Strategy to apply when there is too little room for labels to be shown for all data points with comfortable padding (FacetChart.minLabelGap).
+	 */
+	export type LabelCollapseMode = 
+		/** Show all labels regardless, even though they will overlap */
+		"none"
+		/** Show significant time values such as the first day of the month or week. Data values in Records must be true Date objects, not Strings. */
+		| "time"
+		/** Pick round numbers in the range and show labels for just those numbers. Best for continuous datasets that are not time-based */
+		| "numeric"
+		/** Pick periodic values from the dataset and show labels for those. Best when the there are no particular points that would clearly be the best to label */
+		| "sample"
+		;
+
+
+	/**
+	 * An axis or "side" of a table.
+	 */
+	export type Axis = 
+		/** Row axis */
+		"row"
+		/** Column axis */
+		| "column"
+		;
+
+
+	/**
+	 * CSS color specification applied to a specific HTML element on this page. This is a string matching the syntax as specified in CSS1, and can be formatted in one of the following ways: A keyword color, &ldquo;white&rdquo; Six-digit hex notation, &ldquo;#ffffff&rdquo; Three-digit hex notation, &ldquo;#fff&rdquo; 8-bit decimal notation, &ldquo;rgb(255, 255, 255)&rdquo; Percentage notation, &ldquo;rgb(100%, 100%, 100%)&rdquo; Note that when working with FacetCharts, it's required that colors be specified using the six-digit hex format listed above, rather than any of the others, since the Framework needs to perform math on the subfields. Affected properties include FacetChart.dataColors, and affected methods include overrides of FacetChart.getDataColor and FacetChart.getDataLineColor. 
+	 */
+	export type CSSColor = any;
+
+	export type ZoomStartPosition = 
+		/** start at the beginning of the range */
+		"start"
+		/** start at the end of the range */
+		| "end"
+		;
+
+
+	/**
+	 * What should drive the automatic horizontal expansion of the chart?
+	 */
+	export type AutoScrollDataApproach = 
+		/** Expand the chart to make room for data label facet value. */
+		"labels"
+		/** Expand the chart to accommodate FacetChart.barMargin, FacetChart.minBarThickness, and FacetChart.getMinClusterSize. */
+		| "clusters"
+		/** Expand the chart to make room for both labels and clusters (whichever requires more space). */
+		| "both"
+		;
+
+
+	/**
+	 * A string of known format used to specify a datetime offset. For example, a RelativeDateString that represents "one year from today" is written as "+1y". RelativeDateStrings are comprised of the following parts: direction: the direction in which the quantity applies - one of + or - quantity: the number of units of time to apply - a number timeUnit: an abbreviated timeUnit to use - one of ms/MS (millisecond), s/S (second), mn/MN (minute), h/H (hour), d/D (day), w/W (week), m/M (month), q/Q (quarter, 3-months), y/Y (year), dc/DC (decade) or c/C (century). The timeUnit is case sensitive. A lowercase timeUnit implies an exact offset, so +1d refers to the current date / time increased by exactly 24 hours. If the timeUnit is uppercase, it refers to the start or end boundary of the period of time in question, so +1D would refer to the end of the day (23:39:59:999) tomorrow, and -1D would refer to the start of the day (00:00:00:000) yesterday. [qualifier]: an optional timeUnit encapsulated in square-brackets and used to offset the calculation - eg. if +1d is "plus one day", +1d[W] is "plus one day from the end of the current week". You may also specify another complete RelativeDateString as the [qualifier], which offers more control - eg, +1d[+1W] indicates "plus one day from the end of NEXT week". This format is very flexible. Here are a few example relative date strings: +0D: End of today. There are often multiple ways to represent the same time using this system - for example this could also be written as -1ms[+1D] -0D: Beginning of today. +1W: End of next week. +1w[-0W]: Beginning of next week. +1w[-0D]: Beginning of the current day of next week.
+	 */
+	export type RelativeDateString = string;
+
+
+	/**
+	 * An ordinary JavaScript as obtained by "new Object()" or via ObjectLiteral','Object Literal syntax. Methods that return Objects or take Objects as parameters make use of the ability of a JavaScript Object to contain an arbitrary set of named properties, without requiring declaration in advance. This capability makes it possible to use a JavaScript Object much like a HashMap in Java or .NET, but without the need to call get() or set() to create and retrieve properties. For example if you created an Object using ObjectLiteral','Object Literal syntax like so: var request = { actionURL : "/foo.do", showPrompt:false }; You could then access it's properties like so: var myActionURL = request.actionURL; var myShowPrompt = request.showPrompt; .. and you could assign new values to those properties like so: request.actionURL = "newActionURL"; request.showPrompt = newShowPromptSetting; Note that while JavaScript allows you to get and set properties in this way on any Object, SmartClient components require that if a setter or getter exists, it must be called, or no action will occur. For example, if you had a ListGrid and you wanted to change the ListGrid.showHeader','showHeader property: myListGrid.setShowHeader(false); // correct myListGrid.showHeader = false; // incorrect (nothing happens) All documented attributes have flags','flags (eg IRW) that indicate when direct property access is allowed or not.
+	 */
+	export type Object = any;
+
+
+	/**
+	 * Specifies the position of a resize knob with respect to its draw item.
+	 */
+	export type ResizeKnobPoint = 
+		/** Top Left corner */
+		"TL"
+		/** Top Right corner */
+		| "TR"
+		/** Bottom Left corner */
+		| "BL"
+		/** Bottom Right corner */
+		| "BR"
+		/** Centered on the top edge */
+		| "T"
+		/** Centered on the bottom edge */
+		| "B"
+		/** Centered on the left edge */
+		| "R"
+		/** Centered on thie right edge */
+		| "L"
+		;
+
+
+	/**
+	 * Appearance when a component is in Canvas.setEditMode','edit mode and is selected. Modes such as "tintMask" or "outlineMask" create an EditProxy.editMask','"edit mask" that is layered over the selected component, and blocks all normal interaction with the component, so that behaviors like EditProxy.supportsInlineEdit can completely take the place of the component's normal interactivity. "outlineEdges" mode allows normal interaction with the component, which allows the end user to do things like ListGrid.canFreezeFields','freeze ListGrid fields, which the GridEditProxy can implement as a GridEditProxy.saveFieldFrozenState','persistent change to grid\'s configuration.
+	 */
+	export type SelectedAppearance = 
+		/** editMask on top of the component is updated with EditProxy.selectedTintColor and EditProxy.selectedTintOpacity */
+		"tintMask"
+		/** editMask on top of the component is updated with EditProxy.selectedBorder */
+		| "outlineMask"
+		/** MultiAutoChild is created on top of the component. This constructs a border around the component using 4 separate outlineEdge components so that interactivity is not blocked. */
+		| "outlineEdges"
+		/** no change in appearance. Override EditProxy.showSelectedAppearance to create a custom appearance. */
+		| "none"
+		;
+
+
+	/**
+	 * Default buttons that you can use in your Dialogs. Refer to these buttons via the syntax isc.Dialog.OK when passing them into Dialog.buttons or into the properties argument of helper methods such as isc.say. All buttons added via setButtons will fire the Dialog.buttonClick','buttonClick event (whether they are built-in or custom buttons). Built-in buttons automatically close a Dialog, with the exception of the "Apply" button.
+	 */
+	export type DialogButtons = 
+		/** Dismisses dialog by calling Dialog.okClick. Title derived from Dialog.OK_BUTTON_TITLE. */
+		"OK"
+		/** Does not dismiss dialog. Calls Dialog.applyClick Title derived from Dialog.APPLY_BUTTON_TITLE. */
+		| "APPLY"
+		/** Dismisses dialog by calling Dialog.yesClick. Title derived from Dialog.YES_BUTTON_TITLE. */
+		| "YES"
+		/** Dismisses dialog by calling Dialog.noClick. Title derived from Dialog.NO_BUTTON_TITLE. */
+		| "NO"
+		/** Dismisses dialog by calling Dialog.cancelClick. Title derived from Dialog.CANCEL_BUTTON_TITLE. */
+		| "CANCEL"
+		/** Dismisses dialog by calling Dialog.doneClick. Title derived from Dialog.DONE_BUTTON_TITLE. */
+		| "DONE"
+		;
+
+
+	/**
+	 * How should fields of ListGridFieldType','type:"icon" be sized by default?
+	 */
+	export type AutoFitIconFieldType = 
+		/** Apply no special sizing to icon fields - treat them like any other field in the grid */
+		"none"
+		/** size the field to accommodate the width of the icon */
+		| "iconWidth"
+		/** size the field to accommodate the title (or the width of the icon if it exceeds the width of the title. */
+		| "title"
+		;
+
+
+	/**
+	 * DynamicForms automatically choose the FormItem type for a field based on the type property of the field. The table below describes the default FormItem chosen for various values of the type property. You can also set FormItem.editorType','field.editorType to the classname of a FormItem to override this default mapping. You can alternatively override DynamicForm.getEditorType to create a form with different rules for which FormItems are chosen. 
+	 */
+	export type FormItemType = 
+		/** Rendered as a TextItem, unless the length of the field (as specified by DataSourceField.length attribute) is larger than the value specified by DynamicForm.longTextEditorThreshold, a TextAreaItem is shown. */
+		"text"
+		/** Rendered as a CheckboxItem */
+		| "boolean"
+		/** Same as text by default. Consider setting editorType:SpinnerItem. */
+		| "integer"
+		/** Same as text by default. Consider setting editorType:SpinnerItem. */
+		| "float"
+		/** Rendered as a DateItem */
+		| "date"
+		/** Rendered as a TimeItem */
+		| "time"
+		/** Rendered as a SelectItem. Also true for any field that specifies a FormItem.valueMap. Consider setting editorType:ComboBoxItem. */
+		| "enum"
+		/** Same as text */
+		| "sequence"
+		/** If DataSourceField.canEdit:false is set on the field, the value is rendered as a LinkItem. Otherwise the field is rendered as a TextItem. */
+		| "link"
+		/** Rendered as an image if not editable, or as a TextItem to edit the URL or partial URL if editable */
+		| "image"
+		/** Rendered as a FileItem, or a ViewFileItem if not editable */
+		| "imageFile"
+		/** Rendered as a FileItem, or a ViewFileItem if not editable */
+		| "binary"
+		;
+
+
+	/**
+	 * Approach to force a text value to be interpreted as text rather than parsed as a date, time or other structured types, as can happen with Microsoft Excel. For background information, see excelPasting.
+	 */
+	export type ForceTextApproach = 
+		/** a leading space character is added */
+		"leadingSpace"
+		/** text value is turned into a trivial Excel formula (eg "car" becomes ="car"). In Excel, this renders just the value "car" but editing the cell reveals the formula. */
+		| "formula"
+		;
+
+
+	/**
+	 * Different styles of determining intersection: with mouse or entire rect of target
+	 */
+	export type DragIntersectStyle = 
+		/** Look for drop targets that are under the current mouse cursor position. */
+		"mouse"
+		/** Look for drop targets by intersection of the entire rect of the drag target with the droppable target. */
+		| "rect"
+		;
+
+
+	/**
+	 * Flags to set automatic removal of events from the page event registry.
+	 */
+	export type FireStyle = 
+		/** Call the registered handler any time the event occurs */
+		"null"
+		/** Call the registered handler the first time the event occurs, then unregister the handler as though Page.clearEvent had been called */
+		| "fireOnce"
+		;
+
+
+	/**
+	 * An edge or corner of a rectange, or it's center. Used in APIs such as Canvas.resizeFrom and Canvas.getEventEdge.
+	 */
+	export type EdgeName = 
+		/** top edge */
+		"T"
+		/** bottom edge */
+		| "B"
+		/** left edge */
+		| "L"
+		/** right edge */
+		| "R"
+		/** top-left corner */
+		| "TL"
+		/** top-right corner */
+		| "TR"
+		/** bottom-left corner */
+		| "BL"
+		/** bottom-right corner */
+		| "BR"
+		/** center */
+		| "C"
+		;
+
+
+	/**
+	 * AutoComplete behavior for FormItem','FormItems.
+	 */
+	export type AutoComplete = 
+		/** Disable browser autoComplete. Note that some browsers will disregard this setting and still perform native autoComplete for certain items - typically only for log in / password forms. See the discussion FormItem.autoComplete','here. */
+		"none"
+		/** Allow native browser autoComplete. */
+		| "native"
+		;
+
+
+	/**
+	 * The style of line-breaks to use when exporting data
+	 */
+	export type LineBreakStyle = 
+		/** Use the default line-break style of the server OS */
+		"default"
+		/** Use UNIX-style line-breaks (LF only) */
+		| "unix"
+		/** Use MAC-style line-breaks (CR only) */
+		| "mac"
+		/** Use DOS-style line-breaks (both CR & LF) */
+		| "dos"
+		;
+
+
+	/**
+	 * Controls the style of TableView record display
+	 */
+	export type RecordLayout = 
+		/** Show TableView.titleField','title field only */
+		"titleOnly"
+		/** Show TableView.titleField','title and TableView.descriptionField','description fields only */
+		| "titleDescription"
+		/** Show TableView.titleField','title, TableView.descriptionField','description and TableView.infoField','info fields only */
+		| "summaryInfo"
+		/** Show TableView.titleField','title, TableView.descriptionField','description and TableView.dataField','data fields only */
+		| "summaryData"
+		/** Show TableView.titleField','title, TableView.descriptionField','description, TableView.infoField','info and TableView.dataField','data fields similar to the iPhoneOS Mail application */
+		| "summaryFull"
+		;
+
+
+	/**
+	 * Possible layout modes for UI components that are sensitive to the device type being used (a.k.a. "responsive design"). See for example SplitPane.deviceMode.
+	 */
+	export type DeviceMode = 
+		/** mode intended for handset-size devices (phones). Generally only one UI panel will be shown at a time. */
+		"handset"
+		/** mode intended for tablet-size devices. Generally, up to two panels are shown side by side in "landscape" PageOrientation, and only one panel is shown in "portrait" orientation. */
+		| "tablet"
+		/** mode intended for desktop browsers. Three or more panels may be shown simultaneously. */
+		| "desktop"
+		;
+
+
+	/**
+	 * An object containing the "view state" information for a treeGrid. In addition to the state data contained by a ListGridViewState object, this will also contain the current open state of the treeGrid in question. Note that this object is not intended to be interrogated directly, but may be stored (for example) as a blob on the server for view state persistence across sessions.
+	 */
+	export type TreeGridViewState = string;
+
+
+	/**
+	 * Options for how values are stored for a field that is ListGridField.multiple','multiple:true. See DataSourceField.multipleStorage.
+	 */
+	export type MultipleFieldStorage = 
+		/** values are saved as a simple delimeter-separated string. Delimeter can be configured via DataSourceField.multipleStorageSeparator. An empty array is stored as "", and null as the database null value. */
+		"simpleString"
+		/** values are serialized to JSON. Empty array as a distinct value from null (it appears as the text "[]"). */
+		| "json"
+		/** no transformation is applied to values; server-side field value remains a Java List when passed to the execute(Fetch|Add|Update|Remove) method of the server-side DataSource class */
+		| "none"
+		;
+
+
+
+}
