@@ -5,7 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 4/30/2017 4:05:18 PM by kwhite
+// Generated: 5/1/2017 12:12:30 PM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-01
 
 declare namespace Isc {
 
@@ -280,13 +281,13 @@ declare namespace Isc {
 		height?: number /* integer */; // Flags=IR
 		/** Custom base style to apply to the header button created for this span instead of ListGrid.headerBaseStyle. Note that depending on the header button constructor, you may have to specify HeaderSpan.headerTitleStyle as well.
 		 * Flags: IRW, Group: appearance */
-		headerBaseStyle?: string /* CSSClass */; // Flags=IRW
+		headerBaseStyle?: string /* CSSStyleName */; // Flags=IRW
 		/** Optional title for the headerSpan button for this headerSpan. If specified this will be displayed in the headerSpan button instead of HeaderSpan.title. Set to an empty string to suppress the title in the header button entirely.
 		 * Flags: IR, Group: headerSpan */
 		headerTitle?: string /* String */; // Flags=IR
 		/** Custom titleStyle to apply to the header button created for this span instead of ListGrid.headerTitleStyle. Note that this will typically only have an effect if ListGrid.headerButtonConstructor is set to StretchImgButton or a subclass thereof.
 		 * Flags: IRW, Group: appearance */
-		headerTitleStyle?: string /* CSSClass */; // Flags=IRW
+		headerTitleStyle?: string /* CSSStyleName */; // Flags=IRW
 		/** Vertical alignment of the title of this headerSpan. Defaults to listGrid.headerSpanVAlign if unset.
 		 * Flags: IR, Group: headerSpan */
 		valign?: VerticalAlignment; // Flags=IR
@@ -595,7 +596,7 @@ declare namespace Isc {
 		dateFormatter?: DateDisplayFormat; // Flags=IRW
 		/** Custom base style to apply to this field's header button instead of ListGrid.headerBaseStyle. Note that depending on the header button constructor, you may have to override ListGridField.headerTitleStyle as well.
 		 * Flags: IRW, Group: appearance */
-		headerBaseStyle?: string /* CSSClass */; // Flags=IRW
+		headerBaseStyle?: string /* CSSStyleName */; // Flags=IRW
 		/** With the ListGrid.showFilterEditor','FilterEditor showing, the Operator to use when matching values for this field. Note that you can set all FilterEditor fields to default to either substring or exact match via ListGrid.autoFetchTextMatchStyle','autoFetchTextMatchStyle, but if you want a mix of exact vs substring match on different fields, you need to use this property, and your ListGrid will produce AdvancedCriteria rather than the simpler Criteria format. This is automatically and transparently handled by the SmartClient Server's SQLDataSource and HibernateDataSource in Power Edition or above, but if you have your own filtering implementation, it will need to be able to handle AdvancedCriteria.
 		 * Flags: IR */
 		filterOperator?: OperatorId; // Flags=IR
@@ -613,7 +614,7 @@ declare namespace Isc {
 		hidden?: boolean /* Boolean */; // Flags=IR
 		/** Custom base style to apply to all cells in this field instead of ListGrid.baseStyle To override the baseStyle at the row level, use ListGrid.recordBaseStyleProperty','record[listGrid.recordBaseStyleProperty] instead.
 		 * Flags: IRW, Group: appearance */
-		baseStyle?: string /* CSSClass */; // Flags=IRW
+		baseStyle?: string /* CSSStyleName */; // Flags=IRW
 		/** When true, this field can only be used for sorting if the data is entirely client-side.
 		 * Flags: IRW */
 		canSortClientOnly?: boolean /* Boolean */; // Flags=IRW
@@ -802,7 +803,7 @@ declare namespace Isc {
 		showGroupSummary?: boolean; // Flags=IR
 		/** Custom titleStyle to apply to this field's header button instead of ListGrid.headerTitleStyle. Note that this will typically only have an effect if ListGrid.headerButtonConstructor is set to StretchImgButton or a subclass thereof.
 		 * Flags: IRW, Group: appearance */
-		headerTitleStyle?: string /* CSSClass */; // Flags=IRW
+		headerTitleStyle?: string /* CSSStyleName */; // Flags=IRW
 		/** Shortcut to configure a FormItem.formula for the ListGridField.editorType','editor used when this field is ListGrid.canEdit','edited.
 		 * Flags: IR */
 		editorFormula?: UserFormula; // Flags=IR
@@ -1051,13 +1052,13 @@ declare namespace Isc {
 		target?: string; // Flags=IRW
 		/** If specified, cells in this field will be rendered using this css className rather than DetailViewer.cellStyle
 		 * Flags: IRW */
-		cellStyle?: string /* CSSClassName */; // Flags=IRW
+		cellStyle?: string /* CSSStyleName */; // Flags=IRW
 		/** Time-format to apply to date type values within this field. If specified, any dates displayed in this field will be formatted as times using the appropriate format. This is most commonly only applied to fields specified as type "time" though if no explicit DetailViewerField.dateFormatter is specified it will be respected for other fields as well. If unspecified, a timeFormatter may be defined DetailViewer.timeFormatter','at the component level and will be respected by fields of type "time".
 		 * Flags: IRWA, Group: appearance */
 		timeFormatter?: TimeDisplayFormat; // Flags=IRWA
 		/** If specified, when generating print HTML for this detailViewer, cells in this field will be rendered using this css className rather than DetailViewer.printCellStyle
 		 * Flags: IRW */
-		printCellStyle?: string /* CSSClassName */; // Flags=IRW
+		printCellStyle?: string /* CSSStyleName */; // Flags=IRW
 		/** By default HTML values in DetailViewer cells will be interpreted by the browser. Setting this flag to true will causes HTML characters to be escaped, meaning the raw value of the field (for example "&lt;b&gt;AAA&lt;/b&gt;") is displayed to the user rather than the interpreted HTML (for example "AAA")
 		 * Flags: IR */
 		escapeHTML?: boolean; // Flags=IR

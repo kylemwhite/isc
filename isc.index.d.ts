@@ -3,6 +3,13 @@
 /// <reference path="isc.objects.d.ts" />
 /// <reference path="isc.types.d.ts" />
 
+// Type definitions for Isomorphic SmartClient 11.1
+// Project: https://gihub.com/kylemwhite/isc
+// Definitions by: Kyle White <http://kmwTech.com>
+// Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
+// Generated: 5/1/2017 12:12:41 PM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-01
+
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
  * JavaScript's native Array is retrofitted to support the List API (not implemented yet).
