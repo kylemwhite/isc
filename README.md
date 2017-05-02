@@ -50,7 +50,7 @@ If you screw up, the TypeScript compiler will let you know. Once the entire libr
 There are currently 4 files: types.d.ts, classes.d.ts, objects.d.ts and index.d.ts. The library is broken up this way because it is so large and it seemed a good way to break things up. As more classes and methods are generated, it might need to be broken up even further to keep the file sizes manageable.
 
 ### Interfaces
-For each SmartClient class or object (classes inherit from Class, objects do not), there are three interfaces defined: *ClassName*, *ClassName*Static and *ClassName*Properties.
+For each SmartClient class (classes inherit from Class, objects do not), there are three interfaces defined: *ClassName*, *ClassName*Static and *ClassName*Properties.
 
 * *ClassName*: This interface defines the properties and methods of an instance of the class (what SmartClient calls **Instance APIs**). Example: __Label__
 * *ClassName*Static: This interface defines the properties and methods of the static class (what SmartClient calls **Class APIs**). Example: __LabelStatic__ which is what __isc.Label__ is.
@@ -67,10 +67,17 @@ export interface ClassStatic<T, P>  {
     // ...
 }
 ```
-So, instead of the paramter being defined as __[arguments 0-N]__ as the SmartClient docs say, it is instead defined as a Properties object specific to the class being created. This allows the TypeScript compiler to type-check the parameter and make sure that you only pass in properties that have the I flag and methods that can be overridden in the class. Similarly, the return type is defined as T, so it will return the expected object type.
+So, instead of the paramter being defined as __[arguments 0-N]__ as in the SmartClient docs, it is instead defined as a *ClassName*Properties object which is specific to the class being created. This allows the TypeScript compiler to type-check the parameter and make sure that you only pass in properties that have the I flag and methods that can be overridden in the class. Similarly, the return type is defined as T, so it will return the expected object type. Of course if you still want to pass in multiple properties instead of using the Properties object, you can do so by casting the static class as any:
 
-
+```TypeScript
+let myVar = (isc.Label as any).create(/* put whatever you want in here */);  // No type checking but allows multiple arguments just like JavaScript
+```
 These interfaces can be used when calling the static .create() methods so that properties may be passed in (as in the example above). The anonymous object passed into the create method is actually a type-checked __LabelProperties__ object.
+
+ For each SmartClient object (not class), there is only one interface defined, named after the object. Since objects do not inherit from Class and typically don't have static methods, there's no need for an ObjectStatic or ObjectProperties. In some cases (ImgProperties for example), SmartClient defines an object which is used as the properties class for the .create() method. In this case, the *ClassName*Properties interface is not generated in the class file, it's in the objects file.
+
+### Errors.txt file
+Along with the d.ts files, the generator creates a file named errors.txt. This is intended to capture areas in the referenceDocs.xml file that could be improved to better facilitate code generation. Over time, I will add more tests and (hopefully) the referenceDocs.xml file will be improved so that we can get to a point where the code generator can be automated and not require any special rules.
 
 ## Limitations
 So far, only a subset of the SmartClient Classes and objects are defined and of those only a small subset of methods are defined. For the classes and objects that are defined, ALL properties are defined.
