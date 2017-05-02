@@ -140,10 +140,10 @@ So far, this has only been tested with Visual Studio 2015. If you're using VS Co
 ## Todo
 1. Finish defining all classes and objects (by code generation).
 2. Finish defining all methods for classes and objects
-3. Defining the SmartClient interfaces (IList etc.)
+3. Define the SmartClient interfaces (IList etc.)
 4. Do something more useful with the IRW flags like make some properties readonly, enfoce usage of setters and getters etc.
 5. Create a complete working sample program.
 6. Create unit tests.
 7. Build an automated system to re-generate when SmartClient is updated.
-7. Commit to DefinitelyTyped.
+8. Commit to DefinitelyTyped.
 
