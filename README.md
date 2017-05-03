@@ -72,7 +72,7 @@ So, instead of the paramter being defined as __[arguments 0-N]__ as in the Smart
 ```TypeScript
 let myVar = (isc.Label as any).create(/* put whatever you want in here */);  // No type checking but allows multiple arguments just like JavaScript
 ```
-These interfaces can be used when calling the static .create() methods so that properties may be passed in (as in the example above). The anonymous object passed into the create method is actually a type-checked __LabelProperties__ object.
+These interfaces can be used when calling the static .create() methods so that properties may be passed in (as in the example above). The anonymous object passed into the create method is actually a type-checked __LabelProps__ object.
 
  For each SmartClient object (not class), there is only one interface defined, named after the object. Since objects do not inherit from Class and typically don't have static methods, there's no need for an ObjectStatic or ObjectProps interface. 
 
