@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-01
 
 Errors during generation
-Generated: 5/1/2017 12:32:06 PM by kwhite
+Generated: 5/2/2017 4:49:28 PM by kwhite
 
 Summary
 Total Types  : 229
@@ -11,7 +11,12 @@ Total Classes: 309
 Total Objects: 67
 Total Methods: 3064
 
-Methods with flag: 0 (methods should not have any flags?)
+Methods with flags besides A: 3 (methods should not have any flags except A?)
+1. class:CubeGrid.collapseField, Flags=facetValueMap
+2. class:CubeGrid.expandField, Flags=facetValueMap
+3. class:Canvas.getChildTabPosition, Flags=child
+
+
 Classes without inheritsFrom attribute: 192 (All classes except Class should inherit from something, or should be an object instead of class)
 1. AdvancedHiliteEditor
 2. AutoFitButton
@@ -256,7 +261,7 @@ Array[] of: 10
 array[] of: 0
 Just Array or array: 10
 
-Attributes suspected as string types but do not have the baseType set.
+Attributes suspected as string types but do not have the baseType set: 84.
 === identifier:23 ===
 1. attr:ListGridField.groupingMode, valueType=identifier 
 2. attr:Hilite.fieldName, valueType=identifier 
@@ -351,3 +356,7 @@ Attributes suspected as string types but do not have the baseType set.
 === Field:2 ===
 1. attr:FormulaBuilder.field, valueType=Field 
 2. attr:SummaryBuilder.field, valueType=Field 
+
+===== For recording metrics ======
+Date	Types	Classes	Objects	Methods	Methods with bad flags	Classes without inherits from	string values with quotes	string values without quotes	string values with period	array of	Array of	Array[] of	array[] of	just array or Array	string types without baseType
+5/2/2017	229	309	67	3064	3	192	216	657	130	1	224	10	0	10	84	

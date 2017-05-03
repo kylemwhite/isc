@@ -5,18 +5,18 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/1/2017 12:12:30 PM by kwhite
+// Generated: 5/2/2017 4:49:28 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-01
 
 declare namespace Isc {
 
     
 	/**
-	 * Properties used for passing into .create() or anything else that takes a BaseWidget Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a BaseWidget Props argument.
 	 * This is derived from the methods in the BaseWidget class and it's parents and their properties marked with the I flag.
 	 */
-	export interface BaseWidgetProperties extends ClassProperties {
-	} // BaseWidgetProperties
+	export interface BaseWidgetProps extends ClassProps {
+	} // BaseWidgetProps
 
 
 	/**
@@ -30,10 +30,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a BlurbItem Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a BlurbItem Props argument.
 	 * This is derived from the methods in the BlurbItem class and it's parents and their properties marked with the I flag.
 	 */
-	export interface BlurbItemProperties extends FormItemProperties {
+	export interface BlurbItemProps extends FormItemProps {
 		/** Should the user be able to select the text in this item?
 		 * Flags: IRW */
 		canSelectText?: boolean; // Flags=IRW
@@ -55,7 +55,7 @@ declare namespace Isc {
 		/** If true, item contents can wrap. If false, all the contents should appear on a single line.
 		 * Flags: IRW, Group: appearance */
 		wrap?: boolean; // Flags=IRW
-	} // BlurbItemProperties
+	} // BlurbItemProps
 
 
 	/**
@@ -97,10 +97,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Button Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Button Props argument.
 	 * This is derived from the methods in the Button class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ButtonProperties extends StatefulCanvasProperties {
+	export interface ButtonProps extends StatefulCanvasProps {
 		/** Behavior on state changes -- BUTTON, RADIO or CHECKBOX
 		 * Flags: IRW, Group: state */
 		actionType?: SelectionType; // Flags=IRW
@@ -203,7 +203,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // ButtonProperties
+	} // ButtonProps
 
 
 	/**
@@ -352,10 +352,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ButtonItem Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ButtonItem Props argument.
 	 * This is derived from the methods in the ButtonItem class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ButtonItemProperties extends CanvasItemProperties {
+	export interface ButtonItemProps extends CanvasItemProps {
 		/** Should the button auto fit to its title. Maps to Button.autoFit attribute. Note that if an explicit width or height is specified for this item, it will be respected, disabling autoFit behavior
 		 * Flags: IR */
 		autoFit?: boolean /* Boolean */; // Flags=IR
@@ -399,7 +399,7 @@ declare namespace Isc {
 		 */
 		click?(form:DynamicForm, item:FormItem): boolean; 
 
-	} // ButtonItemProperties
+	} // ButtonItemProps
 
 
 	/**
@@ -471,10 +471,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Canvas Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Canvas Props argument.
 	 * This is derived from the methods in the Canvas class and it's parents and their properties marked with the I flag.
 	 */
-	export interface CanvasProperties extends BaseWidgetProperties {
+	export interface CanvasProps extends BaseWidgetProps {
 		/** If specified this governs the HTML accessKey for the widget. This should be set to a character - when a user hits the html accessKey modifier for the browser, plus this character, focus will be given to the widget in question. The accessKey modifier can vary by browser and platform. The following list of default behavior is for reference only, developers should also consult browser documentation for additional information. Internet Explorer (all platforms): Alt + accessKey Mozilla Firefox (Windows, Unix): Alt+Shift + accessKey Mozilla Firefox (Mac): Ctrl+Opt + accessKey Chrome and Safari (Windows, Unix): Alt + accessKey Chrome and Safari (Mac): Ctrl+Opt + accessKey 
 		 * Flags: IRWA, Group: focus */
 		accessKey?: string; // Flags=IRWA
@@ -630,7 +630,7 @@ declare namespace Isc {
 		childrenSnapToGrid?: boolean; // Flags=IRW
 		/** Defaults for the Canvas.componentMask autoChild. Default properties include Canvas.backgroundColor being set to "black" and Canvas.opacity being set to 20.
 		 * Flags: IR */
-		componentMaskDefaults?: CanvasProperties /* Canvas Properties */; // Flags=IR
+		componentMaskDefaults?: CanvasProps /* Canvas Properties */; // Flags=IR
 		/** The contents of a canvas or label widget. Any HTML string is acceptable.
 		 * Flags: IRWA, Group: contents */
 		contents?: string /* HTMLString */; // Flags=IRWA
@@ -1151,7 +1151,7 @@ declare namespace Isc {
 		 */
 		show?(): void; 
 
-	} // CanvasProperties
+	} // CanvasProps
 
 
 	/**
@@ -1372,7 +1372,7 @@ declare namespace Isc {
 
 		/** Defaults for the Canvas.componentMask autoChild. Default properties include Canvas.backgroundColor being set to "black" and Canvas.opacity being set to 20.
 		 * Flags: IR */
-		componentMaskDefaults: CanvasProperties /* Canvas Properties */;
+		componentMaskDefaults: CanvasProps /* Canvas Properties */;
 
 		/** The contents of a canvas or label widget. Any HTML string is acceptable.
 		 * Flags: IRWA, Group: contents */
@@ -2106,14 +2106,20 @@ declare namespace Isc {
 
 	/* Methods */
 
+		/** 
+		 * Retrieve a Canvas by it's global Canvas.ID','ID.
+		 * @param {string} ID - global ID of the Canvas
+		 */
+		getById(ID:string /* String */): Canvas; 
+
 	} // CanvasStatic
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a CanvasItem Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a CanvasItem Props argument.
 	 * This is derived from the methods in the CanvasItem class and it's parents and their properties marked with the I flag.
 	 */
-	export interface CanvasItemProperties  {
+	export interface CanvasItemProps  {
 		/** If FormItem.prompt is specified for this item, should the prompt be applied to the CanvasItem.canvas for this item?
 		 * Flags: IRW */
 		applyPromptToCanvas?: boolean /* Boolean */; // Flags=IRW
@@ -2159,7 +2165,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // CanvasItemProperties
+	} // CanvasItemProps
 
 
 	/**
@@ -2232,19 +2238,59 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Class Properties argument.
-	 * This is derived from the methods in the Class class and it's parents and their properties marked with the I flag.
+	 * Properties used for passing into .create() or anything else that takes a CellSelection Props argument.
+	 * This is derived from the methods in the CellSelection class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ClassProperties  {
+	export interface CellSelectionProps  {
 
 		/* Method Overrides */
+
+		/** 
+		 * Returns an array of the currently selected cells. Each cell is returned as a 2 element array in the form [rowNum, colNum].
+		 */
+		getSelectedCells?(): Array<any> /* array */; 
+
+	} // CellSelectionProps
+
+
+	/**
+	 * Maintains a representation of selection over a 2-dimensional grid of objects. Automatically created to manage cell-selection on CubeGrid widgets. 
+	 */
+	export interface CellSelection  {
+
+		/* Instance Method Overrides */
+
+		/** 
+		 * Returns an array of the currently selected cells. Each cell is returned as a 2 element array in the form [rowNum, colNum].
+		 */
+		getSelectedCells?(): Array<any> /* array */; 
+
+	} // CellSelection
+
+	export interface CellSelectionStatic<T, P> extends ClassStatic<T, P> {
+	} // CellSelectionStatic
+
+
+	/**
+	 * Properties used for passing into .create() or anything else that takes a Class Props argument.
+	 * This is derived from the methods in the Class class and it's parents and their properties marked with the I flag.
+	 */
+	export interface ClassProps  {
+
+		/* Method Overrides */
+
+		/** 
+		 * Add properties to this instance.
+		 * @param {} list - array of objects with properties to add
+		 */
+		addPropertyList?(list: any[] /* object[] */): any /* object */; 
 
 		/** 
 		 * Return the global identifier for this object.
 		 */
 		getID?(): string; 
 
-	} // ClassProperties
+	} // ClassProps
 
 
 	/**
@@ -2253,6 +2299,12 @@ declare namespace Isc {
 	export interface Class  {
 
 		/* Instance Method Overrides */
+
+		/** 
+		 * Add properties to this instance.
+		 * @param {} list - array of objects with properties to add
+		 */
+		addPropertyList?(list: any[] /* object[] */): any /* object */; 
 
 		/** 
 		 * Return the global identifier for this object.
@@ -2267,9 +2319,15 @@ declare namespace Isc {
 
 		/** 
 		 * Add static (Class-level) properties and methods to this object These properties can then be accessed as MyClass.property, or for functions, called as MyClass.methodName()
-		 * @param {P} properties - objects with properties to add (think named parameters). all the properties of each argument will be applied as class-level properties.
+		 * @param {P} Props - objects with properties to add (think named parameters). all the properties of each argument will be applied as class-level properties.
 		 */
-		addClassProperties(properties?:P): T; 
+		addClassProperties(Props?:P): T; 
+
+		/** 
+		 * Add default properties to all instances of this class
+		 * @param {P} Props - array of objects with properties to add
+		 */
+		addPropertyList(Props:P): T; 
 
 		/** 
 		 * Changes a set of defaults defined as a JavaScript Object. For these kind of properties, simply calling Class.addProperties would replace the original Object with yours, wiping out settings required for the basic functionality of the component. This method instead applies your overrides over the existing properties, without destroying non-overridden properties. For example let's say you have a component that's defined as follows isc.defineClass("MyComponent"); isc.MyComponent.addProperties({ simpleProperty: "some value", propertyBlock : { foo: "bar", zoo: "moo" } } If you wanted to override simpleProperty, you can just call Class.addProperties like this: isc.MyComponent.addProperties({ simpleProperty: "my override" }); If you want to override the value of propertyBlock.moo above, but you don't want to clobber the value of propertyBlock.zoo. If you use the above pattern like so: isc.MyComponent.addProperties({ propertyBlock: { foo: "new value", zoo: "moo" } }); You need to re-specify the value of propertyBlock.zoo which you didn't want to override. Failing to re-specify it would destroy the value. Instead of re-specifying the value, you can use this method to modify the value of foo - like this: isc.MyComponent.changeDefaults("propertyBlock", { foo: "new value" }); See also the AutoChild system for information about standard sets of defaults that are available for customization.
@@ -2280,18 +2338,18 @@ declare namespace Isc {
 
 		/** 
 		 * Create an instance of this class. All arguments passed to this method are passed on to the Class.init instance method. Unless Class.addPropertiesOnCreate is set to false, all arguments passed to this method must be Objects and all properties on those objects will be copied to the newly created instance before Class.init is called. If there are overlapping properties in the passed arguments, the last wins. Any return value from Class.init is thrown away. Note: Generally, you would not override this method. If you want to specify a constructor for your class, provide an override for Class.init for generic classes or Canvas.initWidget for any subclasses of UI components (i.e. descendants of Canvas).
-		 * @param {P} properties - Any arguments passed will be passed along to the init() routine of the instance. Unless Class.addPropertiesOnCreate is set to false, any arguments passed to this method must be of type Object.
+		 * @param {P} Props - Any arguments passed will be passed along to the init() routine of the instance. Unless Class.addPropertiesOnCreate is set to false, any arguments passed to this method must be of type Object.
 		 */
-		create(properties?:P): T; 
+		create(Props?:P): T; 
 
 	} // ClassStatic
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a DataSource Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a DataSource Props argument.
 	 * This is derived from the methods in the DataSource class and it's parents and their properties marked with the I flag.
 	 */
-	export interface DataSourceProperties extends ClassProperties {
+	export interface DataSourceProps extends ClassProps {
 		/** Whether to make this DataSource available as a global variable for convenience.
 		 * Flags: IRA, Group: identity */
 		addGlobalId?: boolean; // Flags=IRA
@@ -2570,7 +2628,7 @@ declare namespace Isc {
 		recordXPath?: string /* XPathExpression */; // Flags=IR
 		/** Additional properties to pass through to the DSRequests made by this DataSource. This must be set before any DSRequests are issued and before any component is bound to the DataSource. These properties are applied before DataSource.transformRequest is called.
 		 * Flags: IRW, Group: clientDataIntegration */
-		requestProperties?: DSRequestProperties /* DSRequest Properties */; // Flags=IRW
+		requestProperties?: DSRequestProps /* DSRequest Properties */; // Flags=IRW
 		/** The required message when a field that has been marked as DataSourceField.required','required is not filled in by the user. Note that DataSourceField.requiredMessage wins over this setting if both are set.
 		 * Flags: IRW, Group: formTitles */
 		requiredMessage?: string /* HTMLString */; // Flags=IRW
@@ -2710,9 +2768,9 @@ declare namespace Isc {
 		 * Perform a "fetch" DataSource operation against this DataSource, sending search criteria and retrieving matching records. NOTE: do not attempt to override this method to create a custom DataSource. For a server-side custom DataSource, use the DataSource.serverConstructor attribute, and the customDataSource', 'Custom DataSource samples. For a client-side custom DataSource, see DataSource.dataProtocol','dataProtocol:"custom". In contrast to ListGrid.fetchData, which creates a ResultSet to manage the returned data, calling dataSource.fetchData() provides the returned data in the callback as a simple JavaScript Array of JavaScript Objects. Calling dataSource.fetchData() does not automatically update any visual components or caches: code in the callback passed to fetchData() decides what to do with the returned data. For example, given a ListGrid "myGrid" and a DataSource "employees", the following code would populate "myGrid" with data fetched from the DataSource: isc.DataSource.get("employees").fetchData(null, "myGrid.setData(data)"); Unlike calling myGrid.fetchData(), which creates a ResultSet, the data provided to the grid is "disconnected" data, unmanaged by SmartClient's databinding facilities and safe to directly modify. This is useful when, for example, a ListGrid is being used as a more sophisticated version of HTML's multi-select component. Disconnected datasets may be used to populate various visual components. For example, while an individual FormItem can be configured to fetch FormItem.valueMap','valueMap options from a DataSource via the FormItem.optionDataSource','optionDataSource property, the following code shows storing a dataset to derive valueMaps from later: isc.DataSource.get("countries").fetchData(null, "window.countries = data"); ... later, a form is created dynamically ... function showForm() { isc.DynamicForm.create({ items : [ { name:"country", title:"Pick Country", valueMap: window.countries.getValueMap("countryId", "countryName") }, ... You can also create a ResultSet from the data retrieved from fetchData(), like so: isc.DataSource.get("countries").fetchData(null, function (dsResponse, data) { isc.ResultSet.create({ dataSource:"countries", allRows:data }) } ) This gives you a dataset that supports client-side filtering (via ResultSet.setCriteria','setCriteria()), can provide ResultSet.getValueMap','filtered valueMaps, will ResultSet.disableCacheSync','automatically reflect updates to the DataSource made via other components, and can be re-used with multiple visual components. See also DataSource.getClientOnlyDataSource and DataSource.cacheAllData for similar capabilities for dealing with smaller datasets entirely within the browser, or working with modifiable caches representing subsets of the data available from a DataSource. See also the server-side com.isomorphic.js.JSTranslater class in the ${isc.DocUtils.linkForDocNode('javaServerReference', 'Java Server Reference')} for other, similar approaches involving dumping data into the page during initial page load. Note: care should be taken when using this approach. Large datasets degrade the basic performance of some browsers, so use PickList.optionDataSource','optionDataSource and similar facilities to manage datasets that may become very large. Data-Driven Visual Component Creation DataSource.fetchData() can also be used to create SmartClient components in a data-driven way. Many properties on SmartClient visual components are configured via an Array of Objects - the same data format that dataSource.fetchData() returns. These include ListGrid.fields, TabSet.tabs, DynamicForm.items, Facet.values and even DataSource.fields. For example, if you had a DataSource "myFormFields" whose fields included the basic properties of FormItem','FormItems (name, title, type, etc), this example code would create a form based on stored field definitions, loaded from the "myFormFields" DataSource on the fly: isc.DataSource.get("myFormFields").fetchData(null, "isc.DynamicForm.create({ items:data })" ) This capability to dynamically create visual components from dynamically fetched data provides a foundation for creating interfaces that can be customized by end users. See also the server-side API com.isomorphic.datasource.DataSource.addDynamicDSGenerator() for dynamically creating DataSources supporting all server-side DataSource features, and DataSource.inheritsFrom for sharing field definitions across multiple DataSources.
 		 * @param {Criteria} criteria - search criteria
 		 * @param {DSCallback} callback - callback to invoke on completion
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on the DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on the DSRequest that will be issued
 		 */
-		fetchData?(criteria?:Criteria, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		fetchData?(criteria?:Criteria, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
 		/** 
 		 * Return the field definition object.
@@ -2721,22 +2779,29 @@ declare namespace Isc {
 		getField?(fieldName:string /* String */): DataSourceField; 
 
 		/** 
+		 * Converts a list of Records to simple text formats with a Record per line and values separated by a configurable separator, including both tab-separated-values and comma-separated-values (aka CSV). In addition to the settings parameter for this method, DataSourceField.exportForceText can be set. If two or more different text exports are needed for the same DataSource creating a conflict for any DataSourceField setting, DataSource.inheritsFrom can be used to create a child DataSource where these settings can be changed without recapitulating all field definitions.
+		 * @param {Array<any>} records - records to convert
+		 * @param {TextExportSettingsProps} settings - settings for the export
+		 */
+		recordsAsText?(records:Array<any> /* Array of Record */, settings?:TextExportSettingsProps /* TextExportSettings Properties */): string /* String */; 
+
+		/** 
 		 * Perform a "remove" DataSource operation against this DataSource, to delete an existing DataSource record.
 		 * @param {any} data - primary key values of record to delete, (or complete record)
 		 * @param {DSCallback} callback - callback to invoke on completion
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on the DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on the DSRequest that will be issued
 		 */
-		removeData?(data:any | any /* Record | PrimaryKeys */, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		removeData?(data:any | any /* Record | PrimaryKeys */, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
 		/** 
 		 * Perform an "update" DataSource operation against this DataSource, to update values in an existing DataSource record.
 		 * @param {any} updatedRecord - updated record
 		 * @param {DSCallback} callback - callback to invoke on completion
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on the DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on the DSRequest that will be issued
 		 */
-		updateData?(updatedRecord:any /* Record Properties */, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		updateData?(updatedRecord:any /* Record Properties */, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
-	} // DataSourceProperties
+	} // DataSourceProps
 
 
 	/**
@@ -3113,7 +3178,7 @@ declare namespace Isc {
 
 		/** Additional properties to pass through to the DSRequests made by this DataSource. This must be set before any DSRequests are issued and before any component is bound to the DataSource. These properties are applied before DataSource.transformRequest is called.
 		 * Flags: IRW, Group: clientDataIntegration */
-		requestProperties: DSRequestProperties /* DSRequest Properties */;
+		requestProperties: DSRequestProps /* DSRequest Properties */;
 
 		/** The required message when a field that has been marked as DataSourceField.required','required is not filled in by the user. Note that DataSourceField.requiredMessage wins over this setting if both are set.
 		 * Flags: IRW, Group: formTitles */
@@ -3306,9 +3371,9 @@ declare namespace Isc {
 		 * Perform a "fetch" DataSource operation against this DataSource, sending search criteria and retrieving matching records. NOTE: do not attempt to override this method to create a custom DataSource. For a server-side custom DataSource, use the DataSource.serverConstructor attribute, and the customDataSource', 'Custom DataSource samples. For a client-side custom DataSource, see DataSource.dataProtocol','dataProtocol:"custom". In contrast to ListGrid.fetchData, which creates a ResultSet to manage the returned data, calling dataSource.fetchData() provides the returned data in the callback as a simple JavaScript Array of JavaScript Objects. Calling dataSource.fetchData() does not automatically update any visual components or caches: code in the callback passed to fetchData() decides what to do with the returned data. For example, given a ListGrid "myGrid" and a DataSource "employees", the following code would populate "myGrid" with data fetched from the DataSource: isc.DataSource.get("employees").fetchData(null, "myGrid.setData(data)"); Unlike calling myGrid.fetchData(), which creates a ResultSet, the data provided to the grid is "disconnected" data, unmanaged by SmartClient's databinding facilities and safe to directly modify. This is useful when, for example, a ListGrid is being used as a more sophisticated version of HTML's multi-select component. Disconnected datasets may be used to populate various visual components. For example, while an individual FormItem can be configured to fetch FormItem.valueMap','valueMap options from a DataSource via the FormItem.optionDataSource','optionDataSource property, the following code shows storing a dataset to derive valueMaps from later: isc.DataSource.get("countries").fetchData(null, "window.countries = data"); ... later, a form is created dynamically ... function showForm() { isc.DynamicForm.create({ items : [ { name:"country", title:"Pick Country", valueMap: window.countries.getValueMap("countryId", "countryName") }, ... You can also create a ResultSet from the data retrieved from fetchData(), like so: isc.DataSource.get("countries").fetchData(null, function (dsResponse, data) { isc.ResultSet.create({ dataSource:"countries", allRows:data }) } ) This gives you a dataset that supports client-side filtering (via ResultSet.setCriteria','setCriteria()), can provide ResultSet.getValueMap','filtered valueMaps, will ResultSet.disableCacheSync','automatically reflect updates to the DataSource made via other components, and can be re-used with multiple visual components. See also DataSource.getClientOnlyDataSource and DataSource.cacheAllData for similar capabilities for dealing with smaller datasets entirely within the browser, or working with modifiable caches representing subsets of the data available from a DataSource. See also the server-side com.isomorphic.js.JSTranslater class in the ${isc.DocUtils.linkForDocNode('javaServerReference', 'Java Server Reference')} for other, similar approaches involving dumping data into the page during initial page load. Note: care should be taken when using this approach. Large datasets degrade the basic performance of some browsers, so use PickList.optionDataSource','optionDataSource and similar facilities to manage datasets that may become very large. Data-Driven Visual Component Creation DataSource.fetchData() can also be used to create SmartClient components in a data-driven way. Many properties on SmartClient visual components are configured via an Array of Objects - the same data format that dataSource.fetchData() returns. These include ListGrid.fields, TabSet.tabs, DynamicForm.items, Facet.values and even DataSource.fields. For example, if you had a DataSource "myFormFields" whose fields included the basic properties of FormItem','FormItems (name, title, type, etc), this example code would create a form based on stored field definitions, loaded from the "myFormFields" DataSource on the fly: isc.DataSource.get("myFormFields").fetchData(null, "isc.DynamicForm.create({ items:data })" ) This capability to dynamically create visual components from dynamically fetched data provides a foundation for creating interfaces that can be customized by end users. See also the server-side API com.isomorphic.datasource.DataSource.addDynamicDSGenerator() for dynamically creating DataSources supporting all server-side DataSource features, and DataSource.inheritsFrom for sharing field definitions across multiple DataSources.
 		 * @param {Criteria} criteria - search criteria
 		 * @param {DSCallback} callback - callback to invoke on completion
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on the DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on the DSRequest that will be issued
 		 */
-		fetchData?(criteria?:Criteria, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		fetchData?(criteria?:Criteria, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
 		/** 
 		 * Return the field definition object.
@@ -3317,20 +3382,27 @@ declare namespace Isc {
 		getField?(fieldName:string /* String */): DataSourceField; 
 
 		/** 
+		 * Converts a list of Records to simple text formats with a Record per line and values separated by a configurable separator, including both tab-separated-values and comma-separated-values (aka CSV). In addition to the settings parameter for this method, DataSourceField.exportForceText can be set. If two or more different text exports are needed for the same DataSource creating a conflict for any DataSourceField setting, DataSource.inheritsFrom can be used to create a child DataSource where these settings can be changed without recapitulating all field definitions.
+		 * @param {Array<any>} records - records to convert
+		 * @param {TextExportSettingsProps} settings - settings for the export
+		 */
+		recordsAsText?(records:Array<any> /* Array of Record */, settings?:TextExportSettingsProps /* TextExportSettings Properties */): string /* String */; 
+
+		/** 
 		 * Perform a "remove" DataSource operation against this DataSource, to delete an existing DataSource record.
 		 * @param {any} data - primary key values of record to delete, (or complete record)
 		 * @param {DSCallback} callback - callback to invoke on completion
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on the DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on the DSRequest that will be issued
 		 */
-		removeData?(data:any | any /* Record | PrimaryKeys */, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		removeData?(data:any | any /* Record | PrimaryKeys */, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
 		/** 
 		 * Perform an "update" DataSource operation against this DataSource, to update values in an existing DataSource record.
 		 * @param {any} updatedRecord - updated record
 		 * @param {DSCallback} callback - callback to invoke on completion
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on the DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on the DSRequest that will be issued
 		 */
-		updateData?(updatedRecord:any /* Record Properties */, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		updateData?(updatedRecord:any /* Record Properties */, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
 	} // DataSource
 
@@ -3372,10 +3444,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a DataSourceField Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a DataSourceField Props argument.
 	 * This is derived from the methods in the DataSourceField class and it's parents and their properties marked with the I flag.
 	 */
-	export interface DataSourceFieldProperties  {
+	export interface DataSourceFieldProps  {
 		/** Affects whether client dsRequests can request summaries for this field. Default setting of null means that the DataSource-wide default setting DataSource.allowClientRequestedSummaries is used for this field.
 		 * Flags: IR, Group: serverSummaries */
 		allowClientRequestedSummaries?: boolean; // Flags=IR
@@ -3709,7 +3781,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // DataSourceFieldProperties
+	} // DataSourceFieldProps
 
 
 	/**
@@ -4182,10 +4254,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a DetailViewer Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a DetailViewer Props argument.
 	 * This is derived from the methods in the DetailViewer class and it's parents and their properties marked with the I flag.
 	 */
-	export interface DetailViewerProperties extends CanvasProperties {
+	export interface DetailViewerProps extends CanvasProps {
 		/** If true, when this component is first drawn, automatically call this.fetchData(). Criteria for this fetch may be picked up from DetailViewer.initialCriteria, and textMatchStyle may be specified via ListGrid.autoFetchTextMatchStyle','autoFetchTextMatchStyle. <span style='color:red'>NOTE:</span> if autoFetchData is set, calling ListGrid.fetchData','fetchData() before draw will cause two requests to be issued, one from the manual call to fetchData() and one from the autoFetchData setting. The second request will use only DetailViewer.initialCriteria and not any other criteria or settings from the first request. Generally, turn off autoFetchData if you are going to manually call ListGrid.fetchData','fetchData() at any time.
 		 * Flags: IR, Group: databinding */
 		autoFetchData?: boolean; // Flags=IR
@@ -4356,7 +4428,7 @@ declare namespace Isc {
 		 */
 		setViewState?(viewState:string /* DetailViewerViewState */): void; 
 
-	} // DetailViewerProperties
+	} // DetailViewerProps
 
 
 	/**
@@ -4589,10 +4661,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Dialog Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Dialog Props argument.
 	 * This is derived from the methods in the Dialog class and it's parents and their properties marked with the I flag.
 	 */
-	export interface DialogProperties extends WindowProperties {
+	export interface DialogProps extends WindowProps {
 		/** Icon to show in the isc.ask dialog.
 		 * Flags: IR */
 		askIcon?: string /* SCImgURL */; // Flags=IR
@@ -4653,7 +4725,7 @@ declare namespace Isc {
 		 */
 		closeClick?(): boolean /* Boolean */; 
 
-	} // DialogProperties
+	} // DialogProps
 
 
 	/**
@@ -4747,7 +4819,7 @@ declare namespace Isc {
 
 		/** A singleton Dialog instance that will be shown in response to a isc.askForValue call. Notes: Because this is a singleton object, properties set on the Ask object directly will persist each time it is shown. Developers should use the askForValue() method to show this object rather than manipulating the Dialog directly.
 		 * Flags: A, Group: Prompting */
-		Ask: DialogProperties /* Dialog Properties */;
+		Ask: DialogProps /* Dialog Properties */;
 
 		/** Default title for the dialog displayed by isc.askForValue. A custom title can alternatively be specified as the title attribute of the properties parameter passed to that method.
 		 * Flags: IRW, Group: i18nMessages */
@@ -4779,7 +4851,7 @@ declare namespace Isc {
 
 		/** The "Prompt" object on the dialog class is a singleton Dialog instance. The Prompt is used to show text to the user in a modal fashion - it will expand to show all the text that you put into it. By default this Dialog has no end-user controls and is expected to be programmatically dismissed. Common use-case: During server-interactions, the Prompt will be used to display a suitable wait message, and suppress user input. Notes: Because this is a singleton object, properties set on the Prompt directly will persist each time it is shown. Developers should use the showPrompt() and clearPrompt() methods to show and hide the prompt rather than manipulating the prompt directly.
 		 * Flags: A, Group: Prompting */
-		Prompt: DialogProperties /* Dialog Properties */;
+		Prompt: DialogProps /* Dialog Properties */;
 
 		/** Default title for the dialog displayed in response to the isc.say method. Note that a custom title can be specified as the title attribute of the properties parameter passed to that method.
 		 * Flags: IRW, Group: i18nMessages */
@@ -4787,7 +4859,7 @@ declare namespace Isc {
 
 		/** A singleton Dialog instance that will show text to the user and provide buttons for their response. The Dialog will expand to show all the text that you put into it. This dialog is shown in response to calls to isc.say, isc.warn, isc.ask and isc.confirm. This can be used in cases where a developer would alternatively make use of the native JavaScript alert() and confirm() methods. The main differences between those methods and using the Warn object are: - The Warn object can be customized by modifying which buttons are visible, the style applied to it, etc. - The isc.ask() and isc.warn() methods are asynchronous - rather than returning a value indicating the user's response, a callback method will be fired when the user interacts with the dialog. Notes: Because this is a singleton object, properties set on the Warn object directly will persist each time it is shown. Developers should use the warn() or ask() methods to show and hide this object rather than manipulating the Dialog directly.
 		 * Flags: A, Group: Prompting */
-		Warn: DialogProperties /* Dialog Properties */;
+		Warn: DialogProps /* Dialog Properties */;
 
 		/** Default title for the dialog displayed in response to the isc.warn method. Note that a custom title can be specified as the title attribute of the properties parameter passed to that method.
 		 * Flags: IRW, Group: i18nMessages */
@@ -4801,10 +4873,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a DSRequest Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a DSRequest Props argument.
 	 * This is derived from the methods in the DSRequest class and it's parents and their properties marked with the I flag.
 	 */
-	export interface DSRequestProperties extends RPCRequestProperties {
+	export interface DSRequestProps extends RPCRequestProps {
 		/** For fetch, add or update operation, an optional comma separated list of fields to fetch from another, related DataSource. Fields should be specified in the format "localFieldName!relatedDataSourceID.relatedDataSourceFieldName". where relatedDataSourceID is the ID of the related dataSource, and relatedDataSourceFieldName is the field for which you want to fetch related values. The returned field values will be stored on the data returned to the client under the specified localFieldName. Note that this will be applied in addition to any specified DSRequest.outputs. Note that as with DataSourceField.includeFrom, the related dataSource must be linked to the primary datasource via a foreignKey relationship. Note additionalOutputs sent in request from the browser can be completely disabled in server_properties','server.properties by setting datasource.allowClientAdditionalOutputs: datasource.allowClientAdditionalOutputs: false In this case DSRequest.additionalOutputs sent from the browser will be cleared before executing request. Note that programatically configured additionalOutputs are always allowed, but you can't modify them from within a DMI method, so the only way to execute a request with additionalOutputs that differ from what was sent by the client is to create a new DSRequest
 		 * Flags: IRA */
 		additionalOutputs?: string /* String */; // Flags=IRA
@@ -4970,7 +5042,7 @@ declare namespace Isc {
 		/** Mode of validation for entered data.
 		 * Flags: IR */
 		validationMode?: ValidationMode; // Flags=IR
-	} // DSRequestProperties
+	} // DSRequestProps
 
 
 	/**
@@ -5220,10 +5292,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a DynamicForm Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a DynamicForm Props argument.
 	 * This is derived from the methods in the DynamicForm class and it's parents and their properties marked with the I flag.
 	 */
-	export interface DynamicFormProperties extends CanvasProperties {
+	export interface DynamicFormProps extends CanvasProps {
 		/** The URL to which the form will submit its values. NOTE: this is used only in the very rare case that a form is used to submit data directly to a URL. Normal server contact is through RPCManager. See DynamicForm.canSubmit for more on this.
 		 * Flags: IRW, Group: submitting */
 		action?: string; // Flags=IRW
@@ -5328,7 +5400,7 @@ declare namespace Isc {
 		errorsPreamble?: string /* HTMLString */; // Flags=IR
 		/** An array of field objects, specifying the order, layout, and types of each field in the DynamicForm. When both dynamicForm.fields and dynamicForm.dataSource are set, dynamicForm.fields acts as a set of overrides as explained in DataBoundComponent.fields. See formLayout','Form Layout for information about how flags specified on the FormItems control how the form is laid out.
 		 * Flags: IRW, Group: items */
-		fields?: Array<FormItemProperties> /* Array of FormItem Properties */; // Flags=IRW
+		fields?: Array<FormItemProps> /* Array of FormItem Properties */; // Flags=IRW
 		/** If true, we ensure that column widths are at least as large as you specify them. This means that if any single column overflows (due to, eg, a long unbreakable title), the form as a whole overflows. If false, columns will have their specified sizes as long as no column overflows. If any column overflows, space will be taken from any other columns that aren't filling the available room, until there is no more free space, in which case the form as a whole overflows.
 		 * Flags: IRW, Group: formLayout */
 		fixedColWidths?: boolean /* Boolean */; // Flags=IRW
@@ -5376,7 +5448,7 @@ declare namespace Isc {
 		itemLayout?: string /* FormLayoutType */; // Flags=IRWA
 		/** Synonym for DynamicForm.fields
 		 * Flags: IRW, Group: items */
-		items?: Array<FormItemProperties> /* Array of FormItem Properties */; // Flags=IRW
+		items?: Array<FormItemProps> /* Array of FormItem Properties */; // Flags=IRW
 		/** When creating form items for fields with text type data, if the specified length of the field exceeds this threshold we will create form item of type this.longTextEditorType (a TextAreaItem by default), rather than a simple text item. Overridden by explicitly specifying editorType for the field.
 		 * Flags: IRW, Group: appearance */
 		longTextEditorThreshold?: number; // Flags=IRW
@@ -5571,7 +5643,7 @@ declare namespace Isc {
 		 */
 		getValue?(fieldName:string): any; 
 
-	} // DynamicFormProperties
+	} // DynamicFormProps
 
 
 	/**
@@ -5716,7 +5788,7 @@ declare namespace Isc {
 
 		/** An array of field objects, specifying the order, layout, and types of each field in the DynamicForm. When both dynamicForm.fields and dynamicForm.dataSource are set, dynamicForm.fields acts as a set of overrides as explained in DataBoundComponent.fields. See formLayout','Form Layout for information about how flags specified on the FormItems control how the form is laid out.
 		 * Flags: IRW, Group: items */
-		fields: Array<FormItemProperties> /* Array of FormItem Properties */;
+		fields: Array<FormItemProps> /* Array of FormItem Properties */;
 
 		/** If true, we ensure that column widths are at least as large as you specify them. This means that if any single column overflows (due to, eg, a long unbreakable title), the form as a whole overflows. If false, columns will have their specified sizes as long as no column overflows. If any column overflows, space will be taken from any other columns that aren't filling the available room, until there is no more free space, in which case the form as a whole overflows.
 		 * Flags: IRW, Group: formLayout */
@@ -5780,7 +5852,7 @@ declare namespace Isc {
 
 		/** Synonym for DynamicForm.fields
 		 * Flags: IRW, Group: items */
-		items: Array<FormItemProperties> /* Array of FormItem Properties */;
+		items: Array<FormItemProps> /* Array of FormItem Properties */;
 
 		/** When creating form items for fields with text type data, if the specified length of the field exceeds this threshold we will create form item of type this.longTextEditorType (a TextAreaItem by default), rather than a simple text item. Overridden by explicitly specifying editorType for the field.
 		 * Flags: IRW, Group: appearance */
@@ -6038,10 +6110,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a EditProxy Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a EditProxy Props argument.
 	 * This is derived from the methods in the EditProxy class and it's parents and their properties marked with the I flag.
 	 */
-	export interface EditProxyProperties  {
+	export interface EditProxyProps  {
 		/** This property acts as a component-specific override for the EditContext.allowNestedDrops property. Unless explicitly set to false, the EditContext.allowNestedDrops controls whether a drop can be made into this component.
 		 * Flags: IR */
 		allowNestedDrops?: boolean /* Boolean */; // Flags=IR
@@ -6117,7 +6189,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // EditProxyProperties
+	} // EditProxyProps
 
 
 	/**
@@ -6230,10 +6302,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a FieldPicker Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a FieldPicker Props argument.
 	 * This is derived from the methods in the FieldPicker class and it's parents and their properties marked with the I flag.
 	 */
-	export interface FieldPickerProperties  {
+	export interface FieldPickerProps  {
 		/** The title displayed for the Add Custom Fields Button
 		 * Flags: IR, Group: i18nMessages */
 		addCustomFieldsButtonTitle?: string /* String */; // Flags=IR
@@ -6303,7 +6375,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // FieldPickerProperties
+	} // FieldPickerProps
 
 
 	/**
@@ -6412,10 +6484,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a FieldPickerWindow Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a FieldPickerWindow Props argument.
 	 * This is derived from the methods in the FieldPickerWindow class and it's parents and their properties marked with the I flag.
 	 */
-	export interface FieldPickerWindowProperties  {
+	export interface FieldPickerWindowProps  {
 		/** By default, a FieldPickerWindow will close automatically if the mouse is clicked outside of it. To have the window shown with true modality, set this attribute to false.
 		 * Flags: IR */
 		autoDismiss?: boolean /* Boolean */; // Flags=IR
@@ -6423,7 +6495,7 @@ declare namespace Isc {
 		 * Flags: IR */
 		fieldPicker?:  FieldPicker /* AutoChild FieldPicker */; // Flags=IR
 		title?: string /* String */; // Flags=IR
-	} // FieldPickerWindowProperties
+	} // FieldPickerWindowProps
 
 
 	/**
@@ -6447,10 +6519,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a FilterClause Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a FilterClause Props argument.
 	 * This is derived from the methods in the FilterClause class and it's parents and their properties marked with the I flag.
 	 */
-	export interface FilterClauseProperties  {
+	export interface FilterClauseProps  {
 		/** AutoChild containing the UI for the filter-properties in this FilterClause.
 		 * Flags: IR */
 		clause?:  SearchForm /* AutoChild SearchForm */; // Flags=IR
@@ -6462,7 +6534,7 @@ declare namespace Isc {
 		fieldPicker?:  PickList /* AutoChild PickList */; // Flags=IR
 		/** Properties to combine with the FieldPicker autoChild FormItem.
 		 * Flags: IR */
-		fieldPickerProperties?: FormItemProperties /* FormItem Properties */; // Flags=IR
+		fieldPickerProperties?: FormItemProps /* FormItem Properties */; // Flags=IR
 		/** The title for the FieldPicker','field-picker select-item.
 		 * Flags: IR, Group: i18nMessages */
 		fieldPickerTitle?: string /* String */; // Flags=IR
@@ -6471,7 +6543,7 @@ declare namespace Isc {
 		operatorPicker?:  SelectItem /* AutoChild SelectItem */; // Flags=IR
 		/** Properties to combine with the FilterClause.operatorPicker autoChild FormItem.
 		 * Flags: IR */
-		operatorPickerProperties?: FormItemProperties /* FormItem Properties */; // Flags=IR
+		operatorPickerProperties?: FormItemProps /* FormItem Properties */; // Flags=IR
 		/** The title for the operator-picker select-item.
 		 * Flags: IR, Group: i18nMessages */
 		operatorPickerTitle?: string /* String */; // Flags=IR
@@ -6508,7 +6580,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // FilterClauseProperties
+	} // FilterClauseProps
 
 
 	/**
@@ -6529,7 +6601,7 @@ declare namespace Isc {
 
 		/** Properties to combine with the FieldPicker autoChild FormItem.
 		 * Flags: IR */
-		fieldPickerProperties: FormItemProperties /* FormItem Properties */;
+		fieldPickerProperties: FormItemProps /* FormItem Properties */;
 
 		/** The title for the FieldPicker','field-picker select-item.
 		 * Flags: IR, Group: i18nMessages */
@@ -6541,7 +6613,7 @@ declare namespace Isc {
 
 		/** Properties to combine with the FilterClause.operatorPicker autoChild FormItem.
 		 * Flags: IR */
-		operatorPickerProperties: FormItemProperties /* FormItem Properties */;
+		operatorPickerProperties: FormItemProps /* FormItem Properties */;
 
 		/** The title for the operator-picker select-item.
 		 * Flags: IR, Group: i18nMessages */
@@ -6597,10 +6669,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a FormItem Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a FormItem Props argument.
 	 * This is derived from the methods in the FormItem class and it's parents and their properties marked with the I flag.
 	 */
-	export interface FormItemProperties  {
+	export interface FormItemProps  {
 		/** If specified this governs the HTML accessKey for the item. This should be set to a character - when a user hits the html accessKey modifier for the browser, plus this character, focus will be given to the item. The accessKey modifier can vary by browser and platform. The following list of default behavior is for reference only, developers should also consult browser documentation for additional information. Internet Explorer (all platforms): Alt + accessKey Mozilla Firefox (Windows, Unix): Alt+Shift + accessKey Mozilla Firefox (Mac): Ctrl+Opt + accessKey Chrome and Safari (Windows, Unix): Alt + accessKey Chrome and Safari (Mac): Ctrl+Opt + accessKey 
 		 * Flags: IRW, Group: focus */
 		accessKey?: string /* keyChar */; // Flags=IRW
@@ -6855,7 +6927,7 @@ declare namespace Isc {
 		optionDataSource?: DataSource | string /* DataSource | String */; // Flags=IR
 		/** If this item has a specified optionDataSource, and this property is not null, this will be passed to the datasource as RPCRequest properties when performing the fetch operation on the dataSource to obtain a data-value to display-value mapping
 		 * Flags: IRA */
-		optionFilterContext?: RPCRequestProperties /* RPCRequest Properties */; // Flags=IRA
+		optionFilterContext?: RPCRequestProps /* RPCRequest Properties */; // Flags=IRA
 		/** If this item has a specified optionDataSource, this attribute may be set to specify an explicit DSRequest.operationId when performing a fetch against the option dataSource to pick up display value mapping.
 		 * Flags: IRA */
 		optionOperationId?: string; // Flags=IRA
@@ -6894,7 +6966,7 @@ declare namespace Isc {
 		pickerIconWidth?: number /* int */; // Flags=IRWA
 		/** Default properties for the picker.
 		 * Flags: IRW */
-		pickerProperties?: CanvasProperties /* Canvas Properties */; // Flags=IRW
+		pickerProperties?: CanvasProps /* Canvas Properties */; // Flags=IRW
 		/** Base CSS class name for a form item's text box element when getting printable HTML for the form. If unset FormItem.textBoxStyle will be used instead. Note that focused styling will never be displayed while printing, though error and disabled styling will.
 		 * Flags: IRW, Group: printing */
 		printTextBoxStyle?: string /* FormItemBaseStyle */; // Flags=IRW
@@ -7164,6 +7236,11 @@ declare namespace Isc {
 		click?(form:DynamicForm, item:FormItem): boolean; 
 
 		/** 
+		 * Return the name for the this formItem.
+		 */
+		getFieldName?(): string; 
+
+		/** 
 		 * Return the value tracked by this form item. Note that for FormItems that have a ValueMap or where a FormItem.formatValue','formatter has been defined, getValue() returns the underlying value of the FormItem, not the displayed value.
 		 */
 		getValue?(): any; 
@@ -7178,7 +7255,7 @@ declare namespace Isc {
 		 */
 		show?(): void; 
 
-	} // FormItemProperties
+	} // FormItemProps
 
 
 	/**
@@ -7531,7 +7608,7 @@ declare namespace Isc {
 
 		/** If this item has a specified optionDataSource, and this property is not null, this will be passed to the datasource as RPCRequest properties when performing the fetch operation on the dataSource to obtain a data-value to display-value mapping
 		 * Flags: IRA */
-		optionFilterContext: RPCRequestProperties /* RPCRequest Properties */;
+		optionFilterContext: RPCRequestProps /* RPCRequest Properties */;
 
 		/** If this item has a specified optionDataSource, this attribute may be set to specify an explicit DSRequest.operationId when performing a fetch against the option dataSource to pick up display value mapping.
 		 * Flags: IRA */
@@ -7583,7 +7660,7 @@ declare namespace Isc {
 
 		/** Default properties for the picker.
 		 * Flags: IRW */
-		pickerProperties: CanvasProperties /* Canvas Properties */;
+		pickerProperties: CanvasProps /* Canvas Properties */;
 
 		/** Base CSS class name for a form item's text box element when getting printable HTML for the form. If unset FormItem.textBoxStyle will be used instead. Note that focused styling will never be displayed while printing, though error and disabled styling will.
 		 * Flags: IRW, Group: printing */
@@ -7940,6 +8017,11 @@ declare namespace Isc {
 		click?(form:DynamicForm, item:FormItem): boolean; 
 
 		/** 
+		 * Return the name for the this formItem.
+		 */
+		getFieldName?(): string; 
+
+		/** 
 		 * Return the value tracked by this form item. Note that for FormItems that have a ValueMap or where a FormItem.formatValue','formatter has been defined, getValue() returns the underlying value of the FormItem, not the displayed value.
 		 */
 		getValue?(): any; 
@@ -7972,10 +8054,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a GridRenderer Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a GridRenderer Props argument.
 	 * This is derived from the methods in the GridRenderer class and it's parents and their properties marked with the I flag.
 	 */
-	export interface GridRendererProperties  {
+	export interface GridRendererProps  {
 		/** The number of consecutive columns to draw in the same style before alternating, when GridRenderer.alternateColumnStyles','alternateColumnStyles is true.
 		 * Flags: IRW, Group: cellStyling */
 		alternateColumnFrequency?: number; // Flags=IRW
@@ -8109,7 +8191,7 @@ declare namespace Isc {
 		 */
 		getCellCSSText?(record:ListGridRecord, rowNum:number, colNum:number): string; 
 
-	} // GridRendererProperties
+	} // GridRendererProps
 
 
 	/**
@@ -8306,10 +8388,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a HiliteEditor Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a HiliteEditor Props argument.
 	 * This is derived from the methods in the HiliteEditor class and it's parents and their properties marked with the I flag.
 	 */
-	export interface HiliteEditorProperties extends VLayoutProperties {
+	export interface HiliteEditorProps extends VLayoutProps {
 		/** AutoChild IButton that opens an AdvancedHiliteEditor to create a new advanced rule. This component is an AutoChild and as such may be customized via hiliteEditor.addAdvancedRuleButtonProperties.
 		 * Flags: IR */
 		addAdvancedRuleButton?:  StatefulCanvas /* AutoChild StatefulCanvas */; // Flags=IR
@@ -8346,7 +8428,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // HiliteEditorProperties
+	} // HiliteEditorProps
 
 
 	/**
@@ -8407,10 +8489,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a HiliteRule Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a HiliteRule Props argument.
 	 * This is derived from the methods in the HiliteRule class and it's parents and their properties marked with the I flag.
 	 */
-	export interface HiliteRuleProperties  {
+	export interface HiliteRuleProps  {
 		/** AutoChild ImgButton displayed by an advanced hilite-rule and used to open it for editing in an AdvancedHiliteEditor','advanced hilite editor. This component is an AutoChild and as such may be customized via hiliteRule.advancedClauseEditButtonProperties.
 		 * Flags: IR */
 		advancedClauseEditButton?:  ImgButton /* AutoChild ImgButton */; // Flags=IR
@@ -8447,7 +8529,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // HiliteRuleProperties
+	} // HiliteRuleProps
 
 
 	/**
@@ -8508,11 +8590,11 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a HLayout Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a HLayout Props argument.
 	 * This is derived from the methods in the HLayout class and it's parents and their properties marked with the I flag.
 	 */
-	export interface HLayoutProperties extends LayoutProperties {
-	} // HLayoutProperties
+	export interface HLayoutProps extends LayoutProps {
+	} // HLayoutProps
 
 
 	/**
@@ -8526,10 +8608,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a HTMLFlow Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a HTMLFlow Props argument.
 	 * This is derived from the methods in the HTMLFlow class and it's parents and their properties marked with the I flag.
 	 */
-	export interface HTMLFlowProperties extends CanvasProperties {
+	export interface HTMLFlowProps extends CanvasProps {
 		/** By default an HTMLFlow will explicitly prevent browser caching. Set to true to allow browser caching if the browser would normally do so, in other words, if the HTTP headers returned with the response indicate that the response can be cached.
 		 * Flags: IR */
 		allowCaching?: boolean /* Boolean */; // Flags=IR
@@ -8580,7 +8662,7 @@ declare namespace Isc {
 		 */
 		setContents?(newContents?:string): void; 
 
-	} // HTMLFlowProperties
+	} // HTMLFlowProps
 
 
 	/**
@@ -8656,11 +8738,11 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a HTMLPane Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a HTMLPane Props argument.
 	 * This is derived from the methods in the HTMLPane class and it's parents and their properties marked with the I flag.
 	 */
-	export interface HTMLPaneProperties extends HTMLFlowProperties {
-	} // HTMLPaneProperties
+	export interface HTMLPaneProps extends HTMLFlowProps {
+	} // HTMLPaneProps
 
 
 	/**
@@ -8674,11 +8756,11 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a IButton Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a IButton Props argument.
 	 * This is derived from the methods in the IButton class and it's parents and their properties marked with the I flag.
 	 */
-	export interface IButtonProperties  {
-	} // IButtonProperties
+	export interface IButtonProps  {
+	} // IButtonProps
 
 
 	/**
@@ -8689,6 +8771,53 @@ declare namespace Isc {
 
 	export interface IButtonStatic<T, P> extends ClassStatic<T, P> {
 	} // IButtonStatic
+
+
+	/**
+	 * Properties used for passing into .create() or anything else that takes a Img Props argument.
+	 * This is derived from the methods in the Img class and it's parents and their properties marked with the I flag.
+	 */
+	export interface ImgProps extends StatefulCanvasProps {
+		/** Setting this attribute configures an image map for this image. The value is expected as a sequence of &lg;AREA&gt tags - e.g: Img.create({ src: "myChart.gif", activeAreaHTML: "&lt;AREA shape='rect' coords='10,50,30,200' title='30' href='javascript:alert(\"30 units\")'&gt;" + "&lt;AREA shape='rect' coords='50,90,80,200' title='22' href='javascript:alert(\"22 units\")'&gt;" }); <u>Implementation notes:</u> Quotes in the activeAreaHTML must be escaped or alternated appropriately. Image maps do not stretch to fit scaled images. You must ensure that the dimensions of your Img component match the anticipated width and height of your image map (which will typically match the native dimensions of your image). To change the image map of an existing Img component, first set yourImg.activeAreaHTML, then call yourImg.markForRedraw(). Calls to yourImg.setSrc() will not automatically update the image map. activeAreaHTML is not supported on tiled Img components (imageType:"tile"). Native browser support for image map focus/blur, keyboard events, and certain AREA tag attributes (eg NOHREF, DEFAULT...) varies by platform. If your image map HTML uses attributes beyond the basics (shape, coords, href, title), you should test on all supported browsers to ensure that it functions as expected. 
+		 * Flags: IRWA, Group: appearance */
+		activeAreaHTML?: string /* String of HTML AREA tags */; // Flags=IRWA
+		/** If specified this property will be included as the alt text for the image HMTL element. This is useful for improving application accessibility. altText and hover prompt / tooltip behavior: Note that some browsers, including Internet Explorer 9, show a native hover tooltip containing the img tag's alt attribute. Developers should not rely on this behavior to show the user a hover prompt - instead the Img.prompt attribute should be used. To set alt text and ensure a hover prompt shows up in all browsers, developers may set Img.prompt and altText to the same value. If both these attributes are set, the standard SmartClient prompt behavior will show a hover prompt in most browsers, but will be suppressed for browsers where a native tooltip is shown for altText. Note that setting altText and prompt to different values is not recommended - the prompt value will be ignored in favor of the altText in this case.
+		 * Flags: IRW, Group: accessibility */
+		altText?: string /* String */; // Flags=IRW
+		/** Default class used to construct the EditProxy for this component when the component is Canvas.setEditMode','first placed into edit mode.
+		 * Flags: IR */
+		editProxyConstructor?: string /* SCClassName */; // Flags=IR
+		/** Explicit size for the image, for Img.imageType settings that would normally use the image's natural size (applies to Img.imageType "center" and "normal" only).
+		 * Flags: IR */
+		imageHeight?: number /* integer */; // Flags=IR
+		/** Indicates whether the image should be tiled/cropped, stretched, or centered when the size of this widget does not match the size of the image. CENTER shows the image in it's natural size, but can't do so while the transparency fix is active for IE. The transparency fix can be manually disabled by setting Img.usePNGFix to false. See ImageStyle for further details.
+		 * Flags: IRW, Group: appearance */
+		imageType?: ImageStyle; // Flags=IRW
+		/** Explicit size for the image, for Img.imageType settings that would normally use the image's natural size (applies to Img.imageType "center" and "normal" only).
+		 * Flags: IR */
+		imageWidth?: number /* integer */; // Flags=IR
+		/** The value of this attribute is specified as the value of the 'name' attribute in the resulting HTML. Note: this attribute is ignored if the imageType is set to "tile"
+		 * Flags: IA */
+		name?: string; // Flags=IA
+		/** Prompt displayed in hover canvas if Canvas.showHover','showHover is true.
+		 * Flags: IRW, Group: hovers */
+		prompt?: string /* HTMLString */; // Flags=IRW
+		/** Determines whether any specified StatefulCanvas.getTitle','title will be displayed for this component. Applies to Image-based components only, where the title will be rendered out in a label floating over the component
+		 * Flags: IRWA */
+		showTitle?: boolean /* Boolean */; // Flags=IRWA
+		/** Convenience for setting height and width to the same value, at init time only
+		 * Flags: IR, Group: sizing */
+		size?: number /* Number */; // Flags=IR
+		/** The base filename for the image. This value will be combined with any specified StatefulCanvas.state','state to form a combined URL, changing the appearance of the component as the state changes. The following table lists out the standard set of combined URLs that may be generated. Subclasses may support additional state-derived media of course. Note that the src URL will be split such that the extension is always applied to the end of the combined string. For example in the following table, if src was set to "blank.gif", the Selected+Focused URL would be "blank_Selected_Focused.gif". <table> <tr><td>URL for Img source</td><td>Description</td></tr> <tr><td>src+extension</td><td>Default URL</td></tr> <tr><td>src+"_Selected"+extension</td> <td>Applied when StatefulCanvas.selected is set to true</td></tr> <tr><td>src+"_Focused"+extension</td> <td>Applied when the component has keyboard focus, if StatefulCanvas.showFocused is true, and StatefulCanvas.showFocusedAsOver is not true.</td></tr> <tr><td>src+"_Over"+extension</td> <td>Applied when the user rolls over the component if StatefulCanvas.showRollOver is set to true</td></tr> <tr><td>src+"_Down"+extension</td> <td>Applied when the user presses the mouse button over over the component if StatefulCanvas.showDown is set to true</td></tr> <tr><td>src+"_Disabled"+extension</td> <td>Applied to Canvas.disabled component if StatefulCanvas.showDisabled is true.</td></tr> <tr><td colspan=2>Combined states</td></tr> <tr><td>src+"_Selected_Focused"+extension</td> <td>Combined Selected and focused state</td></tr> <tr><td>src+"_Selected_Over"+extension</td> <td>Combined Selected and rollOver state</td></tr> <tr><td>src+"_Focused_Over"+extension</td> <td>Combined Focused and rollOver state</td></tr> <tr><td>src+"_Selected_Focused_Over"+extension</td> <td>Combined Selected, Focused and rollOver state</td></tr> <tr><td>src+"_Selected_Down"+extension</td> <td>Combined Selected and mouse-down state</td></tr> <tr><td>src+"_Focused_Down"+extension</td> <td>Combined Focused and mouse-down state</td></tr> <tr><td>src+"_Selected_Focused_Down"+extension</td> <td>Combined Selected, Focused and mouse-down state</td></tr> <tr><td>src+"_Selected_Disabled"+extension</td> <td>Combined Selected and Disabled state</td></tr> </table>
+		 * Flags: IRW, Group: appearance */
+		src?: string /* SCImgURL */; // Flags=IRW
+		/** If false, never apply the png fix needed in Internet Explorer to make png transparency work correctly.
+		 * Flags: IR */
+		usePNGFix?: boolean /* Boolean */; // Flags=IR
+
+		/* Method Overrides */
+
+	} // ImgProps
 
 
 	/**
@@ -8753,10 +8882,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ImgButton Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ImgButton Props argument.
 	 * This is derived from the methods in the ImgButton class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ImgButtonProperties  {
+	export interface ImgButtonProps  {
 		/** Behavior on state changes -- BUTTON, RADIO or CHECKBOX
 		 * Flags: IRW, Group: state */
 		actionType?: SelectionType; // Flags=IRW
@@ -8853,7 +8982,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // ImgButtonProperties
+	} // ImgButtonProps
 
 
 	/**
@@ -8994,14 +9123,14 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a isc Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a isc Props argument.
 	 * This is derived from the methods in the isc class and it's parents and their properties marked with the I flag.
 	 */
-	export interface iscProperties  {
+	export interface iscProps  {
 
 		/* Method Overrides */
 
-	} // iscProperties
+	} // iscProps
 
 
 	/**
@@ -9021,17 +9150,17 @@ declare namespace Isc {
 		 * Show a modal dialog with a message, icon, and "Yes" and "No" buttons. See Dialog.askIcon. The callback will receive boolean true for a Yes button click, boolean false for a No button click, or null if the Dialog is dismissed via the close button.
 		 * @param {string} message - message to display
 		 * @param {Callback} callback - Callback to fire when the user clicks a button to dismiss the dialog. This has the single parameter 'value', indicating the value returned by the Warn dialog from 'okClick()' etc.
-		 * @param {DialogProperties} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for the Dialog, set properties.buttons to an array of buttons eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for the Dialog, set properties.buttons to an array of buttons eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		ask(message:string, callback?:Callback, properties?:DialogProperties /* Dialog Properties */): void; 
+		ask(message:string, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/** 
 		 * Show a modal dialog with a text entry box, asking the user to enter a value. As with other convenience methods that show Dialogs, such as isc.warn, the dialog is shown and the function immediately returns. When the user responds, the provided callback is called. If the user clicks OK, the value typed in is passed to the callback (including the empty string ("") if nothing was entered. If the user clicks cancel, the value passed to the callback is null. A default value for the text field can be passed via properties.defaultValue. Keyboard focus is automatically placed in the text entry field, and hitting the enter key is the equivalent of pressing OK.
 		 * @param {string} message - message to display
 		 * @param {Callback} callback - Callback to fire when the user clicks a button to dismiss the dialog. This has the single parameter 'value', indicating the user entry, or null if cancel was pressed or the window closed
-		 * @param {DialogProperties} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for the Dialog, set properties.buttons to an array of buttons eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for the Dialog, set properties.buttons to an array of buttons eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		askForValue(message:string, callback?:Callback, properties?:DialogProperties /* Dialog Properties */): void; 
+		askForValue(message:string, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/** 
 		 * Is some property specified on the object passed in? This will return true if object[propertyName] has ever been set to any value, and not deleted. May return true even if object[propertyName] === undefined if the property is present on the object and has been explicitly set to undefined.
@@ -9044,26 +9173,26 @@ declare namespace Isc {
 		 * Show a modal dialog with a message, icon, and "OK" button. Intended for notifications which are not really warnings (default icon is less severe). See Dialog.sayIcon. The callback will receive boolean true for an OK button click, or null if the Dialog is dismissed via the close button.
 		 * @param {string} message - message to display
 		 * @param {Callback} callback - Optional Callback to fire when the user dismisses the dialog. This has the single parameter 'value', indicating the value returned by the Warn dialog from 'okClick()' etc.
-		 * @param {DialogProperties} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for the Dialog, set properties.buttons to an array of buttons eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for the Dialog, set properties.buttons to an array of buttons eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		say(message:string, callback?:Callback, properties?:DialogProperties /* Dialog Properties */): void; 
+		say(message:string, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/** 
 		 * Show a modal dialog with a message, icon, and "OK" button. See Dialog.warnIcon. The callback will receive boolean true for an OK button click, or null if the Dialog is dismissed via the close button.
 		 * @param {string} message - message to display
 		 * @param {Callback} callback - Optional Callback to fire when the user dismisses the dialog. This has the single parameter 'value', indicating the value returned by the Warn dialog from 'okClick()' etc.
-		 * @param {DialogProperties} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for the Dialog, set properties.buttons to an array of buttons eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for the Dialog, set properties.buttons to an array of buttons eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		warn(message:string, callback?:Callback, properties?:DialogProperties /* Dialog Properties */): void; 
+		warn(message:string, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 	} // iscStatic
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Label Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Label Props argument.
 	 * This is derived from the methods in the Label class and it's parents and their properties marked with the I flag.
 	 */
-	export interface LabelProperties extends ButtonProperties {
+	export interface LabelProps extends ButtonProps {
 		/** Horizontal alignment of label text. See Alignment type for details.
 		 * Flags: IRW, Group: positioning */
 		align?: Alignment; // Flags=IRW
@@ -9133,7 +9262,7 @@ declare namespace Isc {
 		 */
 		setContents?(newContents?:string): void; 
 
-	} // LabelProperties
+	} // LabelProps
 
 
 	/**
@@ -9236,10 +9365,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Layout Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Layout Props argument.
 	 * This is derived from the methods in the Layout class and it's parents and their properties marked with the I flag.
 	 */
-	export interface LayoutProperties extends CanvasProperties {
+	export interface LayoutProps extends CanvasProps {
 		/** Alignment of all members in this Layout on the length axis (vertical for a VLayout, horizontal for an HLayout). Defaults to "top" for vertical Layouts, and "left" for horizontal Layouts. Horizontal layouts should only be set to Alignment, and vertical layouts to VerticalAlignment, otherwise they will be considered invalid values, and assigning an invalid value here will log a warning to the Developer Console. For alignment on the breadth axis, see Layout.defaultLayoutAlign and Canvas.layoutAlign. When attempting to center components be sure that you have set a specific size on the component(s) involved. If components fill all available space in the layout, centering looks the same as not centering. Similarly, if a component has no visible boundary (like a border), it can appear similar to when it's not centered if the component is larger than you expect - use the Watch tab in the Developer Console to see the component's extents visually.
 		 * Flags: IRW, Group: layoutPolicy */
 		align?: Alignment | VerticalAlignment /* Alignment or VerticalAlignment */; // Flags=IRW
@@ -9320,10 +9449,10 @@ declare namespace Isc {
 		paddingAsLayoutMargin?: boolean /* Boolean */; // Flags=IRWA
 		/** If Layout.showDragPlaceHolder','this.showDragPlaceHolder is true, this defaults object determines the default appearance of the placeholder displayed when the user drags a widget out of this layout. Default value for this property sets the placeholder Canvas.styleName','styleName to "layoutPlaceHolder" To modify this object, use Class.changeDefaults
 		 * Flags: IR, Group: dragdrop */
-		placeHolderDefaults?: CanvasProperties /* Canvas Properties */; // Flags=IR
+		placeHolderDefaults?: CanvasProps /* Canvas Properties */; // Flags=IR
 		/** If Layout.showDragPlaceHolder','this.showDragPlaceHolder is true, this properties object can be used to customize the appearance of the placeholder displayed when the user drags a widget out of this layout.
 		 * Flags: IR, Group: dragdrop */
-		placeHolderProperties?: CanvasProperties /* canvas properties */; // Flags=IR
+		placeHolderProperties?: CanvasProps /* canvas properties */; // Flags=IR
 		/** Default class to use for creating Layout.resizeBar','resizeBars. This may be overridden by resizeBarConstructor. Classes that are valid by default are Splitbar, ImgSplitbar, and Snapbar.
 		 * Flags: AIRW */
 		resizeBarClass?: string /* String */; // Flags=AIRW
@@ -9358,7 +9487,7 @@ declare namespace Isc {
 		 */
 		addMember?(newMember:Canvas, position?:number /* Integer */): void; 
 
-	} // LayoutProperties
+	} // LayoutProps
 
 
 	/**
@@ -9475,11 +9604,11 @@ declare namespace Isc {
 
 		/** If Layout.showDragPlaceHolder','this.showDragPlaceHolder is true, this defaults object determines the default appearance of the placeholder displayed when the user drags a widget out of this layout. Default value for this property sets the placeholder Canvas.styleName','styleName to "layoutPlaceHolder" To modify this object, use Class.changeDefaults
 		 * Flags: IR, Group: dragdrop */
-		placeHolderDefaults: CanvasProperties /* Canvas Properties */;
+		placeHolderDefaults: CanvasProps /* Canvas Properties */;
 
 		/** If Layout.showDragPlaceHolder','this.showDragPlaceHolder is true, this properties object can be used to customize the appearance of the placeholder displayed when the user drags a widget out of this layout.
 		 * Flags: IR, Group: dragdrop */
-		placeHolderProperties: CanvasProperties /* canvas properties */;
+		placeHolderProperties: CanvasProps /* canvas properties */;
 
 		/** A MultiAutoChild created to resize members of this Layout. A resize bar will be created for any member of this Layout that has Canvas.showResizeBar','showResizeBar set to true. Resize bars will be instances of the class specified by Layout.resizeBarClass by default, and will automatically be sized to the member's breadth, and to the thickness specified by Layout.resizeBarSize. To customize the appearance or behavior of resizeBars within some layout a custom resize bar class can be created by subclassing Splitbar or ImgSplitbar and setting Layout.resizeBarClass or resizeBarConstructor to this custom class. Alternatively, resizeBarProperties may be specified. See autoChildUsage for more information. The built-in Splitbar class supports drag resizing of its target member, and clicking on the bar with a mouse to collapse/uncollapse the target member.
 		 * Flags: A */
@@ -9534,11 +9663,11 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a LayoutSpacer Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a LayoutSpacer Props argument.
 	 * This is derived from the methods in the LayoutSpacer class and it's parents and their properties marked with the I flag.
 	 */
-	export interface LayoutSpacerProperties extends CanvasProperties {
-	} // LayoutSpacerProperties
+	export interface LayoutSpacerProps extends CanvasProps {
+	} // LayoutSpacerProps
 
 
 	/**
@@ -9552,10 +9681,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ListGrid Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ListGrid Props argument.
 	 * This is derived from the methods in the ListGrid class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ListGridProperties extends VLayoutProperties {
+	export interface ListGridProps extends VLayoutProps {
 		/** When ListGrid.useAdvancedFieldPicker is set, total number of available fields that must be present in the grid before the advanced field picker interface is used instead of the normal columns submenu. Set to 0 to have the advanced picker always used (when useAdvancedFieldPicker is true).
 		 * Flags: IR */
 		advancedFieldPickerThreshold?: number /* int */; // Flags=IR
@@ -10128,7 +10257,7 @@ declare namespace Isc {
 		filterButtonPrompt?: string /* String */; // Flags=IR
 		/** If ListGrid.showFilterEditor is true, this attribute may be used to customize the filter button shown to the right of the filterEditor row.
 		 * Flags: IR */
-		filterButtonProperties?: ButtonProperties /* Button properties */; // Flags=IR
+		filterButtonProperties?: ButtonProps /* Button properties */; // Flags=IR
 		/** If we're showing the filterEditor (this.showFilterEditor is true), this property determines whether this list should be filtered every time the user puts focus in a different field in the filter editor.
 		 * Flags: IRWA, Group: filterEditor */
 		filterByCell?: boolean; // Flags=IRWA
@@ -10137,7 +10266,7 @@ declare namespace Isc {
 		filterEditorHeight?: number; // Flags=IRW
 		/** Properties to apply to the automatically generated ListGrid.filterEditor if ListGrid.showFilterEditor is true.
 		 * Flags: IR */
-		filterEditorProperties?: RecordEditorProperties /* RecordEditor properties */; // Flags=IR
+		filterEditorProperties?: RecordEditorProps /* RecordEditor properties */; // Flags=IR
 		/** Causes filtering to be performed against the local data set, even when a ListGrid.dataSource is provided. When using this mode, data must be provided to the grid via ListGrid.setData, and must be provided as a simple Array of Records . Note that a ListGrid.dataSource must be provided for filtering to occur even when filtering locally. If this property is set to true, the supplied data is applied as the ResultSet.allRows','complete dataset of a ResultSet, which is then filtered according to the specified criteria, and the results displayed. If false, a normal databound fetch will occur, retrieving records that match the specified criteria from this component's ListGrid.dataSource. filterLocalData includes both calls to ListGrid.fetchData and ListGrid.filterData as well as automatic filtering when the ListGrid.filterEditor is enabled. If this property is not explicitly set, default behavior will filter against the dataSource unless the grid has a specified DataPath','dataPath, in which case filtering will occur locally. See also ListGrid.saveLocally to cause saves to ignore the DataSource and affect the local data set only.
 		 * Flags: IRA */
 		filterLocalData?: boolean; // Flags=IRA
@@ -10266,10 +10395,10 @@ declare namespace Isc {
 		headerButtonConstructor?: Class; // Flags=IR
 		/** Defaults to apply to all header buttons. To modify this object, use Class.changeDefaults','ListGrid.changeDefaults() rather than replacing with an entirely new object.
 		 * Flags: IRA, Group: gridHeader */
-		headerButtonDefaults?: ButtonProperties /* Button Properties */; // Flags=IRA
+		headerButtonDefaults?: ButtonProps /* Button Properties */; // Flags=IRA
 		/** Properties to apply to all header buttons. Overrides defaults applied via ListGrid.headerButtonDefaults.
 		 * Flags: IRA, Group: gridHeader */
-		headerButtonProperties?: ButtonProperties /* Button Properties */; // Flags=IRA
+		headerButtonProperties?: ButtonProps /* Button Properties */; // Flags=IRA
 		/** The height of this listGrid's header, in pixels.
 		 * Flags: IRW, Group: gridHeader */
 		headerHeight?: number; // Flags=IRW
@@ -10464,10 +10593,10 @@ declare namespace Isc {
 		modalEditing?: boolean; // Flags=IRWA
 		/** Class level defaults to apply to the MultiSortDialog which gets automatically generated when DataBoundComponent.askForSort is called. See also ListGrid.showHeaderSpanTitlesInSortEditor and ListGrid.sortEditorSpanTitleSeparator
 		 * Flags: IR */
-		multiSortDialogDefaults?: MultiSortDialogProperties /* MultiSortDialog properties */; // Flags=IR
+		multiSortDialogDefaults?: MultiSortDialogProps /* MultiSortDialog properties */; // Flags=IR
 		/** Properties to apply to the MultiSortDialog which gets automatically generated when DataBoundComponent.askForSort is called. See also ListGrid.showHeaderSpanTitlesInSortEditor and ListGrid.sortEditorSpanTitleSeparator
 		 * Flags: IR */
-		multiSortDialogProperties?: MultiSortDialogProperties /* MultiSortDialog properties */; // Flags=IR
+		multiSortDialogProperties?: MultiSortDialogProps /* MultiSortDialog properties */; // Flags=IR
 		/** If ListGrid.canSelectCells is true, this property allows the user to navigate through the cells of a grid using Tab and Shift+Tab keypresses. When a user tabs to the end of the row, the ListGrid.rowEndEditAction is used to determine whether to shift selection to the next row, return to the beginning of the same row, or simply move on through the page's tab order.
 		 * Flags: IRW */
 		navigateOnTab?: boolean; // Flags=IRW
@@ -10629,7 +10758,7 @@ declare namespace Isc {
 		saveLocally?: boolean; // Flags=IRA
 		/** For editable grids with a specified ListGrid.dataSource, where ListGrid.saveLocally is false, this attribute may be used to specify standard DSRequest properties to apply to all save operations performed by this grid (whether triggered by user interaction, or explicit saveEdits or saveAllEdits call). An example usage would be to customize the prompt displayed while saving is in progress if ListGrid.waitForSave is true. Note that for more advanced customization of save operations, DataBoundComponent.addOperation and DataBoundComponent.updateOperation are available to developers, allowing specification of an explicit OperationBinding for the add / update operation performed on save.
 		 * Flags: IRWA, Group: dataBinding */
-		saveRequestProperties?: DSRequestProperties /* DSRequest Properties */; // Flags=IRWA
+		saveRequestProperties?: DSRequestProps /* DSRequest Properties */; // Flags=IRWA
 		/** When isc.setScreenReaderMode','screen reader mode is enabled, this invisible separator string is written out between each cell value. This string will be picked up by screen readers allowing them to more obviously identify to the user the different cell values as the contents of a row are read aloud. The ListGrid.screenReaderRowSeparator','screenReaderRowSeparator string if any will be written out after the last cell in a row to separate the last cell's value from the screen reader's announcement of the row's number and total number of rows in the grid (such as "3 of 20"). This attribute may be set to null to disable the feature. Note that screen readers vary widely on which punctuation symbols are read aloud, and sometimes it depends on the context of the punctuation. However, the widely-used JAWS, NVDA, and VoiceOver screen readers all read the forward slash '/' as "slash". See <a href='http://www.deque.com/blog/dont-screen-readers-read-whats-screen-part-1-punctuation-typographic-symbols/' target='_blank'>Why Don’t Screen Readers Always Read What’s on the Screen? Part 1: Punctuation and Typographic Symbols</a> for a table of findings on which punctuation symbols are read aloud by JAWS, NVDA, and VoiceOver.
 		 * Flags: IRA, Group: accessibility */
 		screenReaderCellSeparator?: string /* HTMLString */; // Flags=IRA
@@ -10833,7 +10962,7 @@ declare namespace Isc {
 		sorterDefaults?: any /* object */; // Flags=IRA
 		/** Properties to apply to the sorter button. Overrides defaults applied via ListGrid.sorterDefaults.
 		 * Flags: IRA, Group: gridHeader */
-		sorterProperties?: ButtonProperties /* Button Properties */; // Flags=IRA
+		sorterProperties?: ButtonProps /* Button Properties */; // Flags=IRA
 		/** Specifies the field by which this grid should be initially sorted. Can be set to either a ListGridField.name','field name or the index of the field in the fields Array. ListGrids also support being initialized with multiple-field sort via ListGrid.initialSort. If initialSort is specified, it will be used in preference to this property. To sort the grid after it has been initialized, use ListGrid.sort or ListGrid.setSort. Details about the current sort of a live grid can be retrieved by calling ListGrid.getSortField or ListGrid.getSort
 		 * Flags: IR, Group: sorting */
 		sortField?: string | number /* String | int */; // Flags=IR
@@ -10863,7 +10992,7 @@ declare namespace Isc {
 		summaryRowDataSource?: DataSource; // Flags=IRA
 		/** If ListGrid.showGridSummary is true, and a ListGrid.summaryRowDataSource is specified this property may be used to customize the fetch request used when retrieving summary data to show in the summary row. An example use case might be specifying a DSRequest.operationId to perform a custom fetch operation which retrieved only summary values based on criteria.
 		 * Flags: IRWA */
-		summaryRowFetchRequestProperties?: DSRequestProperties /* DSRequest Properties */; // Flags=IRWA
+		summaryRowFetchRequestProperties?: DSRequestProps /* DSRequest Properties */; // Flags=IRWA
 		/** Default height for the ListGrid.summaryRow','summary row autoChild. Note that this height is a minimum - the summary row has ListGrid.autoFitData set to "vertical" so if multiple rows are visible in the grid summary, the summaryRow component will expand to accommodate them.
 		 * Flags: IR */
 		summaryRowHeight?: number /* int */; // Flags=IR
@@ -10998,16 +11127,39 @@ declare namespace Isc {
 		getCellCSSText?(record:ListGridRecord, rowNum:number, colNum:number): string; 
 
 		/** 
+		 * Retrieves a copy of the current criteria for this component (may be null). Note: if ListGrid.showFilterEditor is true, the criteria returned by this method may not match the values currently displayed in the filter editor, since the user may have entered values which have not yet been applied to our data. ListGrid.getFilterEditorCriteria may be used to retrieve the current criteria displayed in the filterEditor.
+		 */
+		getCriteria?(): Criteria; 
+
+		/** 
 		 * Given a column number or field name, return the field definition of a field which is visible in the grid. To retrieve the definition of any field, including hidden ones, use ListGrid.getFieldByName','getFieldByName(). When using DataBoundComponent.fields','DataBinding, the field definition may be a mix of information derived from ListGrid.fields and ListGrid.dataSource.
 		 * @param {number} colNum - number or id of the field.
 		 */
 		getField?(colNum:number | string /* int | ID */): ListGridField; 
 
 		/** 
+		 * Given a column number or field id, return the field name of a field.
+		 * @param {number} colNum - number or id of the field.
+		 */
+		getFieldName?(colNum:number | string /* number or id */): string; 
+
+		/** 
 		 * Return the pointer to a particular record by record number. Synonym for ListGrid.getCellRecord.
 		 * @param {number} recordNum - row index of record to return.
 		 */
 		getRecord?(recordNum:number): ListGridRecord; 
+
+		/** 
+		 * Returns all selected records in this grid. <strong>NOTE:</strong> Records in the returned array should be treated as read-only and not modified.
+		 * @param {boolean} excludePartialSelections - When true, partially selected records will not be returned. Otherwise, both fully and partially selected records are returned.
+		 */
+		getSelectedRecords?(excludePartialSelections?:boolean): Array<ListGridRecord> /* Array of ListGridRecord */; 
+
+		/** 
+		 * Returns all selected records in this grid. If this grid is ListGrid.isGrouped','grouped, group header nodes will not be included in the returned array. Developers can make use of ListGrid.getGroupTreeSelection to get the selection including the selected group header nodes. <strong>NOTE:</strong> Records in the returned array should be treated as read-only and not modified.
+		 * @param {boolean} excludePartialSelections - When true, partially selected records will not be returned. Otherwise, both fully and partially selected records are returned.
+		 */
+		getSelection?(excludePartialSelections?:boolean /* Boolean */): Array<ListGridRecord> /* Array of ListGridRecord */; 
 
 		/** 
 		 * Returns a snapshot of the current view state of this ListGrid. This includes the field, sort, hilite, group, and selected state of the grid, returned as a string representation of a ListGridViewState object. This string can be passed to ListGrid.setViewState to reset this grid's view state to the current state (assuming the same data / fields are present in the grid).
@@ -11036,9 +11188,9 @@ declare namespace Isc {
 		 * Remove a record from this ListGrid. If this grid is bound to a DataSource, it will perform a DataSource "remove" operation to remove records from this component's DataSource. Otherwise the data will be removed from the grid's ListGrid.data','data object. To make changes to the local data object even when a DataSource is present, use ListGrid.saveLocally.
 		 * @param {any} data - listGrid record, or primary key values of record to delete.
 		 * @param {DSCallback} callback - method to call on operation completion. Note that if this is method does not trigger a dataSource remove operation, the callback will still be fired when the data has been removed, but the dsResponse parameter will be null.
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on any DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on any DSRequest that will be issued
 		 */
-		removeData?(data:any /* Record */, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		removeData?(data:any /* Record */, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
 		/** 
 		 * Select/deselect a Record passed in explicitly, or by index. Note that this method selects records unconditionally, allowing multiple selected records, even when ListGrid.selectionType is "single". To enforce mutually-exclusive record-selection, use ListGrid.selectSingleRecord.
@@ -11048,20 +11200,39 @@ declare namespace Isc {
 		selectRecord?(record:any | number /* Record | number */, newState?:boolean): void; 
 
 		/** 
+		 * Sets this component's filter criteria. Default implementation calls this.data.setCriteria(). Note: if ListGrid.showFilterEditor is true, the ListGrid.setFilterEditorCriteria method may be used to update the values displayed in the filter editor without effecting the data object.
+		 * @param {Criteria}  - new criteria to show
+		 */
+		setCriteria?(:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
+
+		/** 
+		 * Setter for the ListGrid.showFilterEditor property. Allows the filter editor to be shown or hidden at runtime.
+		 * @param {boolean} value - true if the filter editor should be shown, false if it should be hidden
+		 */
+		setShowFilterEditor?(value:boolean): void; 
+
+		/** 
 		 * Reset this grid's view state to match the ListGridViewState object passed in. Used to restore previous state retrieved from the grid by a call to ListGrid.getViewState.
 		 * @param {string} viewState - Object describing the desired view state for the grid
 		 */
 		setViewState?(viewState:string /* ListGridViewState */): void; 
 
 		/** 
+		 * Start editing a new row, after the last pre-existing record in the current set of data. This new row will be saved via the "add" dataSourceOperations','DataSource\n operation. See the editing','Grid Editing overview and also the unsavedRecords','Editing Unsaved Records overview for context about how unsaved records behave. You can optionally pass newValues which are the initial values for the newly added record. See also ListGridField.defaultValue as a means of setting default values every time the user begins editing a new record, for instance, by pressing downArrow on the last normal record in the grid when ListGrid.listEndEditAction is "next". If editing is already underway elsewhere in the grid, startEditingNew() behaves just like ListGrid.startEditing.
+		 * @param {any} newValues - Optional initial set of properties for the new record
+		 * @param {boolean} suppressFocus - Whether to suppress the default behavior of moving focus to the newly shown editor.
+		 */
+		startEditingNew?(newValues?:any | any /* Map | Record */, suppressFocus?:boolean /* Boolean */): void; 
+
+		/** 
 		 * Perform a DataSource "update" operation to update existing records in this component's DataSource.
 		 * @param {any} updatedRecord - updated record
 		 * @param {DSCallback} callback - method to call on operation completion
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on the DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on the DSRequest that will be issued
 		 */
-		updateData?(updatedRecord:any /* Record */, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		updateData?(updatedRecord:any /* Record */, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
-	} // ListGridProperties
+	} // ListGridProps
 
 
 	/**
@@ -11874,7 +12045,7 @@ declare namespace Isc {
 
 		/** If ListGrid.showFilterEditor is true, this attribute may be used to customize the filter button shown to the right of the filterEditor row.
 		 * Flags: IR */
-		filterButtonProperties: ButtonProperties /* Button properties */;
+		filterButtonProperties: ButtonProps /* Button properties */;
 
 		/** If we're showing the filterEditor (this.showFilterEditor is true), this property determines whether this list should be filtered every time the user puts focus in a different field in the filter editor.
 		 * Flags: IRWA, Group: filterEditor */
@@ -11890,7 +12061,7 @@ declare namespace Isc {
 
 		/** Properties to apply to the automatically generated ListGrid.filterEditor if ListGrid.showFilterEditor is true.
 		 * Flags: IR */
-		filterEditorProperties: RecordEditorProperties /* RecordEditor properties */;
+		filterEditorProperties: RecordEditorProps /* RecordEditor properties */;
 
 		/** Causes filtering to be performed against the local data set, even when a ListGrid.dataSource is provided. When using this mode, data must be provided to the grid via ListGrid.setData, and must be provided as a simple Array of Records . Note that a ListGrid.dataSource must be provided for filtering to occur even when filtering locally. If this property is set to true, the supplied data is applied as the ResultSet.allRows','complete dataset of a ResultSet, which is then filtered according to the specified criteria, and the results displayed. If false, a normal databound fetch will occur, retrieving records that match the specified criteria from this component's ListGrid.dataSource. filterLocalData includes both calls to ListGrid.fetchData and ListGrid.filterData as well as automatic filtering when the ListGrid.filterEditor is enabled. If this property is not explicitly set, default behavior will filter against the dataSource unless the grid has a specified DataPath','dataPath, in which case filtering will occur locally. See also ListGrid.saveLocally to cause saves to ignore the DataSource and affect the local data set only.
 		 * Flags: IRA */
@@ -12078,11 +12249,11 @@ declare namespace Isc {
 
 		/** Defaults to apply to all header buttons. To modify this object, use Class.changeDefaults','ListGrid.changeDefaults() rather than replacing with an entirely new object.
 		 * Flags: IRA, Group: gridHeader */
-		headerButtonDefaults: ButtonProperties /* Button Properties */;
+		headerButtonDefaults: ButtonProps /* Button Properties */;
 
 		/** Properties to apply to all header buttons. Overrides defaults applied via ListGrid.headerButtonDefaults.
 		 * Flags: IRA, Group: gridHeader */
-		headerButtonProperties: ButtonProperties /* Button Properties */;
+		headerButtonProperties: ButtonProps /* Button Properties */;
 
 		/** The context menu displayed for column headers.
 		 * Flags: R, Group: gridHeader */
@@ -12354,11 +12525,11 @@ declare namespace Isc {
 
 		/** Class level defaults to apply to the MultiSortDialog which gets automatically generated when DataBoundComponent.askForSort is called. See also ListGrid.showHeaderSpanTitlesInSortEditor and ListGrid.sortEditorSpanTitleSeparator
 		 * Flags: IR */
-		multiSortDialogDefaults: MultiSortDialogProperties /* MultiSortDialog properties */;
+		multiSortDialogDefaults: MultiSortDialogProps /* MultiSortDialog properties */;
 
 		/** Properties to apply to the MultiSortDialog which gets automatically generated when DataBoundComponent.askForSort is called. See also ListGrid.showHeaderSpanTitlesInSortEditor and ListGrid.sortEditorSpanTitleSeparator
 		 * Flags: IR */
-		multiSortDialogProperties: MultiSortDialogProperties /* MultiSortDialog properties */;
+		multiSortDialogProperties: MultiSortDialogProps /* MultiSortDialog properties */;
 
 		/** If ListGrid.canSelectCells is true, this property allows the user to navigate through the cells of a grid using Tab and Shift+Tab keypresses. When a user tabs to the end of the row, the ListGrid.rowEndEditAction is used to determine whether to shift selection to the next row, return to the beginning of the same row, or simply move on through the page's tab order.
 		 * Flags: IRW */
@@ -12586,7 +12757,7 @@ declare namespace Isc {
 
 		/** For editable grids with a specified ListGrid.dataSource, where ListGrid.saveLocally is false, this attribute may be used to specify standard DSRequest properties to apply to all save operations performed by this grid (whether triggered by user interaction, or explicit saveEdits or saveAllEdits call). An example usage would be to customize the prompt displayed while saving is in progress if ListGrid.waitForSave is true. Note that for more advanced customization of save operations, DataBoundComponent.addOperation and DataBoundComponent.updateOperation are available to developers, allowing specification of an explicit OperationBinding for the add / update operation performed on save.
 		 * Flags: IRWA, Group: dataBinding */
-		saveRequestProperties: DSRequestProperties /* DSRequest Properties */;
+		saveRequestProperties: DSRequestProps /* DSRequest Properties */;
 
 		/** When isc.setScreenReaderMode','screen reader mode is enabled, this invisible separator string is written out between each cell value. This string will be picked up by screen readers allowing them to more obviously identify to the user the different cell values as the contents of a row are read aloud. The ListGrid.screenReaderRowSeparator','screenReaderRowSeparator string if any will be written out after the last cell in a row to separate the last cell's value from the screen reader's announcement of the row's number and total number of rows in the grid (such as "3 of 20"). This attribute may be set to null to disable the feature. Note that screen readers vary widely on which punctuation symbols are read aloud, and sometimes it depends on the context of the punctuation. However, the widely-used JAWS, NVDA, and VoiceOver screen readers all read the forward slash '/' as "slash". See <a href='http://www.deque.com/blog/dont-screen-readers-read-whats-screen-part-1-punctuation-typographic-symbols/' target='_blank'>Why Don’t Screen Readers Always Read What’s on the Screen? Part 1: Punctuation and Typographic Symbols</a> for a table of findings on which punctuation symbols are read aloud by JAWS, NVDA, and VoiceOver.
 		 * Flags: IRA, Group: accessibility */
@@ -12874,7 +13045,7 @@ declare namespace Isc {
 
 		/** Properties to apply to the sorter button. Overrides defaults applied via ListGrid.sorterDefaults.
 		 * Flags: IRA, Group: gridHeader */
-		sorterProperties: ButtonProperties /* Button Properties */;
+		sorterProperties: ButtonProps /* Button Properties */;
 
 		/** Specifies the field by which this grid should be initially sorted. Can be set to either a ListGridField.name','field name or the index of the field in the fields Array. ListGrids also support being initialized with multiple-field sort via ListGrid.initialSort. If initialSort is specified, it will be used in preference to this property. To sort the grid after it has been initialized, use ListGrid.sort or ListGrid.setSort. Details about the current sort of a live grid can be retrieved by calling ListGrid.getSortField or ListGrid.getSort
 		 * Flags: IR, Group: sorting */
@@ -12922,7 +13093,7 @@ declare namespace Isc {
 
 		/** If ListGrid.showGridSummary is true, and a ListGrid.summaryRowDataSource is specified this property may be used to customize the fetch request used when retrieving summary data to show in the summary row. An example use case might be specifying a DSRequest.operationId to perform a custom fetch operation which retrieved only summary values based on criteria.
 		 * Flags: IRWA */
-		summaryRowFetchRequestProperties: DSRequestProperties /* DSRequest Properties */;
+		summaryRowFetchRequestProperties: DSRequestProps /* DSRequest Properties */;
 
 		/** Default height for the ListGrid.summaryRow','summary row autoChild. Note that this height is a minimum - the summary row has ListGrid.autoFitData set to "vertical" so if multiple rows are visible in the grid summary, the summaryRow component will expand to accommodate them.
 		 * Flags: IR */
@@ -13091,16 +13262,39 @@ declare namespace Isc {
 		getCellCSSText?(record:ListGridRecord, rowNum:number, colNum:number): string; 
 
 		/** 
+		 * Retrieves a copy of the current criteria for this component (may be null). Note: if ListGrid.showFilterEditor is true, the criteria returned by this method may not match the values currently displayed in the filter editor, since the user may have entered values which have not yet been applied to our data. ListGrid.getFilterEditorCriteria may be used to retrieve the current criteria displayed in the filterEditor.
+		 */
+		getCriteria?(): Criteria; 
+
+		/** 
 		 * Given a column number or field name, return the field definition of a field which is visible in the grid. To retrieve the definition of any field, including hidden ones, use ListGrid.getFieldByName','getFieldByName(). When using DataBoundComponent.fields','DataBinding, the field definition may be a mix of information derived from ListGrid.fields and ListGrid.dataSource.
 		 * @param {number} colNum - number or id of the field.
 		 */
 		getField?(colNum:number | string /* int | ID */): ListGridField; 
 
 		/** 
+		 * Given a column number or field id, return the field name of a field.
+		 * @param {number} colNum - number or id of the field.
+		 */
+		getFieldName?(colNum:number | string /* number or id */): string; 
+
+		/** 
 		 * Return the pointer to a particular record by record number. Synonym for ListGrid.getCellRecord.
 		 * @param {number} recordNum - row index of record to return.
 		 */
 		getRecord?(recordNum:number): ListGridRecord; 
+
+		/** 
+		 * Returns all selected records in this grid. <strong>NOTE:</strong> Records in the returned array should be treated as read-only and not modified.
+		 * @param {boolean} excludePartialSelections - When true, partially selected records will not be returned. Otherwise, both fully and partially selected records are returned.
+		 */
+		getSelectedRecords?(excludePartialSelections?:boolean): Array<ListGridRecord> /* Array of ListGridRecord */; 
+
+		/** 
+		 * Returns all selected records in this grid. If this grid is ListGrid.isGrouped','grouped, group header nodes will not be included in the returned array. Developers can make use of ListGrid.getGroupTreeSelection to get the selection including the selected group header nodes. <strong>NOTE:</strong> Records in the returned array should be treated as read-only and not modified.
+		 * @param {boolean} excludePartialSelections - When true, partially selected records will not be returned. Otherwise, both fully and partially selected records are returned.
+		 */
+		getSelection?(excludePartialSelections?:boolean /* Boolean */): Array<ListGridRecord> /* Array of ListGridRecord */; 
 
 		/** 
 		 * Returns a snapshot of the current view state of this ListGrid. This includes the field, sort, hilite, group, and selected state of the grid, returned as a string representation of a ListGridViewState object. This string can be passed to ListGrid.setViewState to reset this grid's view state to the current state (assuming the same data / fields are present in the grid).
@@ -13129,9 +13323,9 @@ declare namespace Isc {
 		 * Remove a record from this ListGrid. If this grid is bound to a DataSource, it will perform a DataSource "remove" operation to remove records from this component's DataSource. Otherwise the data will be removed from the grid's ListGrid.data','data object. To make changes to the local data object even when a DataSource is present, use ListGrid.saveLocally.
 		 * @param {any} data - listGrid record, or primary key values of record to delete.
 		 * @param {DSCallback} callback - method to call on operation completion. Note that if this is method does not trigger a dataSource remove operation, the callback will still be fired when the data has been removed, but the dsResponse parameter will be null.
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on any DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on any DSRequest that will be issued
 		 */
-		removeData?(data:any /* Record */, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		removeData?(data:any /* Record */, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
 		/** 
 		 * Select/deselect a Record passed in explicitly, or by index. Note that this method selects records unconditionally, allowing multiple selected records, even when ListGrid.selectionType is "single". To enforce mutually-exclusive record-selection, use ListGrid.selectSingleRecord.
@@ -13141,18 +13335,37 @@ declare namespace Isc {
 		selectRecord?(record:any | number /* Record | number */, newState?:boolean): void; 
 
 		/** 
+		 * Sets this component's filter criteria. Default implementation calls this.data.setCriteria(). Note: if ListGrid.showFilterEditor is true, the ListGrid.setFilterEditorCriteria method may be used to update the values displayed in the filter editor without effecting the data object.
+		 * @param {Criteria}  - new criteria to show
+		 */
+		setCriteria?(:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
+
+		/** 
+		 * Setter for the ListGrid.showFilterEditor property. Allows the filter editor to be shown or hidden at runtime.
+		 * @param {boolean} value - true if the filter editor should be shown, false if it should be hidden
+		 */
+		setShowFilterEditor?(value:boolean): void; 
+
+		/** 
 		 * Reset this grid's view state to match the ListGridViewState object passed in. Used to restore previous state retrieved from the grid by a call to ListGrid.getViewState.
 		 * @param {string} viewState - Object describing the desired view state for the grid
 		 */
 		setViewState?(viewState:string /* ListGridViewState */): void; 
 
 		/** 
+		 * Start editing a new row, after the last pre-existing record in the current set of data. This new row will be saved via the "add" dataSourceOperations','DataSource\n operation. See the editing','Grid Editing overview and also the unsavedRecords','Editing Unsaved Records overview for context about how unsaved records behave. You can optionally pass newValues which are the initial values for the newly added record. See also ListGridField.defaultValue as a means of setting default values every time the user begins editing a new record, for instance, by pressing downArrow on the last normal record in the grid when ListGrid.listEndEditAction is "next". If editing is already underway elsewhere in the grid, startEditingNew() behaves just like ListGrid.startEditing.
+		 * @param {any} newValues - Optional initial set of properties for the new record
+		 * @param {boolean} suppressFocus - Whether to suppress the default behavior of moving focus to the newly shown editor.
+		 */
+		startEditingNew?(newValues?:any | any /* Map | Record */, suppressFocus?:boolean /* Boolean */): void; 
+
+		/** 
 		 * Perform a DataSource "update" operation to update existing records in this component's DataSource.
 		 * @param {any} updatedRecord - updated record
 		 * @param {DSCallback} callback - method to call on operation completion
-		 * @param {DSRequestProperties} requestProperties - additional properties to set on the DSRequest that will be issued
+		 * @param {DSRequestProps} requestProperties - additional properties to set on the DSRequest that will be issued
 		 */
-		updateData?(updatedRecord:any /* Record */, callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest Properties */): void; 
+		updateData?(updatedRecord:any /* Record */, callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest Properties */): void; 
 
 	} // ListGrid
 
@@ -13161,10 +13374,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Mail Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Mail Props argument.
 	 * This is derived from the methods in the Mail class and it's parents and their properties marked with the I flag.
 	 */
-	export interface MailProperties  {
+	export interface MailProps  {
 		/** Comma-separated list of "BCC" recipients. Like all other String properties of Mail, you can use Velocity substitution variables in this property. If you specify a "Bcc:" line in the body of your email, recipient addresses will be parsed and this property will be ignored.
 		 * Flags: IR, Group: mail */
 		bcc?: string /* String */; // Flags=IR
@@ -13201,7 +13414,7 @@ declare namespace Isc {
 		/** Comma-separated list of recipients. Like all other String properties of Mail, you can use Velocity substitution variables in this property. If you specify a "To:" line in the body of your email, recipient addresses will be parsed and this property will be ignored.
 		 * Flags: IR, Group: mail */
 		to?: string /* String */; // Flags=IR
-	} // MailProperties
+	} // MailProps
 
 
 	/**
@@ -13263,10 +13476,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Menu Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Menu Props argument.
 	 * This is derived from the methods in the Menu class and it's parents and their properties marked with the I flag.
 	 */
-	export interface MenuProperties extends ListGridProperties {
+	export interface MenuProps extends ListGridProps {
 		/** Explicitly disable alternateRecordStyles at the menu level by default so setting to true for all ListGrids will not impact menus' appearance.
 		 * Flags: IRW */
 		alternateRecordStyles?: boolean /* Boolean */; // Flags=IRW
@@ -13434,7 +13647,13 @@ declare namespace Isc {
 		 */
 		getItem?(item:number /* int */): MenuItem; 
 
-	} // MenuProperties
+		/** 
+		 * This DataBoundComponent method is not supported - use Menu.initialCriteria','initialCriteria to apply criteria to the fetches made by menus.
+		 * @param {Criteria} criteria - new criteria to show
+		 */
+		setCriteria?(criteria:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
+
+	} // MenuProps
 
 
 	/**
@@ -13658,6 +13877,12 @@ declare namespace Isc {
 		 */
 		getItem?(item:number /* int */): MenuItem; 
 
+		/** 
+		 * This DataBoundComponent method is not supported - use Menu.initialCriteria','initialCriteria to apply criteria to the fetches made by menus.
+		 * @param {Criteria} criteria - new criteria to show
+		 */
+		setCriteria?(criteria:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
+
 	} // Menu
 
 	export interface MenuStatic<T, P> extends ListGridStatic<T, P> {
@@ -13668,10 +13893,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a MiniNavControl Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a MiniNavControl Props argument.
 	 * This is derived from the methods in the MiniNavControl class and it's parents and their properties marked with the I flag.
 	 */
-	export interface MiniNavControlProperties extends StretchImgButtonProperties {
+	export interface MiniNavControlProps extends StretchImgButtonProps {
 		/** Image used for the down arrowhead.
 		 * Flags: IR */
 		downButtonSrc?: string /* SCImgURL */; // Flags=IR
@@ -13682,7 +13907,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // MiniNavControlProperties
+	} // MiniNavControlProps
 
 
 	/**
@@ -13709,10 +13934,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a MultiSortDialog Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a MultiSortDialog Props argument.
 	 * This is derived from the methods in the MultiSortDialog class and it's parents and their properties marked with the I flag.
 	 */
-	export interface MultiSortDialogProperties  {
+	export interface MultiSortDialogProps  {
 		/** The title-text to appear on the addLevelButton. Note, this is a passthrough property which, when set, is passed through to the MultiSortPanel','MultiSortPanel contained in this dialog. You only need to consider the properties on the MultiSortPanel for i18n.
 		 * Flags: IR, Group: i18nMessages */
 		addLevelButtonTitle?: string /* String */; // Flags=IR
@@ -13773,7 +13998,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // MultiSortDialogProperties
+	} // MultiSortDialogProps
 
 
 	/**
@@ -13901,10 +14126,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a MultiSortPanel Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a MultiSortPanel Props argument.
 	 * This is derived from the methods in the MultiSortPanel class and it's parents and their properties marked with the I flag.
 	 */
-	export interface MultiSortPanelProperties  {
+	export interface MultiSortPanelProps  {
 		/** The title-text to appear on the addLevelButton
 		 * Flags: IR, Group: i18nMessages */
 		addLevelButtonTitle?: string /* String */; // Flags=IR
@@ -13956,7 +14181,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // MultiSortPanelProperties
+	} // MultiSortPanelProps
 
 
 	/**
@@ -14057,10 +14282,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a NavigationBar Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a NavigationBar Props argument.
 	 * This is derived from the methods in the NavigationBar class and it's parents and their properties marked with the I flag.
 	 */
-	export interface NavigationBarProperties extends HLayoutProperties {
+	export interface NavigationBarProps extends HLayoutProps {
 		/** If set, the left button title will never be omitted in an attempt to fit the full title. See the documentation of NavigationBar.title for details.
 		 * Flags: IRW */
 		alwaysShowLeftButtonTitle?: boolean; // Flags=IRW
@@ -14125,7 +14350,7 @@ declare namespace Isc {
 		 */
 		setViewState?(viewState:NavigationBarViewState, direction?:NavigationDirection): void; 
 
-	} // NavigationBarProperties
+	} // NavigationBarProps
 
 
 	/**
@@ -14221,10 +14446,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a NavigationButton Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a NavigationButton Props argument.
 	 * This is derived from the methods in the NavigationButton class and it's parents and their properties marked with the I flag.
 	 */
-	export interface NavigationButtonProperties extends ButtonProperties {
+	export interface NavigationButtonProps extends ButtonProps {
 		/** Base style for navigation buttons where Direction is set to "back"
 		 * Flags: IRW */
 		backBaseStyle?: string /* CSSStyleName */; // Flags=IRW
@@ -14237,7 +14462,7 @@ declare namespace Isc {
 		/** Base style for navigation buttons where Direction is set to "forward"
 		 * Flags: IRW */
 		forwardBaseStyle?: string /* CSSStyleName */; // Flags=IRW
-	} // NavigationButtonProperties
+	} // NavigationButtonProps
 
 
 	/**
@@ -14267,10 +14492,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a OperationBinding Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a OperationBinding Props argument.
 	 * This is derived from the methods in the OperationBinding class and it's parents and their properties marked with the I flag.
 	 */
-	export interface OperationBindingProperties  {
+	export interface OperationBindingProps  {
 		/** This property indicates whether this operation supports AdvancedCriteria. This setting overrides DataSource.allowAdvancedCriteria for this operation only. See DataSource.supportsAdvancedCriteria for further information. NOTE: If you specify this property in a DataSource descriptor (.ds.xml file), it is enforced on the server. This means that if you run a request containing AdvancedCriteria against an OperationBinding that advertises itself as allowAdvancedCriteria:false, it will be rejected.
 		 * Flags: IRWA */
 		allowAdvancedCriteria?: boolean; // Flags=IRWA
@@ -14405,7 +14630,7 @@ declare namespace Isc {
 		recordXPath?: string /* XPathExpression */; // Flags=IR
 		/** Additional properties to pass through to the DSRequest created for this operation. Note that these will be cumulative with and will override on a per-property basis any properties set via DataSource.requestProperties. These properties are applied before DataSource.transformRequest is called.
 		 * Flags: IR, Group: clientDataIntegration */
-		requestProperties?: DSRequestProperties /* DSRequest Properties */; // Flags=IR
+		requestProperties?: DSRequestProps /* DSRequest Properties */; // Flags=IR
 		/** Indicates that the specified VelocityExpression must be true for a user to access this operationBinding. As with OperationBinding.requiresRole, if there an operationBinding that is the default operationBinding for the operationType, its requires expression is assumed to apply to all other operationBindings of the same type unless they explicitly set requires="" DataSource.requires, if specified, applies before operationBinding.requires is evaluated. In this case, both requires expressions must be true for the request to be accepted.
 		 * Flags: IR, Group: auth */
 		requires?: string /* VelocityExpression */; // Flags=IR
@@ -14487,7 +14712,7 @@ declare namespace Isc {
 		/** Optional object declaring namespace prefixes for use in OperationBinding.recordXPath and DataSourceField.valueXPath XPath expressions. xmlNamespaces should be specified as a mapping from namespace prefix to namespace URI, for example: xmlNamespaces : { az : "http://webservices.amazon.com/AWSECommerceService/2005-03-23" } By default, all namespaces declared on the document element (outermost element of the response) are made available with the prefix used in the document itself. Then, for non-WSDL-described XML results, if there is a default namespace on the document element, it is made available with the special prefix "default". For results of WSDL-described operations, the prefix "service" means the service namespace, that is, the "targetNamespace" on the &lt;definitions&gt; element from the WSDL file. The prefix "schema" means the namespace of the outermost element in the output message for the current operation. "default" will be the schema namespace if there is one, otherwise the service namespace. For basic information on XML Namespaces and their use in XPath, try the following search: <a href="http://www.google.com/search?q=XPath+xml+namespaces" target="_blank" >http://www.google.com/search?q=XPath+xml+namespaces</a>
 		 * Flags: IR, Group: clientDataIntegration */
 		xmlNamespaces?: any /* Object */; // Flags=IR
-	} // OperationBindingProperties
+	} // OperationBindingProps
 
 
 	/**
@@ -14672,7 +14897,7 @@ declare namespace Isc {
 
 		/** Additional properties to pass through to the DSRequest created for this operation. Note that these will be cumulative with and will override on a per-property basis any properties set via DataSource.requestProperties. These properties are applied before DataSource.transformRequest is called.
 		 * Flags: IR, Group: clientDataIntegration */
-		requestProperties: DSRequestProperties /* DSRequest Properties */;
+		requestProperties: DSRequestProps /* DSRequest Properties */;
 
 		/** Indicates that the specified VelocityExpression must be true for a user to access this operationBinding. As with OperationBinding.requiresRole, if there an operationBinding that is the default operationBinding for the operationType, its requires expression is assumed to apply to all other operationBindings of the same type unless they explicitly set requires="" DataSource.requires, if specified, applies before operationBinding.requires is evaluated. In this case, both requires expressions must be true for the request to be accepted.
 		 * Flags: IR, Group: auth */
@@ -14789,11 +15014,11 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Page Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Page Props argument.
 	 * This is derived from the methods in the Page class and it's parents and their properties marked with the I flag.
 	 */
-	export interface PageProperties  {
-	} // PageProperties
+	export interface PageProps  {
+	} // PageProps
 
 
 	/**
@@ -14816,17 +15041,17 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ProcessElement Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ProcessElement Props argument.
 	 * This is derived from the methods in the ProcessElement class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ProcessElementProperties  {
+	export interface ProcessElementProps  {
 		/** Optional ID for this process element, allowing it to be referred to from DecisionGateway','Gateways, or as the Process.startElement. See ProcessSequence and Process to understand when this is required or can be omitted. Unlike Canvas.ID a processElement's is a not a globally unique variable, it need only by unique within it's process. When assigned an ID, a processElement can be retrieve via Process.getElement.
 		 * Flags: IR */
 		ID?: string /* String */; // Flags=IR
 		/** Next Process.sequences','sequence or Process.elements','element to execute after this one completes. nextElement does not need to be specified on most elements if you use Process.sequences','sequences. Note that if there is both a sequence and a normal element with the same name in the current Process, the sequence will be used.
 		 * Flags: IR */
 		nextElement?: string /* String */; // Flags=IR
-	} // ProcessElementProperties
+	} // ProcessElementProps
 
 
 	/**
@@ -14848,13 +15073,13 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a RecordEditor Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a RecordEditor Props argument.
 	 * This is derived from the methods in the RecordEditor class and it's parents and their properties marked with the I flag.
 	 */
-	export interface RecordEditorProperties  {
+	export interface RecordEditorProps  {
 		/** Properties to apply to the automatically generated RecordEditor.actionButton. Note that for a recordEditor being used as a ListGrid.filterEditor, the ListGrid.filterButtonProperties can be used to specify actionButton properties directly at the grid level.
 		 * Flags: IRA */
-		actionButtonProperties?: ButtonProperties /* Button Properties */; // Flags=IRA
+		actionButtonProperties?: ButtonProps /* Button Properties */; // Flags=IRA
 		/** Button.baseStyle','baseStyle for the RecordEditor.actionButton
 		 * Flags: IR */
 		actionButtonStyle?: string /* CSSStyleName */; // Flags=IR
@@ -14870,7 +15095,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // RecordEditorProperties
+	} // RecordEditorProps
 
 
 	/**
@@ -14883,7 +15108,7 @@ declare namespace Isc {
 
 		/** Properties to apply to the automatically generated RecordEditor.actionButton. Note that for a recordEditor being used as a ListGrid.filterEditor, the ListGrid.filterButtonProperties can be used to specify actionButton properties directly at the grid level.
 		 * Flags: IRA */
-		actionButtonProperties: ButtonProperties /* Button Properties */;
+		actionButtonProperties: ButtonProps /* Button Properties */;
 
 		/** Button.baseStyle','baseStyle for the RecordEditor.actionButton
 		 * Flags: IR */
@@ -14911,10 +15136,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a RestDataSource Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a RestDataSource Props argument.
 	 * This is derived from the methods in the RestDataSource class and it's parents and their properties marked with the I flag.
 	 */
-	export interface RestDataSourceProperties extends DataSourceProperties {
+	export interface RestDataSourceProps extends DataSourceProps {
 		/** Custom DataSource.dataURL','dataURL for DSRequest','DSRequests with DSRequest.operationType','operationType "add". See RestDataSource.dataURL to configure a single URL for all requests, which is required to support RPCManager.startQueue.
 		 * Flags: IR */
 		addDataURL?: string /* String */; // Flags=IR
@@ -14972,7 +15197,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // RestDataSourceProperties
+	} // RestDataSourceProps
 
 
 	/**
@@ -15061,10 +15286,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ResultSet Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ResultSet Props argument.
 	 * This is derived from the methods in the ResultSet class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ResultSetProperties  {
+	export interface ResultSetProps  {
 		/** If the complete set of records for a resultSet is available when the resultSet is created, it can be made available to the resultSet via this property at initialization time. This data will then be considered cached meaning sorting and filtering can occur on the client (no need for server fetch). This cached data can be dropped via a call to ResultSet.invalidateCache. See also ResultSet.initialData and ResultSet.initialLength as an alternative approach for initializing a ResultSet with a partial cache, such that data paging will occur as uncached rows are requested.
 		 * Flags: IRA, Group: fetching */
 		allRows?: Array<any> /* Array of Record */; // Flags=IRA
@@ -15112,7 +15337,7 @@ declare namespace Isc {
 		progressiveLoading?: boolean; // Flags=IRW
 		/** Allows to set a DSRequest properties to this ResulSet.
 		 * Flags: IR */
-		requestProperties?: DSRequestProperties /* DSRequest Properties */; // Flags=IR
+		requestProperties?: DSRequestProps /* DSRequest Properties */; // Flags=IR
 		/** How many rows to retrieve at once. Applicable only with fetchMode: "paged". When a paged ResultSet is asked for rows that have not yet been loaded, it will fetch adjacent rows that are likely to be required soon, in batches of this size.
 		 * Flags: IRWA, Group: fetching */
 		resultSize?: number /* integer */; // Flags=IRWA
@@ -15134,7 +15359,18 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // ResultSetProperties
+		/** 
+		 * Get the current criteria for this ResultSet.
+		 */
+		getCriteria?(): Criteria; 
+
+		/** 
+		 * Set the filter criteria to use when fetching rows. Depending on the result of ResultSet.compareCriteria and settings for ResultSet.useClientFiltering / FetchMode, setting criteria may cause a trip to the server to get a new set of rows, or may simply cause already-fetched rows to be re-filtered according to the new Criteria. In either case, the dataset length available from ResultSet.getLength may change and rows will appear at different indices. The filter criteria can be changed while server fetches for data matching the old criteria are still outstanding. If this is the case, the ResultSet will make sure that any records received matching the old criteria are not added to the cache for the new criteria. Any callbacks for responses to the outstanding requests are fired as normal, and the responses' DSResponse.totalRows','totalRows counts are kept (as they are still potentially meaningful to components using the ResultSet), but the response data is cleared so that it won't be used inadvertently as data matching the new criteria. Note: for simple Criteria, any field values in the criteria explicitly specified as null will be passed to the server. By default the server then returns only records whose value is null for that field. This differs from certain higher level methods such as ListGrid.fetchData which prune null criteria fields before performing a fetch operation.
+		 * @param {Criteria} newCriteria - the filter criteria
+		 */
+		setCriteria?(newCriteria:Criteria): boolean; 
+
+	} // ResultSetProps
 
 
 	/**
@@ -15203,7 +15439,7 @@ declare namespace Isc {
 
 		/** Allows to set a DSRequest properties to this ResulSet.
 		 * Flags: IR */
-		requestProperties: DSRequestProperties /* DSRequest Properties */;
+		requestProperties: DSRequestProps /* DSRequest Properties */;
 
 		/** How many rows to retrieve at once. Applicable only with fetchMode: "paged". When a paged ResultSet is asked for rows that have not yet been loaded, it will fetch adjacent rows that are likely to be required soon, in batches of this size.
 		 * Flags: IRWA, Group: fetching */
@@ -15232,6 +15468,17 @@ declare namespace Isc {
 
 		/* Instance Method Overrides */
 
+		/** 
+		 * Get the current criteria for this ResultSet.
+		 */
+		getCriteria?(): Criteria; 
+
+		/** 
+		 * Set the filter criteria to use when fetching rows. Depending on the result of ResultSet.compareCriteria and settings for ResultSet.useClientFiltering / FetchMode, setting criteria may cause a trip to the server to get a new set of rows, or may simply cause already-fetched rows to be re-filtered according to the new Criteria. In either case, the dataset length available from ResultSet.getLength may change and rows will appear at different indices. The filter criteria can be changed while server fetches for data matching the old criteria are still outstanding. If this is the case, the ResultSet will make sure that any records received matching the old criteria are not added to the cache for the new criteria. Any callbacks for responses to the outstanding requests are fired as normal, and the responses' DSResponse.totalRows','totalRows counts are kept (as they are still potentially meaningful to components using the ResultSet), but the response data is cleared so that it won't be used inadvertently as data matching the new criteria. Note: for simple Criteria, any field values in the criteria explicitly specified as null will be passed to the server. By default the server then returns only records whose value is null for that field. This differs from certain higher level methods such as ListGrid.fetchData which prune null criteria fields before performing a fetch operation.
+		 * @param {Criteria} newCriteria - the filter criteria
+		 */
+		setCriteria?(newCriteria:Criteria): boolean; 
+
 	} // ResultSet
 
 	export interface ResultSetStatic<T, P> extends ClassStatic<T, P> {
@@ -15242,10 +15489,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ResultTree Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ResultTree Props argument.
 	 * This is derived from the methods in the ResultTree class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ResultTreeProperties  {
+	export interface ResultTreeProps  {
 		/** Controls what happens to the ResultTree.getOpenState','"open state" - the set of nodes opened or closed by the end user after tree data is loaded - when an entirely new tree of nodes is loaded from the server, as a consequence of calling ResultTree.invalidateCache or of changing criteria such that the current cache of nodes is dropped.
 		 * Flags: IRW */
 		autoPreserveOpenState?: PreserveOpenState; // Flags=IRW
@@ -15312,7 +15559,13 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // ResultTreeProperties
+		/** 
+		 * Set the filter criteria to use when fetching rows. Depending on the result of ResultTree.compareCriteria and setting for ResultTree.fetchMode, setting criteria may cause a trip to the server to get a new set of nodes, or may simply cause already-fetched nodes to be re-filtered according to the new criteria. For a basic overview on when server fetches are generally performed, see ResultTree.fetchMode. However, this is not the final determination of when server fetches occur. Criteria can be split into local criteria and server criteria by specifying ResultTree.serverFilterFields. Thus, even when using fetchMode:"local" a new server fetch will occur if the server criteria changes. For details on how the criteria is split, see DataSource.splitCriteria. Note: if criteria is being split to retrieve server criteria portion and the criteria is an AdvancedCriteria, the criteria must consist of a single "and" operator and one or more simple criteria below it. No other logical operators may be used. In other words, the AdvancedCriteria provided must be exactly representable by a simple criteria.
+		 * @param {Criteria} newCriteria - the filter criteria
+		 */
+		setCriteria?(newCriteria:Criteria): void; 
+
+	} // ResultTreeProps
 
 
 	/**
@@ -15406,6 +15659,12 @@ declare namespace Isc {
 
 		/* Instance Method Overrides */
 
+		/** 
+		 * Set the filter criteria to use when fetching rows. Depending on the result of ResultTree.compareCriteria and setting for ResultTree.fetchMode, setting criteria may cause a trip to the server to get a new set of nodes, or may simply cause already-fetched nodes to be re-filtered according to the new criteria. For a basic overview on when server fetches are generally performed, see ResultTree.fetchMode. However, this is not the final determination of when server fetches occur. Criteria can be split into local criteria and server criteria by specifying ResultTree.serverFilterFields. Thus, even when using fetchMode:"local" a new server fetch will occur if the server criteria changes. For details on how the criteria is split, see DataSource.splitCriteria. Note: if criteria is being split to retrieve server criteria portion and the criteria is an AdvancedCriteria, the criteria must consist of a single "and" operator and one or more simple criteria below it. No other logical operators may be used. In other words, the AdvancedCriteria provided must be exactly representable by a simple criteria.
+		 * @param {Criteria} newCriteria - the filter criteria
+		 */
+		setCriteria?(newCriteria:Criteria): void; 
+
 	} // ResultTree
 
 	export interface ResultTreeStatic<T, P> extends ClassStatic<T, P> {
@@ -15413,10 +15672,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a RPCRequest Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a RPCRequest Props argument.
 	 * This is derived from the methods in the RPCRequest class and it's parents and their properties marked with the I flag.
 	 */
-	export interface RPCRequestProperties  {
+	export interface RPCRequestProps  {
 		/** Overrides RPCManager.actionURL for this request only. If you're using queuing, note that queues as per-URL - in other words all RPCRequests in a queue must go to a single URL. If you attempt to send a request with an actionURL that is different from those already in the queue, it will be sent to the server separately, ahead of the queue, and a warning will be logged to the Developer Console.
 		 * Flags: IRW */
 		actionURL?: string /* URL */; // Flags=IRW
@@ -15516,7 +15775,7 @@ declare namespace Isc {
 		/** In browsers that support <a href='http://www.w3.org/TR/cors/' target='_blank'>Cross-Origin Resource Sharing</a> and <a href='http://caniuse.com/#feat=xhr2' target='_blank'>XMLHttpRequest 2</a>, and where the service at the RPCRequest.actionURL','actionURL allows the origin to send credentials (see <a href='http://www.w3.org/TR/cors/#access-control-allow-credentials-response-header' target='_blank'>Access-Control-Allow-Credentials</a>), should <a href='http://www.w3.org/TR/cors/#user-credentials' target='_blank'>user credentials</a> such as cookies, HTTP authentication, and client-side SSL certificates be sent with the actual CORS request? This setting only applies when the request RPCRequest.transport','transport is "xmlHttpRequest". Note that Internet Explorer 10 and 11 do not send cookies as part of user credentials: <a href='https://connect.microsoft.com/IE/Feedback/Details/759587/' target='_blank'>IE10 doesn't support cookies on cross origin XMLHttpRequest withCredentials=true</a>.
 		 * Flags: IRA */
 		withCredentials?: boolean /* Boolean */; // Flags=IRA
-	} // RPCRequestProperties
+	} // RPCRequestProps
 
 
 	/**
@@ -15677,14 +15936,14 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a RPCResponse Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a RPCResponse Props argument.
 	 * This is derived from the methods in the RPCResponse class and it's parents and their properties marked with the I flag.
 	 */
-	export interface RPCResponseProperties  {
+	export interface RPCResponseProps  {
 		/** Status code for this response. Status codes less than zero are considered errors by the RPCManager, those greater than or equal to zero are considered successes. Please see the error handling section the RPCManager','RPCManager docs for more information on what the RPCManager does with the status code and how you can override this behavior. When using the SmartClient server you can set the rpcResponse.status by calling the server-side method RPCResponse.setStatus(). When not using the SmartClient server, the RPCManager makes no assumptions about the structure of the response, so the status code just reflects the RPCResponse.httpResponseCode: status will be RPCResponse.STATUS_TRANSPORT_ERROR','STATUS_TRANSPORT_ERROR if an HTTP-level error occurred such as "500 server error". If you have a status code you need to transmit you can simply embed it in the response (as part of RPCResponse.data) and interpret it from the callback. With or without the SmartClient server, the relogin status codes (such as RPCResponse.STATUS_LOGIN_REQUIRED) are triggered whenever special markers, such as the loginRequiredMarker, appear in the body of the response. See the relogin','Relogin\n Overview for details.
 		 * Flags: IR */
 		status?: number /* int */; // Flags=IR
-	} // RPCResponseProperties
+	} // RPCResponseProps
 
 
 	/**
@@ -15813,10 +16072,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a SearchForm Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a SearchForm Props argument.
 	 * This is derived from the methods in the SearchForm class and it's parents and their properties marked with the I flag.
 	 */
-	export interface SearchFormProperties extends DynamicFormProperties {
+	export interface SearchFormProps extends DynamicFormProps {
 		/** This property is overridden in SearchForm to allow editing of dataSource fields marked as canFilter:true by default.
 		 * Flags: IRA */
 		canEditFieldAttribute?: string /* String */; // Flags=IRA
@@ -15826,7 +16085,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // SearchFormProperties
+	} // SearchFormProps
 
 
 	/**
@@ -15851,10 +16110,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a SectionStack Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a SectionStack Props argument.
 	 * This is derived from the methods in the SectionStack class and it's parents and their properties marked with the I flag.
 	 */
-	export interface SectionStackProperties extends VLayoutProperties {
+	export interface SectionStackProps extends VLayoutProps {
 		/** If true, sections are animated during expand/collapse and addition/removal of SectionItems is likewise animated.
 		 * Flags: IRW, Group: animation */
 		animateSections?: boolean; // Flags=IRW
@@ -15929,7 +16188,7 @@ declare namespace Isc {
 		 */
 		addItem?(section:string | number /* String or Number */, item:Canvas, index:number /* Number */): void; 
 
-	} // SectionStackProperties
+	} // SectionStackProps
 
 
 	/**
@@ -16038,10 +16297,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a SelectItem Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a SelectItem Props argument.
 	 * This is derived from the methods in the SelectItem class and it's parents and their properties marked with the I flag.
 	 */
-	export interface SelectItemProperties extends FormItemProperties {
+	export interface SelectItemProps extends FormItemProps {
 		/** If this item's value is set (via SelectItem.setValue or similar) to a value which is not present in the ValueMap, should the value be rejected. If set to false the setValue() call will have no effect if the value is not a valid option. If set to true the item's value will be update to the new value, and the value will be added to the set of options displayed in the pick-list until the next call to SelectItem.setValueMap or SelectItem.setValue. Exception: If the value is set to null but there is no null entry in the valueMap for this item, setting addUnknownValues to true will not cause a null option to show up at the top of the select item pickList. Whether an empty option is shown in the pickList is governed by SelectItem.allowEmptyValue instead. Note that this property has no effect if the selectItem has a specified SelectItem.optionDataSource. If SelectItem.setValue is called on a databound SelectItem and the new value does not match any loaded options, the value will be accepted, but not added to the options displayed in the pickList. Also note that if a SelectItem.displayField exists, a fetch will be performed in an attempt to retrieve a valid display value, as described under FormItem.fetchMissingValues. If specified the FormItem.loadingDisplayValue will be displayed while the fetch is in progress, and then the real value (mapped to a display field value if a matching record was found) will be displayed when the fetch completes.
 		 * Flags: IRWA */
 		addUnknownValues?: boolean /* Boolean */; // Flags=IRWA
@@ -16116,7 +16375,7 @@ declare namespace Isc {
 		optionDataSource?: DataSource | string /* DataSource | String */; // Flags=IRA
 		/** If this item has a specified optionDataSource, and this property is not null, this will be passed to the datasource as DSRequest properties when performing the filter operation on the dataSource to obtain the set of options for the list. This provides, among other capabilities, a way to trigger the server to return summary records.
 		 * Flags: IRA */
-		optionFilterContext?: DSRequestProperties /* DSRequest Properties */; // Flags=IRA
+		optionFilterContext?: DSRequestProps /* DSRequest Properties */; // Flags=IRA
 		/** If this item has a specified optionDataSource, this attribute may be set to specify an explicit DSRequest.operationId when performing a fetch against the option dataSource to pick up display value mapping.
 		 * Flags: IR */
 		optionOperationId?: string; // Flags=IR
@@ -16155,7 +16414,7 @@ declare namespace Isc {
 		pickListPlacement?: PanelPlacement | Canvas | string /* PanelPlacement | Canvas | String */; // Flags=IR
 		/** If specified this properties block will be applied to the PickListMenu','pickList created for this FormItem. Note: Not every ListGrid property is supported when assigned to a pickList. Where there is a dedicated API on the form item (such as PickList.pickListCellHeight','pickListCellHeight), we recommend that be used in favor of setting the equivalent property on the pickListProperties block. PickLists and ListGrid.showFilterEditor: ComboBoxItem','ComboBoxItems do not support setting showFilterEditor to true on pickListProperties. This combination of settings leads to an ambiguous user exprience as the two sets of filter-criteria (those from the text-box and those from the pickList filter editor) interact with each other. SelectItem.pickListProperties is a valid way to create a filterable pickList, on a SelectItem, but this setting is not supported on a SelectItem with SelectItem.multiple set to true - this combination of settings can cause a selected value to be filtered out of view at which point further selection changes will discard that value. In general we recommend the ComboBoxItem class (with ComboBoxItem.addUnknownValues set as appropriate) as a better interface for filtering pickList data.
 		 * Flags: IRA */
-		pickListProperties?: ListGridProperties /* ListGrid Properties */; // Flags=IRA
+		pickListProperties?: ListGridProps /* ListGrid Properties */; // Flags=IRA
 		/** Indicates whether or not this SelectItem will load its list of options DataSource.progressiveLoading','progressively. This property is copied onto the underlying PickList.
 		 * Flags: IRW, Group: progressiveLoading */
 		progressiveLoading?: boolean; // Flags=IRW
@@ -16213,11 +16472,16 @@ declare namespace Isc {
 		/** 
 		 * Only applies to databound items (see PickList.optionDataSource). Performs a fetch type operation on this item's DataSource to retrieve the set of valid options for the item, based on the current PickList.pickListCriteria.
 		 * @param {DSCallback} callback - Callback to fire when the fetch completes. Callback will fire with 4 parameters: item a pointer to the form item dsResponse the DSResponse returned by the server data the raw data returned by the server dsRequest the DSRequest sent to the server 
-		 * @param {DSRequestProperties} requestProperties - properties to apply to the dsRequest for this fetch.
+		 * @param {DSRequestProps} requestProperties - properties to apply to the dsRequest for this fetch.
 		 */
-		fetchData?(callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest properties */): void; 
+		fetchData?(callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest properties */): void; 
 
-	} // SelectItemProperties
+		/** 
+		 * For a SelectItem with an SelectItem.optionDataSource and allowing multiple selection (SelectItem.multiple','via multiple:true), returns the list of currently selected records, or null if none are selected. 
+		 */
+		getSelectedRecords?(): Array<ListGridRecord> /* Array of ListGridRecord */; 
+
+	} // SelectItemProps
 
 
 	/**
@@ -16322,7 +16586,7 @@ declare namespace Isc {
 
 		/** If this item has a specified optionDataSource, and this property is not null, this will be passed to the datasource as DSRequest properties when performing the filter operation on the dataSource to obtain the set of options for the list. This provides, among other capabilities, a way to trigger the server to return summary records.
 		 * Flags: IRA */
-		optionFilterContext: DSRequestProperties /* DSRequest Properties */;
+		optionFilterContext: DSRequestProps /* DSRequest Properties */;
 
 		/** If this item has a specified optionDataSource, this attribute may be set to specify an explicit DSRequest.operationId when performing a fetch against the option dataSource to pick up display value mapping.
 		 * Flags: IR */
@@ -16374,7 +16638,7 @@ declare namespace Isc {
 
 		/** If specified this properties block will be applied to the PickListMenu','pickList created for this FormItem. Note: Not every ListGrid property is supported when assigned to a pickList. Where there is a dedicated API on the form item (such as PickList.pickListCellHeight','pickListCellHeight), we recommend that be used in favor of setting the equivalent property on the pickListProperties block. PickLists and ListGrid.showFilterEditor: ComboBoxItem','ComboBoxItems do not support setting showFilterEditor to true on pickListProperties. This combination of settings leads to an ambiguous user exprience as the two sets of filter-criteria (those from the text-box and those from the pickList filter editor) interact with each other. SelectItem.pickListProperties is a valid way to create a filterable pickList, on a SelectItem, but this setting is not supported on a SelectItem with SelectItem.multiple set to true - this combination of settings can cause a selected value to be filtered out of view at which point further selection changes will discard that value. In general we recommend the ComboBoxItem class (with ComboBoxItem.addUnknownValues set as appropriate) as a better interface for filtering pickList data.
 		 * Flags: IRA */
-		pickListProperties: ListGridProperties /* ListGrid Properties */;
+		pickListProperties: ListGridProps /* ListGrid Properties */;
 
 		/** Indicates whether or not this SelectItem will load its list of options DataSource.progressiveLoading','progressively. This property is copied onto the underlying PickList.
 		 * Flags: IRW, Group: progressiveLoading */
@@ -16450,9 +16714,14 @@ declare namespace Isc {
 		/** 
 		 * Only applies to databound items (see PickList.optionDataSource). Performs a fetch type operation on this item's DataSource to retrieve the set of valid options for the item, based on the current PickList.pickListCriteria.
 		 * @param {DSCallback} callback - Callback to fire when the fetch completes. Callback will fire with 4 parameters: item a pointer to the form item dsResponse the DSResponse returned by the server data the raw data returned by the server dsRequest the DSRequest sent to the server 
-		 * @param {DSRequestProperties} requestProperties - properties to apply to the dsRequest for this fetch.
+		 * @param {DSRequestProps} requestProperties - properties to apply to the dsRequest for this fetch.
 		 */
-		fetchData?(callback?:DSCallback, requestProperties?:DSRequestProperties /* DSRequest properties */): void; 
+		fetchData?(callback?:DSCallback, requestProperties?:DSRequestProps /* DSRequest properties */): void; 
+
+		/** 
+		 * For a SelectItem with an SelectItem.optionDataSource and allowing multiple selection (SelectItem.multiple','via multiple:true), returns the list of currently selected records, or null if none are selected. 
+		 */
+		getSelectedRecords?(): Array<ListGridRecord> /* Array of ListGridRecord */; 
 
 	} // SelectItem
 
@@ -16461,10 +16730,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ServerObject Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ServerObject Props argument.
 	 * This is derived from the methods in the ServerObject class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ServerObjectProperties  {
+	export interface ServerObjectProps  {
 		/** Specifies the name of the attribute by which to look up the DMI instance. This attribute is consulted only when the value of ServerObject.lookupStyle is "attribute".
 		 * Flags: IR */
 		attributeName?: string /* String */; // Flags=IR
@@ -16498,7 +16767,7 @@ declare namespace Isc {
 		/** When the ServerObject appears in a .app.xml file (for RPC DMI), this property specifies the list of methods on the ServerObject that are callable from the client. See the builtin.app.xml file in the /shared/app directory of the SDK for an example of a visibleMethods declaration block.
 		 * Flags: IR */
 		visibleMethods?: any /* List */; // Flags=IR
-	} // ServerObjectProperties
+	} // ServerObjectProps
 
 
 	/**
@@ -16556,10 +16825,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Splitbar Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Splitbar Props argument.
 	 * This is derived from the methods in the Splitbar class and it's parents and their properties marked with the I flag.
 	 */
-	export interface SplitbarProperties  {
+	export interface SplitbarProps  {
 		/** If this property is true, a click on the Splitbar will collapse its Splitbar.target','target, hiding it and shifting the Splitbar and other members of the layout across to fill the newly available space. If the target is already hidden a click will expand it again (showing it at its normal size). Note that on touch devices, to enable collapsing/uncollapsing the target in response to a tap, Splitbar.canCollapseOnTap','canCollapseOnTap must be set to true.
 		 * Flags: IRW */
 		canCollapse?: boolean; // Flags=IRW
@@ -16614,7 +16883,7 @@ declare namespace Isc {
 		/** Base URL for the image if StretchImg.vertical is true and StretchImg.src is unset.
 		 * Flags: IR, Group: appearance */
 		vSrc?: string /* SCImgURL */; // Flags=IR
-	} // SplitbarProperties
+	} // SplitbarProps
 
 
 	/**
@@ -16708,10 +16977,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a StatefulCanvas Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a StatefulCanvas Props argument.
 	 * This is derived from the methods in the StatefulCanvas class and it's parents and their properties marked with the I flag.
 	 */
-	export interface StatefulCanvasProperties extends CanvasProperties {
+	export interface StatefulCanvasProps extends CanvasProps {
 		/** Behavior on state changes -- BUTTON, RADIO or CHECKBOX
 		 * Flags: IRW, Group: state */
 		actionType?: SelectionType; // Flags=IRW
@@ -16814,7 +17083,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // StatefulCanvasProperties
+	} // StatefulCanvasProps
 
 
 	/**
@@ -16967,10 +17236,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a StretchImg Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a StretchImg Props argument.
 	 * This is derived from the methods in the StretchImg class and it's parents and their properties marked with the I flag.
 	 */
-	export interface StretchImgProperties extends StatefulCanvasProperties {
+	export interface StretchImgProps extends StatefulCanvasProps {
 		/** If the default items are used, capSize is the size in pixels of the first and last images in this stretchImg.
 		 * Flags: IRW, Group: appearance */
 		capSize?: number; // Flags=IRW
@@ -17016,7 +17285,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // StretchImgProperties
+	} // StretchImgProps
 
 
 	/**
@@ -17089,10 +17358,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a StretchImgButton Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a StretchImgButton Props argument.
 	 * This is derived from the methods in the StretchImgButton class and it's parents and their properties marked with the I flag.
 	 */
-	export interface StretchImgButtonProperties  {
+	export interface StretchImgButtonProps  {
 		/** Behavior on state changes -- BUTTON, RADIO or CHECKBOX
 		 * Flags: IRW, Group: state */
 		actionType?: SelectionType; // Flags=IRW
@@ -17210,7 +17479,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // StretchImgButtonProperties
+	} // StretchImgButtonProps
 
 
 	/**
@@ -17379,10 +17648,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a TabBar Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a TabBar Props argument.
 	 * This is derived from the methods in the TabBar class and it's parents and their properties marked with the I flag.
 	 */
-	export interface TabBarProperties  {
+	export interface TabBarProps  {
 		/** Set StretchImg.capSize for the baseLine stretchImg.
 		 * Flags: IR, Group: baseLine */
 		baseLineCapSize?: number; // Flags=IR
@@ -17428,7 +17697,7 @@ declare namespace Isc {
 		 */
 		selectTab?(tabNum:number): void; 
 
-	} // TabBarProperties
+	} // TabBarProps
 
 
 	/**
@@ -17499,10 +17768,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a TableView Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a TableView Props argument.
 	 * This is derived from the methods in the TableView class and it's parents and their properties marked with the I flag.
 	 */
-	export interface TableViewProperties  {
+	export interface TableViewProps  {
 		/** Field to display as part of individual record in "summary" RecordLayouts.
 		 * Flags: IRW */
 		dataField?: string /* String */; // Flags=IRW
@@ -17557,7 +17826,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // TableViewProperties
+	} // TableViewProps
 
 
 	/**
@@ -17642,10 +17911,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a TabSet Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a TabSet Props argument.
 	 * This is derived from the methods in the TabSet class and it's parents and their properties marked with the I flag.
 	 */
-	export interface TabSetProperties extends CanvasProperties {
+	export interface TabSetProps extends CanvasProps {
 		/** Appears when TabSet.canAddTabs is enabled.
 		 * Flags: IR */
 		addTabButton?:  ImgButton /* AutoChild ImgButton */; // Flags=IR
@@ -17711,13 +17980,13 @@ declare namespace Isc {
 		moreTabImage?: string /* SCImgURL */; // Flags=IR
 		/** Default properties for the "more" tab's pane. Currently constructs a VLayout with a NavigationBar and TableView.
 		 * Flags: IR */
-		moreTabPaneDefaults?: CanvasProperties /* Canvas Properties */; // Flags=IR
+		moreTabPaneDefaults?: CanvasProps /* Canvas Properties */; // Flags=IR
 		/** Navigation bar shown in the TabSet.moreTabPane;
 		 * Flags: IR */
 		moreTabPaneNavBar?:  NavigationBar /* AutoChild NavigationBar */; // Flags=IR
 		/** Properties to apply to the "more" tab's pane created by this TabSet.
 		 * Flags: IR */
-		moreTabPaneProperties?: CanvasProperties /* Canvas Properties */; // Flags=IR
+		moreTabPaneProperties?: CanvasProps /* Canvas Properties */; // Flags=IR
 		/** TableView used to show links to other tabs in the TabSet.moreTabPane;
 		 * Flags: IR */
 		moreTabPaneTable?:  TableView /* AutoChild TableView */; // Flags=IR
@@ -17819,7 +18088,7 @@ declare namespace Isc {
 		tabBarPosition?: Side; // Flags=IR
 		/** This attribute allows developers to specify custom properties for this tabset's TabSet.tabBar
 		 * Flags: IR */
-		tabBarProperties?: TabBarProperties /* TabBar Properties */; // Flags=IR
+		tabBarProperties?: TabBarProps /* TabBar Properties */; // Flags=IR
 		/** Thickness of tabBar, applies to either orientation (specifies height for horizontal, width for vertical orientation). Note that overriding this value for TabSets that are skinned with images generally means providing new media for the borders.
 		 * Flags: IRW, Group: tabBar */
 		tabBarThickness?: number; // Flags=IRW
@@ -17837,7 +18106,7 @@ declare namespace Isc {
 		titleEditorLeftOffset?: number /* Integer */; // Flags=IRW
 		/** Properties for the auto-generated TabSet.titleEditor. This is the text item we use to edit tab titles in this tabSet.
 		 * Flags: IR */
-		titleEditorProperties?: TextItemProperties /* TextItem properties */; // Flags=IR
+		titleEditorProperties?: TextItemProps /* TextItem properties */; // Flags=IR
 		/** If set, offsets the tab title editor further in from the right-hand edge of the tab, by the number of pixels set in this property. Note that the editor is always offset to avoid overlapping the endcaps of the tab; this property is applied on top of that default offset.
 		 * Flags: IRW */
 		titleEditorRightOffset?: number /* Integer */; // Flags=IRW
@@ -17903,7 +18172,7 @@ declare namespace Isc {
 		 */
 		tabsReordered?(tabCanvas:StatefulCanvas, tabIndex:number /* Integer */): void; 
 
-	} // TabSetProperties
+	} // TabSetProps
 
 
 	/**
@@ -18004,7 +18273,7 @@ declare namespace Isc {
 
 		/** Default properties for the "more" tab's pane. Currently constructs a VLayout with a NavigationBar and TableView.
 		 * Flags: IR */
-		moreTabPaneDefaults: CanvasProperties /* Canvas Properties */;
+		moreTabPaneDefaults: CanvasProps /* Canvas Properties */;
 
 		/** Navigation bar shown in the TabSet.moreTabPane;
 		 * Flags: IR */
@@ -18012,7 +18281,7 @@ declare namespace Isc {
 
 		/** Properties to apply to the "more" tab's pane created by this TabSet.
 		 * Flags: IR */
-		moreTabPaneProperties: CanvasProperties /* Canvas Properties */;
+		moreTabPaneProperties: CanvasProps /* Canvas Properties */;
 
 		/** TableView used to show links to other tabs in the TabSet.moreTabPane;
 		 * Flags: IR */
@@ -18160,7 +18429,7 @@ declare namespace Isc {
 
 		/** This attribute allows developers to specify custom properties for this tabset's TabSet.tabBar
 		 * Flags: IR */
-		tabBarProperties: TabBarProperties /* TabBar Properties */;
+		tabBarProperties: TabBarProps /* TabBar Properties */;
 
 		/** Thickness of tabBar, applies to either orientation (specifies height for horizontal, width for vertical orientation). Note that overriding this value for TabSets that are skinned with images generally means providing new media for the borders.
 		 * Flags: IRW, Group: tabBar */
@@ -18192,7 +18461,7 @@ declare namespace Isc {
 
 		/** Properties for the auto-generated TabSet.titleEditor. This is the text item we use to edit tab titles in this tabSet.
 		 * Flags: IR */
-		titleEditorProperties: TextItemProperties /* TextItem properties */;
+		titleEditorProperties: TextItemProps /* TextItem properties */;
 
 		/** If set, offsets the tab title editor further in from the right-hand edge of the tab, by the number of pixels set in this property. Note that the editor is always offset to avoid overlapping the endcaps of the tab; this property is applied on top of that default offset.
 		 * Flags: IRW */
@@ -18273,10 +18542,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Task Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Task Props argument.
 	 * This is derived from the methods in the Task class and it's parents and their properties marked with the I flag.
 	 */
-	export interface TaskProperties  {
+	export interface TaskProps  {
 		/** Field in the Process.state','process state which is provided as input data to this task. See taskIO.
 		 * Flags: IR */
 		inputField?: string /* String */; // Flags=IR
@@ -18289,7 +18558,7 @@ declare namespace Isc {
 		/** List of multiple fields from the Process.state','process state which this task will write to. See taskIO. If Task.outputField is also specified, it will be implicitly added to the outputFieldList if it is not already present.
 		 * Flags: IR */
 		outputFieldList?: Array<string> /* Array of String */; // Flags=IR
-	} // TaskProperties
+	} // TaskProps
 
 
 	/**
@@ -18319,10 +18588,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a TextAreaItem Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a TextAreaItem Props argument.
 	 * This is derived from the methods in the TextAreaItem class and it's parents and their properties marked with the I flag.
 	 */
-	export interface TextAreaItemProperties extends FormItemProperties {
+	export interface TextAreaItemProps extends FormItemProps {
 		browserAutoCapitalize?: boolean /* Boolean */; // Flags=IRA
 		/** In Mobile Safari, should automatic correction be offered for text in the item's text box? If null, then Mobile Safari determines automatically whether to enable autocorrect. When enabled, Mobile Safari displays "autocorrect bubbles" to suggest automatic corrections: <img src="data:image/png;base64,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" width="150" height="45" alt="Screenshot of Mobile Safari suggesting &quot;On my way!&quot; to replace &quot;omw&quot;">
 		 * Flags: IRA */
@@ -18387,7 +18656,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // TextAreaItemProperties
+	} // TextAreaItemProps
 
 
 	/**
@@ -18486,10 +18755,84 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a TextItem Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a TextExportSettings Props argument.
+	 * This is derived from the methods in the TextExportSettings class and it's parents and their properties marked with the I flag.
+	 */
+	export interface TextExportSettingsProps  {
+		/** Format to use when outputting date values. Default is to use the format expected by Microsoft Excel (eg 1-2-2011), which Excel will turn into a real date value (see excelPasting). The current month-day-year order as set by DateUtil.setInputFormat will be used.
+		 * Flags: IR */
+		dateFormat?: DateDisplayFormat; // Flags=IR
+		/** Format to use when outputting datetime values. Default is to combine the configured date and time formats with a space (" ").
+		 * Flags: IR */
+		dateTimeFormat?: DateDisplayFormat; // Flags=IR
+		/** If set, all text fields will use the indicated ForceTextApproach unless they have a specific setting for DataSourceField.exportForceText.
+		 * Flags: IR */
+		forceText?: ForceTextApproach; // Flags=IR
+		/** Separator between Records. Default is a newline character ("\n").
+		 * Flags: IR */
+		lineSeparator?: string /* String */; // Flags=IR
+		/** Text to export for a field with a null value. If this property is null, then null fields will be assumed to have the default value for their field type.
+		 * Flags: IR */
+		nullValueText?: string /* String */; // Flags=IR
+		/** Whether to surround each value with quotes ("").
+		 * Flags: IR */
+		quoteValues?: boolean /* Boolean */; // Flags=IR
+		/** Format to use when outputting time values. Default is 24 hour time.
+		 * Flags: IR */
+		timeFormat?: TimeDisplayFormat; // Flags=IR
+		/** Whether to convert each field's value to the corresponding display value for export. Default of false will directly export the field's value.
+		 * Flags: IR */
+		useDisplayValue?: boolean /* Boolean */; // Flags=IR
+	} // TextExportSettingsProps
+
+
+	/**
+	 * Settings for use with DataSource.recordsAsText. 
+	 */
+	export interface TextExportSettings  {
+		/** Format to use when outputting date values. Default is to use the format expected by Microsoft Excel (eg 1-2-2011), which Excel will turn into a real date value (see excelPasting). The current month-day-year order as set by DateUtil.setInputFormat will be used.
+		 * Flags: IR */
+		dateFormat: DateDisplayFormat;
+
+		/** Format to use when outputting datetime values. Default is to combine the configured date and time formats with a space (" ").
+		 * Flags: IR */
+		dateTimeFormat: DateDisplayFormat;
+
+		/** If set, all text fields will use the indicated ForceTextApproach unless they have a specific setting for DataSourceField.exportForceText.
+		 * Flags: IR */
+		forceText: ForceTextApproach;
+
+		/** Separator between Records. Default is a newline character ("\n").
+		 * Flags: IR */
+		lineSeparator: string /* String */;
+
+		/** Text to export for a field with a null value. If this property is null, then null fields will be assumed to have the default value for their field type.
+		 * Flags: IR */
+		nullValueText: string /* String */;
+
+		/** Whether to surround each value with quotes ("").
+		 * Flags: IR */
+		quoteValues: boolean /* Boolean */;
+
+		/** Format to use when outputting time values. Default is 24 hour time.
+		 * Flags: IR */
+		timeFormat: TimeDisplayFormat;
+
+		/** Whether to convert each field's value to the corresponding display value for export. Default of false will directly export the field's value.
+		 * Flags: IR */
+		useDisplayValue: boolean /* Boolean */;
+
+	} // TextExportSettings
+
+	export interface TextExportSettingsStatic<T, P> extends ClassStatic<T, P> {
+	} // TextExportSettingsStatic
+
+
+	/**
+	 * Properties used for passing into .create() or anything else that takes a TextItem Props argument.
 	 * This is derived from the methods in the TextItem class and it's parents and their properties marked with the I flag.
 	 */
-	export interface TextItemProperties extends FormItemProperties {
+	export interface TextItemProps extends FormItemProps {
 		browserAutoCapitalize?: boolean /* Boolean */; // Flags=IRA
 		/** In Mobile Safari, should automatic correction be offered for text in the item's text box? If null, then Mobile Safari determines automatically whether to enable autocorrect. When enabled, Mobile Safari displays "autocorrect bubbles" to suggest automatic corrections: <img src="data:image/png;base64,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" width="150" height="45" alt="Screenshot of Mobile Safari suggesting &quot;On my way!&quot; to replace &quot;omw&quot;">
 		 * Flags: IRA */
@@ -18575,7 +18918,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // TextItemProperties
+	} // TextItemProps
 
 
 	/**
@@ -18702,11 +19045,57 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Time Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a TextSettings Props argument.
+	 * This is derived from the methods in the TextSettings class and it's parents and their properties marked with the I flag.
+	 */
+	export interface TextSettingsProps  {
+		/** EscapingMode expected for escaping special characters embedded in text values.
+		 * Flags: IR */
+		escapingMode?: EscapingMode; // Flags=IR
+		/** For export, a set of fields to export. Default is to export all DataSource fields. Fields may be specified that are not in the DataSource but for which data values are present in the provided Records. In this case the field is assumed to be of type "text". For import, names of DataSource fields to use to parse values, in order. If fieldList is unset, DataSource fields are used, in order. If more values exist in a given Record than the listed fields or than all DataSource fields, remaining values are ignored.
+		 * Flags: IR */
+		fieldList?: Array<string> /* Array of String */; // Flags=IR
+		/** Separator between field values. Default is a comma character, producing CSV (comma-separated values) format.
+		 * Flags: IR */
+		fieldSeparator?: string /* String */; // Flags=IR
+		/** Separator between Records. For import, default of null means that either the Unix/Mac format of just a newline ("\n") or the typical DOS/Windows format of a carriage return and newline ("\r\n") will be accepted. For export, overridden in TextExportSettings.
+		 * Flags: IR */
+		lineSeparator?: string /* String */; // Flags=IR
+	} // TextSettingsProps
+
+
+	/**
+	 * Common base class of TextImportSettings. 
+	 */
+	export interface TextSettings  {
+		/** EscapingMode expected for escaping special characters embedded in text values.
+		 * Flags: IR */
+		escapingMode: EscapingMode;
+
+		/** For export, a set of fields to export. Default is to export all DataSource fields. Fields may be specified that are not in the DataSource but for which data values are present in the provided Records. In this case the field is assumed to be of type "text". For import, names of DataSource fields to use to parse values, in order. If fieldList is unset, DataSource fields are used, in order. If more values exist in a given Record than the listed fields or than all DataSource fields, remaining values are ignored.
+		 * Flags: IR */
+		fieldList: Array<string> /* Array of String */;
+
+		/** Separator between field values. Default is a comma character, producing CSV (comma-separated values) format.
+		 * Flags: IR */
+		fieldSeparator: string /* String */;
+
+		/** Separator between Records. For import, default of null means that either the Unix/Mac format of just a newline ("\n") or the typical DOS/Windows format of a carriage return and newline ("\r\n") will be accepted. For export, overridden in TextExportSettings.
+		 * Flags: IR */
+		lineSeparator: string /* String */;
+
+	} // TextSettings
+
+	export interface TextSettingsStatic<T, P> extends ClassStatic<T, P> {
+	} // TextSettingsStatic
+
+
+	/**
+	 * Properties used for passing into .create() or anything else that takes a Time Props argument.
 	 * This is derived from the methods in the Time class and it's parents and their properties marked with the I flag.
 	 */
-	export interface TimeProperties  {
-	} // TimeProperties
+	export interface TimeProps  {
+	} // TimeProps
 
 
 	/**
@@ -18729,10 +19118,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Toolbar Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Toolbar Props argument.
 	 * This is derived from the methods in the Toolbar class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ToolbarProperties extends LayoutProperties {
+	export interface ToolbarProps extends LayoutProps {
 		/** Default constructor for toolbar items.
 		 * Flags: IRWA, Group: appearance */
 		buttonConstructor?: Class; // Flags=IRWA
@@ -18760,7 +19149,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // ToolbarProperties
+	} // ToolbarProps
 
 
 	/**
@@ -18809,10 +19198,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ToolStrip Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ToolStrip Props argument.
 	 * This is derived from the methods in the ToolStrip class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ToolStripProperties extends LayoutProperties {
+	export interface ToolStripProps extends LayoutProps {
 		/** DynamicForm instance created by ToolStrip.addFormItem to contain form items for display in this toolStrip. Each time addFormItem() is run, a new formWrapper autoChild will be created, picking up properties according to the standard AutoChild pattern.
 		 * Flags: IR */
 		formWrapper?:  DynamicForm /* MultiAutoChild DynamicForm */; // Flags=IR
@@ -18861,7 +19250,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // ToolStripProperties
+	} // ToolStripProps
 
 
 	/**
@@ -18938,11 +19327,11 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ToolStripButton Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ToolStripButton Props argument.
 	 * This is derived from the methods in the ToolStripButton class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ToolStripButtonProperties extends ButtonProperties {
-	} // ToolStripButtonProperties
+	export interface ToolStripButtonProps extends ButtonProps {
+	} // ToolStripButtonProps
 
 
 	/**
@@ -18956,10 +19345,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Tree Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Tree Props argument.
 	 * This is derived from the methods in the Tree class and it's parents and their properties marked with the I flag.
 	 */
-	export interface TreeProperties  {
+	export interface TreeProps  {
 		/** If true, the root node is automatically opened when the tree is created or Tree.setRoot is called.
 		 * Flags: IRW */
 		autoOpenRoot?: boolean /* Boolean */; // Flags=IRW
@@ -19023,7 +19412,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // TreeProperties
+	} // TreeProps
 
 
 	/**
@@ -19123,10 +19512,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a UserTask Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a UserTask Props argument.
 	 * This is derived from the methods in the UserTask class and it's parents and their properties marked with the I flag.
 	 */
-	export interface UserTaskProperties  {
+	export interface UserTaskProps  {
 		/** Next element to proceed to if the task is cancelled because the UserTask.targetForm or UserTask.targetVM had cancelEditing() called on it.
 		 * Flags: IR */
 		cancelElement?: string /* String */; // Flags=IR
@@ -19154,7 +19543,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // UserTaskProperties
+	} // UserTaskProps
 
 
 	/**
@@ -19203,10 +19592,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Validator Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Validator Props argument.
 	 * This is derived from the methods in the Validator class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ValidatorProperties  {
+	export interface ValidatorProps  {
 		/** Used to create a conditional validator based on AdvancedCriteria','criteria. The criteria defines when the validator applies. The form current values or ListGrid record is used as reference for the criteria. If the criteria match, then the validator will be processed. Otherwise the validator is skipped and assumed valid. To use an applyWhen criteria the form or grid must use a DataSource. <strong>NOTE:</strong> applyWhen is not supported for "binary" fields. <h3>Server and client use</h3> Conditional validators are enforced both on the server and on the client-side when defined on a DataSource field as shown in the examples below. Note the applyWhen element is treated as a Criterion. &lt;!-- Normal format --&gt; &lt;field name="age" type="integer"&gt; &lt;validators&gt; &lt;validator type="integerRange" min="0" max="100"&gt; &lt;applyWhen operator="or"&gt; &lt;criteria&gt; &lt;criterion fieldName="restrictAge" operator="equals" value="true"/&gt; &lt;criterion fieldName="gender" operator="equals" value="female"/&gt; &lt;/criteria&gt; &lt;/applyWhen&gt; &lt;/validator&gt; &lt;/validators&gt; &lt;/field&gt; &lt;!-- Conditional requirement --&gt; &lt;field name="reason" type="text"&gt; &lt;validators&gt; &lt;validator type="required"&gt; &lt;applyWhen fieldName="willAttend" operator="equals" value="false"/&gt; &lt;/validator&gt; &lt;/validators&gt; &lt;/field&gt; The last example above shows an alternate to the requiredIf validator using a xmlCriteriaShorthand','shorthand format which is only available for client-side use. On the client the reason field will change appearance to match other required or non-required fields when willAttend changes. Please see the discussion of conditionally required fields in the DataSourceField.required documentation for important information about additional complexities that can be introduced. <h3>Component XML and client-only use</h3> Conditional validators can also be applied to componentXML','Component XML similarly to provide client-only validations or read-only state management. A common use case is conditionally displaying or enabling fields. Use the readOnly validator with an applyWhen value to control the read-only appearance of a field. The example below shows a field which is hidden when willAttend=true. &lt;!-- field definition within a Component XML DynamicForm --&gt; &lt;field name="reason" type="text"&gt; &lt;validators&gt; &lt;validator type="readOnly" fieldAppearance="hidden"&gt; &lt;applyWhen fieldName="willAttend" operator="equals" value="true"/&gt; &lt;/validator&gt; &lt;/validators&gt; &lt;/field&gt; Conditional validators can be applied to DynamicForm or ListGrid fields in JavaScript code as well.
 		 * Flags: IRA */
 		applyWhen?: AdvancedCriteria; // Flags=IRA
@@ -19252,7 +19641,7 @@ declare namespace Isc {
 
 		/* Method Overrides */
 
-	} // ValidatorProperties
+	} // ValidatorProps
 
 
 	/**
@@ -19404,10 +19793,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a ValuesManager Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a ValuesManager Props argument.
 	 * This is derived from the methods in the ValuesManager class and it's parents and their properties marked with the I flag.
 	 */
-	export interface ValuesManagerProperties  {
+	export interface ValuesManagerProps  {
 		/** DSRequest.operationId','operationId to use when performing add operations.
 		 * Flags: IRW, Group: operations */
 		addOperation?: string /* String */; // Flags=IRW
@@ -19480,7 +19869,7 @@ declare namespace Isc {
 		 */
 		getValue?(fieldName:string, component?:Canvas): any; 
 
-	} // ValuesManagerProperties
+	} // ValuesManagerProps
 
 
 	/**
@@ -19577,15 +19966,21 @@ declare namespace Isc {
 
 	/* Methods */
 
+		/** 
+		 * Retrieve a ValuesManager by it's global Canvas.ID','ID.
+		 * @param {string} ID - global ID of the ValuesManager
+		 */
+		getById(ID:string /* String */): ValuesManager; 
+
 	} // ValuesManagerStatic
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a VLayout Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a VLayout Props argument.
 	 * This is derived from the methods in the VLayout class and it's parents and their properties marked with the I flag.
 	 */
-	export interface VLayoutProperties extends LayoutProperties {
-	} // VLayoutProperties
+	export interface VLayoutProps extends LayoutProps {
+	} // VLayoutProps
 
 
 	/**
@@ -19599,10 +19994,10 @@ declare namespace Isc {
 
 
 	/**
-	 * Properties used for passing into .create() or anything else that takes a Window Properties argument.
+	 * Properties used for passing into .create() or anything else that takes a Window Props argument.
 	 * This is derived from the methods in the Window class and it's parents and their properties marked with the I flag.
 	 */
-	export interface WindowProperties extends LayoutProperties {
+	export interface WindowProps extends LayoutProps {
 		/** Should this window minimize, maximize, and restore as an animation, or as a simple 1-step transition?
 		 * Flags: IRWA, Group: appearance */
 		animateMinimize?: boolean; // Flags=IRWA
@@ -19809,7 +20204,7 @@ declare namespace Isc {
 		 */
 		closeClick?(): boolean /* Boolean */; 
 
-	} // WindowProperties
+	} // WindowProps
 
 
 	/**

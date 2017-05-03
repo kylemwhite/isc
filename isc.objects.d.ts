@@ -5,7 +5,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/1/2017 12:12:30 PM by kwhite
+// Generated: 5/2/2017 4:49:28 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-01
 
 declare namespace Isc {
@@ -128,7 +128,7 @@ declare namespace Isc {
 		canDuplicate?: boolean /* Boolean */; // Flags=IRW
 		/** Properties to be applied to the EditNode.liveObject','liveObject.Canvas.editProxy','editProxy when created. Note that the editProxy is created the first time a component is placed into editMode, so any editProxyProperties must be set before then.
 		 * Flags: IR */
-		editProxyProperties?: EditProxyProperties /* EditProxy Properties */; // Flags=IR
+		editProxyProperties?: EditProxyProps /* EditProxy Properties */; // Flags=IR
 		/** SCClassName of the EditNode.liveObject , for example, "ListGrid".
 		 * Flags: IR */
 		type?: string /* SCClassName */; // Flags=IR
@@ -638,7 +638,7 @@ declare namespace Isc {
 		hiliteIconHeight?: number; // Flags=IRW
 		/** If this ListGrid is showing a filter row (ListGrid.showFilterEditor','showFilterEditor:true), this property can be used to specify properties for the appropriate filter form item.
 		 * Flags: IRWA, Group: filterEditor */
-		filterEditorProperties?: FormItemProperties /* FormItem properties */; // Flags=IRWA
+		filterEditorProperties?: FormItemProps /* FormItem properties */; // Flags=IRWA
 		/** If this field can be grouped, this attribute represents the set of grouping styles that are available. For example, a "date" field might be able to be grouped by week or month, as well as by the date itself. If groupingModes are present and ListGrid.canGroupBy','grouping is enabled, the menu for this field includes a submenu of possible grouping modes generated from the groupingModes valueMap. When the user selects a particular grouping mode, ListGridField.groupingMode','field.groupingMode is set to the user's chosen mode, and this choice can be detected via the field parameter to ListGridField.getGroupValue in order to provide different modes of grouping. The user may also choose to group records without specifying a grouping mode, in this case, the ListGridField.defaultGroupingMode is used. Note that getGroupValue, groupingModes et al can be specified on SimpleType declarations. See this list of builtinGroupingModes','builtin grouping modes for more information.
 		 * Flags: IR, Group: grouping */
 		groupingModes?: ValueMap; // Flags=IR
@@ -896,7 +896,7 @@ declare namespace Isc {
 		headerHoverDelay?: number /* integer */; // Flags=IRW
 		/** Properties to apply the the form item created to edit this field. (Only used if this field is editable). For example, if you have a field "shoeSize" with DataSourceField.editorType set to "SpinnerItem" in order to use a SpinnerItem as your field editor, and you want to pass the SpinnerItem.step property to the created SpinnerItem: fields : [ { name:"shoeSize", editorType:"SpinnerItem", editorProperties : { step:0.5 } }, ... other fields ... ] 
 		 * Flags: IRWA, Group: editing */
-		editorProperties?: FormItemProperties /* FormItem properties */; // Flags=IRWA
+		editorProperties?: FormItemProps /* FormItem properties */; // Flags=IRWA
 		/** If ListGridField.optionDataSource is set for this ListGridField, criteria specified in this attribute will be passed to the dataSource when performing the fetch operation to determine data-value to display-value mappings
 		 * Flags: IRW, Group: display_values */
 		optionCriteria?: Criteria; // Flags=IRW
@@ -932,7 +932,7 @@ declare namespace Isc {
 		leaveHeaderMenuButtonSpace?: boolean; // Flags=IWA
 		/** If this field has an optionDataSource specified and ListGridField.autoFetchDisplayMap','autoFetchDisplayMap is set, this attribute provides a way to customize the dataSource request issued to fetch the display map from the option dataSource. This provides, among other capabilities, a way to trigger the server to return summary records.
 		 * Flags: IR, Group: display_values */
-		optionFilterContext?: DSRequestProperties /* DSRequest Properties */; // Flags=IR
+		optionFilterContext?: DSRequestProps /* DSRequest Properties */; // Flags=IR
 		/** When a field is subject to autofitting (see ListGrid.autoFitFieldWidths), sets the minimum width of the field. The actual allowed minimum will be the maximum of: this property, ListGridField.width (if a number), the aufofit value determined by the widest value content in this field's column ListGrid.minFieldWidth 
 		 * Flags: IRW, Group: appearance */
 		minWidth?: number /* Number */; // Flags=IRW
@@ -1241,7 +1241,7 @@ declare namespace Isc {
 		defaults?: Properties; // Flags=IR
 		/** Properties to be applied to the PaletteNode.liveObject','liveObject.Canvas.editProxy','editProxy when created.
 		 * Flags: IR */
-		editProxyProperties?: EditProxyProperties /* EditProxy Properties */; // Flags=IR
+		editProxyProperties?: EditProxyProps /* EditProxy Properties */; // Flags=IR
 		/** For a paletteNode which should be a "singleton", that is, always provides the exact same object (==) rather than a dynamically created copy, provide the singleton object as liveObject. Instead of dynamically creating an object from defaults, the liveObject will simply be assigned to EditNode.liveObject for the created editNode.
 		 * Flags: IR */
 		liveObject?: any /* Object */; // Flags=IR
