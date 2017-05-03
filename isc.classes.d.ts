@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/2/2017 4:49:28 PM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-01
+// Generated: 5/3/2017 9:13:31 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-03
 
 declare namespace Isc {
 
@@ -11201,9 +11201,9 @@ declare namespace Isc {
 
 		/** 
 		 * Sets this component's filter criteria. Default implementation calls this.data.setCriteria(). Note: if ListGrid.showFilterEditor is true, the ListGrid.setFilterEditorCriteria method may be used to update the values displayed in the filter editor without effecting the data object.
-		 * @param {Criteria}  - new criteria to show
+		 * @param {Criteria} param0 - new criteria to show
 		 */
-		setCriteria?(:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
+		setCriteria?(param0:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
 
 		/** 
 		 * Setter for the ListGrid.showFilterEditor property. Allows the filter editor to be shown or hidden at runtime.
@@ -13336,9 +13336,9 @@ declare namespace Isc {
 
 		/** 
 		 * Sets this component's filter criteria. Default implementation calls this.data.setCriteria(). Note: if ListGrid.showFilterEditor is true, the ListGrid.setFilterEditorCriteria method may be used to update the values displayed in the filter editor without effecting the data object.
-		 * @param {Criteria}  - new criteria to show
+		 * @param {Criteria} param0 - new criteria to show
 		 */
-		setCriteria?(:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
+		setCriteria?(param0:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
 
 		/** 
 		 * Setter for the ListGrid.showFilterEditor property. Allows the filter editor to be shown or hidden at runtime.
