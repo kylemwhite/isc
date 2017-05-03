@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-01
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-03
 
 Errors during generation
-Generated: 5/2/2017 4:49:28 PM by kwhite
+Generated: 5/3/2017 9:13:31 AM by kwhite
 
 Summary
 Total Types  : 229
@@ -357,6 +357,25 @@ Attributes suspected as string types but do not have the baseType set: 84.
 1. attr:FormulaBuilder.field, valueType=Field 
 2. attr:SummaryBuilder.field, valueType=Field 
 
+Method parameters with bad or missing name: 14
+1. method:TileLayout.setTileHeight, type='Integer', name=''
+2. method:TileLayout.setTileSize, type='Integer', name=''
+3. method:ListGrid.setCriteria, type='Criteria or AdvancedCriteria', name=''
+4. method:FilterBuilder.setTopOperatorAppearance, type='TopOperatorAppearance', name=''
+5. method:DynamicForm.setTitleOrientation, type='TitleOrientation', name=''
+6. method:TileLayout.setTileHMargin, type='Integer', name=''
+7. method:TileLayout.setTileVMargin, type='Integer', name=''
+8. method:Gauge.setSectors, type='Array of GaugeSector', name=''
+9. method:FormulaBuilder.getSamplePrompt, type='TestFunctionResult', name=''
+10. method:SummaryBuilder.setSummary, type='String', name=''
+11. method:FormItem.setTabIndex, type='Integer', name=''
+12. method:TileLayout.setTileMargin, type='Integer', name=''
+13. method:TileLayout.setTileWidth, type='Integer', name=''
+14. method:FormulaBuilder.setFormula, type='String', name=''
+
+
+
+
 ===== For recording metrics ======
-Date	Types	Classes	Objects	Methods	Methods with bad flags	Classes without inherits from	string values with quotes	string values without quotes	string values with period	array of	Array of	Array[] of	array[] of	just array or Array	string types without baseType
-5/2/2017	229	309	67	3064	3	192	216	657	130	1	224	10	0	10	84	
+Date	Types	Classes	Objects	Methods	Methods with bad flags	Classes without inherits from	string values with quotes	string values without quotes	string values with period	array of	Array of	Array[] of	array[] of	just array or Array	string types without baseType	Method params with bad or missing name
+2017-05-03	229	309	67	3064	3	192	216	657	130	1	224	10	0	10	84	14	
