@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/3/2017 9:13:31 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-03
+// Generated: 5/4/2017 10:13:47 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-04
 
 declare namespace Isc {
 
@@ -2111,6 +2111,27 @@ declare namespace Isc {
 		 * @param {string} ID - global ID of the Canvas
 		 */
 		getById(ID:string /* String */): Canvas; 
+
+		/** 
+		 * Change the basic size of UI components in the current skin by "delta" pixels. Must be called after the skin has been loaded, but before any components are created. The size of a text input control implies the size of most other controls: all other FormItems (eg selects) need to be the same size or mixed controls will look odd. This includes Buttons anything that potentially contains a FormItem needs to be as tall or slightly taller: this includes grid row (inline editing), Window.headerControls','Window headers, TabBar and SectionHeaders Because of this necessary uniformity, just specifying a single pixel value is enough for the framework to resize all core controls, with several caveats: skins that make extensive use of images (eg TreeFrog) will stretch those images, which may result in ugly artifacts in some combinations of operating system and browser, for which no workaround is possible. For this reason, resizeControls() is only officially supported for Tahoe, Enterprise, EnterpriseBlue and Graphite skins, and only in skinning','CSS3 Mode even in Enterprise-series skins, TreeGrid.showConnectors','tree connector lines vertically stretch, becoming obviously blurry and misshapen with an increase of 4-5px. To avoid this, replace the tree connector media (see TreeGrid.connectorImage). FormItemIcons are not resized by default, because stretched icons generally look worse than non-scaled icons that are a bit smaller than the input field images that use skinning','spriting will not be stretched because the sizes for these controls are embedded in CSS. In most cases, this is desirable; for example, the downward chevron shape used for SelectItem controls doesn't stretch, and looks better that way. 
+		 * @param {number} delta - number of pixels to increase or decrease from current size
+		 * @param {boolean} resizeIcons - If true, this method will also cause icons registered with policy "controls" to be Canvas.resizeIcons','resized. This is an optional parameter, if omitted, icons will be resized if Canvas.setAutoResizeIcons','autoResizeIcons is true.
+		 */
+		resizeControls(delta:number /* int */, resizeIcons?:boolean /* Boolean */): void; 
+
+		/** 
+		 * Modify the size of fonts for some or all stylesheets defined in the page. This method can be used to dynamically increase or decrease font size for all of the fonts in your application, or just fonts defined in your chosen SmartClient skin (the latter can be achieved by passing styleSheets as "skin_styles.css" - the default name for the CSS file used in each SmartClient skin). resizeFonts() must be called after the skin has been loaded, and before any components have been created. Calling resizeFonts() at a later time is not supported (you will notice that font sizes still increase, however, this approach is not supported). Some browsers will disallow access or modification of styleSheets if they are loaded from a domain that is different from the loading page. In this case resizeFonts() cannot be used. This method has a small performance penalty which depends on the browser, number of stylesheets being modified, and age of your machine. With modern browsers on modern machines resizing just skin fonts, the impact is basically negligible (&lt;5ms). 
+		 * @param {number} sizeChange - size to change fonts by. Can be negative to shrink fonts
+		 * @param {string} styleSheets - optional regular expression pattern for matching stylesheets
+		 * @param {boolean} resizeIcons - If true, this method will also cause icons registered with policy "fonts" to be Canvas.resizeIcons','resized. This is an optional parameter, if omitted, icons will be resized if Canvas.setAutoResizeIcons','autoResizeIcons is true.
+		 */
+		resizeFonts(sizeChange:number /* int */, styleSheets?:string /* String */, resizeIcons?:boolean /* Boolean */): void; 
+
+		/** 
+		 * Should icons be automatically resized with Canvas.resizeControls','controls and Canvas.resizeFonts','text? If true, icon attributes registered for resize with policy "controls" will be resized when resizeControls() runs, and icons registered with policy "fonts" will resize when resizeFonts() runs. To resize icons with other policies, developers should call Canvas.resizeIcons directly
+		 * @param {boolean} autoResizeIcons - true if icons should be auto-resized
+		 */
+		setAutoResizeIcons(autoResizeIcons:boolean): void; 
 
 	} // CanvasStatic
 
@@ -5508,7 +5529,7 @@ declare namespace Isc {
 		requiredTitleSuffix?: string /* HTMLString */; // Flags=IRW
 		/** Keyboard shortcut that causes the value of the currently focused form item to be reverted to whatever value would be shown if DynamicForm.resetValues were called.
 		 * Flags: IR */
-		revertValueKey?: string /* KeyIdentifier */; // Flags=IR
+		revertValueKey?: KeyIdentifier; // Flags=IR
 		/** The string pre-pended to the title of an item in this form if its titleOrientation property is set to "right".
 		 * Flags: IRW, Group: formTitles */
 		rightTitlePrefix?: string /* HTMLString */; // Flags=IRW
@@ -5932,7 +5953,7 @@ declare namespace Isc {
 
 		/** Keyboard shortcut that causes the value of the currently focused form item to be reverted to whatever value would be shown if DynamicForm.resetValues were called.
 		 * Flags: IR */
-		revertValueKey: string /* KeyIdentifier */;
+		revertValueKey: KeyIdentifier;
 
 		/** The string pre-pended to the title of an item in this form if its titleOrientation property is set to "right".
 		 * Flags: IRW, Group: formTitles */
@@ -11119,6 +11140,12 @@ declare namespace Isc {
 		fetchData?(criteria?:Criteria, callback?:DSCallback, requestProperties?:DSRequest): void; 
 
 		/** 
+		 * Optional notification fired when the user performs a filter using the ListGrid.showFilterEditor','Filter Editor. May fire as criteria values are being edited if ListGrid.filterOnKeypress is true, otherwise will fire when the user clicks the filter button or presses the Enter key while focus is in the Filter Editor. Return false to cancel the default behavior - you must cancel the default behavior if your code is going to call ListGrid.filterData, ListGrid.setCriteria or any other API that affects the criteria applied to the grid. The criteria parameter contains the current criteria applied to the grid including edits the user has just made using the Filter Editor. This matches what is returned if you call ListGrid.getFilterEditorCriteria. If you wish to access the criteria applied to the grid without picking up any edits to the Filter Editor, use ListGrid.getCriteria instead. Developers may wish to perform a filter using the Filter Editor values from code running outside the standard filterEditorSubmit flow. For example, if you wanted a confirmation dialog to be shown before filtering was performed, you would cancel the default behavior as described above, but then need to replicate the default behavior once the user confirms that they want to proceed. To replicate the default behavior, just call: grid.filterData(grid.getFilterEditorCriteria()); or, to ensure the specified ListGrid.autoFetchTextMatchStyle is picked up grid.filterData(grid.getFilterEditorCriteria(), null, {textMatchStyle:grid.autoFetchTextMatchStyle}); 
+		 * @param {Criteria} criteria - criteria derived from the filter editor values
+		 */
+		filterEditorSubmit?(criteria:Criteria): boolean; 
+
+		/** 
 		 * Return CSS text for styling this cell, which will be applied in addition to the CSS class for the cell, as overrides. "CSS text" means semicolon-separated style settings, suitable for inclusion in a CSS stylesheet or in a STYLE attribute of an HTML element. 
 		 * @param {ListGridRecord} record - cell record as returned by getCellRecord
 		 * @param {number} rowNum - row number for the cell
@@ -11204,6 +11231,12 @@ declare namespace Isc {
 		 * @param {Criteria} param0 - new criteria to show
 		 */
 		setCriteria?(param0:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
+
+		/** 
+		 * If ListGrid.showFilterEditor is true, this method will update the criteria shown in the filterEditor without performing a filter.
+		 * @param {Criteria} criteria - New criteria to show
+		 */
+		setFilterEditorCriteria?(criteria:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
 
 		/** 
 		 * Setter for the ListGrid.showFilterEditor property. Allows the filter editor to be shown or hidden at runtime.
@@ -13254,6 +13287,12 @@ declare namespace Isc {
 		fetchData?(criteria?:Criteria, callback?:DSCallback, requestProperties?:DSRequest): void; 
 
 		/** 
+		 * Optional notification fired when the user performs a filter using the ListGrid.showFilterEditor','Filter Editor. May fire as criteria values are being edited if ListGrid.filterOnKeypress is true, otherwise will fire when the user clicks the filter button or presses the Enter key while focus is in the Filter Editor. Return false to cancel the default behavior - you must cancel the default behavior if your code is going to call ListGrid.filterData, ListGrid.setCriteria or any other API that affects the criteria applied to the grid. The criteria parameter contains the current criteria applied to the grid including edits the user has just made using the Filter Editor. This matches what is returned if you call ListGrid.getFilterEditorCriteria. If you wish to access the criteria applied to the grid without picking up any edits to the Filter Editor, use ListGrid.getCriteria instead. Developers may wish to perform a filter using the Filter Editor values from code running outside the standard filterEditorSubmit flow. For example, if you wanted a confirmation dialog to be shown before filtering was performed, you would cancel the default behavior as described above, but then need to replicate the default behavior once the user confirms that they want to proceed. To replicate the default behavior, just call: grid.filterData(grid.getFilterEditorCriteria()); or, to ensure the specified ListGrid.autoFetchTextMatchStyle is picked up grid.filterData(grid.getFilterEditorCriteria(), null, {textMatchStyle:grid.autoFetchTextMatchStyle}); 
+		 * @param {Criteria} criteria - criteria derived from the filter editor values
+		 */
+		filterEditorSubmit?(criteria:Criteria): boolean; 
+
+		/** 
 		 * Return CSS text for styling this cell, which will be applied in addition to the CSS class for the cell, as overrides. "CSS text" means semicolon-separated style settings, suitable for inclusion in a CSS stylesheet or in a STYLE attribute of an HTML element. 
 		 * @param {ListGridRecord} record - cell record as returned by getCellRecord
 		 * @param {number} rowNum - row number for the cell
@@ -13339,6 +13378,12 @@ declare namespace Isc {
 		 * @param {Criteria} param0 - new criteria to show
 		 */
 		setCriteria?(param0:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
+
+		/** 
+		 * If ListGrid.showFilterEditor is true, this method will update the criteria shown in the filterEditor without performing a filter.
+		 * @param {Criteria} criteria - New criteria to show
+		 */
+		setFilterEditorCriteria?(criteria:Criteria | AdvancedCriteria /* Criteria or AdvancedCriteria */): void; 
 
 		/** 
 		 * Setter for the ListGrid.showFilterEditor property. Allows the filter editor to be shown or hidden at runtime.
@@ -17669,7 +17714,7 @@ declare namespace Isc {
 		buttonConstructor?: Class /* class */; // Flags=AIRW
 		/** An array of shortcut keyboard commands which will close the currently selected tab, if the currently selected tab is closeable. Either this TabBar or the currently selected tab must have keyboard focus. By default, this is an array of two KeyIdentifiers: Alt+Delete, which is the keyboard command recommended by <a href='http://www.w3.org/WAI/PF/aria-practices/#tabpanel' target='_blank'>WAI-ARIA Authoring Practices</a> and <a href='http://access.aol.com/dhtml-style-guide-working-group/#tabpanel' target='_blank'>DHTML Style Guide Working Group</a>, and Ctrl+W. Notes: On Mac, the Alt+Delete keyboard command is accomplished via Fn-Option-Delete. Alt+Delete is a <a href='http://doccenter.freedomscientific.com/doccenter/archives/training/jawskeystrokes.htm' target='_blank'>JAWS Keystroke</a> to "Say Active Cursor". If using JAWS, pressing Alt+Shift+Delete will close the tab. In Chrome, Firefox, and Internet Explorer on Windows, Ctrl+W will also close the browser tab/window if focus is not within a TabBar. If Ctrl+W will be used frequently by the application's users, it may be useful to Page.registerKey','register this key to cancel it by default: isc.Page.registerKey({ctrlKey: true, keyName: "W"}, "return false"); 
 		 * Flags: IRA */
-		closeTabKeys?: Array<string> /* Array of KeyIdentifier */; // Flags=IRA
+		closeTabKeys?: Array<KeyIdentifier> /* Array of KeyIdentifier */; // Flags=IRA
 		/** Default size (length) in pixels for tabs within this tabBar
 		 * Flags: IR */
 		defaultTabSize?: number; // Flags=IR
@@ -17726,7 +17771,7 @@ declare namespace Isc {
 
 		/** An array of shortcut keyboard commands which will close the currently selected tab, if the currently selected tab is closeable. Either this TabBar or the currently selected tab must have keyboard focus. By default, this is an array of two KeyIdentifiers: Alt+Delete, which is the keyboard command recommended by <a href='http://www.w3.org/WAI/PF/aria-practices/#tabpanel' target='_blank'>WAI-ARIA Authoring Practices</a> and <a href='http://access.aol.com/dhtml-style-guide-working-group/#tabpanel' target='_blank'>DHTML Style Guide Working Group</a>, and Ctrl+W. Notes: On Mac, the Alt+Delete keyboard command is accomplished via Fn-Option-Delete. Alt+Delete is a <a href='http://doccenter.freedomscientific.com/doccenter/archives/training/jawskeystrokes.htm' target='_blank'>JAWS Keystroke</a> to "Say Active Cursor". If using JAWS, pressing Alt+Shift+Delete will close the tab. In Chrome, Firefox, and Internet Explorer on Windows, Ctrl+W will also close the browser tab/window if focus is not within a TabBar. If Ctrl+W will be used frequently by the application's users, it may be useful to Page.registerKey','register this key to cancel it by default: isc.Page.registerKey({ctrlKey: true, keyName: "W"}, "return false"); 
 		 * Flags: IRA */
-		closeTabKeys: Array<string> /* Array of KeyIdentifier */;
+		closeTabKeys: Array<KeyIdentifier> /* Array of KeyIdentifier */;
 
 		/** Default size (length) in pixels for tabs within this tabBar
 		 * Flags: IR */

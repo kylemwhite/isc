@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-03
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-04
 
 Errors during generation
-Generated: 5/3/2017 9:13:31 AM by kwhite
+Generated: 5/4/2017 10:13:47 AM by kwhite
 
 Summary
 Total Types  : 229
 Total Classes: 309
 Total Objects: 67
-Total Methods: 3064
+Total Methods: 3554
 
 Methods with flags besides A: 3 (methods should not have any flags except A?)
 1. class:CubeGrid.collapseField, Flags=facetValueMap
@@ -261,7 +261,7 @@ Array[] of: 10
 array[] of: 0
 Just Array or array: 10
 
-Attributes suspected as string types but do not have the baseType set: 84.
+Attributes suspected as string types but do not have the baseType set: 83.
 === identifier:23 ===
 1. attr:ListGridField.groupingMode, valueType=identifier 
 2. attr:Hilite.fieldName, valueType=identifier 
@@ -336,8 +336,6 @@ Attributes suspected as string types but do not have the baseType set: 84.
 1. attr:FormItem.accessKey, valueType=keyChar 
 === CSSStyle:1 ===
 1. attr:Dialog.messageStyle, valueType=CSSStyle 
-=== KeyIdentifier:1 ===
-1. attr:DynamicForm.revertValueKey, valueType=KeyIdentifier 
 === id:2 ===
 1. attr:CubeGrid.valueProperty, valueType=id 
 2. attr:CubeGrid.cellIdProperty, valueType=id 
@@ -357,7 +355,7 @@ Attributes suspected as string types but do not have the baseType set: 84.
 1. attr:FormulaBuilder.field, valueType=Field 
 2. attr:SummaryBuilder.field, valueType=Field 
 
-Method parameters with bad or missing name: 14
+Method parameters with missing name: 15
 1. method:TileLayout.setTileHeight, type='Integer', name=''
 2. method:TileLayout.setTileSize, type='Integer', name=''
 3. method:ListGrid.setCriteria, type='Criteria or AdvancedCriteria', name=''
@@ -371,11 +369,19 @@ Method parameters with bad or missing name: 14
 11. method:FormItem.setTabIndex, type='Integer', name=''
 12. method:TileLayout.setTileMargin, type='Integer', name=''
 13. method:TileLayout.setTileWidth, type='Integer', name=''
-14. method:FormulaBuilder.setFormula, type='String', name=''
+14. classMethod:DataSource.getFieldValue, type='dataPath', name=''
+15. classMethod:DataSource.getFieldValue, type='component', name=''
+16. classMethod:DataSource.getFieldValue, type='reason', name=''
+17. method:FormulaBuilder.setFormula, type='String', name=''
+
+
+Method parameters with bad name: 2
+1. classMethod:isc.addProperties, type='arguments 1-N', name='['
+2. method:CubeGrid.hiliteCell, type='string', name='[]'
 
 
 
 
 ===== For recording metrics ======
-Date	Types	Classes	Objects	Methods	Methods with bad flags	Classes without inherits from	string values with quotes	string values without quotes	string values with period	array of	Array of	Array[] of	array[] of	just array or Array	string types without baseType	Method params with bad or missing name
-2017-05-03	229	309	67	3064	3	192	216	657	130	1	224	10	0	10	84	14	
+Date	Types	Classes	Objects	Methods	Methods with bad flags	Classes without inherits from	string values with quotes	string values without quotes	string values with period	array of	Array of	Array[] of	array[] of	just array or Array	string types without baseType	Method params with missing name	Method params with bad name
+2017-05-04	229	309	67	3554	3	192	216	657	130	1	224	10	0	10	83	15	2	

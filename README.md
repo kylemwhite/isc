@@ -103,7 +103,7 @@ If you want to use a SmartClient method that is not defined yet, you have a coup
  }
  ```
 
- and put a reference to it in your TypeScript file like this
+ and put a reference to it in your TypeScript file like this:
 
  ```typescript
 /// <reference path="../../scripts/typings/isc/isc.index.d.ts" />
@@ -135,14 +135,11 @@ function MyFunc() {
 
 ```
 
-
 ## How this was built
 The SmartClient library is huge and it would be impractical and error-prone to hand-code a type definition library that defines every property and method on every class. Fortunately, Isomorphic has an XML ([referenceDocs.xml](http://www.smartclient.com/smartclient-latest/isomorphic/system/reference/referenceDocs.xml)) file used for their documentation that contains all the necessary information. They use this file to generate the SmartGWT library. Similarly, I've used the same file to generate the TypeScript library files. The referenceDocs.xml file is not perfect which means that there are a lot of customizations required to get the proper code generated. Thus, I'm doing it in manageable sections. Simultaneously, Isomorphic is fixing the file to aid in code generation so we should be able to get the complete library generated soon.
 
-
 ## Testing
 So far, this has only been tested with Visual Studio 2015. If you're using VS Code or anything else, please let me know if it works or if there are problems. Also, I have no units tests yet, my only test is that I copy the definitions into my own SmartClient project and make sure everything still compiles. If somebody wants to help with unit tests, I'm all ears.
-
 
 ## Todo
 1. Finish defining all classes and objects (by code generation).

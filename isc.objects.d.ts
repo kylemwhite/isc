@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/3/2017 9:13:31 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-03
+// Generated: 5/4/2017 10:13:47 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-04
 
 declare namespace Isc {
 
@@ -192,6 +192,24 @@ declare namespace Isc {
 		/** List of Canvases that constitute the section. These Canvases will be shown and hidden together.
 		 * Flags: I */
 		items?: Array<Canvas> /* Array of Canvas */; // Flags=I
+	}
+
+	/**
+	 * Identifier for a key pressed by the user, optionally specifying whether the Shift, Control, and/or Alt keys should be held or not held when the key is pressed, used by various methods. 
+	 */
+	export interface KeyIdentifier  {
+		/** If set, whether the Shift key must be held down.
+		 * Flags: IR */
+		shiftKey?: boolean /* Boolean */; // Flags=IR
+		/** Name of the key.
+		 * Flags: IR */
+		keyName?: KeyName; // Flags=IR
+		/** If set, whether the Alt key must be held down.
+		 * Flags: IR */
+		altKey?: boolean /* Boolean */; // Flags=IR
+		/** If set, whether the Control key must be held down.
+		 * Flags: IR */
+		ctrlKey?: boolean /* Boolean */; // Flags=IR
 	}
 
 	/**
