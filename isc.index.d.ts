@@ -7,7 +7,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/5/2017 11:01:56 AM by kwhite
+// Generated: 5/5/2017 2:55:13 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-05
 
 /**
