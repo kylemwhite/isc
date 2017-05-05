@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/4/2017 10:13:47 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-04
+// Generated: 5/5/2017 11:01:43 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-05
 
 declare namespace Isc {
 
@@ -2126,6 +2126,13 @@ declare namespace Isc {
 		 * @param {boolean} resizeIcons - If true, this method will also cause icons registered with policy "fonts" to be Canvas.resizeIcons','resized. This is an optional parameter, if omitted, icons will be resized if Canvas.setAutoResizeIcons','autoResizeIcons is true.
 		 */
 		resizeFonts(sizeChange:number /* int */, styleSheets?:string /* String */, resizeIcons?:boolean /* Boolean */): void; 
+
+		/** 
+		 * Change the basic size of icons in the current skin by "delta" pixels. This method may be invoked automatically from Canvas.resizeControls. Must be called after the skin has been loaded, but before any components are created.
+		 * @param {string} policy - Which set of icons should be resized? This should correspond to the iconSizingPolicy argument applied when Canvas.registerIconSizingAttributes','registering the icon sizing attributes.
+		 * @param {number} delta - number of pixels to increase or decrease from current size
+		 */
+		resizeIcons(policy:string /* String */, delta:number /* int */): void; 
 
 		/** 
 		 * Should icons be automatically resized with Canvas.resizeControls','controls and Canvas.resizeFonts','text? If true, icon attributes registered for resize with policy "controls" will be resized when resizeControls() runs, and icons registered with policy "fonts" will resize when resizeFonts() runs. To resize icons with other policies, developers should call Canvas.resizeIcons directly

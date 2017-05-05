@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-04
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-05
 
 Errors during generation
-Generated: 5/4/2017 10:13:47 AM by kwhite
+Generated: 5/5/2017 11:01:43 AM by kwhite
 
 Summary
 Total Types  : 229
 Total Classes: 309
 Total Objects: 67
-Total Methods: 3554
+Total Methods: 3555
 
 Methods with flags besides A: 3 (methods should not have any flags except A?)
 1. class:CubeGrid.collapseField, Flags=facetValueMap
@@ -17,7 +17,7 @@ Methods with flags besides A: 3 (methods should not have any flags except A?)
 3. class:Canvas.getChildTabPosition, Flags=child
 
 
-Classes without inheritsFrom attribute: 192 (All classes except Class should inherit from something, or should be an object instead of class)
+Classes without inheritsFrom attribute: 192 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake)
 1. AdvancedHiliteEditor
 2. AutoFitButton
 3. AutoTest
@@ -212,48 +212,134 @@ Classes without inheritsFrom attribute: 192 (All classes except Class should inh
 192. ZoneCanvas
 
 
+
+Values with missing references (distinct): 114
+BAD: These are possible values of types that refer to a classAttr that doesn't exist.
+1. Canvas.ABSOLUTE
+2. Canvas.AUTO
+3. Canvas.BOTTOM
+4. Canvas.CENTER
+5. Canvas.CLIP_H
+6. Canvas.CLIP_V
+7. Canvas.COPY
+8. Canvas.DEFAULT
+9. Canvas.DOWN
+10. Canvas.HAND
+11. Canvas.HELP
+12. Canvas.HIDDEN
+13. Canvas.INHERIT
+14. Canvas.LEFT
+15. Canvas.MOVE
+16. Canvas.NO_REPEAT
+17. Canvas.NORMAL
+18. Canvas.RELATIVE
+19. Canvas.REPEAT
+20. Canvas.REPEAT_X
+21. Canvas.REPEAT_Y
+22. Canvas.RIGHT
+23. Canvas.SCROLL
+24. Canvas.STRETCH
+25. Canvas.TEXT
+26. Canvas.TILE
+27. Canvas.TOP
+28. Canvas.UP
+29. Canvas.VISIBLE
+30. Canvas.WAIT
+31. DateItem.DAY_MONTH
+32. DateItem.DAY_MONTH_YEAR
+33. DateItem.MONTH_DAY
+34. DateItem.MONTH_DAY_YEAR
+35. DateItem.MONTH_YEAR
+36. DateItem.YEAR_MONTH
+37. DateItem.YEAR_MONTH_DAY
+38. DrawLabel.CENTER
+39. DrawLabel.END
+40. DrawLabel.LEFT
+41. DrawLabel.RIGHT
+42. DrawLabel.START
+43. DynamicForm.GET
+44. DynamicForm.MULTIPART
+45. DynamicForm.NORMAL
+46. DynamicForm.POST
+47. Layout.FILL
+48. Layout.HORIZONTAL
+49. Layout.NONE
+50. Layout.VERTICAL
+51. ListGrid.AFTER
+52. ListGrid.BEFORE
+53. ListGrid.BETWEEN
+54. ListGrid.BODY
+55. ListGrid.BOTH
+56. ListGrid.CLICK
+57. ListGrid.CLICK_OUTSIDE
+58. ListGrid.DOUBLE_CLICK
+59. ListGrid.DOWN_ARROW_KEYPRESS
+60. ListGrid.EDIT_FIELD_CHANGE
+61. ListGrid.ENTER_KEYPRESS
+62. ListGrid.ESCAPE_KEYPRESS
+63. ListGrid.NONE
+64. ListGrid.OVER
+65. ListGrid.PROGRAMMATIC
+66. ListGrid.SHIFT_TAB_KEYPRESS
+67. ListGrid.TAB_KEYPRESS
+68. ListGrid.UP_ARROW_KEYPRESS
+69. Log.DEBUG
+70. Log.ERROR
+71. Log.FATAL
+72. Log.INFO
+73. Log.WARN
+74. Page.FIRE_ONCE
+75. Selection.MULTIPLE
+76. Selection.NONE
+77. Selection.SIMPLE
+78. Selection.SINGLE
+79. StatefulCanvas.BUTTON
+80. StatefulCanvas.CHECKBOX
+81. StatefulCanvas.FOCUSED
+82. StatefulCanvas.RADIO
+83. StatefulCanvas.SELECTED
+84. StatefulCanvas.STATE_DISABLED
+85. StatefulCanvas.STATE_DOWN
+86. StatefulCanvas.STATE_OVER
+87. StatefulCanvas.STATE_UP
+88. StatefulCanvas.UNSELECTED
+89. TableView.GROUPED
+90. TableView.NAVICON_ONLY
+91. TableView.PLAIN
+92. TableView.SUMMARY_DATA
+93. TableView.SUMMARY_FULL
+94. TableView.SUMMARY_INFO
+95. TableView.TITLE_DESCRIPTION
+96. TableView.TITLE_ONLY
+97. TableView.WHOLE_RECORD
+98. TextAreaItem.HARD
+99. TextAreaItem.OFF
+100. TextAreaItem.SOFT
+101. TextItem.DEFAULT
+102. TextItem.LOWER
+103. TextItem.UPPER
+104. Tree.FOLDERS_LOADED
+105. Tree.LOADED
+106. Tree.LOADED_PARTIAL_CHILDREN
+107. Tree.LOADING
+108. Tree.UNLOADED
+109. Validator.DISABLED
+110. Validator.HIDDEN
+111. Validator.READONLY
+112. Window.HORIZONTAL
+113. Window.NONE
+114. Window.VERTICAL
+
+Values with found references (distinct): 0
+GOOD: These are possible values of types that refer to a classAttr that was found.
+
 ==== Should string type values have quotes or not? ====
 Contrained String Type Values with quotes: 216
 Contrained String Type Values without quotes: 657
 
 ==== Values with a period probably means a reference to a constant instead of the actual string ====
 Contrained String Type Values with period: 130
-1. NavigationMode: TableView.WHOLE_RECORD, TableView.NAVICON_ONLY, 
-2. Selected: StatefulCanvas.FOCUSED, StatefulCanvas.SELECTED, StatefulCanvas.UNSELECTED, 
-3. TEXTAREA_WRAP: TextAreaItem.OFF, TextAreaItem.SOFT, TextAreaItem.HARD, 
-4. FormMethod: DynamicForm.GET, DynamicForm.POST, 
-5. EditCompletionEvent: ListGrid.CLICK_OUTSIDE, ListGrid.CLICK, ListGrid.DOUBLE_CLICK, ListGrid.ENTER_KEYPRESS, ListGrid.ESCAPE_KEYPRESS, ListGrid.UP_ARROW_KEYPRESS, ListGrid.DOWN_ARROW_KEYPRESS, ListGrid.TAB_KEYPRESS, ListGrid.SHIFT_TAB_KEYPRESS, ListGrid.EDIT_FIELD_CHANGE, ListGrid.PROGRAMMATIC, 
-6. ReorderPosition: ListGrid.BEFORE, ListGrid.AFTER, ListGrid.OVER, 
-7. SelectionType: StatefulCanvas.BUTTON, StatefulCanvas.CHECKBOX, StatefulCanvas.RADIO, 
-8. TableMode: TableView.PLAIN, TableView.GROUPED, 
-9. DragDataAction: Canvas.COPY, Canvas.MOVE, 
-10. LoadState: Tree.UNLOADED, Tree.LOADING, Tree.FOLDERS_LOADED, Tree.LOADED, Tree.LOADED_PARTIAL_CHILDREN, 
-11. Overflow: Canvas.VISIBLE, Canvas.HIDDEN, Canvas.AUTO, Canvas.SCROLL, Canvas.CLIP_H, Canvas.CLIP_V, 
-12. ImageStyle: Canvas.CENTER, Canvas.TILE, Canvas.STRETCH, Canvas.NORMAL, 
-13. DateItemSelectorFormat: DateItem.DAY_MONTH_YEAR, DateItem.MONTH_DAY_YEAR, DateItem.YEAR_MONTH_DAY, DateItem.DAY_MONTH, DateItem.MONTH_DAY, DateItem.YEAR_MONTH, DateItem.MONTH_YEAR, 
-14. Positioning: Canvas.ABSOLUTE, Canvas.RELATIVE, 
-15. LabelAlignment: DrawLabel.START, DrawLabel.END, DrawLabel.CENTER, DrawLabel.LEFT, DrawLabel.RIGHT, 
-16. Alignment: Canvas.CENTER, Canvas.LEFT, Canvas.RIGHT, 
-17. Cursor: Canvas.DEFAULT, Canvas.AUTO, Canvas.WAIT, Canvas.HAND, Canvas.MOVE, Canvas.HELP, Canvas.TEXT, 
-18. Visibility: Canvas.INHERIT, Canvas.VISIBLE, Canvas.HIDDEN, 
-19. Encoding: DynamicForm.NORMAL, DynamicForm.MULTIPART, 
-20. RecordDropPosition: ListGrid.OVER, ListGrid.BEFORE, ListGrid.AFTER, ListGrid.NONE, 
-21. SelectionStyle: Selection.NONE, Selection.SINGLE, Selection.MULTIPLE, Selection.SIMPLE, 
-22. ContentLayoutPolicy: Window.NONE, Window.VERTICAL, Window.HORIZONTAL, 
-23. Orientation: Layout.VERTICAL, Layout.HORIZONTAL, 
-24. VerticalAlignment: Canvas.TOP, Canvas.CENTER, Canvas.BOTTOM, 
-25. LogPriority: Log.FATAL, Log.ERROR, Log.WARN, Log.INFO, Log.DEBUG, 
-26. LayoutPolicy: Layout.NONE, Layout.FILL, 
-27. CharacterCasing: TextItem.DEFAULT, TextItem.UPPER, TextItem.LOWER, 
-28. State: StatefulCanvas.STATE_UP, StatefulCanvas.STATE_DOWN, StatefulCanvas.STATE_OVER, StatefulCanvas.STATE_DISABLED, 
-29. Direction: Canvas.UP, Canvas.DOWN, Canvas.LEFT, Canvas.RIGHT, 
-30. Side: Canvas.LEFT, Canvas.RIGHT, Canvas.TOP, Canvas.BOTTOM, 
-31. RecordDropAppearance: ListGrid.OVER, ListGrid.BETWEEN, ListGrid.BOTH, ListGrid.BODY, 
-32. FieldAppearance: Validator.READONLY, Validator.HIDDEN, Validator.DISABLED, 
-33. BackgroundRepeat: Canvas.REPEAT, Canvas.NO_REPEAT, Canvas.REPEAT_X, Canvas.REPEAT_Y, 
-34. FireStyle: Page.FIRE_ONCE, 
-35. RecordLayout: TableView.TITLE_ONLY, TableView.TITLE_DESCRIPTION, TableView.SUMMARY_INFO, TableView.SUMMARY_DATA, TableView.SUMMARY_FULL, 
-
+1. PreserveOpenState: 2. PreserveOpenState: 3. PreserveOpenState: 4. ValidatorType: 5. ValidatorType: 6. ValidatorType: 7. ValidatorType: 8. ValidatorType: 9. ValidatorType: 10. ValidatorType: 11. ValidatorType: 12. ValidatorType: 13. ValidatorType: 14. ValidatorType: 15. ValidatorType: 16. ValidatorType: 17. ValidatorType: 18. ValidatorType: 19. ValidatorType: 20. ValidatorType: 21. ValidatorType: 22. ValidatorType: 23. ValidatorType: 24. ValidatorType: 25. ValidatorType: 26. ValidatorType: 27. ValidatorType: 28. ValidatorType: 29. ValidatorType: 30. ValidatorType: 31. ValidatorType: 32. DisplayNodeType: 33. PointShape: 34. PointShape: 35. PointShape: 36. PointShape: 37. RecordSummaryFunction: 38. RecordSummaryFunction: 39. RecordSummaryFunction: 40. RecordSummaryFunction: 41. RecordSummaryFunction: 42. TimeDisplayFormat: 43. TimeDisplayFormat: 44. TimeDisplayFormat: 45. TimeDisplayFormat: 46. TimeDisplayFormat: 47. TimeDisplayFormat: 48. TimeDisplayFormat: 49. TimeDisplayFormat: 50. SummaryFunction: 51. SummaryFunction: 52. SummaryFunction: 53. SummaryFunction: 54. SummaryFunction: 55. SummaryFunction: 56. SummaryFunction: 57. SummaryFunction: 58. SummaryFunction: 59. Cursor: 60. DateDisplayFormat: 61. DateDisplayFormat: 62. DateDisplayFormat: 63. DateDisplayFormat: 64. DateDisplayFormat: 65. DateDisplayFormat: 66. DateDisplayFormat: 67. DateDisplayFormat: 68. DateDisplayFormat: 69. DateDisplayFormat: 70. ChartType: 71. ChartType: 72. ChartType: 73. ChartType: 74. ChartType: 75. ChartType: 76. ChartType: 77. ChartType: 78. ChartType: 79. ChartType: 80. DialogButtons: 81. DialogButtons: 82. DialogButtons: 83. DialogButtons: 84. DialogButtons: 85. DialogButtons: 86. FireStyle: 
 ==== How are array attributes defined? ====
 array of: 1
 Array of: 224
@@ -375,13 +461,12 @@ Method parameters with missing name: 15
 17. method:FormulaBuilder.setFormula, type='String', name=''
 
 
-Method parameters with bad name: 2
-1. classMethod:isc.addProperties, type='arguments 1-N', name='['
-2. method:CubeGrid.hiliteCell, type='string', name='[]'
+Method parameters with bad name: 1
+1. method:CubeGrid.hiliteCell, type='string', name='[]'
 
 
 
 
 ===== For recording metrics ======
 Date	Types	Classes	Objects	Methods	Methods with bad flags	Classes without inherits from	string values with quotes	string values without quotes	string values with period	array of	Array of	Array[] of	array[] of	just array or Array	string types without baseType	Method params with missing name	Method params with bad name
-2017-05-04	229	309	67	3554	3	192	216	657	130	1	224	10	0	10	83	15	2	
+2017-05-05	229	309	67	3555	3	192	216	657	130	1	224	10	0	10	83	15	1	

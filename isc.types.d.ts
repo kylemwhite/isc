@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/4/2017 10:13:47 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-04
+// Generated: 5/5/2017 11:01:43 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-05
 
 declare namespace Isc {
 
@@ -14,18 +14,18 @@ declare namespace Isc {
 	 */
 	export type NavigationMode = 
 		/** Clicking anywhere on the record navigates */
-		"wholeRecord"
+		"wholeRecord"  // Original Value = TableView.WHOLE_RECORD
 		/** Only clicking directly on the navigation icon triggers navigation */
-		| "naviconOnly"
+		| "naviconOnly"  // Original Value = TableView.NAVICON_ONLY
 		;
 
 	export type Selected = 
 		/** StatefulCanvas should show focused state */
-		"focused"
+		"focused"  // Original Value = StatefulCanvas.FOCUSED
 		/** StatefulCanvas is selected */
-		| "selected"
+		| "selected"  // Original Value = StatefulCanvas.SELECTED
 		/** StatefulCanvas is not selected */
-		| "unselected"
+		| "unselected"  // Original Value = StatefulCanvas.UNSELECTED
 		;
 
 
@@ -137,11 +137,11 @@ declare namespace Isc {
 
 	export type TEXTAREA_WRAP = 
 		/** don't allow wrapping at all */
-		"off"
+		"off"  // Original Value = TextAreaItem.OFF
 		/** when the entered text reaches the edge of the text area, wrap visibly but don't include line breaks in the textarea value */
-		| "soft"
+		| "soft"  // Original Value = TextAreaItem.SOFT
 		/** when the entered text reaches the edge of the text area, insert a line break */
-		| "hard"
+		| "hard"  // Original Value = TextAreaItem.HARD
 		;
 
 
@@ -315,9 +315,9 @@ declare namespace Isc {
 	 */
 	export type FormMethod = 
 		/** GET request -- URL encoding (~4K max) */
-		"get"
+		"get"  // Original Value = DynamicForm.GET
 		/** POST request -- separate field encoding (no max) */
-		| "post"
+		| "post"  // Original Value = DynamicForm.POST
 		;
 
 
@@ -369,27 +369,27 @@ declare namespace Isc {
 	 */
 	export type EditCompletionEvent = 
 		/** User clicked outside editor during edit. */
-		"clickOutside"
+		"clickOutside"  // Original Value = ListGrid.CLICK_OUTSIDE
 		/** User started editing another row by clicking on it */
-		| "click"
+		| "click"  // Original Value = ListGrid.CLICK
 		/** User started editing another row by double clicking */
-		| "doubleClick"
+		| "doubleClick"  // Original Value = ListGrid.DOUBLE_CLICK
 		/** Enter pressed. */
-		| "enterKeypress"
+		| "enterKeypress"  // Original Value = ListGrid.ENTER_KEYPRESS
 		/** User pressed Escape. */
-		| "escapeKeypress"
+		| "escapeKeypress"  // Original Value = ListGrid.ESCAPE_KEYPRESS
 		/** Up arrow key pressed. */
-		| "upArrowKeypress"
+		| "upArrowKeypress"  // Original Value = ListGrid.UP_ARROW_KEYPRESS
 		/** down arrow key. */
-		| "downArrowKeypress"
+		| "downArrowKeypress"  // Original Value = ListGrid.DOWN_ARROW_KEYPRESS
 		/** User pressed Tab. */
-		| "tabKeypress"
+		| "tabKeypress"  // Original Value = ListGrid.TAB_KEYPRESS
 		/** User pressed Shift+Tab. */
-		| "shiftTabKeypress"
+		| "shiftTabKeypress"  // Original Value = ListGrid.SHIFT_TAB_KEYPRESS
 		/** Edit moved to a different field (same row) */
-		| "editFieldChange"
+		| "editFieldChange"  // Original Value = ListGrid.EDIT_FIELD_CHANGE
 		/** Edit completed via explicit function call */
-		| "programmatic"
+		| "programmatic"  // Original Value = ListGrid.PROGRAMMATIC
 		;
 
 
@@ -398,11 +398,11 @@ declare namespace Isc {
 	 */
 	export type ReorderPosition = 
 		/** Drop the drag-item before the target-row */
-		"before"
+		"before"  // Original Value = ListGrid.BEFORE
 		/** Drop the drag-item after the target-row */
-		| "after"
+		| "after"  // Original Value = ListGrid.AFTER
 		/** Drop the drag-item over (onto) the target-row */
-		| "over"
+		| "over"  // Original Value = ListGrid.OVER
 		;
 
 
@@ -411,11 +411,11 @@ declare namespace Isc {
 	 */
 	export type SelectionType = 
 		/** object moves to "down" state temporarily (normal button) */
-		"button"
+		"button"  // Original Value = StatefulCanvas.BUTTON
 		/** object remains in "down" state until clicked again (checkbox) */
-		| "checkbox"
+		| "checkbox"  // Original Value = StatefulCanvas.CHECKBOX
 		/** object moves to "down" state, causing another object to go up (radio) */
-		| "radio"
+		| "radio"  // Original Value = StatefulCanvas.RADIO
 		;
 
 
@@ -450,9 +450,9 @@ declare namespace Isc {
 	 */
 	export type TableMode = 
 		/** The default mode which displays a list of rows */
-		"plain"
+		"plain"  // Original Value = TableView.PLAIN
 		/** Grouped table is a set of rows embedded in a rounded rectangle */
-		| "grouped"
+		| "grouped"  // Original Value = TableView.GROUPED
 		;
 
 
@@ -475,9 +475,9 @@ declare namespace Isc {
 		/** Don't do anything, resulting in the same data being in both lists. */
 		"none"
 		/** Copy the data leaving the original in our list. */
-		| "copy"
+		| "copy"  // Original Value = Canvas.COPY
 		/** Remove the data from this list so it can be moved into the other list. */
-		| "move"
+		| "move"  // Original Value = Canvas.MOVE
 		;
 
 
@@ -503,15 +503,15 @@ declare namespace Isc {
 	 */
 	export type LoadState = 
 		/** children have not been loaded and are not loading */
-		"unloaded"
+		"unloaded"  // Original Value = Tree.UNLOADED
 		/** currently in the process of loading */
-		| "loading"
+		| "loading"  // Original Value = Tree.LOADING
 		/** folders only are already loaded */
-		| "foldersLoaded"
+		| "foldersLoaded"  // Original Value = Tree.FOLDERS_LOADED
 		/** already fully loaded */
-		| "loaded"
+		| "loaded"  // Original Value = Tree.LOADED
 		/** children form a ResultSet having only a partial cache (applies only to the "paged" ResultTree.fetchMode','fetchMode) */
-		| "loadedPartialChildren"
+		| "loadedPartialChildren"  // Original Value = Tree.LOADED_PARTIAL_CHILDREN
 		;
 
 
@@ -533,17 +533,17 @@ declare namespace Isc {
 
 	export type Overflow = 
 		/** Content that extends beyond the widget's width or height is displayed. Note: To have the content be sized only by the drawn size of the content set the overflow to be Canvas.VISIBLE and specify a small size, allowing the size to expand to the size required by the content. Leaving the width / height for the widget undefined will use the default value of 100, and setting the size to zero may cause the widget not to draw. */
-		"visible"
+		"visible"  // Original Value = Canvas.VISIBLE
 		/** Content that extends beyond the widget's width or height is clipped (hidden). */
-		| "hidden"
+		| "hidden"  // Original Value = Canvas.HIDDEN
 		/** Horizontal and/or vertical scrollbars are displayed only if necessary. Content that extends beyond the remaining visible area is clipped. */
-		| "auto"
+		| "auto"  // Original Value = Canvas.AUTO
 		/** Horizontal and vertical scrollbars are always drawn inside the widget. Content that extends beyond the remaining visible area is clipped, and can be accessed via scrolling. */
-		| "scroll"
+		| "scroll"  // Original Value = Canvas.SCROLL
 		/** Clip horizontally but extend the canvas's clip region vertically if necessary. Note: only supported for specific widget subclasses. */
-		| "clipH"
+		| "clipH"  // Original Value = Canvas.CLIP_H
 		/** Clip vertically but extend the canvas's clip region horizontally if necessary. Note: only supported for specific widget subclasses. */
-		| "clipV"
+		| "clipV"  // Original Value = Canvas.CLIP_V
 		;
 
 
@@ -976,13 +976,13 @@ declare namespace Isc {
 
 	export type ImageStyle = 
 		/** Center (and don't stretch at all) the image if smaller than its enclosing frame.CENTER:"center", */
-		"center"
+		"center"  // Original Value = Canvas.CENTER
 		/** Tile (repeat) the image if smaller than its enclosing frame. */
-		| "tile"
+		| "tile"  // Original Value = Canvas.TILE
 		/** Stretch the image to the size of its enclosing frame. */
-		| "stretch"
+		| "stretch"  // Original Value = Canvas.STRETCH
 		/** Allow the image to have natural size */
-		| "normal"
+		| "normal"  // Original Value = Canvas.NORMAL
 		;
 
 
@@ -1034,19 +1034,19 @@ declare namespace Isc {
 	 */
 	export type DateItemSelectorFormat = 
 		/** Output fields in day, month, year order. */
-		"dayMonthYear"
+		"dayMonthYear"  // Original Value = DateItem.DAY_MONTH_YEAR
 		/** Output fields in month, day, year order. */
-		| "monthDayYear"
+		| "monthDayYear"  // Original Value = DateItem.MONTH_DAY_YEAR
 		/** Output fields in year, month, day order. */
-		| "yearMonthDay"
+		| "yearMonthDay"  // Original Value = DateItem.YEAR_MONTH_DAY
 		/** Output only day, month fields. */
-		| "dayMonth"
+		| "dayMonth"  // Original Value = DateItem.DAY_MONTH
 		/** Output only month, day fields. */
-		| "monthDay"
+		| "monthDay"  // Original Value = DateItem.MONTH_DAY
 		/** Output only year, month fields. */
-		| "yearMonth"
+		| "yearMonth"  // Original Value = DateItem.YEAR_MONTH
 		/** Output only month, year fields. */
-		| "monthYear"
+		| "monthYear"  // Original Value = DateItem.MONTH_YEAR
 		;
 
 
@@ -1176,9 +1176,9 @@ declare namespace Isc {
 
 	export type Positioning = 
 		/** The canvas is absolutely positioned with respect to its parent. */
-		"absolute"
+		"absolute"  // Original Value = Canvas.ABSOLUTE
 		/** The canvas is relatively positioned according to the document flow. */
-		| "relative"
+		| "relative"  // Original Value = Canvas.RELATIVE
 		;
 
 
@@ -1241,15 +1241,15 @@ declare namespace Isc {
 
 	export type LabelAlignment = 
 		/** Justify label's left edge against its left coordinate (right in RTL configurations) */
-		"start"
+		"start"  // Original Value = DrawLabel.START
 		/** Justify label's right edge against its left coordinate (left in RTL configurations) */
-		| "end"
+		| "end"  // Original Value = DrawLabel.END
 		/** Center label about its left coordinate */
-		| "center"
+		| "center"  // Original Value = DrawLabel.CENTER
 		/** Justify label's left edge against its left coordinate */
-		| "left"
+		| "left"  // Original Value = DrawLabel.LEFT
 		/** Justify label's right edge against its left coordinate */
-		| "right"
+		| "right"  // Original Value = DrawLabel.RIGHT
 		;
 
 
@@ -1289,11 +1289,11 @@ declare namespace Isc {
 
 	export type Alignment = 
 		/** Center within container. */
-		"center"
+		"center"  // Original Value = Canvas.CENTER
 		/** Stick to left side of container. */
-		| "left"
+		| "left"  // Original Value = Canvas.LEFT
 		/** Stick to right side of container. */
-		| "right"
+		| "right"  // Original Value = Canvas.RIGHT
 		;
 
 	export type ProcessValueType = 
@@ -1456,19 +1456,19 @@ declare namespace Isc {
 	 */
 	export type Cursor = 
 		/** Use the default arrow cursor for this browser/OS. */
-		"default"
+		"default"  // Original Value = Canvas.DEFAULT
 		/** Use the default cursor for this element type in this browser/OS */
-		| "auto"
+		| "auto"  // Original Value = Canvas.AUTO
 		/** Use the wait cursor. */
-		| "wait"
+		| "wait"  // Original Value = Canvas.WAIT
 		/** Use the hand cursor. */
-		| "hand"
+		| "hand"  // Original Value = Canvas.HAND
 		/** Use the "move" (crosshairs) cursor. */
-		| "move"
+		| "move"  // Original Value = Canvas.MOVE
 		/** Use the 'help' cursor. */
-		| "help"
+		| "help"  // Original Value = Canvas.HELP
 		/** Use the 'text' (i-beam) cursor. */
-		| "text"
+		| "text"  // Original Value = Canvas.TEXT
 		/** Use the normal hand pointer that appears when you hover over a link */
 		| "POINTER"
 		| "arrow"
@@ -1661,11 +1661,11 @@ declare namespace Isc {
 
 	export type Visibility = 
 		/** The widget visibility will match that of its parent (usually visible). */
-		"inherit"
+		"inherit"  // Original Value = Canvas.INHERIT
 		/** The widget will always be visible whether its parent is or not. */
-		| "visible"
+		| "visible"  // Original Value = Canvas.VISIBLE
 		/** The widget will always be hidden even when its parent is visible. */
-		| "hidden"
+		| "hidden"  // Original Value = Canvas.HIDDEN
 		;
 
 
@@ -1779,9 +1779,9 @@ declare namespace Isc {
 	 */
 	export type Encoding = 
 		/** normal form encoding ("application/x-www-form-urlencoded") */
-		"normal"
+		"normal"  // Original Value = DynamicForm.NORMAL
 		/** form encoding for forms with INPUT file elements, that is, forms that upload files ("multipart/form-data") */
-		| "multipart"
+		| "multipart"  // Original Value = DynamicForm.MULTIPART
 		;
 
 
@@ -1920,13 +1920,13 @@ declare namespace Isc {
 	 */
 	export type RecordDropPosition = 
 		/** User dropped directly onto the record */
-		"over"
+		"over"  // Original Value = ListGrid.OVER
 		/** User dropped before the record */
-		| "before"
+		| "before"  // Original Value = ListGrid.BEFORE
 		/** User dropped after the record */
-		| "after"
+		| "after"  // Original Value = ListGrid.AFTER
 		/** Drop position is not over a record */
-		| "none"
+		| "none"  // Original Value = ListGrid.NONE
 		;
 
 
@@ -2100,13 +2100,13 @@ declare namespace Isc {
 	 */
 	export type SelectionStyle = 
 		/** don't select at all */
-		"none"
+		"none"  // Original Value = Selection.NONE
 		/** select only one item at a time */
-		| "single"
+		| "single"  // Original Value = Selection.SINGLE
 		/** select one or more items */
-		| "multiple"
+		| "multiple"  // Original Value = Selection.MULTIPLE
 		/** select one or more items as a toggle so you don't need to hold down control keys to select more than one object */
-		| "simple"
+		| "simple"  // Original Value = Selection.SIMPLE
 		;
 
 
@@ -2154,11 +2154,11 @@ declare namespace Isc {
 	 */
 	export type ContentLayoutPolicy = 
 		/** Window does not try to size members at all on either axis. Window body defaults to a Canvas if not autosizing. Otherwise a Layout is used with policies on both axes set to LayoutPolicy "none".NONE: "none", // NOTE: constant declared by Canvas */
-		"none"
+		"none"  // Original Value = Window.NONE
 		/** Window body defaults to VLayout behavior. (Body is actually just a Layout with Layout.vertical: true.)VERTICAL: "vertical", // NOTE: constant declared by Canvas */
-		| "vertical"
+		| "vertical"  // Original Value = Window.VERTICAL
 		/** Window body defaults to HLayout behavior. (Body is actually just a Layout with Layout.vertical: false.)HORIZONTAL: "horizontal" // NOTE: constant declared by Canvas */
-		| "horizontal"
+		| "horizontal"  // Original Value = Window.HORIZONTAL
 		;
 
 
@@ -2180,9 +2180,9 @@ declare namespace Isc {
 
 	export type Orientation = 
 		/** members laid out vertically */
-		"vertical"
+		"vertical"  // Original Value = Layout.VERTICAL
 		/** members laid out horizontally */
-		| "horizontal"
+		| "horizontal"  // Original Value = Layout.HORIZONTAL
 		;
 
 
@@ -2368,11 +2368,11 @@ declare namespace Isc {
 
 	export type VerticalAlignment = 
 		/** At the top of the container */
-		"top"
+		"top"  // Original Value = Canvas.TOP
 		/** Center within container. */
-		| "center"
+		| "center"  // Original Value = Canvas.CENTER
 		/** At the bottom of the container */
-		| "bottom"
+		| "bottom"  // Original Value = Canvas.BOTTOM
 		;
 
 	export type TreeModelType = 
@@ -2388,15 +2388,15 @@ declare namespace Isc {
 	 */
 	export type LogPriority = 
 		/** unrecoverable error */
-		"fatal"
+		"fatal"  // Original Value = Log.FATAL
 		/** error, may be recoverable */
-		| "error"
+		| "error"  // Original Value = Log.ERROR
 		/** apparent problem, misused API, partial result */
-		| "warn"
+		| "warn"  // Original Value = Log.WARN
 		/** significant events in normal operation */
-		| "info"
+		| "info"  // Original Value = Log.INFO
 		/** diagnostics for developers */
-		| "debug"
+		| "debug"  // Original Value = Log.DEBUG
 		;
 
 
@@ -2502,9 +2502,9 @@ declare namespace Isc {
 	 */
 	export type LayoutPolicy = 
 		/** Layout does not try to size members on the axis at all, merely stacking them (length axis) and leaving them at default breadth. */
-		"none"
+		"none"  // Original Value = Layout.NONE
 		/** Layout sizes members so that they fill the specified size of the layout. The rules are: Any component given an initial pixel size, programmatically resized to a specific pixel size, or drag resized by user action is left at that exact size Any component that Button.autoFit','autofits is given exactly the space it needs, never forced to take up more. All other components split the remaining space equally, or according to their relative percentages. Any component that declares a Canvas.minWidth or Canvas.minHeight will never be sized smaller than that size Any component that declares a Canvas.maxWidth or Canvas.maxHeight will never be sized larger than that size In addition, components may declare that they have Canvas.canAdaptWidth','adaptive sizing, and may coordinate with the Layout to render at different sizes according to the amount of available space. */
-		| "fill"
+		| "fill"  // Original Value = Layout.FILL
 		;
 
 
@@ -2576,11 +2576,11 @@ declare namespace Isc {
 
 	export type CharacterCasing = 
 		/** No character translation */
-		"default"
+		"default"  // Original Value = TextItem.DEFAULT
 		/** Map characters to uppercase */
-		| "upper"
+		| "upper"  // Original Value = TextItem.UPPER
 		/** Map characters to lowercase */
-		| "lower"
+		| "lower"  // Original Value = TextItem.LOWER
 		;
 
 
@@ -2589,13 +2589,13 @@ declare namespace Isc {
 	 */
 	export type State = 
 		/** state when mouse is not acting on this StatefulCanvas */
-		"stateUp"
+		"stateUp"  // Original Value = StatefulCanvas.STATE_UP
 		/** state when mouse is down */
-		| "stateDown"
+		| "stateDown"  // Original Value = StatefulCanvas.STATE_DOWN
 		/** state when mouse is over */
-		| "stateOver"
+		| "stateOver"  // Original Value = StatefulCanvas.STATE_OVER
 		/** disabled */
-		| "stateDisabled"
+		| "stateDisabled"  // Original Value = StatefulCanvas.STATE_DISABLED
 		;
 
 
@@ -2682,13 +2682,13 @@ declare namespace Isc {
 
 	export type Direction = 
 		/** above */
-		"up"
+		"up"  // Original Value = Canvas.UP
 		/** below */
-		| "down"
+		| "down"  // Original Value = Canvas.DOWN
 		/** to the left of */
-		| "left"
+		| "left"  // Original Value = Canvas.LEFT
 		/** to the right of */
-		| "right"
+		| "right"  // Original Value = Canvas.RIGHT
 		;
 
 
@@ -2721,13 +2721,13 @@ declare namespace Isc {
 	 */
 	export type Side = 
 		/** Left side */
-		"left"
+		"left"  // Original Value = Canvas.LEFT
 		/** Right side */
-		| "right"
+		| "right"  // Original Value = Canvas.RIGHT
 		/** Top side */
-		| "top"
+		| "top"  // Original Value = Canvas.TOP
 		/** Bottom side */
-		| "bottom"
+		| "bottom"  // Original Value = Canvas.BOTTOM
 		;
 
 
@@ -2742,13 +2742,13 @@ declare namespace Isc {
 	 */
 	export type RecordDropAppearance = 
 		/** When the user drops onto a record, dropPosition will always be "over" */
-		"over"
+		"over"  // Original Value = ListGrid.OVER
 		/** When the user drops onto a record, dropPosition will be either "before" or "after" depending on whether the mouse was over the top or bottom of the target record */
-		| "between"
+		| "between"  // Original Value = ListGrid.BETWEEN
 		/** When the user drops onto a record, if the drop occurs centered over the record, the dropPosition will be reported as "over", otherwise it will be "before" or "after" depending on whether the mouse was over the top or bottom of the target record. */
-		| "both"
+		| "both"  // Original Value = ListGrid.BOTH
 		/** No dropPosition will be reported */
-		| "body"
+		| "body"  // Original Value = ListGrid.BODY
 		;
 
 
@@ -2777,11 +2777,11 @@ declare namespace Isc {
 
 	export type FieldAppearance = 
 		/** Show in read-only appearance */
-		"readonly"
+		"readonly"  // Original Value = Validator.READONLY
 		/** Hide field */
-		| "hidden"
+		| "hidden"  // Original Value = Validator.HIDDEN
 		/** Disable field */
-		| "disabled"
+		| "disabled"  // Original Value = Validator.DISABLED
 		;
 
 
@@ -2816,13 +2816,13 @@ declare namespace Isc {
 	 */
 	export type BackgroundRepeat = 
 		/** Tile the background image horizontally and vertically. */
-		"repeat"
+		"repeat"  // Original Value = Canvas.REPEAT
 		/** Don't tile the background image at all. */
-		| "noRepeat"
+		| "noRepeat"  // Original Value = Canvas.NO_REPEAT
 		/** Repeat the background image horizontally but not vertically. */
-		| "repeatX"
+		| "repeatX"  // Original Value = Canvas.REPEAT_X
 		/** Repeat the background image vertically but not horizontally. */
-		| "repeatY"
+		| "repeatY"  // Original Value = Canvas.REPEAT_Y
 		;
 
 
@@ -3091,7 +3091,7 @@ declare namespace Isc {
 		/** Call the registered handler any time the event occurs */
 		"null"
 		/** Call the registered handler the first time the event occurs, then unregister the handler as though Page.clearEvent had been called */
-		| "fireOnce"
+		| "fireOnce"  // Original Value = Page.FIRE_ONCE
 		;
 
 
@@ -3151,15 +3151,15 @@ declare namespace Isc {
 	 */
 	export type RecordLayout = 
 		/** Show TableView.titleField','title field only */
-		"titleOnly"
+		"titleOnly"  // Original Value = TableView.TITLE_ONLY
 		/** Show TableView.titleField','title and TableView.descriptionField','description fields only */
-		| "titleDescription"
+		| "titleDescription"  // Original Value = TableView.TITLE_DESCRIPTION
 		/** Show TableView.titleField','title, TableView.descriptionField','description and TableView.infoField','info fields only */
-		| "summaryInfo"
+		| "summaryInfo"  // Original Value = TableView.SUMMARY_INFO
 		/** Show TableView.titleField','title, TableView.descriptionField','description and TableView.dataField','data fields only */
-		| "summaryData"
+		| "summaryData"  // Original Value = TableView.SUMMARY_DATA
 		/** Show TableView.titleField','title, TableView.descriptionField','description, TableView.infoField','info and TableView.dataField','data fields similar to the iPhoneOS Mail application */
-		| "summaryFull"
+		| "summaryFull"  // Original Value = TableView.SUMMARY_FULL
 		;
 
 
