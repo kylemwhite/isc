@@ -137,19 +137,24 @@ function MyFunc() {
 3. Drop me a note and let me know which classes, objects and methods you need. I can configure the generator to include them in the next run and if they generate properly and compile, they'll be included in the next release.
 
 ## How this was built
-The SmartClient library is huge and it would be impractical and error-prone to hand-code a type definition library that defines every property and method on every class. Fortunately, Isomorphic has an XML ([referenceDocs.xml](http://www.smartclient.com/smartclient-latest/isomorphic/system/reference/referenceDocs.xml)) file used for their documentation that contains all the necessary information. They use this file to generate the SmartGWT library. Similarly, I've used the same file to generate the TypeScript library files. The referenceDocs.xml file is not perfect which means that there are a lot of customizations required to get the proper code generated. Thus, I'm doing it in manageable sections. Simultaneously, Isomorphic is fixing the file to aid in code generation so we should be able to get the complete library generated soon.
+The SmartClient library is huge and it would be impractical and error-prone to hand-code a type definition library that defines every property and method on every class. Fortunately, Isomorphic uses an XML file ([referenceDocs.xml](http://www.smartclient.com/smartclient-latest/isomorphic/system/reference/referenceDocs.xml)) for their documentation which contains all the necessary information. This file is also used to generate the SmartGWT library. Similarly, I've used the same file to generate the TypeScript library files. The referenceDocs.xml file is not perfect which means that there are a lot of customizations required to get the proper code generated. Thus, I'm doing it in manageable sections. Simultaneously, Isomorphic is enhancing the file to aid in code generation so we should be able to get the complete library generated soon.
 
 ## Testing
 So far, this has only been tested with Visual Studio 2015. If you're using VS Code or anything else, please let me know if it works or if there are problems. Also, I have no units tests yet, my only test is that I copy the definitions into my own SmartClient project and make sure everything still compiles. If somebody wants to help with unit tests, I'm all ears.
 
 ## Todo
-1. Finish defining all classes and objects (wip).
-2. Finish defining all methods for classes and objects (wip)
-3. Define the SmartClient interfaces (IList etc.) and apply them to the relevant classes.
-4. Do something more useful with the IRW flags like make some properties readonly, enfoce usage of setters and getters etc. (got readonly implemented)
-5. Create a complete working sample program.
-6. Create unit tests.
-7. Build an automated system to re-generate when SmartClient is updated. (wip)
-8. Commit to DefinitelyTyped.
-9. Create a NuGet package.
 
+
+| Task | Status |
+|---|---|
+| 1. Finish defining all classes and objects| WIP
+| 2. Finish defining all methods for classes and objects| WIP
+| 3. Define the SmartClient interfaces (IList etc.) and apply them to the relevant classes. | Not started
+| 4. Make properties without the W flag readonly| Done
+| 5. Hide properties that have a getter and setter (i.e. force use of getter and setter)| Not started
+| 6. If a property is readonly (no W flag), and has a getter, then hide it (i.e force use of the getter). | Not started
+| 7. Create a complete working sample program. | Not started
+| 8. Create unit tests.| Not started
+| 9. Build an automated system to re-generate when SmartClient is updated.| Done
+| 10. Commit to DefinitelyTyped. | Not started
+| 11. Create a ~~NuGet~~ npm package | Not started
