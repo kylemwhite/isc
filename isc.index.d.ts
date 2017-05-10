@@ -7,7 +7,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/6/2017 7:00:36 AM by kwhite
+// Generated: 5/9/2017 7:58:21 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-06
 
 /**
@@ -85,6 +85,16 @@ declare namespace Isc {
 		 * A DataSource is data-provider-independent description of a set of objects that will be loaded, edited and saved within the user interface of your application. Each DataSource consists of a list of DataSource.fields','fields that make up a DataSource record, along with DataSourceField.type','field types, DataSourceField.validators','validation rules, DataSourceField.foreignKey','relationships to other DataSources, and other metadata. The abstract object description provided by a DataSource is easily mapped to a variety of backend object models and storage schemes. The following table shows analogous terminology across systems. <table border=1 class="normal"> <tr> <td>Isomorphic SmartClient</td> <td>Relational Database</td> <td>Enterprise Java Beans (EJB)</td> <td>Entity/Relationship Modeling</td> <td>OO/UML</td> <td>XML Schema/WSDL</td> <td>LDAP</td> </tr><tr> <td>DataSource</td> <td>Table</td> <td>EJB class</td> <td>Entity</td> <td>Class</td> <td>Element Schema (ComplexType)</td> <td>Objectclass</td> </tr><tr> <td>Record</td> <td>Row</td> <td>EJB instance</td> <td>Entity instance</td> <td>Class instance/Object</td> <td>Element instance (ComplexType)</td> <td>Entry</td> </tr><tr> <td>Field</td> <td>Column</td> <td>Property</td> <td>Attribute</td> <td>Property/Attribute</td> <td>Attribute or Element (SimpleType)</td> <td>Attribute</td> </tr></table> DataSources can be dataSourceDeclaration','declared in either JavaScript or XML format, and can also be metadataImport','imported from existing metadata formats, including XML Schema. Data Binding is the process by which DataBoundComponent','Data Binding-capable UI components can automatically configure themselves for viewing, editing and saving data described by DataSources. DataBinding is covered in the ${isc.DocUtils.linkForDocNode('QuickStartGuide', 'QuickStart Guide')}, Chapter 6, Data Binding. clientServerIntegration','Data Integration is the process by which a DataSource can be connected to server systems such as SQL DataBases, Java Object models, WSDL web services and other data providers. Data Integration comes in two variants: client-side and server-side. serverDataIntegration','Server-side integration uses the SmartClient Java-based server to connect to data represented by Java Objects or JDBC-accessible databases. clientDataIntegration','Client-side integration connects SmartClient DataSources to XML, JSON or other formats accessible via HTTP. DataSources have a concept of dataSourceOperations','4 core operations ("fetch", "add", "update" and "remove") that can be performed on the set of objects represented by a DataSource. Once a DataSource has been integrated with your data store, databinding-capable UI components can leverage the 4 core DataSource operations to provide many complete user interactions without the need to configure how each individual component loads and saves data. These interactions include ListGrid','grid views, TreeGrid','tree views, DetailViewer','detail views, DynamicForm','form-based DynamicForm.editRecord','editing and DynamicForm.saveData','saving, grid-based ListGrid.canEdit','editing and ListGrid.saveByCell','saving, and custom interactions provided by patternReuse custom databinding-capable components.
 		 */ 
 		DataSource: DataSourceStatic<DataSource, DataSourceProps>;
+
+		/** 
+		 * Extensions to the Date class, including added static methods on the Date object, and additional instance methods available on all date instances.
+		 */ 
+		Date: DateStatic<Date, DateProps>;
+
+		/** 
+		 * Static singleton class containing APIs for interacting with Dates.
+		 */ 
+		DateUtil: DateUtilStatic<DateUtil, DateUtilProps>;
 
 		/** 
 		 * DetailViewer extends Canvas
