@@ -1,5 +1,5 @@
 ## Isomorphic SmartClient TypeScript type definitions
-Work in progress. See [Progress.md](./blob/master/Progress.md)
+Work in progress. See [Progress.md](./Progress.md)
 
 The goal is to provide type safety in a TypeScript web application that utilizes the Isomorphic SmartClient library and provide a development experience similar to writing Java in SmartGWT (the GWT version of SmartClient). Documentation is provided in comments in JSDoc format and will show up in intellisense.
 
