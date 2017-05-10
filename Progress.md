@@ -1,6 +1,6 @@
 # SmartClientTypeScriptDefinitionGenerator 
 
-By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/?target=_blank) )
+By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
