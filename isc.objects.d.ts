@@ -5,12 +5,27 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/10/2017 2:40:03 PM by kwhite
+// Generated: 5/10/2017 3:40:29 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-09
 
 declare namespace Isc {
 
     
+	/**
+	 * An object representing a relative date, useful for representing date ranges etc in criteria. RelativeDate objects may be created directly by SmartClient components such as the RelativeDateItem. RelativeDate objects will have "_constructor" set to "RelativeDate" and must have a specified RelativeDate.value. Any other attributes are optional. 
+	 */
+	export interface RelativeDate  {
+		/** (Read only) If this relative date has its value specified as a RelativeDateShortcut which doesn't specify an exact time-period boundary - for example "$yesterday", this attribute may be set to specify whether the date should be interpreted as the start or end boundary of the time period.
+		 * Flags: IR */
+		 rangePosition?: RelativeDateRangePosition; // Flags=IR
+		/** (Read only) The value of this relative date, specified as a RelativeDateString or RelativeDateShortcut.
+		 * Flags: IR */
+		 value?: string | RelativeDateShortcut /* RelativeDateString or RelativeDateShortcut */; // Flags=IR
+
+
+	} // RelativeDate
+
+
 	/**
 	 * Configuration object for effect to apply during an animated show or hide. 
 	 */
@@ -27,6 +42,27 @@ declare namespace Isc {
 
 
 	} // AnimateShowEffect
+
+
+	/**
+	 * An object representing the start date for fiscal years in the current locale. A fiscal year spans a configurable date range - it may not exactly match a calendar year in length and it can start on any date within the calendar year and potentially end in the next calendar year. Developers may specify explicit fiscal year start dates by adding FiscalYear objects to the FiscalCalendar.fiscalYears','fiscal years array. If none are provided, or if there is no entry for the given year, one is manufactured based on the default FiscalCalendar.defaultMonth','month and FiscalCalendar.defaultDate','date. 
+	 */
+	export interface FiscalCalendar  {
+		/**  The default one-based day-number in the FiscalCalendar.defaultMonth','specified month to use for calculating fiscal dates when no FiscalCalendar.fiscalYears','fiscal years are provided. This value together with FiscalCalendar.defaultMonth will be used as the start date for the fiscal years where no explicitly specified fiscalYear configuration is present. See also FiscalCalendar.defaultYearMode.
+		 * Flags: IRW */
+		 defaultDate?: number /* integer */; // Flags=IRW
+		/**  The default zero-based month-number to use for calculating fiscal dates when no FiscalCalendar.fiscalYears','fiscal years are provided. This value together with FiscalCalendar.defaultDate will be used as the start date for the fiscal years where no explicitly specified fiscalYear configuration is present. See also FiscalCalendar.defaultYearMode.
+		 * Flags: IRW */
+		 defaultMonth?: number /* integer */; // Flags=IRW
+		/**  This attribute controls how the displayed fiscalYear value should be calculated for dates falling within a period not explicitly listed in the FiscalCalendar.fiscalYears','fiscal years array. The FiscalCalendar.defaultMonth and FiscalCalendar.defaultDate will be used to calculate the start of the fiscal year period. The defaultYearMode determines whether the reported fiscalYear for this period matches the year in which the period starts or the year in which it ends (so whether a fiscal year spanning dates within both 2020 and 2021 is reported as fiscalYear 2020 or 2021).
+		 * Flags: IRW */
+		 defaultYearMode?: FiscalYearMode; // Flags=IRW
+		/**  An array of FiscalYear','FiscalYear objects which each represent the start date of a single fiscal year.
+		 * Flags: IRW */
+		 fiscalYears?: Array<FiscalYear> /* Array of FiscalYear */; // Flags=IRW
+
+
+	} // FiscalCalendar
 
 
 	/**
@@ -1137,6 +1173,27 @@ declare namespace Isc {
 
 
 	} // StretchItem
+
+
+	/**
+	 * An object representing the start of a given Fiscal Year in the current locale. See FiscalCalendar for more information on how FiscalYears are set up and used. 
+	 */
+	export interface FiscalYear  {
+		/**  The one-based day-number in the FiscalYear.month','specified month when this fiscal year starts.
+		 * Flags: IRW */
+		 date?: number /* integer */; // Flags=IRW
+		/**  The actual fiscal year that this date relates to. A fiscal year ends when the next one begins. A fiscal year may span the boundary between two calendar years in which case the FiscalYear.fiscalYear value may not match the FiscalYear.year value. For example fiscalYear 2020 may start in July of 2019 and end in July of 2020. In this case the fiscalYear would be set to 2020 and the FiscalYear.year would be set to 2019
+		 * Flags: IRW */
+		 fiscalYear?: number /* integer */; // Flags=IRW
+		/**  The zero-based month-number when this fiscal year starts.
+		 * Flags: IRW */
+		 month?: number /* integer */; // Flags=IRW
+		/**  The 4-digit calendar year when this fiscal year starts.
+		 * Flags: IRW */
+		 year?: number /* integer */; // Flags=IRW
+
+
+	} // FiscalYear
 
 
 	/**

@@ -5,7 +5,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/10/2017 2:40:03 PM by kwhite
+// Generated: 5/10/2017 3:40:29 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-09
 
 declare namespace Isc {
@@ -4693,6 +4693,27 @@ declare namespace Isc {
 
 	/* Methods */
 
+		/**  
+		 *  Combine a logical date (a value appropriate for a DataSourceField of type "date") with a logical time (a value appropriate for a DataSourceField of type "time") into a datetime value (a value appropriate for a DataSourceField of type "datetime") This method correctly takes into account the current Time.setDefaultDisplayTimezone','display timezone, specifically, the returned datetime value will show the same date and time as the passed date and time objects when rendered by a SmartClient component that has been configured with a field of type "datetime". For further background on date, time and datetime types, storage and transmission, see dateFormatAndStorage','this overview.
+		 * @param {Date} date - a Date instance representing logical date value
+		 * @param {Date} time - a Date instance representing logical time value
+		 */
+		combineLogicalDateAndTime(date:Date, time:Date): Date; 
+
+		/**  
+		 *  Compare two dates; returns 0 if equal, -1 if the first date is greater (later), or 1 if the second date is greater. If either value is not a Date object, it is treated as the epoch (midnight on Jan 1 1970) for comparison purposes.
+		 * @param {Date} date1 - first date to compare
+		 * @param {Date} date2 - second date to compare
+		 */
+		compareDates(date1:Date /* date */, date2:Date /* date */): number /* int */; 
+
+		/**  
+		 *  Compare two dates, normalizing out the time elements so that only the date elements are considered; returns 0 if equal, -1 if the first date is greater (later), or 1 if the second date is greater.
+		 * @param {Date} date1 - first date to compare
+		 * @param {Date} date2 - second date to compare
+		 */
+		compareLogicalDates(date1:Date /* date */, date2:Date /* date */): number /* int */; 
+
 /* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
 		/**  
 		 *  Create a new Date object - synonym for new Date(arguments)
@@ -4702,6 +4723,151 @@ declare namespace Isc {
  */ 
 
 		/**  
+		 *  Create a new Date to represent a logical date value (rather than a specific datetime value), typically for display in a DataSourceField.type','date type field. The generated Date value will have year, month and date set to the specified values (in browser native local time).
+		 * @param {number} year - full year
+		 * @param {number} month - month (zero based, so 0 is January)
+		 * @param {number} date - date within the month
+		 */
+		createLogicalDate(year:number /* int */, month:number /* int */, date:number /* int */): Date; 
+
+		/**  
+		 *  Create a new Date object to represent a logical time value (rather than a specific datetime value), typically for display in a DataSourceField.type','time type field. The generated Date value will have year, month and date set to the epoch date (Jan 1 1970), and time elements set to the supplied hour, minute and second (in browser native local time).
+		 * @param {number} hour - hour (0-23)
+		 * @param {number} minute - minute (0-59)
+		 * @param {number} second - second (0-59)
+		 */
+		createLogicalTime(hour:number /* int */, minute:number /* int */, second:number /* int */): Date; 
+
+		/**  
+		 *  Return the parameter date formatted according to the parameter FormatString. This method is used to implement the DataSourceField.format','DataSourceField.format functionality, but it can also be used to format arbitrary dates programmatically.
+		 * @param {Date} date - The date to format
+		 * @param {string} format - The format to apply to this date
+		 */
+		format(date:Date, format:string /* FormatString */): string /* String */; 
+
+		/**  
+		 *  Converts a RelativeDate, RelativeDateShortcut, or RelativeDateString to a concrete Date.
+		 * @param {RelativeDate} relativeDate - the relative date to convert
+		 * @param {Date} baseDate - base value for conversion. Defaults to the current date/time.
+		 * @param {RelativeDateRangePosition} rangePosition - optional date-range position. Only has an effect if the date passed in is a RelativeDateShortcut where the range position is not implicit, such as "$yesterday"
+		 * @param {boolean} isLogicalDate - should the generated date be marked as a "logical" date? A logical date object is a Date value where the time component is ignored for formatting and serialization purposes - such as the date displayed within a component field of specified type "date". See dateFormatAndStorage for more on logical dates vs datetime type values.
+		 */
+		getAbsoluteDate(relativeDate:RelativeDate | RelativeDateShortcut | string /* RelativeDate or RelativeDateShortcut or RelativeDateString */, baseDate?:Date, rangePosition?:RelativeDateRangePosition, isLogicalDate?:boolean): Date; 
+
+		/**  
+		 *  gets the default date separator string
+		 */
+		getDefaultDateSeparator(): string; 
+
+		/**  
+		 *  Returns the day of month from the passed datetime, as it will be displayed to the user. This might not be the same value as that returned by getDate() if a Time.setDefaultDisplayTimezone','custom timezone has been applied. Only necessary for datetimes - for logical dates and times, this method returns the same value as getDate().
+		 * @param {Date} datetime - datetime instance to work with
+		 */
+		getDisplayDay(datetime:Date): number /* int */; 
+
+		/**  
+		 *  Returns the hours value from the passed datetime, as it will be displayed to the user. This might not be the same value as that returned by getHours() if a Time.setDefaultDisplayTimezone','custom timezone has been applied. Only necessary for datetimes - for logical dates and times, this method returns the same value as getHours().
+		 * @param {Date} datetime - datetime instance to work with
+		 */
+		getDisplayHours(datetime:Date): number /* int */; 
+
+		/**  
+		 *  Returns the minutes value from the passed datetime, as it will be displayed to the user. This might not be the same value as that returned by getMinutes() if a Time.setDefaultDisplayTimezone','custom timezone has been applied. Only necessary for datetimes - for logical dates and times, this method returns the same value as getMinutes().
+		 * @param {Date} datetime - datetime instance to work with
+		 */
+		getDisplayMinutes(datetime:Date): number /* int */; 
+
+		/**  
+		 *  Returns the month number from the passed datetime, as it will be displayed to the user. This might not be the same value as that returned by getMonth() if a Time.setDefaultDisplayTimezone','custom timezone has been applied. Only necessary for datetimes - for logical dates and times, this method returns the same value as getMonth().
+		 * @param {Date} datetime - datetime instance to work with
+		 */
+		getDisplayMonth(datetime:Date): number /* int */; 
+
+		/**  
+		 *  Returns the full year from the passed datetime, as it will be displayed to the user. This might not be the same value as that returned by getFullYear() if a Time.setDefaultDisplayTimezone','custom timezone has been applied. Only necessary for datetimes - for logical dates and times, this method returns the same value as getFullYear().
+		 * @param {Date} datetime - datetime instance to work with
+		 */
+		getDisplayYear(datetime:Date): number /* int */; 
+
+		/**  
+		 * (Advanced)  Returns the end of some period, like day, week or month, relative to a passed Date instance.
+		 * @param {Date} date - the base date to find the period end from
+		 * @param {string} period - the period to return the end of, one of mn/h/d/w/m/y
+		 * @param {boolean} logicalDate - process and return a logicalDate with no time element
+		 * @param {number} firstDayOfWeek - which day should be considered the firstDayOfWeek - overrides the default provided by the locale
+		 */
+		getEndOf(date:Date, period:string /* String */, logicalDate?:boolean /* Boolean */, firstDayOfWeek?:number /* Integer */): Date; 
+
+		/**  
+		 *  Returns the global attribute that dictates which day should be treated as the first day of the week in calendars and date calculations. The parameter is expected to be an integer value between 0 (Sunday) and 6 (Saturday). The default value is picked up from the current locale.
+		 */
+		getFirstDayOfWeek(): number /* int */; 
+
+		/**  
+		 *  Returns the global FiscalCalendar','FiscalCalendar object representing the start month and date of the fiscal year in the current locale.
+		 */
+		getFiscalCalendar(): FiscalCalendar; 
+
+		/**  
+		 *  Returns the start date of the fiscal year for the passed date.
+		 * @param {Date | number} date - the date, or the year-number, to get the fiscal year for
+		 * @param {FiscalCalendar} fiscalCalendar - the object representing the starts of one or more fiscal years
+		 */
+		getFiscalStartDate(date:Date | number, fiscalCalendar?:FiscalCalendar): Date; 
+
+		/**  
+		 *  Returns a date's week-number, according to the fiscal calendar
+		 * @param {Date} date - the date to get the fiscal year for
+		 * @param {FiscalCalendar} fiscalCalendar - the object representing the starts of fiscal years
+		 */
+		getFiscalWeek(date:Date, fiscalCalendar?:FiscalCalendar): number /* int */; 
+
+		/**  
+		 *  Returns the FiscalYear object for the fiscal year in which the passed date exists.
+		 * @param {Date} date - the date to get the fiscal year for
+		 * @param {FiscalCalendar} fiscalCalendar - the object representing the start of the fiscal period
+		 */
+		getFiscalYear(date:Date | number /* Date | int */, fiscalCalendar?:FiscalCalendar): FiscalYear; 
+
+		/**  
+		 *  Retrieves the default format for strings being parsed into dates via DateUtil.parseInput()
+		 */
+		getInputFormat(): string; 
+
+		/**  
+		 *  Get a logical date - a value appropriate for a DataSourceField of type "date" - from a datetime value (a value from a DataSourceField of type "datetime"). This method correctly takes into account the current Time.setDefaultDisplayTimezone','display timezone, specifically, the returned Date will reflect the day, month and year that appears when the datetime is rendered by a SmartClient component rather than the date values that would be returned by Date.getDay() et al (which can differ, since getDay() uses the browser's local timezone). For further background on date, time and datetime types, storage and transmission, see dateFormatAndStorage','this overview.
+		 * @param {Date} date - a Date instance representing a datetime value
+		 */
+		getLogicalDateOnly(date:Date): Date; 
+
+		/**  
+		 *  Get a logical time - a value appropriate for a DataSourceField of type "time" - from a datetime value (a value from a DataSourceField of type "datetime"). This method correctly takes into account the current Time.setDefaultDisplayTimezone','display timezone, specifically, the returned Date will reflect the hour, minute and second that appears when the datetime is rendered by a SmartClient component rather than the time values that would be returned by Date.getHours() et al (which can differ, since getHours() uses the browser's local timezone). For further background on date, time and datetime types, storage and transmission, see dateFormatAndStorage','this overview.
+		 * @param {Date} date - a Date instance representing a datetime value
+		 */
+		getLogicalTimeOnly(date:Date): Date; 
+
+		/**  
+		 * (Advanced)  Returns the start of some period, like day, week or month, relative to a passed Date instance.
+		 * @param {Date} date - the base date to find the period start from
+		 * @param {string} period - the period to return the start of, one of mn/h/d/w/m/y
+		 * @param {boolean} logicalDate - process and return a logicalDate with no time element
+		 * @param {number} firstDayOfWeek - which day should be considered the firstDayOfWeek - overrides the default provided by the locale
+		 */
+		getStartOf(date:Date, period:string /* String */, logicalDate?:boolean /* Boolean */, firstDayOfWeek?:number /* Integer */): Date; 
+
+		/**  
+		 *  Return an array of days that are considered "weekend" days. Values will be the integers returned by the JavaScript built-in Date.getDay(), eg, 0 is Sunday and 6 is Saturday. Override DateUtil.weekendDays to accommodate different workweeks such as Saudi Arabia (Saturday -> Wednesday) or Israel (Sunday -> Thursday).
+		 */
+		getWeekendDays(): Array<number> /* Array of integer */; 
+
+		/**  
+		 * (Advanced)  Converts a RelativeDateShortcut to a RelativeDateString.
+		 * @param {RelativeDateShortcut} relativeDate - shortcut string to convert
+		 * @param {RelativeDateRangePosition} rangePosition - Are we interested in the start or end of the specified relative date? This applies to shortcuts which do not specify a specific moment (such as $today) - it does not apply to shortcuts which already specify a specific moment such as $startOfToday. If unspecified rangePosition is always assumed to be "start"
+		 */
+		mapRelativeDateShortcut(relativeDate:RelativeDateShortcut, rangePosition?:RelativeDateRangePosition): string /* RelativeDateString */; 
+
+		/**  
 		 *  Parse a date passed in as a string, returning the appropriate date object.
 		 * @param {string} dateString - date value as a string
 		 * @param {string} format - Format of the date string being passed. If not passed, the default date input format as set up via setInputFormat() will be used.
@@ -4709,6 +4875,72 @@ declare namespace Isc {
 		 * @param {boolean} suppressConversion - If the string passed in was not a valid date, in some cases we can convert to a valid date (for example incrementing the year if the month is greater than 12). This optional parameter will suppress such conversions - anything that doesn't parse directly to a valid date will simply return null.
 		 */
 		parseInput(dateString:string, format?:string /* DateInputFormat */, centuryThreshold?:number /* integer */, suppressConversion?:boolean /* Boolean */): Date; 
+
+		/**  
+		 *  Sets a new default separator that will be used when formatting dates. By default, this is a forward slash character: "/"
+		 * @param {string} separator - separator to use in dates
+		 */
+		setDefaultDateSeparator(separator:string): void; 
+
+		/**  
+		 *  Sets the global attribute that dictates which day should be treated as the first day of the week in calendars and date calculations. The parameter is expected to be an integer value between 0 (Sunday) and 6 (Saturday). The default value is picked up from the current locale.
+		 * @param {number} firstDayOfWeek - the number of the day to use as the first day of the week
+		 */
+		setFirstDayOfWeek(firstDayOfWeek:number /* int */): void; 
+
+		/**  
+		 *  Sets the global fiscal calendar, which is used for all calls to getFiscalYear() / getFiscalWeek() if those methods aren't passed a fiscalCalander.
+		 * @param {FiscalCalendar} fiscalCalendar - the object representing the start month and date of the fiscal year in the current locale
+		 */
+		setFiscalCalendar(fiscalCalendar:FiscalCalendar): void; 
+
+		/**  
+		 *  Sets up the default system-wide input format for strings being parsed into dates via DateUtil.parseInput(). This will effect how SmartClient components showing editable date or datetime fields parse user-entered values into live Date objects. The input format can be specified as a DateInputFormat - a 3 character string like "MDY" indicating the order of the Month, Day and Year components of date strings. As an example - an input format of "MDY" would parse "01/02/1999" to Jan 2nd 1999 This standard parsing logic will also handle date-time strings such as "01/02/1999 08:45", or "01/02/1999 16:21:05". Notes: If the inputFormat is not explicitly set,the system automatically determines the standard input format will be based on the specified DateUtil.setShortDisplayFormat','DateUtil.shortDisplayFormat wherever possible. For example if the short display format has been set to "toEuropeanShortDate" the input format will default to "DMY". The default date parsing functionality built into SmartClient will handle dates presented with any separator string, and can handle 1 or 2 digit day and month values and 2 or 4 digit year values. This means that in many cases custom date display formats can be parsed back to Date values without the need for a custom parser function. However if more sophisticated parsing logic is required, a function may be passed into this method. In this case the parser function should be able to handle parsing date and datetime values formatted via Date.toShortDate and Date.toShortDateTime. Date parsing and formatting logic may be overridden at the component level by setting properties directly on the component or field in question. 
+		 * @param {string} format - Default format for strings to be parsed into Dates. If this method is passed a function, it is expected to take a single parameter (the formatted date string), and return the appropriate Javascript Date object (or null if appropriate). 
+		 */
+		setInputFormat(format:string | any /* DateInputFormat | function */): void; 
+
+		/**  
+		 *  Set the default normal format for datetime values. After calling this method, subsequent calls to Date.toNormalDatetime will return a string formatted according to this format specification. Note that this will be the standard datetime format used by SmartClient components. The format parameter may be a FormatString, a DateDisplayFormat string, or a function. If passed a function, this function will be executed in the scope of the Date and should return the formatted string.
+		 * @param {string} format - new formatter
+		 */
+		setNormalDatetimeDisplayFormat(format:string | DateDisplayFormat | any /* FormatString | DateDisplayFormat | function */): void; 
+
+		/**  
+		 *  Set the default formatter for date objects to the method name passed in. After calling this method, subsequent calls to Date.toNormalDate will return a string formatted according to this format specification. Note: this will be the standard long date format used by SmartClient components. The format parameter may be a FormatString, a DateDisplayFormat string, or a function. If passed a function, this function will be executed in the scope of the Date and should return the formatted string. Initial default normalDisplayFormat is "toLocaleString"
+		 * @param {string} format - new formatter
+		 */
+		setNormalDisplayFormat(format:string | DateDisplayFormat | any /* FormatString | DateDisplayFormat | function */): void; 
+
+		/**  
+		 *  Set the default short format for datetime values. After calling this method, subsequent calls to Date.toShortDateTime will return a string formatted according to this format specification. Note that this will be the standard datetime format used by SmartClient components. The format parameter may be a FormatString, a DateDisplayFormat string, or a function. If passed a function, this function will be executed in the scope of the Date and should return the formatted string. Initial default format is "toUSShortDatetime". See <a href='http://en.wikipedia.org/wiki/Date_format_by_country' target='_blank'>http://en.wikipedia.org/wiki/Date_format_by_country</a> for a useful overview of standard date formats per country.
+		 * @param {string} format - new formatter
+		 */
+		setShortDatetimeDisplayFormat(format:string | DateDisplayFormat | any /* FormatString | DateDisplayFormat | function */): void; 
+
+		/**  
+		 *  Set the default short format for dates. After calling this method, subsequent calls to Date.toShortDate will return a string formatted according to this format specification. Note that this will be the standard short date format used by SmartClient components. The format parameter may be a FormatString, a DateDisplayFormat string, or a function. If passed a function, this function will be executed in the scope of the Date and should return the formatted string. Initial default shortDateFormat is "toUSShortDate". This property is commonly modified for localization of applications. See <a href='http://en.wikipedia.org/wiki/Date_format_by_country' target='_blank'>http://en.wikipedia.org/wiki/Date_format_by_country</a> for a useful overview of standard date formats per country.
+		 * @param {string} format - new formatter
+		 */
+		setShortDisplayFormat(format:string | DateDisplayFormat | any /* FormatString | DateDisplayFormat | function */): void; 
+
+		/**  
+		 *  Sets the global attribute that dictates whether the DateChooser','choosers shelled from DateItem','DateItems show a UI for working with Fiscal Years.
+		 * @param {boolean} showChooserFiscalYearPickers - whether to show Fiscal Year pickers in DateChoosers by default
+		 */
+		setShowChooserFiscalYearPickers(showChooserFiscalYearPickers:boolean): void; 
+
+		/**  
+		 *  Sets the global attribute that dictates whether the DateChooser','choosers shelled from DateItem','DateItems show a UI for working with Weeks.
+		 * @param {boolean} showChooserWeekPickers - whether to show Fiscal Week pickers in DateChoosers by default
+		 */
+		setShowChooserWeekPickers(showChooserWeekPickers:boolean): void; 
+
+		/**  
+		 *  Sets the days that are considered DateUtil.weekendDays','weekend days. The parameter should be array of the integers returned by the JavaScript built-in Date.getDay(), eg, 0 is Sunday and 6 is Saturday. Override to accommodate different workweeks such as Saudi Arabia (Saturday -> Wednesday) or Israel (Sunday -> Thursday).
+		 * @param {Array<number>} weekendDays - the array of day-numbers to assign as weekend days
+		 */
+		setWeekendDays(weekendDays:Array<number> /* Array of Integer */): void; 
 
 	} // DateUtilStatic
 
@@ -20961,6 +21193,12 @@ declare namespace Isc {
 		 * @param {string} offset - offset from UTC. This should be a string in the format +/-HH:MM for example "-08:00"
 		 */
 		setDefaultDisplayTimezone(offset:string): void; 
+
+		/**  
+		 *  Sets the default format for strings returned by Time.toTime.
+		 * @param {TimeDisplayFormat} formatter - Optional custom formatter to use. Will accept a function (which will be passed a pointer to the Date to format), a format string, or a string designating a standard formatter
+		 */
+		setNormalDisplayFormat(formatter:TimeDisplayFormat | string | any /* TimeDisplayFormat | FormatString | function */): void; 
 
 	} // TimeStatic
 

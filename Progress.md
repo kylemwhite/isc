@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-09 at 5/10/2017 2:40:20 PM by kwhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-09 at 5/10/2017 3:40:46 PM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -25,14 +25,14 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |10|String values where reference is found|0|Possible string values that refer to a constant where the constant was found.|
 |11|Types Generated|229||
 |12|Interfaces Generated|3||
-|13|Objects Generated|25||
+|13|Objects Generated|28||
 |14|Classes Generated|77||
-|15|Methods Generated|353||
+|15|Methods Generated|390||
 |16|Percentage of Types generated|100%||
 |17|Percentage of Interfaces generated|60%||
-|18|Percentage of Objects generated|37%||
+|18|Percentage of Objects generated|42%||
 |19|Percentage of Classes generated|25%||
-|20|Percentage of Methods generated|10%||
+|20|Percentage of Methods generated|11%||
 
 
 ### Issues with referenceDocs.xml file
@@ -51,11 +51,11 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |3|Setter Methods with paramter type that does not match the attribute type|88|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
 |4|String types without baseType|83|Types that are really just strings should have their own type or have the baseType='string'.|
 |5|Getter Methods with return type that does not match the attribute type|42|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
-|6|Method params with missing name|15|All paramters should have a name.|
+|6|Method params with missing name|15|All parameters should have a name.|
 |7|Arrays defined as 'Array[] of'|10|Since most arrays are NOT described this way, this is assumed to be incorrect.|
 |8|Arrays defined as 'array' or 'Array'|10|Since most arrays are NOT described this way, this is assumed to be incorrect.|
 |9|Method params missing type|7|All parameters should have a type.|
 |10|Methods with required parameters after optional parameters|7|Required parameters should always be at the end of the parameter list.|
 |11|Arrays defined as 'array of'|1|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|12|Method params with bad name|1|All paramters should have a name without special characters.|
+|12|Method params with bad name|1|All parameters should have a name without special characters.|
 |13|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
