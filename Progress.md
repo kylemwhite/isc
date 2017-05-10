@@ -1,10 +1,12 @@
 # SmartClientTypeScriptDefinitionGenerator 
 
-By Kyle White ( <a href="http://kmwTech.com/" target="_blank">KMW Tech Solutions, Inc.</a> )
+By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-09 at 5/10/2017 1:36:11 PM by kwhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-09 at 5/10/2017 2:17:39 PM by kwhite
+
+To see the details, look in the [Errors.txt](./Errors.txt) file.
 
 ### Progress
 
@@ -38,8 +40,10 @@ Generated from SmartClient SNAPSHOT_v11.1d_2017-05-09 at 5/10/2017 1:36:11 PM by
 |   |Item|Value|Description|
 |---|--- |---  |---        |
 ||**Warnings**||**Does not prevent item from being generated but might indicate a problem or inconsistency in the docs**|
-|1|Non-optional params with the word 'Optional' in the description|19|Probably, although not necessarily, a mistake.|
-|2|Methods with bad flags|3|Method flags should only contain A|
+|1|Object attributes marked with W flag|240|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
+|2|Attributes missing R flag|45|Almost all attributes have an R flag except these. Is this on purpose?|
+|3|Non-optional params with the word 'Optional' in the description|19|Probably, although not necessarily, a mistake. Could lead to incorrect code generation.|
+|4|Methods with bad flags|3|Method flags should only contain A|
 ||**Errors**||**May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented**|
 |1|Classes without inheritsFrom attribute|202|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
 |2|String values without reference|130|Possible string values that refer to a constant but the constant cannot be found. For example DateItem.DAY_MONTH|
