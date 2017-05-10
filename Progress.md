@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-09 at 5/10/2017 2:17:39 PM by kwhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-09 at 5/10/2017 2:40:20 PM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -13,25 +13,26 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |   |Item|Value|Description|
 |---|--- |---  |---        |
 ||**Information**||**Informational only, not a problem**|
-|1|Types|229||
-|2|Classes|309||
-|3|Objects|67||
-|4|Methods|3,555||
-|5|String values where reference is found|0|Possible string values that refer to a constant that was found.|
+|1|Types|229|Number of types found in the referenceDocs.xml file|
+|2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
+|3|Classes|309|Number of classes found in the referenceDocs.xml file|
+|4|Objects|67|Number of objects found in the referenceDocs.xml file|
+|5|Methods|3,555|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |7|string values without quotes|657|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |8|string values with period|130|These usually are really references to a constant.|
 |9|Arrays defined as 'Array of'|225|Since most arrays are described this way, this is assumed to be the 'correct' way.|
-|10|Types Generated|229||
-|11|Interfaces Generated|3||
-|12|Objects Generated|25||
-|13|Classes Generated|77||
-|14|Methods Generated|353||
-|15|Percentage of Types generated|100%||
-|16|Percentage of Interfaces generated|60%||
-|17|Percentage of Objects generated|37%||
-|18|Percentage of Classes generated|25%||
-|19|Percentage of Methods generated|10%||
+|10|String values where reference is found|0|Possible string values that refer to a constant where the constant was found.|
+|11|Types Generated|229||
+|12|Interfaces Generated|3||
+|13|Objects Generated|25||
+|14|Classes Generated|77||
+|15|Methods Generated|353||
+|16|Percentage of Types generated|100%||
+|17|Percentage of Interfaces generated|60%||
+|18|Percentage of Objects generated|37%||
+|19|Percentage of Classes generated|25%||
+|20|Percentage of Methods generated|10%||
 
 
 ### Issues with referenceDocs.xml file
@@ -46,7 +47,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |4|Methods with bad flags|3|Method flags should only contain A|
 ||**Errors**||**May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented**|
 |1|Classes without inheritsFrom attribute|202|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
-|2|String values without reference|130|Possible string values that refer to a constant but the constant cannot be found. For example DateItem.DAY_MONTH|
+|2|String values without reference|130|These are possible values of types that refer to a classAttr that doesn't exist. For example DateItem.DAY_MONTH|
 |3|Setter Methods with paramter type that does not match the attribute type|88|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
 |4|String types without baseType|83|Types that are really just strings should have their own type or have the baseType='string'.|
 |5|Getter Methods with return type that does not match the attribute type|42|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
