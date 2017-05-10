@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-06
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-09
 
 Errors during generation
-Generated: 5/9/2017 7:58:04 PM by kwhite
+Generated: 5/10/2017 12:41:26 PM by kwhite
 
 Summary
 Total Types  : 229
@@ -1123,29 +1123,49 @@ The following methods were excluded
 
 
 ===== For recording metrics ======
-Date	Types	Classes	Objects	Methods	Methods with bad flags	Classes without inherits from	string values with quotes	string values without quotes	string values with period	array of	Array of	Array[] of	array[] of	Just array or Array	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with paramter type that does not match the attribute type	Non-optional params with the word 'Optional' in the description	Getter Methods with return type that does not match the attribute type
-2017-05-06	229	309	67	3555	3	202	216	657	130	1	225	10	0	10	83	15	1	7	7	88	19	42	
+Date	Types	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	array of	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with paramter type that does not match the attribute type	Non-optional params with the word 'Optional' in the description	Getter Methods with return type that does not match the attribute type	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Generated Methods	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
+2017-05-09	229	309	67	3555	3	202	216	657	130	1	225	10	0	10	83	15	1	7	7	88	19	42	229	3	25	77	353	1	0.6	0.3731343	0.2491909	0.09929676	
+
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-05-06
+Metrics for build SNAPSHOT_v11.1d_2017-05-09
+===== Information =====
+(Informational only, not a problem)
 Types: 229
 Classes: 309
 Objects: 67
-Methods: 3555
-Methods with bad flags: 3
-Classes without inherits from: 202
+Methods: 3,555
 string values with quotes: 216
 string values without quotes: 657
 string values with period: 130
+Arrays defined as 'Array of': 225
+Types Generated: 229
+Interfaces Generated: 3
+Objects Generated: 25
+Classes Generated: 77
+Generated Methods: 353
+Percentage of Types generated: 100 %
+Percentage of Interfaces generated: 60 %
+Percentage of Objects generated: 37 %
+Percentage of Classes generated: 25 %
+Percentage of Methods generated: 10 %
+
+===== Warnings =====
+(Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)
+Non-optional params with the word 'Optional' in the description: 19
+
+===== Errors =====
+(May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented)
+Methods with bad flags: 3
+Classes without inheritsFrom attribute: 202
 array of: 1
-Array of: 225
-Array[] of: 10
-array[] of: 0
-Just array or Array: 10
+Arrays defined as 'Array[] of': 10
+Arrays defined as 'array[] of': 0
+Arrays defined as 'array' or 'Array': 10
 String types without baseType: 83
 Method params with missing name: 15
 Method params with bad name: 1
 Method params missing type: 7
 Methods with required parameters after optional parameters: 7
 Setter Methods with paramter type that does not match the attribute type: 88
-Non-optional params with the word 'Optional' in the description: 19
 Getter Methods with return type that does not match the attribute type: 42
+

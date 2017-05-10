@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/9/2017 7:58:04 PM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-06
+// Generated: 5/10/2017 12:41:09 PM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-09
 
 declare namespace Isc {
 

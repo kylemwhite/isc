@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/9/2017 7:58:04 PM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-06
+// Generated: 5/10/2017 12:41:09 PM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-09
 
 declare namespace Isc {
 
@@ -4693,7 +4693,7 @@ declare namespace Isc {
 
 	/* Methods */
 
-/* Not - because it conflicts with Class.create()
+/* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
 		/**  
 		 *  Create a new Date object - synonym for new Date(arguments)
 		 * /
@@ -8834,7 +8834,7 @@ declare namespace Isc {
 
 	/* Methods */
 
-/* Not - because it conflicts with Class.create()
+/* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
 		/**  
 		 *  FormItem.create() should never be called directly, instead, create a DynamicForm and specify form items via DynamicForm.items','form.items.
 		 * /
@@ -17388,7 +17388,7 @@ declare namespace Isc {
 
 	/* Methods */
 
-/* Not - because it conflicts with Class.create()
+/* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
 		/**  
 		 *  RPCRequest shouldn't be created directly. Instead, pass Properties to RPCManager.sendRequest and RPCManager.send.
 		 * /
@@ -17524,7 +17524,7 @@ declare namespace Isc {
 
 	/* Methods */
 
-/* Not - because it conflicts with Class.create()
+/* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
 		/**  
 		 *  RPCResponses shouldn't be created directly. Instances of this class are automatically created and optionally passed to you in the callback you specify as part of your RPCRequest. 
 		 * /
@@ -21679,7 +21679,7 @@ declare namespace Isc {
 
 	/* Methods */
 
-/* Not - because it conflicts with Class.create()
+/* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
 		/**  
 		 *  A Validator shouldn't be created directly. Instead pass Properties as each Validator in FormItem.validators or wherever a Validator is needed. 
 		 * /
