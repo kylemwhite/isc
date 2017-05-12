@@ -3,7 +3,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/12/2017 7:00:21 AM by kwhite
+// Generated: 5/12/2017 2:28:24 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-12
 
 declare namespace Isc {
@@ -127,7 +127,7 @@ declare namespace Isc {
 	 * DateUtil.parseInput as the inputFormat parameter.
 	 * 
 	 */
-	export type DateInputFormat = any;
+	export type DateInputFormat = string;
 
 	export type PreserveOpenState = 
 		/** Never try to automatically preserve the openState. Nodes will be initially open 
@@ -831,7 +831,7 @@ declare namespace Isc {
 	 * Note that this object is not intended to be interrogated directly, but may be stored 
 	 * (for example) as a blob on the server for state persistence across sessions.
 	 */
-	export type DetailViewerViewState = any;
+	export type DetailViewerViewState = string;
 
 
 	/**
@@ -1305,7 +1305,7 @@ declare namespace Isc {
 	 * 
 	 * [Note: Some keys may not be available for capture on every platform]
 	 */
-	export type KeyName = string;
+	export type KeyName = any;
 
 
 	/**
@@ -1747,7 +1747,7 @@ declare namespace Isc {
 	 * is true, when the form item receives focus, the form item's cell will have the "formCellFocused"
 	 * style applied to it.
 	 */
-	export type FormItemBaseStyle = any;
+	export type FormItemBaseStyle = string;
 
 
 	/**
@@ -2412,7 +2412,7 @@ declare namespace Isc {
 	 * Nested canvases can also have dataPaths specified, which will similarly be combined. See
 	 * the Canvas.dataPath attribute for more information and examples of this.
 	 */
-	export type DataPath = any;
+	export type DataPath = string;
 
 
 	/**
@@ -3441,7 +3441,7 @@ declare namespace Isc {
 	 * <a href="http://www.google.com/search?q=xpath+tutorial" target="_blank"
 	 * >http://www.google.com/search?q=xpath+tutorial</a>
 	 */
-	export type XPathExpression = any;
+	export type XPathExpression = string;
 
 
 	/**
@@ -3905,7 +3905,7 @@ declare namespace Isc {
 	 * call to AutoTest.getLocator. Note also that the debugging','Developer Console
 	 * has built-in functionality to create and display autoTestLocators for a live app.
 	 */
-	export type AutoTestLocator = any;
+	export type AutoTestLocator = string;
 
 	export type PromptStyle = 
 		/** Displays a centered modal prompt with text specified by RPCRequest.prompt */
@@ -3931,7 +3931,7 @@ declare namespace Isc {
 	/**
 	 * A String of CSS that can be added directly to a style attribute.
 	 */
-	export type CSSText = any;
+	export type CSSText = string;
 
 
 	/**
@@ -4505,7 +4505,7 @@ declare namespace Isc {
 	 * evaluate to a Java Map object, or a Java List containing only 
 	 * Maps.
 	 */
-	export type VelocityExpression = any;
+	export type VelocityExpression = string;
 
 
 	/**
@@ -4833,7 +4833,7 @@ declare namespace Isc {
 	 * information on statefulness and the Img.src documentation for information on how
 	 * stateful image URLs are formed.
 	 */
-	export type SCImgURL = any;
+	export type SCImgURL = string;
 
 
 	/**
@@ -4883,7 +4883,7 @@ declare namespace Isc {
 	 * overrides of FacetChart.getDataColor and FacetChart.getDataLineColor.
 	 * 
 	 */
-	export type CSSColor = any;
+	export type CSSColor = string;
 
 	export type ZoomStartPosition = 
 		/** start at the beginning of the range */

@@ -7,7 +7,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/12/2017 7:00:36 AM by kwhite
+// Generated: 5/12/2017 2:28:56 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-12
 
 /**
@@ -271,12 +271,198 @@ declare namespace Isc {
 		Dialog: DialogStatic<Dialog, DialogProps>;
 
 		/** 
+		 * DrawGroup extends DrawItem
+		 * DrawItem subclass to manage a group of other DrawItem instances.
+		 * 
+		 * A DrawGroup has no local visual representation other than that of its drawItems. Adding items
+		 * to a drawGroup allows for central event handling, and allows them to be manipulated
+		 * (drawn, scaled, etc) together.
+		 * 
+		 * DrawItems are added to a DrawGroup by creating the DrawItems with DrawItem.drawGroup
+		 * set to the DrawGroup, or by creating a DrawGroup with DrawGroup.drawItems.
+		 * 
+		 * DrawGroups handle events by having an explicitly specified group rectangle 
+		 * (see DrawGroup.getGroupRect). This rectangle has no visual representation within the draw pane
+		 * (is not visible) but any user-interactions within the specified coordinates will trigger
+		 * group level events.
+		 * 
+		 * DrawGroups may contain other DrawGroups.
+		 */ 
+		DrawGroup: DrawGroupStatic<DrawGroup, DrawGroupProps>;
+
+		/** 
+		 * DrawItem extends BaseWidget
+		 * Base class for graphical elements drawn in a DrawPane. All properties and methods
+		 * documented here are available on all DrawItems unless otherwise specified.
+		 * 
+		 * Each DrawItem has its own local transform that maps its 
+		 * DrawItem','local coordinate system to the drawing coordinate system that is shared by
+		 * all DrawItems in the same DrawPane (explained DrawPane','here). The local
+		 * transform is a combination of rotation, scaling, and other affine transformations. The
+		 * DrawItem is first DrawItem.translate','translated, then DrawItem.scale','scaled,
+		 * then DrawItem.xShearFactor','sheared in the direction of the x-axis, then
+		 * DrawItem.yShearFactor','sheared in the directiton of the y-axis, and then finally
+		 * DrawItem.rotation','rotated.
+		 * 
+		 * Note that DrawItems as such should never be created, only concrete subclasses such as
+		 * DrawGroup and DrawLine.
+		 * 
+		 * See DrawPane for the different approaches to create DrawItems.
+		 */ 
+		DrawItem: DrawItemStatic<DrawItem, DrawItemProps>;
+
+		/** 
+		 * DrawKnob extends Canvas
+		 * Canvas that renders a DrawItem into a DrawPane and provides interactivity for
+		 * that drawItem, including drag and drop.
+		 * 
+		 * A DrawKnob can either be initialized with a DrawKnob.knobShape','DrawItem knobShape or created via
+		 * the AutoChild pattern.
+		 * 
+		 * DrawKnobs are used by the DrawItem.knobs','drawItem control knobs subsystem.
+		 */ 
+		DrawKnob: DrawKnobStatic<DrawKnob, DrawKnobProps>;
+
+		/** 
+		 * DrawLabel extends DrawItem
+		 * DrawItem subclass to render a single-line text label.
+		 */ 
+		DrawLabel: DrawLabelStatic<DrawLabel, DrawLabelProps>;
+
+		/** 
+		 * DrawLine extends DrawItem
+		 * DrawItem subclass to render line segments.
+		 */ 
+		DrawLine: DrawLineStatic<DrawLine, DrawLineProps>;
+
+		/** 
+		 * DrawOval extends DrawItem
+		 * DrawItem subclass to render oval shapes, including circles.
+		 */ 
+		DrawOval: DrawOvalStatic<DrawOval, DrawOvalProps>;
+
+		/** 
+		 * DrawPane extends Canvas
+		 * A DrawPane is a container for drawing bitmap and vector graphics using browser's built-in
+		 * freeform drawing capabilities. These include the HTML5 &lt;canvas&gt; tag and
+		 * SVG (Scalable Vector Graphics) where available, and the VML (Vector Markup
+		 * Language) for legacy browsers (Internet Explorer 8 and earlier).
+		 * 
+		 * To draw in a DrawPane you create DrawLines, DrawOvals,
+		 * DrawPaths and other DrawItem-based components, and place them in the
+		 * DrawPane via DrawPane.drawItems or add them incrementally via
+		 * DrawPane.addDrawItem.
+		 * 
+		 * DrawItems support a variety of common features, such as 
+		 * Gradient','gradient fills, DrawItem.startArrow','arrowheads, events such as
+		 * DrawItem.click','click() and built-in DrawItem.knobs','control knobs for end user
+		 * resizing and manipulation of shapes.
+		 * 
+		 * Common shapes such as DrawRect','rectangles, DrawOval','ovals and
+		 * DrawTriangle','triangles have dedicated DrawItem subclasses. For other shapes,
+		 * consider:
+		 * 
+		 * DrawPath - a multi-segment line with straight segments, defined by a series
+		 * of DrawPath.points','points
+		 * DrawPolygon - a closed shape with straight sides, defined by a series of
+		 * DrawPolygon.points','points
+		 * DrawShape - a multi-segment line or closed shape whose sides can be defined by a
+		 * series of commands, including curved arcs
+		 * 
+		 * 
+		 * 
+		 * 
+		 * <h3>Note on Coordinate Systems</h3>
+		 * There are three different coordinate systems involved when a DrawItem is drawn onto a DrawPane:
+		 * 
+		 * The "local coordinate system" for a DrawItem refers to the Cartesian coordinate system
+		 * in which dimensional and positional values are interpreted. For example, when a
+		 * DrawRect is configured with left:20, top:30, width:200, and height:100, the
+		 * DrawRect represents a rectangle from (20, 30) to (220, 130) in its local coordinate
+		 * system. For this same DrawRect, DrawRect.top','top is going to be 30 even if
+		 * the shape is scaled by 3x, such that the (transformed) top coordinate in the drawing
+		 * coordinate system actually lies outside the visible region of the DrawPane. Similarly,
+		 * no matter what rotation is applied, DrawRect.top','top will continue to be 30.
+		 * 
+		 * Use DrawItem.getBoundingBox to obtain the bounding box of the item in local
+		 * coordinates. Subclass properties also typically provide data in the local coordinate
+		 * system, such as DrawRect.left, DrawRect.top, DrawRect.width,
+		 * DrawRect.height, DrawPath.points, and DrawTriangle.points.
+		 * 
+		 * There is a local coordinate system for each DrawItem.
+		 * The "drawing coordinate system" refers to the Cartesian coordinate system shared by
+		 * all DrawItems after their local transforms, such as DrawItem.scale or
+		 * DrawItem.rotation, have been applied.
+		 * 
+		 * Since DrawGroups pass through applied transforms to the underlying items,
+		 * DrawGroup properties such as DrawGroup.left, DrawGroup.top,
+		 * DrawGroup.width, and DrawGroup.height, represent coordinates in the drawing
+		 * coordinate system, as does therefore DrawGroup.getBoundingBox. The APIs
+		 * DrawPane.getDrawingPoint, DrawPane.getDrawingX, and
+		 * DrawPane.getDrawingY, also return drawing coordinates.
+		 * 
+		 * For DrawItems with no local transforms, the drawing coordinate system is identical to
+		 * the local coordinate system.
+		 * The "global coordinate system" refers to the drawing coordinate system with global
+		 * DrawPane transforms DrawPane.translate, DrawPane.zoomLevel and
+		 * DrawPane.rotation applied.
+		 * 
+		 * Use DrawItem.getResizeBoundingBox to obtain the bounding box of a
+		 * DrawItem in global coordinates. The APIs DrawItem.getPageLeft and 
+		 * DrawItem.getPageTop reflect global coordinates rounded to the nearest pixel and
+		 * offset by the page-relative coordinates of the DrawPane's top left corner.
+		 * (See for example Canvas.getPageLeft and Canvas.getPageTop.)
+		 * 
+		 * With the default global transforms, the global coordinate system is identical to the
+		 * drawing coordinate system.
+		 * 
+		 * 
+		 * The view port of the DrawPane is the rectangle in the global coordinate system from (0, 0)
+		 * that is as wide as the DrawPane's Canvas.getInnerContentWidth','inner content width
+		 * and as high as the DrawPane's Canvas.getInnerContentHeight','inner content height.
+		 * Note: In the case of a FacetChart showing a FacetChart.canZoom','zoom chart,
+		 * the view port height is decreased by the height of the zoom chart.
+		 * 
+		 * One other coordinate system in use by a DrawPane when DrawPane.canDragScroll','drag-scrolling
+		 * is enabled is the "viewbox coordinate system". The viewbox coordinate system is the drawing
+		 * coordinate system with the DrawPane.translate and DrawPane.zoomLevel transforms
+		 * applied.
+		 */ 
+		DrawPane: DrawPaneStatic<DrawPane, DrawPaneProps>;
+
+		/** 
+		 * DrawPath extends DrawItem
+		 * Draws a multi-segment line.
+		 */ 
+		DrawPath: DrawPathStatic<DrawPath, DrawPathProps>;
+
+		/** 
+		 * DrawRect extends DrawItem
+		 * DrawItem subclass to render rectangle shapes, optionally with rounded corners.
+		 */ 
+		DrawRect: DrawRectStatic<DrawRect, DrawRectProps>;
+
+		/** 
+		 * DrawSector extends DrawItem
+		 * DrawItem subclass to render Pie Slices.
+		 */ 
+		DrawSector: DrawSectorStatic<DrawSector, DrawSectorProps>;
+
+		/** 
 		 * DSRequest extends RPCRequest
 		 * Request sent to the server to initiate a 
 		 * dataSourceOperations','DataSource operation. All properties which are legal on
 		 * RPCRequest are legal, in addition to the properties listed here.
 		 */ 
 		DSRequest: DSRequestStatic<DSRequest, DSRequestProps>;
+
+		/** 
+		 * DSResponse extends RPCResponse
+		 * Response sent by the server in response to a DSRequest','DataSource request. Contains
+		 * all the properties available on the basic RPCResponse, in addition to the
+		 * properties listed here.
+		 */ 
+		DSResponse: DSResponseStatic<DSResponse, DSResponseProps>;
 
 		/** 
 		 * DynamicForm extends Canvas
@@ -324,6 +510,252 @@ declare namespace Isc {
 		 * See the "fontSelector" form in the toolstrip', 'Toolstrip example.
 		 */ 
 		DynamicForm: DynamicFormStatic<DynamicForm, DynamicFormProps>;
+
+		/** 
+		 * FacetChart extends DrawPane
+		 * HTML5-based charting engine, implementing all Chart.chartType','chartTypes of the
+		 * Chart interface.
+		 * 
+		 * Can be used directly, or specified as ListGrid.chartConstructor or
+		 * CubeGrid.chartConstructor.
+		 * 
+		 * NOTE: you must load the Drawing and Charts
+		 * loadingOptionalModules','Optional Modules before you can use FacetChart. Also, 
+		 * the Charts Module is available in Pro Edition or better, please see 
+		 * <a href='http://www.smartclient.com/product' target='_blank'>smartclient.com/product</a> for licensing 
+		 * information.
+		 * 
+		 * To create a FacetChart, set FacetChart.facets to an Array of Facet objects describing the
+		 * chart dimensions and FacetChart.valueProperty to value field name. For example:
+		 * 
+		 * 
+		 * isc.FacetChart.create({
+		 * facets: [{
+		 * id: "season", // the key used for this facet in the data above
+		 * title: "Season" // the user-visible title you want in the chart
+		 * }],
+		 * valueProperty: "temp", // the property in our data that is the numerical value to chart
+		 * data: [
+		 * {season: "Spring", temp: 79},
+		 * {season: "Summer", temp: 102},
+		 * {season: "Autumn", temp: 81},
+		 * {season: "Winter", temp: 59}
+		 * ],
+		 * title: "Average temperature in Las Vegas"
+		 * });
+		 * 
+		 * 
+		 * 
+		 * 
+		 * The following SDK examples demonstrate charts with a single facet:
+		 * 
+		 * logScalingChart', 'Log Scaling example,
+		 * dataPointsChart', 'Interactive Data Points example, and
+		 * addingElements', 'Adding Element example.
+		 * 
+		 * See the following SDK examples for examples of charts with multiple facets:
+		 * 
+		 * simpleChart', 'Simple Chart example,
+		 * multiSeriesChart', 'Multi-Series Chart example, and
+		 * dynamicDataCharting', 'Dynamic Data example.
+		 * 
+		 * 
+		 * <h3>the Inlined Facet</h3>
+		 * 
+		 * Having an "inlined facet" is another method to provide data to the chart. In this case each CellRecord
+		 * contains multiple data values; one facet definition is considered "inlined", meaning that
+		 * the facetValueIds from this facet appear as properties in each Record, and each such
+		 * property holds one data value. In this case the singular valueProperty is ignored.
+		 * For example:
+		 * 
+		 * 
+		 * isc.FacetChart.create({
+		 * facets: [
+		 * {
+		 * inlinedValues: true,
+		 * values: [
+		 * {id: "spring", title: "Spring"},
+		 * {id: "summer", title: "Summer"},
+		 * {id: "autumn", title: "Autumn"},
+		 * {id: "winter", title: "Winter"}
+		 * ]
+		 * }
+		 * ],
+		 * data: [
+		 * {spring: 79, summer: 102, autumn: 81, winter: 59}
+		 * ],
+		 * title: "Average temperature in Las Vegas"
+		 * });
+		 * 
+		 * Example with two facets:
+		 * 
+		 * isc.FacetChart.create({
+		 * facets: [
+		 * {
+		 * inlinedValues: true,
+		 * values: [
+		 * {id: "spring", title: "Spring"},
+		 * {id: "summer", title: "Summer"},
+		 * {id: "autumn", title: "Autumn"},
+		 * {id: "winter", title: "Winter"}
+		 * ]
+		 * },
+		 * {id: "city"}
+		 * ],
+		 * data: [
+		 * {city: "Las Vegas", spring: 79, summer: 102, autumn: 81, winter: 59},
+		 * {city: "New York", spring: 60, summer: 83, autumn: 66, winter: 40}
+		 * ],
+		 * stacked: false,
+		 * title: "Average temperatures"
+		 * });
+		 * 
+		 * 
+		 * 
+		 * 
+		 * <h3>Dual axis or multi-axis charts</h3>
+		 * 
+		 * FacetChart supports drawing multiple vertical axes. This is commonly used to show values
+		 * with different units (for example: sales in dollars, total units shipped) and/or very different
+		 * ranges (for example: gross revenue, profit) on the same chart. Each set of values, referred
+		 * to as a "metric", gets its own axis and gradation marks.
+		 * 
+		 * To use multiple axes, you add an additional facet called the "metric facet" that specifies
+		 * each axis to be plotted as a facetValueId. The metric facet is an inlined facet, so as with
+		 * inlined facets in general, each CellRecord has a value for each facetValueId of the metric
+		 * facet. You then set FacetChart.extraAxisMetrics','extraAxisMetrics to the list of
+		 * metrics that should be plotted as additional axes.
+		 * 
+		 * For example, if you were plotting revenue and profit for each month of the year, you would
+		 * have one facet named "metric" with facetValueIds "revenue" and "profit" and a second facet
+		 * "month". Each CellRecord would have the revenue and profit for one month, stored under the
+		 * properties "revenue" and "profit". Setting extraAxisMetrics to ["profit"]
+		 * would cause profit to be plotted as the second axis. See the
+		 * dualAxisChartMA', 'Dual Axis SDK sample for an example.
+		 * 
+		 * You can have multiple extra axes and the additional axes and gradation tics will be drawn at
+		 * increasing distances from the chart. By default, the first metric is drawn as a column chart
+		 * and subsequent metrics are drawn as lines; you can override this via
+		 * FacetChart.extraAxisSettings','extraAxisSettings. See the
+		 * threePlusChartMA', '3+ Axes SDK sample for an example of multiple extra axes.
+		 * 
+		 * Multi-axis, multi-facet charts are also allowed. Extending the previous example, you might
+		 * add a new facet "company", for a total of 3 facets. Each CellRecord would have "revenue"
+		 * and "profit" for one combination of "company" and "month". The default appearance in this
+		 * case would show revenue as clustered columns (one cluster per month, one column per company)
+		 * and would show profit as multiple lines (one per company). See the
+		 * multiSeriesChartMA', 'Multi-Series SDK sample for an example of a
+		 * multi-axis, multi-facet chart.
+		 * 
+		 * <h3>Mixed plots</h3>
+		 * In some cases you want to show some data series as one shape and other data series as
+		 * another shape but use the same axis. This is commonly used when one series is of a
+		 * fundamentally different kind than the other series (for example, a projection or average)
+		 * but still has the same scale.
+		 * 
+		 * To achieve a mixed plot like this, define it as a multi-axis chart as explained above, but
+		 * set MetricSettings.showAxis false to avoid a second axis appearing, and set
+		 * MetricSettings.matchGradations to cause the same gradations to be used for both
+		 * plots.
+		 * 
+		 * See the mixedPlotsChart', 'Mixed Plots SDK example.
+		 * 
+		 * <h3>Histogram Charts</h3>
+		 * 
+		 * A "histogram" chart is similar to a FacetChart.stacked','stacked "column" chart, showing
+		 * multiple facet values vertically for each position along the x-axis /
+		 * FacetChart.getDataLabelFacet','data label facet, but instead of each vertical facet
+		 * value being defined only by a length, a "histogram" chart defines a segment for each,
+		 * represented by both a start point (the FacetChart.valueProperty','"value property") and
+		 * an end point (the FacetChart.endValueMetric','"endValue metric").
+		 * 
+		 * Segments may overlap, with the last segment drawn receiving the highest z-ordering. To
+		 * override this default behavior, values may be provided using an additional metric -
+		 * FacetChart.zIndexMetric - whose value must be a non-negative integer no greater than
+		 * FacetChart.maxDataZIndex.
+		 * 
+		 * <h3>Scatter Charts</h3>
+		 * 
+		 * Scatter charts differ from other chart types in that both axes represent continuous numeric
+		 * data rather than a discrete set of facet values (like months of the year). For this reason
+		 * Scatter charts use the same concept of a "metric" facet as is used by Dual-Axis charts,
+		 * where the metric facet is expected to have exactly two metrics: the
+		 * FacetChart.xAxisMetric','xAxisMetric and FacetChart.yAxisMetric','yAxisMetric.
+		 * 
+		 * Unlike all other chart types, a scatter plot may be specified with only the metric facet.
+		 * However one additional facet can be defined, which allows multiple sets of x,y points to be
+		 * drawn in different colors, analogous to the different colors of a multi-series line chart.
+		 * 
+		 * See the scatterPlotCharting', 'Scatter Plot SDK example.
+		 * 
+		 * Date values on the X axis
+		 * 
+		 * FacetChart also supports scatter charts where the x-axis represents date- or time-valued
+		 * data and the y-axis represents numeric data, as normal. To enable this mode all records in
+		 * the data must have values for the facetValueId of the
+		 * FacetChart.xAxisMetric','xAxisMetric that are true Date objects, not Strings or
+		 * nulls. For these charts, vertical lines are drawn to represent a sequence of
+		 * significant datetime values on the x-axis, such as the first day of the month or week. The
+		 * mechanism used to select these Dates and format them into the x-axis labels is the same
+		 * mechanism used by charts with FacetChart.labelCollapseMode','labelCollapseMode set to
+		 * "time".
+		 * 
+		 * <h3>Bubble Charts</h3>
+		 * 
+		 * A "bubble" chart is a type of scatter chart where the size of each rendered data
+		 * point represents an additional metric value, allowing 3 continuous data values to be
+		 * visualized together. When using chartType:"Bubble", the additional metric 
+		 * is configured via FacetChart.pointSizeMetric','pointSizeMetric. 
+		 * Points will be sized between the FacetChart.minDataPointSize','minDataPointSize and
+		 * FacetChart.maxDataPointSize','maxDataPointSize, optionally with 
+		 * FacetChart.logScalePointSize','logarithmic scaling. A legend will be included showing 
+		 * how point size represents data values, and a multi-facet Bubble chart can optionally use a 
+		 * different shape for each facetValue via 
+		 * FacetChart.useMultiplePointShapes','useMultiplePointShapes.
+		 * 
+		 * Variable-size points can also be used with other, non-scatter chart types (such as "Line"
+		 * or "Radar") when FacetChart.showDataPoints','showDataPoints is enabled, by setting 
+		 * pointSizeMetric to the FacetValue.id of a Facet.values','facetValue
+		 * of the metric facet. In this case, a legend for point sizes is not shown by default, but can
+		 * be enabled via FacetChart.showPointSizeLegend','showPointSizeLegend.
+		 * 
+		 * Whenever drawing variable size data points, by default, the largest data points are drawn 
+		 * first so that smaller data points are less likely to be completely occluded by larger data 
+		 * points, but this can be disabled by setting 
+		 * FacetChart.autoSortBubblePoints','autoSortBubblePoints to false. Visual
+		 * appearance of data points can be further customized by setting the 
+		 * FacetChart.bubbleProperties','bubbleProperties.
+		 * 
+		 * See the bubbleChart', 'Bubble Chart SDK example.
+		 * 
+		 * <h3>Color Scale Charts</h3>
+		 * 
+		 * FacetChart supports rendering an additional metric value as the color of each data
+		 * point. This feature requires that FacetChart.showDataPoints','showDataPoints be
+		 * enabled and is configured via FacetChart.colorScaleMetric','colorScaleMetric. Instead
+		 * of data points being drawn using a separate color for each facetValue of the
+		 * legend facet, the data points will be drawn using a color interpolated between the
+		 * FacetChart.scaleStartColor','scaleStartColor and
+		 * FacetChart.scaleEndColor','scaleEndColor, optionally with
+		 * FacetChart.logScalePointColor','logarithmic scaling. A legend is included by default
+		 * via FacetChart.showColorScaleLegend','showColorScaleLegend that shows how the data
+		 * values are mapped to a color via a gradient over the range of colors used in the chart.
+		 * Visual appearance of data points in color scale charts can be further customized by setting
+		 * the FacetChart.bubbleProperties','bubbleProperties, just as with bubble charts.
+		 * 
+		 * Note that when color is being used to show values of the colorScaleMetric then
+		 * color cannot be used to distinguish between different facetValues. Therefore
+		 * color scale charts cannot have a (non-metric) legend facet.
+		 * 
+		 * See the colorScaleChart', 'Color Scale Chart SDK example.
+		 * 
+		 * <h3>Notes on printing</h3>
+		 * 
+		 * FacetCharts support printing on all supported desktop browsers. When using Pro Edition or 
+		 * better with the SmartClient Server Framework installed, charts can also be exported to PDF 
+		 * via RPCManager.exportContent or to images via RPCManager.exportImage.
+		 */ 
+		FacetChart: FacetChartStatic<FacetChart, FacetChartProps>;
 
 		/** 
 		 * A UI component that can participate in a DynamicForm, allowing editing or display of one of
@@ -1585,6 +2017,16 @@ declare namespace Isc {
 
 
     }
+
+	
+	export interface ListGrid {
+
+		/**
+		 * getDataSource - This is undocumented but works.
+		 * @return {DataSource} The DataSource that the grid is bound to
+		 */
+		getDataSource(): DataSource;   // This is a real method on ListGrid but not generated because it's not in the referenceDocs.xml file
+	}
 }
 
 declare var isc: Isc.iscStatic;

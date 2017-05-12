@@ -5,7 +5,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/12/2017 7:00:21 AM by kwhite
+// Generated: 5/12/2017 2:28:24 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-12
 
 declare namespace Isc {
@@ -326,6 +326,39 @@ declare namespace Isc {
 
 
 	/**
+	 * A class used to define a shadow used in a Draw&lt;Shape&gt; Types. 
+	 */
+	export interface Shadow {
+		readonly blur?: number /* int */;
+		readonly color?: string /* CSSColor */;
+		readonly offset?: Point;
+	} // Shadow
+
+	export interface ShadowStatic {
+	} // ShadowStatic
+
+
+	/**
+	 * X/Y position in pixels, specified as an Array with two members, for example: [30, 50] 
+	 */
+	export interface Point {
+		/** 
+		 * (Read only) The x coordinate of this point.
+		 * Flags: IR
+		 */
+		readonly x?: number /* int */;
+		/** 
+		 * (Read only) The y coordinate of this point.
+		 * Flags: IR
+		 */
+		readonly y?: number /* int */;
+	} // Point
+
+	export interface PointStatic {
+	} // PointStatic
+
+
+	/**
 	 * An object that modifies a dsRequest based on several available 
 	 * values, including preceding responses from the same queue. 
 	 * 
@@ -520,6 +553,389 @@ declare namespace Isc {
 
 
 	/**
+	 * Defines a set of properties that are applicable to
+	 * FacetChart.extraAxisMetrics','additional value axes of a FacetChart.
+	 * 
+	 * These properties behave identically to the same-named properties of FacetChart. Two
+	 * exceptions are the properties
+	 * MetricSettings.gradationLineProperties','gradationLineProperties and
+	 * MetricSettings.gradationZeroLineProperties','gradationZeroLineProperties
+	 * because they are used to draw tick marks along an extra value axis instead of lines
+	 * through the chart rectangle. Also the default behavior of the
+	 * MetricSettings.dataColors','dataColors property is different, in that the
+	 * default is to use unused colors from, and in the order of, the 
+	 * FacetChart.dataColors','main data colors array.
+	 * 
+	 * The extra value axes that are not positioned directly adjacent to the
+	 * FacetChart.showChartRect','chart rect. of the FacetChart may additionally
+	 * have an axis line to connect the gradation tick marks. Whether to draw this
+	 * line is controlled by the MetricSettings.showAxisLine','showAxisLine property,
+	 * and the properties of the line are specified using
+	 * MetricSettings.axisLineProperties','axisLineProperties. The default is to draw
+	 * the axis lines whenever the chart rect. is drawn and to draw the line using the same
+	 * properties as the lines of the chart rect. (for example, lineColor and lineWidth).
+	 * 
+	 * The extra value axis charts may be 
+	 * MetricSettings.multiFacet','single- or multi-facet charts. If the underlying
+	 * FacetChart.data','data is multi-facet then the extra value axes may use the facet
+	 * whose values are labelled on the data axis or the facet used to create the legend (the
+	 * first and second facets, respectively). Both types of charts vary the first facet to
+	 * get a data series to plot. Multi-facet charts also vary the second facet, but
+	 * single-facet charts keep the second facet fixed at a constant FacetValue.
+	 * 
+	 * The exact facet value to use for the second facet is specified using the
+	 * MetricSettings.fixedFacetValue','fixedFacetValue property. 
+	 */
+	export interface MetricSettings {
+		/** 
+		 * (Read only) Properties for the axis line drawn if this extra value axis is not positioned
+		 * directly adjacent to the chart rect. The default is to match the
+		 * DrawItem.lineCap','lineCap, DrawItem.lineColor','lineColor,
+		 * DrawItem.lineOpacity','lineOpacity, DrawItem.linePattern','linePattern,
+		 * and DrawItem.lineWidth','lineWidth of the FacetChart's
+		 * FacetChart.chartRectProperties','chart rect. for each axis line.
+		 * Flags: IR
+		 */
+		readonly axisLineProperties?: DrawLineProps /* DrawLine Properties */;
+		/** 
+		 * (Read only) Same as FacetChart.axisStartValue but affects only one metric.
+		 * Flags: IR
+		 */
+		readonly axisStartValue?: number /* Float */;
+		/** 
+		 * See ChartType for a list of known types - Column, Bar, Line, Pie, Doughnut,
+		 * Area, Radar, and Histogram charts are supported.
+		 * Flags: IRW
+		 */
+		readonly chartType?: ChartType;
+		/** 
+		 * An array of colors to use for a series of visual elements representing data (eg columns,
+		 * bars, pie slices), any of which may be adjacent to any other.
+		 * 
+		 * Colors must be in the format of a leading hash (#) plus 6 hexadecimal digits, for example, 
+		 * "#FFFFFF" is white, "#FF0000" is pure red.
+		 * Flags: IRW
+		 */
+		readonly dataColors?: Array<string> /* Array of CSSColor */;
+		/** 
+		 * (Read only) A dictionary of gradients to use for a series of visual elements representing data (eg columns,
+		 * bars, pie slices), any of which may be adjacent to any other.
+		 * Flags: IR
+		 */
+		readonly dataGradients?: any /* Map Gradient */;
+		/** 
+		 * (Read only) Properties for lines that show data (as opposed to gradations or borders around the data
+		 * area).
+		 * Flags: IR
+		 */
+		readonly dataLineProperties?: DrawLineProps /* DrawLine Properties */;
+		/** 
+		 * (Read only) Properties for lines that outline a data shape (in filled charts such as area or radar
+		 * charts).
+		 * Flags: IR
+		 */
+		readonly dataOutlineProperties?: DrawItemProps /* DrawItem Properties */;
+		/** 
+		 * (Read only) Common properties to apply for all data points (see MetricSettings.showDataPoints).
+		 * Flags: IR
+		 */
+		readonly dataPointProperties?: DrawItemProps /* DrawItem Properties */;
+		/** 
+		 * (Read only) Size in pixels for data points drawn for line, area, radar and other chart types.
+		 * Flags: IR
+		 */
+		readonly dataPointSize?: number /* int */;
+		/** 
+		 * (Read only) Properties for data shapes (filled areas in area or radar charts).
+		 * Flags: IR
+		 */
+		readonly dataShapeProperties?: DrawPathProps /* DrawPath Properties */;
+		/** 
+		 * (Read only) The FacetChart.decimalPrecision used to render the numeric labels of this metric axis.
+		 * Flags: IR
+		 */
+		readonly decimalPrecision?: number /* int */;
+		/** 
+		 * Whether shapes are filled, for example, whether a multi-series line chart appears as a
+		 * stack of filled regions as opposed to just multiple lines.
+		 * 
+		 * If unset, fills will be automatically used when there are multiple facets and stacking
+		 * is active (so Line and Radar charts will show stacked regions). 
+		 * 
+		 * You can explicitly set filled:false to create multi-facet Line or Radar charts where
+		 * translucent regions overlap, or filled:true to fill in a single-facet Line or Radar
+		 * chart.
+		 * Flags: IRW
+		 */
+		readonly filled?: boolean;
+		/** 
+		 * (Read only) For a MetricSettings.multiFacet','single-facet chart of an extra value axis, this property provides a constant facet value
+		 * for the second facet. By varying the value of the other facet in multi-facet data, the chart
+		 * obtains the series of values to plot. The default facet value is the first facet value of the second facet.
+		 * Flags: IR
+		 */
+		readonly fixedFacetValue?: string | number /* String | Number */;
+		/** 
+		 * (Read only) Properties for gradation labels
+		 * Flags: IR
+		 */
+		readonly gradationLabelProperties?: DrawLabelProps /* DrawLabel Properties */;
+		/** 
+		 * (Read only) Properties for gradation lines
+		 * Flags: IR
+		 */
+		readonly gradationLineProperties?: DrawLineProps /* DrawLine Properties */;
+		/** 
+		 * (Read only) Properties for the gradation line drawn for zero (slightly thicker by default).
+		 * Flags: IR
+		 */
+		readonly gradationZeroLineProperties?: DrawLineProps /* DrawLine Properties */;
+		/** 
+		 * (Read only) For MetricSettings.multiFacet','single-facet charts embedded in a multi-facet main
+		 * chart, the legendLabel defines the text of the legend label for this chart.
+		 * The default text is the FacetValue.title','title of the metric facet value of this
+		 * value axis concatenated with the FacetValue.title','title of the
+		 * MetricSettings.fixedFacetValue','fixed facet value in parentheses. Set the
+		 * legendLabel to provide custom text for the legend label.
+		 * Flags: IR
+		 */
+		readonly legendLabel?: string /* String */;
+		/** 
+		 * (Read only) When MetricSettings.useLogGradations, base value for logarithmic gradation lines. Gradation
+		 * lines will be shown at every power of this value plus intervening values specified by
+		 * MetricSettings.logGradations.
+		 * Flags: IR
+		 */
+		readonly logBase?: number /* int */;
+		/** 
+		 * (Read only) When MetricSettings.useLogGradations is set, gradation lines to show in between powers,
+		 * expressed as a series of integer or float values between 1 and MetricSettings.logBase.
+		 * 
+		 * Some common possibilities (for base 10):
+		 * 
+		 * [ 1 ] // show only orders of magnitude (0.1, 1, 10, 100, etc)
+		 * [ 1, 5 ] // show only orders of magnitude plus halfway mark
+		 * [ 1, 2, 4, 8 ] // show powers of 2 between orders
+		 * [ 1, 2.5, 5, 7.5 ] // show quarters
+		 * 
+		 * Or base 2:
+		 * 
+		 * [ 1 ]
+		 * [ 1, 1.5 ]
+		 * 
+		 * Flags: IR
+		 */
+		readonly logGradations?: Array<number> /* Array of Float */;
+		/** 
+		 * (Read only) Whether to use logarithmic scaling for values.
+		 * 
+		 * Logarithmic scale charts show an equivalent percentage increase as equivalent distance
+		 * on the chart. That is, 10 and 100 are the same distance apart as 100 and 1000 (each
+		 * being a 10 times or 1000% increase).
+		 * Flags: IR
+		 */
+		readonly logScale?: boolean /* Boolean */;
+		/** 
+		 * (Read only) When this property is set to the metric of another MetricSettings object, the extra
+		 * value axis and chart corresponding to these settings will use the same scale for the
+		 * gradations as the extra value axis and chart of the other MetricSettings object. The
+		 * value of matchGradations can only be one of the metrics of the metric
+		 * facet whose values will be displayed by the chart.
+		 * Flags: IR
+		 */
+		readonly matchGradations?: string /* String */;
+		/** 
+		 * (Read only) Same as FacetChart.minDataSpreadPercent but affects only one metric. Default of
+		 * null means that the chart-wide setting facetChart.minDataSpreadPercent
+		 * will be used.
+		 * Flags: IR
+		 */
+		readonly minDataSpreadPercent?: number /* Integer */;
+		/** 
+		 * (Read only) Whether this extra value axis plots values while varying the facet values of just the
+		 * first facet (single-facet) or both first and second facets (multi-facet).
+		 * Flags: IR
+		 */
+		readonly multiFacet?: boolean /* Boolean */;
+		/** 
+		 * For multi-facet charts, render data values as a proportion of the sum of all data
+		 * values that have the same label.
+		 * 
+		 * Gradation labels will be switched to show percentage instead of absolute values.
+		 * 
+		 * This setting is valid only for Column, Bar, Area and Radar chart types and only in
+		 * MetricSettings.stacked','stacked mode. Stacked columns will be as tall as the chart rect and
+		 * stacked bars will be as wide as the chart rect. Area and Radar charts will be
+		 * completely filled except for facet values where all values are 0.
+		 * Flags: IRW
+		 */
+		readonly proportional?: boolean;
+		/** 
+		 * (Read only) Default title for the value axis label when the chart is in
+		 * MetricSettings.proportional','proportional rendering mode. This title will be used unless the
+		 * FacetChart.getLegendFacet','legend facet defines a
+		 * Facet.proportionalTitle','proportionalTitle.
+		 * Flags: IR, Group: i18nMessages
+		 */
+		readonly proportionalAxisLabel?: string /* String */;
+		/** 
+		 * (Read only) Properties for shadows.
+		 * Flags: IR
+		 */
+		readonly shadowProperties?: DrawOvalProps /* DrawOval Properties */;
+		/** 
+		 * (Read only) Whether to show the extra value axis.
+		 * Flags: IR
+		 */
+		readonly showAxis?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Whether to show an axis line for this extra value axis if it is not placed
+		 * directly adjacent to the chart rect. The default setting is the value
+		 * of the FacetChart.showChartRect','showChartRect property of the FacetChart.
+		 * Flags: IR
+		 */
+		readonly showAxisLine?: boolean;
+		/** 
+		 * (Read only) For Line, Area, Radar, Scatter or Bubble charts, whether to show data points for each
+		 * individual data value.
+		 * 
+		 * If shown, the MetricSettings.pointClick and MetricSettings.getPointHoverHTML APIs can be used to create
+		 * interactivity.
+		 * Flags: IR
+		 */
+		readonly showDataPoints?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Should data values be shown as text labels near the shape representing the value, for example,
+		 * above columns of a column chart, or adjacent to points in a line chart?
+		 * 
+		 * If set to false, then data values will not be shown.
+		 * 
+		 * If set to true, data values will be shown unless the data density is high enough that
+		 * labels will potentially overlap, in which case, data values will not be shown and
+		 * hovers will be shown instead, in the same way as MetricSettings.showValueOnHover shows hovers.
+		 * Flags: IR
+		 */
+		readonly showDataValues?: boolean;
+		/** 
+		 * (Read only) Whether to automatically show shadows for various charts.
+		 * Flags: IR
+		 */
+		readonly showShadows?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Whether to show the MetricSettings.valueTitle','valueTitle (or, in the case of
+		 * MetricSettings.proportional','proportional rendering mode,
+		 * MetricSettings.proportionalAxisLabel) as a label on this extra value axis.
+		 * Flags: IR
+		 */
+		readonly showValueAxisLabel?: boolean;
+		/** 
+		 * (Read only) Shows the value of the nearest data value in a floating label whenever the mouse moves
+		 * within the main chart area. The visual element representing the data
+		 * value will also be emphasized by brightening or highlighting it (appearance differs by
+		 * chart type).
+		 * 
+		 * Calculates nearest value based on FacetChart.getNearestDrawnValue.
+		 * 
+		 * The data value will be formatted using FacetChart.formatDataValue.
+		 * The label's appearance is controlled by FacetChart.hoverLabelProperties.
+		 * Flags: IR
+		 */
+		readonly showValueOnHover?: boolean;
+		/** 
+		 * If the ChartType is "Column" then the metric settings may include
+		 * a setting for FacetChart.stacked.
+		 * 
+		 * Flags: IRW
+		 */
+		readonly stacked?: boolean;
+		/** 
+		 * (Read only) Whether to use classic logarithmic gradations, where each order of magnitude is shown as
+		 * a gradation as well as a few intervening lines. Gradations also begin and end on an order
+		 * of magnitude. For example, 1,2,4,6,8,10,20,40,60,80,100.
+		 * 
+		 * Default gradations can be overridden via MetricSettings.logBase and MetricSettings.logGradations.
+		 * Flags: IR
+		 */
+		readonly useLogGradations?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Properties for labels of value axis.
+		 * Flags: IR
+		 */
+		readonly valueAxisLabelProperties?: DrawLabelProps /* DrawLabel Properties */;
+		/** 
+		 * (Read only) Properties for a "value line" - a line shows where a particular discrete value is
+		 * placed, eg, vertical lines connecting points of a line chart to the X axis, or radial
+		 * lines in a Radar chart.
+		 * Flags: IR
+		 */
+		readonly valueLineProperties?: DrawLineProps /* DrawLine Properties */;
+		/** 
+		 * (Read only) A label for the data values, such as "Sales in Thousands", typically used as the label for
+		 * the value axis.
+		 * Flags: IR
+		 */
+		readonly valueTitle?: string /* String */;
+		/** 
+		 * (Read only) Same as FacetChart.xAxisEndValue but affects only one metric.
+		 * Flags: IR
+		 */
+		readonly xAxisEndValue?: number /* Float */;
+
+		/* Instance Method Overrides */
+
+		/**  
+		 *  Method to change the current ChartType','chartType.
+		 * Will redraw the chart if drawn. 
+		 * Will use default settings for the new chart type for MetricSettings.stacked','stacked
+		 * and MetricSettings.filled','filled if those values are null.
+		 * 
+		 * Note that for FacetChart.extraAxisMetrics','multi-axis charts this method changes the
+		 * chartType for the main value axis only.
+		 * 
+		 * 
+		 * @param {ChartType} chartType - new chart type
+		 */
+		setChartType?(chartType:ChartType): void; 
+
+		/**  
+		 *  Setter for MetricSettings.dataColors.
+		 * 
+		 * @param {Array<string>} dataColors - New set of data colors
+		 */
+		setDataColors?(dataColors:Array<string> /* Array of CSSColor */): void; 
+
+		/**  
+		 *  Method to change MetricSettings.filled','filled.
+		 * Use null to apply a default value for the current ChartType','chartType.
+		 * 
+		 * 
+		 * @param {boolean} filled - new value
+		 */
+		setFilled?(filled:boolean | null /* boolean or null */): void; 
+
+		/**  
+		 *  Setter for MetricSettings.proportional.
+		 * 
+		 * @param {boolean} proportional - Whether the chart should now use proportional mode.
+		 */
+		setProportional?(proportional:boolean): void; 
+
+		/**  
+		 *  Method to change MetricSettings.stacked','stacked. Use null to
+		 * apply a default value for the current ChartType','chartType.
+		 * 
+		 * 
+		 * @param {boolean} stacked - new value
+		 */
+		setStacked?(stacked:boolean | null /* boolean or null */): void; 
+
+	} // MetricSettings
+
+	export interface MetricSettingsStatic {
+	} // MetricSettingsStatic
+
+
+	/**
 	 * An object representing a user-created and user-modifiable hilite, which can be created and
 	 * edited with a HiliteEditor either directly or via the
 	 * ListGrid.canEditHilites behavior.
@@ -657,6 +1073,45 @@ declare namespace Isc {
 
 
 	/**
+	 * Defines a simple gradient vertical gradient between Gradient.startColor','two
+	 * Gradient.endColor','colors, or using Gradient.colorStops','colorStops. See
+	 * SimpleGradient, LinearGradient and RadialGradient for further
+	 * properties to define more advanced gradients. 
+	 */
+	export interface Gradient {
+		/** 
+		 * (Read only) An array of color stops for this gradient.
+		 * Flags: IR
+		 */
+		readonly colorStops?: Array<ColorStop> /* Array of ColorStop */;
+		/** 
+		 * (Read only) An end color for the gradient. If both Gradient.startColor','startColor and endColor
+		 * are set then Gradient.colorStops','colorStops is ignored.
+		 * Flags: IR
+		 */
+		readonly endColor?: string /* CSSColor */;
+		/** 
+		 * (Read only) Identifier which can be used by one or more DrawItems when gradient is assigned
+		 * to DrawPane.gradients. The ID property is optional when gradient is assigned directly
+		 * to a DrawItem.
+		 * 
+		 * The ID must be unique within DrawPane.gradients if defined.
+		 * Flags: IR
+		 */
+		readonly id?: string /* identifier */;
+		/** 
+		 * (Read only) A start color for the gradient. If both startColor and Gradient.endColor','endColor
+		 * are set then Gradient.colorStops','colorStops is ignored.
+		 * Flags: IR
+		 */
+		readonly startColor?: string /* CSSColor */;
+	} // Gradient
+
+	export interface GradientStatic {
+	} // GradientStatic
+
+
+	/**
 	 * An object representing a component that is currently being edited within an
 	 * EditContext.
 	 * 
@@ -713,6 +1168,40 @@ declare namespace Isc {
 
 	export interface EditNodeStatic extends PaletteNodeStatic {
 	} // EditNodeStatic
+
+
+	/**
+	 * A Javascript object defining the details of a single group operation. Used by the 
+	 * MultiGroupDialog','MultiGroupDialog to edit multi-level grouping scenarios for
+	 * use by components that support grouping. 
+	 */
+	export interface GroupSpecifier {
+		/** 
+		 * (Read only) A DataBoundComponent providing the context for the group-normalizer.
+		 * Flags: IR
+		 */
+		readonly context?: DataBoundComponent;
+		/** 
+		 * (Read only) The grouping mode applied by this specifier. The list of available modes can come either 
+		 * from the associated ListGridField.groupingModes','field or from it's specified 
+		 * SimpleType.groupingModes','data-type.
+		 * Flags: IR
+		 */
+		readonly grouping?: string /* String */;
+		/** 
+		 * (Read only) A normalizer function which this groupSpecifier will use to group.
+		 * Flags: IR
+		 */
+		readonly normalizer?: any /* Function */;
+		/** 
+		 * (Read only) The property name, eg a ListGridField','field name, to which this groupSpecifier applies.
+		 * Flags: IR
+		 */
+		readonly property?: string /* String */;
+	} // GroupSpecifier
+
+	export interface GroupSpecifierStatic {
+	} // GroupSpecifierStatic
 
 
 	/**
@@ -1135,6 +1624,44 @@ declare namespace Isc {
 
 
 	/**
+	 * Settings for generating printable HTML for components. 
+	 */
+	export interface PrintProperties {
+		/** 
+		 * (Read only) An array of Strings indicating the classNames of controls that should be specifically
+		 * included when printing, even if a superclass is listed in PrintProperties.omitControls.
+		 * Flags: IR, Group: printing
+		 */
+		readonly includeControls?: Array<string> /* Array of String */;
+		/** 
+		 * (Read only) An array of Strings indicating the classNames of controls that should be omitted from
+		 * printing. By default, omitControls includes all button-based controls, menus
+		 * and similar interactive controls that are typically useless in printed output.
+		 * 
+		 * All subclasses of the specified classes are also omitted.
+		 * 
+		 * See also PrintProperties.includeControls.
+		 * Flags: IR, Group: printing
+		 */
+		readonly omitControls?: Array<string> /* Array of String */;
+		/** 
+		 * (Read only) If true, generates HTML for export.
+		 * 
+		 * Some components, specifically DrawPane and FacetChart on IE8 and earlier, need to generate
+		 * different HTML for export versus in-browser print preview. When using RPCManager.exportContent
+		 * the printForExport property is set to true automatically. If not using RPCManager.exportContent(),
+		 * but the generated HTML will be sent for export, the PrintProperties passed to
+		 * Canvas.getPrintHTML must have printForExport:true.
+		 * Flags: IR, Group: printing
+		 */
+		readonly printForExport?: boolean /* Boolean */;
+	} // PrintProperties
+
+	export interface PrintPropertiesStatic {
+	} // PrintPropertiesStatic
+
+
+	/**
 	 * A header span appears as a second level of headers in a ListGrid, spanning one or more
 	 * ListGrid columns and their associated headers.
 	 * 
@@ -1251,6 +1778,17 @@ declare namespace Isc {
 
 	export interface HeaderSpanStatic {
 	} // HeaderSpanStatic
+
+
+	/**
+	 * An auto-generated subclass of TreeNode representing the group nodes
+	 * in a grouped ListGrid. 
+	 */
+	export interface GroupNode {
+	} // GroupNode
+
+	export interface GroupNodeStatic {
+	} // GroupNodeStatic
 
 
 	/**
@@ -1667,6 +2205,31 @@ declare namespace Isc {
 
 	export interface ListGridRecordStatic extends RecordStatic {
 	} // ListGridRecordStatic
+
+
+	/**
+	 * An object containing properties that is used in Gradient types 
+	 */
+	export interface ColorStop {
+		/** 
+		 * (Read only) eg #ff0000 or red or rgb(255,0,0)
+		 * Flags: IR
+		 */
+		readonly color?: string /* CSSColor */;
+		/** 
+		 * (Read only) The relative offset for the color.
+		 * Flags: IR
+		 */
+		readonly offset?: number /* float */;
+		/** 
+		 * (Read only) 0 is transparent, 1 is fully opaque
+		 * Flags: IR
+		 */
+		readonly opacity?: number /* float */;
+	} // ColorStop
+
+	export interface ColorStopStatic {
+	} // ColorStopStatic
 
 
 	/**
