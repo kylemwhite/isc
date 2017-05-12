@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-10
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-12
 
 Errors during generation
-Generated: 5/11/2017 4:22:58 PM by kwhite
+Generated: 5/12/2017 7:00:36 AM by kwhite
 
 Summary
 Total Types  : 229
@@ -890,7 +890,7 @@ Getter Methods with return type that does not match the attribute type: 15
 14. method:TabSet.getSelectedTab, attrType='number', return Type = 'Tab'
 15. method:ValuesManager.getMembers, attrType='Array of DynamicForm', return Type = 'array'
 
-Suspected optional parameters that are marked with optional='false': 19. Parameters listed here (may be more than one parameter per method)
+Methods with non-optional params with the word 'optional' in the description: 19. Parameters listed here (may be more than one parameter per method)
 1. classMethod:Time.setShortDisplayFormat, ParamType= TimeDisplayFormat | FormatString | function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
 2. method:Date.toNormalDate, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 3. classMethod:Messaging.subscribe, ParamType= String, ParamName=selector, ParamDesc=JMS selector used with Queues to filter the messages that arrive  to the channel (optional).
@@ -1236,10 +1236,10 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-05-10	229	5	309	67	3555	3	202	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	229	5	30	85	503	1	1	0.4477612	0.2750809	0.1414909	
+2017-05-12	229	5	309	67	3555	3	202	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	229	5	30	85	503	1	1	0.4477612	0.2750809	0.1414909	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-05-10
+Metrics for build SNAPSHOT_v11.1d_2017-05-12
 ===== Information =====
 (Informational only, not a problem)
 Types: 229

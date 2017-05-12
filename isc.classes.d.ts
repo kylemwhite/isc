@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/11/2017 4:22:38 PM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-10
+// Generated: 5/12/2017 7:00:21 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-12
 
 declare namespace Isc {
 
@@ -1392,6 +1392,13 @@ declare namespace Isc {
 		 * argument will always reflect the unstretched width requested by the previous call to
 		 * Canvas.adaptWidthBy. This behavior may be disabled by specifying the initial
 		 * width as a number, or leaving it unspecified.
+		 * 
+		 * Behavior is slightly different for overflow: "visible" members - in this case the
+		 * unadaptedWidth passed in will reflect the current visible width of the
+		 * member, rather than the last width requested by the previous call to
+		 * Canvas.adaptWidthBy or the specified width (on the first call). However, note that the
+		 * visible length will match your requested width unless the member is actually overflowed.
+		 * Stretch sizing is not supported for adaptive-width members with overflow: "visible".
 		 * 
 		 * Caution: you must either determine the current size of the canvas by maintaining your own
 		 * internal state, or use the unadaptedWidth parameter passed to 
@@ -3856,6 +3863,13 @@ declare namespace Isc {
 		 * argument will always reflect the unstretched width requested by the previous call to
 		 * Canvas.adaptWidthBy. This behavior may be disabled by specifying the initial
 		 * width as a number, or leaving it unspecified.
+		 * 
+		 * Behavior is slightly different for overflow: "visible" members - in this case the
+		 * unadaptedWidth passed in will reflect the current visible width of the
+		 * member, rather than the last width requested by the previous call to
+		 * Canvas.adaptWidthBy or the specified width (on the first call). However, note that the
+		 * visible length will match your requested width unless the member is actually overflowed.
+		 * Stretch sizing is not supported for adaptive-width members with overflow: "visible".
 		 * 
 		 * Caution: you must either determine the current size of the canvas by maintaining your own
 		 * internal state, or use the unadaptedWidth parameter passed to 
