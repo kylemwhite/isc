@@ -890,7 +890,7 @@ Getter Methods with return type that does not match the attribute type: 15
 14. method:TabSet.getSelectedTab, attrType='number', return Type = 'Tab'
 15. method:ValuesManager.getMembers, attrType='Array of DynamicForm', return Type = 'array'
 
-Methods with non-optional params with the word 'optional' in the description: 19. Parameters listed here (may be more than one parameter per method)
+Suspected optional parameters that are marked with optional='false': 19. Parameters listed here (may be more than one parameter per method)
 1. classMethod:Time.setShortDisplayFormat, ParamType= TimeDisplayFormat | FormatString | function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
 2. method:Date.toNormalDate, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 3. classMethod:Messaging.subscribe, ParamType= String, ParamName=selector, ParamDesc=JMS selector used with Queues to filter the messages that arrive  to the channel (optional).
