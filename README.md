@@ -3,6 +3,8 @@ Work in progress. See [Progress.md](./Progress.md)
 
 The goal is to provide type safety in a TypeScript web application that utilizes the Isomorphic SmartClient library and provide a development experience similar to writing Java in SmartGWT (the GWT version of SmartClient). Documentation is provided in comments in JSDoc format and will show up in intellisense.
 
+Note that with some editors (VS Code for example), having the TypeScript definitions reference works with JavaScript code as well. So, this can help you out even if you don't want to switch your application to TypeScript.
+
 ## To get started
 
 Copy the *.d.ts files into wherever you normally have typings. I use /scripts/typings/isc/.
@@ -177,7 +179,7 @@ So far, this has only been tested with Visual Studio 2015. If you're using VS Co
 |---|---|
 | 1. Finish defining all classes and objects| WIP
 | 2. Finish defining all methods for classes and objects| WIP
-| 3. Define the SmartClient interfaces (IList etc.) and apply them to the relevant classes. | Not started
+| 3. Define the SmartClient interfaces (IList etc.) and apply them to the relevant classes. | Interfaces defined, can't use implements in type definition file (?)
 | 4. Make ALL properties ~~without the W flag~~ readonly (writeable properties must always use the setter or setProperty())| Done
 | 5. If a property has a getter, then don't generate the property at all (i.e. force use of the getter) | Done
 | 6. For properties and methods marked with the 'A' flag, put the word Advanced in the description so it shows up in intellisense. | Done
