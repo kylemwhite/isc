@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-12 at 5/12/2017 2:28:56 PM by kwhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-13 at 5/13/2017 7:48:04 AM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -26,12 +26,12 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |11|OR specified as ' \| '|237|Since most ORs are defined this way, it is assumed to be the correct way.|
 |12|Types Generated|229||
 |13|Interfaces Generated|5||
-|14|Objects Generated|38||
-|15|Classes Generated|102||
-|16|Methods Generated|1,170||
+|14|Objects Generated|39||
+|15|Classes Generated|103||
+|16|Methods Generated|1,178||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
-|19|Percentage of Objects generated|57%||
+|19|Percentage of Objects generated|58%||
 |20|Percentage of Classes generated|33%||
 |21|Percentage of Methods generated|33%||
 
@@ -50,7 +50,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |6|OR specified as ' \|\| '|3|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 |7|OR specified as ', '|3|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 ||**Errors**||**May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented**|
-|1|Classes without inheritsFrom attribute|202|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
+|1|Classes without inheritsFrom attribute|158|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
 |2|String values without reference|130|These are possible values of types that refer to a classAttr that doesn't exist. For example DateItem.DAY_MONTH|
 |3|String types without baseType|83|Types that are really just strings should have their own type or have the baseType='string'.|
 |4|Setter Methods with parameter type that does not match the attribute type|83|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|

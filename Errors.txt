@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-12
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-13
 
 Errors during generation
-Generated: 5/12/2017 2:28:56 PM by kwhite
+Generated: 5/13/2017 7:48:04 AM by kwhite
 
 Summary
 Total Types  : 229
@@ -65,209 +65,165 @@ Methods with bad flags: 3 (methods should not have any flags except A?)
 3. class:Canvas.getChildTabPosition, Flags=child
 
 
-Classes without inheritsFrom attribute: 202 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake)
-1. AdvancedHiliteEditor
-2. AutoFitButton
-3. AutoTest
-4. BaseWidget
-5. BatchUploader
-6. BooleanItem
-7. Browser
-8. Callbacks
-9. CanvasEditProxy
-10. CanvasItem
-11. CellSelection
-12. CheckboxItemEditProxy
-13. Class
-14. ColorItem
-15. ColorPicker
-16. ColumnTree
-17. Comm
-18. CubeGrid
-19. DatabaseBrowser
-20. DataSource
-21. DataSourceField
-22. DataView
-23. Date
-24. DateChooser
-25. DateGrid
-26. DateItemEditProxy
-27. DateRangeDialog
-28. DateUtil
-29. DecisionGateway
-30. Deck
-31. DetailViewerEditProxy
-32. DMI
-33. DOMGrid
-34. DrawItemEditProxy
-35. DrawLabelEditProxy
-36. DrawPaneEditProxy
-37. EBay
-38. EditContext
-39. EditPane
-40. EditProxy
-41. EditTree
-42. EventCanvas
-43. EventHandler
-44. EventWindow
-45. Facet
-46. FacetChartEditProxy
-47. FacetValue
-48. FieldPicker
-49. FieldPickerField
-50. FieldPickerWindow
-51. FileLoader
-52. FilterClause
-53. FlowLayout
-54. FormEditProxy
-55. FormItem
-56. FormItemEditProxy
-57. GridEditProxy
-58. GridRenderer
-59. GroupingMessages
-60. HibernateBrowser
-61. HiddenPalette
-62. HiliteRule
-63. History
-64. HLayout
-65. Hover
-66. HStack
-67. HTMLPane
-68. IButton
-69. IconButton
-70. IconMenuButton
-71. IMenuButton
-72. ImgButton
-73. ImgEditProxy
-74. ImgSectionHeader
-75. ImgSplitbar
-76. ImgTab
-77. IndicatorCanvas
-78. IPickTreeItem
-79. isc
-80. ITreeMenuButton
-81. JSON
-82. JSONEncoder
-83. JSSyntaxHiliter
-84. LabelEditProxy
-85. LayoutEditProxy
-86. ListPalette
-87. ListPropertiesDialog
-88. ListPropertiesPane
-89. Log
-90. LoginDialog
-91. Mail
-92. MathFunction
-93. Menu
-94. MenuButton
-95. MenuEditProxy
-96. MenuPalette
-97. Messaging
-98. MiniDateRangeItem
-99. MockDataSource
-100. MultiFilePicker
-101. MultiGroupDialog
-102. MultiGroupPanel
-103. MultiSortDialog
-104. MultiSortPanel
-105. NativeScrollbar
-106. NavPanel
-107. NumberUtil
-108. Offline
-109. OperationBinding
-110. Operators
-111. Page
-112. PickListMenu
-113. PortalLayout
-114. Portlet
-115. PresetDateRangeItem
-116. PrintCanvas
-117. PrintWindow
-118. Process
-119. ProcessElement
-120. ProcessSequence
-121. Progressbar
-122. ProgressbarEditProxy
-123. PropertySheet
-124. RangeSlider
-125. RecordEditor
-126. RestDataSource
-127. ResultSet
-128. ResultTree
-129. RibbonBar
-130. RibbonGroup
-131. RichTextCanvas
-132. RichTextEditor
-133. RPCManager
-134. RPCRequest
-135. RPCResponse
-136. SchemaSet
-137. ScriptTask
-138. Scrollbar
-139. ScrollThumb
-140. SectionHeader
-141. SectionStack
-142. SectionStackEditProxy
-143. Selection
-144. SelectionOutline
-145. SelectionTreeMenu
-146. SelectItemEditProxy
-147. SelectOtherItem
-148. ServerObject
-149. ServiceTask
-150. SimpleTabButton
-151. SimpleTile
-152. SimpleType
-153. Snapbar
-154. Sound
-155. Splitbar
-156. SplitPaneEditProxy
-157. StatefulCanvasEditProxy
-158. StateTask
-159. StretchImgButton
-160. String
-161. SummaryBuilder
-162. SyntaxHiliter
-163. TabBar
-164. TabIndexManager
-165. TableView
-166. TabSetEditProxy
-167. Task
-168. TextAreaItemEditProxy
-169. TextExportSettings
-170. TextImportSettings
-171. TextItemEditProxy
-172. TextSettings
-173. TilePalette
-174. Time
-175. Timeline
-176. Timer
-177. ToolStrip
-178. ToolStripButton
-179. ToolStripGroup
-180. ToolStripMenuButton
-181. ToolStripResizer
-182. ToolStripSeparator
-183. TooLStripSeparatorEditProxy
-184. ToolStripSpacer
-185. Tree
-186. TreeGrid
-187. TreePalette
-188. UserTask
-189. Validator
-190. ValuesManager
-191. VisualBuilder
-192. VLayout
-193. VStack
-194. WebService
-195. WindowEditProxy
-196. WSDataSource
-197. WSRequest
-198. XJSONDataSource
-199. XMLSyntaxHiliter
-200. XMLTools
-201. XORGateway
-202. ZoneCanvas
+Classes without inheritsFrom attribute: 158 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake)
+1. AutoTest
+2. BaseWidget (manually checked, inheritsFrom Class)
+3. Browser (manually checked, does NOT inherit from Class. Should be object?)
+4. Callbacks (manually checked, does NOT inherit from Class. Should be object?)
+5. CanvasItem
+6. CellSelection
+7. Class
+8. Comm
+9. DataSource (manually checked, inheritsFrom Class)
+10. DataSourceField
+11. Date (manually checked, does NOT inherit from Class. Should be object?)
+12. DateUtil
+13. DMI
+14. EBay (manually checked, does NOT inherit from Class. Should be object?)
+15. EditContext
+16. EditProxy
+17. EventHandler
+18. Facet
+19. FacetValue (manually checked, does NOT inherit from Class. Should be object?)
+20. FieldPickerField
+21. FileLoader (manually checked, does NOT inherit from Class. Should be object?)
+22. FormItem
+23. GroupingMessages
+24. HiddenPalette
+25. History (manually checked, does NOT inherit from Class. Should be object?)
+26. Hover
+27. IMenuButton
+28. ImgButton
+29. ImgEditProxy
+30. ImgSectionHeader
+31. ImgSplitbar
+32. ImgTab
+33. IndicatorCanvas
+34. IPickTreeItem
+35. isc (manually checked, does NOT inherit from Class. Should be object?)
+36. ITreeMenuButton
+37. JSON
+38. JSONEncoder
+39. JSSyntaxHiliter
+40. LabelEditProxy
+41. LayoutEditProxy
+42. ListPalette
+43. ListPropertiesDialog
+44. ListPropertiesPane
+45. Log
+46. LoginDialog
+47. Mail
+48. MathFunction
+49. Menu
+50. MenuButton
+51. MenuEditProxy
+52. MenuPalette
+53. Messaging
+54. MiniDateRangeItem
+55. MockDataSource
+56. MultiFilePicker
+57. MultiGroupDialog
+58. MultiGroupPanel
+59. MultiSortDialog
+60. MultiSortPanel
+61. NativeScrollbar
+62. NavPanel
+63. NumberUtil
+64. Offline
+65. OperationBinding
+66. Operators
+67. Page
+68. PickListMenu
+69. PortalLayout
+70. Portlet
+71. PresetDateRangeItem
+72. PrintCanvas
+73. PrintWindow
+74. Process
+75. ProcessElement
+76. ProcessSequence
+77. Progressbar
+78. ProgressbarEditProxy
+79. PropertySheet
+80. RangeSlider
+81. RecordEditor
+82. RestDataSource
+83. ResultSet (manually checked, inheritsFrom Class)
+84. ResultTree
+85. RibbonBar
+86. RibbonGroup
+87. RichTextCanvas
+88. RichTextEditor
+89. RPCManager
+90. RPCRequest
+91. RPCResponse
+92. SchemaSet
+93. ScriptTask
+94. Scrollbar
+95. ScrollThumb
+96. SectionHeader
+97. SectionStack
+98. SectionStackEditProxy
+99. Selection
+100. SelectionOutline (manually checked, does NOT inherit from Class. Should be object?)
+101. SelectionTreeMenu
+102. SelectItemEditProxy
+103. SelectOtherItem
+104. ServerObject (manually checked, does NOT inherit from Class. Should be object?)
+105. ServiceTask
+106. SimpleTabButton
+107. SimpleTile
+108. SimpleType
+109. Snapbar
+110. Sound
+111. Splitbar
+112. SplitPaneEditProxy
+113. StatefulCanvasEditProxy
+114. StateTask
+115. StretchImgButton
+116. String (manually checked, does NOT inherit from Class. Should be object?)
+117. SummaryBuilder
+118. SyntaxHiliter
+119. TabBar
+120. TabIndexManager
+121. TableView
+122. TabSetEditProxy
+123. Task
+124. TextAreaItemEditProxy
+125. TextExportSettings
+126. TextImportSettings
+127. TextItemEditProxy
+128. TextSettings
+129. TilePalette
+130. Time (manually checked, does NOT inherit from Class. Should be object?)
+131. Timeline
+132. Timer
+133. ToolStrip
+134. ToolStripButton
+135. ToolStripGroup
+136. ToolStripMenuButton
+137. ToolStripResizer
+138. ToolStripSeparator
+139. TooLStripSeparatorEditProxy (manually checked, does NOT inherit from Class. Should be object?)
+140. ToolStripSpacer
+141. Tree
+142. TreeGrid
+143. TreePalette
+144. UserTask
+145. Validator
+146. ValuesManager
+147. VisualBuilder (manually checked, does NOT inherit from Class. Should be object?)
+148. VLayout
+149. VStack
+150. WebService
+151. WindowEditProxy
+152. WSDataSource
+153. WSRequest (manually checked, does NOT inherit from Class. Should be object?)
+154. XJSONDataSource
+155. XMLSyntaxHiliter
+156. XMLTools
+157. XORGateway
+158. ZoneCanvas
 
 
 Object attributes marked with W flag: 240 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
@@ -1069,10 +1025,10 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-05-12	229	5	309	67	3555	3	202	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	237	137	3	3	229	5	38	102	1170	1	1	0.5671642	0.3300971	0.3291139	
+2017-05-13	229	5	309	67	3555	3	158	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	237	137	3	3	229	5	39	103	1178	1	1	0.5820895	0.3333333	0.3313643	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-05-12
+Metrics for build SNAPSHOT_v11.1d_2017-05-13
 ===== Information =====
 (Informational only, not a problem)
 Types: 229
@@ -1088,12 +1044,12 @@ String values where reference is found: 0
 OR specified as ' \| ': 237
 Types Generated: 229
 Interfaces Generated: 5
-Objects Generated: 38
-Classes Generated: 102
-Methods Generated: 1,170
+Objects Generated: 39
+Classes Generated: 103
+Methods Generated: 1,178
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
-Percentage of Objects generated: 57 %
+Percentage of Objects generated: 58 %
 Percentage of Classes generated: 33 %
 Percentage of Methods generated: 33 %
 
@@ -1109,7 +1065,7 @@ OR specified as ', ': 3
 
 ===== Errors =====
 (May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented)
-Classes without inheritsFrom attribute: 202
+Classes without inheritsFrom attribute: 158
 Arrays defined as 'array of': 1
 Arrays defined as 'Array[] of': 10
 Arrays defined as 'array[] of': 0

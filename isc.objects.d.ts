@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/12/2017 2:28:24 PM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-12
+// Generated: 5/13/2017 7:47:35 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-13
 
 declare namespace Isc {
 
@@ -2305,6 +2305,45 @@ declare namespace Isc {
 
 	export interface CriterionStatic {
 	} // CriterionStatic
+
+
+	/**
+	 * An object literal with a particular set of properties used to configure the display of
+	 * and interaction with the columns of a TreeGrid.
+	 * TreeGrid is a subclass of ListGrid and as a result, for all fields except
+	 * the field containing the Tree itself (specified by
+	 * TreeGridField.treeField, all properties settable on
+	 * ListGridField apply to TreeGridField as well.
+	 * 
+	 * This class documents just those properties that are specific to TreeGridFields - see
+	 * ListGridField for the set of inherited properties. 
+	 */
+	export interface TreeGridField {
+		/** 
+		 * (Read only) Dictates whether the data in this field be exported. Explicitly set this
+		 * to false to prevent exporting. Has no effect if the underlying 
+		 * DataSourceField.canExport','dataSourceField is explicitly set to 
+		 * canExport: false.
+		 * Flags: IR
+		 */
+		readonly canExport?: boolean /* Boolean */;
+		/** 
+		 * The field containing treeField: true will display the Tree. If no
+		 * field specifies this property, if a field named after the Tree.titleProperty of
+		 * the Tree is present in TreeGrid.fields, that field will show the tree. Note that
+		 * when using a DataSource, you typically define the title field via
+		 * DataSource.titleField and the generated ResultTree automatically uses this
+		 * field.
+		 * 
+		 * If none of the above rules apply, the first field in TreeGrid.fields is assigned to
+		 * display the Tree.
+		 * Flags: IRW, Group: treeField
+		 */
+		readonly treeField?: boolean /* Boolean */;
+	} // TreeGridField
+
+	export interface TreeGridFieldStatic {
+	} // TreeGridFieldStatic
 
 
 	/**

@@ -7,8 +7,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/12/2017 2:28:56 PM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-12
+// Generated: 5/13/2017 7:48:04 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-13
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -512,6 +512,19 @@ declare namespace Isc {
 		DynamicForm: DynamicFormStatic<DynamicForm, DynamicFormProps>;
 
 		/** 
+		 * EditPane extends Canvas
+		 * A container that allows drag and drop instantiation of visual components from a
+		 * Palette, and direct manipulation of the position and size of those components.
+		 * 
+		 * Any drag onto an EditPane from a Palette will add an EditNode created from the dragged
+		 * PaletteNode.
+		 * 
+		 * EditPane automatically creates an EditContext and provides several APIs and
+		 * settings that are passthroughs to the underlying EditContext for convenience.
+		 */ 
+		EditPane: EditPaneStatic<EditPane, EditPaneProps>;
+
+		/** 
 		 * FacetChart extends DrawPane
 		 * HTML5-based charting engine, implementing all Chart.chartType','chartTypes of the
 		 * Chart interface.
@@ -758,6 +771,40 @@ declare namespace Isc {
 		FacetChart: FacetChartStatic<FacetChart, FacetChartProps>;
 
 		/** 
+		 * FieldPicker extends VLayout
+		 * FieldPicker provides a configuration dialog that displays, side-by-side, the available and
+		 * currently-displayed fields of a DataBoundComponent. It allows for easy customization 
+		 * of the order in which the fields of a DataBoundComponent are displayed, and of which
+		 * are visible. If so configured, it also allows for convenient launching of the HiliteEditor,
+		 * FormulaBuilder, and SummaryBuilder. A FieldPicker instance runs in its own window, 
+		 * a FieldPickerWindow
+		 */ 
+		FieldPicker: FieldPickerStatic<FieldPicker, FieldPickerProps>;
+
+		/** 
+		 * FieldPickerWindow extends Window
+		 * A dialog for picking fields to display from among the available fields.
+		 * 
+		 * This is typically useful in scenarios where there are many more fields than can reasonably
+		 * fit on screen. The application can start off displaying a few of the fields by default (such
+		 * as the most commonly-needed fields), and show a FieldPickerWindow to allow the user to
+		 * customize which fields to display as well as the order in which to display them.
+		 */ 
+		FieldPickerWindow: FieldPickerWindowStatic<FieldPickerWindow, FieldPickerWindowProps>;
+
+		/** 
+		 * FilterClause extends Layout
+		 * A horizontal, Layout-based widget that allows a user to input a single criterion based on 
+		 * one field and one operator.
+		 * 
+		 * Note that FilterClauses must be used in conjunction with a FilterBuilder. By default
+		 * the FilterBuilder will auto-generate its clauses based on specified criteria, but for advanced
+		 * usage a FilterClause may be instantiated directly and passed to a filterBuilder via 
+		 * FilterBuilder.addClause.
+		 */ 
+		FilterClause: FilterClauseStatic<FilterClause, FilterClauseProps>;
+
+		/** 
 		 * A UI component that can participate in a DynamicForm, allowing editing or display of one of
 		 * the DynamicForm.values','values tracked by the form.
 		 * 
@@ -772,6 +819,12 @@ declare namespace Isc {
 		FormItem: FormItemStatic<FormItem, FormItemProps>;
 
 		/** 
+		 * GridRenderer extends Canvas
+		 * A flexible, high-speed table that offers consistent cross-platform sizing, clipping, and events.
+		 */ 
+		GridRenderer: GridRendererStatic<GridRenderer, GridRendererProps>;
+
+		/** 
 		 * HiliteEditor extends VLayout
 		 * A widget for defining and editing a set of HiliteRule','hilite rules for use by 
 		 * DataBoundComponent','dataBoundComponents. Presents a list of available fields 
@@ -782,6 +835,20 @@ declare namespace Isc {
 		 * i18nMessages','i18n reasons.
 		 */ 
 		HiliteEditor: HiliteEditorStatic<HiliteEditor, HiliteEditorProps>;
+
+		/** 
+		 * HiliteRule extends HLayout
+		 * A widget for editing the criteria of a single DataBoundComponent hilite. 
+		 * The default implementation presents a series of FormItem','formItems
+		 * for selecting the various elements of a simple criterion and a foreground or background
+		 * color. To specify more complex criteria, specify both foreground and background colors or
+		 * to apply the hilite to multiple fields, you can create an 
+		 * AdvancedHiliteEditor','advanced hilite rule.
+		 * 
+		 * Important Note: this class should not be used directly - it is exposed purely for
+		 * i18nMessages','i18n reasons.
+		 */ 
+		HiliteRule: HiliteRuleStatic<HiliteRule, HiliteRuleProps>;
 
 		/** 
 		 * HLayout extends Layout
@@ -823,6 +890,15 @@ declare namespace Isc {
 		 * SectionStack, etc) that manages the sizes of its members.
 		 */ 
 		HTMLPane: HTMLPaneStatic<HTMLPane, HTMLPaneProps>;
+
+		/** 
+		 * IButton extends Button
+		 * The IButton widget class is a class that implements the same APIs as the 
+		 * Button class. Depending on the current skin, IButtons may be
+		 * on the StretchImgButton component, which renders via images, or may be based on the
+		 * Button component, which renders via CSS styles.
+		 */ 
+		IButton: IButtonStatic<IButton, IButtonProps>;
 
 		/** 
 		 * Img extends StatefulCanvas
