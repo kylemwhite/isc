@@ -9,7 +9,7 @@ Note that with some editors (VS Code for example), having the TypeScript definit
 
 Copy the *.d.ts files into wherever you normally have typings. I use /scripts/typings/isc/.
 
-In your TypeScript files that reference the SmartClient library, add the reference, something like the following:
+In your TypeScript (or JS) files that use the SmartClient library, add the reference, something like the following:
 
 ```typescript
 /// <reference path="../../scripts/typings/isc/isc.index.d.ts" />
@@ -75,10 +75,10 @@ If you screw up, the TypeScript compiler will let you know. Once the entire libr
 
 ## Structure
 ### Files
-There are currently 4 files: types.d.ts, classes.d.ts, objects.d.ts and index.d.ts. The library is broken up this way because it is so large and it seemed a good way to break things up. As more classes and methods are generated, it might need to be broken up even further to keep the file sizes manageable.
+There are currently 5 files: types.d.ts, classes.d.ts, objects.d.ts, interfaces.d.ts and index.d.ts. The library is broken up this way because it is so large and it seemed a good way to break things up. As more classes and methods are generated, it might need to be broken up even further to keep the file sizes manageable.
 
 ### Interfaces
-For each SmartClient class (classes inherit from Class, objects do not), there are three interfaces defined: *ClassName*, *ClassName*Static and *ClassName*Props.
+For each SmartClient class (classes inherit from Class (usually), objects do not), there are three interfaces defined: *ClassName*, *ClassName*Static and *ClassName*Props.
 
 * *ClassName*: This interface defines the properties and methods of an instance of the class (what SmartClient calls **Instance APIs**). Example: __Label__
 * *ClassName*Static: This interface defines the properties and methods of the static class (what SmartClient calls **Class APIs**). Example: __LabelStatic__ which is what __isc.Label__ is.
@@ -102,7 +102,7 @@ let myVar = (isc.Label as any).create(/* put whatever you want in here */);  // 
 ```
 These interfaces can be used when calling the static .create() methods so that properties may be passed in (as in the example above). The anonymous object passed into the create method is actually a type-checked __LabelProps__ object.
 
- For each SmartClient object (not class), there is only one interface defined, named after the object. Since objects do not inherit from Class and typically don't have static methods, there's no need for an ObjectStatic or ObjectProps interface. 
+ For each SmartClient object (not class), there is one interface defined for the instance, named after the object. If the object has class members, then the static version will also be generated. 
 
 ### Errors.txt file
 Along with the d.ts files, the generator creates a file named Errors.txt. This is intended to capture areas in the referenceDocs.xml file that could be improved to better facilitate code generation. Over time, I will add more tests and (hopefully) the referenceDocs.xml file will be improved so that we can get to a point where the code generator can be automated and not require any special rules.
@@ -119,7 +119,8 @@ If you want to use a SmartClient method that is not defined yet, you have a few 
 
 (MyLabel as any).setIcon("myIcon.png");  // setIcon is a real method, this will work.
 
-// UPDATE: setIcon is implemented now, but you get the idea
+// UPDATE: setIcon is implemented now so you don't really need to do this for 
+// setIcon, but you get the idea.
 
 ```
 2. Create your own d.ts file (it doesn't work in a regular .ts file) and manually add to the intefrace. It would look something like this:
@@ -128,7 +129,7 @@ If you want to use a SmartClient method that is not defined yet, you have a few 
  // MyIscExtensions.d.ts
  declare namespace Isc {
     export interface Label {
-        setIcon(icon: string): void;  // This is a real method that is not defined yet.
+        setIcon(icon: string): void;  
     }
  }
  ```
@@ -170,7 +171,7 @@ function MyFunc() {
 The SmartClient library is huge and it would be impractical and error-prone to hand-code a type definition library that defines every property and method on every class. Fortunately, Isomorphic uses an XML file ([referenceDocs.xml](http://www.smartclient.com/smartclient-latest/isomorphic/system/reference/referenceDocs.xml)) for their documentation which contains all the necessary information. This file is also used to generate the SmartGWT library. Similarly, I've used the same file to generate the TypeScript library files. The referenceDocs.xml file is not perfect which means that there are a lot of customizations required to get the proper code generated. Thus, I'm doing it in manageable sections. Simultaneously, Isomorphic is enhancing the file to aid in code generation so we should be able to get the complete library generated soon.
 
 ## Testing
-So far, this has only been tested with Visual Studio 2015. If you're using VS Code or anything else, please let me know if it works or if there are problems. Also, I have no units tests yet, my only test is that I copy the definitions into my own SmartClient project and make sure everything still compiles. If somebody wants to help with unit tests, I'm all ears.
+So far, this has only been tested with Visual Studio 2015 and VS Code. If you're using Eclipse, NetBeans, IntelliJ IDEA or anything else, please let me know if it works or if there are problems. Also, I have no units tests yet, my only test is that I copy the definitions into my own SmartClient project and make sure everything still compiles. If somebody wants to help with unit tests, I'm all ears.
 
 ## Todo
 
