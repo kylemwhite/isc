@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-14
 
 Errors during generation
-Generated: 5/15/2017 4:40:35 PM by KWhite
+Generated: 5/15/2017 5:07:43 PM by kwhite
 
 Summary
 Total Types  : 229
