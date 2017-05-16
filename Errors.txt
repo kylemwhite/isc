@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-14
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-15
 
 Errors during generation
-Generated: 5/15/2017 5:07:43 PM by kwhite
+Generated: 5/16/2017 8:02:54 AM by kwhite
 
 Summary
 Total Types  : 229
@@ -1025,10 +1025,10 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-05-14	229	5	309	67	3555	3	158	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	237	137	3	3	229	5	39	103	1178	1	1	0.5820895	0.3333333	0.3313643	
+2017-05-15	229	5	309	67	3555	3	158	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	237	137	3	3	229	5	39	103	1178	1	1	0.5820895	0.3333333	0.3313643	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-05-14
+Metrics for build SNAPSHOT_v11.1d_2017-05-15
 ===== Information =====
 (Informational only, not a problem)
 Types: 229
