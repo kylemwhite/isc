@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-17 at 5/17/2017 6:54:57 AM by KWhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-17 at 5/17/2017 11:42:16 AM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -26,14 +26,14 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |11|OR specified as ' \| '|237|Since most ORs are defined this way, it is assumed to be the correct way.|
 |12|Types Generated|229||
 |13|Interfaces Generated|5||
-|14|Objects Generated|39||
-|15|Classes Generated|103||
-|16|Methods Generated|1,178||
+|14|Objects Generated|48||
+|15|Classes Generated|108||
+|16|Methods Generated|2,370||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
-|19|Percentage of Objects generated|58%||
-|20|Percentage of Classes generated|33%||
-|21|Percentage of Methods generated|33%||
+|19|Percentage of Objects generated|72%||
+|20|Percentage of Classes generated|35%||
+|21|Percentage of Methods generated|67%||
 
 
 ### Issues with referenceDocs.xml file

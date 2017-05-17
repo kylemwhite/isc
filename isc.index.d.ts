@@ -7,7 +7,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/17/2017 6:54:57 AM by KWhite
+// Generated: 5/17/2017 11:42:16 AM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-17
 
 /**
@@ -136,6 +136,96 @@ declare namespace Isc {
 		 * with a lower case letter.
 		 */ 
 		Class: ClassStatic<Class, ClassProps>;
+
+		/** 
+		 * CubeGrid extends ListGrid
+		 * The CubeGrid is an interactive grid component that presents very large, multi-dimensional
+		 * data sets (also known as data cubes) for reporting or analytic applications.
+		 * 
+		 * CubeGrids are often called crosstabs, for their cross-tabular display of data dimensions in
+		 * stacked/nested rows and columns, or pivot tables, for their ability to "pivot" dimensions
+		 * between rows and columns to view a data cube from different perspectives. They are typically
+		 * used in the querying and reporting front-ends of data warehousing, decision support, OLAP,
+		 * and business intelligence systems.
+		 * 
+		 * For example, CubeGrids can be connected to Pentaho Mondrian, Jasper Reports, Microsoft
+		 * Analysis Services and any other OLAP technology that supports the XMLA standard - the
+		 * Isomorphic public wiki has 
+		 * <a href='http://wiki.smartclient.com/pages/viewpage.action?pageId=1441839' target='_blank'>examples</a>.
+		 * of such integration.
+		 * 
+		 * NOTE: you must load the Analytics 
+		 * loadingOptionalModules','Optional Module before you can use CubeGrid.
+		 * 
+		 * Multi-Dimensional Data Terminology
+		 * 
+		 * The CubeGrid refers to the dimensions of a data cube as facets, to the possible values in
+		 * each facet as facet values, and to the values within the data cube as data values or cell
+		 * values. Equivalent terms that are commonly used in data warehousing or business intelligence
+		 * systems include:
+		 * facet: dimension, attribute, feature
+		 * facet value: dimension member, attribute value, feature value
+		 * cell value: data value, metric value, measure
+		 * 
+		 * Visual Structure
+		 * 
+		 * Like the ListGrid and TreeGrid components, the CubeGrid displays data values in a tabular
+		 * "body" with adjacent "headers". While the ListGrid and TreeGrid display rows of records
+		 * with field values, the CubeGrid displays a body of individual cell values, each associated
+		 * with a combination of facet values. The facet values for a cell are displayed in the column
+		 * headers above the cell and row headers to the left of the cell. CubeGrids can display an
+		 * arbitrary number of facets, by stacking multiple levels of row and/or column headers.
+		 * 
+		 * Except for the innermost column facet, each facet in a CubeGrid has a facet label adjacent
+		 * to its row or column headers. The facet labels serve two main purposes: they display the
+		 * titles of the facets, and they provide drag-and-drop reordering or pivoting of facets within
+		 * the CubeGrid. The row facet labels also provide interactive selection, resizing, and other
+		 * operations on the columns of row facet values.
+		 * 
+		 * The innermost column headers provide special behaviors and controls for manipulating the
+		 * columns of data in a CubeGrid. End users may select, resize, reorder, minimize, maximize, or
+		 * auto-fit the columns of data via mouse interactions with these headers. Customizable
+		 * indicators and controls may be included at the top of each innermost column header.
+		 * 
+		 * If a CubeGrid is not large enough to display all of its cell values, horizontal and/or
+		 * vertical scrollbars will appear below and to the right of the body. The body of the CubeGrid
+		 * may be scrolled on either axis. The headers are "frozen" from scrolling on one axis - row
+		 * headers only scroll vertically, while column headers only scroll horizontally - so the facet
+		 * values for the visible cells are always displayed.
+		 * 
+		 * Data Loading
+		 * 
+		 * Data can be provided to the Cube via CubeGrid.data as an Array of
+		 * CellRecord','CellRecords, each representing the data for one cell.
+		 * 
+		 * For large datasets, CubeGrid.dataSource','provide a DataSource with one field per
+		 * facetId, and the CubeGrid will load data on demand to fill the visible area, including
+		 * lazily loading data for expanding/collapsing tree facets and when facetValues are made
+		 * visible programmatically or via menus.
+		 * 
+		 * Picking Facets
+		 * 
+		 * By "facet" we mean an aspect of the data which is orthogonal to other aspects of the data,
+		 * that is, combining values from any two "facets" should make sense.
+		 * 
+		 * For example, in sales data, two facets might be "quarter" and "region" - it makes sense to
+		 * combine any quarter and region, although for some combinations, there may not be data
+		 * available.
+		 * 
+		 * An example of two aspects that would not be independent facets are "state" and "city"
+		 * - it's senseless to combine arbitrary states with arbitrary cities - most combinations are
+		 * invalid. Consider instead a Facet.isTree','tree facet that combines "city" and "state"
+		 * values. 
+		 * 
+		 * Note that if "city" and "state" are represented as facets, they may look correct if they are
+		 * both on the same axis of the grid and
+		 * CubeGrid.hideEmptyFacetValues','hideEmptyFacetValues is used to trim nonsense
+		 * combinations, but if the data is CubeGrid.canMoveFacets','pivoted such that "state" and
+		 * "city" are on opposing axes, there will be a roughly diagonal "stripe" of data for
+		 * combinations of "state" and "city" that make sense, and all other space will be blank. This
+		 * is a strong indication that two facets should be represented as a single tree facet instead.
+		 */ 
+		CubeGrid: CubeGridStatic<CubeGrid, CubeGridProps>;
 
 		/** 
 		 * DataSource extends Class
@@ -1138,6 +1228,22 @@ declare namespace Isc {
 		PasswordItem: PasswordItemStatic<PasswordItem, PasswordItemProps>;
 
 		/** 
+		 * PortalLayout extends Layout
+		 * A PortalLayout is a special subclass of Layout designed to display Portlet windows.
+		 * A PortalLayout displays Portlets in columns and supports drag-drop interaction for moving 
+		 * Portlets around within the PortalLayout. Portlets may be drag-reordered within columns, dragged
+		 * into other columns, or dragged next to other Portlets to sit next to them horizontally
+		 * within a column.
+		 */ 
+		PortalLayout: PortalLayoutStatic<PortalLayout, PortalLayoutProps>;
+
+		/** 
+		 * Portlet extends Window
+		 * Custom subclass of Window configured to be embedded within a PortalLayout.
+		 */ 
+		Portlet: PortletStatic<Portlet, PortletProps>;
+
+		/** 
 		 * PrintCanvas extends Canvas
 		 * PrintCanvas is a subclass of canvas which renders printable content HTML and 
 		 * provides APIs for printing this content as a separate document.
@@ -2023,6 +2129,12 @@ declare namespace Isc {
 		 * required in a search.
 		 */ 
 		SearchForm: SearchFormStatic<SearchForm, SearchFormProps>;
+
+		/** 
+		 * SectionHeader extends Label
+		 * Simple SectionHeader class based on a Label with an icon, skinnable via CSS.
+		 */ 
+		SectionHeader: SectionHeaderStatic<SectionHeader, SectionHeaderProps>;
 
 		/** 
 		 * SectionStack extends VLayout

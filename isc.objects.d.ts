@@ -5,7 +5,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/17/2017 6:54:33 AM by KWhite
+// Generated: 5/17/2017 11:41:14 AM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-17
 
 declare namespace Isc {
@@ -70,6 +70,35 @@ declare namespace Isc {
 
 	export interface AnimateShowEffectStatic {
 	} // AnimateShowEffectStatic
+
+
+	/**
+	 * Settings to control EditContext serialization. 
+	 */
+	export interface SerializationSettings {
+		/** 
+		 * (Read only) Overrides the default indention setting during serialization. XML defaults
+		 * to indented and JSON defaults to non-indented.
+		 * Flags: IR
+		 */
+		readonly indent?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Overrides the default component output setting during serialization. By default
+		 * Canvas and DrawItem components are serialized individually and referenced by their
+		 * containers.
+		 * Flags: IR
+		 */
+		readonly outputComponentsIndividually?: boolean /* Boolean */;
+		/** 
+		 * (Read only) When true specify DataSources in full rather than assuming they can be
+		 * downloaded from the server.
+		 * Flags: IR
+		 */
+		readonly serverless?: boolean /* Boolean */;
+	} // SerializationSettings
+
+	export interface SerializationSettingsStatic {
+	} // SerializationSettingsStatic
 
 
 	/**
@@ -884,6 +913,175 @@ declare namespace Isc {
 		/* Instance Method Overrides */
 
 		/**  
+		 *  Return the text string to display in MetricSettings.gradationLabelProperties','gradation labels
+		 * given the raw value for the metric to show on the value axis. This formatter will only
+		 * be called if the axis has gradation labels, meaning labels drawn at regular intervals not
+		 * associated with any particular facet value.
+		 * 
+		 * Note that the rendering of values in hovers or via MetricSettings.showDataValues is handled by
+		 * MetricSettings.formatDataValue.
+		 * 
+		 * @param {any} value - raw value of the metric
+		 * @return {string} the text to display.
+		 */
+		formatAxisValue?(value:any): string /* String */; 
+
+		/**  
+		 *  Return the text string to display in MetricSettings.showValueOnHover','hovers or via MetricSettings.showDataValues
+		 * given the raw value for the metric displayed on the value axis.
+		 * 
+		 * Note that the rendering of values for gradation labels is handled by
+		 * MetricSettings.formatAxisValue.
+		 * 
+		 * @param {any} value - raw value of the metric
+		 * @return {string} the text to display.
+		 */
+		formatDataValue?(value:any): string /* String */; 
+
+		/**  
+		 *  Get a color from the MetricSettings.dataColors Array.
+		 * 
+		 * 
+		 * Override to provide a dynamic color generation scheme - must return a color in the format of
+		 * of a leading hash (#) plus 6 hexadecimal digits as specified for MetricSettings.dataColors.
+		 * 
+		 * 
+		 * 
+		 * @param {number} index - index of the legend facet value to be colored
+		 * @param {string} facetValueId - id of the legend facet value to be colored
+		 * @param {string} purpose - purpose for the requested color - such as "legend", "line", "area", "points", etc.
+		 * @return {string} 
+		 */
+		getDataColor?(index:number /* Number */, facetValueId:string | number | Date /* String | Number | Date */, purpose:string /* String */): string /* CSSColor */; 
+
+		/**  
+		 *  Get a gradient from the MetricSettings.dataGradients Array.
+		 * 
+		 * Override to provide a dynamic gradient generation scheme.
+		 * 
+		 * 
+		 * @param {number} index - index of the legend facet value to be colored
+		 * @param {string} facetValueId - id of the legend facet value to be colored
+		 * @param {string} purpose - purpose for the requested gradient - such as "legend", "line", "area", "points", etc.
+		 * @return {string} the gradient identifier
+		 */
+		getDataGradient?(index:number /* Number */, facetValueId:string | number | Date /* String | Number | Date */, purpose:string /* String */): string /* String */; 
+
+		/**  
+		 *  Specifies the color to use for data lines in the chart. No default implementation. If not
+		 * defined or null is returned, the Framework will default to value of MetricSettings.getDataColor.
+		 * 
+		 * 
+		 * Note that this method is simply an override point, since it has no default implementation -
+		 * must return a color in the format of of a leading hash (#) plus 6 hexadecimal digits as
+		 * specified for MetricSettings.dataColors.
+		 * 
+		 * 
+		 * 
+		 * @param {number} index - index of the legend facet value to be colored
+		 * @param {string} facetValueId - id of the legend facet value to be colored
+		 * @param {string} purpose - purpose for the requested color - such as "legend", "line", "area", "points", etc.
+		 * @return {string} color to use for data lines or null to default to                     ${isc.DocUtils.linkForRef('method:MetricSettings.getDataColor')}
+		 */
+		getDataLineColor?(index:number /* Number */, facetValueId:string | number | Date /* String | Number | Date */, purpose:string /* String */): string /* CSSColor */; 
+
+		/**  
+		 *  Specifies the width to use for data lines in the chart. No default implementation. If not
+		 * defined or null is returned, the line width will be set by the appropriate chart properties,
+		 * such as FacetChart.dataLineProperties, FacetChart.barProperties, or FacetChart.bubbleProperties.
+		 * 
+		 * 
+		 * Note that this method is simply an override point, since it has no default implementation.
+		 * 
+		 * 
+		 * 
+		 * @param {number} index - index of the legend facet value to target
+		 * @param {string} facetValueId - id of the legend facet value to target
+		 * @param {string} purpose - purpose for the requested width - such as "legend", "line", "area", "points", etc.
+		 * @return {number} width to use for data lines or null to use ${isc.DocUtils.linkForRef('type:ChartType')} default
+		 */
+		getDataLineWidth?(index:number /* Number */, facetValueId:string | number | Date /* String | Number | Date */, purpose:string /* String */): number /* int */; 
+
+		/**  
+		 *  Return an array of the gradation values used in the current chart. Pass these values
+		 * to MetricSettings.getXCoord / MetricSettings.getYCoord (depending on the orientation of the chart)
+		 * to discover the coordinates where gradations are drawn.
+		 * 
+		 * This is only allowed to be called when FacetChart.chartDrawn fires.
+		 * 
+		 * 
+		 * @return {Array<number>} an array of gradation values used in the current chart.
+		 */
+		getGradations?(): Array<number> /* Array of float */; 
+
+		/**  
+		 *  When MetricSettings.showDataPoints is true and the mouse hovers over a point, this method is called
+		 * and may return HTML to show in a hover.
+		 * 
+		 * 
+		 * @param {number} value - the value at the point
+		 * @param {any} record - the record at the point
+		 * @param {string} metricId - the ID of the metric at the point
+		 * @return {string} String of HTML to show in a hover
+		 */
+		getPointHoverHTML?(value:number /* float */, record:any /* Record */, metricId:string /* String */): string /* String */; 
+
+		/**  
+		 *  Returns the X coordinate where the passed data value either was or would be drawn.
+		 * For example, this would be the X coordinate where a bar would end in a bar
+		 * chart.
+		 * 
+		 * This is only allowed to be called after FacetChart.chartDrawn fires.
+		 * 
+		 * If the FacetChart.chartType','chartType is
+		 * "Bar", "Bubble", or "Scatter"
+		 * 
+		 * then the value argument should be a number. For other rectangular charts,
+		 * this method expects a FacetValueMap that uniquely identifies the data cell whose
+		 * X-axis coordinate is to be retrieved.
+		 * 
+		 * Note that when FacetChart.canZoom','canZoom is enabled, this API is valid only for
+		 * data values between FacetChart.zoomStartValue','zoomStartValue and
+		 * FacetChart.zoomEndValue','zoomEndValue.
+		 * 
+		 * 
+		 * @param {number} value - the value to be drawn.
+		 * @return {number} the X coordinate where the passed data value would be drawn; or null if the passed <code>FacetValueMap</code> does not identify a currently-drawn data cell.
+		 */
+		getXCoord?(value:number | FacetValueMap /* float | FacetValueMap */): number /* Float */; 
+
+		/**  
+		 *  Returns the Y coordinate where the passed data value either was or would be drawn.
+		 * For example, this would be the Y coordinate that a line would pass through on
+		 * a line chart, or the top of a column on a column chart.
+		 * 
+		 * This is only allowed to be called after FacetChart.chartDrawn fires.
+		 * 
+		 * If the FacetChart.chartType','chartType is
+		 * "Area", "Bubble", "Column", "Histogram", "Line", or "Scatter"
+		 * 
+		 * then the value argument should be a number. For
+		 * "Bar"
+		 * charts this method expects a FacetValueMap that uniquely identifies the data cell
+		 * whose Y-axis coordinate is to be retrieved.
+		 * 
+		 * 
+		 * @param {number} value - the value to be drawn.
+		 * @return {number} the Y coordinate where the passed data value would be drawn.
+		 */
+		getYCoord?(value:number /* float */): number /* float */; 
+
+		/**  
+		 *  When MetricSettings.showDataPoints is true, fires when a point is clicked on.
+		 * 
+		 * 
+		 * @param {number} value - the value at the point
+		 * @param {any} record - the record at the point
+		 * @param {string} metricId - the ID of the metric at the point
+		 */
+		pointClick?(value:number /* float */, record:any /* Record */, metricId:string /* String */): void; 
+
+		/**  
 		 *  Method to change the current ChartType','chartType.
 		 * Will redraw the chart if drawn. 
 		 * Will use default settings for the new chart type for MetricSettings.stacked','stacked
@@ -1041,6 +1239,33 @@ declare namespace Isc {
 
 
 	/**
+	 * Represents the position of a Portlet within a PortalLayout, indicating the
+	 * column, row, and position within the row. 
+	 */
+	export interface PortalPosition {
+		/** 
+		 * (Read only) The column number occupied by a Portlet within a PortalLayout.
+		 * Flags: IR
+		 */
+		readonly colNum?: number /* int */;
+		/** 
+		 * (Read only) The position occupied by a Portlet within a PortalLayout row
+		 * (generally 0, unless there is more than one Portlet in the row).
+		 * Flags: IR
+		 */
+		readonly position?: number /* int */;
+		/** 
+		 * (Read only) The row number occupied by a Portlet within a PortalLayout column.
+		 * Flags: IR
+		 */
+		readonly rowNum?: number /* int */;
+	} // PortalPosition
+
+	export interface PortalPositionStatic {
+	} // PortalPositionStatic
+
+
+	/**
 	 * A Record is an ordinary JavaScript Object with properties that are treated as data to
 	 * be displayed and edited by a DataBoundComponent. 
 	 * 
@@ -1112,6 +1337,21 @@ declare namespace Isc {
 
 
 	/**
+	 * Flags for XML serialization 
+	 */
+	export interface SerializationContext {
+		/** 
+		 * (Read only) Enables flat serialization mode, as described for DSRequest.useFlatFields.
+		 * Flags: IR
+		 */
+		readonly useFlatFields?: boolean;
+	} // SerializationContext
+
+	export interface SerializationContextStatic {
+	} // SerializationContextStatic
+
+
+	/**
 	 * An object representing a component that is currently being edited within an
 	 * EditContext.
 	 * 
@@ -1168,6 +1408,69 @@ declare namespace Isc {
 
 	export interface EditNodeStatic extends PaletteNodeStatic {
 	} // EditNodeStatic
+
+
+	/**
+	 * Returns information about how a data value is rendered in a chart. 
+	 */
+	export interface DrawnValue {
+		/** 
+		 * (Read only) For bar and column charts, thickness of the bar representing this data value.
+		 * Flags: IR
+		 */
+		readonly barThickness?: number /* int */;
+		/** 
+		 * (Read only) For pie mode only, start angle of the segment for the data value.
+		 * Flags: IR
+		 */
+		readonly endAngle?: number /* int */;
+		/** 
+		 * (Read only) FacetValues for the data value.
+		 * Flags: IR
+		 */
+		readonly facetValues?: FacetValueMap;
+		/** 
+		 * (Read only) For pie mode only, the radius of the segment for the data value.
+		 * Flags: IR
+		 */
+		readonly radius?: number /* Double */;
+		/** 
+		 * (Read only) The data record of the data point from which this drawnValue was created.
+		 * 
+		 * Note that a chart with an Facet.inlinedValues','inlined facet or a
+		 * FacetChart.extraAxisMetrics','multi-axis chart may define multiple data points in
+		 * the same record, each of which will correspond to a different drawnValue.
+		 * The way to uniquely identify the data value of this particular drawnValue
+		 * is to use the DrawnValue.facetValues.
+		 * Flags: IR
+		 */
+		readonly record?: CellRecord;
+		/** 
+		 * (Read only) For pie mode only, start angle of the segment for the data value.
+		 * Flags: IR
+		 */
+		readonly startAngle?: number /* int */;
+		/** 
+		 * (Read only) Data value this drawnValue represents.
+		 * Flags: IR
+		 */
+		readonly value?: number /* float */;
+		/** 
+		 * (Read only) X coordinate where the data value is rendered. In pie mode, returns the X coordinate of the
+		 * center of the pie where the data value appears.
+		 * Flags: IR
+		 */
+		readonly x?: number /* int */;
+		/** 
+		 * (Read only) Y coordinate where the data value is rendered. In pie mode, returns the Y coordinate of the
+		 * center of the pie where the data value appears.
+		 * Flags: IR
+		 */
+		readonly y?: number /* int */;
+	} // DrawnValue
+
+	export interface DrawnValueStatic {
+	} // DrawnValueStatic
 
 
 	/**
@@ -1373,6 +1676,57 @@ declare namespace Isc {
 
 	export interface SectionStackSectionStatic {
 	} // SectionStackSectionStatic
+
+
+	/**
+	 * An object containing details for mouse events occurring over a FormItem. 
+	 */
+	export interface FormItemEventInfo {
+		/** 
+		 * (Read only) If this event occurred over a formItemIcon this attribute contains the 
+		 * FormItemIcon.name for the icon.
+		 * Flags: IR
+		 */
+		readonly icon?: string /* String */;
+		/** 
+		 * (Read only) Item over which the event occurred.
+		 * Flags: R
+		 */
+		readonly item?: FormItem;
+		/** 
+		 * (Read only) True if the event occurred over the item's data or input element. Note that it can be bad 
+		 * practice to implement custom context menus when overElement is true, since this will
+		 * replace browser-default menus that users might expect.
+		 * Flags: R
+		 */
+		readonly overElement?: boolean /* Boolean */;
+		/** 
+		 * (Read only) True if the event occurred over the form's 
+		 * DynamicForm.errorItemProperties','single error item.
+		 * Flags: R
+		 */
+		readonly overInlineError?: boolean /* Boolean */;
+		/** 
+		 * (Read only) True if the event occurred over the main body of the item (for example the text-box), rather
+		 * than over the title or within the form item's cell in the DynamicForm but outside the
+		 * text box area.
+		 * Flags: R
+		 */
+		readonly overItem?: boolean /* Boolean */;
+		/** 
+		 * (Read only) True if the event occurred within the item's FormItem.textBoxStyle','textBox.
+		 * Flags: R
+		 */
+		readonly overTextBox?: boolean /* Boolean */;
+		/** 
+		 * (Read only) True if the event occurred over the item's title.
+		 * Flags: R
+		 */
+		readonly overTitle?: boolean /* Boolean */;
+	} // FormItemEventInfo
+
+	export interface FormItemEventInfoStatic {
+	} // FormItemEventInfoStatic
 
 
 	/**
@@ -1588,6 +1942,12 @@ declare namespace Isc {
 		/* Instance Method Overrides */
 
 		/**  
+		 *  Action to fire when this menu is activated.
+		 * 
+		 */
+		action?(): void; 
+
+		/**  
 		 *  Contains the condition that will check or uncheck the current menuItem. The handler must be specified
 		 * as a function or string of script. Return false to uncheck the menuItem or true to check it
 		 * 
@@ -1616,6 +1976,54 @@ declare namespace Isc {
 		 * @param {number} colNum - Index of the column the user clicked. May be null if the user activated the menu via a keyboard event.
 		 */
 		click?(target:Canvas, item:MenuItem, menu:Menu, colNum?:number): void; 
+
+		/**  
+		 *  Contains the condition that will change the current items' icon when met. The handler must be specified
+		 * as a function or string of script.
+		 * 
+		 * If you don't need to set this state dynamically, use MenuItem.icon instead.
+		 * 
+		 * May be defined as a stringMethods','stringMethod.
+		 * 
+		 * 
+		 * @param {Canvas} target - Menu.target','target attribute for the top level menu.
+		 * @param {Menu} menu - Menu','menu contains the reference to the menu that contains the current item
+		 * @param {MenuItem} item - contains the reference to the current item
+		 * @return {string} the url of this menuItems icon
+		 */
+		dynamicIcon?(target:Canvas, menu:Menu, item:MenuItem): string /* SCImgURL */; 
+
+		/**  
+		 *  Contains the condition that will change the current items' title when met. The handler must be specified
+		 * as a function or string of script.
+		 * 
+		 * If you don't need to set this state dynamically, use MenuItem.title instead.
+		 * 
+		 * May be defined as a stringMethods','stringMethod.
+		 * 
+		 * 
+		 * @param {Canvas} target - Menu.target','target attribute for the top level menu.
+		 * @param {Menu} menu - Menu','menu contains the reference to the menu that contains the current item
+		 * @param {MenuItem} item - contains the reference to the current item
+		 * @return {string} the title of this menuItem
+		 */
+		dynamicTitle?(target:Canvas, menu:Menu, item:MenuItem): string /* String */; 
+
+		/**  
+		 *  Contains the condition that will enable or disable the current menuItem. The handler must be specified
+		 * as a function or string of script. Return false to disable the menuItem or true to enable it
+		 * 
+		 * If you don't need to set this state dynamically, use MenuItem.enabled instead.
+		 * 
+		 * May be defined as a stringMethods','stringMethod.
+		 * 
+		 * 
+		 * @param {Canvas} target - Menu.target','target attribute for the top level menu.
+		 * @param {Menu} menu - Menu','menu contains the reference to the menu that contains the current item
+		 * @param {MenuItem} item - contains the reference to the current item
+		 * @return {boolean} Return true to show a checkmark by this menu item
+		 */
+		enableIf?(target:Canvas, menu:Menu, item:MenuItem): boolean; 
 
 	} // MenuItem
 
@@ -1789,6 +2197,29 @@ declare namespace Isc {
 
 	export interface GroupNodeStatic {
 	} // GroupNodeStatic
+
+
+	/**
+	 * 
+	 * A JavaScript Object where each property name is a facetId and each property value is a
+	 * facetValueId for that facet.
+	 * 
+	 * 
+	 * 
+	 * The facetId &rarr; facetValueId mappings in a FacetValueMap describe a specific slice of the
+	 * dataset. If mappings are included for all facets, a FacetValueMap describes a unique
+	 * cell. If some facets are omitted, it describes a row, column, or set of rectangular
+	 * areas, or equivalently, a particular row or column header (if all facetIds in the map are
+	 * displayed on the same axis)
+	 * 
+	 * FacetValueMaps are used in various contexts to describe headers, datasets to be loaded,
+	 * screen regions, etc. 
+	 */
+	export interface FacetValueMap {
+	} // FacetValueMap
+
+	export interface FacetValueMapStatic {
+	} // FacetValueMapStatic
 
 
 	/**
@@ -4074,6 +4505,345 @@ declare namespace Isc {
 		/* Instance Method Overrides */
 
 		/**  
+		 *  Callback fired when field changes value as the result of a cell edit. Fired only on
+		 * successful save of edit, when the new value doesn't match the value before editing.
+		 * 
+		 * Same signature as ListGrid.cellChanged, but defined on a per-field
+		 * basis.
+		 * 
+		 * 
+		 * @param {ListGridRecord} record - record for the cell being changed
+		 * @param {any} newValue - new value for the cell
+		 * @param {any} oldValue - old value for the cell
+		 * @param {number} rowNum - row number for the cell
+		 * @param {number} colNum - column number of the cell
+		 * @param {ListGrid} grid - grid where cell was changed.
+		 */
+		cellChanged?(record:ListGridRecord, newValue:any, oldValue:any, rowNum:number, colNum:number, grid:ListGrid): void; 
+
+		/**  
+		 *  If this field is editable, any FormItem.change','change handler specified
+		 * on the ListGridField will be passed onto the editors for this field.
+		 * 
+		 * Note that if ListGridField.canToggle is true, the user may change the value of
+		 * a boolean field without going into edit mode by single clicking on the field. In this
+		 * case the ListGridField.change and ListGridField.changed handlers will
+		 * fire but the form and item parameters will be null.
+		 * 
+		 * 
+		 * @param {DynamicForm} form - the managing DynamicForm instance
+		 * @param {FormItem} item - the editor (form item) itself (also available as "this"). Note that in addition to the standard FormItem APIs available
+		 * on the editor, it also has:
+		 * - a pointer back to the containing listGrid
+		 * [item.grid]
+		 * - the colNum being edited [item.colNum]
+		 * - the rowNum being edited [item.rowNum]
+		 * @param {any} value - The new value of the form item
+		 * @param {any} oldValue - The previous value of the form item
+		 * @return {boolean} The change may be cancelled by returning false
+		 */
+		change?(form:DynamicForm, item:FormItem, value:any, oldValue:any): boolean /* Boolean */; 
+
+		/**  
+		 *  If this field is editable, any FormItem.changed','changed handler specified
+		 * on the ListGridField will be passed onto the editors for this field.
+		 * Note that if ListGridField.canToggle is true, the user may change the value of
+		 * a boolean field without going into edit mode by single clicking on the field. In this
+		 * case the ListGridField.change and ListGridField.changed handlers will
+		 * fire but the form and item parameters will be null.
+		 * 
+		 * 
+		 * @param {DynamicForm} form - the managing DynamicForm instance
+		 * @param {FormItem} item - the editor (form item) itself (also available as "this"). Note that in addition to the standard FormItem APIs available
+		 * on the editor, it also has:
+		 * - a pointer back to the containing listGrid
+		 * [item.grid]
+		 * - the colNum being edited [item.colNum]
+		 * - the rowNum being edited [item.rowNum]
+		 * @param {any} value - The current value (after the change).
+		 */
+		changed?(form:DynamicForm, item:FormItem, value:any): void; 
+
+		/**  
+		 *  If this field ListGridField.canEdit','can be edited, this property can be used to
+		 * set a dynamic default value which will show up in editors for this field.
+		 * Will be applied to the editor for the field as FormItem.defaultDynamicValue
+		 * 
+		 * 
+		 * @param {FormItem} item - The editor for the cell itself (also available as "this"). Note that in addition to the standard FormItem APIs available
+		 * on the editor, it also has:
+		 * - a pointer back to the containing listGrid
+		 * [item.grid]
+		 * - the colNum being edited [item.colNum]
+		 * - the rowNum being edited [item.rowNum]
+		 * @param {DynamicForm} form - the managing DynamicForm instance
+		 * @param {any} values - the current set of values for the form as a whole
+		 */
+		defaultDynamicValue?(item:FormItem, form:DynamicForm, values:any /* Object */): void; 
+
+		/**  
+		 * (Advanced)  Callback fired when the user first starts editing a cell.
+		 * 
+		 * This callback is typically used to establish dynamic default values via
+		 * ListGrid.setEditValue or ListGrid.setEditValues.
+		 * 
+		 * 
+		 * @param {ListGridRecord} record - record for the cell being edited. Will be null for a new, unsaved record.
+		 * @param {any} value - value for the cell being edited
+		 * @param {number} rowNum - row number for the cell
+		 * @param {number} colNum - column number of the cell
+		 * @param {ListGrid} grid - ListGrid to which this field belongs
+		 */
+		editorEnter?(record:ListGridRecord, value:any, rowNum:number /* int */, colNum:number /* int */, grid:ListGrid): void; 
+
+		/**  
+		 * (Advanced)  Callback fired when the user attempts to navigate away from the current edit cell,
+		 * or complete the current edit.
+		 * Return false from this method to cancel the default behavior (Saving / cancelling the
+		 * current edit / moving to the next edit cell)
+		 * 
+		 * 
+		 * @param {EditCompletionEvent} editCompletionEvent - What interaction triggered this edit cell exit
+		 * @param {ListGridRecord} record - record for the cell being edited
+		 * @param {any} newValue - new value for the cell being edited
+		 * @param {number} rowNum - row number for the cell
+		 * @param {number} colNum - column number of the cell
+		 * @param {ListGrid} grid - ListGrid to which this field belongs
+		 * @return {boolean} Returning false from this method will cancel the default behavior                      (for example saving the row) and leave the editor visible and focus&#010                      in this edit cell.
+		 */
+		editorExit?(editCompletionEvent:EditCompletionEvent, record:ListGridRecord, newValue:any, rowNum:number /* int */, colNum:number /* int */, grid:ListGrid): boolean; 
+
+		/**  
+		 *  Return the HTML to display in cells of this field.
+		 * 
+		 * Given the raw value for this field as taken from the record Formatter to apply to the
+		 * static values displayed in cells for this field.
+		 * 
+		 * Example usage: formatting a currency value stored in cents (so "100" to "$1.00")
+		 * The value passed to this method is the raw value for the cell.
+		 * Takes precedence over formatCellValue defined at the grid level for cells
+		 * in this field.
+		 * 
+		 * Note: this formatter will not be applied to the values displayed in cells being edited.
+		 * The ListGridField.formatEditorValue','formatEditorValue() is provided for that purpose.
+		 * 
+		 * 
+		 * @param {any} value - raw value for the cell, from the record for the row
+		 * @param {ListGridRecord} record - Record object for the cell. Note: If this is a new row that has not been saved, in an
+		 * editable grid, it has no associated record object. In this case the edit values will
+		 * be passed in as this parameter (see ListGrid.getEditValues)
+		 * @param {number} rowNum - row number for the cell
+		 * @param {number} colNum - column number for the cell.
+		 * @param {ListGrid} grid - the ListGrid displaying the cell
+		 * @return {string} HTML to display in the cell
+		 */
+		formatCellValue?(value:any, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid): string /* HTMLString */; 
+
+		/**  
+		 *  Return the value to display in cells of this field which are being edited.
+		 * 
+		 * Example usage: converting a stored value in cents (100) to a dollar-and-cents
+		 * value in the editor (1.00)
+		 * 
+		 * The value passed to this method is the raw value for the cell.
+		 * 
+		 * formatEditorValue takes precedence over ListGrid.formatEditorValue
+		 * defined at the grid level for cells in this field.
+		 * 
+		 * To convert the formatted value displayed within an editor back to a raw value, implement
+		 * ListGridField.parseEditorValue as well.
+		 * 
+		 * 
+		 * @param {any} value - raw value for the cell being edited
+		 * @param {ListGridRecord} record - Record object for the cell. Note: If this is a new row that has not been saved, in an
+		 * editable grid, it has no associated record object. In this case the edit values will
+		 * be passed in as this parameter.
+		 * @param {number} rowNum - row number for the cell
+		 * @param {number} colNum - column number for the cell.
+		 * @param {ListGrid} grid - A pointer to the ListGrid displaying the cell
+		 * @return {any} formatted value to display in the editor
+		 */
+		formatEditorValue?(value:any, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid  /* ListGrid instance */): any; 
+
+		/**  
+		 *  When a field has ListGridField.autoFreeze','autoFreeze set to true, developers can
+		 * implement this method to indicate where in the frozen-fields array this field should
+		 * appear.
+		 * 
+		 * Some automatically generated fields, such as
+		 * ListGrid.rowNumberField','rowNumberField,
+		 * ListGrid.expansionField','expansionField and
+		 * ListGrid.checkboxField','checkboxField, provide default implementations of this
+		 * method.
+		 * 
+		 * @return {number} the index at which this autoFreeze field should appear in the frozen body
+		 */
+		getAutoFreezePosition?(): number; 
+
+		/**  
+		 *  Optional stringMethod to get a ListGridField.valueMap for a specific field.
+		 * If present this method will be called from ListGrid.getEditorValueMap and the resulting
+		 * valueMap will be used instead of any static specified valueMap for the field.
+		 * 
+		 * @param {any} values - Field values for record being edited. Note that this will include the current edit values for fields that have not yet been saved.
+		 * May be null, if editing a new record.
+		 * @param {ListGridField} field - pointer to the listGridField
+		 * @param {ListGrid} grid - pointer back to this ListGrid instance.
+		 * @return {ValueMap} ValueMap for the field (or null if no valueMap required)
+		 */
+		getEditorValueMap?(values:any /* object */, field:ListGridField, grid:ListGrid): ValueMap /* valueMap */; 
+
+		/**  
+		 *  If your derivation of the field title is more complex than specifying a static string,
+		 * you can specify a getFieldTitle() method on your field to return the title string.
+		 * Otherwise you can use the ListGridField.title attribute on the field to specify the title.
+		 * 
+		 * You can use ListGrid.setFieldProperties','setFieldProperties() to dynamically
+		 * update the title.
+		 * 
+		 * 
+		 * @param {ListGrid} viewer - pointer back to the ListGrid
+		 * @param {number} fieldNum - index of this field in the grid's fields array.
+		 * @return {string} Field title.
+		 */
+		getFieldTitle?(viewer:ListGrid, fieldNum:number): string; 
+
+		/**  
+		 * (Advanced)  If ListGrid.showGridSummary is true, and this method is specified it will be
+		 * called to generate the summary value to be displayed in the grid summary row. Note that
+		 * this is called instead of making use of the ListGridField.summaryFunction.
+		 * 
+		 * As with ListGrid.getGridSummary this method may return an array of results -
+		 * in this case each result will show up in a separate row in the ListGrid.summaryRow
+		 * grid.
+		 * 
+		 * If this grid is grouped, and ListGrid.showGroupSummary is true, this method
+		 * will be passed a third parameter - an array of group-level summaries.
+		 * 
+		 * @param {Array<ListGridRecord>} records - records for which a summary is being generated
+		 * @param {ListGridField} field - pointer to the field for which summary value is being generated
+		 * @param {Array<any>} groupSummaries - If this grid is grouped and ListGrid.showGridSummary is specified, this parameter contains an array of already-
+		 * calculated summary values for each group in the grid. Each element in this array will
+		 * be an object containing calculated summary values for each field in the grid, as well as
+		 * a specified groupValue and groupName, allowing the developer to determine which group this
+		 * summary value comes from
+		 * @return {any} summary value to display.
+		 */
+		getGridSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupSummaries?:Array<any> /* Array of objects */): any; 
+
+		/**  
+		 * (Advanced)  If ListGrid.showGroupSummary is true, and this method is specified it will be
+		 * called to generate the field summary value to be displayed for each group level summary row.
+		 * Note that this is called instead of making use of the ListGridField.summaryFunction.
+		 * 
+		 * This method may return an array of results - in this case the group will show multiple summary
+		 * rows, with each entry in the array showing up in a different record.
+		 * 
+		 * 
+		 * @param {Array<ListGridRecord>} records - records for which a summary is being generated (so all records in the group).
+		 * @param {ListGridField} field - pointer to the field for which summary value is being generated
+		 * @param {any} groupNode - object with specified groupValue and groupName for this group
+		 * @return {any} summary value to display
+		 */
+		getGroupSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupNode?:any /* object */): any; 
+
+		/**  
+		 *  Return the title that should be shown to the user for the group with the
+		 * groupValue passed as a parameter.
+		 * 
+		 * Default title is the groupValue itself.
+		 * 
+		 * 
+		 * @param {any} groupValue - the value from the group is created, the result of ListGridField.getGroupValue
+		 * @param {GroupNode} groupNode - the node in the grid containing the group.
+		 * @param {any} field - Field object for which to get group value
+		 * @param {string} fieldName - The name of the field
+		 * @param {ListGrid} grid - the ListGrid displaying the cell
+		 * @return {any} Group value to which this record belongs
+		 */
+		getGroupTitle?(groupValue:any, groupNode:GroupNode, field:any /* Object */, fieldName:string /* String */, grid:ListGrid): any; 
+
+		/**  
+		 *  Return the value which records should be grouped by.
+		 * 
+		 * All records for which getGroupValue() returns the same value appear in the same
+		 * group. Default is the result of ListGrid.getCellValue.
+		 * 
+		 * While any type of value may be returned, avoiding the use of string values may
+		 * result in improved performance. In this case, ListGridField.getGroupTitle
+		 * may be implemented to map a numeric group value into a legible string.
+		 * 
+		 * 
+		 * @param {any} value - raw value for the cell, from the record for the row
+		 * @param {ListGridRecord} record - Record object for the cell. Note: If this is a new row that has not been saved, in an
+		 * editable grid, it has no associated record object. In this case the edit values will
+		 * be passed in as this parameter (see ListGrid.getEditValues)
+		 * @param {any} field - Field object for which to get group value
+		 * @param {string} fieldName - The name of the field
+		 * @param {ListGrid} grid - the ListGrid displaying the cell
+		 * @return {any} Group value to which this record belongs
+		 */
+		getGroupValue?(value:any, record:ListGridRecord, field:any /* Object */, fieldName:string /* String */, grid:ListGrid): any; 
+
+		/**  
+		 * (Advanced)  Only applies to ListGridFieldType','summary-type fields. If specified, this
+		 * method will be called to generate the record summary value to be displayed for each row
+		 * in this field. When this method is called, current values for other 
+		 * ListGridFieldType','summary-type fields have not yet been stored on the record, but
+		 * are accessible via ListGrid.getRecordSummary.
+		 * 
+		 * Note that if specified, this is called instead of making use of the
+		 * ListGridField.recordSummaryFunction.
+		 * 
+		 * If ListGrid.showGridSummary or ListGrid.showGroupSummary is true, this
+		 * field's value in the summary row[s] will still be calculated by calling this method.
+		 * In this case, the record object passed in will contain summary values for each field.
+		 * If custom handling is required for this case, it may be detected by checking the
+		 * record object's ListGridRecord.isGroupSummary and ListGridRecord.isGridSummary
+		 * attributes.
+		 * 
+		 * @param {ListGridRecord} record - record for which a summary is being generated
+		 * @param {ListGridField} field - this field
+		 * @param {ListGrid} grid - the grid
+		 * @return {any} summary value to display
+		 */
+		getRecordSummary?(record:ListGridRecord, field:ListGridField, grid:ListGrid): any; 
+
+		/**  
+		 *  StringMethod override point for returning HTML to be shown in hovers over cells in the
+		 * column described by this field.
+		 * 
+		 * Called only when ListGrid.canHover','canHover and ListGrid.showHover','showHover
+		 * are both true.
+		 * 
+		 * The value of "this" within the method will by the ListGridField','field definition.
+		 * 
+		 * 
+		 * @param {ListGridRecord} record - record being hovered over
+		 * @param {any} value - value of the cell being hovered over
+		 * @param {number} rowNum - row number where hover occurred
+		 * @param {number} colNum - column number where hover occurred
+		 * @param {ListGrid} grid - ListGrid this field is a part of
+		 * @return {string} HTML to show in the hover
+		 */
+		hoverHTML?(record:ListGridRecord, value:any, rowNum:number, colNum:number, grid:ListGrid): string /* HTML */; 
+
+		/**  
+		 *  Method used to convert the value displayed in an editor for some cell in this field into
+		 * a raw value for saving.
+		 * Takes precedence over parseEditorValue defined at the grid level.
+		 * 
+		 * 
+		 * @param {any} value - value displayed in the editor for the cell
+		 * @param {any} record - record object for the row being edited. May be null if this is a new row being added to the end of the list.
+		 * @param {number} rowNum - row number for the cell
+		 * @param {number} colNum - column number for the cell.
+		 * @param {ListGrid} grid - A pointer to the ListGrid displaying the cell
+		 * @return {any} raw value for the field derived from formatted value in editor
+		 */
+		parseEditorValue?(value:any, record:any /* object */, rowNum:number, colNum:number, grid:ListGrid  /* ListGrid instance */): any; 
+
+		/**  
 		 * 
 		 * Executed when this field is clicked on. Note that if ListGrid.recordClick is
 		 * also defined, it will be fired for fields that define a recordClick handler if the
@@ -4090,6 +4860,94 @@ declare namespace Isc {
 		 * @return {boolean} false to stop event bubbling
 		 */
 		recordClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, fieldNum:number, value:any, rawValue:any): boolean; 
+
+		/**  
+		 * 
+		 * Executed when this field is double-clicked. Note that if
+		 * ListGrid.recordDoubleClick is also defined, it will be fired for fields that define
+		 * a recordDoubleClick handler if the field-level handler returns true. Return false to prevent
+		 * the grid-level handler from firing.
+		 * 
+		 * 
+		 * 
+		 * @param {ListGrid} viewer - the listGrid that contains doubleclick event
+		 * @param {ListGridRecord} record - the record that was double-clicked
+		 * @param {number} recordNum - number of the record clicked on in the current set of displayed records (starts with 0)
+		 * @param {ListGridField} field - the field that was clicked on (field definition)
+		 * @param {number} fieldNum - number of the field clicked on in the listGrid.fields array
+		 * @param {any} value - value of the cell (after valueMap, etc. applied)
+		 * @param {any} rawValue - raw value of the cell (before valueMap, etc applied)
+		 * @return {boolean} false to stop event bubbling
+		 */
+		recordDoubleClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, fieldNum:number, value:any /* object */, rawValue:any /* object */): boolean; 
+
+		/**  
+		 *  An optional stringMethods','stringMethod which if provided, is evaluated to
+		 * conditionally determine whether this field should be displayed.
+		 * Evaluated on initial draw, then reevaluated on explicit
+		 * calls to listGrid.refreshFields() or listGrid.setFields().
+		 * 
+		 * Use ListGridField.hidden','hidden:true or showIf:"false"
+		 * to set a ListGrid field to initially hidden.
+		 * The user will still be able to show the field via a context menu. 
+		 * This may be suppressed by setting ListGridField.canHide to false, or by 
+		 * setting ListGrid.canPickFields to false to suppress the
+		 * field-picker entirely.
+		 * 
+		 * Note that explicit calls to ListGrid.showField','grid.showField() or hideField()
+		 * will wipe out the showIf expression, as will the end user showing and
+		 * hiding columns via the ListGrid.showHeaderContextMenu','header contextMenu.
+		 * 
+		 * Also note that fields marked as DataSourceField.detail','detail:true will be hidden by
+		 * default even if ListGrid.showDetailFields is true. To show detail fields
+		 * inherited from a DataSource, include an explicit field definition for the field and
+		 * set this property to return true.
+		 * 
+		 * 
+		 * @param {ListGrid} list - A pointer to the listGrid containing the field
+		 * @param {ListGridField} field - the ListGridField object
+		 * @param {number} fieldNum - the index of the field
+		 * @return {boolean} whether the field should be shown
+		 */
+		showIf?(list:ListGrid, field:ListGridField, fieldNum:number /* integer */): boolean; 
+
+		/**  
+		 * (Advanced)  Optional function to return the value that should be used when sorting this field.
+		 * 
+		 * Note that, if the dataset exceeds ListGrid.dataPageSize and hence paging is
+		 * introduced, the grid relies on the server to provide sorting, and the sortNormalizer
+		 * will no longer be called.
+		 * 
+		 * For custom sort orders that can be executed both client and server, consider
+		 * DataSourceField.sortByField.
+		 * 
+		 * 
+		 * @param {any} recordObject - record to normalize
+		 * @param {string} fieldName - name of the field on which sorting occurred
+		 * @param {ListGrid} context - A pointer back to the list grid displaying this field will be available as the context argument. Note that you can also get a pointer
+		 * to the field definition object by calling context.getField(fieldName)
+		 * @return {any} normalized value for sorting
+		 */
+		sortNormalizer?(recordObject:any /* object */, fieldName:string, context:ListGrid): any; 
+
+		/**  
+		 * 
+		 * Executed when the user clicks on a ListGridField.valueIcons','value icon within
+		 * this field. Return false to suppress default behavior of firing ListGridField.recordClick 
+		 * handlers, etc.
+		 * 
+		 * 
+		 * @param {ListGrid} viewer - the listGrid that contains the click event
+		 * @param {ListGridRecord} record - the record that was clicked on
+		 * @param {number} recordNum - number of the record clicked on in the current set of displayed records (starts with 0)
+		 * @param {ListGridField} field - the field that was clicked on (field definition)
+		 * @param {any} rawValue - raw value of the cell (before valueMap, etc applied)
+		 * @param {FormItem} editor - If this cell is being ListGrid.canEdit','edited, this method will fire when the user clicks the valueIcon on the edit item for the
+		 * cell, passing in the editor item as the editor parameter. If the cell
+		 * is not being edited, this value will be null.
+		 * @return {boolean} false to stop event bubbling
+		 */
+		valueIconClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, rawValue:any, editor:FormItem): boolean; 
 
 	} // ListGridField
 
@@ -4396,6 +5254,32 @@ declare namespace Isc {
 
 	export interface StretchItemStatic {
 	} // StretchItemStatic
+
+
+	/**
+	 * A record which specifies files for use with fileSource','FileSource Operations. 
+	 */
+	export interface FileSpec {
+		/** 
+		 * The format of the file, e.g. "xml" or "js"
+		 * Flags: IRW
+		 */
+		readonly fileFormat?: string /* String */;
+		/** 
+		 * The name of the file, without any extension to indicate FileSpec.fileType','type or
+		 * FileSpec.fileFormat','format.
+		 * Flags: IRW
+		 */
+		readonly fileName?: string /* String */;
+		/** 
+		 * The type of the file, e.g. "ds" for datasource, or "proj" for project.
+		 * Flags: IRW
+		 */
+		readonly fileType?: string /* String */;
+	} // FileSpec
+
+	export interface FileSpecStatic {
+	} // FileSpecStatic
 
 
 	/**
@@ -4771,10 +5655,128 @@ declare namespace Isc {
 
 		/* Instance Method Overrides */
 
+		/**  
+		 *  Optional method to format the value to display for this field's cells. Takes precedence 
+		 * over DetailViewer.formatCellValue for cells in this field.
+		 * 
+		 * @param {string} value - the raw value of the cell
+		 * @param {DetailViewerRecord} record - the record being displayed
+		 * @param {DetailViewerField} field - the field being displayed
+		 * @param {DetailViewer} viewer - the detailViewer containing this field
+		 */
+		formatCellValue?(value:string, record:DetailViewerRecord /* detailViewerRecord */, field:DetailViewerField /* detailViewerField */, viewer:DetailViewer /* detailViewer */): void; 
+
+		/**  
+		 *  Optional method to return the CSS class for cells in this field. If specified, this method
+		 * will be called from DetailViewer.getCellStyle, and should return a css class name.
+		 * 
+		 * 
+		 * @param {string} value - actual value of this cell
+		 * @param {any} field - field object for this cell
+		 * @param {any} record - record object for this cell
+		 * @param {DetailViewer} viewer - the viewer instance to which this cell belongs
+		 * @return {string} CSS style for this cell
+		 */
+		getCellStyle?(value:string, field:any /* object */, record:any /* object */, viewer:DetailViewer): string /* CSSStyleName */; 
+
+		/**  
+		 * 
+		 * If specified on a field, this method is evaluated at draw time to determine whether or
+		 * not to show this particular field.
+		 * 
+		 * This method can be specified either as a function or a string that will be
+		 * auto-converted to a function.
+		 * 
+		 * 
+		 * @param {DetailViewer} viewer - The DetailViewer
+		 * @param {any} valueList - 
+		 * @return {boolean} true to show the field, false to not show it.
+		 */
+		showIf?(viewer:DetailViewer, valueList:any /* List of DetailViewerRecord */): boolean; 
+
 	} // DetailViewerField
 
 	export interface DetailViewerFieldStatic {
 	} // DetailViewerFieldStatic
+
+
+	/**
+	 * Validator definition for a built-in Validator.type. 
+	 */
+	export interface validatorDefinition {
+		/** 
+		 * (Read only) Default error message to be shown when validator fails validation. Can be overridden
+		 * for an individual validator by setting Validator.errorMessage.
+		 * Flags: IR
+		 */
+		readonly defaultErrorMessage?: string;
+		/** 
+		 * (Read only) Does this validator only run server-side?
+		 * Flags: IR
+		 */
+		readonly requiresServer?: boolean;
+		/** 
+		 * (Read only) Optional name to be shown in tools that edit validators. If not specified,
+		 * the tools will derive the short name from the validatorDefinition.type by assuming it is
+		 * camelCaps similar to DataSource.getAutoTitle.
+		 * Flags: IR
+		 */
+		readonly shortName?: string;
+		/** 
+		 * (Read only) Type of the validator unique in ValidatorType.
+		 * Flags: IR
+		 */
+		readonly type?: string;
+
+		/* Instance Method Overrides */
+
+		/**  
+		 *  This method is called after every validation (i.e. call to
+		 * validatorDefinition.condition) whether it passed or failed. This allows the
+		 * validator perform an operation on the field based on the validation outcome.
+		 * 
+		 * An action() method is not needed to report an error message only.
+		 * 
+		 * 
+		 * @param {boolean} result - The result of the validator. The value will be null if the validator was skipped because of conditional criteria.
+		 * @param {DataSourceField} item - FormItem or DataSourceField on which this validator was declared. NOTE: FormItem will not
+		 * be available during a save performed without a
+		 * form (eg programmatic save) or if the field 
+		 * is not available in the form.
+		 * @param {Validator} validator - Validator declaration from eg DataSourceField.validators.
+		 * @param {any} record - Record that was validated
+		 * @param {DataBoundComponent} component - The DataBoundComponent holding the item such DynamicForm or ListGrid.
+		 */
+		action?(result:boolean, item:DataSourceField | FormItem /* DataSourceField or FormItem */, validator:Validator, record:any /* Record */, component:DataBoundComponent): void; 
+
+		/**  
+		 *  Method invoked to perform the actual validation of a value.
+		 * 
+		 * Because the validator itself is passed as a parameter to
+		 * condition(), you can effectively parameterize the validator. For example, to
+		 * create a validator that checks that the value is after a certain date: 
+		 * { type:"custom", afterDate:new Date(), 
+		 * condition:"value.getTime() > validator.afterDate.getTime()" }
+		 * 
+		 * Note that, if a field is declared with a builtin FieldType, the value passed in
+		 * will already have been converted to the specified type, if possible.
+		 * 
+		 * 
+		 * @param {DataSourceField} item - FormItem or DataSourceField on which this validator was declared. NOTE: FormItem will not
+		 * be available during a save performed without a
+		 * form (eg programmatic save) or if the field 
+		 * is not available in the form.
+		 * @param {Validator} validator - Validator declaration from eg DataSourceField.validators.
+		 * @param {any} value - value to validate
+		 * @param {any} record - Field values for record being validated.
+		 * @return {boolean} whether the value passed validation.  True for passed, false for fail.
+		 */
+		condition?(item:DataSourceField | FormItem /* DataSourceField or FormItem */, validator:Validator, value:any, record:any /* object */): boolean; 
+
+	} // validatorDefinition
+
+	export interface validatorDefinitionStatic {
+	} // validatorDefinitionStatic
 
 
 	/**
@@ -5440,10 +6442,204 @@ declare namespace Isc {
 		 */
 		click?(form:DynamicForm, item:FormItem, icon:FormItemIcon): void; 
 
+		/**  
+		 *  StringMethod action to fire when this icon has focus and receives a keypress
+		 * event.
+		 * If unset the form item's iconKeyPress method will be fired instead 
+		 * (if specified).
+		 * 
+		 * @param {string} keyName - Name of the key pressed
+		 * @param {string} character - character produced by the keypress
+		 * @param {DynamicForm} form - The Dynamic Form to which this icon's item belongs.
+		 * @param {FormItem} item - The Form Item containing this icon
+		 * @param {FormItemIcon} icon - A pointer to the form item icon
+		 */
+		keyPress?(keyName:string, character:string /* character */, form:DynamicForm, item:FormItem, icon:FormItemIcon): void; 
+
+		/**  
+		 *  If specified, icon.showIf will be evaluated when the form item is
+		 * drawn or redrawn. Return true if the icon should be visible, or false if it
+		 * should be hidden. Note that if FormItem.showIcon or FormItem.hideIcon
+		 * is called, this method will be overridden.
+		 * 
+		 * @param {DynamicForm} form - the DynamicForm in which the icon is embedded
+		 * @param {FormItem} item - the item to which this icon is attached.
+		 * @return {boolean} Return true if the icon should be visible, false otherwise.
+		 */
+		showIf?(form:DynamicForm, item:FormItem): boolean; 
+
 	} // FormItemIcon
 
 	export interface FormItemIconStatic {
 	} // FormItemIconStatic
+
+
+	/**
+	 * Specification of an operator for use in filtering, for example "equals".
+	 * Use with DataSource.addSearchOperator to define custom filtering behaviors for
+	 * client-side filtering. 
+	 */
+	export interface Operator {
+		/** 
+		 * (Read only) For an operator with Operator.valueType:"custom", indicates what kind of FormItem to use to
+		 * provide a user interface for creating a valid Criterion. The default of
+		 * null means an ordinary TextItem is fine.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly editorType?: string /* FormItem classname */;
+		/** 
+		 * (Read only) List of types that this Operator is valid for.
+		 * 
+		 * If omitted, the operator is assumed to be valid for all FieldTypes unless a list of 
+		 * FieldTypes is passed to DataSource.addSearchOperator.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly fieldTypes?: Array<FieldType> /* Array of FieldType */;
+		/** 
+		 * (Read only) Whether this operator should be offered to users by default in interfaces such as the
+		 * FilterBuilder. 
+		 * 
+		 * Setting hidden:true means the operator can be used in a programmatic search, for example,
+		 * by calling ResultSet.setCriteria, but does not appear in the UI.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly hidden?: boolean;
+		/** 
+		 * (Read only) Unique id for an operator, which appears within AdvancedCriteria as the
+		 * Operator property.
+		 * 
+		 * A list of built-in identifiers is OperatorId','here.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly ID?: OperatorId;
+		/** 
+		 * (Read only) Whether this operator needs to be executed on the server side.
+		 * 
+		 * This implies that if a Criterion using this operator is either introduced into
+		 * AdvancedCriteria','criteria or is changed, the server will need to be contacted to
+		 * perform filtering.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly requiresServer?: boolean;
+		/** 
+		 * (Read only) The text use when using this operator as an 
+		 * FormItem.allowExpressions','expression in a FormItem.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly symbol?: string /* String */;
+		/** 
+		 * (Read only) User-visible title for this operator when used with text-based fields - eg, 
+		 * "equals (match case)" rather than just "equals".
+		 * 
+		 * To simplify internationalization by separating titles from operator code, you can use
+		 * specify Operator.textTitleProperty instead of this property.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly textTitle?: string /* String */;
+		/** 
+		 * (Read only) Name of a property on the Operators class that provides the title for this operator
+		 * when used with text-based fields.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly textTitleProperty?: string /* identifier */;
+		/** 
+		 * (Read only) User-visible title for this operator, such as "doesn't contain".
+		 * 
+		 * To simplify internationalization by separating titles from operator code, you can use
+		 * specify Operator.titleProperty instead of this property.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly title?: string /* String */;
+		/** 
+		 * (Read only) Name of a property on the Operators class that provides the title for this operator.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly titleProperty?: string /* identifier */;
+		/** 
+		 * (Read only) Indicates the kind of value expected in a Criterion that uses this operator.
+		 * OperatorValueType lists possibilities.
+		 * 
+		 * The default of null is equivalent to "fieldType", indicating that
+		 * Criterion.value is expected to contain a value of the same type as the field
+		 * indicated by Criterion.fieldName.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly valueType?: OperatorValueType;
+
+		/* Instance Method Overrides */
+
+		/**  
+		 *  Compare two criteria, both of which use this operator, and report whether the newCriteria is
+		 * definitely more restrictive than the previous criteria.
+		 * 
+		 * This is used by the ResultSet to understand whether client-side filtering can
+		 * continue using cached data, or whether server-side filtering must be used instead.
+		 * 
+		 * 
+		 * @param {Criterion} newCriterion - new criterion
+		 * @param {Criterion} oldCriterion - previous criterion
+		 * @return {number} 0 if the criteria are equivalent, 1 if newCriterion is guaranteed more                      restrictive, and -1 if newCriterion is not guaranteed more restrictive
+		 */
+		compareCriteria?(newCriterion:Criterion, oldCriterion:Criterion): number /* Number */; 
+
+		/**  
+		 *  Method which actually evaluates whether a given record meets a Criterion.
+		 * 
+		 * For operators that act on Criterion.criteria','sub-criteria, call
+		 * DataSource.evaluateCriterion to evaluate sub-criteria.
+		 * 
+		 * Because criteria are sometimes applied to user-entered data that has not been validated, a
+		 * robust condition() function should expect that data found in a Record
+		 * may be null, NaN, not the correct type (eg "NA" for a type:"date" field) or otherwise out of
+		 * the expected range.
+		 * 
+		 * Note that an Operator has access both to the Criterion object, allowing operators
+		 * that act on more than one field or perform calculations, and access to the Operator
+		 * object itself, allowing a condition() function to be shared across a range of
+		 * related operators with different OperatorIds.
+		 * 
+		 * 
+		 * @param {any} value - value from the field supplied as Criterion.fieldName, if applicable
+		 * @param {any} record - record being evaluated
+		 * @param {any} fieldName - fieldName supplied as Criterion.fieldName, if applicable
+		 * @param {Criterion} criterion - criterion definition
+		 * @param {Operator} operator - operator definition
+		 * @return {boolean} whether the field passes this criteria
+		 */
+		condition?(value:any, record:any /* Record */, fieldName:any, criterion:Criterion, operator:Operator): boolean; 
+
+		/**  
+		 *  In combination with Operator.editorType, this override point allows you to define a
+		 * client-side only Operator that simply provides a custom UI for creating a Criterion based on
+		 * one of the built-in operators.
+		 * 
+		 * For example, the "between" operator allows AdvancedCriteria to be created that can select any
+		 * date range, however in a given application certain specific date ranges might be more
+		 * meaningful (eg "next week", "last quarter") and you might want to offer the user a picker for
+		 * those date ranges. You could create an operator "presetDateRange" with an editorType 
+		 * indicating a custom SelectItem that shows available ranges, and then implement 
+		 * operation.getCriterion() to take the value from this SelectItem and produce a Criterion 
+		 * selecting the chosen date range.
+		 * 
+		 * Note that another approach, if it's not required that this custom interface appear in the
+		 * FilterBuilder, is just to have a separate DynamicForm for picking special date
+		 * ranges, and use DataSource.combineCriteria to merge the criteria with the
+		 * FilterBuilder's criteria, as in dynamicReporting', 'this sample.
+		 * 
+		 * If not implemented, returns the result of calling 
+		 * FormItem.getCriterion','getCriterion() on the passed FormItem','item.
+		 * 
+		 * 
+		 * @param {string} fieldName - 
+		 * @param {FormItem} item - 
+		 * @return {Criterion} 
+		 */
+		getCriterion?(fieldName:string /* String */, item:FormItem): Criterion; 
+
+	} // Operator
+
+	export interface OperatorStatic {
+	} // OperatorStatic
 
 
 	/**
