@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/16/2017 11:49:58 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-15
+// Generated: 5/17/2017 6:54:33 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-17
 
 declare namespace Isc {
 
@@ -1038,33 +1038,6 @@ declare namespace Isc {
 
 	export interface HiliteStatic {
 	} // HiliteStatic
-
-
-	/**
-	 * Represents the position of a Portlet within a PortalLayout, indicating the
-	 * column, row, and position within the row. 
-	 */
-	export interface PortalPosition {
-		/** 
-		 * (Read only) The column number occupied by a Portlet within a PortalLayout.
-		 * Flags: IR
-		 */
-		readonly colNum?: number /* int */;
-		/** 
-		 * (Read only) The position occupied by a Portlet within a PortalLayout row
-		 * (generally 0, unless there is more than one Portlet in the row).
-		 * Flags: IR
-		 */
-		readonly position?: number /* int */;
-		/** 
-		 * (Read only) The row number occupied by a Portlet within a PortalLayout column.
-		 * Flags: IR
-		 */
-		readonly rowNum?: number /* int */;
-	} // PortalPosition
-
-	export interface PortalPositionStatic {
-	} // PortalPositionStatic
 
 
 	/**

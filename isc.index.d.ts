@@ -7,8 +7,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/16/2017 11:50:29 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-15
+// Generated: 5/17/2017 6:54:57 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-17
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -525,6 +525,32 @@ declare namespace Isc {
 		EditPane: EditPaneStatic<EditPane, EditPaneProps>;
 
 		/** 
+		 * EditTree extends TreeGrid
+		 * A TreeGrid that allows drag and drop creation and manipulation of a tree of 
+		 * objects described by DataSources.
+		 * 
+		 * Nodes can be added via drag and drop from a Palette or may be programmatically 
+		 * added via EditContext.addNode','addNode(). Nodes may be dragged within the tree to reparent 
+		 * them.
+		 * 
+		 * Eligibility to be dropped on any given node is determined by inspecting the
+		 * DataSource of the parent node. Drop is allowed only if the parent schema has
+		 * a field which accepts the type of the dropped node.
+		 * 
+		 * On successful drop, the newly created component will be added to the parent node under the
+		 * detected field. Array fields, declared by setting
+		 * dataSourceField.multiple:true, are supported. 
+		 * 
+		 * An EditTree is initialized by setting EditTree.rootComponent or
+		 * EditTree.editContext. EditTree.data (the Tree instance) should never be directly
+		 * set or looked at.
+		 * 
+		 * EditTree automatically creates an EditContext and provides several APIs and
+		 * settings that are passthroughs to the underlying EditContext for convenience.
+		 */ 
+		EditTree: EditTreeStatic<EditTree, EditTreeProps>;
+
+		/** 
 		 * FacetChart extends DrawPane
 		 * HTML5-based charting engine, implementing all Chart.chartType','chartTypes of the
 		 * Chart interface.
@@ -1007,6 +1033,19 @@ declare namespace Isc {
 		ListGrid: ListGridStatic<ListGrid, ListGridProps>;
 
 		/** 
+		 * LoginDialog extends Window
+		 * Handle a complete login interaction with a typical login dialog asking for username and
+		 * password credentials. Use this
+		 * class to quickly present a traditional username/password authentication mechanism in a
+		 * SmartClient window.
+		 * 
+		 * To adapt this class to your requirements, first implement LoginDialog.loginFunc to submit
+		 * the username and password to the authentication mechanism of your choice, calling
+		 * dialogCallback once the authentication process completes.
+		 */ 
+		LoginDialog: LoginDialogStatic<LoginDialog, LoginDialogProps>;
+
+		/** 
 		 * Menu extends ListGrid
 		 * The Menu widget class implements interactive menu widgets, with optional icons, submenus,
 		 * and shortcut keys.
@@ -1037,6 +1076,14 @@ declare namespace Isc {
 		Menu: MenuStatic<Menu, MenuProps>;
 
 		/** 
+		 * MiniNavControl extends StretchImgButton
+		 * Compact control for up/down navigation that roughly looks like an up arrowhead next to a
+		 * down arrowhead.
+		 */ 
+		MiniNavControl: MiniNavControlStatic<MiniNavControl, MiniNavControlProps>;
+
+		/** 
+		 * MultiSortDialog extends Window
 		 * A dialog that allows the user to set up complex sorting arrangements by defining a group of
 		 * SortSpecifiers.
 		 * 
@@ -1050,6 +1097,20 @@ declare namespace Isc {
 		 * See MultiSortDialog.askForSort, DataBoundComponent.askForSort
 		 */ 
 		MultiSortDialog: MultiSortDialogStatic<MultiSortDialog, MultiSortDialogProps>;
+
+		/** 
+		 * MultiSortPanel extends Layout
+		 * A widget that allows the user to set up complex sorting arrangements by defining a group of
+		 * SortSpecifiers.
+		 * 
+		 * Each SortSpecifier applies to a single property and direction - so, for instance, in 
+		 * a grid with two columns, year and monthNumber, you could sort first 
+		 * by year in descending order and then by monthNumber in ascending 
+		 * order. This would producing a grid sorted by year from largest (most 
+		 * recent) to smallest (least recent) and, within each year, by monthNumber from smallest 
+		 * (January) to largest (December).
+		 */ 
+		MultiSortPanel: MultiSortPanelStatic<MultiSortPanel, MultiSortPanelProps>;
 
 		/** 
 		 * NavigationBar extends HLayout
@@ -1077,20 +1138,38 @@ declare namespace Isc {
 		PasswordItem: PasswordItemStatic<PasswordItem, PasswordItemProps>;
 
 		/** 
-		 * PortalLayout extends Layout
-		 * A PortalLayout is a special subclass of Layout designed to display Portlet windows.
-		 * A PortalLayout displays Portlets in columns and supports drag-drop interaction for moving 
-		 * Portlets around within the PortalLayout. Portlets may be drag-reordered within columns, dragged
-		 * into other columns, or dragged next to other Portlets to sit next to them horizontally
-		 * within a column.
+		 * PrintCanvas extends Canvas
+		 * PrintCanvas is a subclass of canvas which renders printable content HTML and 
+		 * provides APIs for printing this content as a separate document.
 		 */ 
-		PortalLayout: PortalLayoutStatic<PortalLayout, PortalLayoutProps>;
+		PrintCanvas: PrintCanvasStatic<PrintCanvas, PrintCanvasProps>;
 
 		/** 
-		 * Portlet extends Window
-		 * Custom subclass of Window configured to be embedded within a PortalLayout.
+		 * PrintWindow extends Window
+		 * Subclass of Window used for displaying a printable view. Includes a "Print" button
+		 * header control to trigger printing of content.
 		 */ 
-		Portlet: PortletStatic<Portlet, PortletProps>;
+		PrintWindow: PrintWindowStatic<PrintWindow, PrintWindowProps>;
+
+		/** 
+		 * RangeSlider extends Canvas
+		 * A "double slider" allowing the user to select a range via two draggable thumbs.
+		 */ 
+		RangeSlider: RangeSliderStatic<RangeSlider, RangeSliderProps>;
+
+		/** 
+		 * RecordEditor extends ListGrid
+		 * Component for editing a single record.
+		 * RecordEditors are implemented as a subclass of ListGrid, showing no header and a single 
+		 * row always drawn in the editable state, allowing the user to modify the values at any time.
+		 * The RecordEditor.actionButton is automatically shown as a way for the user to act 
+		 * upon the edited values.
+		 * 
+		 * The RecordEditor class exists as a helper class for ListGrids, used to provide
+		 * an interface for editing criteria when ListGrid.showFilterEditor','filterEditor 
+		 * is set to true.
+		 */ 
+		RecordEditor: RecordEditorStatic<RecordEditor, RecordEditorProps>;
 
 		/** 
 		 * RestDataSource extends DataSource
@@ -1882,6 +1961,33 @@ declare namespace Isc {
 		ResultSet: ResultSetStatic<ResultSet, ResultSetProps>;
 
 		/** 
+		 * ResultTree extends Tree
+		 * ResultTrees are an implementation of the Tree API, used to handle hierarchical
+		 * data, whose nodes are DataSource records which are retrieved from a server.
+		 * 
+		 * Modifying ResultTrees
+		 * 
+		 * ResultTree nodes cannot be directly added or removed from a
+		 * ResultTree.fetchMode','paged ResultTree via Tree APIs such as
+		 * Tree.add or Tree.remove, since such trees are considered to be read-only
+		 * by virtue of containing ResultSets, which are read-only data structures. Even in
+		 * other FetchModes, calling such APIs will only update the local cache of the
+		 * ResultTree, rather than triggering any server traffict to update the DataSource.
+		 * 
+		 * Use DataSource.addData/DataSource.removeData','removeData() to add/remove
+		 * rows from the DataSource, and the ResultTree will reflect the changes
+		 * automatically. Alternatively, the DataSource.updateCaches method may be called to
+		 * only update local caches of the DataSource in question, without generating any server
+		 * traffic.
+		 * 
+		 * To create a locally modifiable cache of records from a DataSource, you can use
+		 * DataSource.fetchData to retrieve a List of records which can be modified directly,
+		 * or you can create a client-only DataSource from the retrieved data to share a
+		 * modifiable cache between several DataBoundComponents.
+		 */ 
+		ResultTree: ResultTreeStatic<ResultTree, ResultTreeProps>;
+
+		/** 
 		 * Encapsulates a client/server RPC request. You'll need to provide an instance of this class (or a
 		 * constructor for it) to the RPCManager.sendRequest method. If you use the 
 		 * RPCManager.send method, an instance of RPCRequest will be created for you.
@@ -1893,6 +1999,19 @@ declare namespace Isc {
 		 * and optionally passed to you in the callback you specify as part of your RPCRequest.
 		 */ 
 		RPCResponse: RPCResponseStatic<RPCResponse, RPCResponseProps>;
+
+		/** 
+		 * Scrollbar extends StretchImg
+		 * The Scrollbar widget implements cross-platform, image-based scrollbars that control the
+		 * scrolling of content in other widgets. Scrollbar widgets are created and displayed
+		 * automatically for widgets that require them, based on settings for Canvas.overflow.
+		 * 
+		 * The scrollbar's appearance is based on a StretchImg for the "track", which consists
+		 * of two fixed size buttons and a stretchable center segment, and the ScrollThumb,
+		 * the draggable portion of the scrollbar, also a StretchImg, with an optional
+		 * StretchImg.showGrip','grip.
+		 */ 
+		Scrollbar: ScrollbarStatic<Scrollbar, ScrollbarProps>;
 
 		/** 
 		 * SearchForm extends DynamicForm
@@ -1927,6 +2046,26 @@ declare namespace Isc {
 		SelectItem: SelectItemStatic<SelectItem, SelectItemProps>;
 
 		/** 
+		 * Snapbar extends Splitbar
+		 * Subclass of the Splitbar class that uses the grip functionality
+		 * to show a stateful open / close indicator.
+		 */ 
+		Snapbar: SnapbarStatic<Snapbar, SnapbarProps>;
+
+		/** 
+		 * Splitbar extends StretchImg
+		 * Resize bar for use in Layout.resizeBarClass','Layouts, based on the
+		 * StretchImg class. As with the ImgSplitbar class, 
+		 * widgets of this class can be displayed as a resize-bar for widgets 
+		 * in Layouts where showResizeBar is set to true. Provides a different appearance from
+		 * the ImgSplitbar class.
+		 * 
+		 * To specify the resizeBar class for some layout, use the Layout.resizeBarClass
+		 * property.
+		 */ 
+		Splitbar: SplitbarStatic<Splitbar, SplitbarProps>;
+
+		/** 
 		 * StatefulCanvas extends Canvas
 		 * A component that has a set of possible states, and which presents itself differently according to
 		 * which state it is in. An example is a button, which can be "up", "down", "over" or "disabled".
@@ -1939,6 +2078,36 @@ declare namespace Isc {
 		 * that make up a single image.
 		 */ 
 		StretchImg: StretchImgStatic<StretchImg, StretchImgProps>;
+
+		/** 
+		 * StretchImgButton extends StretchImg
+		 * A StretchImg that behaves like a button, going through up/down/over state transitions in response
+		 * to user events. Supports an optional title, and will auto-size to accommodate the title text if
+		 * overflow is set to "visible".
+		 * 
+		 * Examples of use include fancy buttons, poplist headers, and tabs.
+		 */ 
+		StretchImgButton: StretchImgButtonStatic<StretchImgButton, StretchImgButtonProps>;
+
+		/** 
+		 * TabBar extends Toolbar
+		 * Shows a set of Tabs. TabBars are automatically created by TabSets and shouldn't be used
+		 * directly. The TabBar is documented for skinning purposes.
+		 */ 
+		TabBar: TabBarStatic<TabBar, TabBarProps>;
+
+		/** 
+		 * TableView extends ListGrid
+		 * Shows a listing of records with one or more fields from each record, with
+		 * built-in support for navigation and editing of lists of records.
+		 * <p/>
+		 * The TableView provides built-in controls such as TableView.showNavigation','navigation arrows and
+		 * shows fields from the provided records in one of several built-in RecordLayouts.
+		 * <p/>
+		 * NOTE: This widget is intended primarily for creating handset/phone-sized interfaces
+		 * and does not have an appearance in any skin other than Mobile.
+		 */ 
+		TableView: TableViewStatic<TableView, TableViewProps>;
 
 		/** 
 		 * TabSet extends Canvas
@@ -2036,6 +2205,31 @@ declare namespace Isc {
 		 * demand. For information on DataBinding Trees, see treeDataBinding.
 		 */ 
 		Tree: TreeStatic<Tree, TreeProps>;
+
+		/** 
+		 * TreeGrid extends ListGrid
+		 * The SmartClient system supports hierarchical data (also referred to as tree data
+		 * due to its "branching" organization) with:
+		 * 
+		 * the Tree class, which manipulates hierarchical data sets
+		 * the TreeGrid widget class, which extends the ListGrid class to visually
+		 * present tree data in an expandable/collapsible format.
+		 * 
+		 * For information on DataBinding Trees, see treeDataBinding.
+		 * 
+		 * A TreeGrid works just like a ListGrid, except one column (specified by
+		 * TreeGridField.treeField) shows a hierarchical Tree. A TreeGrid is not limited
+		 * to displaying just the Tree column - you can define additional columns (via
+		 * TreeGrid.fields) which will render just like the columns of a ListGrid, and
+		 * support all of the functionality of ListGrid columns, such as
+		 * ListGridField.formatCellValue','formatters.
+		 * 
+		 * Except where explicitly overridden, ListGrid methods, callbacks, and properties
+		 * apply to TreeGrids as well. The ListGrid defines some methods as taking/returning
+		 * ListGridField and ListGridRecord. When using those methods in a TreeGrid,
+		 * those types will be TreeGridField and TreeNode, respectively.
+		 */ 
+		TreeGrid: TreeGridStatic<TreeGrid, TreeGridProps>;
 
 		/** 
 		 * A validator describes a check that should be performed on a value the user is trying to
