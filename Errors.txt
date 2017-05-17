@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-15
 
 Errors during generation
-Generated: 5/16/2017 8:02:54 AM by kwhite
+Generated: 5/16/2017 11:50:29 AM by kwhite
 
 Summary
 Total Types  : 229
@@ -93,7 +93,7 @@ Classes without inheritsFrom attribute: 158 (Maybe it should inherit from Class,
 25. History (manually checked, does NOT inherit from Class. Should be object?)
 26. Hover
 27. IMenuButton
-28. ImgButton
+28. ImgButton (manually checked, inheritsFrom Img)
 29. ImgEditProxy
 30. ImgSectionHeader
 31. ImgSplitbar
@@ -114,7 +114,7 @@ Classes without inheritsFrom attribute: 158 (Maybe it should inherit from Class,
 46. LoginDialog
 47. Mail
 48. MathFunction
-49. Menu
+49. Menu (manually checked, inheritsFrom ListGrid)
 50. MenuButton
 51. MenuEditProxy
 52. MenuPalette
@@ -134,8 +134,8 @@ Classes without inheritsFrom attribute: 158 (Maybe it should inherit from Class,
 66. Operators
 67. Page
 68. PickListMenu
-69. PortalLayout
-70. Portlet
+69. PortalLayout (manually checked, inheritsFrom Layout)
+70. Portlet (manually checked, inheritsFrom Window)
 71. PresetDateRangeItem
 72. PrintCanvas
 73. PrintWindow
@@ -147,7 +147,7 @@ Classes without inheritsFrom attribute: 158 (Maybe it should inherit from Class,
 79. PropertySheet
 80. RangeSlider
 81. RecordEditor
-82. RestDataSource
+82. RestDataSource (manually checked, inheritsFrom DataSource)
 83. ResultSet (manually checked, inheritsFrom Class)
 84. ResultTree
 85. RibbonBar
@@ -162,7 +162,7 @@ Classes without inheritsFrom attribute: 158 (Maybe it should inherit from Class,
 94. Scrollbar
 95. ScrollThumb
 96. SectionHeader
-97. SectionStack
+97. SectionStack (manually checked, inheritsFrom VLayout)
 98. SectionStackEditProxy
 99. Selection
 100. SelectionOutline (manually checked, does NOT inherit from Class. Should be object?)
@@ -198,8 +198,8 @@ Classes without inheritsFrom attribute: 158 (Maybe it should inherit from Class,
 130. Time (manually checked, does NOT inherit from Class. Should be object?)
 131. Timeline
 132. Timer
-133. ToolStrip
-134. ToolStripButton
+133. ToolStrip (manually checked, inheritsFrom Layout)
+134. ToolStripButton (manually checked, inheritsFrom Button)
 135. ToolStripGroup
 136. ToolStripMenuButton
 137. ToolStripResizer
@@ -213,7 +213,7 @@ Classes without inheritsFrom attribute: 158 (Maybe it should inherit from Class,
 145. Validator
 146. ValuesManager
 147. VisualBuilder (manually checked, does NOT inherit from Class. Should be object?)
-148. VLayout
+148. VLayout (manually checked, inheritsFrom Layout)
 149. VStack
 150. WebService
 151. WindowEditProxy
@@ -1025,7 +1025,7 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-05-15	229	5	309	67	3555	3	158	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	237	137	3	3	229	5	39	103	1178	1	1	0.5820895	0.3333333	0.3313643	
+2017-05-15	229	5	309	67	3555	3	158	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	237	137	3	3	229	5	40	105	1224	1	1	0.5970149	0.3398058	0.3443038	
 
 ======= For Display Somewhere =======
 Metrics for build SNAPSHOT_v11.1d_2017-05-15
@@ -1044,14 +1044,14 @@ String values where reference is found: 0
 OR specified as ' \| ': 237
 Types Generated: 229
 Interfaces Generated: 5
-Objects Generated: 39
-Classes Generated: 103
-Methods Generated: 1,178
+Objects Generated: 40
+Classes Generated: 105
+Methods Generated: 1,224
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
-Percentage of Objects generated: 58 %
-Percentage of Classes generated: 33 %
-Percentage of Methods generated: 33 %
+Percentage of Objects generated: 60 %
+Percentage of Classes generated: 34 %
+Percentage of Methods generated: 34 %
 
 ===== Warnings =====
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)

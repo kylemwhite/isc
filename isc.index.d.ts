@@ -7,7 +7,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/16/2017 8:02:54 AM by kwhite
+// Generated: 5/16/2017 11:50:29 AM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-15
 
 /**
@@ -907,6 +907,16 @@ declare namespace Isc {
 		Img: ImgStatic<Img, ImgProps>;
 
 		/** 
+		 * ImgButton extends Img
+		 * A Img that behaves like a button, going through up/down/over state transitions in response to
+		 * user events. Supports an optional title, and will auto-size to accommodate the title text if
+		 * overflow is set to "visible".
+		 * 
+		 * Example uses are Window minimize/close buttons.
+		 */ 
+		ImgButton: ImgButtonStatic<ImgButton, ImgButtonProps>;
+
+		/** 
 		 * A library of functions for determining the types of other objects.
 		 * 
 		 * The "isA" methods for the basic JavaScript types are much faster and more consistent across
@@ -1065,6 +1075,22 @@ declare namespace Isc {
 		 * FormItem for password fields, where text input by the user should not be shown in readable text.
 		 */ 
 		PasswordItem: PasswordItemStatic<PasswordItem, PasswordItemProps>;
+
+		/** 
+		 * PortalLayout extends Layout
+		 * A PortalLayout is a special subclass of Layout designed to display Portlet windows.
+		 * A PortalLayout displays Portlets in columns and supports drag-drop interaction for moving 
+		 * Portlets around within the PortalLayout. Portlets may be drag-reordered within columns, dragged
+		 * into other columns, or dragged next to other Portlets to sit next to them horizontally
+		 * within a column.
+		 */ 
+		PortalLayout: PortalLayoutStatic<PortalLayout, PortalLayoutProps>;
+
+		/** 
+		 * Portlet extends Window
+		 * Custom subclass of Window configured to be embedded within a PortalLayout.
+		 */ 
+		Portlet: PortletStatic<Portlet, PortletProps>;
 
 		/** 
 		 * RestDataSource extends DataSource
