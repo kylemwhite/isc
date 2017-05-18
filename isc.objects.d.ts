@@ -5,12 +5,99 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/18/2017 8:32:33 AM by KWhite
+// Generated: 5/18/2017 9:05:29 AM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-18
 
 declare namespace Isc {
 
     
+	/**
+	 * Definition of a simple linear gradient defined by 2 colors and a SimpleGradient.direction','direction. 
+	 */
+	export interface SimpleGradient extends Gradient {
+		/** 
+		 * (Read only) Angle of the direction vector in degrees. The default of 0.0 causes the gradient to sweep
+		 * from the start color on the left to the end color on the right. Positive direction angles
+		 * correspond to clockwise rotations of the default gradient.
+		 * Flags: IR
+		 */
+		readonly direction?: number /* float */;
+		/** 
+		 * (Read only) The end color of the gradient.
+		 * Flags: IR
+		 */
+		readonly endColor?: string /* CSSColor */;
+		/** 
+		 * (Read only) The start color of the gradient.
+		 * Flags: IR
+		 */
+		readonly startColor?: string /* CSSColor */;
+	} // SimpleGradient
+
+	export interface SimpleGradientStatic extends GradientStatic {
+	} // SimpleGradientStatic
+
+
+	/**
+	 * Properties for a navigation item in a NavPanel. 
+	 */
+	export interface NavItem extends TreeNode {
+		/** 
+		 * (Read only) CSS style name used for this NavItem. If set and this NavItem
+		 * is a NavItem.isHeader','header, this overrides the NavPanel's
+		 * NavPanel.headerStyle.
+		 * Flags: IR
+		 */
+		readonly customStyle?: string /* CSSStyleName */;
+		/** 
+		 * (Read only) Icon to show for this NavItem. If not specified, the
+		 * TreeGrid.folderIcon','navGrid\'s folderIcon is used.
+		 * Flags: IR
+		 */
+		readonly icon?: string /* SCImgURL */;
+		/** 
+		 * (Read only) An optional ID for this NavItem. If specified, this must be unique within
+		 * the NavPanel.
+		 * Flags: IR
+		 */
+		readonly id?: string /* identifier */;
+		/** 
+		 * (Read only) If set, this NavItem will be styled like a header. In this case NavItem.pane
+		 * is ignored and nothing happens when the header is clicked. However, NavItem.items can
+		 * still be configured to place items hierarchically under the header.
+		 * Flags: IR
+		 */
+		readonly isHeader?: boolean /* Boolean */;
+		/** 
+		 * (Read only) If set, this NavItem will be styled as a separator. A separator does not
+		 * have a NavItem.pane','pane and nothing happens when the separator is clicked.
+		 * Flags: IR
+		 */
+		readonly isSeparator?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Optional subitems of this NavItem.
+		 * Flags: IR
+		 */
+		readonly items?: Array<NavItem> /* Array of NavItem */;
+		/** 
+		 * (Read only) Component to display in the NavPanel.navDeck when this NavItem is
+		 * selected.
+		 * 
+		 * A component can be provided directly, or its ID can be provided.
+		 * Flags: IR
+		 */
+		readonly pane?: Canvas | string /* Canvas | identifier */;
+		/** 
+		 * (Read only) Title to show for this NavItem.
+		 * Flags: IR
+		 */
+		readonly title?: string /* HTMLString */;
+	} // NavItem
+
+	export interface NavItemStatic extends TreeNodeStatic {
+	} // NavItemStatic
+
+
 	/**
 	 * An object representing a relative date, useful for representing date ranges etc in criteria.
 	 * RelativeDate objects may be created directly by SmartClient components such as the
@@ -368,6 +455,43 @@ declare namespace Isc {
 
 
 	/**
+	 * Configuration of an HTML list in a RichTextEditor. 
+	 */
+	export interface ListProperties {
+		/** 
+		 * (Read only) When the list item marker ListProperties.style','style is "custom-image", the image
+		 * to use for the markers.
+		 * Flags: IR
+		 */
+		readonly image?: string /* SCImgURL */;
+		/** 
+		 * (Read only) For ordered lists, the number to start the first item with. Must be non-negative.
+		 * Flags: IR
+		 */
+		readonly startNumber?: number /* int */;
+		/** 
+		 * (Read only) The style of list item marker. If "custom-image", the ListProperties.image','image
+		 * should be specified.
+		 * Flags: IR
+		 */
+		readonly style?: ListStyleType;
+	} // ListProperties
+
+	export interface ListPropertiesStatic {
+	} // ListPropertiesStatic
+
+
+	/**
+	 * Group Summary. 
+	 */
+	export interface GroupSummary {
+	} // GroupSummary
+
+	export interface GroupSummaryStatic {
+	} // GroupSummaryStatic
+
+
+	/**
 	 * X/Y position in pixels, specified as an Array with two members, for example: [30, 50] 
 	 */
 	export interface Point {
@@ -545,6 +669,29 @@ declare namespace Isc {
 
 	export interface DSRequestModifierStatic {
 	} // DSRequestModifierStatic
+
+
+	/**
+	 * A JavaScript object specifying a range of dates. Values are DateRange.start','start
+	 * and DateRange.end','end. If either value is omitted, the range is assumed to be
+	 * open-ended in that direction - so if dateRange.start is omitted, the range will include any
+	 * date earlier than the value specified in dateRange.end. 
+	 */
+	export interface DateRange {
+		/** 
+		 * (Read only) The end of this DateRange.
+		 * Flags: IR
+		 */
+		readonly end?: RelativeDate | Date /* RelativeDate or Date */;
+		/** 
+		 * (Read only) The start of this DateRange.
+		 * Flags: IR
+		 */
+		readonly start?: RelativeDate | Date /* RelativeDate or Date */;
+	} // DateRange
+
+	export interface DateRangeStatic {
+	} // DateRangeStatic
 
 
 	/**
@@ -1298,6 +1445,147 @@ declare namespace Isc {
 
 
 	/**
+	 * Defines one level of headers shown above the event area in a Timeline. 
+	 */
+	export interface HeaderLevel {
+		/** 
+		 * (Read only) If set, the width for each of the spans in this headerLevel. Note that this setting only 
+		 * has an effect on the innermost headerLevel.
+		 * Flags: IR
+		 */
+		readonly headerWidth?: number /* integer */;
+		/** 
+		 * (Read only) Optional sparse array of titles for the spans on this headerLevel. If a given span in this
+		 * headerLevel has a corresponding entry in this array, it will be used as the span's title.
+		 * 
+		 * If not specified, default titles are generated (eg "Q1" for unit "quarter") and then passed
+		 * into the HeaderLevel.titleFormatter','formatter function, if one has been installed,
+		 * for further customization.
+		 * Flags: IR
+		 */
+		readonly titles?: Array<string> /* Array of String */;
+		/** 
+		 * (Read only) Unit of time shown at this level of header.
+		 * Flags: IR
+		 */
+		readonly unit?: TimeUnit;
+
+		/* Instance Method Overrides */
+
+		/**  
+		 *  An optional function for providing formatted HTML for the title of a given span in this 
+		 * HeaderLevel. If unset, Timelines use the HeaderLevel.titles','titles array, if one is
+		 * set, or generate default titles based on the unit-type and date-range.
+		 * 
+		 * Note that this method will not run for spans in this headerLevel that have a non-null entry 
+		 * in the HeaderLevel.titles','titles array.
+		 * 
+		 * 
+		 * @param {HeaderLevel} headerLevel - a reference to this headerLevel
+		 * @param {Date} startDate - the start of the date-range covered by this span in this level
+		 * @param {Date} endDate - the end of the date-range covered by this span in this level - may be null
+		 * @param {string} defaultValue - the default title as generated by the Timeline
+		 * @param {Calendar} viewer - a reference to the Calendar or Timeline
+		 * @return {string} The formatted title for the values passed in
+		 */
+		titleFormatter?(headerLevel:HeaderLevel, startDate:Date, endDate:Date, defaultValue:string /* String */, viewer:Calendar): string /* HTMLString */; 
+
+	} // HeaderLevel
+
+	export interface HeaderLevelStatic {
+	} // HeaderLevelStatic
+
+
+	/**
+	 * Sets up a real inheritance structure for Javascript objects.
+	 * We separate out class objects from prototypes, so each gets its own inheritance chain. 
+	 * This allows us to set up superclass calls, maintain class vs. instance variables and more!
+	 * 
+	 * The ClassFactory is a singleton object that holds the miscellaneous pieces of our inheritance
+	 * mechanism.
+	 * 
+	 * Your main interaction with the ClassFactory is to create new classes:
+	 * ClassFactory.defineClass("MyClass", "mySuperClass"); 
+	 */
+	export interface ClassFactory {
+	} // ClassFactory
+
+	export interface ClassFactoryStatic {
+
+	/* Methods */
+
+		/**  
+		 * 
+		 * Create a new SmartClient class, which can then be used to create instances of this
+		 * object type, via Class.create.
+		 * 
+		 * The new Class is returned by defineClass, is available as
+		 * isc.ClassName and is also available in global scope if not in
+		 * isc','portal mode. Typically, Class.addProperties is then
+		 * called to establish different defaults in the new class, or to add methods. For
+		 * example:
+		 * 
+		 * isc.defineClass("MyListGrid", "ListGrid").addProperties({
+		 * headerHeight : 40, // change default for listGrid.headerHeight
+		 * 
+		 * // override listGrid.recordClick
+		 * recordClick : function (viewer, record) { 
+		 * isc.say(record.description);
+		 * }
+		 * })
+		 * isc.MyListGrid.create(); // create an instance of the new class
+		 * 
+		 * 
+		 * See also Class.Super','Super() for calling superclass methods.
+		 * 
+		 * NOTE: isc.defineClass() also creates a new function
+		 * isA','class:isA.ClassName() object for identifying instances of
+		 * this Class.
+		 * 
+		 * 
+		 * @param {string} className - Name for the new class.
+		 * @param {Class} superClass - Optional SuperClass Class object or name
+		 * @return {Class} Returns the new Class object.
+		 */
+		defineClass(className:string, superClass?:Class): Class; 
+
+		/**  
+		 * 
+		 * Given a class name, return a pointer to the Class object for that class
+		 * 
+		 * 
+		 * @param {string} className - name of a class
+		 * @return {Class} Class object, or null if not found
+		 */
+		getClass(className:string): Class; 
+
+		/**  
+		 * 
+		 * Given the name of a class, create an instance of that class.
+		 * 
+		 * 
+		 * @param {string} className - Name of a class. (ClassObject) Actual class object to use.
+		 * @param {any} props - Properties to apply to the instance.
+		 * @param {any} props2 - More properties to apply to the instance.
+		 * @param {any} props3 - Yet more properties to apply to the instance.
+		 * @return {Class} Pointer to the new class.
+		 */
+		newInstance(className:string, props?:any /* object */, props2?:any /* object */, props3?:any /* object */): Class /* class */; 
+
+		/**  
+		 * 
+		 * Intentionally clobber an existing SmartClient Class, if it already exists. Works 
+		 * identically to ClassFactory.defineClass, except that no warning is logged to the
+		 * console.
+		 * 
+		 * 
+		 */
+		overwriteClass(): void; 
+
+	} // ClassFactoryStatic
+
+
+	/**
 	 * Defines a simple gradient vertical gradient between Gradient.startColor','two
 	 * Gradient.endColor','colors, or using Gradient.colorStops','colorStops. See
 	 * SimpleGradient, LinearGradient and RadialGradient for further
@@ -1349,6 +1637,71 @@ declare namespace Isc {
 
 	export interface SerializationContextStatic {
 	} // SerializationContextStatic
+
+
+	/**
+	 * Holds the information of a drawing command. 
+	 */
+	export interface DrawShapeCommand {
+		/** 
+		 * (Read only) The command arguments. The number of arguments and their types depend on this command's DrawShapeCommand.type','type.
+		 * Flags: IR
+		 */
+		readonly args?: Array<any> /* Array */;
+		/** 
+		 * (Read only) The command type.
+		 * Flags: IR
+		 */
+		readonly type?: DrawShapeCommandType;
+	} // DrawShapeCommand
+
+	export interface DrawShapeCommandStatic {
+	} // DrawShapeCommandStatic
+
+
+	/**
+	 * Defines a set of properties that specify how the tree will be explored by Tree.discoverTree 
+	 */
+	export interface DiscoverTreeSettings {
+		/** 
+		 * (Read only) When heuristically finding a property that appears to contain child objects, the childrenMode
+		 * determines how to chose the property that appears to contain child objects
+		 * Flags: IR
+		 */
+		readonly childrenMode?: ChildrenPropertyMode;
+		/** 
+		 * For string leaf nodes (if allowed), the name of the property to store the string under
+		 * in the auto-created object
+		 * Flags: IRW
+		 */
+		readonly nameProperty?: string /* String */;
+		/** 
+		 * What to rename the array of children once discovered.
+		 * If not set, it will default to the value of Tree.childrenProperty inside discoverTree()
+		 * Flags: IRW
+		 */
+		readonly newChildrenProperty?: string /* String */;
+		/** 
+		 * Determines how to scan for the Tree.childrenProperty
+		 * Flags: IRW
+		 */
+		readonly scanMode?: ScanMode;
+		/** 
+		 * What to do if there is more than one possible Tree.childrenProperty
+		 * when using scanMode "branch" or "level"
+		 * Flags: IRW
+		 */
+		readonly tieMode?: TieMode;
+		/** 
+		 * Each discovered child is labeled with a configurable "typeProperty" set to the value
+		 * of the property that held the children
+		 * Flags: IRW
+		 */
+		readonly typeProperty?: string /* String */;
+	} // DiscoverTreeSettings
+
+	export interface DiscoverTreeSettingsStatic {
+	} // DiscoverTreeSettingsStatic
 
 
 	/**
@@ -1408,6 +1761,34 @@ declare namespace Isc {
 
 	export interface EditNodeStatic extends PaletteNodeStatic {
 	} // EditNodeStatic
+
+
+	/**
+	 * Settings for use with SimpleType.applySummaryFunction. 
+	 */
+	export interface SummaryConfiguration {
+		/** 
+		 * The field value to treat as the bad result of a user formula or summary evaluation.
+		 * If a summary function actually uses the value (rather than say "count"), this usually
+		 * means that the value will simply be skipped rather than voiding evaluation of the
+		 * entire summary.
+		 * Flags: IRW
+		 */
+		readonly badFormulaResultValue?: string /* String */;
+		/** 
+		 * (Advanced) The field value to treat as an invalid value from a summary row (see 
+		 * ListGrid.showGridSummary or ListGrid.showGroupSummary) or as an invalid value
+		 * in a summary-type field (see ListGridFieldType','listGridFieldType:"summary").
+		 * If a summary function actually uses the value (rather than say "count"), this usually
+		 * means that the value will simply be skipped rather than voiding evaluation of the
+		 * entire summary.
+		 * Flags: IRWA
+		 */
+		readonly invalidSummaryValue?: string;
+	} // SummaryConfiguration
+
+	export interface SummaryConfigurationStatic {
+	} // SummaryConfigurationStatic
 
 
 	/**
@@ -1505,6 +1886,41 @@ declare namespace Isc {
 
 	export interface GroupSpecifierStatic {
 	} // GroupSpecifierStatic
+
+
+	/**
+	 * Definition of a linear gradient between two points, (LinearGradient.x1','x1, LinearGradient.y1','y1)
+	 * and (LinearGradient.x2','x2, LinearGradient.y2','y2). 
+	 */
+	export interface LinearGradient extends Gradient {
+		/** 
+		 * (Read only) X coordinate of the start point. This can be a number or a percentage of the width of the
+		 * bounding box of the DrawItem to which it is applied.
+		 * Flags: IR
+		 */
+		readonly x1?: string /* String */;
+		/** 
+		 * (Read only) X coordinate of the end point. This can be a number or a percentage of the width of the
+		 * bounding box of the DrawItem to which it is applied.
+		 * Flags: IR
+		 */
+		readonly x2?: string /* String */;
+		/** 
+		 * (Read only) Y coordinate of the start point. This can be a number or a percentage of the height of the
+		 * bounding box of the DrawItem to which it is applied.
+		 * Flags: IR
+		 */
+		readonly y1?: string /* String */;
+		/** 
+		 * (Read only) Y coordinate of the end point. This can be a number or a percentage of the height of the
+		 * bounding box of the DrawItem to which it is applied.
+		 * Flags: IR
+		 */
+		readonly y2?: string /* String */;
+	} // LinearGradient
+
+	export interface LinearGradientStatic extends GradientStatic {
+	} // LinearGradientStatic
 
 
 	/**
@@ -1727,6 +2143,41 @@ declare namespace Isc {
 
 	export interface FormItemEventInfoStatic {
 	} // FormItemEventInfoStatic
+
+
+	/**
+	 * Definition of a radial gradient. 
+	 */
+	export interface RadialGradient extends Gradient {
+		/** 
+		 * (Read only) x coordinate of outer radial
+		 * Flags: IR
+		 */
+		readonly cx?: string /* String */;
+		/** 
+		 * (Read only) y coordinate of outer radial
+		 * Flags: IR
+		 */
+		readonly cy?: string /* String */;
+		/** 
+		 * (Read only) x coordinate of inner radial
+		 * Flags: IR
+		 */
+		readonly fx?: string /* String */;
+		/** 
+		 * (Read only) y coordinate of inner radial
+		 * Flags: IR
+		 */
+		readonly fy?: string /* String */;
+		/** 
+		 * (Read only) radius
+		 * Flags: IR
+		 */
+		readonly r?: string /* String */;
+	} // RadialGradient
+
+	export interface RadialGradientStatic extends GradientStatic {
+	} // RadialGradientStatic
 
 
 	/**
@@ -2070,6 +2521,83 @@ declare namespace Isc {
 
 
 	/**
+	 * Lane shown in a Timeline view, or in a Calendar.dayView','day view when 
+	 * Calendar.showDayLanes','showDayLanes is true. Each lane is a row or column, 
+	 * respectively, that can contain a set of CalendarEvents. CalendarEvents are placed in
+	 * lanes by matching the Lane.name property to the value of the 
+	 * Calendar.laneNameField property on the CalendarEvent.
+	 * 
+	 * Lanes are typically used to show tasks assigned to different people, broadcasts planned for
+	 * different channels, and similar displays. 
+	 */
+	export interface Lane {
+		/** 
+		 * The base name for the CSS class applied to Calendar.eventCanvas','events when they're
+		 * rendered in this lane. See Calendar.eventStyleName.
+		 * 
+		 * If set directly on a Lane.sublanes','sublane, overrides the corresponding value on
+		 * the parent Calendar.lanes','lane. See 
+		 * Calendar.getEventCanvasStyle','getEventCanvasStyle() for more information.
+		 * Flags: IRW, Group: appearance
+		 */
+		readonly eventStyleName?: string /* CSSStyleName */;
+		/** 
+		 * (Read only) In Timelines, the height of this Lane's row. Has no effect when set on a Lane 
+		 * being displayed in a Calendar.dayView','day view as a result of 
+		 * Calendar.showDayLanes being true.
+		 * 
+		 * If set directly on a Lane.sublanes','sublane, overrides the default behavior of 
+		 * dividing the height equally among the lane's sublanes. Each sublane is still initially 
+		 * assigned an equal slice of the parent height, and the value for this sublane is 
+		 * then updated. So the overall height of the parent lane will change by the delta between the 
+		 * initial slice and the specified one.
+		 * Flags: IR
+		 */
+		readonly height?: number /* Number */;
+		/** 
+		 * (Read only) To determine whether a CalendarEvent should be placed in this lane, the value of this 
+		 * attribute is compared with the Calendar.laneNameField property on the CalendarEvent.
+		 * Flags: IR
+		 */
+		readonly name?: string /* String */;
+		/** 
+		 * (Read only) Array of Lane objects that will share the available space in the parent Lane,
+		 * vertically in Calendar.timelineView','timelines and horizontally in 
+		 * Calendar.dayView','day views.
+		 * 
+		 * Only one level of sublanes is supported, so this attribute only has an effect on
+		 * Calendar.lanes','top-level lanes.
+		 * 
+		 * Note that this feature is mutually exclusive with the 
+		 * Calendar.eventAutoArrange','auto arrangement of events that share time.
+		 * Flags: IR
+		 */
+		readonly sublanes?: Array<Lane> /* Array of Lane */;
+		/** 
+		 * (Read only) Title to show for this lane. Has no effect if set directly on Lane.sublanes','sublanes.
+		 * Flags: IR
+		 */
+		readonly title?: string /* HTMLString */;
+		/** 
+		 * (Read only) When set on a Lane being displayed in a Calendar.dayView','day view as a result of 
+		 * Calendar.showDayLanes being set, dictates the width of the Lane's column. Has no 
+		 * effect in Timelines.
+		 * 
+		 * If set directly on a Lane.sublanes','sublane, overrides the default behavior of 
+		 * dividing the width equally among the lane's sublanes. Each sublane is still initially 
+		 * assigned an equal slice of the original parent width, and the value for this sublane is then
+		 * updated. So the overall width of the parent lane will change by the delta between the 
+		 * initial slice and the specified one.
+		 * Flags: IR
+		 */
+		readonly width?: number /* Number */;
+	} // Lane
+
+	export interface LaneStatic {
+	} // LaneStatic
+
+
+	/**
 	 * A header span appears as a second level of headers in a ListGrid, spanning one or more
 	 * ListGrid columns and their associated headers.
 	 * 
@@ -2362,6 +2890,31 @@ declare namespace Isc {
 
 	export interface ImgPropertiesStatic {
 	} // ImgPropertiesStatic
+
+
+	/**
+	 * Extra methods added to the Number object, available on all number variables. 
+	 */
+	export interface Number {
+
+		/* Instance Method Overrides */
+
+		/**  
+		 *  Returns true if the number parameter falls between the 'first' and 'second' paramters.
+		 * 
+		 * 
+		 * @param {number} number - Number object to be evaluated
+		 * @param {number} first - Number at the lower boundary
+		 * @param {number} second - Number at the upper boundary
+		 * @param {number} inclusive - Whether or not the numbers at either end of the boundary should be included in the comparison
+		 * @return {boolean} True if the given <code>number</code> falls inside the given range, false otherwise @example n = 3; bool = n.isBetween(3, 3, 6, true); // true&#010 @example n = 3; bool = n.isBetween(3, 3, 6);       // false
+		 */
+		isBetween?(number:number, first?:number, second?:number, inclusive?:number): boolean /* Boolean */; 
+
+	} // Number
+
+	export interface NumberStatic {
+	} // NumberStatic
 
 
 	/**
@@ -5210,6 +5763,193 @@ declare namespace Isc {
 
 
 	/**
+	 * A type of Record which represents an event to occur at a specific time, displayed
+	 * within the calendar. 
+	 */
+	export interface CalendarEvent {
+		/** 
+		 * An optional background color for the body portion of EventCanvas','canvases
+		 * representing this event in the various CalendarView','calendar views.
+		 * 
+		 * Note that the recommended approach for styling events is to set a
+		 * CalendarEvent.styleName','custom CSS style, which allows more complete customization
+		 * of both header and body portions.
+		 * Flags: IRW
+		 */
+		readonly backgroundColor?: string /* String */;
+		/** 
+		 * An optional border color for the body portion of EventCanvas','canvases
+		 * representing this event in the various CalendarView','calendar views.
+		 * 
+		 * Note that the recommended approach for styling events is to set a
+		 * CalendarEvent.styleName','custom CSS style, which allows more complete customization
+		 * of both header and body portions.
+		 * Flags: IRW
+		 */
+		readonly borderColor?: string /* String */;
+		/** 
+		 * Optional boolean value controlling whether this event can be dragged with the mouse.
+		 * The name of this field within the CalendarEvent can be changed via
+		 * Calendar.canDragEventField. Only has an effect when 
+		 * Calendar.canEditEvents','editing is enabled.
+		 * 
+		 * You can separately disallow drag-resize via CalendarEvent.canResize','canResize.
+		 * Flags: IRW
+		 */
+		readonly canDrag?: boolean /* Boolean */;
+		/** 
+		 * Optional boolean value controlling the editability of this particular calendarEvent.
+		 * The name of this field within the CalendarEvent can be changed via
+		 * Calendar.canEditField.
+		 * Flags: IRW
+		 */
+		readonly canEdit?: boolean /* Boolean */;
+		/** 
+		 * Boolean indicating whether this event can be moved between lanes. Can also be set at the
+		 * Calendar.canEditLane','calendar level.
+		 * 
+		 * The name of this field within the CalendarEvent can be changed via 
+		 * Calendar.canEditLaneField.
+		 * Flags: IRW
+		 */
+		readonly canEditLane?: boolean /* Boolean */;
+		/** 
+		 * Boolean indicating whether this event can be moved between lanes. Can also be set at the
+		 * Calendar.canEditSublane','calendar level.
+		 * 
+		 * The name of this field within the CalendarEvent can be changed via 
+		 * Calendar.canEditSublaneField.
+		 * Flags: IRW
+		 */
+		readonly canEditSublane?: boolean /* Boolean */;
+		/** 
+		 * Optional boolean value controlling whether this event can be drag-resized with the mouse.
+		 * The name of this field within the CalendarEvent can be changed via
+		 * Calendar.canResizeEventField.
+		 * 
+		 * Only has an effect if Calendar.canEditEvents','editing and 
+		 * Calendar.canDragEvents','dragging are also enabled.
+		 * Flags: IRW
+		 */
+		readonly canResize?: boolean /* Boolean */;
+		/** 
+		 * String which represents the description of a CalendarEvent
+		 * The name of this field within the CalendarEvent can be changed via
+		 * Calendar.descriptionField
+		 * Flags: IRW
+		 */
+		readonly description?: string /* String */;
+		/** 
+		 * The duration of this event. May be specified instead of an 
+		 * CalendarEvent.endDate','end date and implies that this is a "Period" type event. If
+		 * set to zero, implies an "Instant" type event - an event with a start date but no length.
+		 * Flags: IRW
+		 */
+		readonly duration?: number /* Integer */;
+		/** 
+		 * When a CalendarEvent.duration','duration is set for this event, this is the unit of
+		 * that duration. The default is minutes.
+		 * Flags: IRW
+		 */
+		readonly durationUnit?: TimeUnit;
+		/** 
+		 * Date object which represents the end date of a CalendarEvent
+		 * The name of this field within the CalendarEvent can be changed via
+		 * Calendar.endDateField
+		 * Flags: IRW
+		 */
+		readonly endDate?: Date;
+		/** 
+		 * An optional background color for the header portion of EventCanvas','canvases
+		 * representing this event in the various CalendarView','calendar views.
+		 * 
+		 * Note that the recommended approach for styling events is to set a
+		 * CalendarEvent.styleName','custom CSS style, which allows more complete customization
+		 * of both header and body portions.
+		 * Flags: IRW
+		 */
+		readonly headerBackgroundColor?: string /* String */;
+		/** 
+		 * An optional border color for the header portion of EventCanvas','canvases
+		 * representing this event in the various CalendarView','calendar views.
+		 * 
+		 * Note that the recommended approach for styling events is to set a
+		 * CalendarEvent.styleName','custom CSS style, which allows more complete customization
+		 * of both header and body portions.
+		 * Flags: IRW
+		 */
+		readonly headerBorderColor?: string /* String */;
+		/** 
+		 * An optional text color for the header portion of EventCanvas','canvases
+		 * representing this event in the various CalendarView','calendar views.
+		 * 
+		 * Note that the recommended approach for styling events is to set a
+		 * CalendarEvent.styleName','custom CSS style, which allows more complete customization
+		 * of both header and body portions.
+		 * Flags: IRW
+		 */
+		readonly headerTextColor?: string /* String */;
+		/** 
+		 * When in Timeline mode, or when Calendar.showDayLanes is true, a string that 
+		 * represents the name of the Calendar.lanes','lane this CalendarEvent should 
+		 * sit in. The name of this field within the CalendarEvent can be changed via
+		 * Calendar.laneNameField.
+		 * Flags: IRW
+		 */
+		readonly lane?: string /* String */;
+		/** 
+		 * String which represents the name of a CalendarEvent
+		 * The name of this field within the CalendarEvent can be changed via
+		 * Calendar.nameField
+		 * Flags: IRW
+		 */
+		readonly name?: string /* String */;
+		/** 
+		 * Date object which represents the start date of a CalendarEvent.
+		 * The name of this field within the CalendarEvent can be changed via
+		 * Calendar.startDateField
+		 * Flags: IRW
+		 */
+		readonly startDate?: Date;
+		/** 
+		 * (Read only) CSS style series to use for Calendar.eventCanvas','canvas instances that 
+		 * represent this event in the various CalendarView','calendar views. The basic 
+		 * series should include three classes - the base style and others suffixed "Header" and "Body".
+		 * 
+		 * If not specified on the event, the style can be specified on the 
+		 * Calendar.eventStyleName','calendar, the CalendarView.eventStyleName','view or
+		 * individually on each Lane.eventStyleName','lane or Lane.sublanes','sublane.
+		 * 
+		 * The name of this field within the CalendarEvent can be changed via
+		 * Calendar.eventStyleNameField
+		 * Flags: IR
+		 */
+		readonly styleName?: string /* CSSStyleName */;
+		/** 
+		 * When in Timeline mode, or when Calendar.showDayLanes is true, a string that 
+		 * represents the name of the Lane.sublanes','sublane this CalendarEvent should 
+		 * sit in. The name of this field within the CalendarEvent can be changed via
+		 * Calendar.sublaneNameField.
+		 * Flags: IRW
+		 */
+		readonly sublane?: string /* String */;
+		/** 
+		 * An optional text color for the body portion of EventCanvas','canvases
+		 * representing this event in the various CalendarView','calendar views.
+		 * 
+		 * Note that the recommended approach for styling events is to set a
+		 * CalendarEvent.styleName','custom CSS style, which allows more complete customization
+		 * of both header and body portions.
+		 * Flags: IRW
+		 */
+		readonly textColor?: string /* String */;
+	} // CalendarEvent
+
+	export interface CalendarEventStatic {
+	} // CalendarEventStatic
+
+
+	/**
 	 * An object representing one of the image segments displayed by a StretchImg. Each item of
 	 * a StretchImg's StretchImg.items','items array is a StretchItem. 
 	 */
@@ -5780,6 +6520,65 @@ declare namespace Isc {
 
 
 	/**
+	 * A TestFunctionResult is an ordinary JavaScript Object with properties that indicate the 
+	 * status of an attempt to generate and execute a function for FormulaBuilder and 
+	 * it's subclasses.
+	 * 
+	 * Because TestFunctionResult is always an ordinary JavaScript Object, it supports the
+	 * normal behaviors of JavaScript Objects, including accessing and assigning to properties
+	 * via dot notation:
+	 * 
+	 * var propValue = testFunctionResult.propName;
+	 * testFunctionResult.propName = newValue;
+	 * 
+	 *  
+	 */
+	export interface TestFunctionResult {
+		/** 
+		 * Set to true if the formula or summary definition passed in was empty.
+		 * Flags: IRW, Group: formulaFields
+		 */
+		readonly emptyTestValue?: boolean;
+		/** 
+		 * If the formula or summary format caused a JavaScript error, this contains the JavaScript error text.
+		 * Flags: IRW, Group: formulaFields
+		 */
+		readonly errorText?: string;
+		/** 
+		 * Set to true if calling the formula or summary format resulted in a JavaScript Error.
+		 * This would generally indicate a reference to non-existent data values. See 
+		 * TestFunctionResult.failedGeneration for other types of failure.
+		 * 
+		 * When set to true, TestFunctionResult.errorText contains the exception message.
+		 * Flags: IRW, Group: formulaFields
+		 */
+		readonly failedExecution?: boolean;
+		/** 
+		 * Set to true if there is a syntax error in the formula or summary being checked.
+		 * 
+		 * When set to true, TestFunctionResult.errorText contains the exception message.
+		 * Flags: IRW, Group: formulaFields
+		 */
+		readonly failedGeneration?: boolean;
+		/** 
+		 * Set to the record that was used when testing the generated function. This is the record
+		 * selected by FormulaBuilder.getTestRecord.
+		 * Flags: IRW, Group: formulaFields
+		 */
+		readonly record?: any /* Record */;
+		/** 
+		 * When a formula or summary format is valid, result contains the result returned by the
+		 * generated function when it was executed.
+		 * Flags: IRW, Group: formulaFields
+		 */
+		readonly result?: string;
+	} // TestFunctionResult
+
+	export interface TestFunctionResultStatic {
+	} // TestFunctionResultStatic
+
+
+	/**
 	 * 
 	 * Tabs are specified as objects, not class instances. For example, when
 	 * developing in JavaScript, a typical initialization block for a TabSet would look like
@@ -6153,6 +6952,20 @@ declare namespace Isc {
 
 
 	/**
+	 * Represents a sector on the gauge. 
+	 */
+	export interface GaugeSector {
+		readonly endAngle?: number /* float */;
+		readonly fillColor?: string /* CSSColor */;
+		readonly startAngle?: number /* float */;
+		readonly value?: number /* float */;
+	} // GaugeSector
+
+	export interface GaugeSectorStatic {
+	} // GaugeSectorStatic
+
+
+	/**
 	 * Form item icon descriptor objects used by Form Items to specify the appearance and
 	 * behavior of icons displayed after the item in the page flow. 
 	 */
@@ -6472,6 +7285,29 @@ declare namespace Isc {
 
 	export interface FormItemIconStatic {
 	} // FormItemIconStatic
+
+
+	/**
+	 * A TileRecord is a JavaScript Object whose properties contain values for each
+	 * TileField. A TileRecord may have additional properties which affect the record's
+	 * appearance or behavior, or which hold data for use by custom logic or other, related
+	 * components. 
+	 */
+	export interface TileRecord {
+		/** 
+		 * SmartClient Class to use to construct the tile for this particular record.
+		 * Flags: IRW
+		 */
+		readonly tileConstructor?: string /* String */;
+		/** 
+		 * Additional properties to be passed when creating a tile for this record.
+		 * Flags: IRW
+		 */
+		readonly tileProperties?: CanvasProps /* Canvas Properties */;
+	} // TileRecord
+
+	export interface TileRecordStatic {
+	} // TileRecordStatic
 
 
 	/**

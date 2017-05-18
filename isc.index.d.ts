@@ -7,7 +7,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/18/2017 8:33:24 AM by KWhite
+// Generated: 5/18/2017 9:06:35 AM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-18
 
 /**
@@ -70,6 +70,65 @@ declare namespace Isc {
 		 * The Button widget class implements interactive, style-based button widgets.
 		 */ 
 		Button: ButtonStatic<Button, ButtonProps>;
+
+		/** 
+		 * Calendar extends Canvas
+		 * The Calendar component provides several different ways for a user to view and
+		 * edit a set of events. Note that the loadingOptionalModules','Calendar module 
+		 * must be loaded to make use of the Calendar class.
+		 * 
+		 * CalendarEvents
+		 * 
+		 * Events are represented as ordinary JavaScript Objects (see CalendarEvent). 
+		 * The Calendar expects to be able to read and write a basic set of properties 
+		 * on events: name, startDate, endDate, description, etc, which can be stored 
+		 * under configurable property names (see eg Calendar.startDateField).
+		 * 
+		 * Much like a ListGrid manages it's ListGridRecords, the Calendar can 
+		 * either be passed an ordinary Array of CalendarEvents or can fetch data from a 
+		 * DataSource. When this is the case, if the DataSource 
+		 * does not contain fields with the configured property names, an attempt is made to 
+		 * auto-detect likely-looking fields from those that are present. To see logs indicating that 
+		 * this has happened, switch default logging preferences to INFO level in the Developer Console.
+		 * 
+		 * If the calendar is bound to a DataSource, event changes by user action or by 
+		 * calling methods will be saved to the DataSource.
+		 * 
+		 * Navigation
+		 * 
+		 * The calendar supports a number of views by default: Calendar.dayView','day,
+		 * Calendar.weekView','week, Calendar.monthView','month and 
+		 * Calendar.timelineView','timeline. The user can navigate using back and forward 
+		 * buttons or via an attached Calendar.dateChooser','DateChooser.
+		 * 
+		 * Event Manipulation
+		 * 
+		 * Events can be created by clicking directly onto one of the views, or via the 
+		 * Calendar.addEventButton','Add Event button. In the day, week and timeline views, the user may 
+		 * click and drag to create an event of a specific duration.
+		 * 
+		 * Creating an event via click or click and drag pops up the
+		 * Calendar.eventDialog','EventDialog, which provides a simple form for 
+		 * quick event entry (for normal events, only the description is required by default - for 
+		 * events that are shown in a Calendar.lanes','lane, that field is also required).
+		 * 
+		 * A separate editor called the Calendar.eventEditor','EventEditor provides 
+		 * an interface for editing all possible properties of an event, including custom 
+		 * properties. The EventEditor is used whenever a pre-existing event is being 
+		 * edited, and can also be invoked
+		 * by the user wherever the simpler EventDialog appears.
+		 * 
+		 * Events can also be programmatically Calendar.addCalendarEvent','added,
+		 * Calendar.removeEvent','removed, or Calendar.updateCalendarEvent','updated.
+		 */ 
+		Calendar: CalendarStatic<Calendar, CalendarProps>;
+
+		/** 
+		 * CalendarView extends ListGrid
+		 * CalendarView is a base class, extended by the various views available in a 
+		 * Calendar','Calendar.
+		 */ 
+		CalendarView: CalendarViewStatic<CalendarView, CalendarViewProps>;
 
 		/** 
 		 * Canvas extends BaseWidget
@@ -315,6 +374,19 @@ declare namespace Isc {
 		 * additional instance methods available on all date instances.
 		 */ 
 		Date: DateStatic;
+
+		/** 
+		 * DateChooser extends VLayout
+		 * Simple interactive calendar interface used to pick a date.
+		 * Used by the DateItem class.
+		 */ 
+		DateChooser: DateChooserStatic<DateChooser, DateChooserProps>;
+
+		/** 
+		 * DateGrid extends ListGrid
+		 * A ListGrid subclass that manages calendar views.
+		 */ 
+		DateGrid: DateGridStatic<DateGrid, DateGridProps>;
 
 		/** 
 		 * Static singleton class containing APIs for interacting with Dates.
@@ -639,6 +711,20 @@ declare namespace Isc {
 		 * settings that are passthroughs to the underlying EditContext for convenience.
 		 */ 
 		EditTree: EditTreeStatic<EditTree, EditTreeProps>;
+
+		/** 
+		 * EventCanvas extends VLayout
+		 * The EventCanvas component is a lightweight VLayout','layout subclass for 
+		 * displaying a CalendarEvent in a CalendarView.
+		 * 
+		 * Each instance can be CalendarEvent.styleName','styled, and can render a single area,
+		 * or separate EventCanvas.showHeader','header and EventCanvas.showBody','body
+		 * areas, for the look of a Window.
+		 * 
+		 * The component's close and context buttons, and any necessary resizers, are
+		 * shown on EventCanvas.showRolloverControls','rollover.
+		 */ 
+		EventCanvas: EventCanvasStatic<EventCanvas, EventCanvasProps>;
 
 		/** 
 		 * FacetChart extends DrawPane
@@ -1031,6 +1117,22 @@ declare namespace Isc {
 		 * Example uses are Window minimize/close buttons.
 		 */ 
 		ImgButton: ImgButtonStatic<ImgButton, ImgButtonProps>;
+
+		/** 
+		 * IndicatorCanvas extends EventCanvas
+		 * A subclass of EventCanvas','EventCanvas, used to render 
+		 * Calendar.indicators','indicator lines at important points in 
+		 * CalendarView','calendar views.
+		 * 
+		 * An IndicatorCanvas is a non-interactive, semi-transparent canvas that highlights a portion of a 
+		 * calendar view, by rendering across all lanes and behind normal Calendar.data','events.
+		 * 
+		 * By default, the canvas shows no label but does show a hover.
+		 * 
+		 * Default styling is specified at the Calendar.indicatorStyleName','calendar level 
+		 * and can be overridden for CalendarEvent.styleName','individual indicators.
+		 */ 
+		IndicatorCanvas: IndicatorCanvasStatic<IndicatorCanvas, IndicatorCanvasProps>;
 
 		/** 
 		 * A library of functions for determining the types of other objects.
@@ -2255,6 +2357,42 @@ declare namespace Isc {
 		Time: TimeStatic;
 
 		/** 
+		 * TimeItem extends FormItem
+		 * FormItem for editing times in a text field or via a set of selector components. 
+		 * 
+		 * The display format for this field may be set by TimeItem.timeFormatter. Defaults
+		 * are picked up from TimeItem.timeFormatter24Hour and TimeItem.timeFormatter12Hour.
+		 * See also Time.setNormalDisplayFormat for system-wide settings.
+		 * 
+		 * TimeItem automatically accepts both 12 and 24 hour time as well as partial times and a
+		 * variety of possible time value separators. Examples:
+		 * 
+		 * 11:34:45 AM => 11:34:45
+		 * 1:3:5 AM => 01:30:50
+		 * 1:3p => 13:30:00
+		 * 11 34 am => 11:34:00
+		 * 11-34 => 11:34:00
+		 * 113445 => 11:34:45
+		 * 13445 => 01:34:45
+		 * 1134 => 11:34:00
+		 * 134 => 01:34:00
+		 * 
+		 * 
+		 * Values entered by the user are stored as JavaScript Date objects in local time. 
+		 * The day, month and year values of this Date object are not relevant and should 
+		 * be ignored.
+		 * 
+		 * By default, when used in a SearchForm or as a field in a ListGrid's 
+		 * ListGrid.showFilterEditor','filter editor, TimeItems will automatically generate 
+		 * AdvancedCriteria - for example, entering "11:00" into the item will generate a 
+		 * OperatorId','betweenInclusive Criterion that selects all times between 
+		 * 11:00:00 and 11:59:59. If the form is databound and the DataSource is marked as being
+		 * DataSource.allowAdvancedCriteria','allowAdvancedCriteria:false, the criteria generated
+		 * will be simple, checking for data with logical time values equal to the displayed value.
+		 */ 
+		TimeItem: TimeItemStatic<TimeItem, TimeItemProps>;
+
+		/** 
 		 * Toolbar extends Layout
 		 * A Toolbar creates a vertical or horizontal strip of similar components (typically Buttons)
 		 * and provides managed resizing and reordering behavior over those components.
@@ -2422,6 +2560,21 @@ declare namespace Isc {
 		 * isc.warn','shortcuts for common application dialogs.
 		 */ 
 		Window: WindowStatic<Window, WindowProps>;
+
+		/** 
+		 * ZoneCanvas extends EventCanvas
+		 * A subclass of EventCanvas','EventCanvas, used to render 
+		 * Calendar.zones','styled areas in CalendarView','calendar views.
+		 * 
+		 * A ZoneCanvas is a semi-transparent canvas that highlights a portion of a 
+		 * calendar view, by rendering across all lanes and behind normal Calendar.data','events.
+		 * 
+		 * By default, the canvas shows a bottom-aligned label containing the 
+		 * CalendarEvent.name','zone name.
+		 * Default styling is specified at the Calendar.zoneStyleName','calendar level 
+		 * and can be overridden for CalendarEvent.styleName','individual zones.
+		 */ 
+		ZoneCanvas: ZoneCanvasStatic<ZoneCanvas, ZoneCanvasProps>;
 
 
     }
