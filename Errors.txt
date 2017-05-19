@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-18
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-19
 
 Errors during generation
-Generated: 5/18/2017 9:06:35 AM by kwhite
+Generated: 5/19/2017 8:03:41 AM by KWhite
 
 Summary
 Total Types  : 229
 Total Classes: 309
 Total Objects: 67
-Total Methods: 3555
+Total Methods: 3559
 
 Attributes missing R flag: 45 (Should they all have an R flag?)
 1. attr:Calendar.eventCanvas, Flags=A
@@ -764,28 +764,27 @@ Getter Methods with return type that does not match the attribute type: 15
 14. method:TabSet.getSelectedTab, attrType='number', return Type = 'Tab'
 15. method:ValuesManager.getMembers, attrType='Array of DynamicForm', return Type = 'array'
 
-Suspected optional parameters that are marked with optional='false': 19. Parameters listed here (may be more than one parameter per method)
+Suspected optional parameters that are marked with optional='false': 18. Parameters listed here (may be more than one parameter per method)
 1. classMethod:Time.setShortDisplayFormat, ParamType= TimeDisplayFormat | FormatString | function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
 2. method:Date.toNormalDate, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
-3. classMethod:Messaging.subscribe, ParamType= String, ParamName=selector, ParamDesc=JMS selector used with Queues to filter the messages that arrive  to the channel (optional).
-4. method:DataSource.renameFile, ParamType= FileSpec | String, ParamName=oldFileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat&#010                 of the file to rename.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending on the configuration of the DataSource, the fileType and fileFormat&#010                 may be optional.
-5. method:ListGrid.setDataSource, ParamType= Array of Fields, ParamName=fields, ParamDesc=optional array of fields to use
-6. method:DataBoundComponent.setDataSource, ParamType= Array of Fields, ParamName=fields, ParamDesc=optional array of fields to use
-7. method:Date.toShortDate, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
-8. classMethod:Time.setNormalDisplayFormat, ParamType= TimeDisplayFormat | FormatString | function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
-9. method:Date.toNormalDatetime, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
-10. method:DataSource.exportClientData, ParamType= DSCallback, ParamName=callback, ParamDesc=Optional callback.  Note that this is only applicable  if you also specify ${isc.DocUtils.linkForRef('attr:DSRequest.exportToClient','exportToClient')}: false in the &#010 request properties
-11. method:DataSource.removeFile, ParamType= FileSpec | String, ParamName=fileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending the configuration of the DataSource, the fileType&#010                 and fileFormat may be optional.
-12. method:Class.evaluate, ParamType= object, ParamName=evalArgs, ParamDesc=Optional mapping of argument names to values - each key will      be available as a local variable when the script is executed.
-13. method:CubeGrid.hiliteCell, ParamType= string, ParamName=[], ParamDesc=optional third parameter - hilite ID.
-14. classMethod:DataSource.getFieldValue, ParamType= dataPath, ParamName=, ParamDesc=(String) Optionally, a string expressing the dataPath to use for value lookup.                            If null, the dataPath from the field will be used
-15. classMethod:DataSource.getFieldValue, ParamType= component, ParamName=, ParamDesc=(Canvas) Optionally, a component to prvide extra context for the dataPath                             search.  This is typically required if the dataPath traverses a list
-16. classMethod:DataSource.getFieldValue, ParamType= reason, ParamName=, ParamDesc=(String) An optional reason for the get request, to be passed into                                   any ${isc.DocUtils.linkForRef('method:SimpleType.getAtomicValue')} method - see that&#010                                   API for details
-17. method:DataSource.saveFile, ParamType= FileSpec | String, ParamName=fileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending on the configuration of the DataSource, the fileType&#010                 and fileFormat may be optional.
-18. classMethod:DataSource.exportClientData, ParamType= DSCallback, ParamName=callback, ParamDesc=Optional callback.  Note that this is only applicable  if you also specify ${isc.DocUtils.linkForRef('attr:DSRequest.exportToClient','exportToClient')}: false in the &#010 request properties
-19. classMethod:Class.evaluate, ParamType= object, ParamName=evalArgs, ParamDesc=Optional mapping of argument names to values - each key will      be available as a local variable when the script is executed.
-20. classMethod:DataSource.saveValueViaDataPath, ParamType= String, ParamName=reason, ParamDesc=An optional reason for the get request, to be passed into                                   any ${isc.DocUtils.linkForRef('method:SimpleType.updateAtomicValue')} method - see that&#010                                   API for details
-21. method:Date.toShortDateTime, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
+3. method:DataSource.renameFile, ParamType= FileSpec | String, ParamName=oldFileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat&#010                 of the file to rename.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending on the configuration of the DataSource, the fileType and fileFormat&#010                 may be optional.
+4. method:ListGrid.setDataSource, ParamType= Array of Fields, ParamName=fields, ParamDesc=optional array of fields to use
+5. method:DataBoundComponent.setDataSource, ParamType= Array of Fields, ParamName=fields, ParamDesc=optional array of fields to use
+6. method:Date.toShortDate, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
+7. classMethod:Time.setNormalDisplayFormat, ParamType= TimeDisplayFormat | FormatString | function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
+8. method:Date.toNormalDatetime, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
+9. method:DataSource.exportClientData, ParamType= DSCallback, ParamName=callback, ParamDesc=Optional callback.  Note that this is only applicable  if you also specify ${isc.DocUtils.linkForRef('attr:DSRequest.exportToClient','exportToClient')}: false in the &#010 request properties
+10. method:DataSource.removeFile, ParamType= FileSpec | String, ParamName=fileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending the configuration of the DataSource, the fileType&#010                 and fileFormat may be optional.
+11. method:Class.evaluate, ParamType= object, ParamName=evalArgs, ParamDesc=Optional mapping of argument names to values - each key will      be available as a local variable when the script is executed.
+12. method:CubeGrid.hiliteCell, ParamType= string, ParamName=[], ParamDesc=optional third parameter - hilite ID.
+13. classMethod:DataSource.getFieldValue, ParamType= dataPath, ParamName=, ParamDesc=(String) Optionally, a string expressing the dataPath to use for value lookup.                            If null, the dataPath from the field will be used
+14. classMethod:DataSource.getFieldValue, ParamType= component, ParamName=, ParamDesc=(Canvas) Optionally, a component to prvide extra context for the dataPath                             search.  This is typically required if the dataPath traverses a list
+15. classMethod:DataSource.getFieldValue, ParamType= reason, ParamName=, ParamDesc=(String) An optional reason for the get request, to be passed into                                   any ${isc.DocUtils.linkForRef('method:SimpleType.getAtomicValue')} method - see that&#010                                   API for details
+16. method:DataSource.saveFile, ParamType= FileSpec | String, ParamName=fileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending on the configuration of the DataSource, the fileType&#010                 and fileFormat may be optional.
+17. classMethod:DataSource.exportClientData, ParamType= DSCallback, ParamName=callback, ParamDesc=Optional callback.  Note that this is only applicable  if you also specify ${isc.DocUtils.linkForRef('attr:DSRequest.exportToClient','exportToClient')}: false in the &#010 request properties
+18. classMethod:Class.evaluate, ParamType= object, ParamName=evalArgs, ParamDesc=Optional mapping of argument names to values - each key will      be available as a local variable when the script is executed.
+19. classMethod:DataSource.saveValueViaDataPath, ParamType= String, ParamName=reason, ParamDesc=An optional reason for the get request, to be passed into                                   any ${isc.DocUtils.linkForRef('method:SimpleType.updateAtomicValue')} method - see that&#010                                   API for details
+20. method:Date.toShortDateTime, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 
 
 The following methods were excluded
@@ -934,17 +933,17 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-05-18	229	5	309	67	3555	3	67	216	657	130	1	225	10	0	10	83	15	1	7	7	83	19	15	45	240	130	0	237	137	3	3	229	5	66	116	2519	1	1	0.9850746	0.3754045	0.7085795	
+2017-05-19	229	5	309	67	3559	3	67	216	657	130	1	225	10	0	10	83	15	1	7	7	83	18	15	45	240	130	0	237	137	3	3	229	5	66	116	2523	1	1	0.9850746	0.3754045	0.708907	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-05-18
+Metrics for build SNAPSHOT_v11.1d_2017-05-19
 ===== Information =====
 (Informational only, not a problem)
 Types: 229
 Interfaces: 5
 Classes: 309
 Objects: 67
-Methods: 3,555
+Methods: 3,559
 string values with quotes: 216
 string values without quotes: 657
 string values with period: 130
@@ -955,7 +954,7 @@ Types Generated: 229
 Interfaces Generated: 5
 Objects Generated: 66
 Classes Generated: 116
-Methods Generated: 2,519
+Methods Generated: 2,523
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
@@ -965,7 +964,7 @@ Percentage of Methods generated: 71 %
 ===== Warnings =====
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)
 Methods with bad flags: 3
-Suspected optional parameters that are marked with optional='false': 19
+Suspected optional parameters that are marked with optional='false': 18
 Attributes missing R flag: 45
 Object attributes marked with W flag: 240
 OR specified as ' or ': 137

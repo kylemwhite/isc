@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-18 at 5/18/2017 9:06:35 AM by kwhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-19 at 5/19/2017 8:03:41 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -17,7 +17,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
 |3|Classes|309|Number of classes found in the referenceDocs.xml file|
 |4|Objects|67|Number of objects found in the referenceDocs.xml file|
-|5|Methods|3,555|Number of methods (instance and class) found in the referenceDocs.xml file|
+|5|Methods|3,559|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |7|string values without quotes|657|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |8|string values with period|130|These usually are really references to a constant.|
@@ -28,7 +28,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |13|Interfaces Generated|5||
 |14|Objects Generated|66||
 |15|Classes Generated|116||
-|16|Methods Generated|2,519||
+|16|Methods Generated|2,523||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
 |19|Percentage of Objects generated|99%||
@@ -45,7 +45,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |1|Object attributes marked with W flag|240|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
 |2|OR specified as ' or '|137|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 |3|Attributes missing R flag|45|Almost all attributes have an R flag except these. Is this on purpose?|
-|4|Suspected optional parameters that are marked with optional='false'|19|Probably, although not necessarily, a mistake. Could lead to incorrect code generation.|
+|4|Suspected optional parameters that are marked with optional='false'|18|Probably, although not necessarily, a mistake. Could lead to incorrect code generation.|
 |5|Methods with bad flags|3|Method flags should only contain A|
 |6|OR specified as ' \|\| '|3|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 |7|OR specified as ', '|3|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|

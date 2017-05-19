@@ -5,8 +5,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/18/2017 9:05:29 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-18
+// Generated: 5/19/2017 8:02:47 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-19
 
 declare namespace Isc {
 
@@ -6609,7 +6609,7 @@ declare namespace Isc {
 		 * cause overflow of a containing TabBar.
 		 * Flags: IR
 		 */
-		readonly canAdaptWidth?: number;
+		readonly canAdaptWidth?: boolean /* Boolean */;
 		/** 
 		 * Determines whether this tab should show a close icon allowing the user to dismiss the tab
 		 * by clicking on the close icon directly. The URL for the close icon's image will be derived from 
