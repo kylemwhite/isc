@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-20 at 5/20/2017 8:03:06 AM by KWhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-21 at 5/21/2017 8:03:19 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -53,7 +53,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |1|String values without reference|130|These are possible values of types that refer to a classAttr that doesn't exist. For example DateItem.DAY_MONTH|
 |2|String types without baseType|83|Types that are really just strings should have their own type or have the baseType='string'.|
 |3|Setter Methods with parameter type that does not match the attribute type|83|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
-|4|Classes without inheritsFrom attribute|67|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
+|4|Classes without inheritsFrom attribute|66|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
 |5|Method params with missing name|15|All parameters should have a name.|
 |6|Getter Methods with return type that does not match the attribute type|15|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
 |7|Arrays defined as 'Array[] of'|10|Since most arrays are NOT described this way, this is assumed to be incorrect.|

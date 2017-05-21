@@ -7,8 +7,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/20/2017 8:03:06 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-20
+// Generated: 5/21/2017 8:03:19 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-21
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -70,6 +70,12 @@ declare namespace Isc {
 		 * The Button widget class implements interactive, style-based button widgets.
 		 */ 
 		Button: ButtonStatic<Button, ButtonProps>;
+
+		/** 
+		 * ButtonItem extends CanvasItem
+		 * FormItem for adding a Button to a form.
+		 */ 
+		ButtonItem: ButtonItemStatic<ButtonItem, ButtonItemProps>;
 
 		/** 
 		 * Calendar extends Canvas
@@ -161,6 +167,40 @@ declare namespace Isc {
 		 * 
 		 */ 
 		Canvas: CanvasStatic<Canvas, CanvasProps>;
+
+		/** 
+		 * CanvasItem extends FormItem
+		 * FormItem which renders a Canvas inline in a DynamicForm instance.
+		 * 
+		 * CanvasItem is CanvasItem.shouldSaveValue','shouldSaveValue:false by default, meaning that
+		 * no value from the CanvasItem will be present in DynamicForm.getValues and no value will be
+		 * saved when DynamicForm.saveData is called. This is appropriate if the Canvas does
+		 * not participate in editing a value of the form and is embedded in the form for layout or UI
+		 * purposes only (e.g. ButtonItem, SectionItem). Note that some built-in CanvasItem
+		 * types override the shouldSaveValue default to true (e.g. MultiComboBoxItem, RichTextItem).
+		 * 
+		 * If you set FormItem.shouldSaveValue','shouldSaveValue:true, a 
+		 * CanvasItem.showValue','showValue event will be raised to provide a value that your
+		 * item should display. Handle this event by calling methods on the Canvas you've created
+		 * to cause the value to be displayed.
+		 * 
+		 * The CanvasItem.showValue','showValue event will be triggered in various situations where
+		 * the form receives data, including a call to DynamicForm.setValues,
+		 * DynamicForm.editRecord, or if DynamicForm.fetchData is called and a Record
+		 * is returned. Bear in mind that the showValue event can be called when the form
+		 * and your item have not yet been drawn; in this case, store the value for later display.
+		 * 
+		 * To provide a value to the form, call CanvasItem.storeValue whenever the user changes
+		 * the value in your Canvas. Generally, if storeValue() is called then
+		 * CanvasItem.shouldSaveValue','shouldSaveValue should be overridden to true. Note that
+		 * the form will not call getValue() in order to discover your item's value, so there is
+		 * no purpose in overriding this method; instead, call storeValue() to proactively inform the
+		 * form about changes to the value. This approach is necessary in order to enable change events.
+		 * 
+		 * If you cannot easily detect changes to values in your Canvas, a workaround is to call
+		 * storeValue right before the form saves.
+		 */ 
+		CanvasItem: CanvasItemStatic<CanvasItem, CanvasItemProps>;
 
 		/** 
 		 * The Class object is root of the Isomorphic SmartClient inheritance tree -- it includes
