@@ -1,12 +1,9 @@
-/// <reference path="isc.classes.d.ts" />
-/// <reference path="isc.objects.d.ts" />
-/// <reference path="isc.types.d.ts" />
-
+/// <reference path="isc.classes.d.ts" />/// <reference path="isc.objects.d.ts" />/// <reference path="isc.types.d.ts" />
 // Type definitions for Isomorphic SmartClient 11.1
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/22/2017 2:28:27 PM by kwhite
+// Generated: 5/22/2017 3:20:58 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-21
 
 declare namespace Isc {
@@ -35,7 +32,6 @@ declare namespace Isc {
 	 */
 	export interface List  {
 	}
-
 
 
 	/**
@@ -74,7 +70,7 @@ declare namespace Isc {
 		 * existing setting for ResultSet.fetchMode applies.
 		 * Flags: IR, Group: databinding
 		 */
-		readonly dataFetchMode: FetchMode; 
+		readonly dataFetchMode: FetchMode;
 
 		/** 
 		 * (Read only) Name of the field that has the most pertinent numeric, date, or enum value, for use when a
@@ -84,13 +80,13 @@ declare namespace Isc {
 		 * set for a component with no dataSource, or can be used to override the dataSource setting.
 		 * Flags: IR
 		 */
-		readonly dataField: string /* String */; 
+		readonly dataField: string /* String */;
 
 		/** 
 		 * Text for a menu item allowing users to edit grid highlights.
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly editHilitesText: string /* String */; 
+		readonly editHilitesText: string /* String */;
 
 		/** 
 		 * (Read only) Name of the field that has a long description of the record, or has the primary text data
@@ -100,13 +96,13 @@ declare namespace Isc {
 		 * set for a component with no dataSource, or can be used to override the dataSource setting.
 		 * Flags: IR
 		 */
-		readonly descriptionField: string /* String */; 
+		readonly descriptionField: string /* String */;
 
 		/** 
 		 * Text for a menu item allowing users to add a formula field
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly addFormulaFieldText: string /* String */; 
+		readonly addFormulaFieldText: string /* String */;
 
 		/** 
 		 * The list of field-names to export. If provided, the field-list in the exported output is 
@@ -116,14 +112,14 @@ declare namespace Isc {
 		 * from this component, sorted as they appear.
 		 * Flags: IRW
 		 */
-		readonly exportFields: Array<string> /* Array of String */; 
+		readonly exportFields: Array<string> /* Array of String */;
 
 		/** 
 		 * Indicates whether the text of the offlineMessage property should be displayed if no data is
 		 * available because we do not have a suitable offline cache
 		 * Flags: IRW, Group: offlineGroup
 		 */
-		readonly showOfflineMessage: boolean; 
+		readonly showOfflineMessage: boolean;
 
 		/** 
 		 * (Read only) Criteria to be used when DataBoundComponent.autoFetchData is set.
@@ -132,7 +128,7 @@ declare namespace Isc {
 		 * to refer to values in the Canvas.ruleScope.
 		 * Flags: IR
 		 */
-		readonly initialCriteria: Criteria; 
+		readonly initialCriteria: Criteria;
 
 		/** 
 		 * (Advanced) The title for the DataBoundComponent.fieldEditorWindow','Window used to edit calculated
@@ -145,7 +141,7 @@ declare namespace Isc {
 		 * "fieldTitle", which is the title of the calculated field being edited.
 		 * Flags: IRWA, Group: i18nMessages
 		 */
-		readonly fieldEditorWindowTitle: string /* HTMLString */; 
+		readonly fieldEditorWindowTitle: string /* HTMLString */;
 
 		/** 
 		 * If true, the set of fields given by the "default binding" (see 
@@ -165,7 +161,7 @@ declare namespace Isc {
 		 * order.
 		 * Flags: IRW, Group: databinding
 		 */
-		readonly useAllDataSourceFields: boolean; 
+		readonly useAllDataSourceFields: boolean;
 
 		/** 
 		 * (Read only) If set, detect and prevent duplicate records from being transferred to this component, either via
@@ -189,13 +185,13 @@ declare namespace Isc {
 		 * record with "employeeId" matching the "id" field of the dropped employee.
 		 * Flags: IR
 		 */
-		readonly preventDuplicates: boolean; 
+		readonly preventDuplicates: boolean;
 
 		/** 
 		 * CSS Style to apply to the drag tracker when dragging occurs on this component.
 		 * Flags: IRW
 		 */
-		readonly dragTrackerStyle: string /* CSSStyleName */; 
+		readonly dragTrackerStyle: string /* CSSStyleName */;
 
 		/** 
 		 * Initial hilite state for the grid. 
@@ -210,7 +206,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IRW, Group: viewState
 		 */
-		readonly hiliteState: string /* String */; 
+		readonly hiliteState: string /* String */;
 
 		/** 
 		 * (Read only) If true, when this component is first drawn, automatically call this.fetchData().
@@ -224,13 +220,13 @@ declare namespace Isc {
 		 * Generally, turn off autoFetchData if you are going to manually call ListGrid.fetchData','fetchData() at any time.
 		 * Flags: IR, Group: dataBoundComponentMethods
 		 */
-		readonly autoFetchData: boolean; 
+		readonly autoFetchData: boolean;
 
 		/** 
 		 * DSRequest.operationId','operationId this component should use when performing remove operations.
 		 * Flags: IRW, Group: operations
 		 */
-		readonly removeOperation: string /* String */; 
+		readonly removeOperation: string /* String */;
 
 		/** 
 		 * Adds an item to the header context menu allowing users to launch a dialog to define
@@ -240,7 +236,7 @@ declare namespace Isc {
 		 * DataBoundComponent.setHiliteState.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly canEditHilites: boolean; 
+		readonly canEditHilites: boolean;
 
 		/** 
 		 * (Read only) Properties to apply to the MultiSortDialog which gets automatically generated
@@ -249,20 +245,20 @@ declare namespace Isc {
 		 * See also ListGrid.showHeaderSpanTitlesInSortEditor and ListGrid.sortEditorSpanTitleSeparator
 		 * Flags: IR
 		 */
-		readonly multiSortDialogProperties: MultiSortDialogProps /* MultiSortDialog Properties */; 
+		readonly multiSortDialogProperties: MultiSortDialogProps /* MultiSortDialog Properties */;
 
 		/** 
 		 * The message to display to the user if an export of a DataBoundComponent's data is attempted
 		 * while the DataBoundComponent's data is null or an empty list.
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly emptyExportMessage: string; 
+		readonly emptyExportMessage: string;
 
 		/** 
 		 * Text for a menu item allowing users to edit a formula field
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly editFormulaFieldText: string /* String */; 
+		readonly editFormulaFieldText: string /* String */;
 
 		/** 
 		 * (Read only) Specifies a list of icons that can be used in DataBoundComponent.editHilites','hilites.
@@ -278,7 +274,7 @@ declare namespace Isc {
 		 * This can also be overridden at the field level.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly hiliteIcons: Array<string> /* Array of String */; 
+		readonly hiliteIcons: Array<string> /* Array of String */;
 
 		/** 
 		 * Adds an item to the header context menu allowing users to launch a dialog to define a new
@@ -288,20 +284,20 @@ declare namespace Isc {
 		 * ListGrid.setFieldState.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly canAddFormulaFields: boolean; 
+		readonly canAddFormulaFields: boolean;
 
 		/** 
 		 * Message to display when this DataBoundComponent attempts to save data while the application
 		 * is offline.
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly offlineSaveMessage: string; 
+		readonly offlineSaveMessage: string;
 
 		/** 
 		 * Text for a menu item allowing users to remove a summary field
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly removeSummaryFieldText: string /* String */; 
+		readonly removeSummaryFieldText: string /* String */;
 
 		/** 
 		 * (Read only) Designates a field of FieldType','type:"image" as the field to use when rendering a
@@ -311,7 +307,7 @@ declare namespace Isc {
 		 * set for a component with no dataSource, or can be used to override the dataSource setting.
 		 * Flags: IR
 		 */
-		readonly iconField: string; 
+		readonly iconField: string;
 
 		/** 
 		 * Whether to show fields marked hidden:true when a DataBoundComponent is given a
@@ -321,13 +317,13 @@ declare namespace Isc {
 		 * never of meaning to an end user.
 		 * Flags: IRW, Group: databinding
 		 */
-		readonly showHiddenFields: boolean; 
+		readonly showHiddenFields: boolean;
 
 		/** 
 		 * If Summary rows exist for this component, whether to include them when exporting client data.
 		 * Flags: IRW
 		 */
-		readonly exportIncludeSummaries: boolean; 
+		readonly exportIncludeSummaries: boolean;
 
 		/** 
 		 * Default width and height of DataBoundComponent.hiliteIcons','hilite icons for this component.
@@ -339,7 +335,7 @@ declare namespace Isc {
 		 * ListGridField.hiliteIconHeight','hiliteIconHeight
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconSize: number; 
+		readonly hiliteIconSize: number;
 
 		/** 
 		 * (Read only) Class level defaults to apply to the MultiSortDialog which gets automatically
@@ -348,21 +344,21 @@ declare namespace Isc {
 		 * See also ListGrid.showHeaderSpanTitlesInSortEditor and ListGrid.sortEditorSpanTitleSeparator
 		 * Flags: IR
 		 */
-		readonly multiSortDialogDefaults: MultiSortDialogProps /* MultiSortDialog Properties */; 
+		readonly multiSortDialogDefaults: MultiSortDialogProps /* MultiSortDialog Properties */;
 
 		/** 
 		 * A message to display to the user if server-side validation fails with an error but the
 		 * server did not provide an error message
 		 * Flags: IRW, Group: validation
 		 */
-		readonly noErrorDetailsMessage: string /* String */; 
+		readonly noErrorDetailsMessage: string /* String */;
 
 		/** 
 		 * Indicates whether or not this component will load its data 
 		 * DataSource.progressiveLoading','progressively.
 		 * Flags: IRW, Group: progressiveLoading
 		 */
-		readonly progressiveLoading: boolean; 
+		readonly progressiveLoading: boolean;
 
 		/** 
 		 * (Advanced) Before we start editing values in this DataBoundComponent, should we perform a deep clone 
@@ -376,13 +372,13 @@ declare namespace Isc {
 		 * Canvas.dataPath','dataPaths.
 		 * Flags: IRWA
 		 */
-		readonly deepCloneOnEdit: boolean /* Boolean */; 
+		readonly deepCloneOnEdit: boolean /* Boolean */;
 
 		/** 
 		 * DSRequest.operationId','operationId this component should use when performing add operations.
 		 * Flags: IRW, Group: operations
 		 */
-		readonly addOperation: string /* String */; 
+		readonly addOperation: string /* String */;
 
 		/** 
 		 * Height for hilite icons for this listGrid.
@@ -390,33 +386,33 @@ declare namespace Isc {
 		 * Can be overridden at the field level
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconHeight: number; 
+		readonly hiliteIconHeight: number;
 
 		/** 
 		 * Marker that can be set on a record to flag that record as hilited. Should be set to a value
 		 * that matches Hilite.id for a hilite defined on this component.
 		 * Flags: IRW
 		 */
-		readonly hiliteProperty: string; 
+		readonly hiliteProperty: string;
 
 		/** 
 		 * Text for a menu item allowing users to add a formula field
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly addSummaryFieldText: string /* String */; 
+		readonly addSummaryFieldText: string /* String */;
 
 		/** 
 		 * DSRequest.operationId','operationId this component should use when performing fetch operations.
 		 * Flags: IRW, Group: operations
 		 */
-		readonly fetchOperation: string /* String */; 
+		readonly fetchOperation: string /* String */;
 
 		/** 
 		 * Indicates what to do with data dragged into another DataBoundComponent. See
 		 * DragDataAction type for details.
 		 * Flags: IRW, Group: dragging
 		 */
-		readonly dragDataAction: DragDataAction; 
+		readonly dragDataAction: DragDataAction;
 
 		/** 
 		 * Message to display when this DataBoundComponent attempts to load data that is not available
@@ -424,7 +420,7 @@ declare namespace Isc {
 		 * displayed in the component's body, or in a pop-up warning dialog.
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly offlineMessage: string; 
+		readonly offlineMessage: string;
 
 		/** 
 		 * Criteria that are never shown to or edited by the user and are cumulative with any criteria
@@ -432,7 +428,7 @@ declare namespace Isc {
 		 * etc.
 		 * Flags: IRW
 		 */
-		readonly implicitCriteria: Criteria; 
+		readonly implicitCriteria: Criteria;
 
 		/** 
 		 * (Advanced) Whether to show fields of non-atomic types when a DataBoundComponent is given a
@@ -448,14 +444,14 @@ declare namespace Isc {
 		 * editing.
 		 * Flags: IRWA, Group: databinding
 		 */
-		readonly showComplexFields: boolean; 
+		readonly showComplexFields: boolean;
 
 		/** 
 		 * If a summary format string contains an invalid field reference, replace the reference
 		 * with the missingSummaryFieldValue. The default value is "-".
 		 * Flags: IRW, Group: summaryFields
 		 */
-		readonly missingSummaryFieldValue: string /* String */; 
+		readonly missingSummaryFieldValue: string /* String */;
 
 		/** 
 		 * (Read only) Best field to use for a user-visible title for an individual record from this
@@ -465,7 +461,7 @@ declare namespace Isc {
 		 * set for a component with no dataSource, or can be used to override the dataSource setting.
 		 * Flags: IR
 		 */
-		readonly titleField: string; 
+		readonly titleField: string;
 
 		/** 
 		 * (Read only) When DataBoundComponent.hiliteIcons','hiliteIcons are present, where the hilite icon will be placed 
@@ -473,7 +469,7 @@ declare namespace Isc {
 		 * field level.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly hiliteIconPosition: HiliteIconPosition; 
+		readonly hiliteIconPosition: HiliteIconPosition;
 
 		/** 
 		 * (Read only) This component's HiliteEditor instance used to allow the user to create, modify, or delete
@@ -485,7 +481,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: R, Group: hiliting
 		 */
-		readonly hiliteEditor:  HiliteEditor /* AutoChild HiliteEditor */; 
+		readonly hiliteEditor:  HiliteEditor /* AutoChild HiliteEditor */;
 
 		/** 
 		 * The DataSource that this component should bind to for default fields and for performing
@@ -494,14 +490,14 @@ declare namespace Isc {
 		 * Can be specified as either a DataSource instance or the String ID of a DataSource.
 		 * Flags: IRW, Group: databinding
 		 */
-		readonly dataSource: DataSource | string /* DataSource or ID */; 
+		readonly dataSource: DataSource | string /* DataSource or ID */;
 
 		/** 
 		 * Flag controlling when to recategorize records being dropped on a databound
 		 * component from another databound component.
 		 * Flags: IRW
 		 */
-		readonly dragRecategorize: RecategorizeMode; 
+		readonly dragRecategorize: RecategorizeMode;
 
 		/** 
 		 * The strategy to use when generating names for new fields in this component. The default 
@@ -509,7 +505,7 @@ declare namespace Isc {
 		 * component instance. For example, "formulaField1".
 		 * Flags: IRW
 		 */
-		readonly fieldNamingStrategy: FieldNamingStrategy; 
+		readonly fieldNamingStrategy: FieldNamingStrategy;
 
 		/** 
 		 * (Advanced) When assembling a value for a DataBoundComponent.canAddSummaryFields','summary field, if a referenced
@@ -518,7 +514,7 @@ declare namespace Isc {
 		 * To control hilites showing in group summaries, see ListGrid.showHilitesInGroupSummary','showHilitesInGroupSummary.
 		 * Flags: IRWA
 		 */
-		readonly includeHilitesInSummaryFields: boolean; 
+		readonly includeHilitesInSummaryFields: boolean;
 
 		/** 
 		 * (Advanced) Delay in milliseconds before fetching data.
@@ -528,14 +524,14 @@ declare namespace Isc {
 		 * existing setting for ResultSet.fetchDelay applies.
 		 * Flags: IRWA, Group: databinding
 		 */
-		readonly dataFetchDelay: number /* integer */; 
+		readonly dataFetchDelay: number /* integer */;
 
 		/** 
 		 * For databound components that support editing, the error message for a failed validator
 		 * that does not specify its own errorMessage.
 		 * Flags: IRW, Group: validation
 		 */
-		readonly unknownErrorMessage: string /* HTMLString */; 
+		readonly unknownErrorMessage: string /* HTMLString */;
 
 		/** 
 		 * Whether to show fields marked detail:true when a DataBoundComponent is 
@@ -545,7 +541,7 @@ declare namespace Isc {
 		 * shouldn't appear by default in a view that tries to show many records in a small space.
 		 * Flags: IRW, Group: databinding
 		 */
-		readonly showDetailFields: boolean; 
+		readonly showDetailFields: boolean;
 
 		/** 
 		 * (Advanced) When an item is dropped on this component, and DataBoundComponent.addDropValues is true and both 
@@ -561,13 +557,13 @@ declare namespace Isc {
 		 * current filter criteria.
 		 * Flags: IRWA, Group: dragging
 		 */
-		readonly dropValues: any /* Object */; 
+		readonly dropValues: any /* Object */;
 
 		/** 
 		 * DSRequest.operationId','operationId this component should use when performing update operations.
 		 * Flags: IRW, Group: operations
 		 */
-		readonly updateOperation: string /* String */; 
+		readonly updateOperation: string /* String */;
 
 		/** 
 		 * (Read only, Advanced) If this component is bound to a dataSource, this attribute may be specified to customize
@@ -583,20 +579,20 @@ declare namespace Isc {
 		 * can be edited - for example ListGrid.canEditCell may be overridden.
 		 * Flags: IRA
 		 */
-		readonly canEditFieldAttribute: string /* identifier */; 
+		readonly canEditFieldAttribute: string /* identifier */;
 
 		/** 
 		 * Text for a menu item allowing users to edit the formatter for a field
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly editSummaryFieldText: string /* String */; 
+		readonly editSummaryFieldText: string /* String */;
 
 		/** 
 		 * How much padding should there be on the right of DataBoundComponent.hiliteIcons','hilite icons by default?
 		 * Can be overridden at the field level
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconRightPadding: number; 
+		readonly hiliteIconRightPadding: number;
 
 		/** 
 		 * When using DataBoundComponent.dataFetchMode','data paging, how many records to fetch at a time. If set to
@@ -614,19 +610,19 @@ declare namespace Isc {
 		 * dataPageSize to be fetched.
 		 * Flags: IRW, Group: databinding
 		 */
-		readonly dataPageSize: number /* integer */; 
+		readonly dataPageSize: number /* integer */;
 
 		/** 
 		 * (Read only) The title for the DataBoundComponent.editHilites','Hilite Editor dialog.
 		 * Flags: IR, Group: i18nMessages
 		 */
-		readonly editHilitesDialogTitle: string /* String */; 
+		readonly editHilitesDialogTitle: string /* String */;
 
 		/** 
 		 * (Read only) The Window used to edit calculated fields for this component.
 		 * Flags: R
 		 */
-		readonly fieldEditorWindow:  Window /* AutoChild Window */; 
+		readonly fieldEditorWindow:  Window /* AutoChild Window */;
 
 		/** 
 		 * A DataBoundComponent manipulates records with one or more fields, and
@@ -652,7 +648,7 @@ declare namespace Isc {
 		 * DataBoundComponent.showDetailFields.
 		 * Flags: IRW, Group: databinding
 		 */
-		readonly fields: Array<string> /* Array of Field */; 
+		readonly fields: Array<string> /* Array of Field */;
 
 		/** 
 		 * Adds an item to the header context menu allowing users to launch a dialog to define a new
@@ -663,21 +659,21 @@ declare namespace Isc {
 		 * ListGrid.setFieldState.
 		 * Flags: IRW, Group: summaryFields
 		 */
-		readonly canAddSummaryFields: boolean; 
+		readonly canAddSummaryFields: boolean;
 
 		/** 
 		 * How much padding should there be on the left of DataBoundComponent.hiliteIcons','hilite icons by default?
 		 * Can be overridden at the field level
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconLeftPadding: number; 
+		readonly hiliteIconLeftPadding: number;
 
 		/** 
 		 * (Advanced) Does this component represent singular or multiple "records" objects?
 		 * Options are "multiple" or "single", or "either"
 		 * Flags: IRWA
 		 */
-		readonly dataArity: string; 
+		readonly dataArity: string;
 
 		/** 
 		 * Setting exportAll to true prevents the component from passing it's list of fields to the 
@@ -688,7 +684,7 @@ declare namespace Isc {
 		 * DataSource.fields otherwise.
 		 * Flags: IRW
 		 */
-		readonly exportAll: boolean; 
+		readonly exportAll: boolean;
 
 		/** 
 		 * (Read only) Message to show when a user attempts to transfer duplicate records into this component, and
@@ -698,13 +694,13 @@ declare namespace Isc {
 		 * saved.
 		 * Flags: IR, Group: i18nMessages
 		 */
-		readonly duplicateDragMessage: string /* String */; 
+		readonly duplicateDragMessage: string /* String */;
 
 		/** 
 		 * Text for a menu item allowing users to remove a formula field
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly removeFormulaFieldText: string /* String */; 
+		readonly removeFormulaFieldText: string /* String */;
 
 		/** 
 		 * (Read only) The useFlatFields flag causes all simple type fields anywhere in a nested
@@ -767,7 +763,7 @@ declare namespace Isc {
 		 * field when data binding.
 		 * Flags: IR
 		 */
-		readonly useFlatFields: boolean; 
+		readonly useFlatFields: boolean;
 
 		/** 
 		 * Width for hilite icons for this component.
@@ -775,7 +771,7 @@ declare namespace Isc {
 		 * Can be overridden at the field level.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconWidth: number; 
+		readonly hiliteIconWidth: number;
 
 		/** 
 		 * Indicates whether to add "drop values" to items dropped on this component, if both 
@@ -789,7 +785,7 @@ declare namespace Isc {
 		 * on the item
 		 * Flags: IRW, Group: dragging
 		 */
-		readonly addDropValues: boolean /* Boolean */; 
+		readonly addDropValues: boolean /* Boolean */;
 
 		/** 
 		 * (Read only) Name of the field that has the second most pertinent piece of textual information in the
@@ -799,23 +795,22 @@ declare namespace Isc {
 		 * set for a component with no dataSource, or can be used to override the dataSource setting.
 		 * Flags: IR
 		 */
-		readonly infoField: string /* String */; 
+		readonly infoField: string /* String */;
 
 		/** 
 		 * Hilites to be applied to the data for this component. See hiliting.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hilites: Array<Hilite> /* Array of Hilite */; 
+		readonly hilites: Array<Hilite> /* Array of Hilite */;
 
 		/** 
 		 * If the result of a formula evaluation is invalid (specifically, if isNaN(result)==true),
 		 * badFormulaResultValue is displayed instead. The default value is ".".
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly badFormulaResultValue: string /* String */; 
+		readonly badFormulaResultValue: string /* String */;
 
 	}
-
 
 
 	/**
@@ -828,17 +823,16 @@ declare namespace Isc {
 		 * defaultEditContext is set.
 		 * Flags: IRW
 		 */
-		readonly defaultEditContext: EditContext | EditTree | EditPane /* EditContext or EditTree or EditPane */; 
+		readonly defaultEditContext: EditContext | EditTree | EditPane /* EditContext or EditTree or EditPane */;
 
 		/** 
 		 * (Read only) Whether created components should have their "ID" or "name" property automatically set
 		 * to a unique value based on the component's type, eg, "ListGrid0".
 		 * Flags: IR, Group: devTools
 		 */
-		readonly generateNames: boolean; 
+		readonly generateNames: boolean;
 
 	}
-
 
 
 	/**
@@ -866,7 +860,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly facets: Array<Facet> /* Array of Facet or Facet */; 
+		readonly facets: Array<Facet> /* Array of Facet or Facet */;
 
 		/** 
 		 * (Read only) Dataset for this chart.
@@ -946,39 +940,39 @@ declare namespace Isc {
 		 * easier conversion from data displayed in a ListGrid.
 		 * Flags: IR
 		 */
-		readonly data: Array<CellRecord> /* Array of CellRecord or CellRecord */; 
+		readonly data: Array<CellRecord> /* Array of CellRecord or CellRecord */;
 
 		/** 
 		 * (Read only) Whether to use stacking for charts where this makes sense (bar, column, line and radar
 		 * charts). If stacked is not set and two facets are supplied, clustering is assumed.
 		 * Flags: IR
 		 */
-		readonly stacked: boolean; 
+		readonly stacked: boolean;
 
 		/** 
 		 * (Read only) Title for the chart as a whole.
 		 * Flags: IR
 		 */
-		readonly title: string /* String */; 
+		readonly title: string /* String */;
 
 		/** 
 		 * (Read only) Whether to show chart in a 3D appearance, for charts that support this.
 		 * Flags: IR, Group: chartAppearance
 		 */
-		readonly threeD: boolean; 
+		readonly threeD: boolean;
 
 		/** 
 		 * (Read only) A label for the data values, such as "Sales in Thousands", typically used as the label for
 		 * the value axis.
 		 * Flags: IR
 		 */
-		readonly valueTitle: string /* String */; 
+		readonly valueTitle: string /* String */;
 
 		/** 
 		 * Type of chart to draw, see ChartType for a list of known types.
 		 * Flags: IRW
 		 */
-		readonly chartType: ChartType; 
+		readonly chartType: ChartType;
 
 		/** 
 		 * (Read only) Subtitle for the chart as a whole, typically used to describe fixed facet values (such as
@@ -987,7 +981,7 @@ declare namespace Isc {
 		 * The subTitle should appear under the title in less emphasized text.
 		 * Flags: IR
 		 */
-		readonly subTitle: string /* String */; 
+		readonly subTitle: string /* String */;
 
 		/** 
 		 * (Read only) Property in each record that holds a data value.
@@ -995,22 +989,21 @@ declare namespace Isc {
 		 * Not used if there is an inline facet, see Chart.data.
 		 * Flags: IR
 		 */
-		readonly valueProperty: string /* String */; 
+		readonly valueProperty: string /* String */;
 
 		/** 
 		 * (Read only) Whether the chart should animate when shown (eg, bars or columns grow into place)
 		 * Flags: IR, Group: chartAppearance
 		 */
-		readonly shouldAnimateShow: boolean; 
+		readonly shouldAnimateShow: boolean;
 
 		/** 
 		 * (Read only) Whether to show labels on each individual value (bar, column or line point)
 		 * Flags: IR, Group: chartAppearance
 		 */
-		readonly labelValues: boolean; 
+		readonly labelValues: boolean;
 
 	}
-
 
 
 	/**
@@ -1025,7 +1018,7 @@ declare namespace Isc {
 		 * PickList.optionDataSource','databound pickLists.
 		 * Flags: IR
 		 */
-		readonly showAllOptions: boolean; 
+		readonly showAllOptions: boolean;
 
 		/** 
 		 * (Read only) Array of records to show between matching and non-matching rows in the PickList.
@@ -1033,7 +1026,7 @@ declare namespace Isc {
 		 * Not valid for PickList.optionDataSource','databound pickLists.
 		 * Flags: IR
 		 */
-		readonly separatorRows: Array<ListGridRecord> /* Array of ListGridRecord */; 
+		readonly separatorRows: Array<ListGridRecord> /* Array of ListGridRecord */;
 
 		/** 
 		 * (Read only) For PickList items with PickListItemIconPlacement set such that the pickList does
@@ -1046,7 +1039,7 @@ declare namespace Isc {
 		 * the navigation bar may be easier for the user to interact with.
 		 * Flags: IR
 		 */
-		readonly iconPlacement: PickListItemIconPlacement; 
+		readonly iconPlacement: PickListItemIconPlacement;
 
 		/** 
 		 * (Read only, Advanced) If this item has a specified optionDataSource and this property is
@@ -1062,7 +1055,7 @@ declare namespace Isc {
 		 * fetched fields.
 		 * Flags: IRA
 		 */
-		readonly fetchDisplayedFieldsOnly: boolean; 
+		readonly fetchDisplayedFieldsOnly: boolean;
 
 		/** 
 		 * Default width to show the pickList.
@@ -1072,7 +1065,7 @@ declare namespace Isc {
 		 * are wider than the specified width the list will expand to accomodate them.
 		 * Flags: IRW
 		 */
-		readonly pickListWidth: number; 
+		readonly pickListWidth: number;
 
 		/** 
 		 * (Read only, Advanced) For PickList.optionDataSource','databound items, this property will be passed
@@ -1081,7 +1074,7 @@ declare namespace Isc {
 		 * always passed to the DataSource directly.
 		 * Flags: IRA
 		 */
-		readonly useClientFiltering: boolean /* Boolean */; 
+		readonly useClientFiltering: boolean /* Boolean */;
 
 		/** 
 		 * (Read only, Advanced) If filterLocally is set for this item, and this item is showing options 
@@ -1098,21 +1091,21 @@ declare namespace Isc {
 		 * disable client-side filtering set the PickList.useClientFiltering property to false.
 		 * Flags: IRA
 		 */
-		readonly filterLocally: boolean /* Boolean */; 
+		readonly filterLocally: boolean /* Boolean */;
 
 		/** 
 		 * (Advanced) If PickList.animatePickList is true, this attribute specifies the millisecond 
 		 * duration of the animation effect.
 		 * Flags: IRWA
 		 */
-		readonly pickListAnimationTime: number; 
+		readonly pickListAnimationTime: number;
 
 		/** 
 		 * (Read only) The Class to use when creating the pickList for a FormItem. Must be a subclass of the
 		 * builtin default, PickListMenu','PickListMenu.
 		 * Flags: IR
 		 */
-		readonly pickListConstructor: string /* SCClassName */; 
+		readonly pickListConstructor: string /* SCClassName */;
 
 		/** 
 		 * (Read only, Advanced) If this item has a specified optionDataSource, and this property is not
@@ -1122,14 +1115,14 @@ declare namespace Isc {
 		 * summary records.
 		 * Flags: IRA
 		 */
-		readonly optionFilterContext: DSRequestProps /* DSRequest Properties */; 
+		readonly optionFilterContext: DSRequestProps /* DSRequest Properties */;
 
 		/** 
 		 * Height for an empty pick list (showing the empty message), if the pick list has no
 		 * records and PickList.hideEmptyPickList is false.
 		 * Flags: IRW
 		 */
-		readonly emptyPickListHeight: number; 
+		readonly emptyPickListHeight: number;
 
 		/** 
 		 * (Read only) Base Style for pickList cells. See cellStyleSuffixes for details on how
@@ -1141,7 +1134,7 @@ declare namespace Isc {
 		 * is true for the pickList in Internet Explorer.
 		 * Flags: IR
 		 */
-		readonly pickListBaseStyle: string /* CSSStyleName */; 
+		readonly pickListBaseStyle: string /* CSSStyleName */;
 
 		/** 
 		 * (Read only, Advanced) If this form item maps data values to display values by retrieving the 
@@ -1153,14 +1146,14 @@ declare namespace Isc {
 		 * described in FormItem.getValueFieldName.
 		 * Flags: IRA, Group: databinding
 		 */
-		readonly valueField: string; 
+		readonly valueField: string;
 
 		/** 
 		 * If this pick list is showing multiple fields, this property determines the height of
 		 * the column headers for those fields. Set to zero to suppress the headers entirely.
 		 * Flags: IRW
 		 */
-		readonly pickListHeaderHeight: number; 
+		readonly pickListHeaderHeight: number;
 
 		/** 
 		 * (Advanced) For a ComboBox or other pickList that accepts user-entered criteria, how many
@@ -1168,21 +1161,21 @@ declare namespace Isc {
 		 * The default setting will initiate a fetch if the user stops typing or pauses briefly.
 		 * Flags: IRWA
 		 */
-		readonly fetchDelay: number; 
+		readonly fetchDelay: number;
 
 		/** 
 		 * (Read only) Optional ListGrid.tallBaseStyle','tallBaseStyle for pickList cells. If unset,
 		 * PickList.pickListBaseStyle will be applied to all cells.
 		 * Flags: IR
 		 */
-		readonly pickListTallBaseStyle: string /* CSSStyleName */; 
+		readonly pickListTallBaseStyle: string /* CSSStyleName */;
 
 		/** 
 		 * (Advanced) Default value for ListGrid.applyRowNumberStyle for this item's generated
 		 * pickList.
 		 * Flags: IRWA
 		 */
-		readonly pickListApplyRowNumberStyle: boolean; 
+		readonly pickListApplyRowNumberStyle: boolean;
 
 		/** 
 		 * (Read only) If specified this properties block will be applied to the PickListMenu','pickList
@@ -1207,7 +1200,7 @@ declare namespace Isc {
 		 * set as appropriate) as a better interface for filtering pickList data.
 		 * Flags: IR
 		 */
-		readonly pickListProperties: ListGridProps /* ListGrid Properties */; 
+		readonly pickListProperties: ListGridProps /* ListGrid Properties */;
 
 		/** 
 		 * (Read only, Advanced) This property allows the developer to specify which field[s] will be displayed in the 
@@ -1229,7 +1222,7 @@ declare namespace Isc {
 		 * ListGridField.showIf','showIf.
 		 * Flags: IRA
 		 */
-		readonly pickListFields: Array<ListGridField> /* Array of ListGridField */; 
+		readonly pickListFields: Array<ListGridField> /* Array of ListGridField */;
 
 		/** 
 		 * (Advanced) If this item has a databound pickList (for example PickList.optionDataSource is
@@ -1237,7 +1230,7 @@ declare namespace Isc {
 		 * for the pickList.
 		 * Flags: IRWA
 		 */
-		readonly pickListCriteria: Criteria; 
+		readonly pickListCriteria: Criteria;
 
 		/** 
 		 * Maximum height to show the pick list before it starts to scroll.
@@ -1245,7 +1238,7 @@ declare namespace Isc {
 		 * so it will be taller when more rows are available as selectable options
 		 * Flags: IRW
 		 */
-		readonly pickListHeight: number; 
+		readonly pickListHeight: number;
 
 		/** 
 		 * (Read only) Specifies one or more fields by which this item should be initially sorted. It can be 
@@ -1260,7 +1253,7 @@ declare namespace Isc {
 		 * that it will be converted to a string (field name) after initialization.
 		 * Flags: IR, Group: sorting
 		 */
-		readonly sortField: Array<string> /* String | Array of String | int */; 
+		readonly sortField: Array<string> /* String | Array of String | int */;
 
 		/** 
 		 * (Read only) For databound pickLists (see PickList.optionDataSource), by default SmartClient
@@ -1270,13 +1263,13 @@ declare namespace Isc {
 		 * Setting this flag to false avoids this caching for situations where it is too aggressive.
 		 * Flags: IR
 		 */
-		readonly cachePickListResults: boolean; 
+		readonly cachePickListResults: boolean;
 
 		/** 
 		 * Cell Height for this item's pickList.
 		 * Flags: IRW
 		 */
-		readonly pickListCellHeight: number; 
+		readonly pickListCellHeight: number;
 
 		/** 
 		 * (Read only) When applying filter criteria to pickList data, what type of matching to use.
@@ -1288,7 +1281,7 @@ declare namespace Isc {
 		 * PickList.filterClientPickListData','filterClientPickListData().
 		 * Flags: IR
 		 */
-		readonly textMatchStyle: TextMatchStyle; 
+		readonly textMatchStyle: TextMatchStyle;
 
 		/** 
 		 * (Advanced) For Databound formItems, this property determines which column 
@@ -1300,7 +1293,7 @@ declare namespace Isc {
 		 * have been specified for this item.
 		 * Flags: IRWA
 		 */
-		readonly valueIconField: string; 
+		readonly valueIconField: string;
 
 		/** 
 		 * (Read only) A set of "special" values such as "All", "None" or "Invalid" that do not appear in the normal
@@ -1336,14 +1329,14 @@ declare namespace Isc {
 		 * that may be selected. So, specialValues should have options such as "Select All", "Select None" and others.
 		 * Flags: IR
 		 */
-		readonly specialValues: ValueMap; 
+		readonly specialValues: ValueMap;
 
 		/** 
 		 * (Advanced) Message to display in the pickList if there's no data and 
 		 * PickList.hideEmptyPickList is false.
 		 * Flags: IRWA, Group: i18nMessages
 		 */
-		readonly emptyPickListMessage: string; 
+		readonly emptyPickListMessage: string;
 
 		/** 
 		 * (Read only) An array of SortSpecifier objects used to set up the initial sort configuration 
@@ -1351,13 +1344,13 @@ declare namespace Isc {
 		 * PickList.sortField specified.
 		 * Flags: IR, Group: sorting
 		 */
-		readonly initialSort: Array<SortSpecifier> /* Array of SortSpecifier */; 
+		readonly initialSort: Array<SortSpecifier> /* Array of SortSpecifier */;
 
 		/** 
 		 * (Advanced) If true, when the pickList is shown, it will be shown via an animated reveal effect
 		 * Flags: IRWA
 		 */
-		readonly animatePickList: boolean; 
+		readonly animatePickList: boolean;
 
 		/** 
 		 * (Advanced) If this item is part of a databound form, and has a specified valueMap,
@@ -1366,7 +1359,7 @@ declare namespace Isc {
 		 * are derived from the form's dataSource.
 		 * Flags: IRWA, Group: databinding
 		 */
-		readonly showOptionsFromDataSource: boolean; 
+		readonly showOptionsFromDataSource: boolean;
 
 		/** 
 		 * Maximum width for this item's pickList.
@@ -1375,14 +1368,14 @@ declare namespace Isc {
 		 * This property allows the developer to limit how wide the pickList will render.
 		 * Flags: IRW
 		 */
-		readonly pickListMaxWidth: number; 
+		readonly pickListMaxWidth: number;
 
 		/** 
 		 * If this pickList contains no options, should it be hidden?
 		 * If unset, default behavior is to allow the empty pickList to show if it is databound.
 		 * Flags: IRW
 		 */
-		readonly hideEmptyPickList: boolean; 
+		readonly hideEmptyPickList: boolean;
 
 		/** 
 		 * (Read only, Advanced) If set, this FormItem will derive data to show in the PickList by fetching records from
@@ -1425,7 +1418,7 @@ declare namespace Isc {
 		 * whatever mappings are present.
 		 * Flags: IRA
 		 */
-		readonly optionDataSource: DataSource | string /* DataSource | String */; 
+		readonly optionDataSource: DataSource | string /* DataSource | String */;
 
 		/** 
 		 * If set, this item will display a value from another field to the user instead of
@@ -1465,11 +1458,12 @@ declare namespace Isc {
 		 * are not unique.
 		 * Flags: IRW, Group: databinding
 		 */
-		readonly displayField: string; 
+		readonly displayField: string;
 
 	}
 
 
 
-
 }
+
+

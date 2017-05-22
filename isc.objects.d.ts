@@ -1,11 +1,9 @@
-/// <reference path="isc.classes.d.ts" />
-/// <reference path="isc.types.d.ts" />
-
+/// <reference path="isc.classes.d.ts" />/// <reference path="isc.types.d.ts" />
 // Type definitions for Isomorphic SmartClient 11.1
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/22/2017 2:28:27 PM by kwhite
+// Generated: 5/22/2017 3:20:58 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-21
 
 declare namespace Isc {
@@ -203,7 +201,6 @@ declare namespace Isc {
 	export interface isAStatic {
 
 	/* Methods */
-
 		/**  
 		 * 
 		 * Is object an Array object?
@@ -1058,7 +1055,6 @@ declare namespace Isc {
 		readonly xAxisEndValue?: number /* Float */;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  Return the text string to display in MetricSettings.gradationLabelProperties','gradation labels
 		 * given the raw value for the metric to show on the value axis. This formatter will only
@@ -1471,7 +1467,6 @@ declare namespace Isc {
 		readonly unit?: TimeUnit;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  An optional function for providing formatted HTML for the title of a given span in this 
 		 * HeaderLevel. If unset, Timelines use the HeaderLevel.titles','titles array, if one is
@@ -1513,7 +1508,6 @@ declare namespace Isc {
 	export interface ClassFactoryStatic {
 
 	/* Methods */
-
 		/**  
 		 * 
 		 * Create a new SmartClient class, which can then be used to create instances of this
@@ -2391,7 +2385,6 @@ declare namespace Isc {
 		readonly title?: string /* HTML */;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  Action to fire when this menu is activated.
 		 * 
@@ -2898,7 +2891,6 @@ declare namespace Isc {
 	export interface Number {
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  Returns true if the number parameter falls between the 'first' and 'second' paramters.
 		 * 
@@ -5056,7 +5048,6 @@ declare namespace Isc {
 		readonly wrap?: boolean /* Boolean */;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  Callback fired when field changes value as the result of a cell edit. Fired only on
 		 * successful save of edit, when the new value doesn't match the value before editing.
@@ -6394,7 +6385,6 @@ declare namespace Isc {
 		readonly valueMap?: any /* object */;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  Optional method to format the value to display for this field's cells. Takes precedence 
 		 * over DetailViewer.formatCellValue for cells in this field.
@@ -6469,7 +6459,6 @@ declare namespace Isc {
 		readonly type?: string;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  This method is called after every validation (i.e. call to
 		 * validatorDefinition.condition) whether it passed or failed. This allows the
@@ -6782,7 +6771,6 @@ declare namespace Isc {
 		readonly width?: number;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  Optional handler to fire when a tab is deselected. Returning false will cancel the
 		 * new selection, leaving this tab selected. As with TabSet.tabSelected this
@@ -7245,7 +7233,6 @@ declare namespace Isc {
 		readonly width?: number;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  Called when this icon is clicked. The default action is to call FormItem.showPicker.
 		 * 
@@ -7403,7 +7390,6 @@ declare namespace Isc {
 		readonly valueType?: OperatorValueType;
 
 		/* Instance Method Overrides */
-
 		/**  
 		 *  Compare two criteria, both of which use this operator, and report whether the newCriteria is
 		 * definitely more restrictive than the previous criteria.
@@ -7514,3 +7500,4 @@ declare namespace Isc {
 
 
 }
+
