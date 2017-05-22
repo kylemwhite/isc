@@ -7,7 +7,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 5/22/2017 1:01:29 PM by kwhite
+// Generated: 5/22/2017 2:22:16 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-21
 
 /**
