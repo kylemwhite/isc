@@ -6,8 +6,8 @@
 // Type definitions for Isomorphic SmartClient 11.1
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
-// Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 5/22/2017 8:03:28 AM by KWhite
+// Definitions: https://gihub.com/kylemwhite/isc
+// Generated: 5/22/2017 1:01:29 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-21
 
 /**
@@ -2626,7 +2626,8 @@ declare namespace Isc {
 		 * getDataSource - This is undocumented but works.
 		 * @return {DataSource} The DataSource that the grid is bound to
 		 */
-		getDataSource(): DataSource;   // This is a real method on ListGrid but not generated because it's not in the referenceDocs.xml file
+		//getDataSource(): DataSource;   // No longer needed because it's now in the referenceDocs.xml file and is generated.
+
 	}
 }
 
