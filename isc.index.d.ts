@@ -7,8 +7,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 5/22/2017 4:40:28 PM by KWhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-21
+// Generated: 5/23/2017 8:06:30 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-23
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -2473,7 +2473,7 @@ declare namespace Isc {
 
 		/** 
 		 * ToolStripButton extends Button
-		 * Simple subclass of StretchImgButton with appearance appropriate for a ToolStrip button.
+		 * Simple subclass of Button with appearance appropriate for a ToolStrip button.
 		 * Can be used to create an icon-only button, and icon with text, or a text only button by setting the 
 		 * icon and title attributes as required.
 		 */ 

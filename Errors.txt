@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-21
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-23
 
 Errors during generation
-Generated: 5/22/2017 4:40:28 PM by KWhite
+Generated: 5/23/2017 8:06:30 AM by KWhite
 
 Summary
 Total Types  : 229
@@ -65,7 +65,7 @@ Methods with bad flags: 3 (methods should not have any flags except A?)
 3. class:Canvas.getChildTabPosition, Flags=child
 
 
-Classes without inheritsFrom attribute: 66 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake)
+Classes without inheritsFrom attribute: 62 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake)
 1. AutoTest
 2. BaseWidget (manually checked, inheritsFrom Class)
 3. Browser (manually checked, does NOT inherit from Class. Should be object?)
@@ -91,47 +91,43 @@ Classes without inheritsFrom attribute: 66 (Maybe it should inherit from Class, 
 23. HiddenPalette
 24. History (manually checked, does NOT inherit from Class. Should be object?)
 25. Hover
-26. IMenuButton
-27. isc (manually checked, does NOT inherit from Class. Should be object?)
-28. ITreeMenuButton
-29. JSON
-30. JSONEncoder
-31. Log
-32. Mail
-33. MathFunction
-34. Messaging
-35. NumberUtil
-36. Offline
-37. OperationBinding
-38. Operators
-39. Page
-40. ProcessElement
-41. ResultSet (manually checked, inheritsFrom Class)
-42. RPCManager
-43. RPCRequest
-44. RPCResponse
-45. SchemaSet
-46. Selection
-47. SelectionOutline (manually checked, does NOT inherit from Class. Should be object?)
-48. SelectOtherItem
-49. ServerObject (manually checked, does NOT inherit from Class. Should be object?)
-50. SimpleType
-51. String (manually checked, does NOT inherit from Class. Should be object?)
-52. SyntaxHiliter
-53. TabIndexManager
-54. TextSettings
-55. Time (manually checked, does NOT inherit from Class. Should be object?)
-56. Timer
-57. ToolStripButton (manually checked, inheritsFrom Button)
-58. ToolStripMenuButton
-59. TooLStripSeparatorEditProxy (manually checked, does NOT inherit from Class. Should be object?)
-60. Tree
-61. Validator
-62. ValuesManager
-63. VisualBuilder (manually checked, does NOT inherit from Class. Should be object?)
-64. WebService
-65. WSRequest (manually checked, does NOT inherit from Class. Should be object?)
-66. XMLTools
+26. isc (manually checked, does NOT inherit from Class. Should be object?)
+27. JSON
+28. JSONEncoder
+29. Log
+30. Mail
+31. MathFunction
+32. Messaging
+33. NumberUtil
+34. Offline
+35. OperationBinding
+36. Operators
+37. Page
+38. ProcessElement
+39. ResultSet (manually checked, inheritsFrom Class)
+40. RPCManager
+41. RPCRequest
+42. RPCResponse
+43. SchemaSet
+44. Selection
+45. SelectionOutline (manually checked, does NOT inherit from Class. Should be object?)
+46. SelectOtherItem
+47. ServerObject (manually checked, does NOT inherit from Class. Should be object?)
+48. SimpleType
+49. String (manually checked, does NOT inherit from Class. Should be object?)
+50. SyntaxHiliter
+51. TabIndexManager
+52. TextSettings
+53. Time (manually checked, does NOT inherit from Class. Should be object?)
+54. Timer
+55. ToolStripSeparatorEditProxy
+56. Tree
+57. Validator
+58. ValuesManager
+59. VisualBuilder (manually checked, does NOT inherit from Class. Should be object?)
+60. WebService
+61. WSRequest (manually checked, does NOT inherit from Class. Should be object?)
+62. XMLTools
 
 
 Object attributes marked with W flag: 240 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
@@ -932,10 +928,10 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-05-21	229	5	309	67	3559	3	66	216	657	130	1	225	10	0	10	83	15	1	7	7	83	18	15	45	240	130	0	237	137	3	3	229	5	66	116	2523	1	1	0.9850746	0.3754045	0.708907	
+2017-05-23	229	5	309	67	3559	3	62	216	657	130	1	225	10	0	10	83	15	1	7	7	83	18	15	45	240	130	0	237	137	3	3	229	5	66	116	2523	1	1	0.9850746	0.3754045	0.708907	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-05-21
+Metrics for build SNAPSHOT_v11.1d_2017-05-23
 ===== Information =====
 (Informational only, not a problem)
 Types: 229
@@ -972,7 +968,7 @@ OR specified as ', ': 3
 
 ===== Errors =====
 (May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented)
-Classes without inheritsFrom attribute: 66
+Classes without inheritsFrom attribute: 62
 Arrays defined as 'array of': 1
 Arrays defined as 'Array[] of': 10
 Arrays defined as 'array[] of': 0
