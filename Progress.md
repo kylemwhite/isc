@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-23 at 5/24/2017 7:01:23 AM by KWhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-25 at 5/25/2017 10:31:10 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -17,7 +17,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
 |3|Classes|309|Number of classes found in the referenceDocs.xml file|
 |4|Objects|67|Number of objects found in the referenceDocs.xml file|
-|5|Methods|3,559|Number of methods (instance and class) found in the referenceDocs.xml file|
+|5|Methods|3,558|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |7|string values without quotes|657|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |8|string values with period|130|These usually are really references to a constant.|
@@ -28,7 +28,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |13|Interfaces Generated|5||
 |14|Objects Generated|66||
 |15|Classes Generated|116||
-|16|Methods Generated|2,523||
+|16|Methods Generated|2,522||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
 |19|Percentage of Objects generated|99%||

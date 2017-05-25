@@ -7,8 +7,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 5/24/2017 7:01:22 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-23
+// Generated: 5/25/2017 10:31:10 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-25
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.

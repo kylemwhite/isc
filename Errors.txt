@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-23
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-25
 
 Errors during generation
-Generated: 5/24/2017 7:01:23 AM by KWhite
+Generated: 5/25/2017 10:31:10 AM by KWhite
 
 Summary
 Total Types  : 229
 Total Classes: 309
 Total Objects: 67
-Total Methods: 3559
+Total Methods: 3558
 
 Attributes missing R flag: 45 (Should they all have an R flag?)
 1. attr:Calendar.eventCanvas, Flags=A
@@ -928,17 +928,17 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-05-23	229	5	309	67	3559	3	62	216	657	130	1	225	10	0	10	83	15	1	7	7	83	18	15	45	240	130	0	237	137	3	3	229	5	66	116	2523	1	1	0.9850746	0.3754045	0.708907	
+2017-05-25	229	5	309	67	3558	3	62	216	657	130	1	225	10	0	10	83	15	1	7	7	83	18	15	45	240	130	0	237	137	3	3	229	5	66	116	2522	1	1	0.9850746	0.3754045	0.7088252	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-05-23
+Metrics for build SNAPSHOT_v11.1d_2017-05-25
 ===== Information =====
 (Informational only, not a problem)
 Types: 229
 Interfaces: 5
 Classes: 309
 Objects: 67
-Methods: 3,559
+Methods: 3,558
 string values with quotes: 216
 string values without quotes: 657
 string values with period: 130
@@ -949,7 +949,7 @@ Types Generated: 229
 Interfaces Generated: 5
 Objects Generated: 66
 Classes Generated: 116
-Methods Generated: 2,523
+Methods Generated: 2,522
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
