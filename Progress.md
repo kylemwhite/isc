@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-05-25 at 5/26/2017 7:01:09 AM by KWhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-05-29 at 5/29/2017 7:01:07 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -17,18 +17,18 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
 |3|Classes|309|Number of classes found in the referenceDocs.xml file|
 |4|Objects|67|Number of objects found in the referenceDocs.xml file|
-|5|Methods|3,558|Number of methods (instance and class) found in the referenceDocs.xml file|
+|5|Methods|3,559|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |7|string values without quotes|657|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |8|string values with period|130|These usually are really references to a constant.|
-|9|Arrays defined as 'Array of'|225|Since most arrays are described this way, this is assumed to be the 'correct' way.|
+|9|Arrays defined as 'Array of'|226|Since most arrays are described this way, this is assumed to be the 'correct' way.|
 |10|String values where reference is found|0|Possible string values that refer to a constant where the constant was found.|
 |11|OR specified as ' \| '|237|Since most ORs are defined this way, it is assumed to be the correct way.|
 |12|Types Generated|229||
 |13|Interfaces Generated|5||
 |14|Objects Generated|66||
 |15|Classes Generated|116||
-|16|Methods Generated|2,522||
+|16|Methods Generated|2,523||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
 |19|Percentage of Objects generated|99%||
