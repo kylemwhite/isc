@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-30
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-05-31
 
 Errors during generation
-Generated: 5/30/2017 7:01:05 AM by KWhite
+Generated: 5/31/2017 7:01:24 AM by KWhite
 
 Summary
 Total Types  : 229
@@ -928,10 +928,10 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-05-30	229	5	309	67	3559	3	62	216	657	130	1	226	10	0	10	83	15	1	7	7	83	18	15	45	240	130	0	237	137	3	3	229	5	66	116	2523	1	1	0.9850746	0.3754045	0.708907	
+2017-05-31	229	5	309	67	3559	3	62	216	657	130	1	226	10	0	10	83	15	1	7	7	83	18	15	45	240	130	0	237	137	3	3	229	5	66	116	2523	1	1	0.9850746	0.3754045	0.708907	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-05-30
+Metrics for build SNAPSHOT_v11.1d_2017-05-31
 ===== Information =====
 (Informational only, not a problem)
 Types: 229
