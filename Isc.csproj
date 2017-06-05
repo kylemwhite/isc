@@ -24,6 +24,7 @@
   <ItemGroup>
     <Content Include="content\app.css" />
     <Content Include="index.html" />
+    <Content Include="scripts\app.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +36,7 @@
     <TypeScriptCompile Include="scripts\typings\isc\isc.types.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="scripts\app.js.map" />
     <None Include="tsconfig.json.hide" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

@@ -1,6 +1,8 @@
 ## Isomorphic SmartClient TypeScript type definitions
 Work in progress. See [Progress.md](./Progress.md)
 
+Update: Repository is now a sample Visual Studio 2015 application. ts.d files can be found in /scripts/typings/isc
+
 The goal is to provide type safety in a TypeScript web application that utilizes the Isomorphic SmartClient library and provide a development experience similar to writing Java in SmartGWT (the GWT version of SmartClient). Documentation is provided in comments in JSDoc format and will show up in intellisense.
 
 Note that with some editors (VS Code for example), having the TypeScript definitions reference works with JavaScript code as well. So, this can help you out even if you don't want to switch your application to TypeScript.
@@ -184,7 +186,7 @@ So far, this has only been tested with Visual Studio 2015 and VS Code. If you're
 | 4. Make ALL properties ~~without the W flag~~ readonly (writeable properties must always use the setter or setProperty())| Done
 | 5. If a property has a getter, then don't generate the property at all (i.e. force use of the getter) | Done
 | 6. For properties and methods marked with the 'A' flag, put the word Advanced in the description so it shows up in intellisense. | Done
-| 7. Create a complete working sample program. | Not started
+| 7. Create a complete working sample program. | Done
 | 8. Create unit tests.| Not started
 | 9. Build an automated system to re-generate when SmartClient is updated.| Done
 | 10. Commit to DefinitelyTyped. | Not started
