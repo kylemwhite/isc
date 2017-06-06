@@ -66,4 +66,6 @@ window.onload = () => {
         , width: 600
        // , border: "1px solid green"
     });
+
+    let arr = new Array<number>();
 };

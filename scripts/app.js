@@ -55,4 +55,5 @@ window.onload = function () {
         autoDraw: true,
         width: 600
     });
+    var arr = new Array();
 };
