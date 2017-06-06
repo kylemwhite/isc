@@ -15,7 +15,11 @@ class Greeter {
 
     start() {
         if (this.timerToken == 0) {
-            this.timerToken = setInterval(() => this.span.innerHTML = new Date().toUTCString(), 500);
+
+            this.timerToken = setInterval(() => {
+                this.span.innerHTML = new Date().toUTCString();
+            }, 500) as number;   // as number to avoid the Timer is not assignable to type 'number' bogus error
+
             isc.say("Timer started.");
         }
     }

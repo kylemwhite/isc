@@ -37,7 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\app.js.map" />
-    <None Include="tsconfig.json.hide" />
+    <Content Include="tsconfig.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

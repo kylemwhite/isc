@@ -1,4 +1,5 @@
 /// <reference path="../scripts/typings/isc/isc.index.d.ts" />
+"use strict";
 var Greeter = (function () {
     function Greeter(element) {
         this.timerToken = 0;
@@ -11,7 +12,9 @@ var Greeter = (function () {
     Greeter.prototype.start = function () {
         var _this = this;
         if (this.timerToken == 0) {
-            this.timerToken = setInterval(function () { return _this.span.innerHTML = new Date().toUTCString(); }, 500);
+            this.timerToken = setInterval(function () {
+                _this.span.innerHTML = new Date().toUTCString();
+            }, 500); // as number to avoid the Timer is not assignable to type 'number' bogus error
             isc.say("Timer started.");
         }
     };
@@ -53,4 +56,3 @@ window.onload = function () {
         width: 600
     });
 };
-//# sourceMappingURL=app.js.map
