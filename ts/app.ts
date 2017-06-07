@@ -18,7 +18,7 @@ class Greeter {
 
             this.timerToken = setInterval(() => {
                 this.span.innerHTML = new Date().toUTCString();
-            }, 500) as number;   // as number to avoid the Timer is not assignable to type 'number' bogus error
+            }, 500);   
 
             isc.say("Timer started.");
         }
@@ -67,5 +67,4 @@ window.onload = () => {
        // , border: "1px solid green"
     });
 
-    let arr = new Array<number>();
 };

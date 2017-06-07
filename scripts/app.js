@@ -14,7 +14,7 @@ var Greeter = (function () {
         if (this.timerToken == 0) {
             this.timerToken = setInterval(function () {
                 _this.span.innerHTML = new Date().toUTCString();
-            }, 500); // as number to avoid the Timer is not assignable to type 'number' bogus error
+            }, 500);
             isc.say("Timer started.");
         }
     };
@@ -55,5 +55,4 @@ window.onload = function () {
         autoDraw: true,
         width: 600
     });
-    var arr = new Array();
 };

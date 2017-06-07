@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 6/6/2017 8:35:25 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-06
+// Generated: 6/7/2017 7:00:12 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-07
 
 declare namespace Isc {
 
@@ -3849,7 +3849,7 @@ declare namespace Isc {
 		 * Dynamic valueMaps can be provided by implementing ListGrid.getEditorValueMap.
 		 * Flags: IRW, Group: editing
 		 */
-		readonly editorValueMap?: any /* Object */;
+		readonly editorValueMap?: ValueMap;
 		/** 
 		 * The value to display for a cell whose value is null or the empty string after
 		 * applying ListGridField.formatCellValue','formatting and valueMap (if any).
@@ -5264,7 +5264,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - pointer back to this ListGrid instance.
 		 * @return {ValueMap} ValueMap for the field (or null if no valueMap required)
 		 */
-		getEditorValueMap?(values:any /* object */, field:ListGridField, grid:ListGrid): ValueMap /* valueMap */; 
+		getEditorValueMap?(values:any /* object */, field:ListGridField, grid:ListGrid): ValueMap; 
 
 		/**  
 		 *  If your derivation of the field title is more complex than specifying a static string,
