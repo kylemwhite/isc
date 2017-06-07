@@ -38,6 +38,7 @@
   <ItemGroup>
     <Content Include="scripts\app.js.map" />
     <Content Include="tsconfig.json" />
+    <Content Include="README.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
