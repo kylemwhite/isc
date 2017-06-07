@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-07
 
 Errors during generation
-Generated: 6/7/2017 10:08:22 AM by KWhite
+Generated: 6/7/2017 12:48:42 PM by KWhite
 
 Summary
 Total Types  : 231
@@ -611,7 +611,7 @@ Method parameters with missing name: 1
 1. method:ListGrid.setCriteria, type='Criteria | AdvancedCriteria', name=''
 
 Methods with one or more parameters missing a type: 1
-1. class:isc.enable, ParamName=enable, type=
+1. classMethod:isc.setAutoDraw, ParamName=enable, type=
 
 
 Methods with required parameter after optional parameter: 0

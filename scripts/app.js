@@ -1,5 +1,6 @@
 /// <reference path="../scripts/typings/isc/isc.index.d.ts" />
 "use strict";
+// Sample app.
 var Greeter = (function () {
     function Greeter(element) {
         this.timerToken = 0;
