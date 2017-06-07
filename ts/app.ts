@@ -1,5 +1,6 @@
 ﻿/// <reference path="../scripts/typings/isc/isc.index.d.ts" />
 
+// Sample app.
 class Greeter {
     element: HTMLElement;
     span: HTMLElement;
