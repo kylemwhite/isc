@@ -6,7 +6,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
  
 Generated from SmartClient SNAPSHOT_v11.1d_2017-06-06 at 6/6/2017 7:01:11 AM by KWhite
 
-To see the details, look in the [Errors.txt](./Errors.txt) file.
+To see the details, look in the [Errors.txt](./Errors.txt) file. 
 
 ### Progress
 
