@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-08
 
 Errors during generation
-Generated: 6/8/2017 7:01:11 AM by KWhite
+Generated: 6/8/2017 3:39:58 PM by KWhite
 
 Summary
 Total Types  : 231
@@ -674,7 +674,7 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-06-08	231	5	309	67	3560	0	62	216	657	130	0	239	0	0	8	83	0	0	0	0	12	18	1	45	240	130	0	374	0	1	3	231	5	66	117	2584	1	1	0.9850746	0.3786408	0.7258427	
+2017-06-08	231	5	309	67	3560	0	62	216	657	130	0	239	0	0	8	83	0	0	0	0	12	18	1	45	240	130	0	374	0	1	3	231	5	66	119	2587	1	1	0.9850746	0.3851133	0.7266854	
 
 ======= For Display Somewhere =======
 Metrics for build SNAPSHOT_v11.1d_2017-06-08
@@ -694,12 +694,12 @@ OR specified as ' \| ': 374
 Types Generated: 231
 Interfaces Generated: 5
 Objects Generated: 66
-Classes Generated: 117
-Methods Generated: 2,584
+Classes Generated: 119
+Methods Generated: 2,587
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
-Percentage of Classes generated: 38 %
+Percentage of Classes generated: 39 %
 Percentage of Methods generated: 73 %
 
 ===== Warnings =====

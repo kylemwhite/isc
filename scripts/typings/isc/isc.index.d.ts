@@ -6,7 +6,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 6/8/2017 7:01:11 AM by KWhite
+// Generated: 6/8/2017 3:39:58 PM by KWhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-08
 
 /**
@@ -1318,6 +1318,12 @@ declare namespace Isc {
 		Menu: MenuStatic<Menu, MenuProps>;
 
 		/** 
+		 * MenuButton extends Button
+		 * Simple subclass of button associated with a menu widget (gets shown below the button).
+		 */ 
+		MenuButton: MenuButtonStatic<MenuButton, MenuButtonProps>;
+
+		/** 
 		 * MiniNavControl extends StretchImgButton
 		 * Compact control for up/down navigation that roughly looks like an up arrowhead next to a
 		 * down arrowhead.
@@ -2490,6 +2496,14 @@ declare namespace Isc {
 		 * icon and title attributes as required.
 		 */ 
 		ToolStripButton: ToolStripButtonStatic<ToolStripButton, ToolStripButtonProps>;
+
+		/** 
+		 * ToolStripMenuButton extends MenuButton
+		 * Simple subclass of MenuButton with appearance appropriate for a ToolStrip menu button.
+		 * Can be used to create an icon-only menu button, and icon with text, or a text only button by setting the 
+		 * icon and title attibutes as required.
+		 */ 
+		ToolStripMenuButton: ToolStripMenuButtonStatic<ToolStripMenuButton, ToolStripMenuButtonProps>;
 
 		/** 
 		 * A Tree is a data model representing a set of objects linked into a hierarchy.

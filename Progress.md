@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-06-08 at 6/8/2017 7:01:11 AM by KWhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-06-08 at 6/8/2017 3:39:58 PM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -27,12 +27,12 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |12|Types Generated|231||
 |13|Interfaces Generated|5||
 |14|Objects Generated|66||
-|15|Classes Generated|117||
-|16|Methods Generated|2,584||
+|15|Classes Generated|119||
+|16|Methods Generated|2,587||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
 |19|Percentage of Objects generated|99%||
-|20|Percentage of Classes generated|38%||
+|20|Percentage of Classes generated|39%||
 |21|Percentage of Methods generated|73%||
 
 
