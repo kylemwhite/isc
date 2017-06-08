@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-06-07 at 6/7/2017 12:48:42 PM by KWhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-06-08 at 6/8/2017 7:01:11 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -28,7 +28,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |13|Interfaces Generated|5||
 |14|Objects Generated|66||
 |15|Classes Generated|117||
-|16|Methods Generated|2,582||
+|16|Methods Generated|2,584||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
 |19|Percentage of Objects generated|99%||
@@ -55,11 +55,11 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |3|Classes without inheritsFrom attribute|62|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
 |4|Setter Methods with parameter type that does not match the attribute type|12|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
 |5|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|6|Method params with missing name|1|All parameters should have a name.|
-|7|Method params missing type|1|All parameters should have a type.|
-|8|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
-|9|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|10|Arrays defined as 'Array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|11|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|12|Method params with bad name|0|All parameters should have a name without special characters.|
+|6|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
+|7|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|8|Arrays defined as 'Array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|9|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|10|Method params with missing name|0|All parameters should have a name.|
+|11|Method params with bad name|0|All parameters should have a name without special characters.|
+|12|Method params missing type|0|All parameters should have a type.|
 |13|Methods with required parameters after optional parameters|0|Required parameters should always be at the end of the parameter list.|
