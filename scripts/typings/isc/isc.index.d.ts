@@ -6,7 +6,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 6/9/2017 8:55:21 AM by KWhite
+// Generated: 6/9/2017 11:13:58 AM by KWhite
 // Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-09
 
 /**
@@ -2252,6 +2252,7 @@ declare namespace Isc {
 		ResultTree: ResultTreeStatic<ResultTree, ResultTreeProps>;
 
 		/** 
+		 * RPCRequest extends Class
 		 * Encapsulates a client/server RPC request. You'll need to provide an instance of this class (or a
 		 * constructor for it) to the RPCManager.sendRequest method. If you use the 
 		 * RPCManager.send method, an instance of RPCRequest will be created for you.

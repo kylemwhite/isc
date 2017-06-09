@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-09
 
 Errors during generation
-Generated: 6/9/2017 8:55:21 AM by KWhite
+Generated: 6/9/2017 11:13:58 AM by KWhite
 
 Summary
 Total Types  : 231
@@ -101,7 +101,7 @@ Classes without inheritsFrom attribute: 62 (Maybe it should inherit from Class, 
 38. ProcessElement
 39. ResultSet (manually checked, inheritsFrom Class)
 40. RPCManager
-41. RPCRequest
+41. RPCRequest (manually checked, inheritsFrom Class)
 42. RPCResponse
 43. SchemaSet
 44. Selection
