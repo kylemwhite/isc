@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 6/9/2017 11:12:50 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-09
+// Generated: 6/14/2017 8:24:48 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-14
 
 declare namespace Isc {
 
@@ -1500,6 +1500,19 @@ declare namespace Isc {
 
 
 	/**
+	 * Supported positioning of the chart Title.
+	 */
+	export type TitleAlign = 
+		/** Align to the left of the chart title header */
+		"left"
+		/** Align centrally in the chart title header */
+		| "center"
+		/** Align to the right of the chart title header */
+		| "right"
+		;
+
+
+	/**
 	 * The names of the Calendar views.
 	 */
 	export type ViewName = 
@@ -2926,6 +2939,59 @@ declare namespace Isc {
 
 
 	/**
+	 * Special SCImgURL format for specifying sprited image configuration.
+	 * 
+	 * See also the "spriting" discussion in the skinning','skinning overview 
+	 * documentation.
+	 * 
+	 * In order to generate HTML to render a properly scaled image sprite from a composite image
+	 * file, this format allows developers to specify the image source, native size and
+	 * offset of the sprite within the image, and the desired drawn size for the image.
+	 * spriteConfigs have the following format:
+	 * 
+	 * "sprite:&lt;image URL&gt;;offset:&lt;Left&gt;,&lt;Top&gt;;size:&lt;Width&gt;,&lt;Height&gt;;cssClass:&lt;className&gt;"
+	 * 
+	 * Where supported, the sprite: prefix is used to identify a specified
+	 * SCImgURL as a sprited image. 
+	 * The media to load will be retrieved from the specified image URL. Standard 
+	 * SCImgURL directory prefixes such as "[SKIN]" can be included in this URL.
+	 * An explicit URL is not required - developers may also specify a css class which includes
+	 * an explicit background-image attribute.
+	 * The size: and offset: properties should specify the pixel size
+	 * and position of the sprite within the composite image. Again these are not required
+	 * and can be specified directly in the css class using width 
+	 * and height and
+	 * background-offset properties.
+	 * The cssClass: denotes the css class to apply to the sprite. This is also
+	 * optional - a sprite can be specified with an image URL and explicit sizing and offset
+	 * coordinates, in which case no css class is actually required.
+	 * (Of course for a valid sprite, it is expected that the image URL and size are specified
+	 * either explicitly in the string, or within the css class definition. If the offset is
+	 * omitted, it will be assumed to be zero on both axes).
+	 * 
+	 * Sprited image configuration and "stateful" images
+	 * Many image URLs in SmartClient are "stateful", meaning that the actual URL used to fetch an
+	 * image will vary according to the component's state (eg, "Disabled"), generally, by adding a
+	 * suffix to the image URL.
+	 * Component image attributes which support "stateful" suffixes are not guaranteed to 
+	 * always support having their value set to a SCSpriteConfig string, as special handling
+	 * is required both to ensure the stateful suffix is incorporated into the generated HTML
+	 * correctly and that logic to update the images state at runtime handles this HTML being
+	 * present in the DOM rather than a simple &lt;img...&gt; element.
+	 * Where these are supported they will be documented as such. The handling will in these 
+	 * cases is as follows:
+	 * 
+	 * if the configuration includes an explicit image URL, stateful suffixes are combined
+	 * and appended using "_" characters as described in Img.src
+	 * if the configuration inclues a cssClass, the stateful suffixes will be combined and
+	 * appended to the class name (with no "_" characters), as with standard
+	 * StatefulCanvas.baseStyle stateful suffixes
+	 * 
+	 */
+	export type SCSpriteConfig = any;
+
+
+	/**
 	 * The direction in which an item should lay out it's fields.
 	 */
 	export type DateFieldLayout = 
@@ -3116,6 +3182,21 @@ declare namespace Isc {
 
 
 	/**
+	 * String specifying effect to apply during an animated show or hide.
+	 */
+	export type AnimateShowEffectId = 
+		/** content slides into or out of view as the widget grows or shrinks */
+		"slide"
+		/** content is revealed or wiped as the widget grows or shrinks */
+		| "wipe"
+		/** widget's opacity smoothly fades into or out of view */
+		| "fade"
+		/** widget moves into position from offscreen */
+		| "fly"
+		;
+
+
+	/**
 	 * An object containing the open state for a treeGrid.
 	 * Note that this object is not intended to be interrogated directly, but may be stored 
 	 * (for example) as a blob on the server for state persistence across sessions.
@@ -3165,19 +3246,6 @@ declare namespace Isc {
 		/** Show rollover styling and media when the user is over the icon or over the textBox (or control-table, if present) for this icon. Only has
 	 * an effect when FormItem.showOver is true. */
 		| "textBox"
-		;
-
-
-	/**
-	 * Supported positioning of the chart Title.
-	 */
-	export type titleAlign = 
-		/** Align to the left of the chart title header */
-		"left"
-		/** Align centrally in the chart title header */
-		| "center"
-		/** Align to the right of the chart title header */
-		| "right"
 		;
 
 
@@ -3272,19 +3340,6 @@ declare namespace Isc {
 		| "after"  // Original Value = ListGrid.AFTER
 		/** Drop position is not over a record */
 		| "none"  // Original Value = ListGrid.NONE
-		;
-
-
-	/**
-	 * Supported positioning of the chart Legend.
-	 */
-	export type legendAlign = 
-		/** Align to the left of the legend section */
-		"left"
-		/** Align centrally in the legend section */
-		| "center"
-		/** Align to the right of the legend section */
-		| "right"
 		;
 
 
@@ -3545,6 +3600,19 @@ declare namespace Isc {
 
 
 	/**
+	 * Supported positioning of the chart Legend.
+	 */
+	export type LegendAlign = 
+		/** Align to the left of the legend section */
+		"left"
+		/** Align centrally in the legend section */
+		| "center"
+		/** Align to the right of the legend section */
+		| "right"
+		;
+
+
+	/**
 	 * When discovering a tree, the scanMode determines how to scan for the childrenProperty
 	 * "node": take each node individually
 	 * "branch": scan direct siblings as a group, looking for best fit
@@ -3616,21 +3684,6 @@ declare namespace Isc {
 		"vertical"  // Original Value = Layout.VERTICAL
 		/** members laid out horizontally */
 		| "horizontal"  // Original Value = Layout.HORIZONTAL
-		;
-
-
-	/**
-	 * String specifying effect to apply during an animated show or hide.
-	 */
-	export type animateShowEffectId = 
-		/** content slides into or out of view as the widget grows or shrinks */
-		"slide"
-		/** content is revealed or wiped as the widget grows or shrinks */
-		| "wipe"
-		/** widget's opacity smoothly fades into or out of view */
-		| "fade"
-		/** widget moves into position from offscreen */
-		| "fly"
 		;
 
 

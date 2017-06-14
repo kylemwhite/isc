@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 6/9/2017 11:12:50 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-09
+// Generated: 6/14/2017 8:24:48 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-14
 
 declare namespace Isc {
 
@@ -61,7 +61,7 @@ declare namespace Isc {
 		 * the NavPanel.
 		 * Flags: IR
 		 */
-		readonly id?: string /* identifier */;
+		readonly id?: string /* Identifier */;
 		/** 
 		 * (Read only) If set, this NavItem will be styled like a header. In this case NavItem.pane
 		 * is ignored and nothing happens when the header is clicked. However, NavItem.items can
@@ -87,7 +87,7 @@ declare namespace Isc {
 		 * A component can be provided directly, or its ID can be provided.
 		 * Flags: IR
 		 */
-		readonly pane?: Canvas | string /* Canvas | identifier */;
+		readonly pane?: Canvas | string /* Canvas | Identifier */;
 		/** 
 		 * (Read only) Title to show for this NavItem.
 		 * Flags: IR
@@ -136,7 +136,7 @@ declare namespace Isc {
 		 * (Read only) Effect to apply
 		 * Flags: IR
 		 */
-		readonly effect?: string /* animateShowEffectId */;
+		readonly effect?: string /* AnimateShowEffectId */;
 		/** 
 		 * (Read only) For hide animations of type "wipe and 
 		 * "slide" this attribute specifies where the wipe / slide should finish.
@@ -145,7 +145,7 @@ declare namespace Isc {
 		 * canvas).
 		 * Flags: IR
 		 */
-		readonly endsAt?: string;
+		readonly endsAt?: string /* String */;
 		/** 
 		 * (Read only) For show animations of type "wipe" and
 		 * "slide" this attribute specifies where the wipe / slide should originate.
@@ -153,7 +153,7 @@ declare namespace Isc {
 		 * default behavior), and "L" (horizontal animation from the left side).
 		 * Flags: IR
 		 */
-		readonly startFrom?: string;
+		readonly startFrom?: string /* String */;
 	} // AnimateShowEffect
 
 	export interface AnimateShowEffectStatic {
@@ -214,7 +214,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is an Array
 		 */
-		Array(object:any /* object */): boolean; 
+		Array(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -224,7 +224,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Boolean
 		 */
-		Boolean(object:any /* object */): boolean; 
+		Boolean(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -234,7 +234,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Class Object
 		 */
-		ClassObject(object:any /* object */): boolean; 
+		ClassObject(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -244,7 +244,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Date
 		 */
-		Date(object:any /* object */): boolean; 
+		Date(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -254,7 +254,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is an empty array
 		 */
-		emptyArray(object:any /* object */): boolean; 
+		emptyArray(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -269,7 +269,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is the empty object
 		 */
-		emptyObject(object:any /* object */): boolean; 
+		emptyObject(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -281,7 +281,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a null string
 		 */
-		emptyString(object:any /* object */): boolean; 
+		emptyString(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -291,7 +291,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Function
 		 */
-		Function(object:any /* object */): boolean; 
+		Function(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -301,7 +301,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is an instance of some class
 		 */
-		Instance(object:any /* object */): boolean; 
+		Instance(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -311,7 +311,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Interface Object
 		 */
-		Interface(object:any /* object */): boolean; 
+		Interface(object:any /* Object */): boolean; 
 
 		/**  
 		 *  Does object implement the List interface?
@@ -319,7 +319,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} <code>true</code> if the object is an Array or belongs to another class that                   implements the <code>List</code> API.
 		 */
-		List(object:any /* object */): boolean; 
+		List(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -329,7 +329,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a non-empty string
 		 */
-		nonemptyString(object:any /* object */): boolean; 
+		nonemptyString(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -341,7 +341,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Number
 		 */
-		Number(object:any /* object */): boolean; 
+		Number(object:any /* Object */): boolean; 
 
 		/**  
 		 *  Returns whether the passed value is a non-null Object.
@@ -356,7 +356,7 @@ declare namespace Isc {
 		 * @param {any} object - value to test for whether it's an object
 		 * @return {boolean} whether passed value is an Object
 		 */
-		Object(object:any): boolean; 
+		Object(object:any /* Any */): boolean; 
 
 		/**  
 		 * 
@@ -366,7 +366,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Boolean
 		 */
-		RegularExpression(object:any /* object */): boolean; 
+		RegularExpression(object:any /* Object */): boolean; 
 
 		/**  
 		 * 
@@ -376,7 +376,7 @@ declare namespace Isc {
 		 * @param {any} object - object to test
 		 * @return {boolean} true == <code>object</code> is a String
 		 */
-		String(object:any /* object */): boolean; 
+		String(object:any /* Object */): boolean; 
 
 	} // isAStatic
 
@@ -1064,7 +1064,7 @@ declare namespace Isc {
 		 * @param {any} value - raw value of the metric
 		 * @return {string} the text to display.
 		 */
-		formatAxisValue?(value:any): string /* String */; 
+		formatAxisValue?(value:any /* Any */): string /* String */; 
 
 		/**  
 		 *  Return the text string to display in MetricSettings.showValueOnHover','hovers or via MetricSettings.showDataValues
@@ -1076,7 +1076,7 @@ declare namespace Isc {
 		 * @param {any} value - raw value of the metric
 		 * @return {string} the text to display.
 		 */
-		formatDataValue?(value:any): string /* String */; 
+		formatDataValue?(value:any /* Any */): string /* String */; 
 
 		/**  
 		 *  Get a color from the MetricSettings.dataColors Array.
@@ -1548,7 +1548,7 @@ declare namespace Isc {
 		 * @param {Class} superClass - Optional SuperClass Class object or name
 		 * @return {Class} Returns the new Class object.
 		 */
-		defineClass(className:string, superClass?:Class): Class; 
+		defineClass(className:string /* String */, superClass?:Class): Class; 
 
 		/**  
 		 * 
@@ -1558,7 +1558,7 @@ declare namespace Isc {
 		 * @param {string} className - name of a class
 		 * @return {Class} Class object, or null if not found
 		 */
-		getClass(className:string): Class; 
+		getClass(className:string /* String */): Class; 
 
 		/**  
 		 * 
@@ -1571,7 +1571,7 @@ declare namespace Isc {
 		 * @param {any} props3 - Yet more properties to apply to the instance.
 		 * @return {Class} Pointer to the new class.
 		 */
-		newInstance(className:string, props?:any /* object */, props2?:any /* object */, props3?:any /* object */): Class /* class */; 
+		newInstance(className:string /* String */, props?:any /* Object */, props2?:any /* Object */, props3?:any /* Object */): Class; 
 
 		/**  
 		 * 
@@ -1612,7 +1612,7 @@ declare namespace Isc {
 		 * The ID must be unique within DrawPane.gradients if defined.
 		 * Flags: IR
 		 */
-		readonly id?: string /* identifier */;
+		readonly id?: string /* Identifier */;
 		/** 
 		 * (Read only) A start color for the gradient. If both startColor and Gradient.endColor','endColor
 		 * are set then Gradient.colorStops','colorStops is ignored.
@@ -1785,7 +1785,7 @@ declare namespace Isc {
 		 * entire summary.
 		 * Flags: IRWA
 		 */
-		readonly invalidSummaryValue?: string;
+		readonly invalidSummaryValue?: string /* String */;
 	} // SummaryConfiguration
 
 	export interface SummaryConfigurationStatic {
@@ -2274,7 +2274,7 @@ declare namespace Isc {
 		 * If you need to set this state dynamically, use MenuItem.dynamicIcon instead.
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly disabledIcon?: string;
+		readonly disabledIcon?: string /* String */;
 		/** 
 		 * (Read only) Arbitrary UI component that should appear in this MenuItem. See
 		 * ListGridRecord.embeddedComponent for an overview and options for controlling placement.
@@ -2340,7 +2340,7 @@ declare namespace Isc {
 		 * If you need to set this state dynamically, use MenuItem.dynamicIcon instead.
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly icon?: string;
+		readonly icon?: string /* String */;
 		/** 
 		 * (Read only) The height applied to this item's icon. The default of 16 can be changed
 		 * for all MenuItems by overriding Menu.iconHeight.
@@ -2372,7 +2372,7 @@ declare namespace Isc {
 		 * specified, the first KeyName value in MenuItem.keys will be used by default.
 		 * Flags: IR, Group: menuKeys
 		 */
-		readonly keyTitle?: string;
+		readonly keyTitle?: string /* String */;
 		/** 
 		 * (Read only) When used in an AdaptiveMenu, should this MenuItem show only it's
 		 * MenuItem.icon','icon when displayed inline?
@@ -2664,7 +2664,7 @@ declare namespace Isc {
 		 * function can be used to test whether a name is a valid JavaScript identifier).
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly name?: string /* identifier */;
+		readonly name?: string /* Identifier */;
 		/** 
 		 * (Read only) This property allows developer to "nest" header spans, grouping fields together by
 		 * multiple layers of granularity.
@@ -2857,7 +2857,7 @@ declare namespace Isc {
 		 * Specifies the additional attributes to write in the tag.
 		 * Flags: IRW
 		 */
-		readonly extraStuff?: string;
+		readonly extraStuff?: string /* String */;
 		/** 
 		 * Specifies the height of the image.
 		 * Flags: IRW
@@ -2875,7 +2875,7 @@ declare namespace Isc {
 		 * with this name will act on the image object created using this ImgProperties object.
 		 * Flags: IRW
 		 */
-		readonly name?: string;
+		readonly name?: string /* String */;
 		/** 
 		 * Specifies the URL of the image local to the skin or application directory.
 		 * Flags: IRW
@@ -3165,7 +3165,7 @@ declare namespace Isc {
 		 * ListGridField.linkText.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly linkText?: string;
+		readonly linkText?: string /* String */;
 		/** 
 		 * (Read only) Set to false to disable rollover for this individual record when ListGrid.showRollOver
 		 * is true.
@@ -3241,7 +3241,7 @@ declare namespace Isc {
 		 * (Read only) End value of a criterion with an operator of type "valueRange".
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly end?: any;
+		readonly end?: any /* Any */;
 		/** 
 		 * (Read only) Name of the field in each Record that this criterion applies to. Not applicable for a
 		 * criterion with Criterion.criteria','sub-criteria. Can be specified as a dataPath to 
@@ -3259,7 +3259,7 @@ declare namespace Isc {
 		 * (Read only) Start value of a criterion with an operator of type "valueRange".
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly start?: any;
+		readonly start?: any /* Any */;
 		/** 
 		 * (Read only) Value to be used in the application of this criterion.
 		 * 
@@ -3267,7 +3267,7 @@ declare namespace Isc {
 		 * OperatorValueType of the operator.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly value?: any;
+		readonly value?: any /* Any */;
 		/** 
 		 * (Read only) Wherever dynamicCriteria are supported, valuePath can be
 		 * specified as a path in the current Canvas.ruleScope as an alternative to setting a fixed
@@ -3615,7 +3615,7 @@ declare namespace Isc {
 		 * structures in a flat list of columns.
 		 * Flags: IRA, Group: data
 		 */
-		readonly dataPath?: string;
+		readonly dataPath?: string /* String */;
 		/** 
 		 * Display format to use for date type values within this field.
 		 * 
@@ -3669,26 +3669,26 @@ declare namespace Isc {
 		 * value to show in the filter editor for this field.
 		 * Flags: IRWA, Group: filterEditor
 		 */
-		readonly defaultFilterValue?: any;
+		readonly defaultFilterValue?: any /* Any */;
 		/** 
 		 * (Read only) Default groupingMode used when the user does not specify a mode or grouping is triggered
 		 * programmatically and ListGridField.groupingMode','field.groupingMode is unset.
 		 * See ListGridField.groupingModes','field.groupingModes.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly defaultGroupingMode?: string /* identifier */;
+		readonly defaultGroupingMode?: string /* Identifier */;
 		/** 
 		 * (Read only, Advanced) If this field is editable, this property will be passed to editors displayed for
 		 * cells within this field as FormItem.defaultIconSrc.
 		 * Flags: IRA, Group: editing
 		 */
-		readonly defaultIconSrc?: string;
+		readonly defaultIconSrc?: string /* String */;
 		/** 
 		 * If this field ListGridField.canEdit','can be edited, this property can be used to
 		 * specify a default value for this field's editor when adding new rows to the grid.
 		 * Flags: IRW, Group: editing
 		 */
-		readonly defaultValue?: any;
+		readonly defaultValue?: any /* Any */;
 		/** 
 		 * (Read only) Optional "default width" for this field. If set, this value will be returned by the
 		 * ListGrid.getDefaultFieldWidth method, and used as the autoFit size for
@@ -3713,7 +3713,7 @@ declare namespace Isc {
 		 * picked up via ListGrid.getDisplayValue.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly displayField?: string;
+		readonly displayField?: string /* String */;
 		/** 
 		 * (Advanced) For fields of type "date", set this property to a valid
 		 * DateDisplayFormat to specify how the date should be formatted.
@@ -3726,7 +3726,7 @@ declare namespace Isc {
 		 * to edit this field. For dates you may also need to set ListGridField.inputFormat.
 		 * Flags: IRWA
 		 */
-		readonly displayFormat?: any /* varies */;
+		readonly displayFormat?: any /* Varies */;
 		/** 
 		 * (Advanced) If a ListGridField.displayField is set, should this field show record values from
 		 * the displayField?
@@ -3777,7 +3777,7 @@ declare namespace Isc {
 		 * instead.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorImageURLPrefix?: string;
+		readonly editorImageURLPrefix?: string /* String */;
 		/** 
 		 * (Advanced) When some cell in this field is being edited, this property can be used to apply
 		 * an explicit FormItem.imageURLSuffix to the editor in question.
@@ -3786,7 +3786,7 @@ declare namespace Isc {
 		 * instead.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorImageURLSuffix?: string;
+		readonly editorImageURLSuffix?: string /* String */;
 		/** 
 		 * (Advanced) Properties to apply the the form item created to edit this field. (Only used if
 		 * this field is editable).
@@ -3803,7 +3803,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorProperties?: FormItemProps /* FormItem properties */;
+		readonly editorProperties?: FormItemProps /* FormItem Properties */;
 		/** 
 		 * (Read only) Shortcut to configure a FormItem.textFormula for the ListGridField.editorType','editor used when this
 		 * field is ListGrid.canEdit','edited.
@@ -3920,7 +3920,7 @@ declare namespace Isc {
 		 * can be used to specify properties for the appropriate filter form item.
 		 * Flags: IRWA, Group: filterEditor
 		 */
-		readonly filterEditorProperties?: FormItemProps /* FormItem properties */;
+		readonly filterEditorProperties?: FormItemProps /* FormItem Properties */;
 		/** 
 		 * (Advanced) If this ListGrid is showing a filter row, this property can be used to
 		 * specify the form item class to use for the filter form item associated with this
@@ -3983,7 +3983,7 @@ declare namespace Isc {
 		 * such fields, specify an explicit 'formatGridSummary' and/or 'formatGroupSummary' method
 		 * Flags: IR
 		 */
-		readonly formatGridSummary?: string /* stringMethod */;
+		readonly formatGridSummary?: string /* StringMethod */;
 		/** 
 		 * (Read only) Optional stringMethod to format the group level summary values for this field displayed via
 		 * ListGrid.showGroupSummary.
@@ -3998,7 +3998,7 @@ declare namespace Isc {
 		 * such fields, specify an explicit 'formatGridSummary' and/or 'formatGroupSummary' method
 		 * Flags: IR
 		 */
-		readonly formatGroupSummary?: string /* stringMethod */;
+		readonly formatGroupSummary?: string /* StringMethod */;
 		/** 
 		 * (Read only) Whether this field should be "frozen" for the purposes of horizontal scrolling. See
 		 * frozenFields.
@@ -4021,7 +4021,7 @@ declare namespace Isc {
 		 * ListGrid creation to affect the initial grouping.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly groupingMode?: string /* identifier */;
+		readonly groupingMode?: string /* Identifier */;
 		/** 
 		 * (Read only) If this field can be grouped, this attribute represents the set of grouping styles that 
 		 * are available. For example, a "date" field might be able to be 
@@ -4079,7 +4079,7 @@ declare namespace Isc {
 		 * header button entirely.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly headerTitle?: string;
+		readonly headerTitle?: string /* String */;
 		/** 
 		 * Custom titleStyle to apply to this field's header button instead of
 		 * ListGrid.headerTitleStyle.
@@ -4211,7 +4211,7 @@ declare namespace Isc {
 		 * Valid options are "left" or "right"
 		 * Flags: IR
 		 */
-		readonly iconOrientation?: string;
+		readonly iconOrientation?: string /* String */;
 		/** 
 		 * (Read only, Advanced) If this field is editable, this property can be used to specify
 		 * FormItem.icons','icons to be displayed in the editors displayed for this field
@@ -4235,7 +4235,7 @@ declare namespace Isc {
 		 * cells within this field as FormItem.iconVAlign.
 		 * Flags: IRA, Group: editing
 		 */
-		readonly iconVAlign?: string;
+		readonly iconVAlign?: string /* String */;
 		/** 
 		 * (Read only) If ListGridField.icon is specified, this property can be used to specify the
 		 * width of the icon to be displayed in the ListGrid header button.
@@ -4287,7 +4287,7 @@ declare namespace Isc {
 		 * URL for the image.
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLPrefix?: string;
+		readonly imageURLPrefix?: string /* String */;
 		/** 
 		 * (Advanced) If any cells in this field are showing a value icon (see: ListGridField.valueIcons)
 		 * or this is has ListGridFieldType set to "image", this the value
@@ -4298,7 +4298,7 @@ declare namespace Isc {
 		 * FormItem.imageURLSuffix.
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLSuffix?: string;
+		readonly imageURLSuffix?: string /* String */;
 		/** 
 		 * Width of images shown for fieldTypes image and imageFile in this field.
 		 * 
@@ -4378,7 +4378,7 @@ declare namespace Isc {
 		 * initialValues argument.
 		 * Flags: IR, Group: editing
 		 */
-		readonly initialValue?: any;
+		readonly initialValue?: any /* Any */;
 		/** 
 		 * (Advanced) For fields of type "date" or "datetime", if this is an editable
 		 * listGrid, this property allows you to specify the DateItem.inputFormat','inputFormat
@@ -4422,19 +4422,19 @@ declare namespace Isc {
 		 * field if the fieldType is set to "link".
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly linkTextProperty?: string;
+		readonly linkTextProperty?: string /* String */;
 		/** 
 		 * (Advanced) If this field has type [ListGridFieldType] set to "link",
 		 * setting this property will apply a standard prefix to the link URL for cells in this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLPrefix?: string;
+		readonly linkURLPrefix?: string /* String */;
 		/** 
 		 * (Advanced) If this field has type [ListGridFieldType] set to "link",
 		 * setting this property will apply a standard suffix to the link URL for cells in this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLSuffix?: string;
+		readonly linkURLSuffix?: string /* String */;
 		/** 
 		 * When ListGrid.showHeader is false and a field is subject to autofitting (see
 		 * ListGrid.autoFitFieldWidths), sets the maximum width of the field. The actual
@@ -4584,7 +4584,7 @@ declare namespace Isc {
 		 * dataSource.
 		 * Flags: IR, Group: display_values
 		 */
-		readonly optionOperationId?: string;
+		readonly optionOperationId?: string /* String */;
 		/** 
 		 * (Read only) For fields with an ListGridField.optionDataSource, where
 		 * ListGridField.autoFetchDisplayMap is true, this property will govern
@@ -4814,7 +4814,7 @@ declare namespace Isc {
 		 * for showing/hiding the listGrid field when the user right-clicks on the ListGrid header.
 		 * Flags: IRWA, Group: appearance
 		 */
-		readonly summaryTitle?: string;
+		readonly summaryTitle?: string /* String */;
 		/** 
 		 * The value to display for a ListGridField when it appears in the ListGrid.summaryRow','summaryRow. The
 		 * default for normal fields is null and for special fields, like the ListGrid.checkboxField','checkboxField,
@@ -4851,7 +4851,7 @@ declare namespace Isc {
 		 * ListGrid.cellClick event is fired for the containing cell.
 		 * Flags: IRW
 		 */
-		readonly target?: string;
+		readonly target?: string /* String */;
 		/** 
 		 * (Advanced) Time-format to apply to date type values within this field. If specified, any
 		 * dates displayed in this field will be formatted as times using the appropriate format.
@@ -4883,7 +4883,7 @@ declare namespace Isc {
 		 * HTML for the field title.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly title?: string;
+		readonly title?: string /* String */;
 		/** 
 		 * (Read only) ListGrids picks a renderer for the view and edit mode of a field based on this attribute.
 		 * See ListGridFieldType for a summary of how types are rendered.
@@ -4933,7 +4933,7 @@ declare namespace Isc {
 		 * be applied to this field's editors.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly valueField?: string;
+		readonly valueField?: string /* String */;
 		/** 
 		 * Height for value icons for this listGrid field.
 		 * Overrides ListGrid.valueIconSize, ListGrid.valueIconHeight, and
@@ -4954,7 +4954,7 @@ declare namespace Isc {
 		 * Has no effect if ListGridField.showValueIconOnly is true
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIconOrientation?: string;
+		readonly valueIconOrientation?: string /* String */;
 		/** 
 		 * How much padding should there be on the right of valueIcons for this field
 		 * Overrides ListGrid.valueIconRightPadding
@@ -5092,7 +5092,7 @@ declare namespace Isc {
 		 * @param {number} colNum - column number of the cell
 		 * @param {ListGrid} grid - grid where cell was changed.
 		 */
-		cellChanged?(record:ListGridRecord, newValue:any, oldValue:any, rowNum:number, colNum:number, grid:ListGrid): void; 
+		cellChanged?(record:ListGridRecord, newValue:any /* Any */, oldValue:any /* Any */, rowNum:number, colNum:number, grid:ListGrid): void; 
 
 		/**  
 		 *  If this field is editable, any FormItem.change','change handler specified
@@ -5115,7 +5115,7 @@ declare namespace Isc {
 		 * @param {any} oldValue - The previous value of the form item
 		 * @return {boolean} The change may be cancelled by returning false
 		 */
-		change?(form:DynamicForm, item:FormItem, value:any, oldValue:any): boolean /* Boolean */; 
+		change?(form:DynamicForm, item:FormItem, value:any /* Any */, oldValue:any /* Any */): boolean /* Boolean */; 
 
 		/**  
 		 *  If this field is editable, any FormItem.changed','changed handler specified
@@ -5135,7 +5135,7 @@ declare namespace Isc {
 		 * - the rowNum being edited [item.rowNum]
 		 * @param {any} value - The current value (after the change).
 		 */
-		changed?(form:DynamicForm, item:FormItem, value:any): void; 
+		changed?(form:DynamicForm, item:FormItem, value:any /* Any */): void; 
 
 		/**  
 		 *  If this field ListGridField.canEdit','can be edited, this property can be used to
@@ -5167,7 +5167,7 @@ declare namespace Isc {
 		 * @param {number} colNum - column number of the cell
 		 * @param {ListGrid} grid - ListGrid to which this field belongs
 		 */
-		editorEnter?(record:ListGridRecord, value:any, rowNum:number /* int */, colNum:number /* int */, grid:ListGrid): void; 
+		editorEnter?(record:ListGridRecord, value:any /* Any */, rowNum:number /* int */, colNum:number /* int */, grid:ListGrid): void; 
 
 		/**  
 		 * (Advanced)  Callback fired when the user attempts to navigate away from the current edit cell,
@@ -5184,7 +5184,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - ListGrid to which this field belongs
 		 * @return {boolean} Returning false from this method will cancel the default behavior                      (for example saving the row) and leave the editor visible and focus&#010                      in this edit cell.
 		 */
-		editorExit?(editCompletionEvent:EditCompletionEvent, record:ListGridRecord, newValue:any, rowNum:number /* int */, colNum:number /* int */, grid:ListGrid): boolean; 
+		editorExit?(editCompletionEvent:EditCompletionEvent, record:ListGridRecord, newValue:any /* Any */, rowNum:number /* int */, colNum:number /* int */, grid:ListGrid): boolean; 
 
 		/**  
 		 *  Return the HTML to display in cells of this field.
@@ -5210,7 +5210,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - the ListGrid displaying the cell
 		 * @return {string} HTML to display in the cell
 		 */
-		formatCellValue?(value:any, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid): string /* HTMLString */; 
+		formatCellValue?(value:any /* Any */, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid): string /* HTMLString */; 
 
 		/**  
 		 *  Return the value to display in cells of this field which are being edited.
@@ -5236,7 +5236,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - A pointer to the ListGrid displaying the cell
 		 * @return {any} formatted value to display in the editor
 		 */
-		formatEditorValue?(value:any, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid /* ListGrid instance */): any; 
+		formatEditorValue?(value:any /* Any */, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid /* ListGrid Instance */): any /* Any */; 
 
 		/**  
 		 *  When a field has ListGridField.autoFreeze','autoFreeze set to true, developers can
@@ -5264,7 +5264,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - pointer back to this ListGrid instance.
 		 * @return {ValueMap} ValueMap for the field (or null if no valueMap required)
 		 */
-		getEditorValueMap?(values:any /* object */, field:ListGridField, grid:ListGrid): ValueMap; 
+		getEditorValueMap?(values:any /* Object */, field:ListGridField, grid:ListGrid): ValueMap; 
 
 		/**  
 		 *  If your derivation of the field title is more complex than specifying a static string,
@@ -5279,7 +5279,7 @@ declare namespace Isc {
 		 * @param {number} fieldNum - index of this field in the grid's fields array.
 		 * @return {string} Field title.
 		 */
-		getFieldTitle?(viewer:ListGrid, fieldNum:number): string; 
+		getFieldTitle?(viewer:ListGrid, fieldNum:number): string /* String */; 
 
 		/**  
 		 * (Advanced)  If ListGrid.showGridSummary is true, and this method is specified it will be
@@ -5302,7 +5302,7 @@ declare namespace Isc {
 		 * summary value comes from
 		 * @return {any} summary value to display.
 		 */
-		getGridSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupSummaries?:Array<any> /* Array of objects */): any; 
+		getGridSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupSummaries?:Array<any> /* Array of Objects */): any /* Any */; 
 
 		/**  
 		 * (Advanced)  If ListGrid.showGroupSummary is true, and this method is specified it will be
@@ -5318,7 +5318,7 @@ declare namespace Isc {
 		 * @param {any} groupNode - object with specified groupValue and groupName for this group
 		 * @return {any} summary value to display
 		 */
-		getGroupSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupNode?:any /* object */): any; 
+		getGroupSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupNode?:any /* Object */): any /* Any */; 
 
 		/**  
 		 *  Return the title that should be shown to the user for the group with the
@@ -5334,7 +5334,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - the ListGrid displaying the cell
 		 * @return {any} Group value to which this record belongs
 		 */
-		getGroupTitle?(groupValue:any, groupNode:GroupNode, field:any /* Object */, fieldName:string /* String */, grid:ListGrid): any; 
+		getGroupTitle?(groupValue:any /* Any */, groupNode:GroupNode, field:any /* Object */, fieldName:string /* String */, grid:ListGrid): any /* Any */; 
 
 		/**  
 		 *  Return the value which records should be grouped by.
@@ -5356,7 +5356,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - the ListGrid displaying the cell
 		 * @return {any} Group value to which this record belongs
 		 */
-		getGroupValue?(value:any, record:ListGridRecord, field:any /* Object */, fieldName:string /* String */, grid:ListGrid): any; 
+		getGroupValue?(value:any /* Any */, record:ListGridRecord, field:any /* Object */, fieldName:string /* String */, grid:ListGrid): any /* Any */; 
 
 		/**  
 		 * (Advanced)  Only applies to ListGridFieldType','summary-type fields. If specified, this
@@ -5380,7 +5380,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - the grid
 		 * @return {any} summary value to display
 		 */
-		getRecordSummary?(record:ListGridRecord, field:ListGridField, grid:ListGrid): any; 
+		getRecordSummary?(record:ListGridRecord, field:ListGridField, grid:ListGrid): any /* Any */; 
 
 		/**  
 		 *  StringMethod override point for returning HTML to be shown in hovers over cells in the
@@ -5399,7 +5399,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - ListGrid this field is a part of
 		 * @return {string} HTML to show in the hover
 		 */
-		hoverHTML?(record:ListGridRecord, value:any, rowNum:number, colNum:number, grid:ListGrid): string /* HTML */; 
+		hoverHTML?(record:ListGridRecord, value:any /* Any */, rowNum:number, colNum:number, grid:ListGrid): string /* HTML */; 
 
 		/**  
 		 *  Method used to convert the value displayed in an editor for some cell in this field into
@@ -5414,7 +5414,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - A pointer to the ListGrid displaying the cell
 		 * @return {any} raw value for the field derived from formatted value in editor
 		 */
-		parseEditorValue?(value:any, record:any /* object */, rowNum:number, colNum:number, grid:ListGrid /* ListGrid instance */): any; 
+		parseEditorValue?(value:any /* Any */, record:any /* Object */, rowNum:number, colNum:number, grid:ListGrid /* ListGrid Instance */): any /* Any */; 
 
 		/**  
 		 * 
@@ -5432,7 +5432,7 @@ declare namespace Isc {
 		 * @param {any} rawValue - raw value of the cell (before valueMap, etc applied)
 		 * @return {boolean} false to stop event bubbling
 		 */
-		recordClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, fieldNum:number, value:any, rawValue:any): boolean; 
+		recordClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, fieldNum:number, value:any /* Any */, rawValue:any /* Any */): boolean; 
 
 		/**  
 		 * 
@@ -5452,7 +5452,7 @@ declare namespace Isc {
 		 * @param {any} rawValue - raw value of the cell (before valueMap, etc applied)
 		 * @return {boolean} false to stop event bubbling
 		 */
-		recordDoubleClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, fieldNum:number, value:any /* object */, rawValue:any /* object */): boolean; 
+		recordDoubleClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, fieldNum:number, value:any /* Object */, rawValue:any /* Object */): boolean; 
 
 		/**  
 		 *  An optional stringMethods','stringMethod which if provided, is evaluated to
@@ -5501,7 +5501,7 @@ declare namespace Isc {
 		 * to the field definition object by calling context.getField(fieldName)
 		 * @return {any} normalized value for sorting
 		 */
-		sortNormalizer?(recordObject:any /* object */, fieldName:string, context:ListGrid): any; 
+		sortNormalizer?(recordObject:any /* Object */, fieldName:string /* String */, context:ListGrid): any /* Any */; 
 
 		/**  
 		 * 
@@ -5520,7 +5520,7 @@ declare namespace Isc {
 		 * is not being edited, this value will be null.
 		 * @return {boolean} false to stop event bubbling
 		 */
-		valueIconClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, rawValue:any, editor:FormItem): boolean; 
+		valueIconClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, rawValue:any /* Any */, editor:FormItem): boolean; 
 
 	} // ListGridField
 
@@ -6279,7 +6279,7 @@ declare namespace Isc {
 		 * to this string
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLPrefix?: string;
+		readonly imageURLPrefix?: string /* String */;
 		/** 
 		 * Width of images shown for fieldTypes image in this field.
 		 * 
@@ -6296,7 +6296,7 @@ declare namespace Isc {
 		 * fields from the primary DataSource.
 		 * Flags: IR
 		 */
-		readonly includeFrom?: string;
+		readonly includeFrom?: string /* String */;
 		/** 
 		 * The HTML to display for values of this field if the field type is set to "link". 
 		 * 
@@ -6310,19 +6310,19 @@ declare namespace Isc {
 		 * of this field if the field type is set to "link".
 		 * Flags: IRW
 		 */
-		readonly linkTextProperty?: string;
+		readonly linkTextProperty?: string /* String */;
 		/** 
 		 * (Advanced) If this field has type set to "link", setting this property will apply a
 		 * standard prefix to the link URL when displaying values of this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLPrefix?: string;
+		readonly linkURLPrefix?: string /* String */;
 		/** 
 		 * (Advanced) If this field has type set to "link", setting this property will apply a
 		 * standard suffix to the link URL when displaying values of this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLSuffix?: string;
+		readonly linkURLSuffix?: string /* String */;
 		/** 
 		 * (Read only) Name property used to identify the field, and determines which attribute from
 		 * records will be displayed in this field.
@@ -6355,7 +6355,7 @@ declare namespace Isc {
 		 * the link. target is applicable only if the field type is set to "link".
 		 * Flags: IRW
 		 */
-		readonly target?: string;
+		readonly target?: string /* String */;
 		/** 
 		 * (Advanced) Time-format to apply to date type values within this field. If specified, any
 		 * dates displayed in this field will be formatted as times using the appropriate format.
@@ -6418,7 +6418,7 @@ declare namespace Isc {
 		 * specifying a mapping of internal values to display values for the field (row).
 		 * Flags: IR
 		 */
-		readonly valueMap?: any /* object */;
+		readonly valueMap?: any /* Object */;
 
 		/* Instance Method Overrides */
 		/**  
@@ -6430,7 +6430,7 @@ declare namespace Isc {
 		 * @param {DetailViewerField} field - the field being displayed
 		 * @param {DetailViewer} viewer - the detailViewer containing this field
 		 */
-		formatCellValue?(value:string, record:DetailViewerRecord /* detailViewerRecord */, field:DetailViewerField /* detailViewerField */, viewer:DetailViewer /* detailViewer */): void; 
+		formatCellValue?(value:string /* String */, record:DetailViewerRecord, field:DetailViewerField, viewer:DetailViewer): void; 
 
 		/**  
 		 *  Optional method to return the CSS class for cells in this field. If specified, this method
@@ -6443,7 +6443,7 @@ declare namespace Isc {
 		 * @param {DetailViewer} viewer - the viewer instance to which this cell belongs
 		 * @return {string} CSS style for this cell
 		 */
-		getCellStyle?(value:string, field:any /* object */, record:any /* object */, viewer:DetailViewer): string /* CSSStyleName */; 
+		getCellStyle?(value:string /* String */, field:any /* Object */, record:any /* Object */, viewer:DetailViewer): string /* CSSStyleName */; 
 
 		/**  
 		 * 
@@ -6475,7 +6475,7 @@ declare namespace Isc {
 		 * for an individual validator by setting Validator.errorMessage.
 		 * Flags: IR
 		 */
-		readonly defaultErrorMessage?: string;
+		readonly defaultErrorMessage?: string /* String */;
 		/** 
 		 * (Read only) Does this validator only run server-side?
 		 * Flags: IR
@@ -6487,12 +6487,12 @@ declare namespace Isc {
 		 * camelCaps similar to DataSource.getAutoTitle.
 		 * Flags: IR
 		 */
-		readonly shortName?: string;
+		readonly shortName?: string /* String */;
 		/** 
 		 * (Read only) Type of the validator unique in ValidatorType.
 		 * Flags: IR
 		 */
-		readonly type?: string;
+		readonly type?: string /* String */;
 
 		/* Instance Method Overrides */
 		/**  
@@ -6536,7 +6536,7 @@ declare namespace Isc {
 		 * @param {any} record - Field values for record being validated.
 		 * @return {boolean} whether the value passed validation.  True for passed, false for fail.
 		 */
-		condition?(item:DataSourceField | FormItem, validator:Validator, value:any, record:any /* object */): boolean; 
+		condition?(item:DataSourceField | FormItem, validator:Validator, value:any /* Any */, record:any /* Object */): boolean; 
 
 	} // validatorDefinition
 
@@ -6568,7 +6568,7 @@ declare namespace Isc {
 		 * If the formula or summary format caused a JavaScript error, this contains the JavaScript error text.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly errorText?: string;
+		readonly errorText?: string /* String */;
 		/** 
 		 * Set to true if calling the formula or summary format resulted in a JavaScript Error.
 		 * This would generally indicate a reference to non-existent data values. See 
@@ -6596,7 +6596,7 @@ declare namespace Isc {
 		 * generated function when it was executed.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly result?: string;
+		readonly result?: string /* String */;
 	} // TestFunctionResult
 
 	export interface TestFunctionResultStatic {
@@ -6749,7 +6749,7 @@ declare namespace Isc {
 		 * globally unique identifier, set Tab.name instead.
 		 * Flags: IRW
 		 */
-		readonly ID?: string /* identifier */;
+		readonly ID?: string /* Identifier */;
 		/** 
 		 * Optional name for the tab, which can later be used to reference the tab.
 		 * APIs requiring a reference to a tab will accept the tab's name
@@ -6761,7 +6761,7 @@ declare namespace Isc {
 		 * a global reference to the Tab. If you want a global reference, set Tab.ID instead.
 		 * Flags: IRW
 		 */
-		readonly name?: string /* identifier */;
+		readonly name?: string /* Identifier */;
 		/** 
 		 * Specifies the pane associated with this tab. You have two options for the value of
 		 * the pane attribute:
@@ -6822,7 +6822,7 @@ declare namespace Isc {
 		 * @param {string} name - the name of the deselected tab
 		 * @return {boolean} return <code>false</code> to cancel the tab selection
 		 */
-		tabDeselected?(tabSet:TabSet, tabNum:number /* integer */, tabPane:Canvas, ID:string /* String */, tab:Tab /* tab */, newTab:Tab /* tab */, name:string /* String */): boolean; 
+		tabDeselected?(tabSet:TabSet, tabNum:number /* integer */, tabPane:Canvas, ID:string /* String */, tab:Tab, newTab:Tab, name:string /* String */): boolean; 
 
 		/**  
 		 *  Optional handler to fire when a tab is selected. As with TabSet.tabSelected this
@@ -6836,7 +6836,7 @@ declare namespace Isc {
 		 * @param {Tab} tab - pointer to the selected tab object
 		 * @param {string} name - the name of the newly selected tab
 		 */
-		tabSelected?(tabSet:TabSet, tabNum:number /* integer */, tabPane:Canvas, ID:string /* String */, tab:Tab /* tab */, name:string /* String */): void; 
+		tabSelected?(tabSet:TabSet, tabNum:number /* integer */, tabPane:Canvas, ID:string /* String */, tab:Tab, name:string /* String */): void; 
 
 	} // Tab
 
@@ -7104,7 +7104,7 @@ declare namespace Isc {
 		 * via FormItem.getIcon.
 		 * Flags: IR
 		 */
-		readonly name?: string /* identifier */;
+		readonly name?: string /* Identifier */;
 		/** 
 		 * (Advanced) If icon.neverDisable is true, when this form item is disabled, the 
 		 * icon will remain enabled. 
@@ -7208,6 +7208,9 @@ declare namespace Isc {
 		 * For an FormItemIcon.inline','inline FormItemIcon,
 		 * FormItemIcon.text','text may be specified to show a string of HTML instead of
 		 * an image.
+		 * 
+		 * skinning','Spriting can be used for this image, by setting this property to
+		 * a SCSpriteConfig formatted string.
 		 * Flags: IRW, Group: formIcons
 		 */
 		readonly src?: string /* SCImgURL */;
@@ -7290,7 +7293,7 @@ declare namespace Isc {
 		 * @param {FormItem} item - The Form Item containing this icon
 		 * @param {FormItemIcon} icon - A pointer to the form item icon
 		 */
-		keyPress?(keyName:string, character:string /* character */, form:DynamicForm, item:FormItem, icon:FormItemIcon): void; 
+		keyPress?(keyName:string /* String */, character:string /* Character */, form:DynamicForm, item:FormItem, icon:FormItemIcon): void; 
 
 		/**  
 		 *  If specified, icon.showIf will be evaluated when the form item is
@@ -7400,7 +7403,7 @@ declare namespace Isc {
 		 * when used with text-based fields.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly textTitleProperty?: string /* identifier */;
+		readonly textTitleProperty?: string /* Identifier */;
 		/** 
 		 * (Read only) User-visible title for this operator, such as "doesn't contain".
 		 * 
@@ -7413,7 +7416,7 @@ declare namespace Isc {
 		 * (Read only) Name of a property on the Operators class that provides the title for this operator.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly titleProperty?: string /* identifier */;
+		readonly titleProperty?: string /* Identifier */;
 		/** 
 		 * (Read only) Indicates the kind of value expected in a Criterion that uses this operator.
 		 * OperatorValueType lists possibilities.
@@ -7464,7 +7467,7 @@ declare namespace Isc {
 		 * @param {Operator} operator - operator definition
 		 * @return {boolean} whether the field passes this criteria
 		 */
-		condition?(value:any, record:any /* Record */, fieldName:any, criterion:Criterion, operator:Operator): boolean; 
+		condition?(value:any /* Any */, record:any /* Record */, fieldName:any /* Any */, criterion:Criterion, operator:Operator): boolean; 
 
 		/**  
 		 *  In combination with Operator.editorType, this override point allows you to define a
@@ -7527,7 +7530,7 @@ declare namespace Isc {
 		 * DetailViewerField.linkText.
 		 * Flags: IRW
 		 */
-		readonly linkText?: string;
+		readonly linkText?: string /* String */;
 	} // DetailViewerRecord
 
 	export interface DetailViewerRecordStatic {

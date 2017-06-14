@@ -1,12 +1,12 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-09
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-14
 
 Errors during generation
-Generated: 6/9/2017 11:13:58 AM by KWhite
+Generated: 6/14/2017 8:25:47 AM by KWhite
 
 Summary
-Total Types  : 231
+Total Types  : 232
 Total Classes: 309
 Total Objects: 67
 Total Methods: 3560
@@ -498,10 +498,10 @@ Contrained String Type Values without quotes: 657
 Contrained String Type Values with period: 130
 
 ==== How is OR specified? ====
-OR specified as ' | ' : 374
+OR specified as ' | ' : 379
 OR specified as ', ' : 3
-OR specified as ' || ' : 1
 OR specified as ' or ' : 0
+OR specified as ' || ' : 0
 
 
 ==== How are array attributes defined? ====
@@ -511,27 +511,7 @@ Array[] of: 0
 array[] of: 0
 Just Array or array: 8
 
-Attributes suspected as string types but do not have the baseType set: 83.
-=== identifier:19 ===
-1. attr:DataBoundComponent.canEditFieldAttribute, valueType=identifier
-2. attr:DynamicForm.canEditFieldAttribute, valueType=identifier
-3. attr:FormItem.criteriaField, valueType=identifier
-4. attr:FormItem.ID, valueType=identifier
-5. attr:FormItem.pickerIconName, valueType=identifier
-6. attr:FormItemIcon.name, valueType=identifier
-7. attr:Gradient.id, valueType=identifier
-8. attr:HeaderSpan.name, valueType=identifier
-9. attr:ListGridField.defaultGroupingMode, valueType=identifier
-10. attr:ListGridField.groupingMode, valueType=identifier
-11. attr:MathFunction.name, valueType=identifier
-12. attr:NavItem.id, valueType=identifier
-13. attr:NavPanel.currentItemId, valueType=identifier
-14. attr:Operator.textTitleProperty, valueType=identifier
-15. attr:Operator.titleProperty, valueType=identifier
-16. attr:SimpleType.inheritsFrom, valueType=identifier
-17. attr:SimpleType.name, valueType=identifier
-18. attr:Tab.ID, valueType=identifier
-19. attr:Tab.name, valueType=identifier
+Attributes suspected as string types but do not have the baseType set: 57.
 === URL:43 ===
 1. attr:ActiveXControl.codeBase, valueType=URL
 2. attr:Applet.archive, valueType=URL
@@ -579,16 +559,8 @@ Attributes suspected as string types but do not have the baseType set: 83.
 === DOMElement:2 ===
 1. attr:Canvas.htmlElement, valueType=DOMElement
 2. attr:DOMGrid.rootElement, valueType=DOMElement
-=== keyChar:1 ===
-1. attr:FormItem.accessKey, valueType=keyChar
 === CSSStyle:1 ===
 1. attr:Dialog.messageStyle, valueType=CSSStyle
-=== id:2 ===
-1. attr:CubeGrid.cellIdProperty, valueType=id
-2. attr:CubeGrid.valueProperty, valueType=id
-=== stringMethod:2 ===
-1. attr:ListGridField.formatGridSummary, valueType=stringMethod
-2. attr:ListGridField.formatGroupSummary, valueType=stringMethod
 === HTML:8 ===
 1. attr:Applet.altHTML, valueType=HTML
 2. attr:GroupNode.groupTitle, valueType=HTML
@@ -598,9 +570,6 @@ Attributes suspected as string types but do not have the baseType set: 83.
 6. attr:ListGridRecord.singleCellValue, valueType=HTML
 7. attr:MenuItem.title, valueType=HTML
 8. attr:TreeNode.title, valueType=HTML
-=== align:2 ===
-1. attr:DynamicForm.errorOrientation, valueType=align
-2. attr:FormItem.errorOrientation, valueType=align
 === Field:2 ===
 1. attr:FormulaBuilder.field, valueType=Field
 2. attr:SummaryBuilder.field, valueType=Field
@@ -617,8 +586,8 @@ Setter Methods with parameter type that does not match the attribute type: 12
 3. method:CanvasItem.setCanvas, attrType='AutoChild Canvas', setter Type = 'Canvas'
 4. method:DateItem.setEndDate, attrType='Date', setter Type = 'LogicalDate | String'
 5. method:DateItem.setStartDate, attrType='Date', setter Type = 'LogicalDate | String'
-6. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | identifier'
-7. method:DrawItem.setFillGradient, attrType='Gradient | string', setter Type = 'Gradient'
+6. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | Identifier'
+7. method:DrawItem.setFillGradient, attrType='Gradient | String', setter Type = 'Gradient'
 8. method:FormItem.setOptionDataSource, attrType='DataSource | String', setter Type = 'DataSource'
 9. method:NavigationBar.setCustomNavControl, attrType='Canvas', setter Type = 'Array of String | Array of Canvas'
 10. method:Portlet.setHeight, attrType='Number | String', setter Type = 'Number'
@@ -629,24 +598,24 @@ Getter Methods with return type that does not match the attribute type: 1
 1. method:SectionStack.getSections, attrType='Array of SectionStackSection Properties', return Type = 'List'
 
 Suspected optional parameters that are marked with optional='false': 18. Parameters listed here (may be more than one parameter per method)
-1. classMethod:Time.setShortDisplayFormat, ParamType= TimeDisplayFormat | FormatString | function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
+1. classMethod:Time.setShortDisplayFormat, ParamType= TimeDisplayFormat | FormatString | Function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
 2. method:Date.toNormalDate, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 3. method:DataSource.renameFile, ParamType= FileSpec | String, ParamName=oldFileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat&#010                 of the file to rename.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending on the configuration of the DataSource, the fileType and fileFormat&#010                 may be optional.
 4. method:ListGrid.setDataSource, ParamType= Array of Fields, ParamName=fields, ParamDesc=optional array of fields to use
 5. method:DataBoundComponent.setDataSource, ParamType= Array of Fields, ParamName=fields, ParamDesc=optional array of fields to use
 6. method:Date.toShortDate, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 7. classMethod:TabIndexManager.shiftFocusWithinGroup, ParamType= String, ParamName=currentTarget, ParamDesc=Optional ID of current focus target within the group   focus will be shifted in the specified direction from this node.
-8. classMethod:Time.setNormalDisplayFormat, ParamType= TimeDisplayFormat | FormatString | function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
+8. classMethod:Time.setNormalDisplayFormat, ParamType= TimeDisplayFormat | FormatString | Function, ParamName=formatter, ParamDesc=Optional custom  formatter to use. Will accept a function (which will be passed a pointer to the&#010  Date to format), a format string, or a string designating a standard formatter
 9. method:Date.toNormalDatetime, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 10. method:DataSource.exportClientData, ParamType= DSCallback, ParamName=callback, ParamDesc=Optional callback.  Note that this is only applicable  if you also specify ${isc.DocUtils.linkForRef('attr:DSRequest.exportToClient','exportToClient')}: false in the &#010 request properties
 11. method:DataSource.removeFile, ParamType= FileSpec | String, ParamName=fileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending the configuration of the DataSource, the fileType&#010                 and fileFormat may be optional.
-12. method:Class.evaluate, ParamType= object, ParamName=evalArgs, ParamDesc=Optional mapping of argument names to values - each key will      be available as a local variable when the script is executed.
+12. method:Class.evaluate, ParamType= Object, ParamName=evalArgs, ParamDesc=Optional mapping of argument names to values - each key will      be available as a local variable when the script is executed.
 13. classMethod:DataSource.getFieldValue, ParamType= String, ParamName=dataPath, ParamDesc=Optionally, a string expressing the dataPath to use for value lookup.                            If null, the dataPath from the field will be used
 14. classMethod:DataSource.getFieldValue, ParamType= Canvas, ParamName=component, ParamDesc=Optionally, a component to prvide extra context for the dataPath                             search.  This is typically required if the dataPath traverses a list
 15. classMethod:DataSource.getFieldValue, ParamType= String, ParamName=reason, ParamDesc=An optional reason for the get request, to be passed into                                   any ${isc.DocUtils.linkForRef('method:SimpleType.getAtomicValue')} method - see that&#010                                   API for details
 16. method:DataSource.saveFile, ParamType= FileSpec | String, ParamName=fileSpec, ParamDesc=Either a FileSpec, or a String which                 will be parsed to determine the fileName, fileType and fileFormat.&#010                 For instance, "employees.ds.xml" would be parsed as&#010                 {fileName: "employees", fileType: "ds", fileFormat: "xml"}.&#010                 Depending on the configuration of the DataSource, the fileType&#010                 and fileFormat may be optional.
 17. classMethod:DataSource.exportClientData, ParamType= DSCallback, ParamName=callback, ParamDesc=Optional callback.  Note that this is only applicable  if you also specify ${isc.DocUtils.linkForRef('attr:DSRequest.exportToClient','exportToClient')}: false in the &#010 request properties
-18. classMethod:Class.evaluate, ParamType= object, ParamName=evalArgs, ParamDesc=Optional mapping of argument names to values - each key will      be available as a local variable when the script is executed.
+18. classMethod:Class.evaluate, ParamType= Object, ParamName=evalArgs, ParamDesc=Optional mapping of argument names to values - each key will      be available as a local variable when the script is executed.
 19. classMethod:DataSource.saveValueViaDataPath, ParamType= String, ParamName=reason, ParamDesc=An optional reason for the get request, to be passed into                                   any ${isc.DocUtils.linkForRef('method:SimpleType.updateAtomicValue')} method - see that&#010                                   API for details
 20. method:Date.toShortDateTime, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 
@@ -674,13 +643,13 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-06-09	231	5	309	67	3560	0	62	216	657	130	0	239	0	0	8	83	0	0	0	0	12	18	1	45	240	130	0	374	0	1	3	231	5	66	119	2587	1	1	0.9850746	0.3851133	0.7266854	
+2017-06-14	232	5	309	67	3560	0	62	216	657	130	0	239	0	0	8	57	0	0	0	0	12	18	1	45	240	130	0	379	0	0	3	232	5	66	119	2587	1	1	0.9850746	0.3851133	0.7266854	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-06-09
+Metrics for build SNAPSHOT_v11.1d_2017-06-14
 ===== Information =====
 (Informational only, not a problem)
-Types: 231
+Types: 232
 Interfaces: 5
 Classes: 309
 Objects: 67
@@ -690,8 +659,8 @@ string values without quotes: 657
 string values with period: 130
 Arrays defined as 'Array of': 239
 String values where reference is found: 0
-OR specified as ' \| ': 374
-Types Generated: 231
+OR specified as ' \| ': 379
+Types Generated: 232
 Interfaces Generated: 5
 Objects Generated: 66
 Classes Generated: 119
@@ -709,7 +678,7 @@ Suspected optional parameters that are marked with optional='false': 18
 Attributes missing R flag: 45
 Object attributes marked with W flag: 240
 OR specified as ' or ': 0
-OR specified as ' \|\| ': 1
+OR specified as ' \|\| ': 0
 OR specified as ', ': 3
 
 ===== Errors =====
@@ -719,7 +688,7 @@ Arrays defined as 'array of': 0
 Arrays defined as 'Array[] of': 0
 Arrays defined as 'array[] of': 0
 Arrays defined as 'array' or 'Array': 8
-String types without baseType: 83
+String types without baseType: 57
 Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0

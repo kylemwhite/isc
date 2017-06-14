@@ -4,8 +4,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 6/9/2017 11:12:50 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-09
+// Generated: 6/14/2017 8:24:48 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-14
 
 declare namespace Isc {
 
@@ -253,7 +253,7 @@ declare namespace Isc {
 		 * while the DataBoundComponent's data is null or an empty list.
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly emptyExportMessage: string;
+		readonly emptyExportMessage: string /* String */;
 
 		/** 
 		 * Text for a menu item allowing users to edit a formula field
@@ -292,7 +292,7 @@ declare namespace Isc {
 		 * is offline.
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly offlineSaveMessage: string;
+		readonly offlineSaveMessage: string /* String */;
 
 		/** 
 		 * Text for a menu item allowing users to remove a summary field
@@ -308,7 +308,7 @@ declare namespace Isc {
 		 * set for a component with no dataSource, or can be used to override the dataSource setting.
 		 * Flags: IR
 		 */
-		readonly iconField: string;
+		readonly iconField: string /* String */;
 
 		/** 
 		 * Whether to show fields marked hidden:true when a DataBoundComponent is given a
@@ -394,7 +394,7 @@ declare namespace Isc {
 		 * that matches Hilite.id for a hilite defined on this component.
 		 * Flags: IRW
 		 */
-		readonly hiliteProperty: string;
+		readonly hiliteProperty: string /* String */;
 
 		/** 
 		 * Text for a menu item allowing users to add a formula field
@@ -421,7 +421,7 @@ declare namespace Isc {
 		 * displayed in the component's body, or in a pop-up warning dialog.
 		 * Flags: IRW, Group: i18nMessages
 		 */
-		readonly offlineMessage: string;
+		readonly offlineMessage: string /* String */;
 
 		/** 
 		 * Criteria that are never shown to or edited by the user and are cumulative with any criteria
@@ -462,7 +462,7 @@ declare namespace Isc {
 		 * set for a component with no dataSource, or can be used to override the dataSource setting.
 		 * Flags: IR
 		 */
-		readonly titleField: string;
+		readonly titleField: string /* String */;
 
 		/** 
 		 * (Read only) When DataBoundComponent.hiliteIcons','hiliteIcons are present, where the hilite icon will be placed 
@@ -580,7 +580,7 @@ declare namespace Isc {
 		 * can be edited - for example ListGrid.canEditCell may be overridden.
 		 * Flags: IRA
 		 */
-		readonly canEditFieldAttribute: string /* identifier */;
+		readonly canEditFieldAttribute: string /* Identifier */;
 
 		/** 
 		 * Text for a menu item allowing users to edit the formatter for a field
@@ -674,7 +674,7 @@ declare namespace Isc {
 		 * Options are "multiple" or "single", or "either"
 		 * Flags: IRWA
 		 */
-		readonly dataArity: string;
+		readonly dataArity: string /* String */;
 
 		/** 
 		 * Setting exportAll to true prevents the component from passing it's list of fields to the 
@@ -1147,7 +1147,7 @@ declare namespace Isc {
 		 * described in FormItem.getValueFieldName.
 		 * Flags: IRA, Group: databinding
 		 */
-		readonly valueField: string;
+		readonly valueField: string /* String */;
 
 		/** 
 		 * If this pick list is showing multiple fields, this property determines the height of
@@ -1294,7 +1294,7 @@ declare namespace Isc {
 		 * have been specified for this item.
 		 * Flags: IRWA
 		 */
-		readonly valueIconField: string;
+		readonly valueIconField: string /* String */;
 
 		/** 
 		 * (Read only) A set of "special" values such as "All", "None" or "Invalid" that do not appear in the normal
@@ -1337,7 +1337,7 @@ declare namespace Isc {
 		 * PickList.hideEmptyPickList is false.
 		 * Flags: IRWA, Group: i18nMessages
 		 */
-		readonly emptyPickListMessage: string;
+		readonly emptyPickListMessage: string /* String */;
 
 		/** 
 		 * (Read only) An array of SortSpecifier objects used to set up the initial sort configuration 
@@ -1459,7 +1459,7 @@ declare namespace Isc {
 		 * are not unique.
 		 * Flags: IRW, Group: databinding
 		 */
-		readonly displayField: string;
+		readonly displayField: string /* String */;
 
 	}
 
