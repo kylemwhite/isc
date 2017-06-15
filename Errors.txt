@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-14
+Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-15
 
 Errors during generation
-Generated: 6/14/2017 9:51:59 AM by KWhite
+Generated: 6/15/2017 8:32:31 AM by KWhite
 
 Summary
 Total Types  : 232
-Total Classes: 309
-Total Objects: 67
-Total Methods: 3560
+Total Classes: 307
+Total Objects: 69
+Total Methods: 3559
 
 Attributes missing R flag: 45 (Should they all have an R flag?)
 1. attr:Calendar.eventCanvas, Flags=A
@@ -60,7 +60,7 @@ Attributes missing R flag: 45 (Should they all have an R flag?)
 
 
 Methods with bad flags: 0 (methods should not have any flags except A?)
-Classes without inheritsFrom attribute: 62 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake)
+Classes without inheritsFrom attribute: 61 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake)
 1. AutoTest
 2. BaseWidget (manually checked, inheritsFrom Class)
 3. Browser (manually checked, does NOT inherit from Class. Should be object?)
@@ -101,31 +101,30 @@ Classes without inheritsFrom attribute: 62 (Maybe it should inherit from Class, 
 38. ProcessElement
 39. ResultSet (manually checked, inheritsFrom Class)
 40. RPCManager
-41. RPCRequest (manually checked, inheritsFrom Class)
-42. RPCResponse
-43. SchemaSet
-44. Selection
-45. SelectionOutline (manually checked, does NOT inherit from Class. Should be object?)
-46. SelectOtherItem
-47. ServerObject (manually checked, does NOT inherit from Class. Should be object?)
-48. SimpleType
-49. String (manually checked, does NOT inherit from Class. Should be object?)
-50. SyntaxHiliter
-51. TabIndexManager
-52. TextSettings
-53. Time (manually checked, inheritsFrom Class)
-54. Timer
-55. ToolStripSeparatorEditProxy
-56. Tree
-57. Validator
-58. ValuesManager
-59. VisualBuilder (manually checked, does NOT inherit from Class. Should be object?)
-60. WebService
-61. WSRequest (manually checked, does NOT inherit from Class. Should be object?)
-62. XMLTools
+41. RPCResponse
+42. SchemaSet
+43. Selection
+44. SelectionOutline (manually checked, does NOT inherit from Class. Should be object?)
+45. SelectOtherItem
+46. ServerObject (manually checked, does NOT inherit from Class. Should be object?)
+47. SimpleType
+48. String (manually checked, does NOT inherit from Class. Should be object?)
+49. SyntaxHiliter
+50. TabIndexManager
+51. TextSettings
+52. Time (manually checked, inheritsFrom Class)
+53. Timer
+54. ToolStripSeparatorEditProxy
+55. Tree
+56. Validator
+57. ValuesManager
+58. VisualBuilder (manually checked, does NOT inherit from Class. Should be object?)
+59. WebService
+60. WSRequest (manually checked, does NOT inherit from Class. Should be object?)
+61. XMLTools
 
 
-Object attributes marked with W flag: 240 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
+Object attributes marked with W flag: 283 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
 1. attr:AdvancedCriteria.strictSQLFiltering
 2. attr:CalendarEvent.backgroundColor
 3. attr:CalendarEvent.borderColor
@@ -173,199 +172,242 @@ Object attributes marked with W flag: 240 (attributes on objects are always read
 45. attr:DiscoverTreeSettings.scanMode
 46. attr:DiscoverTreeSettings.tieMode
 47. attr:DiscoverTreeSettings.typeProperty
-48. attr:EditNode.canDuplicate
-49. attr:FileSpec.fileFormat
-50. attr:FileSpec.fileName
-51. attr:FileSpec.fileType
-52. attr:FiscalCalendar.defaultDate
-53. attr:FiscalCalendar.defaultMonth
-54. attr:FiscalCalendar.defaultYearMode
-55. attr:FiscalCalendar.fiscalYears
-56. attr:FiscalYear.date
-57. attr:FiscalYear.fiscalYear
-58. attr:FiscalYear.month
-59. attr:FiscalYear.year
-60. attr:FormItemIcon.baseStyle
-61. attr:FormItemIcon.disabled
-62. attr:FormItemIcon.disableOnReadOnly
-63. attr:FormItemIcon.height
-64. attr:FormItemIcon.neverDisable
-65. attr:FormItemIcon.prompt
-66. attr:FormItemIcon.showDisabledOnFocus
-67. attr:FormItemIcon.showFocused
-68. attr:FormItemIcon.showFocusedWithItem
-69. attr:FormItemIcon.showOnFocus
-70. attr:FormItemIcon.showOver
-71. attr:FormItemIcon.showOverWhen
-72. attr:FormItemIcon.src
-73. attr:FormItemIcon.text
-74. attr:FormItemIcon.width
-75. attr:HeaderSpan.headerBaseStyle
-76. attr:HeaderSpan.headerTitleStyle
-77. attr:Hilite.backgroundColor
-78. attr:Hilite.disabled
-79. attr:Hilite.textColor
-80. attr:Hilite.title
-81. attr:ImgProperties.extraStuff
-82. attr:ImgProperties.height
-83. attr:ImgProperties.imgDir
-84. attr:ImgProperties.name
-85. attr:ImgProperties.src
-86. attr:ImgProperties.width
-87. attr:Lane.eventStyleName
-88. attr:ListGridField.align
-89. attr:ListGridField.applyAfterSummary
-90. attr:ListGridField.autoComplete
-91. attr:ListGridField.autoFetchDisplayMap
-92. attr:ListGridField.autoFitWidthApproach
-93. attr:ListGridField.baseStyle
-94. attr:ListGridField.canEdit
-95. attr:ListGridField.canFilter
-96. attr:ListGridField.canGroupBy
-97. attr:ListGridField.canHilite
-98. attr:ListGridField.canSort
-99. attr:ListGridField.canSortClientOnly
-100. attr:ListGridField.canToggle
-101. attr:ListGridField.cellAlign
-102. attr:ListGridField.dateFormatter
-103. attr:ListGridField.decimalPad
-104. attr:ListGridField.decimalPrecision
-105. attr:ListGridField.defaultFilterValue
-106. attr:ListGridField.defaultValue
-107. attr:ListGridField.displayField
-108. attr:ListGridField.displayFormat
-109. attr:ListGridField.displayValueFromRecord
-110. attr:ListGridField.editorImageURLPrefix
-111. attr:ListGridField.editorImageURLSuffix
-112. attr:ListGridField.editorProperties
-113. attr:ListGridField.editorType
-114. attr:ListGridField.editorValueIconHeight
-115. attr:ListGridField.editorValueIcons
-116. attr:ListGridField.editorValueIconWidth
-117. attr:ListGridField.editorValueMap
-118. attr:ListGridField.emptyCellValue
-119. attr:ListGridField.enterKeyEditAction
-120. attr:ListGridField.escapeHTML
-121. attr:ListGridField.escapeKeyEditAction
-122. attr:ListGridField.exportFieldWidth
-123. attr:ListGridField.filterEditorProperties
-124. attr:ListGridField.filterEditorType
-125. attr:ListGridField.filterEditorValueMap
-126. attr:ListGridField.filterOnKeypress
-127. attr:ListGridField.headerBaseStyle
-128. attr:ListGridField.headerHoverDelay
-129. attr:ListGridField.headerTitleStyle
-130. attr:ListGridField.hiliteIconHeight
-131. attr:ListGridField.hiliteIconLeftPadding
-132. attr:ListGridField.hiliteIconRightPadding
-133. attr:ListGridField.hiliteIconSize
-134. attr:ListGridField.hiliteIconWidth
-135. attr:ListGridField.hoverDelay
-136. attr:ListGridField.hoverWidth
-137. attr:ListGridField.hoverWrap
-138. attr:ListGridField.ignoreKeyboardClicks
-139. attr:ListGridField.imageHeight
-140. attr:ListGridField.imageSize
-141. attr:ListGridField.imageURLPrefix
-142. attr:ListGridField.imageURLSuffix
-143. attr:ListGridField.imageWidth
-144. attr:ListGridField.inputFormat
-145. attr:ListGridField.leaveHeaderMenuButtonSpace
-146. attr:ListGridField.linkText
-147. attr:ListGridField.linkTextProperty
-148. attr:ListGridField.linkURLPrefix
-149. attr:ListGridField.linkURLSuffix
-150. attr:ListGridField.maxWidth
-151. attr:ListGridField.minWidth
-152. attr:ListGridField.optionCriteria
-153. attr:ListGridField.optionDataSource
-154. attr:ListGridField.required
-155. attr:ListGridField.shouldPrint
-156. attr:ListGridField.showAlternateStyle
-157. attr:ListGridField.showDefaultContextMenu
-158. attr:ListGridField.showHilitesInGroupSummary
-159. attr:ListGridField.showHover
-160. attr:ListGridField.showHoverComponents
-161. attr:ListGridField.showTitle
-162. attr:ListGridField.showValueIconOnly
-163. attr:ListGridField.sortByDisplayField
-164. attr:ListGridField.sortByMappedValue
-165. attr:ListGridField.sortDirection
-166. attr:ListGridField.summaryTitle
-167. attr:ListGridField.summaryValue
-168. attr:ListGridField.suppressValueIcon
-169. attr:ListGridField.target
-170. attr:ListGridField.timeFormatter
-171. attr:ListGridField.title
-172. attr:ListGridField.userFormula
-173. attr:ListGridField.userSummary
-174. attr:ListGridField.validateOnChange
-175. attr:ListGridField.validators
-176. attr:ListGridField.valueField
-177. attr:ListGridField.valueIconHeight
-178. attr:ListGridField.valueIconLeftPadding
-179. attr:ListGridField.valueIconOrientation
-180. attr:ListGridField.valueIconRightPadding
-181. attr:ListGridField.valueIcons
-182. attr:ListGridField.valueIconSize
-183. attr:ListGridField.valueIconWidth
-184. attr:ListGridField.valueMap
-185. attr:ListGridField.width
-186. attr:ListGridField.wrap
-187. attr:ListGridRecord._baseStyle
-188. attr:ListGridRecord._canRemove
-189. attr:ListGridRecord.customStyle
-190. attr:ListGridRecord.detailDS
-191. attr:ListGridRecord.includeInSummary
-192. attr:ListGridRecord.isGridSummary
-193. attr:ListGridRecord.isGroupSummary
-194. attr:ListGridRecord.linkText
-195. attr:ListGridRecord.singleCellValue
-196. attr:MetricSettings.chartType
-197. attr:MetricSettings.dataColors
-198. attr:MetricSettings.filled
-199. attr:MetricSettings.proportional
-200. attr:MetricSettings.stacked
-201. attr:NavigationBarViewState.alwaysShowLeftButtonTitle
-202. attr:NavigationBarViewState.controls
-203. attr:NavigationBarViewState.leftButtonTitle
-204. attr:NavigationBarViewState.shortLeftButtonTitle
-205. attr:NavigationBarViewState.showLeftButton
-206. attr:NavigationBarViewState.title
-207. attr:SectionStackSection.showClippedTitleOnHover
-208. attr:SummaryConfiguration.badFormulaResultValue
-209. attr:SummaryConfiguration.invalidSummaryValue
-210. attr:Tab.canClose
-211. attr:Tab.canEditTitle
-212. attr:Tab.closeIcon
-213. attr:Tab.closeIconSize
-214. attr:Tab.disabled
-215. attr:Tab.icon
-216. attr:Tab.iconHeight
-217. attr:Tab.iconSize
-218. attr:Tab.iconWidth
-219. attr:Tab.ID
-220. attr:Tab.name
-221. attr:Tab.pane
-222. attr:Tab.pickerTitle
-223. attr:Tab.prompt
-224. attr:Tab.title
-225. attr:Tab.width
-226. attr:TestFunctionResult.emptyTestValue
-227. attr:TestFunctionResult.errorText
-228. attr:TestFunctionResult.failedExecution
-229. attr:TestFunctionResult.failedGeneration
-230. attr:TestFunctionResult.record
-231. attr:TestFunctionResult.result
-232. attr:TileRecord.tileConstructor
-233. attr:TileRecord.tileProperties
-234. attr:TreeGridField.treeField
-235. attr:TreeNode.children
-236. attr:TreeNode.icon
-237. attr:TreeNode.showDropIcon
-238. attr:TreeNode.showOpenIcon
-239. attr:UserFormula.text
-240. attr:UserSummary.text
+48. attr:DSRequest.clientContext
+49. attr:DSRequest.dataProtocol
+50. attr:DSRequest.exportHeaderless
+51. attr:DSRequest.exportPropertyIdentifier
+52. attr:DSRequest.exportRawValues
+53. attr:DSRequest.fieldValueExpressions
+54. attr:DSRequest.generateRelatedUpdates
+55. attr:DSRequest.headerData
+56. attr:DSRequest.keepParentsOnFilter
+57. attr:DSRequest.progressiveLoading
+58. attr:DSRequest.shouldUseCache
+59. attr:DSRequest.useFlatHeaderFields
+60. attr:EditNode.canDuplicate
+61. attr:FileSpec.fileFormat
+62. attr:FileSpec.fileName
+63. attr:FileSpec.fileType
+64. attr:FiscalCalendar.defaultDate
+65. attr:FiscalCalendar.defaultMonth
+66. attr:FiscalCalendar.defaultYearMode
+67. attr:FiscalCalendar.fiscalYears
+68. attr:FiscalYear.date
+69. attr:FiscalYear.fiscalYear
+70. attr:FiscalYear.month
+71. attr:FiscalYear.year
+72. attr:FormItemIcon.baseStyle
+73. attr:FormItemIcon.disabled
+74. attr:FormItemIcon.disableOnReadOnly
+75. attr:FormItemIcon.height
+76. attr:FormItemIcon.neverDisable
+77. attr:FormItemIcon.prompt
+78. attr:FormItemIcon.showDisabledOnFocus
+79. attr:FormItemIcon.showFocused
+80. attr:FormItemIcon.showFocusedWithItem
+81. attr:FormItemIcon.showOnFocus
+82. attr:FormItemIcon.showOver
+83. attr:FormItemIcon.showOverWhen
+84. attr:FormItemIcon.src
+85. attr:FormItemIcon.text
+86. attr:FormItemIcon.width
+87. attr:HeaderSpan.headerBaseStyle
+88. attr:HeaderSpan.headerTitleStyle
+89. attr:Hilite.backgroundColor
+90. attr:Hilite.disabled
+91. attr:Hilite.textColor
+92. attr:Hilite.title
+93. attr:ImgProperties.extraStuff
+94. attr:ImgProperties.height
+95. attr:ImgProperties.imgDir
+96. attr:ImgProperties.name
+97. attr:ImgProperties.src
+98. attr:ImgProperties.width
+99. attr:Lane.eventStyleName
+100. attr:ListGridField.align
+101. attr:ListGridField.applyAfterSummary
+102. attr:ListGridField.autoComplete
+103. attr:ListGridField.autoFetchDisplayMap
+104. attr:ListGridField.autoFitWidthApproach
+105. attr:ListGridField.baseStyle
+106. attr:ListGridField.canEdit
+107. attr:ListGridField.canFilter
+108. attr:ListGridField.canGroupBy
+109. attr:ListGridField.canHilite
+110. attr:ListGridField.canSort
+111. attr:ListGridField.canSortClientOnly
+112. attr:ListGridField.canToggle
+113. attr:ListGridField.cellAlign
+114. attr:ListGridField.dateFormatter
+115. attr:ListGridField.decimalPad
+116. attr:ListGridField.decimalPrecision
+117. attr:ListGridField.defaultFilterValue
+118. attr:ListGridField.defaultValue
+119. attr:ListGridField.displayField
+120. attr:ListGridField.displayFormat
+121. attr:ListGridField.displayValueFromRecord
+122. attr:ListGridField.editorImageURLPrefix
+123. attr:ListGridField.editorImageURLSuffix
+124. attr:ListGridField.editorProperties
+125. attr:ListGridField.editorType
+126. attr:ListGridField.editorValueIconHeight
+127. attr:ListGridField.editorValueIcons
+128. attr:ListGridField.editorValueIconWidth
+129. attr:ListGridField.editorValueMap
+130. attr:ListGridField.emptyCellValue
+131. attr:ListGridField.enterKeyEditAction
+132. attr:ListGridField.escapeHTML
+133. attr:ListGridField.escapeKeyEditAction
+134. attr:ListGridField.exportFieldWidth
+135. attr:ListGridField.filterEditorProperties
+136. attr:ListGridField.filterEditorType
+137. attr:ListGridField.filterEditorValueMap
+138. attr:ListGridField.filterOnKeypress
+139. attr:ListGridField.headerBaseStyle
+140. attr:ListGridField.headerHoverDelay
+141. attr:ListGridField.headerTitleStyle
+142. attr:ListGridField.hiliteIconHeight
+143. attr:ListGridField.hiliteIconLeftPadding
+144. attr:ListGridField.hiliteIconRightPadding
+145. attr:ListGridField.hiliteIconSize
+146. attr:ListGridField.hiliteIconWidth
+147. attr:ListGridField.hoverDelay
+148. attr:ListGridField.hoverWidth
+149. attr:ListGridField.hoverWrap
+150. attr:ListGridField.ignoreKeyboardClicks
+151. attr:ListGridField.imageHeight
+152. attr:ListGridField.imageSize
+153. attr:ListGridField.imageURLPrefix
+154. attr:ListGridField.imageURLSuffix
+155. attr:ListGridField.imageWidth
+156. attr:ListGridField.inputFormat
+157. attr:ListGridField.leaveHeaderMenuButtonSpace
+158. attr:ListGridField.linkText
+159. attr:ListGridField.linkTextProperty
+160. attr:ListGridField.linkURLPrefix
+161. attr:ListGridField.linkURLSuffix
+162. attr:ListGridField.maxWidth
+163. attr:ListGridField.minWidth
+164. attr:ListGridField.optionCriteria
+165. attr:ListGridField.optionDataSource
+166. attr:ListGridField.required
+167. attr:ListGridField.shouldPrint
+168. attr:ListGridField.showAlternateStyle
+169. attr:ListGridField.showDefaultContextMenu
+170. attr:ListGridField.showHilitesInGroupSummary
+171. attr:ListGridField.showHover
+172. attr:ListGridField.showHoverComponents
+173. attr:ListGridField.showTitle
+174. attr:ListGridField.showValueIconOnly
+175. attr:ListGridField.sortByDisplayField
+176. attr:ListGridField.sortByMappedValue
+177. attr:ListGridField.sortDirection
+178. attr:ListGridField.summaryTitle
+179. attr:ListGridField.summaryValue
+180. attr:ListGridField.suppressValueIcon
+181. attr:ListGridField.target
+182. attr:ListGridField.timeFormatter
+183. attr:ListGridField.title
+184. attr:ListGridField.userFormula
+185. attr:ListGridField.userSummary
+186. attr:ListGridField.validateOnChange
+187. attr:ListGridField.validators
+188. attr:ListGridField.valueField
+189. attr:ListGridField.valueIconHeight
+190. attr:ListGridField.valueIconLeftPadding
+191. attr:ListGridField.valueIconOrientation
+192. attr:ListGridField.valueIconRightPadding
+193. attr:ListGridField.valueIcons
+194. attr:ListGridField.valueIconSize
+195. attr:ListGridField.valueIconWidth
+196. attr:ListGridField.valueMap
+197. attr:ListGridField.width
+198. attr:ListGridField.wrap
+199. attr:ListGridRecord._baseStyle
+200. attr:ListGridRecord._canRemove
+201. attr:ListGridRecord.customStyle
+202. attr:ListGridRecord.detailDS
+203. attr:ListGridRecord.includeInSummary
+204. attr:ListGridRecord.isGridSummary
+205. attr:ListGridRecord.isGroupSummary
+206. attr:ListGridRecord.linkText
+207. attr:ListGridRecord.singleCellValue
+208. attr:MetricSettings.chartType
+209. attr:MetricSettings.dataColors
+210. attr:MetricSettings.filled
+211. attr:MetricSettings.proportional
+212. attr:MetricSettings.stacked
+213. attr:NavigationBarViewState.alwaysShowLeftButtonTitle
+214. attr:NavigationBarViewState.controls
+215. attr:NavigationBarViewState.leftButtonTitle
+216. attr:NavigationBarViewState.shortLeftButtonTitle
+217. attr:NavigationBarViewState.showLeftButton
+218. attr:NavigationBarViewState.title
+219. attr:RPCRequest.actionURL
+220. attr:RPCRequest.bypassCache
+221. attr:RPCRequest.callback
+222. attr:RPCRequest.callbackParam
+223. attr:RPCRequest.clientContext
+224. attr:RPCRequest.containsCredentials
+225. attr:RPCRequest.contentType
+226. attr:RPCRequest.data
+227. attr:RPCRequest.downloadResult
+228. attr:RPCRequest.downloadToNewWindow
+229. attr:RPCRequest.evalResult
+230. attr:RPCRequest.evalVars
+231. attr:RPCRequest.httpHeaders
+232. attr:RPCRequest.httpMethod
+233. attr:RPCRequest.ignoreTimeout
+234. attr:RPCRequest.omitNullMapValuesInResponse
+235. attr:RPCRequest.params
+236. attr:RPCRequest.paramsOnly
+237. attr:RPCRequest.prompt
+238. attr:RPCRequest.promptCursor
+239. attr:RPCRequest.promptDelay
+240. attr:RPCRequest.promptStyle
+241. attr:RPCRequest.sendNoQueue
+242. attr:RPCRequest.serverOutputAsString
+243. attr:RPCRequest.showPrompt
+244. attr:RPCRequest.suppressAutoDraw
+245. attr:RPCRequest.timeout
+246. attr:RPCRequest.transport
+247. attr:RPCRequest.useSimpleHttp
+248. attr:RPCRequest.useXmlHttpRequest
+249. attr:RPCRequest.willHandleError
+250. attr:SectionStackSection.showClippedTitleOnHover
+251. attr:SummaryConfiguration.badFormulaResultValue
+252. attr:SummaryConfiguration.invalidSummaryValue
+253. attr:Tab.canClose
+254. attr:Tab.canEditTitle
+255. attr:Tab.closeIcon
+256. attr:Tab.closeIconSize
+257. attr:Tab.disabled
+258. attr:Tab.icon
+259. attr:Tab.iconHeight
+260. attr:Tab.iconSize
+261. attr:Tab.iconWidth
+262. attr:Tab.ID
+263. attr:Tab.name
+264. attr:Tab.pane
+265. attr:Tab.pickerTitle
+266. attr:Tab.prompt
+267. attr:Tab.title
+268. attr:Tab.width
+269. attr:TestFunctionResult.emptyTestValue
+270. attr:TestFunctionResult.errorText
+271. attr:TestFunctionResult.failedExecution
+272. attr:TestFunctionResult.failedGeneration
+273. attr:TestFunctionResult.record
+274. attr:TestFunctionResult.result
+275. attr:TileRecord.tileConstructor
+276. attr:TileRecord.tileProperties
+277. attr:TreeGridField.treeField
+278. attr:TreeNode.children
+279. attr:TreeNode.icon
+280. attr:TreeNode.showDropIcon
+281. attr:TreeNode.showOpenIcon
+282. attr:UserFormula.text
+283. attr:UserSummary.text
 
 
 
@@ -643,17 +685,17 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-06-14	232	5	309	67	3560	0	62	216	657	130	0	239	0	0	8	57	0	0	0	0	12	18	1	45	240	130	0	379	0	0	3	232	5	66	119	2587	1	1	0.9850746	0.3851133	0.7266854	
+2017-06-15	232	5	307	69	3559	0	61	216	657	130	0	239	0	0	8	57	0	0	0	0	12	18	1	45	283	130	0	379	0	0	3	232	5	68	117	2587	1	1	0.9855072	0.3811075	0.7268896	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v11.1d_2017-06-14
+Metrics for build SNAPSHOT_v11.1d_2017-06-15
 ===== Information =====
 (Informational only, not a problem)
 Types: 232
 Interfaces: 5
-Classes: 309
-Objects: 67
-Methods: 3,560
+Classes: 307
+Objects: 69
+Methods: 3,559
 string values with quotes: 216
 string values without quotes: 657
 string values with period: 130
@@ -662,13 +704,13 @@ String values where reference is found: 0
 OR specified as ' \| ': 379
 Types Generated: 232
 Interfaces Generated: 5
-Objects Generated: 66
-Classes Generated: 119
+Objects Generated: 68
+Classes Generated: 117
 Methods Generated: 2,587
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
-Percentage of Classes generated: 39 %
+Percentage of Classes generated: 38 %
 Percentage of Methods generated: 73 %
 
 ===== Warnings =====
@@ -676,14 +718,14 @@ Percentage of Methods generated: 73 %
 Methods with bad flags: 0
 Suspected optional parameters that are marked with optional='false': 18
 Attributes missing R flag: 45
-Object attributes marked with W flag: 240
+Object attributes marked with W flag: 283
 OR specified as ' or ': 0
 OR specified as ' \|\| ': 0
 OR specified as ', ': 3
 
 ===== Errors =====
 (May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented)
-Classes without inheritsFrom attribute: 62
+Classes without inheritsFrom attribute: 61
 Arrays defined as 'array of': 0
 Arrays defined as 'Array[] of': 0
 Arrays defined as 'array[] of': 0

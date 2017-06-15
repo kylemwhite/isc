@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 6/14/2017 9:51:58 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-14
+// Generated: 6/15/2017 8:32:31 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v11.1d_2017-06-15
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -652,14 +652,6 @@ declare namespace Isc {
 		 * DrawItem subclass to render Pie Slices.
 		 */ 
 		DrawSector: DrawSectorStatic<DrawSector, DrawSectorProps>;
-
-		/** 
-		 * DSRequest extends RPCRequest
-		 * Request sent to the server to initiate a 
-		 * dataSourceOperations','DataSource operation. All properties which are legal on
-		 * RPCRequest are legal, in addition to the properties listed here.
-		 */ 
-		DSRequest: DSRequestStatic<DSRequest, DSRequestProps>;
 
 		/** 
 		 * DSResponse extends RPCResponse
@@ -2250,14 +2242,6 @@ declare namespace Isc {
 		 * modifiable cache between several DataBoundComponents.
 		 */ 
 		ResultTree: ResultTreeStatic<ResultTree, ResultTreeProps>;
-
-		/** 
-		 * RPCRequest extends Class
-		 * Encapsulates a client/server RPC request. You'll need to provide an instance of this class (or a
-		 * constructor for it) to the RPCManager.sendRequest method. If you use the 
-		 * RPCManager.send method, an instance of RPCRequest will be created for you.
-		 */ 
-		RPCRequest: RPCRequestStatic<RPCRequest, RPCRequestProps>;
 
 		/** 
 		 * Encapsulates an RPC response from the server. Instances of this class are automatically created

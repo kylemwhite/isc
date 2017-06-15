@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v11.1d_2017-06-14 at 6/14/2017 9:51:59 AM by KWhite
+Generated from SmartClient SNAPSHOT_v11.1d_2017-06-15 at 6/15/2017 8:32:32 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -15,9 +15,9 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 ||**Information**||**Informational only, not a problem**|
 |1|Types|232|Number of types found in the referenceDocs.xml file|
 |2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
-|3|Classes|309|Number of classes found in the referenceDocs.xml file|
-|4|Objects|67|Number of objects found in the referenceDocs.xml file|
-|5|Methods|3,560|Number of methods (instance and class) found in the referenceDocs.xml file|
+|3|Classes|307|Number of classes found in the referenceDocs.xml file|
+|4|Objects|69|Number of objects found in the referenceDocs.xml file|
+|5|Methods|3,559|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |7|string values without quotes|657|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |8|string values with period|130|These usually are really references to a constant.|
@@ -26,13 +26,13 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |11|OR specified as ' \| '|379|Since most ORs are defined this way, it is assumed to be the correct way.|
 |12|Types Generated|232||
 |13|Interfaces Generated|5||
-|14|Objects Generated|66||
-|15|Classes Generated|119||
+|14|Objects Generated|68||
+|15|Classes Generated|117||
 |16|Methods Generated|2,587||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
 |19|Percentage of Objects generated|99%||
-|20|Percentage of Classes generated|39%||
+|20|Percentage of Classes generated|38%||
 |21|Percentage of Methods generated|73%||
 
 
@@ -42,7 +42,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |   |Item|Value|Description|
 |---|--- |---  |---        |
 ||**Warnings**||**Does not prevent item from being generated but might indicate a problem or inconsistency in the docs**|
-|1|Object attributes marked with W flag|240|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
+|1|Object attributes marked with W flag|283|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
 |2|Attributes missing R flag|45|Almost all attributes have an R flag except these. Is this on purpose?|
 |3|Suspected optional parameters that are marked with optional='false'|18|Probably, although not necessarily, a mistake. Could lead to incorrect code generation.|
 |4|OR specified as ', '|3|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
@@ -51,7 +51,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |7|OR specified as ' \|\| '|0|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 ||**Errors**||**May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented**|
 |1|String values without reference|130|These are possible values of types that refer to a classAttr that doesn't exist. For example DateItem.DAY_MONTH|
-|2|Classes without inheritsFrom attribute|62|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
+|2|Classes without inheritsFrom attribute|61|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
 |3|String types without baseType|57|Types that are really just strings should have their own type or have the baseType='string'.|
 |4|Setter Methods with parameter type that does not match the attribute type|12|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
 |5|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
