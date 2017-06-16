@@ -278,7 +278,7 @@ with (theWindow) {
                 showHeaderMenuButton:true,
                 sortAscendingImage:{src:"[SKINIMG]ListGrid/sort_ascending.png", width:9, height:6},
                 sortDescendingImage:{src:"[SKINIMG]ListGrid/sort_descending.png", width:9, height:6},
-                summaryRowHeight:21,
+                summaryRowHeight: 24, // should be cellHeight + top/bottom borders
                 tallBaseStyle:"tallCell"
             });
 
@@ -1595,7 +1595,7 @@ with (theWindow) {
             showHeaderMenuButton: true,
             sortAscendingImage:{src:"[SKIN]sort_ascending.png", width:9, height:6},
             sortDescendingImage: {src:"[SKIN]sort_descending.png", width:9, height:6},
-            summaryRowHeight: 21,
+            summaryRowHeight: 24, // should be cellHeight + top/bottom borders
             summaryRowStyle: "gridSummaryCell",
 			tallBaseStyle: "tallCell"
         });
