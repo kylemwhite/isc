@@ -68,4 +68,50 @@ window.onload = () => {
        // , border: "1px solid green"
     });
 
+    let countryDS = (isc.DataSource as any).create({
+        ID: "countryDS",
+        dataFormat: "xml",
+        recordXPath: "//country",
+        fields: [
+            { name: "countryCode", title: "Code", primaryKey: true, canEdit: "false" },
+            { name: "countryName", title: "Country" },
+            { name: "capital", title: "Capital" }
+        ]
+        ,operationBindings: [
+            {
+                operationType: "fetch",
+                dataURL: "[ISOMORPHIC]/system/reference/inlineExamples/dataIntegration/xml/responses/country_fetch.xml"
+            },
+            {
+                operationType: "add",
+                dataURL: "[ISOMORPHIC]/system/reference/inlineExamples/dataIntegration/xml/responses/country_add.xml"
+            },
+            {
+                operationType: "update",
+                dataURL: "[ISOMORPHIC]/system/reference/inlineExamples/dataIntegration/xml/responses/country_update.xml"
+            },
+            {
+                operationType: "remove",
+                dataURL: "[ISOMORPHIC]/system/reference/inlineExamples/dataIntegration/xml/responses/country_remove.xml"
+            }
+        ]
+    });
+
+    //let countryDS: any;
+
+    let grid = (isc.ListGrid as any).create({
+        ID: "countryList"
+
+        , width: 550
+        , height: 224
+        , alternateRecordStyles: true
+        , dataSource: countryDS
+        , autoFetchData: true
+        //, canEdit: true
+        //, editEvent: "click"
+    }) as Isc.ListGrid;
+
+
+    grid.draw();
+
 };

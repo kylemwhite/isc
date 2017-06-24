@@ -11,7 +11,7 @@
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="content\app.css" />
+    <None Include="countryDS.ds" />
     <Content Include="index.html" />
     <Content Include="scripts\app.js" />
     <Content Include="web.config" />
@@ -62,7 +63,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49517</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49517/</IISUrl>
+          <IISUrl>http://localhost/Isc</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
