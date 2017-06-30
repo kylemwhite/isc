@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 6/29/2017 12:49:54 PM by KWhite
-// Generated from SmartClient version v11.1p_2017-06-29
+// Generated: 6/30/2017 10:52:15 AM by KWhite
+// Generated from SmartClient version v11.1p_2017-06-30
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -1364,6 +1364,11 @@ declare namespace Isc {
 		 * Specially styled Button subclass used by the NavigationBar class.
 		 */ 
 		NavigationButton: NavigationButtonStatic<NavigationButton, NavigationButtonProps>;
+
+		/** 
+		 * Static singleton class containing APIs for interacting with Numbers.
+		 */ 
+		NumberUtil: NumberUtilStatic<NumberUtil, NumberUtilProps>;
 
 		/** 
 		 * Provides information about the page you're loaded in. We define "page" here to be roughly
