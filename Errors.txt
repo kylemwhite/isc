@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version v11.1p_2017-06-30
+Generated from SmartClient version v11.1p_2017-07-01
 
 Errors during generation
-Generated: 6/30/2017 10:52:16 AM by KWhite
+Generated: 7/2/2017 7:01:15 AM by KWhite
 
 Summary
 Total Types  : 232
@@ -540,8 +540,8 @@ Contrained String Type Values without quotes: 657
 Contrained String Type Values with period: 130
 
 ==== How is OR specified? ====
-OR specified as ' | ' : 379
-OR specified as ', ' : 3
+OR specified as ' | ' : 380
+OR specified as ', ' : 2
 OR specified as ' or ' : 0
 OR specified as ' || ' : 0
 
@@ -626,8 +626,8 @@ Setter Methods with parameter type that does not match the attribute type: 12
 1. method:AdaptiveMenu.setItems, attrType='Array of MenuItem', setter Type = 'Array of MenuItem | MenuItem'
 2. method:Canvas.setWidth, attrType='Number | String', setter Type = 'number'
 3. method:CanvasItem.setCanvas, attrType='AutoChild Canvas', setter Type = 'Canvas'
-4. method:DateItem.setEndDate, attrType='Date', setter Type = 'LogicalDate | String'
-5. method:DateItem.setStartDate, attrType='Date', setter Type = 'LogicalDate | String'
+4. method:DateItem.setEndDate, attrType='Date', setter Type = 'Date | String'
+5. method:DateItem.setStartDate, attrType='Date', setter Type = 'Date | String'
 6. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | Identifier'
 7. method:DrawItem.setFillGradient, attrType='Gradient | String', setter Type = 'Gradient'
 8. method:FormItem.setOptionDataSource, attrType='DataSource | String', setter Type = 'DataSource'
@@ -685,10 +685,10 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-06-30	232	5	307	69	3560	0	61	216	657	130	0	239	0	0	8	57	0	0	0	0	12	18	1	45	283	130	0	379	0	0	3	232	5	68	118	2599	1	1	0.9855072	0.3843648	0.7300562	
+2017-07-01	232	5	307	69	3560	0	61	216	657	130	0	239	0	0	8	57	0	0	0	0	12	18	1	45	283	130	0	380	0	0	2	232	5	68	118	2599	1	1	0.9855072	0.3843648	0.7300562	
 
 ======= For Display Somewhere =======
-Metrics for build v11.1p_2017-06-30
+Metrics for build v11.1p_2017-07-01
 ===== Information =====
 (Informational only, not a problem)
 Types: 232
@@ -701,7 +701,7 @@ string values without quotes: 657
 string values with period: 130
 Arrays defined as 'Array of': 239
 String values where reference is found: 0
-OR specified as ' \| ': 379
+OR specified as ' \| ': 380
 Types Generated: 232
 Interfaces Generated: 5
 Objects Generated: 68
@@ -721,7 +721,7 @@ Attributes missing R flag: 45
 Object attributes marked with W flag: 283
 OR specified as ' or ': 0
 OR specified as ' \|\| ': 0
-OR specified as ', ': 3
+OR specified as ', ': 2
 
 ===== Errors =====
 (May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented)

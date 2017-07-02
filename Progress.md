@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient v11.1p_2017-06-30 at 6/30/2017 10:52:16 AM by KWhite
+Generated from SmartClient v11.1p_2017-07-01 at 7/2/2017 7:01:15 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -23,7 +23,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |8|string values with period|130|These usually are really references to a constant.|
 |9|Arrays defined as 'Array of'|239|Since most arrays are described this way, this is assumed to be the 'correct' way.|
 |10|String values where reference is found|0|Possible string values that refer to a constant where the constant was found.|
-|11|OR specified as ' \| '|379|Since most ORs are defined this way, it is assumed to be the correct way.|
+|11|OR specified as ' \| '|380|Since most ORs are defined this way, it is assumed to be the correct way.|
 |12|Types Generated|232||
 |13|Interfaces Generated|5||
 |14|Objects Generated|68||
@@ -45,7 +45,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |1|Object attributes marked with W flag|283|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
 |2|Attributes missing R flag|45|Almost all attributes have an R flag except these. Is this on purpose?|
 |3|Suspected optional parameters that are marked with optional='false'|18|Probably, although not necessarily, a mistake. Could lead to incorrect code generation.|
-|4|OR specified as ', '|3|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
+|4|OR specified as ', '|2|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 |5|Methods with bad flags|0|Method flags should only contain A|
 |6|OR specified as ' or '|0|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 |7|OR specified as ' \|\| '|0|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|

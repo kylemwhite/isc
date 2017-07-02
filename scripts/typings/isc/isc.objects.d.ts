@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 6/30/2017 10:51:13 AM by KWhite
-// Generated from SmartClient version v11.1p_2017-06-30
+// Generated: 7/2/2017 7:00:16 AM by KWhite
+// Generated from SmartClient version v11.1p_2017-07-01
 
 declare namespace Isc {
 
@@ -6815,7 +6815,7 @@ declare namespace Isc {
 		 * summary value comes from
 		 * @return {any} summary value to display.
 		 */
-		getGridSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupSummaries?:Array<any> /* Array of Objects */): any /* Any */; 
+		getGridSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupSummaries?:Array<any> /* Array of Object */): any /* Any */; 
 
 		/**  
 		 * (Advanced)  If ListGrid.showGroupSummary is true, and this method is specified it will be
