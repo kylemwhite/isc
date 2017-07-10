@@ -101,17 +101,97 @@ window.onload = () => {
 
     let grid = (isc.ListGrid as any).create({
         ID: "countryList"
-
-        , width: 550
-        , height: 224
+        , autoDraw: false
+        , width: "100%"
+        , height: "100%"
         , alternateRecordStyles: true
         , dataSource: countryDS
         , autoFetchData: true
+        , border: "3px solid green"
+
         //, canEdit: true
         //, editEvent: "click"
     }) as Isc.ListGrid;
 
+    let tabSet = isc.TabSet.create({        
+         tabBarPosition: "top"
+        , canReorderTabs: true
+        , paneMargin: 15
+        //, styleName: "top-margin-for-tabs"
+        , width: "100%"
+        , height: 300
+        , border:"1px solid green"
+    });
 
-    grid.draw();
+    //tabSet.setProperty("margin", "5px 30px 20px 10px");
+
+
+    tabSet.addTab({
+        pane: grid
+        , title: "Country Data"
+    });
+
+    let portletLayout = isc.PortalLayout.create({
+        ID: 'dashboardPortalLayout'
+        , autoDraw: false
+        , border: '3px solid blue'
+        , height: '100%'
+        , width: '100%'
+        , showColumnMenus: false
+        , numColumns: 1
+        , animateTime: 1000
+        , portletsChanged: function () { console.log("Portlets Changed"); }
+        , canResizePortlets: true
+    });
+
+    portletLayout.addPortlet(isc.Portlet.create({
+        title: "Portlet 1"
+        , width: '50%'
+        , canDragReposition: false
+        , autoDraw: false
+        , showMaximizeButton: false
+        , showMinimizeButton: true
+        , showResizer: false
+        , showCloseButton: false
+    }), 0, 0, 0);
+
+    portletLayout.addPortlet(isc.Portlet.create({
+        title: "Portlet 2"
+        , width: '50%'
+        , canDragReposition: false
+        , autoDraw: false
+        , showMaximizeButton: false
+        , showMinimizeButton: false
+        , showResizer: false
+        , showCloseButton: false
+    }), 0, 0, 1);
+
+    portletLayout.addPortlet(isc.Portlet.create({
+        title: "Portlet 3"
+        , canDragReposition: false
+        , autoDraw: false
+        , showMaximizeButton: false
+        , showMinimizeButton: true
+        , showResizer: false
+        , showCloseButton: false
+    }), 0, 1, 0);
+
+    tabSet.addTab({
+        pane: portletLayout
+        , title: "Portlets"
+        , canClose: false
+        , icon : "favicon.ico"
+    });
+
+    let layout = isc.VLayout.create({
+        htmlElement: "content"
+        , height: 600
+        , width: "100%"
+        , members: [tabSet]
+        , border: "2px solid blue"
+        , padding: 5
+        , margin: 10
+    });
+
 
 };

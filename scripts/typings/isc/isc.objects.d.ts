@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 7/5/2017 7:00:18 AM by KWhite
-// Generated from SmartClient version v11.1p_2017-07-04
+// Generated: 7/10/2017 2:45:36 PM by KWhite
+// Generated from SmartClient version v11.1p_2017-07-09
 
 declare namespace Isc {
 
@@ -1361,7 +1361,7 @@ declare namespace Isc {
 		 * serverSummaries','Server Summaries overview for examples of usage.
 		 * Flags: IR, Group: serverSummaries
 		 */
-		readonly summaryFunctions?: any /* Object<String,SummaryFunction> */;
+		readonly summaryFunctions?: Map<String,SummaryFunction>;
 		/** 
 		 * (Read only) For "fetch" operations, how search criteria should be interpreted for text fields: one of
 		 * "exact" for exact match, "exactCase" for case-sensitive exact match, "startsWith" for 

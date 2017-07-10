@@ -5,3 +5,7 @@
 span {
     font-style: italic;
 } 
+
+.top-margin-for-tabs {
+    margin-top: 5px;
+}
