@@ -107,7 +107,7 @@ window.onload = () => {
         , alternateRecordStyles: true
         , dataSource: countryDS
         , autoFetchData: true
-        , border: "3px solid green"
+        //, border: "3px solid green"
 
         //, canEdit: true
         //, editEvent: "click"
@@ -120,7 +120,7 @@ window.onload = () => {
         //, styleName: "top-margin-for-tabs"
         , width: "100%"
         , height: 300
-        , border:"1px solid green"
+        //, border:"1px solid green"
     });
 
     //tabSet.setProperty("margin", "5px 30px 20px 10px");
@@ -134,7 +134,7 @@ window.onload = () => {
     let portletLayout = isc.PortalLayout.create({
         ID: 'dashboardPortalLayout'
         , autoDraw: false
-        , border: '3px solid blue'
+       // , border: '3px solid blue'
         , height: '100%'
         , width: '100%'
         , showColumnMenus: false
@@ -180,7 +180,7 @@ window.onload = () => {
         pane: portletLayout
         , title: "Portlets"
         , canClose: false
-        , icon : "favicon.ico"
+        , icon: "KMW_16x16.png"
     });
 
     let layout = isc.VLayout.create({
@@ -188,7 +188,7 @@ window.onload = () => {
         , height: 600
         , width: "100%"
         , members: [tabSet]
-        , border: "2px solid blue"
+      //  , border: "2px solid blue"
         , padding: 5
         , margin: 10
     });

@@ -1,0 +1,15 @@
+.customExpansionButton, .customExpansionButtonDown {
+    background-color: #157fcc;
+    font-family: Corbel;
+    color: white;
+    font-size: 15px;
+}
+
+.customExpansionButtonOver {
+    box-shadow: 0 0 0.2em 0.1em #1e97ef;
+    
+    background-color: #157fcc;
+    font-family: Corbel;
+    color: white;
+    font-size: 15px;
+}

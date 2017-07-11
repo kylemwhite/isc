@@ -92,16 +92,14 @@ window.onload = function () {
         height: "100%",
         alternateRecordStyles: true,
         dataSource: countryDS,
-        autoFetchData: true,
-        border: "3px solid green"
+        autoFetchData: true
     });
     var tabSet = isc.TabSet.create({
         tabBarPosition: "top",
         canReorderTabs: true,
         paneMargin: 15,
         width: "100%",
-        height: 300,
-        border: "1px solid green"
+        height: 300
     });
     //tabSet.setProperty("margin", "5px 30px 20px 10px");
     tabSet.addTab({
@@ -111,7 +109,6 @@ window.onload = function () {
     var portletLayout = isc.PortalLayout.create({
         ID: 'dashboardPortalLayout',
         autoDraw: false,
-        border: '3px solid blue',
         height: '100%',
         width: '100%',
         showColumnMenus: false,
@@ -153,14 +150,13 @@ window.onload = function () {
         pane: portletLayout,
         title: "Portlets",
         canClose: false,
-        icon: "favicon.ico"
+        icon: "KMW_16x16.png"
     });
     var layout = isc.VLayout.create({
         htmlElement: "content",
         height: 600,
         width: "100%",
         members: [tabSet],
-        border: "2px solid blue",
         padding: 5,
         margin: 10
     });

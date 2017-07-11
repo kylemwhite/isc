@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/showcase/" />
+<title>layoutNesting-1.rctest</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">layoutNesting-1.rctest</td></tr>
+</thead><tbody>
+<tr>
+	<td>exampleOpen</td>
+	<td>smartgwt</td>
+	<td>layout_nesting</td>
+</tr>
+<tr>
+	<td>waitForElementClickable</td>
+	<td>scLocator=//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=Label||index=0||length=2||classIndex=0||classLength=1||roleIndex=0||roleLength=1||title=Navigation||scRole=label]/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>scLocator=//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=Label||index=0||length=2||classIndex=0||classLength=1||roleIndex=0||roleLength=1||title=Navigation||scRole=label]/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=Label||index=0||length=2||classIndex=0||classLength=1||roleIndex=0||roleLength=1||title=Navigation||scRole=label]/&quot;); (myLabel.getWidth() &gt;= 230 &amp;&amp; myLabel.getWidth() &lt;= 240) || (myLabel.getWidth() &gt;= 300 &amp;&amp; myLabel.getWidth() &lt;= 315)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/member[Class=Label||index=0||length=2||classIndex=0||classLength=2||roleIndex=0||roleLength=2||title=Listing||scRole=label]/&quot;); (myLabel.getHeight() &gt;= 160 &amp;&amp; myLabel.getHeight() &lt;= 175) || (myLabel.getHeight() &gt;= 125 &amp;&amp; myLabel.getHeight() &lt;= 145)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/member[Class=Label||index=0||length=2||classIndex=0||classLength=2||roleIndex=0||roleLength=2||title=Listing||scRole=label]/&quot;); (myLabel.getWidth() &gt;= 540 &amp;&amp; myLabel.getWidth() &lt;= 550) || (myLabel.getWidth() &gt;= 695 &amp;&amp; myLabel.getWidth() &lt;= 715)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/member[Class=Label||index=1||length=2||classIndex=1||classLength=2||roleIndex=1||roleLength=2||title=Details||scRole=label]/&quot;); (myLabel.getHeight() &gt;= 380 &amp;&amp; myLabel.getHeight() &lt;= 400) || (myLabel.getHeight() &gt;= 300 &amp;&amp; myLabel.getHeight() &lt;= 320)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/member[Class=Label||index=1||length=2||classIndex=1||classLength=2||roleIndex=1||roleLength=2||title=Details||scRole=label]/&quot;); (myLabel.getWidth() &gt;= 540 &amp;&amp; myLabel.getWidth() &lt;= 550) || (myLabel.getWidth() &gt;= 695 &amp;&amp; myLabel.getWidth() &lt;= 715)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>waitForElementClickable</td>
+	<td>scLocator=//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/resizeBar[Class=Snapbar||index=0||length=1||classIndex=0||classLength=1]/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>dragAndDrop</td>
+	<td>scLocator=//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/resizeBar[Class=Snapbar||index=0||length=1||classIndex=0||classLength=1]/</td>
+	<td>+174,-10</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=Label||index=0||length=2||classIndex=0||classLength=1||roleIndex=0||roleLength=1||title=Navigation||scRole=label]/&quot;); (myLabel.getWidth() &gt;= 400 &amp;&amp; myLabel.getWidth() &lt;= 410) || (myLabel.getWidth() &gt;= 450 &amp;&amp; myLabel.getWidth() &lt;= 480)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/member[Class=Label||index=0||length=2||classIndex=0||classLength=2||roleIndex=0||roleLength=2||title=Listing||scRole=label]/&quot;); (myLabel.getWidth() &gt;= 370 &amp;&amp; myLabel.getWidth() &lt;= 380) || (myLabel.getWidth() &gt;= 510 &amp;&amp; myLabel.getWidth() &lt;= 540)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/member[Class=Label||index=1||length=2||classIndex=1||classLength=2||roleIndex=1||roleLength=2||title=Details||scRole=label]/&quot;); (myLabel.getWidth() &gt;= 370 &amp;&amp; myLabel.getWidth() &lt;= 380) || (myLabel.getWidth() &gt;= 510 &amp;&amp; myLabel.getWidth() &lt;= 540)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>waitForElementClickable</td>
+	<td>scLocator=//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/resizeBar[Class=Snapbar||index=0||length=1||classIndex=0||classLength=1]/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>dragAndDrop</td>
+	<td>scLocator=//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/resizeBar[Class=Snapbar||index=0||length=1||classIndex=0||classLength=1]/</td>
+	<td>+9,+159</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/member[Class=Label||index=0||length=2||classIndex=0||classLength=2||roleIndex=0||roleLength=2||title=Listing||scRole=label]/&quot;); (myLabel.getHeight() &gt;= 320 &amp;&amp; myLabel.getHeight() &lt;= 330) || (myLabel.getHeight() &gt;= 280 &amp;&amp; myLabel.getHeight() &lt;= 300)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>var myLabel = selenium.getAutWindow().isc.AutoTest.getObject(&quot;//testRoot[]/member[Class=HLayout||index=0||length=1||classIndex=0||classLength=1]/member[Class=VLayout||index=1||length=2||classIndex=0||classLength=1]/member[Class=Label||index=1||length=2||classIndex=1||classLength=2||roleIndex=1||roleLength=2||title=Details||scRole=label]/&quot;); (myLabel.getHeight() &gt;= 230 &amp;&amp; myLabel.getHeight() &lt;= 240) || (myLabel.getHeight() &gt;= 150 &amp;&amp; myLabel.getHeight() &lt;= 170) </td>
+	<td>true</td>
+</tr>
+</tbody></table>
+</body>
+</html>
