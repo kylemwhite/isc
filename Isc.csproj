@@ -24,7 +24,7 @@
   <ItemGroup>
     <Content Include="content\app.css" />
     <None Include="countryDS.ds" />
-    <Content Include="images1\KMW_16x16.png" />
+    <Content Include="images\KMW_16x16.png" />
     <Content Include="index.html" />
     <Content Include="scripts\app.js" />
     <Content Include="web.config" />
