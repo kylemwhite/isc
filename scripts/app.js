@@ -56,14 +56,18 @@ window.onload = function () {
         autoDraw: true,
         width: 600
     });
+    var viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'pop' }] })";
     var countryDS = isc.DataSource.create({
         ID: "countryDS",
         dataFormat: "xml",
         recordXPath: "//country",
+        viewState: viewState,
         fields: [
             { name: "countryCode", title: "Code", primaryKey: true, canEdit: "false" },
             { name: "countryName", title: "Country" },
-            { name: "capital", title: "Capital" }
+            { name: "capital", title: "Capital" },
+            { name: "population" },
+            { name: "independence" }
         ],
         operationBindings: [
             {
