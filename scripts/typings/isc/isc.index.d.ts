@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 7/17/2017 7:05:20 AM by KWhite
-// Generated from SmartClient version v11.1p_2017-07-09
+// Generated: 7/19/2017 7:49:02 AM by kwhite
+// Generated from SmartClient version v11.1p_2017-07-19
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -1049,6 +1049,7 @@ declare namespace Isc {
 		FilterClause: FilterClauseStatic<FilterClause, FilterClauseProps>;
 
 		/** 
+		 * FormItem extends Class
 		 * A UI component that can participate in a DynamicForm, allowing editing or display of one of
 		 * the DynamicForm.values','values tracked by the form.
 		 * 
@@ -1101,6 +1102,14 @@ declare namespace Isc {
 		 * that do not have explicit heights to match the layout.
 		 */ 
 		HLayout: HLayoutStatic<HLayout, HLayoutProps>;
+
+		/** 
+		 * HStack extends Layout
+		 * A subclass of Layout that simply stacks members on the horizontal axis without trying to
+		 * manage their width. On the vertical axis, any members that do not have explicit heights will
+		 * be sized to match the height of the stack.
+		 */ 
+		HStack: HStackStatic<HStack, HStackProps>;
 
 		/** 
 		 * HTMLFlow extends Canvas
@@ -2306,6 +2315,15 @@ declare namespace Isc {
 		SelectItem: SelectItemStatic<SelectItem, SelectItemProps>;
 
 		/** 
+		 * SimpleTile extends StatefulCanvas
+		 * Default class used by a TileGrid to render each tile. See TileGrid.tile.
+		 * 
+		 * SimpleTiles should not be created directly, instead, use a TileGrid and provide data and
+		 * SimpleTile instances are created for you.
+		 */ 
+		SimpleTile: SimpleTileStatic<SimpleTile, SimpleTileProps>;
+
+		/** 
 		 * Snapbar extends Splitbar
 		 * Subclass of the Splitbar class that uses the grip functionality
 		 * to show a stateful open / close indicator.
@@ -2391,6 +2409,21 @@ declare namespace Isc {
 		 * FormItem for managing a text field.
 		 */ 
 		TextItem: TextItemStatic<TextItem, TextItemProps>;
+
+		/** 
+		 * TileGrid extends TileLayout
+		 * A TileGrid is a DataBoundComponent that displays a list of objects as a set
+		 * of "tiles", where each tile represents one object, and the tiles are laid out in a grid with
+		 * multiple tiles per row. Each tile displays one or more properties of the object it
+		 * represents.
+		 */ 
+		TileGrid: TileGridStatic<TileGrid, TileGridProps>;
+
+		/** 
+		 * TileLayout extends Canvas
+		 * Lays out a series of components, calls "tiles", in a grid with multiple tiles per row.
+		 */ 
+		TileLayout: TileLayoutStatic<TileLayout, TileLayoutProps>;
 
 		/** 
 		 * Time extends Class
@@ -2598,6 +2631,14 @@ declare namespace Isc {
 		 * members that do not have explicit widths to match the layout.
 		 */ 
 		VLayout: VLayoutStatic<VLayout, VLayoutProps>;
+
+		/** 
+		 * VStack extends Layout
+		 * A subclass of Layout that simply stacks members on the vertical axis without trying to
+		 * manage their height. On the horizontal axis, any members that do not have explicit widths
+		 * will be sized to match the width of the stack.
+		 */ 
+		VStack: VStackStatic<VStack, VStackProps>;
 
 		/** 
 		 * Window extends Layout

@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 7/17/2017 7:03:45 AM by KWhite
-// Generated from SmartClient version v11.1p_2017-07-09
+// Generated: 7/19/2017 7:48:03 AM by kwhite
+// Generated from SmartClient version v11.1p_2017-07-19
 
 declare namespace Isc {
 
@@ -3879,7 +3879,7 @@ declare namespace Isc {
 		 * identifiers.
 		 * Flags: IR, Group: menuKeys
 		 */
-		readonly keys?: KeyIdentifier | Array<string> /* KeyIdentifier | Array of KeyIdentifer */;
+		readonly keys?: KeyIdentifier | Array<KeyIdentifier> /* KeyIdentifier | Array of KeyIdentifier */;
 		/** 
 		 * (Read only) A string to display in the shortcut-key column for this item. If not
 		 * specified, the first KeyName value in MenuItem.keys will be used by default.
@@ -4173,8 +4173,8 @@ declare namespace Isc {
 		 * 
 		 * Name is optional, but if specified, must be unique for this ListGrid (but not globally
 		 * unique) as well as a valid JavaScript identifier, as specified by ECMA-262 Section 7.6
-		 * (the String.isValidID
-		 * function can be used to test whether a name is a valid JavaScript identifier).
+		 * (the String.isValidID function can be used to test whether a name is a valid JavaScript
+		 * identifier).
 		 * Flags: IR, Group: headerSpan
 		 */
 		readonly name?: string /* Identifier */;
@@ -8262,7 +8262,7 @@ declare namespace Isc {
 		 * globally unique identifier, set Tab.name instead.
 		 * Flags: IRW
 		 */
-		readonly ID?: string /* Identifier */;
+		readonly ID?: GlobalId;
 		/** 
 		 * Optional name for the tab, which can later be used to reference the tab.
 		 * APIs requiring a reference to a tab will accept the tab's name
@@ -8274,7 +8274,7 @@ declare namespace Isc {
 		 * a global reference to the Tab. If you want a global reference, set Tab.ID instead.
 		 * Flags: IRW
 		 */
-		readonly name?: string /* Identifier */;
+		readonly name?: TabName;
 		/** 
 		 * Specifies the pane associated with this tab. You have two options for the value of
 		 * the pane attribute:

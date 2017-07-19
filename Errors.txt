@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version v11.1p_2017-07-09
+Generated from SmartClient version v11.1p_2017-07-19
 
 Errors during generation
-Generated: 7/17/2017 7:05:20 AM by KWhite
+Generated: 7/19/2017 7:49:02 AM by kwhite
 
 Summary
-Total Types  : 232
+Total Types  : 235
 Total Classes: 307
 Total Objects: 69
-Total Methods: 3560
+Total Methods: 3562
 
 Attributes missing R flag: 45 (Should they all have an R flag?)
 1. attr:Calendar.eventCanvas, Flags=A
@@ -81,7 +81,7 @@ Classes without inheritsFrom attribute: 61 (Maybe it should inherit from Class, 
 18. FacetValue (manually checked, does NOT inherit from Class. Should be object?)
 19. FieldPickerField
 20. FileLoader (manually checked, does NOT inherit from Class. Should be object?)
-21. FormItem
+21. FormItem (manually checked, inheritsFrom Class)
 22. GroupingMessages
 23. HiddenPalette
 24. History (manually checked, does NOT inherit from Class. Should be object?)
@@ -553,51 +553,46 @@ Array[] of: 0
 array[] of: 0
 Just Array or array: 8
 
-Attributes suspected as string types but do not have the baseType set: 57.
-=== URL:43 ===
+baseType attributes != 'string': 4
+
+Attributes suspected as string types but do not have the baseType set: 50.
+=== URL:36 ===
 1. attr:ActiveXControl.codeBase, valueType=URL
 2. attr:Applet.archive, valueType=URL
 3. attr:Applet.code, valueType=URL
 4. attr:Applet.codeBase, valueType=URL
 5. attr:Applet.src, valueType=URL
 6. attr:Canvas.appImgDir, valueType=URL
-7. attr:Canvas.skinImgDir, valueType=URL
-8. attr:DataSource.dataURL, valueType=URL
-9. attr:DateChooser.nextMonthIcon, valueType=URL
-10. attr:DateChooser.nextMonthIconRTL, valueType=URL
-11. attr:DateChooser.nextYearIcon, valueType=URL
-12. attr:DateChooser.nextYearIconRTL, valueType=URL
-13. attr:DateChooser.prevMonthIcon, valueType=URL
-14. attr:DateChooser.prevMonthIconRTL, valueType=URL
-15. attr:DateChooser.prevYearIcon, valueType=URL
-16. attr:DateChooser.prevYearIconRTL, valueType=URL
-17. attr:DrawImage.src, valueType=URL
-18. attr:DynamicForm.action, valueType=URL
-19. attr:DynamicForm.validationURL, valueType=URL
-20. attr:EdgedCanvas.skinImgDir, valueType=URL
-21. attr:Flashlet.codeBase, valueType=URL
-22. attr:Flashlet.pluginsPage, valueType=URL
-23. attr:Flashlet.src, valueType=URL
-24. attr:FusionChart.chartsBaseURL, valueType=URL
-25. attr:FusionChart.chartURL, valueType=URL
-26. attr:HTMLFlow.contentsURL, valueType=URL
-27. attr:ImgProperties.imgDir, valueType=URL
-28. attr:ImgProperties.src, valueType=URL
-29. attr:ImgTab.labelSkinImgDir, valueType=URL
-30. attr:ImgTab.skinImgDir, valueType=URL
-31. attr:ListGrid.headerMenuButtonIcon, valueType=URL
-32. attr:ListGrid.skinImgDir, valueType=URL
-33. attr:Mail.templateFile, valueType=URL
-34. attr:MiniNavControl.skinImgDir, valueType=URL
-35. attr:OperationBinding.dataURL, valueType=URL
-36. attr:RecordEditor.skinImgDir, valueType=URL
-37. attr:RPCRequest.actionURL, valueType=URL
-38. attr:Scrollbar.skinImgDir, valueType=URL
-39. attr:StretchImgButton.labelSkinImgDir, valueType=URL
-40. attr:SVG.pluginsPage, valueType=URL
-41. attr:SVG.src, valueType=URL
-42. attr:ToolStripSeparator.skinImgDir, valueType=URL
-43. attr:ViewLoader.viewURL, valueType=URL
+7. attr:DataSource.dataURL, valueType=URL
+8. attr:DateChooser.nextMonthIcon, valueType=URL
+9. attr:DateChooser.nextMonthIconRTL, valueType=URL
+10. attr:DateChooser.nextYearIcon, valueType=URL
+11. attr:DateChooser.nextYearIconRTL, valueType=URL
+12. attr:DateChooser.prevMonthIcon, valueType=URL
+13. attr:DateChooser.prevMonthIconRTL, valueType=URL
+14. attr:DateChooser.prevYearIcon, valueType=URL
+15. attr:DateChooser.prevYearIconRTL, valueType=URL
+16. attr:DrawImage.src, valueType=URL
+17. attr:DynamicForm.action, valueType=URL
+18. attr:DynamicForm.validationURL, valueType=URL
+19. attr:Flashlet.codeBase, valueType=URL
+20. attr:Flashlet.pluginsPage, valueType=URL
+21. attr:Flashlet.src, valueType=URL
+22. attr:FusionChart.chartsBaseURL, valueType=URL
+23. attr:FusionChart.chartURL, valueType=URL
+24. attr:HTMLFlow.contentsURL, valueType=URL
+25. attr:ImgProperties.imgDir, valueType=URL
+26. attr:ImgProperties.src, valueType=URL
+27. attr:ImgTab.labelSkinImgDir, valueType=URL
+28. attr:ImgTab.skinImgDir, valueType=URL
+29. attr:ListGrid.headerMenuButtonIcon, valueType=URL
+30. attr:Mail.templateFile, valueType=URL
+31. attr:OperationBinding.dataURL, valueType=URL
+32. attr:RPCRequest.actionURL, valueType=URL
+33. attr:StretchImgButton.labelSkinImgDir, valueType=URL
+34. attr:SVG.pluginsPage, valueType=URL
+35. attr:SVG.src, valueType=URL
+36. attr:ViewLoader.viewURL, valueType=URL
 === DOMElement:2 ===
 1. attr:Canvas.htmlElement, valueType=DOMElement
 2. attr:DOMGrid.rootElement, valueType=DOMElement
@@ -622,19 +617,20 @@ Methods with required parameter after optional parameter: 0
 (Required parameters should all be listed BEFORE optional parameters)
 
 
-Setter Methods with parameter type that does not match the attribute type: 12
+Setter Methods with parameter type that does not match the attribute type: 13
 1. method:AdaptiveMenu.setItems, attrType='Array of MenuItem', setter Type = 'Array of MenuItem | MenuItem'
-2. method:Canvas.setWidth, attrType='Number | String', setter Type = 'number'
-3. method:CanvasItem.setCanvas, attrType='AutoChild Canvas', setter Type = 'Canvas'
-4. method:DateItem.setEndDate, attrType='Date', setter Type = 'Date | String'
-5. method:DateItem.setStartDate, attrType='Date', setter Type = 'Date | String'
-6. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | Identifier'
-7. method:DrawItem.setFillGradient, attrType='Gradient | String', setter Type = 'Gradient'
-8. method:FormItem.setOptionDataSource, attrType='DataSource | String', setter Type = 'DataSource'
-9. method:NavigationBar.setCustomNavControl, attrType='Canvas', setter Type = 'Array of String | Array of Canvas'
-10. method:Portlet.setHeight, attrType='Number | String', setter Type = 'Number'
-11. method:Portlet.setRowHeight, attrType='Number | String', setter Type = 'Number'
-12. method:Progressbar.setLength, attrType='Number | String', setter Type = 'Number'
+2. method:Canvas.setValuesManager, attrType='ValuesManager | GlobalId', setter Type = 'ValuesManager'
+3. method:Canvas.setWidth, attrType='Number | String', setter Type = 'number'
+4. method:CanvasItem.setCanvas, attrType='AutoChild Canvas', setter Type = 'Canvas'
+5. method:DateItem.setEndDate, attrType='Date', setter Type = 'Date | String'
+6. method:DateItem.setStartDate, attrType='Date', setter Type = 'Date | String'
+7. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | GlobalId'
+8. method:DrawItem.setFillGradient, attrType='Gradient | String', setter Type = 'Gradient'
+9. method:FormItem.setOptionDataSource, attrType='DataSource | String', setter Type = 'DataSource'
+10. method:NavigationBar.setCustomNavControl, attrType='Canvas', setter Type = 'Array of String | Array of Canvas'
+11. method:Portlet.setHeight, attrType='Number | String', setter Type = 'Number'
+12. method:Portlet.setRowHeight, attrType='Number | String', setter Type = 'Number'
+13. method:Progressbar.setLength, attrType='Number | String', setter Type = 'Number'
 
 Getter Methods with return type that does not match the attribute type: 1
 1. method:SectionStack.getSections, attrType='Array of SectionStackSection Properties', return Type = 'List'
@@ -668,50 +664,51 @@ The following methods were excluded
 
 === Setter method param type does not match attribute type ===
 2. method:AdaptiveMenu.setItems
-3. method:Canvas.setWidth
-4. method:CanvasItem.setCanvas
-5. method:DateItem.setEndDate
-6. method:DateItem.setStartDate
-7. method:Deck.setCurrentPane
-8. method:DrawItem.setFillGradient
-9. method:FormItem.setOptionDataSource
-10. method:NavigationBar.setCustomNavControl
-11. method:Portlet.setHeight
-12. method:Portlet.setRowHeight
-13. method:Progressbar.setLength
+3. method:Canvas.setValuesManager
+4. method:Canvas.setWidth
+5. method:CanvasItem.setCanvas
+6. method:DateItem.setEndDate
+7. method:DateItem.setStartDate
+8. method:Deck.setCurrentPane
+9. method:DrawItem.setFillGradient
+10. method:FormItem.setOptionDataSource
+11. method:NavigationBar.setCustomNavControl
+12. method:Portlet.setHeight
+13. method:Portlet.setRowHeight
+14. method:Progressbar.setLength
 
 
 
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-07-09	232	5	307	69	3560	0	61	216	657	130	0	239	0	0	8	57	0	0	0	0	12	18	1	45	283	130	0	381	0	0	0	232	5	68	118	2599	1	1	0.9855072	0.3843648	0.7300562	
+2017-07-19	235	5	307	69	3562	0	61	216	657	130	0	239	0	0	8	50	0	0	0	0	13	18	1	45	283	130	0	381	0	0	0	235	5	68	123	2655	1	1	0.9855072	0.4006515	0.7453678	
 
 ======= For Display Somewhere =======
-Metrics for build v11.1p_2017-07-09
+Metrics for build v11.1p_2017-07-19
 ===== Information =====
 (Informational only, not a problem)
-Types: 232
+Types: 235
 Interfaces: 5
 Classes: 307
 Objects: 69
-Methods: 3,560
+Methods: 3,562
 string values with quotes: 216
 string values without quotes: 657
 string values with period: 130
 Arrays defined as 'Array of': 239
 String values where reference is found: 0
 OR specified as ' \| ': 381
-Types Generated: 232
+Types Generated: 235
 Interfaces Generated: 5
 Objects Generated: 68
-Classes Generated: 118
-Methods Generated: 2,599
+Classes Generated: 123
+Methods Generated: 2,655
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
-Percentage of Classes generated: 38 %
-Percentage of Methods generated: 73 %
+Percentage of Classes generated: 40 %
+Percentage of Methods generated: 75 %
 
 ===== Warnings =====
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)
@@ -730,12 +727,12 @@ Arrays defined as 'array of': 0
 Arrays defined as 'Array[] of': 0
 Arrays defined as 'array[] of': 0
 Arrays defined as 'array' or 'Array': 8
-String types without baseType: 57
+String types without baseType: 50
 Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0
 Methods with required parameters after optional parameters: 0
-Setter Methods with parameter type that does not match the attribute type: 12
+Setter Methods with parameter type that does not match the attribute type: 13
 Getter Methods with return type that does not match the attribute type: 1
 String values without reference: 130
 
