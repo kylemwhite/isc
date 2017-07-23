@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version v11.1p_2017-07-22
+Generated from SmartClient version v11.1p_2017-07-23
 
 Errors during generation
-Generated: 7/22/2017 7:01:22 AM by kwhite
+Generated: 7/23/2017 7:01:28 AM by kwhite
 
 Summary
 Total Types  : 235
 Total Classes: 307
 Total Objects: 69
-Total Methods: 3562
+Total Methods: 3563
 
 Attributes missing R flag: 45 (Should they all have an R flag?)
 1. attr:Calendar.eventCanvas, Flags=A
@@ -540,7 +540,7 @@ Contrained String Type Values without quotes: 657
 Contrained String Type Values with period: 130
 
 ==== How is OR specified? ====
-OR specified as ' | ' : 381
+OR specified as ' | ' : 382
 OR specified as ' or ' : 0
 OR specified as ' || ' : 0
 OR specified as ', ' : 0
@@ -617,7 +617,7 @@ Methods with required parameter after optional parameter: 0
 (Required parameters should all be listed BEFORE optional parameters)
 
 
-Setter Methods with parameter type that does not match the attribute type: 13
+Setter Methods with parameter type that does not match the attribute type: 14
 1. method:AdaptiveMenu.setItems, attrType='Array of MenuItem', setter Type = 'Array of MenuItem | MenuItem'
 2. method:Canvas.setValuesManager, attrType='ValuesManager | GlobalId', setter Type = 'ValuesManager'
 3. method:Canvas.setWidth, attrType='Number | String', setter Type = 'number'
@@ -631,6 +631,7 @@ Setter Methods with parameter type that does not match the attribute type: 13
 11. method:Portlet.setHeight, attrType='Number | String', setter Type = 'Number'
 12. method:Portlet.setRowHeight, attrType='Number | String', setter Type = 'Number'
 13. method:Progressbar.setLength, attrType='Number | String', setter Type = 'Number'
+14. method:TileGrid.setData, attrType='Array of Record[] | Array of TileRecord[] | RecordList', setter Type = 'Array of Record | Array of TileRecord | ResultSet'
 
 Getter Methods with return type that does not match the attribute type: 1
 1. method:SectionStack.getSections, attrType='Array of SectionStackSection Properties', return Type = 'List'
@@ -676,29 +677,30 @@ The following methods were excluded
 12. method:Portlet.setHeight
 13. method:Portlet.setRowHeight
 14. method:Progressbar.setLength
+15. method:TileGrid.setData
 
 
 
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-07-22	235	5	307	69	3562	0	61	216	657	130	0	239	0	0	8	50	0	0	0	0	13	18	1	45	283	130	0	381	0	0	0	235	5	68	123	2655	1	1	0.9855072	0.4006515	0.7453678	
+2017-07-23	235	5	307	69	3563	0	61	216	657	130	0	239	0	0	8	50	0	0	0	0	14	18	1	45	283	130	0	382	0	0	0	235	5	68	123	2655	1	1	0.9855072	0.4006515	0.7451586	
 
 ======= For Display Somewhere =======
-Metrics for build v11.1p_2017-07-22
+Metrics for build v11.1p_2017-07-23
 ===== Information =====
 (Informational only, not a problem)
 Types: 235
 Interfaces: 5
 Classes: 307
 Objects: 69
-Methods: 3,562
+Methods: 3,563
 string values with quotes: 216
 string values without quotes: 657
 string values with period: 130
 Arrays defined as 'Array of': 239
 String values where reference is found: 0
-OR specified as ' \| ': 381
+OR specified as ' \| ': 382
 Types Generated: 235
 Interfaces Generated: 5
 Objects Generated: 68
@@ -732,7 +734,7 @@ Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0
 Methods with required parameters after optional parameters: 0
-Setter Methods with parameter type that does not match the attribute type: 13
+Setter Methods with parameter type that does not match the attribute type: 14
 Getter Methods with return type that does not match the attribute type: 1
 String values without reference: 130
 
