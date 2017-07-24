@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version v11.1p_2017-07-23
+Generated from SmartClient version v11.1p_2017-07-24
 
 Errors during generation
-Generated: 7/23/2017 7:01:28 AM by kwhite
+Generated: 7/24/2017 7:02:39 AM by kwhite
 
 Summary
 Total Types  : 235
@@ -684,10 +684,10 @@ The following methods were excluded
 
 ===== For recording metrics ======
 Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-07-23	235	5	307	69	3563	0	61	216	657	130	0	239	0	0	8	50	0	0	0	0	14	18	1	45	283	130	0	382	0	0	0	235	5	68	123	2655	1	1	0.9855072	0.4006515	0.7451586	
+2017-07-24	235	5	307	69	3563	0	61	216	657	130	0	239	0	0	8	50	0	0	0	0	14	18	1	45	283	130	0	382	0	0	0	235	5	68	123	2655	1	1	0.9855072	0.4006515	0.7451586	
 
 ======= For Display Somewhere =======
-Metrics for build v11.1p_2017-07-23
+Metrics for build v11.1p_2017-07-24
 ===== Information =====
 (Informational only, not a problem)
 Types: 235
