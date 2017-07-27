@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 7/26/2017 7:00:17 AM by kwhite
-// Generated from SmartClient version v11.1p_2017-07-25
+// Generated: 7/27/2017 7:00:34 AM by kwhite
+// Generated from SmartClient version v11.1p_2017-07-27
 
 declare namespace Isc {
 
@@ -1306,27 +1306,6 @@ declare namespace Isc {
 
 
 	/**
-	 * A Callback is an arbitrary action to be fired - usually passed into a 
-	 * method to be fired asynchronously as a notificaction of some event.
-	 * The callback can be defined in the following formats:
-	 * a function
-	 * A string containing an expression to evaluate
-	 * An object with the following properties:
-	 * - target: fire in the scope of this target - when the action fires,
-	 * the target will be available as this.
-	 * - methodName: if specified we'll check for a method on the target object with this 
-	 * name.
-	 * 
-	 * Callbacks are fired via the Class.fireCallback method, which allows
-	 * named parameters to be passed into the callback at runtime. If the Callback was specified
-	 * as a string of script, these parameters are available as local variables at eval time.
-	 * For specific SmartClient methods that make use of Callback objects, see
-	 * local documentation for information on parameters and scope.
-	 */
-	export type Callback = any;
-
-
-	/**
 	 * Strings to identify the various keys on the keyboard.
 	 * 
 	 * For alpha keys, the single (uppercase) character value is used, such as "Q"
@@ -1358,6 +1337,27 @@ declare namespace Isc {
 	 * [Note: Some keys may not be available for capture on every platform]
 	 */
 	export type KeyName = any;
+
+
+	/**
+	 * A Callback is an arbitrary action to be fired - usually passed into a 
+	 * method to be fired asynchronously as a notificaction of some event.
+	 * The callback can be defined in the following formats:
+	 * a function
+	 * A string containing an expression to evaluate
+	 * An object with the following properties:
+	 * - target: fire in the scope of this target - when the action fires,
+	 * the target will be available as this.
+	 * - methodName: if specified we'll check for a method on the target object with this 
+	 * name.
+	 * 
+	 * Callbacks are fired via the Class.fireCallback method, which allows
+	 * named parameters to be passed into the callback at runtime. If the Callback was specified
+	 * as a string of script, these parameters are available as local variables at eval time.
+	 * For specific SmartClient methods that make use of Callback objects, see
+	 * local documentation for information on parameters and scope.
+	 */
+	export type Callback = any;
 
 
 	/**
@@ -3113,6 +3113,21 @@ declare namespace Isc {
 
 
 	/**
+	 * What the JSONEncoder should do when it encounters a circular reference in an object
+	 * structure.
+	 */
+	export type JSONCircularReferenceMode = 
+		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
+		"omit"
+		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
+		| "marker"
+		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
+	 * This potentially allows the original object graph to be reconstructed. */
+		| "path"
+		;
+
+
+	/**
 	 * Specifies the layout of the combo box and buttons in a MultiComboBoxItem.
 	 */
 	export type MultiComboBoxLayoutStyle = 
@@ -3128,21 +3143,6 @@ declare namespace Isc {
 		| "vertical"
 		/** Use a vertical layout with the combo box at the bottom */
 		| "verticalReverse"
-		;
-
-
-	/**
-	 * What the JSONEncoder should do when it encounters a circular reference in an object
-	 * structure.
-	 */
-	export type JSONCircularReferenceMode = 
-		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
-		"omit"
-		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
-		| "marker"
-		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
-	 * This potentially allows the original object graph to be reconstructed. */
-		| "path"
 		;
 
 
