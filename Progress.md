@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient v11.1p_2017-07-27 at 7/27/2017 7:01:33 AM by kwhite
+Generated from SmartClient v11.1p_2017-07-29 at 7/29/2017 7:01:37 AM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -19,7 +19,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |4|Objects|69|Number of objects found in the referenceDocs.xml file|
 |5|Methods|3,563|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
-|7|string values without quotes|657|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
+|7|string values without quotes|658|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |8|string values with period|130|These usually are really references to a constant.|
 |9|Arrays defined as 'Array of'|239|Since most arrays are described this way, this is assumed to be the 'correct' way.|
 |10|String values where reference is found|0|Possible string values that refer to a constant where the constant was found.|
