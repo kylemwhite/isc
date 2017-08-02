@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/1/2017 7:00:14 AM by kwhite
-// Generated from SmartClient version v11.1p_2017-08-01
+// Generated: 8/2/2017 7:00:49 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-02
 
 declare namespace Isc {
 
@@ -2714,6 +2714,13 @@ declare namespace Isc {
 		 */
 		readonly ignoreTimeout?: boolean /* Boolean */;
 		/** 
+		 * (Read only) If enabled and request is applied to RPCManager.cacheScreens or
+		 * RPCManager.loadScreen indicates that
+		 * referenced DataSources should be loaded in mock mode.
+		 * Flags: IR
+		 */
+		readonly mockMode?: boolean;
+		/** 
 		 * (Advanced) If enabled, the server omits any key/value pairs in map that have null values from the
 		 * response. This can reduce the size of the response when many fields have null values.
 		 * 
@@ -3171,6 +3178,31 @@ declare namespace Isc {
 
 	export interface DrawShapeCommandStatic {
 	} // DrawShapeCommandStatic
+
+
+	/**
+	 * Settings to control optional DataSource.load','DataSource loading features. 
+	 */
+	export interface DSLoadSettings {
+		/** 
+		 * Forcibly reload a dataSource if it's already loaded.
+		 * Flags: IRW
+		 */
+		readonly forceReload?: boolean /* Boolean */;
+		/** 
+		 * Load parent DataSources
+		 * Flags: IRW
+		 */
+		readonly loadParents?: boolean /* Boolean */;
+		/** 
+		 * Place loaded DataSource into DataSource.mockMode','mockMode
+		 * Flags: IRW
+		 */
+		readonly mockMode?: boolean /* Boolean */;
+	} // DSLoadSettings
+
+	export interface DSLoadSettingsStatic {
+	} // DSLoadSettingsStatic
 
 
 	/**
@@ -6306,6 +6338,12 @@ declare namespace Isc {
 		 */
 		readonly sortDirection?: SortDirection;
 		/** 
+		 * Custom base style to apply to this field's header button instead of
+		 * ListGrid.spannedHeaderBaseStyle.
+		 * Flags: IRW, Group: gridHeader
+		 */
+		readonly spannedHeaderBaseStyle?: string /* CSSStyleName */;
+		/** 
 		 * (Read only) If ListGrid.showGridSummary or ListGrid.showGroupSummary is true,
 		 * this attribute can be used to specify
 		 * an explicit SummaryFunction for calculating the summary value to
@@ -7172,6 +7210,19 @@ declare namespace Isc {
 		 * Flags: IRWA, Group: treeIcons
 		 */
 		readonly showOpenIcon?: boolean /* Boolean */;
+		/** 
+		 * (Advanced) For folder nodes showing custom icons (set via TreeNode.icon),
+		 * this property allows the developer to specify on a per-node basis whether a
+		 * selected state icon should be displayed when the folder is open.
+		 * Set node.showSelectedIcon to true to show the selected state
+		 * icons, or false to suppress this.
+		 * If not specified, this behavior is determined by TreeGrid.showCustomIconSelected
+		 * for this node.
+		 * You can change the name of this property by setting 
+		 * TreeGrid.customIconSelectedProperty.
+		 * Flags: IRWA, Group: treeIcons
+		 */
+		readonly showSelectedIcon?: boolean /* Boolean */;
 		/** 
 		 * (Read only) The title of the node as it should appear next to the node icon in the Tree. If left
 		 * unset, the value of TreeNode.name is used by default. See the description in
