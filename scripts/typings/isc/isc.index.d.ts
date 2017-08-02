@@ -6,7 +6,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 8/2/2017 7:01:49 AM by kwhite
+// Generated: 8/2/2017 2:36:57 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-02
 
 /**
@@ -1168,6 +1168,12 @@ declare namespace Isc {
 		 * Example uses are Window minimize/close buttons.
 		 */ 
 		ImgButton: ImgButtonStatic<ImgButton, ImgButtonProps>;
+
+		/** 
+		 * ImgTab extends StretchImgButton
+		 * Specialized StretchImgButton used by TabSet/TabBar for tabs
+		 */ 
+		ImgTab: ImgTabStatic<ImgTab, ImgTabProps>;
 
 		/** 
 		 * IndicatorCanvas extends EventCanvas

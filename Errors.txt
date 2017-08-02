@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-02
 
 Errors during generation
-Generated: 8/2/2017 7:01:49 AM by kwhite
+Generated: 8/2/2017 2:36:57 PM by kwhite
 
 Summary
 Total Types  : 235
@@ -91,7 +91,7 @@ Classes without inheritsFrom attribute: 61 (Maybe it should inherit from Class, 
 28. JSONEncoder
 29. Log
 30. Mail
-31. MathFunction
+31. MathFunction (manually checked, inheritsFrom Class)
 32. Messaging
 33. NumberUtil
 34. Offline
@@ -557,10 +557,11 @@ Array of: 239
 Array[] of: 0
 array[] of: 0
 Just Array or array: 8
+List of: 10
 
 baseType attributes != 'string': 4
 
-Attributes suspected as string types but do not have the baseType set: 45.
+Attributes suspected as string types but do not have the baseType set: 47.
 === URL:32 ===
 1. attr:ActiveXControl.codeBase, valueType=URL
 2. attr:Canvas.appImgDir, valueType=URL
@@ -599,6 +600,9 @@ Attributes suspected as string types but do not have the baseType set: 45.
 2. attr:DOMGrid.rootElement, valueType=DOMElement
 === CSSStyle:1 ===
 1. attr:Dialog.messageStyle, valueType=CSSStyle
+=== URI:2 ===
+1. attr:SchemaSet.schemaNamespace, valueType=URI
+2. attr:WebService.serviceNamespace, valueType=URI
 === HTML:7 ===
 1. attr:GroupNode.groupTitle, valueType=HTML
 2. attr:Hilite.htmlAfter, valueType=HTML
@@ -617,21 +621,20 @@ Methods with required parameter after optional parameter: 0
 (Required parameters should all be listed BEFORE optional parameters)
 
 
-Setter Methods with parameter type that does not match the attribute type: 14
+Setter Methods with parameter type that does not match the attribute type: 13
 1. method:AdaptiveMenu.setItems, attrType='Array of MenuItem', setter Type = 'Array of MenuItem | MenuItem'
 2. method:Canvas.setValuesManager, attrType='ValuesManager | GlobalId', setter Type = 'ValuesManager'
 3. method:Canvas.setWidth, attrType='Number | String', setter Type = 'number'
-4. method:CanvasItem.setCanvas, attrType='AutoChild Canvas', setter Type = 'Canvas'
-5. method:DateItem.setEndDate, attrType='Date', setter Type = 'Date | String'
-6. method:DateItem.setStartDate, attrType='Date', setter Type = 'Date | String'
-7. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | GlobalId'
-8. method:DrawItem.setFillGradient, attrType='Gradient | String', setter Type = 'Gradient'
-9. method:FormItem.setOptionDataSource, attrType='DataSource | String', setter Type = 'DataSource'
-10. method:NavigationBar.setCustomNavControl, attrType='Canvas', setter Type = 'Array of String | Array of Canvas'
-11. method:Portlet.setHeight, attrType='Number | String', setter Type = 'Number'
-12. method:Portlet.setRowHeight, attrType='Number | String', setter Type = 'Number'
-13. method:Progressbar.setLength, attrType='Number | String', setter Type = 'Number'
-14. method:TileGrid.setData, attrType='Array of Record[] | Array of TileRecord[] | RecordList', setter Type = 'Array of Record | Array of TileRecord | ResultSet'
+4. method:DateItem.setEndDate, attrType='Date', setter Type = 'Date | String'
+5. method:DateItem.setStartDate, attrType='Date', setter Type = 'Date | String'
+6. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | GlobalId'
+7. method:DrawItem.setFillGradient, attrType='Gradient | String', setter Type = 'Gradient'
+8. method:FormItem.setOptionDataSource, attrType='DataSource | String', setter Type = 'DataSource'
+9. method:NavigationBar.setCustomNavControl, attrType='Canvas', setter Type = 'Array of String | Array of Canvas'
+10. method:Portlet.setHeight, attrType='Number | String', setter Type = 'Number'
+11. method:Portlet.setRowHeight, attrType='Number | String', setter Type = 'Number'
+12. method:Progressbar.setLength, attrType='Number | String', setter Type = 'Number'
+13. method:TileGrid.setData, attrType='Array of Record[] | Array of TileRecord[] | RecordList', setter Type = 'Array of Record | Array of TileRecord | ResultSet'
 
 Getter Methods with return type that does not match the attribute type: 1
 1. method:SectionStack.getSections, attrType='Array of SectionStackSection Properties', return Type = 'List'
@@ -667,24 +670,19 @@ The following methods were excluded
 2. method:AdaptiveMenu.setItems
 3. method:Canvas.setValuesManager
 4. method:Canvas.setWidth
-5. method:CanvasItem.setCanvas
-6. method:DateItem.setEndDate
-7. method:DateItem.setStartDate
-8. method:Deck.setCurrentPane
-9. method:DrawItem.setFillGradient
-10. method:FormItem.setOptionDataSource
-11. method:NavigationBar.setCustomNavControl
-12. method:Portlet.setHeight
-13. method:Portlet.setRowHeight
-14. method:Progressbar.setLength
-15. method:TileGrid.setData
+5. method:DateItem.setEndDate
+6. method:DateItem.setStartDate
+7. method:Deck.setCurrentPane
+8. method:DrawItem.setFillGradient
+9. method:FormItem.setOptionDataSource
+10. method:NavigationBar.setCustomNavControl
+11. method:Portlet.setHeight
+12. method:Portlet.setRowHeight
+13. method:Progressbar.setLength
+14. method:TileGrid.setData
 
-
-
-
-===== For recording metrics ======
-Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-02	235	5	306	70	3560	0	61	216	658	130	0	239	0	0	8	45	0	0	0	0	14	18	1	45	288	130	0	384	0	0	0	235	5	69	123	2654	1	1	0.9857143	0.4019608	0.7455056	
+Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
+2017-08-02	235	5	306	70	3560	0	61	216	658	130	0	239	0	0	8	10	47	0	0	0	0	13	18	1	45	288	130	0	384	0	0	0	235	5	69	297	3290	1	1	0.9857143	0.9705882	0.9241573	
 
 ======= For Display Somewhere =======
 Metrics for build SNAPSHOT_v12.0d_2017-08-02
@@ -704,13 +702,13 @@ OR specified as ' \| ': 384
 Types Generated: 235
 Interfaces Generated: 5
 Objects Generated: 69
-Classes Generated: 123
-Methods Generated: 2,654
+Classes Generated: 297
+Methods Generated: 3,290
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
-Percentage of Classes generated: 40 %
-Percentage of Methods generated: 75 %
+Percentage of Classes generated: 97 %
+Percentage of Methods generated: 92 %
 
 ===== Warnings =====
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)
@@ -729,12 +727,13 @@ Arrays defined as 'array of': 0
 Arrays defined as 'Array[] of': 0
 Arrays defined as 'array[] of': 0
 Arrays defined as 'array' or 'Array': 8
-String types without baseType: 45
+Arrays defined as 'List of': 10
+String types without baseType: 47
 Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0
 Methods with required parameters after optional parameters: 0
-Setter Methods with parameter type that does not match the attribute type: 14
+Setter Methods with parameter type that does not match the attribute type: 13
 Getter Methods with return type that does not match the attribute type: 1
 String values without reference: 130
 

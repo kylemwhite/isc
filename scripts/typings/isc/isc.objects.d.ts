@@ -6,7 +6,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/2/2017 7:00:49 AM by kwhite
+// Generated: 8/2/2017 2:35:30 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-02
 
 declare namespace Isc {
@@ -2521,7 +2521,7 @@ declare namespace Isc {
 		 * errorHandling','error handling overview for more details.
 		 * Flags: IRW, Group: errorHandling
 		 */
-		readonly callback?: any /* RPCCallback */;
+		readonly callback?: Callback /* RPCCallback */;
 		/** 
 		 * For use only with the RPCTransport','scriptInclude transport, this attribute
 		 * specifies the name of the URL parameter which is used to specify the callback function that
@@ -7110,7 +7110,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.childrenProperty
 		 * Flags: IRW
 		 */
-		readonly children?: any /* List of TreeNode */;
+		readonly children?: Array<TreeNode> /* List of TreeNode */;
 		/** 
 		 * (Read only) Default property name denoting whether this record is enabled. Property name may be
 		 * modified for some grid via ListGrid.recordEnabledProperty.
@@ -8019,10 +8019,10 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {DetailViewer} viewer - The DetailViewer
-		 * @param {any} valueList - 
+		 * @param {Array<DetailViewerRecord>} valueList - 
 		 * @return {boolean} true to show the field, false to not show it.
 		 */
-		showIf?(viewer:DetailViewer, valueList:any /* List of DetailViewerRecord */): boolean; 
+		showIf?(viewer:DetailViewer, valueList:Array<DetailViewerRecord> /* List of DetailViewerRecord */): boolean; 
 
 	} // DetailViewerField
 

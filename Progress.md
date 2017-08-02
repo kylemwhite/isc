@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-08-02 at 8/2/2017 7:01:49 AM by kwhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-08-02 at 8/2/2017 2:36:57 PM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -27,13 +27,13 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |12|Types Generated|235||
 |13|Interfaces Generated|5||
 |14|Objects Generated|69||
-|15|Classes Generated|123||
-|16|Methods Generated|2,654||
+|15|Classes Generated|297||
+|16|Methods Generated|3,290||
 |17|Percentage of Types generated|100%||
 |18|Percentage of Interfaces generated|100%||
 |19|Percentage of Objects generated|99%||
-|20|Percentage of Classes generated|40%||
-|21|Percentage of Methods generated|75%||
+|20|Percentage of Classes generated|97%||
+|21|Percentage of Methods generated|92%||
 
 
 ### Issues with referenceDocs.xml file
@@ -52,14 +52,15 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 ||**Errors**||**May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented**|
 |1|String values without reference|130|These are possible values of types that refer to a classAttr that doesn't exist. For example DateItem.DAY_MONTH|
 |2|Classes without inheritsFrom attribute|61|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
-|3|String types without baseType|45|Types that are really just strings should have their own type or have the baseType='string'.|
-|4|Setter Methods with parameter type that does not match the attribute type|14|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
-|5|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|6|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
-|7|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|8|Arrays defined as 'Array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|9|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|10|Method params with missing name|0|All parameters should have a name.|
-|11|Method params with bad name|0|All parameters should have a name without special characters.|
-|12|Method params missing type|0|All parameters should have a type.|
-|13|Methods with required parameters after optional parameters|0|Required parameters should always be at the end of the parameter list.|
+|3|String types without baseType|47|Types that are really just strings should have their own type or have the baseType='string'.|
+|4|Setter Methods with parameter type that does not match the attribute type|13|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
+|5|Arrays defined as 'List of'|10|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|6|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|7|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
+|8|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|9|Arrays defined as 'Array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|10|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|11|Method params with missing name|0|All parameters should have a name.|
+|12|Method params with bad name|0|All parameters should have a name without special characters.|
+|13|Method params missing type|0|All parameters should have a type.|
+|14|Methods with required parameters after optional parameters|0|Required parameters should always be at the end of the parameter list.|
