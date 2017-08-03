@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-02
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-03
 
 Errors during generation
-Generated: 8/2/2017 2:36:57 PM by kwhite
+Generated: 8/3/2017 7:01:45 AM by kwhite
 
 Summary
 Total Types  : 235
@@ -560,6 +560,10 @@ Just Array or array: 8
 List of: 10
 
 baseType attributes != 'string': 4
+1. type:Identifier, baseType=String
+2. type:GlobalId, baseType=Identifier
+3. type:TabName, baseType=Identifier
+4. type:SCSpriteConfig, baseType=SCImgURL
 
 Attributes suspected as string types but do not have the baseType set: 47.
 === URL:32 ===
@@ -662,6 +666,17 @@ Suspected optional parameters that are marked with optional='false': 18. Paramet
 20. method:Date.toShortDateTime, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 
 
+The following classes were excluded
+1. BooleanItem
+2. ComboBoxItem
+3. MultiComboBoxItem
+4. MathFunction
+5. MultiFileItem
+6. PickListMenu
+7. RelativeDateItem
+8. RichTextItem
+9. ToolbarItem
+
 The following methods were excluded
 === Getter method return type does not match attribute type ===
 1. method:SectionStack.getSections
@@ -681,11 +696,11 @@ The following methods were excluded
 13. method:Progressbar.setLength
 14. method:TileGrid.setData
 
-Date	Types	Interfaces	Classes	Objects	Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-02	235	5	306	70	3560	0	61	216	658	130	0	239	0	0	8	10	47	0	0	0	0	13	18	1	45	288	130	0	384	0	0	0	235	5	69	297	3290	1	1	0.9857143	0.9705882	0.9241573	
+Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
+2017-08-03	235	5	306	70	3560	9	0	61	216	658	130	0	239	0	0	8	10	47	0	0	0	0	13	18	1	45	288	130	0	384	0	0	0	235	5	69	297	3290	1	1	0.9857143	0.9705882	0.9241573	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-08-02
+Metrics for build SNAPSHOT_v12.0d_2017-08-03
 ===== Information =====
 (Informational only, not a problem)
 Types: 235
@@ -693,6 +708,7 @@ Interfaces: 5
 Classes: 306
 Objects: 70
 Methods: 3,560
+Excluded Classes: 9
 string values with quotes: 216
 string values without quotes: 658
 string values with period: 130

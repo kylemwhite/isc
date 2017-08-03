@@ -110,7 +110,7 @@ These interfaces can be used when calling the static .create() methods so that p
 Along with the d.ts files, the generator creates a file named Errors.txt. This is intended to capture areas in the referenceDocs.xml file that could be improved to better facilitate code generation. Over time, I will add more tests and (hopefully) the referenceDocs.xml file will be improved so that we can get to a point where the code generator can be automated and not require any special rules.
 
 ## Limitations
-So far, only a subset of the SmartClient Classes and objects are defined and of those only a small subset of methods are defined. For the classes and objects that are defined, ALL properties are defined. I will add more interfaces and methods as the referenceDocs improves and/or I need to make them for my own project.
+As of 8/2/2017 most of the classes, objects, properties and methods are defined (see [Progress.md](./Progress.md)). The few remaining are waiting for updates to the referenceDocs.xml file so that they can be generated without special rules. 
 
 If you want to use a SmartClient method that is not defined yet, you have a few options:
 1. Cast the SmartClient object as any, then you can do whatever you want (even screw up), just like with JavaScript. If it's a real method, then it'll work.
