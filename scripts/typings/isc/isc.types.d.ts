@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/5/2017 7:02:13 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-05
+// Generated: 8/6/2017 7:00:14 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-06
 
 declare namespace Isc {
 
@@ -76,6 +76,14 @@ declare namespace Isc {
 
 
 	/**
+	 * An object containing the stored grouping information for a listGrid.
+	 * Note that this object is not intended to be interrogated directly, but may be stored
+	 * (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridGroupState = string;
+
+
+	/**
 	 * CSS class name to apply to some HTML element on this page. This is a string that should
 	 * match the css class defined for the page in an external stylesheet or in inline
 	 * html &lt;STYLE&gt; tags.
@@ -115,14 +123,6 @@ declare namespace Isc {
 	 * effect on sizing or layout.
 	 */
 	export type CSSStyleName = string;
-
-
-	/**
-	 * An object containing the stored grouping information for a listGrid.
-	 * Note that this object is not intended to be interrogated directly, but may be stored
-	 * (for example) as a blob on the server for state persistence across sessions.
-	 */
-	export type ListGridGroupState = string;
 
 
 	/**
@@ -3115,6 +3115,21 @@ declare namespace Isc {
 
 
 	/**
+	 * What the JSONEncoder should do when it encounters a circular reference in an object
+	 * structure.
+	 */
+	export type JSONCircularReferenceMode = 
+		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
+		"omit"
+		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
+		| "marker"
+		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
+	 * This potentially allows the original object graph to be reconstructed. */
+		| "path"
+		;
+
+
+	/**
 	 * Specifies the layout of the combo box and buttons in a MultiComboBoxItem.
 	 */
 	export type MultiComboBoxLayoutStyle = 
@@ -3130,21 +3145,6 @@ declare namespace Isc {
 		| "vertical"
 		/** Use a vertical layout with the combo box at the bottom */
 		| "verticalReverse"
-		;
-
-
-	/**
-	 * What the JSONEncoder should do when it encounters a circular reference in an object
-	 * structure.
-	 */
-	export type JSONCircularReferenceMode = 
-		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
-		"omit"
-		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
-		| "marker"
-		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
-	 * This potentially allows the original object graph to be reconstructed. */
-		| "path"
 		;
 
 
