@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-08
 
 Errors during generation
-Generated: 8/8/2017 7:01:49 AM by kwhite
+Generated: 8/8/2017 10:01:37 AM by kwhite
 
 Summary
 Total Types  : 235
@@ -667,15 +667,14 @@ Suspected optional parameters that are marked with optional='false': 18. Paramet
 
 
 The following classes were excluded
-1. BooleanItem
-2. ComboBoxItem
-3. MultiComboBoxItem
-4. MathFunction
-5. MultiFileItem
-6. PickListMenu
-7. RelativeDateItem
-8. RichTextItem
-9. ToolbarItem
+1. BooleanItem: Extends CycleItem but CycleItem is not defined.
+2. ComboBoxItem: Interface 'ComboBoxItem' incorrectly extends interface 'TextItem'. Types of property 'canEditCriterion' are incompatible.
+3. MultiComboBoxItem: Cannot find name 'ComboBoxItem'
+4. MultiFileItem: Extends RelationItem but RelationItem is not defined
+5. PickListMenu: Extends ScrollingMenu but ScrollingMenu is not defined
+6. RelativeDateItem: Interface 'RelativeDateItem' incorrectly extends interface 'CanvasItem'. Types of property 'valueField' are incompatible.
+7. RichTextItem: Interface 'RichTextItem' incorrectly extends interface 'CanvasItem'. Types of property 'colSpan' are incompatible.
+8. ToolbarItem: Interface 'ToolbarItem' incorrectly extends interface 'CanvasItem'. Types of property 'colSpan' are incompatible.
 
 The following methods were excluded
 === Getter method return type does not match attribute type ===
@@ -697,7 +696,7 @@ The following methods were excluded
 14. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-08	235	5	306	70	3561	9	0	61	216	658	130	0	239	0	0	8	10	47	0	0	0	0	13	18	1	45	288	130	0	384	0	0	0	235	5	69	297	3291	1	1	0.9857143	0.9705882	0.9241786	
+2017-08-08	235	5	306	70	3561	8	0	61	216	658	130	0	239	0	0	8	10	47	0	0	0	0	13	18	1	45	288	130	0	384	0	0	0	235	5	69	298	3294	1	1	0.9857143	0.9738562	0.9250211	
 
 ======= For Display Somewhere =======
 Metrics for build SNAPSHOT_v12.0d_2017-08-08
@@ -708,7 +707,7 @@ Interfaces: 5
 Classes: 306
 Objects: 70
 Methods: 3,561
-Excluded Classes: 9
+Excluded Classes: 8
 string values with quotes: 216
 string values without quotes: 658
 string values with period: 130
@@ -718,13 +717,13 @@ OR specified as ' \| ': 384
 Types Generated: 235
 Interfaces Generated: 5
 Objects Generated: 69
-Classes Generated: 297
-Methods Generated: 3,291
+Classes Generated: 298
+Methods Generated: 3,294
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
 Percentage of Classes generated: 97 %
-Percentage of Methods generated: 92 %
+Percentage of Methods generated: 93 %
 
 ===== Warnings =====
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)
