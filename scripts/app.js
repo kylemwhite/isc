@@ -1,5 +1,14 @@
 /// <reference path="../scripts/typings/isc/isc.index.d.ts" />
 "use strict";
+// Test menu
+function play() {
+    var menu = isc.Menu.create({
+        items: [{
+                title: "hello"
+            }]
+    });
+    menu.setData;
+}
 // Sample app.
 var Greeter = (function () {
     function Greeter(element) {

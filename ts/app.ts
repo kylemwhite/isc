@@ -1,5 +1,20 @@
 ﻿/// <reference path="../scripts/typings/isc/isc.index.d.ts" />
 
+// Test menu
+
+function play() {
+
+    let menu = isc.Menu.create(
+        {
+            items: [{
+                title: "hello"
+            }]
+        });
+
+    menu.setData
+
+}
+
 // Sample app.
 class Greeter {
     element: HTMLElement;
