@@ -108,7 +108,7 @@ window.onload = function () {
         autoFetchData: true
     });
     var tabSet = isc.TabSet.create({
-        tabBarPosition: "top",
+        //  tabBarPosition: "top"
         canReorderTabs: true,
         paneMargin: 15,
         width: "100%",

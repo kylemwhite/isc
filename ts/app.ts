@@ -135,8 +135,8 @@ window.onload = () => {
     }) as Isc.ListGrid;
 
     let tabSet = isc.TabSet.create({        
-         tabBarPosition: "top"
-        , canReorderTabs: true
+       //  tabBarPosition: "top"
+         canReorderTabs: true
         , paneMargin: 15
         //, styleName: "top-margin-for-tabs"
         , width: "100%"
