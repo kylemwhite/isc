@@ -1,5 +1,13 @@
 ## Isomorphic SmartClient TypeScript type definitions
+SmartClient Version: SNAPSHOT_v12.0d_2017-08-09
+
+Generated: 8/9/2017 10:37:27 AM
+
 Work in progress. See [Progress.md](./Progress.md)
+
+Class coverage: isc_typedef_generator.MetricObject
+
+Method coverage: isc_typedef_generator.MetricObject
 
 Update: Repository is now a sample Visual Studio 2015 application. ts.d files can be found in [/scripts/typings/isc](./scripts/typings/isc). Demo can be seen [here](https://kylemwhite.github.io/isc/).
 
@@ -112,6 +120,7 @@ Along with the d.ts files, the generator creates a file named Errors.txt. This i
 ## Limitations
 As of 8/2/2017 most of the classes, objects, properties and methods are defined (see [Progress.md](./Progress.md)). The few remaining are waiting for updates to the referenceDocs.xml file so that they can be generated without special rules. 
 
+### To use a method that does not yet have a type definition
 If you want to use a SmartClient method that is not defined yet, you have a few options:
 1. Cast the SmartClient object as any, then you can do whatever you want (even screw up), just like with JavaScript. If it's a real method, then it'll work.
 
@@ -169,11 +178,45 @@ function MyFunc() {
 ```
 3. Drop me a note and let me know which classes, objects and methods you need. I can configure the generator to include them in the next run and if they generate properly and compile, they'll be included in the next release.
 
+### When ISC expects a 'plain old JavaScript object' that could be one of many different types
+Examples include DynamicForm, ListGrid, TreeGrid, TileGrid. When constructing these classes, often a list (fields, items, members) is passed-in and those can be different kinds of objects with different properties. In these cases, it is often NOT the recommended practice to .create() them but instead to just pass in a plain JavaScript object (using \{ \} notation) and let the class figure out what it is. Unfortunately sometimes different object types have different properties and unless you somehow tell TypeScript what the object type is, it has no way of giving you intellisense or compiler checking to provide hints on which additional properties can be included. However, there IS a way. See the following example for a **DynamicForm**:
+```TypeScript
+isc.DynamicForm.create({
+      ID:"exampleForm",
+      width:450,
+      fields: [ 
+          {
+              type:"SelectItem",      // <-- This tells ISC what type of control to create
+              title:"Select Multiple (Grid)",
+              multiple:true,                       
+              multipleAppearance:"grid", // <-- Works because multipleAppearance is a property of SelectItem
+              valueMap: [ "Cat", "Dog", "Giraffe", "Goat", "Marmoset", "Mouse" ]
+          } as isc.SelectItemProps // <-- This gives us type checking in TypeScript
+   
+          ,{
+              type: "ButtonItem"      // <-- This tells ISC what type of control to create
+              , title: "MyButton"
+              , startRow: false  
+              , endRow: false  
+              , multipleAppearance:"grid"    // <-- OOPS! multipleAppearance is not a property on ButtonItemProps so this will be an error                                                                   
+              , click: (form: Isc.DynamicForm, formItem: Isc.FormItem): boolean => {
+                  // Do something;
+                  return true;
+              }
+          } as Isc.ButtonItemProps // <-- This gives us type checking in TypeScript although not needed here because we're not using any ButtonItem-specific properties.
+          ]
+      });
+```
+Note that after the definition for each field, there is an "as Isc.Something" line which casts the object so that TypeScript knows exactly what kind of object we are passing in. If you try to include a property that is not part of isc.Something, TypeScript will let you know. Note that this is usually optional. Since the **fields** property of a **DynamicForm** is defined as **Array\<FormItemProps\>**, it will work without the casting as long as you only use properties that are in **FormItemProps** and don't need any properties specific to the particular FormItem (like **multipleAppearance** for a **SelectItem**).
+
 ## How this was built
-The SmartClient library is huge and it would be impractical and error-prone to hand-code a type definition library that defines every property and method on every class. Fortunately, Isomorphic uses an XML file ([referenceDocs.xml](http://www.smartclient.com/smartclient-latest/isomorphic/system/reference/referenceDocs.xml)) for their documentation which contains all the necessary information. This file is also used to generate the SmartGWT library. Similarly, I've used the same file to generate the TypeScript library files. The referenceDocs.xml file is not perfect which means that there are a lot of customizations required to get the proper code generated. Thus, I'm doing it in manageable sections. Simultaneously, Isomorphic is enhancing the file to aid in code generation so we should be able to get the complete library generated soon.
+The SmartClient library is huge and it would be impractical and error-prone to hand-code a type definition library that defines every property and method on every class. Fortunately, Isomorphic uses an XML file ([referenceDocs.xml](http://www.smartclient.com/smartclient-latest/isomorphic/system/reference/referenceDocs.xml)) for their documentation which contains (almost) all the necessary information. This file is also used to generate the SmartGWT library. Similarly, I've used the same file to generate the TypeScript library files. The referenceDocs.xml file is not perfect which means that there are a lot of customizations required to get the proper code generated. Thus, I'm doing it in manageable sections. Simultaneously, Isomorphic is enhancing the file to aid in code generation so we should be able to get the complete library generated soon.
+
+## Auto-generation
+Isomorphic produces a new version (almost) daily, called their 'nightly' release. My generation program is scheduled to download the latest version of the referenceDocs.xml file each day, generate the type definitions and upload to Github (assuming everything is good). Each day may include changes from Isomorphic as well as changes produced by enhancements to the generator (to get more code coverage, better documentation, more accurate types etc.)
 
 ## Testing
-So far, this has only been tested with Visual Studio 2015 and VS Code. If you're using Eclipse, NetBeans, IntelliJ IDEA or anything else, please let me know if it works or if there are problems. Also, I have no units tests yet, my only test is that I copy the definitions into my own SmartClient project and make sure everything still compiles. If somebody wants to help with unit tests, I'm all ears.
+So far, this has only been tested with Visual Studio 2015 and VS Code. If you're using Eclipse, NetBeans, IntelliJ IDEA or anything else, please let me know if it works or if there are problems. So far, the only test is a small [demo site](https://kylemwhite.github.io/isc/) utilizing just a few components of the library. This site must compile with the type definitions or else the auto-generated code will not be checked in to Github. 
 
 ## Todo
 
