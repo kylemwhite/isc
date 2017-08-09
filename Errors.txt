@@ -1,12 +1,12 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-08
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-09
 
 Errors during generation
-Generated: 8/8/2017 10:01:37 AM by kwhite
+Generated: 8/9/2017 7:01:42 AM by kwhite
 
 Summary
-Total Types  : 235
+Total Types  : 236
 Total Classes: 306
 Total Objects: 70
 Total Methods: 3561
@@ -416,8 +416,11 @@ Object attributes marked with W flag: 288 (attributes on objects are always read
 
 
 
-Values with missing references (distinct): 114
+Values with missing references (distinct): 0
 BAD: These are possible values of types that refer to a classAttr that doesn't exist.
+
+Values with found references (distinct): 115
+GOOD: These are possible values of types that refer to a classAttr that was found.
 1. Canvas.ABSOLUTE
 2. Canvas.AUTO
 3. Canvas.BOTTOM
@@ -435,106 +438,104 @@ BAD: These are possible values of types that refer to a classAttr that doesn't e
 15. Canvas.MOVE
 16. Canvas.NO_REPEAT
 17. Canvas.NORMAL
-18. Canvas.RELATIVE
-19. Canvas.REPEAT
-20. Canvas.REPEAT_X
-21. Canvas.REPEAT_Y
-22. Canvas.RIGHT
-23. Canvas.SCROLL
-24. Canvas.STRETCH
-25. Canvas.TEXT
-26. Canvas.TILE
-27. Canvas.TOP
-28. Canvas.UP
-29. Canvas.VISIBLE
-30. Canvas.WAIT
-31. DateItem.DAY_MONTH
-32. DateItem.DAY_MONTH_YEAR
-33. DateItem.MONTH_DAY
-34. DateItem.MONTH_DAY_YEAR
-35. DateItem.MONTH_YEAR
-36. DateItem.YEAR_MONTH
-37. DateItem.YEAR_MONTH_DAY
-38. DrawLabel.CENTER
-39. DrawLabel.END
-40. DrawLabel.LEFT
-41. DrawLabel.RIGHT
-42. DrawLabel.START
-43. DynamicForm.GET
-44. DynamicForm.MULTIPART
-45. DynamicForm.NORMAL
-46. DynamicForm.POST
-47. Layout.FILL
-48. Layout.HORIZONTAL
-49. Layout.NONE
-50. Layout.VERTICAL
-51. ListGrid.AFTER
-52. ListGrid.BEFORE
-53. ListGrid.BETWEEN
-54. ListGrid.BODY
-55. ListGrid.BOTH
-56. ListGrid.CLICK
-57. ListGrid.CLICK_OUTSIDE
-58. ListGrid.DOUBLE_CLICK
-59. ListGrid.DOWN_ARROW_KEYPRESS
-60. ListGrid.EDIT_FIELD_CHANGE
-61. ListGrid.ENTER_KEYPRESS
-62. ListGrid.ESCAPE_KEYPRESS
-63. ListGrid.NONE
-64. ListGrid.OVER
-65. ListGrid.PROGRAMMATIC
-66. ListGrid.SHIFT_TAB_KEYPRESS
-67. ListGrid.TAB_KEYPRESS
-68. ListGrid.UP_ARROW_KEYPRESS
-69. Log.DEBUG
-70. Log.ERROR
-71. Log.FATAL
-72. Log.INFO
-73. Log.WARN
-74. Page.FIRE_ONCE
-75. Selection.MULTIPLE
-76. Selection.NONE
-77. Selection.SIMPLE
-78. Selection.SINGLE
-79. StatefulCanvas.BUTTON
-80. StatefulCanvas.CHECKBOX
-81. StatefulCanvas.FOCUSED
-82. StatefulCanvas.RADIO
-83. StatefulCanvas.SELECTED
-84. StatefulCanvas.STATE_DISABLED
-85. StatefulCanvas.STATE_DOWN
-86. StatefulCanvas.STATE_OVER
-87. StatefulCanvas.STATE_UP
-88. StatefulCanvas.UNSELECTED
-89. TableView.GROUPED
-90. TableView.NAVICON_ONLY
-91. TableView.PLAIN
-92. TableView.SUMMARY_DATA
-93. TableView.SUMMARY_FULL
-94. TableView.SUMMARY_INFO
-95. TableView.TITLE_DESCRIPTION
-96. TableView.TITLE_ONLY
-97. TableView.WHOLE_RECORD
-98. TextAreaItem.HARD
-99. TextAreaItem.OFF
-100. TextAreaItem.SOFT
-101. TextItem.DEFAULT
-102. TextItem.LOWER
-103. TextItem.UPPER
-104. Tree.FOLDERS_LOADED
-105. Tree.LOADED
-106. Tree.LOADED_PARTIAL_CHILDREN
-107. Tree.LOADING
-108. Tree.UNLOADED
-109. Validator.DISABLED
-110. Validator.HIDDEN
-111. Validator.READONLY
-112. Window.HORIZONTAL
-113. Window.NONE
-114. Window.VERTICAL
-
-Values with found references (distinct): 0
-GOOD: These are possible values of types that refer to a classAttr that was found.
+18. Canvas.POINTER
+19. Canvas.RELATIVE
+20. Canvas.REPEAT
+21. Canvas.REPEAT_X
+22. Canvas.REPEAT_Y
+23. Canvas.RIGHT
+24. Canvas.SCROLL
+25. Canvas.STRETCH
+26. Canvas.TEXT
+27. Canvas.TILE
+28. Canvas.TOP
+29. Canvas.UP
+30. Canvas.VISIBLE
+31. Canvas.WAIT
+32. DateItem.DAY_MONTH
+33. DateItem.DAY_MONTH_YEAR
+34. DateItem.MONTH_DAY
+35. DateItem.MONTH_DAY_YEAR
+36. DateItem.MONTH_YEAR
+37. DateItem.YEAR_MONTH
+38. DateItem.YEAR_MONTH_DAY
+39. DrawLabel.CENTER
+40. DrawLabel.END
+41. DrawLabel.LEFT
+42. DrawLabel.RIGHT
+43. DrawLabel.START
+44. DynamicForm.GET
+45. DynamicForm.MULTIPART
+46. DynamicForm.NORMAL
+47. DynamicForm.POST
+48. Layout.FILL
+49. Layout.HORIZONTAL
+50. Layout.NONE
+51. Layout.VERTICAL
+52. ListGrid.AFTER
+53. ListGrid.BEFORE
+54. ListGrid.BETWEEN
+55. ListGrid.BODY
+56. ListGrid.BOTH
+57. ListGrid.CLICK
+58. ListGrid.CLICK_OUTSIDE
+59. ListGrid.DOUBLE_CLICK
+60. ListGrid.DOWN_ARROW_KEYPRESS
+61. ListGrid.EDIT_FIELD_CHANGE
+62. ListGrid.ENTER_KEYPRESS
+63. ListGrid.ESCAPE_KEYPRESS
+64. ListGrid.NONE
+65. ListGrid.OVER
+66. ListGrid.PROGRAMMATIC
+67. ListGrid.SHIFT_TAB_KEYPRESS
+68. ListGrid.TAB_KEYPRESS
+69. ListGrid.UP_ARROW_KEYPRESS
+70. Log.DEBUG
+71. Log.ERROR
+72. Log.FATAL
+73. Log.INFO
+74. Log.WARN
+75. Page.FIRE_ONCE
+76. Selection.MULTIPLE
+77. Selection.NONE
+78. Selection.SIMPLE
+79. Selection.SINGLE
+80. StatefulCanvas.BUTTON
+81. StatefulCanvas.CHECKBOX
+82. StatefulCanvas.FOCUSED
+83. StatefulCanvas.RADIO
+84. StatefulCanvas.SELECTED
+85. StatefulCanvas.STATE_DISABLED
+86. StatefulCanvas.STATE_DOWN
+87. StatefulCanvas.STATE_OVER
+88. StatefulCanvas.STATE_UP
+89. StatefulCanvas.UNSELECTED
+90. TableView.GROUPED
+91. TableView.NAVICON_ONLY
+92. TableView.PLAIN
+93. TableView.SUMMARY_DATA
+94. TableView.SUMMARY_FULL
+95. TableView.SUMMARY_INFO
+96. TableView.TITLE_DESCRIPTION
+97. TableView.TITLE_ONLY
+98. TableView.WHOLE_RECORD
+99. TextAreaItem.HARD
+100. TextAreaItem.OFF
+101. TextAreaItem.SOFT
+102. TextItem.DEFAULT
+103. TextItem.LOWER
+104. TextItem.UPPER
+105. Tree.FOLDERS_LOADED
+106. Tree.LOADED
+107. Tree.LOADED_PARTIAL_CHILDREN
+108. Tree.LOADING
+109. Tree.UNLOADED
+110. Validator.DISABLED
+111. Validator.HIDDEN
+112. Validator.READONLY
+113. Window.HORIZONTAL
+114. Window.NONE
+115. Window.VERTICAL
 
 ==== Should string type values have quotes or not? ====
 Contrained String Type Values with quotes: 216
@@ -542,7 +543,7 @@ Contrained String Type Values without quotes: 658
 
 
 ==== Values with a period probably means a reference to a constant instead of the actual string ====
-Contrained String Type Values with period: 130
+Contrained String Type Values with period: 131
 
 ==== How is OR specified? ====
 OR specified as ' | ' : 384
@@ -696,13 +697,13 @@ The following methods were excluded
 14. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-08	235	5	306	70	3561	8	0	61	216	658	130	0	239	0	0	8	10	47	0	0	0	0	13	18	1	45	288	130	0	384	0	0	0	235	5	69	298	3294	1	1	0.9857143	0.9738562	0.9250211	
+2017-08-09	236	5	306	70	3561	8	0	61	216	658	131	0	239	0	0	8	10	47	0	0	0	0	13	18	1	45	288	0	131	384	0	0	0	236	5	69	298	3294	1	1	0.9857143	0.9738562	0.9250211	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-08-08
+Metrics for build SNAPSHOT_v12.0d_2017-08-09
 ===== Information =====
 (Informational only, not a problem)
-Types: 235
+Types: 236
 Interfaces: 5
 Classes: 306
 Objects: 70
@@ -710,11 +711,11 @@ Methods: 3,561
 Excluded Classes: 8
 string values with quotes: 216
 string values without quotes: 658
-string values with period: 130
+string values with period: 131
 Arrays defined as 'Array of': 239
-String values where reference is found: 0
+String values where reference is found: 131
 OR specified as ' \| ': 384
-Types Generated: 235
+Types Generated: 236
 Interfaces Generated: 5
 Objects Generated: 69
 Classes Generated: 298
@@ -750,5 +751,5 @@ Method params missing type: 0
 Methods with required parameters after optional parameters: 0
 Setter Methods with parameter type that does not match the attribute type: 13
 Getter Methods with return type that does not match the attribute type: 1
-String values without reference: 130
+String values without reference: 0
 

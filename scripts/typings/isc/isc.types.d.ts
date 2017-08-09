@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/8/2017 10:00:10 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-08
+// Generated: 8/9/2017 7:00:22 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-09
 
 declare namespace Isc {
 
@@ -2731,7 +2731,7 @@ declare namespace Isc {
 		/** Use the 'text' (i-beam) cursor. */
 		| "text"  // Original Value = Canvas.TEXT
 		/** Use the normal hand pointer that appears when you hover over a link */
-		| "POINTER"
+		| "pointer"  // Original Value = Canvas.POINTER
 		| "arrow"
 		| "all-scroll"
 		/** Use the 'crosshair' ( + ) cursor. */
@@ -3115,21 +3115,6 @@ declare namespace Isc {
 
 
 	/**
-	 * What the JSONEncoder should do when it encounters a circular reference in an object
-	 * structure.
-	 */
-	export type JSONCircularReferenceMode = 
-		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
-		"omit"
-		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
-		| "marker"
-		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
-	 * This potentially allows the original object graph to be reconstructed. */
-		| "path"
-		;
-
-
-	/**
 	 * Specifies the layout of the combo box and buttons in a MultiComboBoxItem.
 	 */
 	export type MultiComboBoxLayoutStyle = 
@@ -3145,6 +3130,21 @@ declare namespace Isc {
 		| "vertical"
 		/** Use a vertical layout with the combo box at the bottom */
 		| "verticalReverse"
+		;
+
+
+	/**
+	 * What the JSONEncoder should do when it encounters a circular reference in an object
+	 * structure.
+	 */
+	export type JSONCircularReferenceMode = 
+		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
+		"omit"
+		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
+		| "marker"
+		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
+	 * This potentially allows the original object graph to be reconstructed. */
+		| "path"
 		;
 
 
@@ -3600,7 +3600,7 @@ declare namespace Isc {
 		| "single"  // Original Value = Selection.SINGLE
 		/** select one or more items */
 		| "multiple"  // Original Value = Selection.MULTIPLE
-		/** select one or more items as a toggle so you don't need to hold down control keys to select 
+		/** select one or more items as a toggle so you don't need to hold down control keys to select
 	 * more than one object */
 		| "simple"  // Original Value = Selection.SIMPLE
 		;
@@ -3671,16 +3671,13 @@ declare namespace Isc {
 	export type ContentLayoutPolicy = 
 		/** Window does not try to size members at all on either axis. Window body defaults to
 	 * a Canvas if not autosizing. Otherwise a Layout is used with policies on both axes set
-	 * to LayoutPolicy "none".
-	 * NONE: "none", // NOTE: constant declared by Canvas */
+	 * to LayoutPolicy "none". */
 		"none"  // Original Value = Window.NONE
 		/** Window body defaults to VLayout behavior. (Body is actually just a Layout with 
-	 * Layout.vertical: true.)
-	 * VERTICAL: "vertical", // NOTE: constant declared by Canvas */
+	 * Layout.vertical: true.) */
 		| "vertical"  // Original Value = Window.VERTICAL
 		/** Window body defaults to HLayout behavior. (Body is actually just a Layout with 
-	 * Layout.vertical: false.)
-	 * HORIZONTAL: "horizontal" // NOTE: constant declared by Canvas */
+	 * Layout.vertical: false.) */
 		| "horizontal"  // Original Value = Window.HORIZONTAL
 		;
 
@@ -4582,6 +4579,15 @@ declare namespace Isc {
 
 
 	/**
+	 * A string used to define the value of a class attribute when it's referenced as one of the
+	 * potential values of an enum type. For example, one documented value of Overflow is
+	 * Canvas.HIDDEN, which is itself a class attribute with type Constant and
+	 * the value "hidden".
+	 */
+	export type Constant = any;
+
+
+	/**
 	 * Side of a component.
 	 */
 	export type Side = 
@@ -5317,7 +5323,8 @@ declare namespace Isc {
 	export type RecordLayout = 
 		/** Show TableView.titleField','title field only */
 		"titleOnly"  // Original Value = TableView.TITLE_ONLY
-		/** Show TableView.titleField','title and TableView.descriptionField','description fields only */
+		/** Show TableView.titleField','title and TableView.descriptionField','description
+	 * fields only */
 		| "titleDescription"  // Original Value = TableView.TITLE_DESCRIPTION
 		/** Show TableView.titleField','title, TableView.descriptionField','description and
 	 * TableView.infoField','info fields only */
@@ -5327,8 +5334,8 @@ declare namespace Isc {
 		| "summaryData"  // Original Value = TableView.SUMMARY_DATA
 		/** Show TableView.titleField','title, TableView.descriptionField','description,
 	 * TableView.infoField','info and
-	 * TableView.dataField','data fields similar to the
-	 * iPhoneOS Mail application */
+	 * TableView.dataField','data fields similar to
+	 * the iPhoneOS Mail application */
 		| "summaryFull"  // Original Value = TableView.SUMMARY_FULL
 		;
 
