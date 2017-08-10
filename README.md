@@ -17,7 +17,7 @@ Note that with some editors (VS Code for example), having the TypeScript definit
 
 ## To get started
 
-Copy the *.d.ts files into wherever you normally have typings. I use /scripts/typings/isc/.
+Copy the [*.d.ts files](https://github.com/kylemwhite/isc/tree/master/scripts/typings/isc) into wherever you normally have typings. I use /scripts/typings/isc/.
 
 In your TypeScript (or JS) files that use the SmartClient library, add the reference, something like the following:
 
