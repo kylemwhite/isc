@@ -11,8 +11,7 @@ function play() {
             }]
         });
 
-    menu.setData
-
+    menu.setData;
 }
 
 // Sample app.

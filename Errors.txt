@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-09
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-12
 
 Errors during generation
-Generated: 8/11/2017 7:01:51 AM by kwhite
+Generated: 8/12/2017 7:01:42 AM by kwhite
 
 Summary
-Total Types  : 236
+Total Types  : 240
 Total Classes: 306
 Total Objects: 70
-Total Methods: 3561
+Total Methods: 3562
 
 Attributes missing R flag: 45 (Should they all have an R flag?)
 1. attr:Calendar.eventCanvas, Flags=A
@@ -539,7 +539,7 @@ GOOD: These are possible values of types that refer to a classAttr that was foun
 
 ==== Should string type values have quotes or not? ====
 Contrained String Type Values with quotes: 216
-Contrained String Type Values without quotes: 658
+Contrained String Type Values without quotes: 663
 
 
 ==== Values with a period probably means a reference to a constant instead of the actual string ====
@@ -560,67 +560,22 @@ array[] of: 0
 Just Array or array: 8
 List of: 10
 
-baseType attributes != 'string': 4
+baseType attributes != 'string': 10
 1. type:Identifier, baseType=String
 2. type:GlobalId, baseType=Identifier
-3. type:TabName, baseType=Identifier
-4. type:SCSpriteConfig, baseType=SCImgURL
+3. type:KeyName, baseType=String
+4. type:RelativeDateShortcut, baseType=String
+5. type:URI, baseType=String
+6. type:TabName, baseType=Identifier
+7. type:SCSpriteConfig, baseType=SCImgURL
+8. type:URL, baseType=URI
+9. type:AutoTestLocator, baseType=String
+10. type:SCImgURL, baseType=URL
 
-Attributes suspected as string types but do not have the baseType set: 47.
-=== URL:32 ===
-1. attr:ActiveXControl.codeBase, valueType=URL
-2. attr:Canvas.appImgDir, valueType=URL
-3. attr:DataSource.dataURL, valueType=URL
-4. attr:DateChooser.nextMonthIcon, valueType=URL
-5. attr:DateChooser.nextMonthIconRTL, valueType=URL
-6. attr:DateChooser.nextYearIcon, valueType=URL
-7. attr:DateChooser.nextYearIconRTL, valueType=URL
-8. attr:DateChooser.prevMonthIcon, valueType=URL
-9. attr:DateChooser.prevMonthIconRTL, valueType=URL
-10. attr:DateChooser.prevYearIcon, valueType=URL
-11. attr:DateChooser.prevYearIconRTL, valueType=URL
-12. attr:DrawImage.src, valueType=URL
-13. attr:DynamicForm.action, valueType=URL
-14. attr:DynamicForm.validationURL, valueType=URL
-15. attr:Flashlet.codeBase, valueType=URL
-16. attr:Flashlet.pluginsPage, valueType=URL
-17. attr:Flashlet.src, valueType=URL
-18. attr:FusionChart.chartsBaseURL, valueType=URL
-19. attr:FusionChart.chartURL, valueType=URL
-20. attr:HTMLFlow.contentsURL, valueType=URL
-21. attr:ImgProperties.imgDir, valueType=URL
-22. attr:ImgProperties.src, valueType=URL
-23. attr:ImgTab.labelSkinImgDir, valueType=URL
-24. attr:ImgTab.skinImgDir, valueType=URL
-25. attr:ListGrid.headerMenuButtonIcon, valueType=URL
-26. attr:Mail.templateFile, valueType=URL
-27. attr:OperationBinding.dataURL, valueType=URL
-28. attr:RPCRequest.actionURL, valueType=URL
-29. attr:StretchImgButton.labelSkinImgDir, valueType=URL
-30. attr:SVG.pluginsPage, valueType=URL
-31. attr:SVG.src, valueType=URL
-32. attr:ViewLoader.viewURL, valueType=URL
-=== DOMElement:2 ===
-1. attr:Canvas.htmlElement, valueType=DOMElement
-2. attr:DOMGrid.rootElement, valueType=DOMElement
-=== CSSStyle:1 ===
-1. attr:Dialog.messageStyle, valueType=CSSStyle
-=== URI:2 ===
-1. attr:SchemaSet.schemaNamespace, valueType=URI
-2. attr:WebService.serviceNamespace, valueType=URI
-=== HTML:7 ===
-1. attr:GroupNode.groupTitle, valueType=HTML
-2. attr:Hilite.htmlAfter, valueType=HTML
-3. attr:Hilite.htmlBefore, valueType=HTML
-4. attr:Hilite.replacementValue, valueType=HTML
-5. attr:ListGridRecord.singleCellValue, valueType=HTML
-6. attr:MenuItem.title, valueType=HTML
-7. attr:TreeNode.title, valueType=HTML
+Attributes suspected as string types but do not have the baseType set: 2.
 === Field:2 ===
 1. attr:FormulaBuilder.field, valueType=Field
 2. attr:SummaryBuilder.field, valueType=Field
-=== FormItemClassname:1 ===
-1. attr:Operator.editorType, valueType=FormItemClassname
 Methods with one or more parameters missing a type: 0
 Methods with required parameter after optional parameter: 0
 (Required parameters should all be listed BEFORE optional parameters)
@@ -697,29 +652,29 @@ The following methods were excluded
 14. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-09	236	5	306	70	3561	8	0	61	216	658	131	0	239	0	0	8	10	47	0	0	0	0	13	18	1	45	288	0	131	384	0	0	0	236	5	69	298	3294	1	1	0.9857143	0.9738562	0.9250211	
+2017-08-12	240	5	306	70	3562	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	13	18	1	45	288	0	131	384	0	0	0	240	5	69	298	3295	1	1	0.9857143	0.9738562	0.9250421	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-08-09
+Metrics for build SNAPSHOT_v12.0d_2017-08-12
 ===== Information =====
 (Informational only, not a problem)
-Types: 236
+Types: 240
 Interfaces: 5
 Classes: 306
 Objects: 70
-Methods: 3,561
+Methods: 3,562
 Excluded Classes: 8
 string values with quotes: 216
-string values without quotes: 658
+string values without quotes: 663
 string values with period: 131
 Arrays defined as 'Array of': 239
 String values where reference is found: 131
 OR specified as ' \| ': 384
-Types Generated: 236
+Types Generated: 240
 Interfaces Generated: 5
 Objects Generated: 69
 Classes Generated: 298
-Methods Generated: 3,294
+Methods Generated: 3,295
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
@@ -744,7 +699,7 @@ Arrays defined as 'Array[] of': 0
 Arrays defined as 'array[] of': 0
 Arrays defined as 'array' or 'Array': 8
 Arrays defined as 'List of': 10
-String types without baseType: 47
+String types without baseType: 2
 Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0

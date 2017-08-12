@@ -1,7 +1,7 @@
 ## Isomorphic SmartClient TypeScript type definitions
-SmartClient Version: SNAPSHOT_v12.0d_2017-08-09
+SmartClient Version: SNAPSHOT_v12.0d_2017-08-12
 
-Generated: 8/11/2017 7:01:51 AM
+Generated: 8/12/2017 7:01:42 AM
 
 Work in progress. See [Progress.md](./Progress.md)
 
@@ -17,7 +17,7 @@ Note that with some editors (VS Code for example), having the TypeScript definit
 
 ## To get started
 
-Copy the *.d.ts files into wherever you normally have typings. I use /scripts/typings/isc/.
+Copy the [*.d.ts files](https://github.com/kylemwhite/isc/tree/master/scripts/typings/isc) into wherever you normally have typings. I use /scripts/typings/isc/.
 
 In your TypeScript (or JS) files that use the SmartClient library, add the reference, something like the following:
 
@@ -87,12 +87,14 @@ If you screw up, the TypeScript compiler will let you know. Once the entire libr
 ### Files
 There are currently 5 files: types.d.ts, classes.d.ts, objects.d.ts, interfaces.d.ts and index.d.ts. The library is broken up this way because it is so large and it seemed a good way to break things up. As more classes and methods are generated, it might need to be broken up even further to keep the file sizes manageable.
 
-### Interfaces
+### TypeScript Interfaces
 For each SmartClient class (classes inherit from Class (usually), objects do not), there are three interfaces defined: *ClassName*, *ClassName*Static and *ClassName*Props.
 
 * *ClassName*: This interface defines the properties and methods of an instance of the class (what SmartClient calls **Instance APIs**). Example: __Label__
+* *ClassName*Props: This interface defines all of the instance methods (for overriding) and all of the instance properties that are marked with the I flag. All methods and properties are defined as optional.
 * *ClassName*Static: This interface defines the properties and methods of the static class (what SmartClient calls **Class APIs**). Example: __LabelStatic__ which is what __isc.Label__ is.
-* *ClassName*Props: This interface defines all of the instance methods (for overriding) and all of the instance properties that are marked with the I flag. All methods and properties are defined as optional. The static .create() methods are all inherited from ClassStatic.create(), defined as:
+
+ The static .create() methods are all inherited from ClassStatic.create(), defined as:
 
 ```TypeScript
 export interface ClassStatic<T, P>  {

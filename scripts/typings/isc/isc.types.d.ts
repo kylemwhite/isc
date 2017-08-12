@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/11/2017 7:00:21 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-09
+// Generated: 8/12/2017 7:00:14 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-12
 
 declare namespace Isc {
 
@@ -14,18 +14,18 @@ declare namespace Isc {
 	 */
 	export type NavigationMode = 
 		/** Clicking anywhere on the record navigates */
-		"wholeRecord"  // Original Value: TableView.WHOLE_RECORD, How found: Looked up constant
+		"wholeRecord"  // Original Value: TableView.WHOLE_RECORD, How found: Looked up constant string
 		/** Only clicking directly on the navigation icon triggers navigation */
-		| "navIconOnly"  // Original Value: TableView.NAVICON_ONLY, How found: Looked up constant
+		| "navIconOnly"  // Original Value: TableView.NAVICON_ONLY, How found: Looked up constant string
 		;
 
 	export type Selected = 
 		/** StatefulCanvas should show focused state */
-		"Focused"  // Original Value: StatefulCanvas.FOCUSED, How found: Looked up constant
+		"Focused"  // Original Value: StatefulCanvas.FOCUSED, How found: Looked up constant string
 		/** StatefulCanvas is selected */
-		| "Selected"  // Original Value: StatefulCanvas.SELECTED, How found: Looked up constant
+		| "Selected"  // Original Value: StatefulCanvas.SELECTED, How found: Looked up constant string
 		/** StatefulCanvas is not selected */
-		| ""  // Original Value: StatefulCanvas.UNSELECTED, How found: Looked up constant
+		| ""  // Original Value: StatefulCanvas.UNSELECTED, How found: Looked up constant string
 		;
 
 
@@ -76,14 +76,6 @@ declare namespace Isc {
 
 
 	/**
-	 * An object containing the stored grouping information for a listGrid.
-	 * Note that this object is not intended to be interrogated directly, but may be stored
-	 * (for example) as a blob on the server for state persistence across sessions.
-	 */
-	export type ListGridGroupState = string; // baseType='string'
-
-
-	/**
 	 * CSS class name to apply to some HTML element on this page. This is a string that should
 	 * match the css class defined for the page in an external stylesheet or in inline
 	 * html &lt;STYLE&gt; tags.
@@ -123,6 +115,14 @@ declare namespace Isc {
 	 * effect on sizing or layout.
 	 */
 	export type CSSStyleName = string; // baseType='string'
+
+
+	/**
+	 * An object containing the stored grouping information for a listGrid.
+	 * Note that this object is not intended to be interrogated directly, but may be stored
+	 * (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridGroupState = string; // baseType='string'
 
 
 	/**
@@ -414,12 +414,12 @@ declare namespace Isc {
 
 	export type TEXTAREA_WRAP = 
 		/** don't allow wrapping at all */
-		"OFF"  // Original Value: TextAreaItem.OFF, How found: Looked up constant
+		"OFF"  // Original Value: TextAreaItem.OFF, How found: Looked up constant string
 		/** when the entered text reaches the edge of the text area, wrap visibly but don't include line breaks in the textarea
 	 * value */
-		| "SOFT"  // Original Value: TextAreaItem.SOFT, How found: Looked up constant
+		| "SOFT"  // Original Value: TextAreaItem.SOFT, How found: Looked up constant string
 		/** when the entered text reaches the edge of the text area, insert a line break */
-		| "HARD"  // Original Value: TextAreaItem.HARD, How found: Looked up constant
+		| "HARD"  // Original Value: TextAreaItem.HARD, How found: Looked up constant string
 		;
 
 
@@ -673,9 +673,9 @@ declare namespace Isc {
 	 */
 	export type FormMethod = 
 		/** GET request -- URL encoding (~4K max) */
-		"GET"  // Original Value: DynamicForm.GET, How found: Looked up constant
+		"GET"  // Original Value: DynamicForm.GET, How found: Looked up constant string
 		/** POST request -- separate field encoding (no max) */
-		| "POST"  // Original Value: DynamicForm.POST, How found: Looked up constant
+		| "POST"  // Original Value: DynamicForm.POST, How found: Looked up constant string
 		;
 
 
@@ -765,27 +765,27 @@ declare namespace Isc {
 	 */
 	export type EditCompletionEvent = 
 		/** User clicked outside editor during edit. */
-		"click_outside"  // Original Value: ListGrid.CLICK_OUTSIDE, How found: Looked up constant
+		"click_outside"  // Original Value: ListGrid.CLICK_OUTSIDE, How found: Looked up constant string
 		/** User started editing another row by clicking on it */
-		| "click"  // Original Value: ListGrid.CLICK, How found: Looked up constant
+		| "click"  // Original Value: ListGrid.CLICK, How found: Looked up constant string
 		/** User started editing another row by double clicking */
-		| "doubleClick"  // Original Value: ListGrid.DOUBLE_CLICK, How found: Looked up constant
+		| "doubleClick"  // Original Value: ListGrid.DOUBLE_CLICK, How found: Looked up constant string
 		/** Enter pressed. */
-		| "enter"  // Original Value: ListGrid.ENTER_KEYPRESS, How found: Looked up constant
+		| "enter"  // Original Value: ListGrid.ENTER_KEYPRESS, How found: Looked up constant string
 		/** User pressed Escape. */
-		| "escape"  // Original Value: ListGrid.ESCAPE_KEYPRESS, How found: Looked up constant
+		| "escape"  // Original Value: ListGrid.ESCAPE_KEYPRESS, How found: Looked up constant string
 		/** Up arrow key pressed. */
-		| "arrow_up"  // Original Value: ListGrid.UP_ARROW_KEYPRESS, How found: Looked up constant
+		| "arrow_up"  // Original Value: ListGrid.UP_ARROW_KEYPRESS, How found: Looked up constant string
 		/** down arrow key. */
-		| "arrow_down"  // Original Value: ListGrid.DOWN_ARROW_KEYPRESS, How found: Looked up constant
+		| "arrow_down"  // Original Value: ListGrid.DOWN_ARROW_KEYPRESS, How found: Looked up constant string
 		/** User pressed Tab. */
-		| "tab"  // Original Value: ListGrid.TAB_KEYPRESS, How found: Looked up constant
+		| "tab"  // Original Value: ListGrid.TAB_KEYPRESS, How found: Looked up constant string
 		/** User pressed Shift+Tab. */
-		| "shift_tab"  // Original Value: ListGrid.SHIFT_TAB_KEYPRESS, How found: Looked up constant
+		| "shift_tab"  // Original Value: ListGrid.SHIFT_TAB_KEYPRESS, How found: Looked up constant string
 		/** Edit moved to a different field (same row) */
-		| "field_change"  // Original Value: ListGrid.EDIT_FIELD_CHANGE, How found: Looked up constant
+		| "field_change"  // Original Value: ListGrid.EDIT_FIELD_CHANGE, How found: Looked up constant string
 		/** Edit completed via explicit function call */
-		| "programmatic"  // Original Value: ListGrid.PROGRAMMATIC, How found: Looked up constant
+		| "programmatic"  // Original Value: ListGrid.PROGRAMMATIC, How found: Looked up constant string
 		;
 
 
@@ -794,11 +794,11 @@ declare namespace Isc {
 	 */
 	export type ReorderPosition = 
 		/** Drop the drag-item before the target-row */
-		"before"  // Original Value: ListGrid.BEFORE, How found: Looked up constant
+		"before"  // Original Value: ListGrid.BEFORE, How found: Looked up constant string
 		/** Drop the drag-item after the target-row */
-		| "after"  // Original Value: ListGrid.AFTER, How found: Looked up constant
+		| "after"  // Original Value: ListGrid.AFTER, How found: Looked up constant string
 		/** Drop the drag-item over (onto) the target-row */
-		| "over"  // Original Value: ListGrid.OVER, How found: Looked up constant
+		| "over"  // Original Value: ListGrid.OVER, How found: Looked up constant string
 		;
 
 
@@ -807,11 +807,11 @@ declare namespace Isc {
 	 */
 	export type SelectionType = 
 		/** object moves to "down" state temporarily (normal button) */
-		"button"  // Original Value: StatefulCanvas.BUTTON, How found: Looked up constant
+		"button"  // Original Value: StatefulCanvas.BUTTON, How found: Looked up constant string
 		/** object remains in "down" state until clicked again (checkbox) */
-		| "checkbox"  // Original Value: StatefulCanvas.CHECKBOX, How found: Looked up constant
+		| "checkbox"  // Original Value: StatefulCanvas.CHECKBOX, How found: Looked up constant string
 		/** object moves to "down" state, causing another object to go up (radio) */
-		| "radio"  // Original Value: StatefulCanvas.RADIO, How found: Looked up constant
+		| "radio"  // Original Value: StatefulCanvas.RADIO, How found: Looked up constant string
 		;
 
 
@@ -851,9 +851,9 @@ declare namespace Isc {
 	 */
 	export type TableMode = 
 		/** The default mode which displays a list of rows */
-		"plain"  // Original Value: TableView.PLAIN, How found: Looked up constant
+		"plain"  // Original Value: TableView.PLAIN, How found: Looked up constant string
 		/** Grouped table is a set of rows embedded in a rounded rectangle */
-		| "grouped"  // Original Value: TableView.GROUPED, How found: Looked up constant
+		| "grouped"  // Original Value: TableView.GROUPED, How found: Looked up constant string
 		;
 
 
@@ -887,9 +887,9 @@ declare namespace Isc {
 		/** Don't do anything, resulting in the same data being in both lists. */
 		"none"
 		/** Copy the data leaving the original in our list. */
-		| "copy"  // Original Value: Canvas.COPY, How found: Looked up constant
+		| "copy"  // Original Value: Canvas.COPY, How found: Looked up constant string
 		/** Remove the data from this list so it can be moved into the other list. */
-		| "move"  // Original Value: Canvas.MOVE, How found: Looked up constant
+		| "move"  // Original Value: Canvas.MOVE, How found: Looked up constant string
 		;
 
 
@@ -917,16 +917,16 @@ declare namespace Isc {
 	 */
 	export type LoadState = 
 		/** children have not been loaded and are not loading */
-		"unloaded"  // Original Value: Tree.UNLOADED, How found: Looked up constant
+		"unloaded"  // Original Value: Tree.UNLOADED, How found: Looked up constant string
 		/** currently in the process of loading */
-		| "loading"  // Original Value: Tree.LOADING, How found: Looked up constant
+		| "loading"  // Original Value: Tree.LOADING, How found: Looked up constant string
 		/** folders only are already loaded */
-		| "foldersLoaded"  // Original Value: Tree.FOLDERS_LOADED, How found: Looked up constant
+		| "foldersLoaded"  // Original Value: Tree.FOLDERS_LOADED, How found: Looked up constant string
 		/** already fully loaded */
-		| "loaded"  // Original Value: Tree.LOADED, How found: Looked up constant
+		| "loaded"  // Original Value: Tree.LOADED, How found: Looked up constant string
 		/** children form a ResultSet having only a partial cache (applies only to the "paged"
 	 * ResultTree.fetchMode','fetchMode) */
-		| "loadedPartialChildren"  // Original Value: Tree.LOADED_PARTIAL_CHILDREN, How found: Looked up constant
+		| "loadedPartialChildren"  // Original Value: Tree.LOADED_PARTIAL_CHILDREN, How found: Looked up constant string
 		;
 
 
@@ -1142,21 +1142,21 @@ declare namespace Isc {
 	 * Leaving the width / height for the widget undefined will use the
 	 * default value of 100, and setting the size to zero may cause the
 	 * widget not to draw. */
-		"visible"  // Original Value: Canvas.VISIBLE, How found: Looked up constant
+		"visible"  // Original Value: Canvas.VISIBLE, How found: Looked up constant string
 		/** Content that extends beyond the widget's width or height is clipped (hidden). */
-		| "hidden"  // Original Value: Canvas.HIDDEN, How found: Looked up constant
+		| "hidden"  // Original Value: Canvas.HIDDEN, How found: Looked up constant string
 		/** Horizontal and/or vertical scrollbars are displayed only if necessary. Content that extends beyond the remaining visible
 	 * area is clipped. */
-		| "auto"  // Original Value: Canvas.AUTO, How found: Looked up constant
+		| "auto"  // Original Value: Canvas.AUTO, How found: Looked up constant string
 		/** Horizontal and vertical scrollbars are always drawn inside the widget. Content that extends beyond the remaining visible area
 	 * is clipped, and can be accessed via scrolling. */
-		| "scroll"  // Original Value: Canvas.SCROLL, How found: Looked up constant
+		| "scroll"  // Original Value: Canvas.SCROLL, How found: Looked up constant string
 		/** Clip horizontally but extend the canvas's clip region vertically if necessary. Note: only supported for
 	 * specific widget subclasses. */
-		| "clip-h"  // Original Value: Canvas.CLIP_H, How found: Looked up constant
+		| "clip-h"  // Original Value: Canvas.CLIP_H, How found: Looked up constant string
 		/** Clip vertically but extend the canvas's clip region horizontally if necessary. Note: only supported
 	 * for specific widget subclasses. */
-		| "clip-v"  // Original Value: Canvas.CLIP_V, How found: Looked up constant
+		| "clip-v"  // Original Value: Canvas.CLIP_V, How found: Looked up constant string
 		;
 
 
@@ -1306,27 +1306,6 @@ declare namespace Isc {
 
 
 	/**
-	 * A Callback is an arbitrary action to be fired - usually passed into a 
-	 * method to be fired asynchronously as a notificaction of some event.
-	 * The callback can be defined in the following formats:
-	 * a function
-	 * A string containing an expression to evaluate
-	 * An object with the following properties:
-	 * - target: fire in the scope of this target - when the action fires,
-	 * the target will be available as this.
-	 * - methodName: if specified we'll check for a method on the target object with this 
-	 * name.
-	 * 
-	 * Callbacks are fired via the Class.fireCallback method, which allows
-	 * named parameters to be passed into the callback at runtime. If the Callback was specified
-	 * as a string of script, these parameters are available as local variables at eval time.
-	 * For specific SmartClient methods that make use of Callback objects, see
-	 * local documentation for information on parameters and scope.
-	 */
-	export type Callback = any; // baseType='string'
-
-
-	/**
 	 * Strings to identify the various keys on the keyboard.
 	 * 
 	 * For alpha keys, the single (uppercase) character value is used, such as "Q"
@@ -1357,7 +1336,28 @@ declare namespace Isc {
 	 * 
 	 * [Note: Some keys may not be available for capture on every platform]
 	 */
-	export type KeyName = any; // baseType='<none>'
+	export type KeyName = string; // baseType='String'
+
+
+	/**
+	 * A Callback is an arbitrary action to be fired - usually passed into a 
+	 * method to be fired asynchronously as a notificaction of some event.
+	 * The callback can be defined in the following formats:
+	 * a function
+	 * A string containing an expression to evaluate
+	 * An object with the following properties:
+	 * - target: fire in the scope of this target - when the action fires,
+	 * the target will be available as this.
+	 * - methodName: if specified we'll check for a method on the target object with this 
+	 * name.
+	 * 
+	 * Callbacks are fired via the Class.fireCallback method, which allows
+	 * named parameters to be passed into the callback at runtime. If the Callback was specified
+	 * as a string of script, these parameters are available as local variables at eval time.
+	 * For specific SmartClient methods that make use of Callback objects, see
+	 * local documentation for information on parameters and scope.
+	 */
+	export type Callback = any; // baseType='<none>'
 
 
 	/**
@@ -1636,7 +1636,7 @@ declare namespace Isc {
 	 * 
 	 * 
 	 */
-	export type RelativeDateShortcut = any; // baseType='<none>'
+	export type RelativeDateShortcut = string; // baseType='String'
 
 
 	/**
@@ -1743,13 +1743,13 @@ declare namespace Isc {
 
 	export type ImageStyle = 
 		/** Center (and don't stretch at all) the image if smaller than its enclosing frame.CENTER:"center", */
-		"center"  // Original Value: Canvas.CENTER, How found: Looked up constant
+		"center"  // Original Value: Canvas.CENTER, How found: Looked up constant string
 		/** Tile (repeat) the image if smaller than its enclosing frame. */
-		| "tile"  // Original Value: Canvas.TILE, How found: Looked up constant
+		| "tile"  // Original Value: Canvas.TILE, How found: Looked up constant string
 		/** Stretch the image to the size of its enclosing frame. */
-		| "stretch"  // Original Value: Canvas.STRETCH, How found: Looked up constant
+		| "stretch"  // Original Value: Canvas.STRETCH, How found: Looked up constant string
 		/** Allow the image to have natural size */
-		| "normal"  // Original Value: Canvas.NORMAL, How found: Looked up constant
+		| "normal"  // Original Value: Canvas.NORMAL, How found: Looked up constant string
 		;
 
 
@@ -1841,19 +1841,19 @@ declare namespace Isc {
 	 */
 	export type DateItemSelectorFormat = 
 		/** Output fields in day, month, year order. */
-		"DMY"  // Original Value: DateItem.DAY_MONTH_YEAR, How found: Looked up constant
+		"DMY"  // Original Value: DateItem.DAY_MONTH_YEAR, How found: Looked up constant string
 		/** Output fields in month, day, year order. */
-		| "MDY"  // Original Value: DateItem.MONTH_DAY_YEAR, How found: Looked up constant
+		| "MDY"  // Original Value: DateItem.MONTH_DAY_YEAR, How found: Looked up constant string
 		/** Output fields in year, month, day order. */
-		| "YMD"  // Original Value: DateItem.YEAR_MONTH_DAY, How found: Looked up constant
+		| "YMD"  // Original Value: DateItem.YEAR_MONTH_DAY, How found: Looked up constant string
 		/** Output only day, month fields. */
-		| "DM"  // Original Value: DateItem.DAY_MONTH, How found: Looked up constant
+		| "DM"  // Original Value: DateItem.DAY_MONTH, How found: Looked up constant string
 		/** Output only month, day fields. */
-		| "MD"  // Original Value: DateItem.MONTH_DAY, How found: Looked up constant
+		| "MD"  // Original Value: DateItem.MONTH_DAY, How found: Looked up constant string
 		/** Output only year, month fields. */
-		| "YM"  // Original Value: DateItem.YEAR_MONTH, How found: Looked up constant
+		| "YM"  // Original Value: DateItem.YEAR_MONTH, How found: Looked up constant string
 		/** Output only month, year fields. */
-		| "MY"  // Original Value: DateItem.MONTH_YEAR, How found: Looked up constant
+		| "MY"  // Original Value: DateItem.MONTH_YEAR, How found: Looked up constant string
 		;
 
 
@@ -1883,6 +1883,13 @@ declare namespace Isc {
 	 * generic JavaScript interpreter. */
 		| "logicalDateConstructor"
 		;
+
+
+	/**
+	 * A Uniform Resource Identifier string, as defined by 
+	 * <a href='https://tools.ietf.org/html/rfc3986' target='_blank'>https://tools.ietf.org/html/rfc3986</a>.
+	 */
+	export type URI = string; // baseType='String'
 
 
 	/**
@@ -2167,9 +2174,9 @@ declare namespace Isc {
 
 	export type Positioning = 
 		/** The canvas is absolutely positioned with respect to its parent. */
-		"absolute"  // Original Value: Canvas.ABSOLUTE, How found: Looked up constant
+		"absolute"  // Original Value: Canvas.ABSOLUTE, How found: Looked up constant string
 		/** The canvas is relatively positioned according to the document flow. */
-		| "relative"  // Original Value: Canvas.RELATIVE, How found: Looked up constant
+		| "relative"  // Original Value: Canvas.RELATIVE, How found: Looked up constant string
 		;
 
 
@@ -2272,15 +2279,15 @@ declare namespace Isc {
 
 	export type LabelAlignment = 
 		/** Justify label's left edge against its left coordinate (right in RTL configurations) */
-		"start"  // Original Value: DrawLabel.START, How found: Looked up constant
+		"start"  // Original Value: DrawLabel.START, How found: Looked up constant string
 		/** Justify label's right edge against its left coordinate (left in RTL configurations) */
-		| "end"  // Original Value: DrawLabel.END, How found: Looked up constant
+		| "end"  // Original Value: DrawLabel.END, How found: Looked up constant string
 		/** Center label about its left coordinate */
-		| "center"  // Original Value: DrawLabel.CENTER, How found: Looked up constant
+		| "center"  // Original Value: DrawLabel.CENTER, How found: Looked up constant string
 		/** Justify label's left edge against its left coordinate */
-		| "left"  // Original Value: DrawLabel.LEFT, How found: Looked up constant
+		| "left"  // Original Value: DrawLabel.LEFT, How found: Looked up constant string
 		/** Justify label's right edge against its left coordinate */
-		| "right"  // Original Value: DrawLabel.RIGHT, How found: Looked up constant
+		| "right"  // Original Value: DrawLabel.RIGHT, How found: Looked up constant string
 		;
 
 
@@ -2316,6 +2323,23 @@ declare namespace Isc {
 
 
 	/**
+	 * Standard pickers
+	 */
+	export type PickerIconName = 
+		/** Picker icon to clear a field value. */
+		"clear"
+		/** Picker icon to start a search. */
+		| "search"
+		/** Picker icon to refresh a value. */
+		| "refresh"
+		/** Picker icon for date value. */
+		| "date"
+		/** Picker icon for a general combobox. */
+		| "comboBox"
+		;
+
+
+	/**
 	 * Supported styles of connector orientations.
 	 */
 	export type ConnectorOrientation = 
@@ -2329,11 +2353,11 @@ declare namespace Isc {
 
 	export type Alignment = 
 		/** Center within container. */
-		"center"  // Original Value: Canvas.CENTER, How found: Looked up constant
+		"center"  // Original Value: Canvas.CENTER, How found: Looked up constant string
 		/** Stick to left side of container. */
-		| "left"  // Original Value: Canvas.LEFT, How found: Looked up constant
+		| "left"  // Original Value: Canvas.LEFT, How found: Looked up constant string
 		/** Stick to right side of container. */
-		| "right"  // Original Value: Canvas.RIGHT, How found: Looked up constant
+		| "right"  // Original Value: Canvas.RIGHT, How found: Looked up constant string
 		;
 
 	export type ProcessValueType = 
@@ -2620,6 +2644,12 @@ declare namespace Isc {
 
 
 	/**
+	 * A synonym for HTMLString.
+	 */
+	export type HTML = string; // baseType='string'
+
+
+	/**
 	 * Events registerable via Page.setEvent
 	 */
 	export type PageEvent = 
@@ -2717,21 +2747,21 @@ declare namespace Isc {
 	 */
 	export type Cursor = 
 		/** Use the default arrow cursor for this browser/OS. */
-		"default"  // Original Value: Canvas.DEFAULT, How found: Looked up constant
+		"default"  // Original Value: Canvas.DEFAULT, How found: Looked up constant string
 		/** Use the default cursor for this element type in this browser/OS */
-		| "auto"  // Original Value: Canvas.AUTO, How found: Looked up constant
+		| "auto"  // Original Value: Canvas.AUTO, How found: Looked up constant string
 		/** Use the wait cursor. */
-		| "wait"  // Original Value: Canvas.WAIT, How found: Looked up constant
+		| "wait"  // Original Value: Canvas.WAIT, How found: Looked up constant string
 		/** Use the hand cursor. */
-		| "hand"  // Original Value: Canvas.HAND, How found: Looked up constant
+		| "hand"  // Original Value: Canvas.HAND, How found: Looked up constant string
 		/** Use the "move" (crosshairs) cursor. */
-		| "move"  // Original Value: Canvas.MOVE, How found: Looked up constant
+		| "move"  // Original Value: Canvas.MOVE, How found: Looked up constant string
 		/** Use the 'help' cursor. */
-		| "help"  // Original Value: Canvas.HELP, How found: Looked up constant
+		| "help"  // Original Value: Canvas.HELP, How found: Looked up constant string
 		/** Use the 'text' (i-beam) cursor. */
-		| "text"  // Original Value: Canvas.TEXT, How found: Looked up constant
+		| "text"  // Original Value: Canvas.TEXT, How found: Looked up constant string
 		/** Use the normal hand pointer that appears when you hover over a link */
-		| "pointer"  // Original Value: Canvas.POINTER, How found: Looked up constant
+		| "pointer"  // Original Value: Canvas.POINTER, How found: Looked up constant string
 		| "arrow"
 		| "all-scroll"
 		/** Use the 'crosshair' ( + ) cursor. */
@@ -3029,11 +3059,11 @@ declare namespace Isc {
 
 	export type Visibility = 
 		/** The widget visibility will match that of its parent (usually visible). */
-		"inherit"  // Original Value: Canvas.INHERIT, How found: Looked up constant
+		"inherit"  // Original Value: Canvas.INHERIT, How found: Looked up constant string
 		/** The widget will always be visible whether its parent is or not. */
-		| "visible"  // Original Value: Canvas.VISIBLE, How found: Looked up constant
+		| "visible"  // Original Value: Canvas.VISIBLE, How found: Looked up constant string
 		/** The widget will always be hidden even when its parent is visible. */
-		| "hidden"  // Original Value: Canvas.HIDDEN, How found: Looked up constant
+		| "hidden"  // Original Value: Canvas.HIDDEN, How found: Looked up constant string
 		;
 
 
@@ -3115,6 +3145,21 @@ declare namespace Isc {
 
 
 	/**
+	 * What the JSONEncoder should do when it encounters a circular reference in an object
+	 * structure.
+	 */
+	export type JSONCircularReferenceMode = 
+		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
+		"omit"
+		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
+		| "marker"
+		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
+	 * This potentially allows the original object graph to be reconstructed. */
+		| "path"
+		;
+
+
+	/**
 	 * Specifies the layout of the combo box and buttons in a MultiComboBoxItem.
 	 */
 	export type MultiComboBoxLayoutStyle = 
@@ -3130,21 +3175,6 @@ declare namespace Isc {
 		| "vertical"
 		/** Use a vertical layout with the combo box at the bottom */
 		| "verticalReverse"
-		;
-
-
-	/**
-	 * What the JSONEncoder should do when it encounters a circular reference in an object
-	 * structure.
-	 */
-	export type JSONCircularReferenceMode = 
-		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
-		"omit"
-		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
-		| "marker"
-		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
-	 * This potentially allows the original object graph to be reconstructed. */
-		| "path"
 		;
 
 
@@ -3177,9 +3207,9 @@ declare namespace Isc {
 	 */
 	export type Encoding = 
 		/** normal form encoding ("application/x-www-form-urlencoded") */
-		"normal"  // Original Value: DynamicForm.NORMAL, How found: Looked up constant
+		"normal"  // Original Value: DynamicForm.NORMAL, How found: Looked up constant string
 		/** form encoding for forms with INPUT file elements, that is, forms that upload files ("multipart/form-data") */
-		| "multipart"  // Original Value: DynamicForm.MULTIPART, How found: Looked up constant
+		| "multipart"  // Original Value: DynamicForm.MULTIPART, How found: Looked up constant string
 		;
 
 
@@ -3359,13 +3389,13 @@ declare namespace Isc {
 	 */
 	export type RecordDropPosition = 
 		/** User dropped directly onto the record */
-		"over"  // Original Value: ListGrid.OVER, How found: Looked up constant
+		"over"  // Original Value: ListGrid.OVER, How found: Looked up constant string
 		/** User dropped before the record */
-		| "before"  // Original Value: ListGrid.BEFORE, How found: Looked up constant
+		| "before"  // Original Value: ListGrid.BEFORE, How found: Looked up constant string
 		/** User dropped after the record */
-		| "after"  // Original Value: ListGrid.AFTER, How found: Looked up constant
+		| "after"  // Original Value: ListGrid.AFTER, How found: Looked up constant string
 		/** Drop position is not over a record */
-		| "none"  // Original Value: ListGrid.NONE, How found: Looked up constant
+		| "none"  // Original Value: ListGrid.NONE, How found: Looked up constant string
 		;
 
 
@@ -3502,6 +3532,14 @@ declare namespace Isc {
 
 
 	/**
+	 * A Uniform Resource Locator string, as defined by 
+	 * <a href='https://www.w3.org/Addressing/URL/url-spec.html' target='_blank'>https://www.w3.org/Addressing/URL/url-spec.html</a>. For example,
+	 * "https://www.smartclient.com/product/" is a valid URL.
+	 */
+	export type URL = string; // baseType='URI'
+
+
+	/**
 	 * Possible values for the state of ListGrid groups when groupBy is called
 	 */
 	export type GroupStartOpen = 
@@ -3595,14 +3633,14 @@ declare namespace Isc {
 	 */
 	export type SelectionStyle = 
 		/** don't select at all */
-		"none"  // Original Value: Selection.NONE, How found: Looked up constant
+		"none"  // Original Value: Selection.NONE, How found: Looked up constant string
 		/** select only one item at a time */
-		| "single"  // Original Value: Selection.SINGLE, How found: Looked up constant
+		| "single"  // Original Value: Selection.SINGLE, How found: Looked up constant string
 		/** select one or more items */
-		| "multiple"  // Original Value: Selection.MULTIPLE, How found: Looked up constant
+		| "multiple"  // Original Value: Selection.MULTIPLE, How found: Looked up constant string
 		/** select one or more items as a toggle so you don't need to hold down control keys to select
 	 * more than one object */
-		| "simple"  // Original Value: Selection.SIMPLE, How found: Looked up constant
+		| "simple"  // Original Value: Selection.SIMPLE, How found: Looked up constant string
 		;
 
 
@@ -3672,13 +3710,13 @@ declare namespace Isc {
 		/** Window does not try to size members at all on either axis. Window body defaults to
 	 * a Canvas if not autosizing. Otherwise a Layout is used with policies on both axes set
 	 * to LayoutPolicy "none". */
-		"none"  // Original Value: Window.NONE, How found: Looked up constant
+		"none"  // Original Value: Window.NONE, How found: Looked up constant string
 		/** Window body defaults to VLayout behavior. (Body is actually just a Layout with 
 	 * Layout.vertical: true.) */
-		| "vertical"  // Original Value: Window.VERTICAL, How found: Looked up constant
+		| "vertical"  // Original Value: Window.VERTICAL, How found: Looked up constant string
 		/** Window body defaults to HLayout behavior. (Body is actually just a Layout with 
 	 * Layout.vertical: false.) */
-		| "horizontal"  // Original Value: Window.HORIZONTAL, How found: Looked up constant
+		| "horizontal"  // Original Value: Window.HORIZONTAL, How found: Looked up constant string
 		;
 
 
@@ -3704,9 +3742,9 @@ declare namespace Isc {
 
 	export type Orientation = 
 		/** members laid out vertically */
-		"vertical"  // Original Value: Layout.VERTICAL, How found: Looked up constant
+		"vertical"  // Original Value: Layout.VERTICAL, How found: Looked up constant string
 		/** members laid out horizontally */
-		| "horizontal"  // Original Value: Layout.HORIZONTAL, How found: Looked up constant
+		| "horizontal"  // Original Value: Layout.HORIZONTAL, How found: Looked up constant string
 		;
 
 
@@ -4004,7 +4042,7 @@ declare namespace Isc {
 	 * call to AutoTest.getLocator. Note also that the debugging','Developer Console
 	 * has built-in functionality to create and display autoTestLocators for a live app.
 	 */
-	export type AutoTestLocator = string; // baseType='<none>'
+	export type AutoTestLocator = string; // baseType='String'
 
 	export type PromptStyle = 
 		/** Displays a centered modal prompt with text specified by RPCRequest.prompt */
@@ -4068,11 +4106,11 @@ declare namespace Isc {
 
 	export type VerticalAlignment = 
 		/** At the top of the container */
-		"top"  // Original Value: Canvas.TOP, How found: Looked up constant
+		"top"  // Original Value: Canvas.TOP, How found: Looked up constant string
 		/** Center within container. */
-		| "center"  // Original Value: Canvas.CENTER, How found: Looked up constant
+		| "center"  // Original Value: Canvas.CENTER, How found: Looked up constant string
 		/** At the bottom of the container */
-		| "bottom"  // Original Value: Canvas.BOTTOM, How found: Looked up constant
+		| "bottom"  // Original Value: Canvas.BOTTOM, How found: Looked up constant string
 		;
 
 	export type TreeModelType = 
@@ -4101,15 +4139,15 @@ declare namespace Isc {
 	 */
 	export type LogPriority = 
 		/** unrecoverable error */
-		"fatal"  // Original Value: Log.FATAL, How found: Guess based on constant name
+		1  // Original Value: Log.FATAL, How found: Looked up constant number
 		/** error, may be recoverable */
-		| "error"  // Original Value: Log.ERROR, How found: Guess based on constant name
+		| 2  // Original Value: Log.ERROR, How found: Looked up constant number
 		/** apparent problem, misused API, partial result */
-		| "warn"  // Original Value: Log.WARN, How found: Guess based on constant name
+		| 3  // Original Value: Log.WARN, How found: Looked up constant number
 		/** significant events in normal operation */
-		| "info"  // Original Value: Log.INFO, How found: Guess based on constant name
+		| 4  // Original Value: Log.INFO, How found: Looked up constant number
 		/** diagnostics for developers */
-		| "debug"  // Original Value: Log.DEBUG, How found: Guess based on constant name
+		| 5  // Original Value: Log.DEBUG, How found: Looked up constant number
 		;
 
 
@@ -4266,7 +4304,7 @@ declare namespace Isc {
 	export type LayoutPolicy = 
 		/** Layout does not try to size members on the axis at all, merely stacking them (length
 	 * axis) and leaving them at default breadth. */
-		"none"  // Original Value: Layout.NONE, How found: Looked up constant
+		"none"  // Original Value: Layout.NONE, How found: Looked up constant string
 		/** Layout sizes members so that they fill the specified size of the layout. The rules
 	 * are:
 	 * 
@@ -4284,7 +4322,7 @@ declare namespace Isc {
 	 * In addition, components may declare that they have 
 	 * Canvas.canAdaptWidth','adaptive sizing, and may coordinate with the Layout to render
 	 * at different sizes according to the amount of available space. */
-		| "fill"  // Original Value: Layout.FILL, How found: Looked up constant
+		| "fill"  // Original Value: Layout.FILL, How found: Looked up constant string
 		;
 
 
@@ -4398,11 +4436,11 @@ declare namespace Isc {
 
 	export type CharacterCasing = 
 		/** No character translation */
-		"default"  // Original Value: TextItem.DEFAULT, How found: Looked up constant
+		"default"  // Original Value: TextItem.DEFAULT, How found: Looked up constant string
 		/** Map characters to uppercase */
-		| "upper"  // Original Value: TextItem.UPPER, How found: Looked up constant
+		| "upper"  // Original Value: TextItem.UPPER, How found: Looked up constant string
 		/** Map characters to lowercase */
-		| "lower"  // Original Value: TextItem.LOWER, How found: Looked up constant
+		| "lower"  // Original Value: TextItem.LOWER, How found: Looked up constant string
 		;
 
 
@@ -4411,13 +4449,13 @@ declare namespace Isc {
 	 */
 	export type State = 
 		/** state when mouse is not acting on this StatefulCanvas */
-		""  // Original Value: StatefulCanvas.STATE_UP, How found: Looked up constant
+		""  // Original Value: StatefulCanvas.STATE_UP, How found: Looked up constant string
 		/** state when mouse is down */
-		| "Down"  // Original Value: StatefulCanvas.STATE_DOWN, How found: Looked up constant
+		| "Down"  // Original Value: StatefulCanvas.STATE_DOWN, How found: Looked up constant string
 		/** state when mouse is over */
-		| "Over"  // Original Value: StatefulCanvas.STATE_OVER, How found: Looked up constant
+		| "Over"  // Original Value: StatefulCanvas.STATE_OVER, How found: Looked up constant string
 		/** disabled */
-		| "Disabled"  // Original Value: StatefulCanvas.STATE_DISABLED, How found: Looked up constant
+		| "Disabled"  // Original Value: StatefulCanvas.STATE_DISABLED, How found: Looked up constant string
 		;
 
 
@@ -4542,13 +4580,13 @@ declare namespace Isc {
 
 	export type Direction = 
 		/** above */
-		"up"  // Original Value: Canvas.UP, How found: Looked up constant
+		"up"  // Original Value: Canvas.UP, How found: Looked up constant string
 		/** below */
-		| "down"  // Original Value: Canvas.DOWN, How found: Looked up constant
+		| "down"  // Original Value: Canvas.DOWN, How found: Looked up constant string
 		/** to the left of */
-		| "left"  // Original Value: Canvas.LEFT, How found: Looked up constant
+		| "left"  // Original Value: Canvas.LEFT, How found: Looked up constant string
 		/** to the right of */
-		| "right"  // Original Value: Canvas.RIGHT, How found: Looked up constant
+		| "right"  // Original Value: Canvas.RIGHT, How found: Looked up constant string
 		;
 
 
@@ -4592,13 +4630,13 @@ declare namespace Isc {
 	 */
 	export type Side = 
 		/** Left side */
-		"left"  // Original Value: Canvas.LEFT, How found: Looked up constant
+		"left"  // Original Value: Canvas.LEFT, How found: Looked up constant string
 		/** Right side */
-		| "right"  // Original Value: Canvas.RIGHT, How found: Looked up constant
+		| "right"  // Original Value: Canvas.RIGHT, How found: Looked up constant string
 		/** Top side */
-		| "top"  // Original Value: Canvas.TOP, How found: Looked up constant
+		| "top"  // Original Value: Canvas.TOP, How found: Looked up constant string
 		/** Bottom side */
-		| "bottom"  // Original Value: Canvas.BOTTOM, How found: Looked up constant
+		| "bottom"  // Original Value: Canvas.BOTTOM, How found: Looked up constant string
 		;
 
 
@@ -4623,16 +4661,16 @@ declare namespace Isc {
 	 */
 	export type RecordDropAppearance = 
 		/** When the user drops onto a record, dropPosition will always be "over" */
-		"over"  // Original Value: ListGrid.OVER, How found: Looked up constant
+		"over"  // Original Value: ListGrid.OVER, How found: Looked up constant string
 		/** When the user drops onto a record, dropPosition will be either "before" or "after" depending on whether the mouse was over the top or bottom of
 	 * the target record */
-		| "between"  // Original Value: ListGrid.BETWEEN, How found: Looked up constant
+		| "between"  // Original Value: ListGrid.BETWEEN, How found: Looked up constant string
 		/** When the user drops onto a record, if the drop occurs centered over the record, the dropPosition will be reported as "over", otherwise it will be
 	 * "before" or "after" depending on whether the mouse was over the top or bottom of the
 	 * target record. */
-		| "both"  // Original Value: ListGrid.BOTH, How found: Looked up constant
+		| "both"  // Original Value: ListGrid.BOTH, How found: Looked up constant string
 		/** No dropPosition will be reported */
-		| "body"  // Original Value: ListGrid.BODY, How found: Looked up constant
+		| "body"  // Original Value: ListGrid.BODY, How found: Looked up constant string
 		;
 
 
@@ -4717,11 +4755,11 @@ declare namespace Isc {
 
 	export type FieldAppearance = 
 		/** Show in read-only appearance */
-		"readOnly"  // Original Value: Validator.READONLY, How found: Looked up constant
+		"readOnly"  // Original Value: Validator.READONLY, How found: Looked up constant string
 		/** Hide field */
-		| "hidden"  // Original Value: Validator.HIDDEN, How found: Looked up constant
+		| "hidden"  // Original Value: Validator.HIDDEN, How found: Looked up constant string
 		/** Disable field */
-		| "disabled"  // Original Value: Validator.DISABLED, How found: Looked up constant
+		| "disabled"  // Original Value: Validator.DISABLED, How found: Looked up constant string
 		;
 
 
@@ -4762,13 +4800,13 @@ declare namespace Isc {
 	 */
 	export type BackgroundRepeat = 
 		/** Tile the background image horizontally and vertically. */
-		"repeat"  // Original Value: Canvas.REPEAT, How found: Looked up constant
+		"repeat"  // Original Value: Canvas.REPEAT, How found: Looked up constant string
 		/** Don't tile the background image at all. */
-		| "no-repeat"  // Original Value: Canvas.NO_REPEAT, How found: Looked up constant
+		| "no-repeat"  // Original Value: Canvas.NO_REPEAT, How found: Looked up constant string
 		/** Repeat the background image horizontally but not vertically. */
-		| "repeat-x"  // Original Value: Canvas.REPEAT_X, How found: Looked up constant
+		| "repeat-x"  // Original Value: Canvas.REPEAT_X, How found: Looked up constant string
 		/** Repeat the background image vertically but not horizontally. */
-		| "repeat-y"  // Original Value: Canvas.REPEAT_Y, How found: Looked up constant
+		| "repeat-y"  // Original Value: Canvas.REPEAT_Y, How found: Looked up constant string
 		;
 
 
@@ -4941,7 +4979,7 @@ declare namespace Isc {
 	 * information on statefulness and the Img.src documentation for information on how
 	 * stateful image URLs are formed.
 	 */
-	export type SCImgURL = string; // baseType='string'
+	export type SCImgURL = string; // baseType='URL'
 
 
 	/**
@@ -5260,7 +5298,7 @@ declare namespace Isc {
 		"null"  // How found:  Original value
 		/** Call the registered handler the first time the event occurs, then unregister the handler as though
 	 * Page.clearEvent had been called */
-		| "once"  // Original Value: Page.FIRE_ONCE, How found: Looked up constant
+		| "once"  // Original Value: Page.FIRE_ONCE, How found: Looked up constant string
 		;
 
 
@@ -5322,21 +5360,21 @@ declare namespace Isc {
 	 */
 	export type RecordLayout = 
 		/** Show TableView.titleField','title field only */
-		"titleOnly"  // Original Value: TableView.TITLE_ONLY, How found: Looked up constant
+		"titleOnly"  // Original Value: TableView.TITLE_ONLY, How found: Looked up constant string
 		/** Show TableView.titleField','title and TableView.descriptionField','description
 	 * fields only */
-		| "titleAndDescription"  // Original Value: TableView.TITLE_DESCRIPTION, How found: Looked up constant
+		| "titleAndDescription"  // Original Value: TableView.TITLE_DESCRIPTION, How found: Looked up constant string
 		/** Show TableView.titleField','title, TableView.descriptionField','description and
 	 * TableView.infoField','info fields only */
-		| "summaryInfo"  // Original Value: TableView.SUMMARY_INFO, How found: Looked up constant
+		| "summaryInfo"  // Original Value: TableView.SUMMARY_INFO, How found: Looked up constant string
 		/** Show TableView.titleField','title, TableView.descriptionField','description and
 	 * TableView.dataField','data fields only */
-		| "summaryData"  // Original Value: TableView.SUMMARY_DATA, How found: Looked up constant
+		| "summaryData"  // Original Value: TableView.SUMMARY_DATA, How found: Looked up constant string
 		/** Show TableView.titleField','title, TableView.descriptionField','description,
 	 * TableView.infoField','info and
 	 * TableView.dataField','data fields similar to
 	 * the iPhoneOS Mail application */
-		| "summaryFull"  // Original Value: TableView.SUMMARY_FULL, How found: Looked up constant
+		| "summaryFull"  // Original Value: TableView.SUMMARY_FULL, How found: Looked up constant string
 		;
 
 

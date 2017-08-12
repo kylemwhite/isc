@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/11/2017 7:00:21 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-09
+// Generated: 8/12/2017 7:00:14 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-12
 
 declare namespace Isc {
 
@@ -2288,12 +2288,12 @@ declare namespace Isc {
 		 * (Read only) HTML to append to the end of cell values where this hilite is applied.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly htmlAfter?: string /* HTML */;
+		readonly htmlAfter?: string /* HTMLString */;
 		/** 
 		 * (Read only) HTML to pre-pend to cell values where this hilite is applied.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly htmlBefore?: string /* HTML */;
+		readonly htmlBefore?: string /* HTMLString */;
 		/** 
 		 * (Read only) Value to show in place of the actual value from the record, for a record that matches
 		 * this hilite.
@@ -2330,7 +2330,7 @@ declare namespace Isc {
 		 * to be displayed as text such as "current" or "past due".
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly replacementValue?: string /* HTML */;
+		readonly replacementValue?: string /* HTMLString */;
 		/** 
 		 * When edited via a HiliteEditor, the value for the foreground color of this 
 		 * hilite. If this is omitted, it will be automatically derived from the textColor
@@ -3934,7 +3934,7 @@ declare namespace Isc {
 		 * (Read only) The text displayed for the menu item
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly title?: string /* HTML */;
+		readonly title?: string /* HTMLString */;
 
 		/* Instance Method Overrides */
 		/**  
@@ -4728,7 +4728,7 @@ declare namespace Isc {
 		 * Note: this attribute name is governed by ListGrid.singleCellValueProperty.
 		 * Flags: IRW
 		 */
-		readonly singleCellValue?: string /* HTML */;
+		readonly singleCellValue?: string /* HTMLString */;
 	} // ListGridRecord
 
 	export interface ListGridRecordStatic extends RecordStatic {
@@ -6950,7 +6950,7 @@ declare namespace Isc {
 		 * @param {ListGrid} grid - ListGrid this field is a part of
 		 * @return {string} HTML to show in the hover
 		 */
-		hoverHTML?(record:ListGridRecord, value:any /* Any */, rowNum:number, colNum:number, grid:ListGrid): string /* HTML */; 
+		hoverHTML?(record:ListGridRecord, value:any /* Any */, rowNum:number, colNum:number, grid:ListGrid): string /* HTMLString */; 
 
 		/**  
 		 *  Method used to convert the value displayed in an editor for some cell in this field into
@@ -7231,7 +7231,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.titleProperty.
 		 * Flags: IR
 		 */
-		readonly title?: string /* HTML */;
+		readonly title?: string /* HTMLString */;
 	} // TreeNode
 
 	export interface TreeNodeStatic {
@@ -8851,13 +8851,13 @@ declare namespace Isc {
 		 * If unset the form item's iconKeyPress method will be fired instead 
 		 * (if specified).
 		 * 
-		 * @param {string} keyName - Name of the key pressed
+		 * @param {KeyName} keyName - Name of the key pressed
 		 * @param {string} character - character produced by the keypress
 		 * @param {DynamicForm} form - The Dynamic Form to which this icon's item belongs.
 		 * @param {FormItem} item - The Form Item containing this icon
 		 * @param {FormItemIcon} icon - A pointer to the form item icon
 		 */
-		keyPress?(keyName:string /* String */, character:string /* Character */, form:DynamicForm, item:FormItem, icon:FormItemIcon): void; 
+		keyPress?(keyName:KeyName, character:string /* Character */, form:DynamicForm, item:FormItem, icon:FormItemIcon): void; 
 
 		/**  
 		 *  If specified, icon.showIf will be evaluated when the form item is
@@ -8912,7 +8912,7 @@ declare namespace Isc {
 		 * null means an ordinary TextItem is fine.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly editorType?: string /* FormItemClassname */;
+		readonly editorType?: string /* FormItemClassName */;
 		/** 
 		 * (Read only) List of types that this Operator is valid for.
 		 * 
