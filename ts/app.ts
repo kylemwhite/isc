@@ -59,7 +59,7 @@ window.onload = () => {
     // Add a couple buttons to the 'content' DIV
     let startButton = isc.Button.create({
         title: "Start"
-        , htmlElement: 'content'
+        , htmlElement: el
         , click: (): boolean => {
             greeter.start();
             return true;
@@ -68,7 +68,7 @@ window.onload = () => {
        
     let stopButton = isc.Button.create({
         title: "Stop"
-        , htmlElement: 'content'
+        , htmlElement: el
         , click: (): boolean => {
             greeter.stop();
             return true;
@@ -78,7 +78,7 @@ window.onload = () => {
     // Add a label to the 'footer' DIV
     let labelVersion = isc.Label.create({
         contents: "Isomorphic SmartClient Version: <b>" + isc.versionNumber + "</b>"
-        , htmlElement: 'footer'
+        , htmlElement: document.getElementById('footer')
         , autoDraw: true
         , width: 600
        // , border: "1px solid green"
@@ -204,7 +204,7 @@ window.onload = () => {
     });
 
     let layout = isc.VLayout.create({
-        htmlElement: "content"
+        htmlElement: document.getElementById("content")
         , height: 600
         , width: "100%"
         , members: [tabSet]

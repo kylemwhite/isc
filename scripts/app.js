@@ -44,7 +44,7 @@ window.onload = function () {
     // Add a couple buttons to the 'content' DIV
     var startButton = isc.Button.create({
         title: "Start",
-        htmlElement: 'content',
+        htmlElement: el,
         click: function () {
             greeter.start();
             return true;
@@ -52,7 +52,7 @@ window.onload = function () {
     });
     var stopButton = isc.Button.create({
         title: "Stop",
-        htmlElement: 'content',
+        htmlElement: el,
         click: function () {
             greeter.stop();
             return true;
@@ -61,7 +61,7 @@ window.onload = function () {
     // Add a label to the 'footer' DIV
     var labelVersion = isc.Label.create({
         contents: "Isomorphic SmartClient Version: <b>" + isc.versionNumber + "</b>",
-        htmlElement: 'footer',
+        htmlElement: document.getElementById('footer'),
         autoDraw: true,
         width: 600
     });
@@ -166,7 +166,7 @@ window.onload = function () {
         icon: "KMW_16x16.png"
     });
     var layout = isc.VLayout.create({
-        htmlElement: "content",
+        htmlElement: document.getElementById("content"),
         height: 600,
         width: "100%",
         members: [tabSet],
