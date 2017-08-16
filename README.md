@@ -1,7 +1,7 @@
 ## Isomorphic SmartClient TypeScript type definitions
-SmartClient Version: SNAPSHOT_v12.0d_2017-08-14
+SmartClient Version: SNAPSHOT_v12.0d_2017-08-16
 
-Generated: 8/15/2017 7:01:44 AM
+Generated: 8/16/2017 9:18:05 AM
 
 Work in progress. See [Progress.md](./Progress.md)
 
@@ -11,9 +11,9 @@ Method coverage: 93%
 
 Update: Repository is now a sample Visual Studio 2015 application. ts.d files can be found in [/scripts/typings/isc](./scripts/typings/isc). Demo can be seen [here](https://kylemwhite.github.io/isc/).
 
-The goal is to provide type safety in a TypeScript web application that utilizes the Isomorphic SmartClient library and provide a development experience similar to writing Java in SmartGWT (the GWT version of SmartClient). Documentation is provided in comments in JSDoc format and will show up in intellisense.
+The goal is to provide type safety in a TypeScript web application that utilizes the [Isomorphic SmartClient](http://www.smartclient.com) library and provide a development experience similar to writing Java in SmartGWT (the GWT version of SmartClient). Documentation is provided in comments in JSDoc format and will show up in intellisense.
 
-Note that with some editors (VS Code for example), having the TypeScript definitions reference works with JavaScript code as well. So, this can help you out even if you don't want to switch your application to TypeScript.
+Note that with some editors ([Visual Studio Code](https://code.visualstudio.com/) for example), having the TypeScript definitions reference works with JavaScript code as well. So, this can help you out even if you don't want to switch your application to TypeScript.
 
 ## To get started
 

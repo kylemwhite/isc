@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/15/2017 7:00:12 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-14
+// Generated: 8/16/2017 9:16:40 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-16
 
 declare namespace Isc {
 
@@ -6184,6 +6184,14 @@ declare namespace Isc {
 		 * Flags: IRW, Group: gridValidation
 		 */
 		readonly required?: boolean /* Boolean */;
+		/** 
+		 * Should the cell content be natively selected (ready for copying to clip-board) 
+		 * on click?
+		 * 
+		 * See ListGrid.selectCellTextOnClick for more information.
+		 * Flags: IRW
+		 */
+		readonly selectCellTextOnClick?: boolean /* Boolean */;
 		/** 
 		 * Whether this field should be included in the printable representation of the grid.
 		 * Flags: IRW, Group: printing

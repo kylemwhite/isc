@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-14
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-16
 
 Errors during generation
-Generated: 8/15/2017 7:01:44 AM by kwhite
+Generated: 8/16/2017 9:18:05 AM by kwhite
 
 Summary
 Total Types  : 240
@@ -11,7 +11,89 @@ Total Classes: 306
 Total Objects: 70
 Total Methods: 3562
 
-Attributes missing R flag: 45 (Should they all have an R flag?)
+Properties that override a base class property with a different type: 79
+1. Property attr:BlurbItem.textBoxStyle has type CSSStyleName overrides property attr:FormItem.textBoxStyle with type FormItemBaseStyle
+2. Property attr:ButtonItem.height has type number overrides property attr:CanvasItem.height with type int | String
+3. Property attr:CheckboxItem.valueMap has type Object | Array overrides property attr:FormItem.valueMap with type Array | Object
+4. Property attr:CheckboxItem.width has type number overrides property attr:FormItem.width with type int | String
+5. Property attr:ComboBoxItem.showHintInField has type boolean overrides property attr:TextItem.showHintInField with type Boolean
+6. Property attr:CubeGrid.data has type Array of CellRecord overrides property attr:ListGrid.data with type List of ListGridRecord
+7. Property attr:CubeGrid.dataSource has type DataSource overrides property attr:ListGrid.dataSource with type DataSource | ID
+8. Property attr:CubeGrid.editByCell has type Boolean overrides property attr:ListGrid.editByCell with type boolean
+9. Property attr:CubeGrid.saveByCell has type Boolean overrides property attr:ListGrid.saveByCell with type boolean
+10. Property attr:DatabaseBrowser.title has type String overrides property attr:Window.title with type HTMLString
+11. Property attr:DateItem.displayFormat has type DateDisplayFormat overrides property attr:FormItem.displayFormat with type Varies
+12. Property attr:DateItem.pickerConstructor has type String overrides property attr:FormItem.pickerConstructor with type SCClassName
+13. Property attr:DateItem.pickerProperties has type DateChooser Properties overrides property attr:FormItem.pickerProperties with type Canvas Properties
+14. Property attr:DateTimeItem.displayFormat has type DateDisplayFormat overrides property attr:FormItem.displayFormat with type Varies
+15. Property attr:DSResponse.data has type Array of Record | RecordList overrides property attr:RPCResponse.data with type String | Object
+16. Property attr:DynamicForm.canFocus has type Boolean overrides property attr:Canvas.canFocus with type boolean
+17. Property attr:EdgedCanvas.edgeOffset has type integer overrides property attr:Canvas.edgeOffset with type number
+18. Property attr:EdgedCanvas.edgeSize has type integer overrides property attr:Canvas.edgeSize with type number
+19. Property attr:FieldPickerWindow.title has type String overrides property attr:Window.title with type HTMLString
+20. Property attr:GridRenderer.showHover has type boolean overrides property attr:Canvas.showHover with type Boolean
+21. Property attr:HeaderItem.defaultValue has type String overrides property attr:FormItem.defaultValue with type Any
+22. Property attr:HibernateBrowser.title has type String overrides property attr:Window.title with type HTMLString
+23. Property attr:IconButton.iconSize has type Number overrides property attr:Button.iconSize with type int
+24. Property attr:IMenuButton.hiliteAccessKey has type Boolean overrides property attr:Button.hiliteAccessKey with type boolean
+25. Property attr:IMenuButton.title has type String overrides property attr:Button.title with type HTMLString
+26. Property attr:ImgSplitbar.src has type String overrides property attr:Img.src with type SCImgURL
+27. Property attr:ImgTab.showFocus has type boolean overrides property attr:StretchImgButton.showFocus with type Boolean
+28. Property attr:ListPropertiesDialog.title has type String overrides property attr:Window.title with type HTMLString
+29. Property attr:LoginDialog.dismissOnEscape has type boolean overrides property attr:Window.dismissOnEscape with type Boolean
+30. Property attr:LoginDialog.items has type Array of String overrides property attr:Window.items with type Array of Canvas | Canvas | String
+31. Property attr:LoginDialog.showCloseButton has type boolean overrides property attr:Window.showCloseButton with type Boolean
+32. Property attr:LoginDialog.title has type String overrides property attr:Window.title with type HTMLString
+33. Property attr:Menu.data has type Array of MenuItem | Array of Record[] | Tree | RecordList overrides property attr:ListGrid.data with type List of ListGridRecord
+34. Property attr:Menu.dataProperties has type Tree Properties overrides property attr:ListGrid.dataProperties with type ResultSet
+35. Property attr:Menu.dataSource has type DataSource overrides property attr:ListGrid.dataSource with type DataSource | ID
+36. Property attr:Menu.fields has type Array of MenuFieldID | Array of ListGridField overrides property attr:ListGrid.fields with type Array of ListGridField
+37. Property attr:MenuButton.hiliteAccessKey has type Boolean overrides property attr:Button.hiliteAccessKey with type boolean
+38. Property attr:MenuButton.title has type String overrides property attr:Button.title with type HTMLString
+39. Property attr:MultiGroupDialog.title has type String overrides property attr:Window.title with type HTMLString
+40. Property attr:MultiSortDialog.title has type String overrides property attr:Window.title with type HTMLString
+41. Property attr:PickListMenu.emptyMessage has type String overrides property attr:ListGrid.emptyMessage with type HTMLString
+42. Property attr:PrintWindow.title has type String overrides property attr:Window.title with type HTMLString
+43. Property attr:RestDataSource.dataURL has type String overrides property attr:DataSource.dataURL with type URL
+44. Property attr:RestDataSource.recordXPath has type String overrides property attr:DataSource.recordXPath with type XPathExpression
+45. Property attr:ResultTree.discardParentlessNodes has type boolean overrides property attr:Tree.discardParentlessNodes with type Boolean
+46. Property attr:SearchForm.canEditFieldAttribute has type String overrides property attr:DynamicForm.canEditFieldAttribute with type Identifier
+47. Property attr:SelectItem.defaultValue has type boolean overrides property attr:FormItem.defaultValue with type Any
+48. Property attr:SelectItem.emptyDisplayValue has type HTMLString overrides property attr:FormItem.emptyDisplayValue with type String
+49. Property attr:SelectItem.filterLocally has type Boolean overrides property attr:FormItem.filterLocally with type boolean
+50. Property attr:SelectItem.height has type number overrides property attr:FormItem.height with type int | String
+51. Property attr:SelectItem.optionFilterContext has type DSRequest Properties overrides property attr:FormItem.optionFilterContext with type RPCRequest Properties
+52. Property attr:Slider.canFocus has type Boolean overrides property attr:Canvas.canFocus with type boolean
+53. Property attr:Snapbar.showDownGrip has type Boolean overrides property attr:StretchImg.showDownGrip with type boolean
+54. Property attr:Snapbar.showGrip has type Boolean overrides property attr:StretchImg.showGrip with type boolean
+55. Property attr:Snapbar.showRollOverGrip has type Boolean overrides property attr:StretchImg.showRollOverGrip with type boolean
+56. Property attr:SpacerItem.height has type number overrides property attr:FormItem.height with type int | String
+57. Property attr:SpacerItem.width has type number overrides property attr:FormItem.width with type int | String
+58. Property attr:Splitbar.capSize has type integer overrides property attr:StretchImg.capSize with type number
+59. Property attr:Splitbar.showDownGrip has type Boolean overrides property attr:StretchImg.showDownGrip with type boolean
+60. Property attr:Splitbar.showGrip has type Boolean overrides property attr:StretchImg.showGrip with type boolean
+61. Property attr:Splitbar.showRollOverGrip has type Boolean overrides property attr:StretchImg.showRollOverGrip with type boolean
+62. Property attr:Splitbar.vertical has type boolean overrides property attr:StretchImg.vertical with type Boolean
+63. Property attr:SummaryBuilder.dataSource has type DataSource | ID overrides property attr:FormulaBuilder.dataSource with type DataSource | String
+64. Property attr:TextAreaItem.height has type number overrides property attr:FormItem.height with type int | String
+65. Property attr:TextAreaItem.pickerIconHeight has type Integer overrides property attr:FormItem.pickerIconHeight with type int
+66. Property attr:TextAreaItem.width has type number overrides property attr:FormItem.width with type int | String
+67. Property attr:TextItem.height has type number overrides property attr:FormItem.height with type int | String
+68. Property attr:TextItem.width has type number overrides property attr:FormItem.width with type int | String
+69. Property attr:TimeItem.displayFormat has type TimeDisplayFormat overrides property attr:FormItem.displayFormat with type Varies
+70. Property attr:TimeItem.textBoxStyle has type CSSStyleName overrides property attr:FormItem.textBoxStyle with type FormItemBaseStyle
+71. Property attr:Toolbar.vertical has type Boolean overrides property attr:Layout.vertical with type boolean
+72. Property attr:ToolStrip.vertical has type Boolean overrides property attr:Layout.vertical with type boolean
+73. Property attr:ToolStripResizer.hSrc has type SCImgURL overrides property attr:ImgSplitbar.hSrc with type String
+74. Property attr:TreeGrid.data has type Tree overrides property attr:ListGrid.data with type List of ListGridRecord
+75. Property attr:TreeGrid.dataProperties has type Tree overrides property attr:ListGrid.dataProperties with type ResultSet
+76. Property attr:TreeGrid.fields has type Array of TreeGridField overrides property attr:ListGrid.fields with type Array of ListGridField
+77. Property attr:TreeMenuButton.title has type String overrides property attr:Button.title with type HTMLString
+78. Property attr:UploadItem.height has type number overrides property attr:FormItem.height with type int | String
+79. Property attr:UploadItem.width has type number overrides property attr:FormItem.width with type int | String
+
+
+Attributes missing R flag (or missing flags altogether): 46 (Should they all have an R flag?)
 1. attr:Calendar.eventCanvas, Flags=A
 2. attr:Calendar.eventCanvasButtonLayout, Flags=A
 3. attr:Calendar.eventCanvasCloseButton, Flags=A
@@ -48,15 +130,16 @@ Attributes missing R flag: 45 (Should they all have an R flag?)
 34. attr:ResultSet.initialData, Flags=IA
 35. attr:ResultSet.initialLength, Flags=IA
 36. attr:ResultSet.sortSpecifiers, Flags=IA
-37. attr:RichTextItem.controlGroups, Flags=IA
-38. attr:SectionStackSection.canCollapse, Flags=I
-39. attr:SectionStackSection.canDropBefore, Flags=I
-40. attr:SectionStackSection.canReorder, Flags=I
-41. attr:SectionStackSection.expanded, Flags=I
-42. attr:SectionStackSection.hidden, Flags=I
-43. attr:SectionStackSection.items, Flags=I
-44. attr:SectionStackSection.resizeable, Flags=I
-45. attr:SectionStackSection.showHeader, Flags=I
+37. attr:ResultTree.useSimpleCriteriaLOD, Flags=
+38. attr:RichTextItem.controlGroups, Flags=IA
+39. attr:SectionStackSection.canCollapse, Flags=I
+40. attr:SectionStackSection.canDropBefore, Flags=I
+41. attr:SectionStackSection.canReorder, Flags=I
+42. attr:SectionStackSection.expanded, Flags=I
+43. attr:SectionStackSection.hidden, Flags=I
+44. attr:SectionStackSection.items, Flags=I
+45. attr:SectionStackSection.resizeable, Flags=I
+46. attr:SectionStackSection.showHeader, Flags=I
 
 
 Methods with bad flags: 0 (methods should not have any flags except A?)
@@ -124,7 +207,7 @@ Classes without inheritsFrom attribute: 61 (Maybe it should inherit from Class, 
 61. XMLTools
 
 
-Object attributes marked with W flag: 288 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
+Object attributes marked with W flag: 289 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
 1. attr:AdvancedCriteria.strictSQLFiltering
 2. attr:CalendarEvent.backgroundColor
 3. attr:CalendarEvent.borderColor
@@ -294,125 +377,126 @@ Object attributes marked with W flag: 288 (attributes on objects are always read
 167. attr:ListGridField.optionCriteria
 168. attr:ListGridField.optionDataSource
 169. attr:ListGridField.required
-170. attr:ListGridField.shouldPrint
-171. attr:ListGridField.showAlternateStyle
-172. attr:ListGridField.showDefaultContextMenu
-173. attr:ListGridField.showHilitesInGroupSummary
-174. attr:ListGridField.showHover
-175. attr:ListGridField.showHoverComponents
-176. attr:ListGridField.showTitle
-177. attr:ListGridField.showValueIconOnly
-178. attr:ListGridField.sortByDisplayField
-179. attr:ListGridField.sortByMappedValue
-180. attr:ListGridField.sortDirection
-181. attr:ListGridField.spannedHeaderBaseStyle
-182. attr:ListGridField.summaryTitle
-183. attr:ListGridField.summaryValue
-184. attr:ListGridField.suppressValueIcon
-185. attr:ListGridField.target
-186. attr:ListGridField.timeFormatter
-187. attr:ListGridField.title
-188. attr:ListGridField.userFormula
-189. attr:ListGridField.userSummary
-190. attr:ListGridField.validateOnChange
-191. attr:ListGridField.validators
-192. attr:ListGridField.valueField
-193. attr:ListGridField.valueIconHeight
-194. attr:ListGridField.valueIconLeftPadding
-195. attr:ListGridField.valueIconOrientation
-196. attr:ListGridField.valueIconRightPadding
-197. attr:ListGridField.valueIcons
-198. attr:ListGridField.valueIconSize
-199. attr:ListGridField.valueIconWidth
-200. attr:ListGridField.valueMap
-201. attr:ListGridField.width
-202. attr:ListGridField.wrap
-203. attr:ListGridRecord._baseStyle
-204. attr:ListGridRecord._canRemove
-205. attr:ListGridRecord.customStyle
-206. attr:ListGridRecord.detailDS
-207. attr:ListGridRecord.includeInSummary
-208. attr:ListGridRecord.isGridSummary
-209. attr:ListGridRecord.isGroupSummary
-210. attr:ListGridRecord.linkText
-211. attr:ListGridRecord.singleCellValue
-212. attr:MetricSettings.chartType
-213. attr:MetricSettings.dataColors
-214. attr:MetricSettings.filled
-215. attr:MetricSettings.proportional
-216. attr:MetricSettings.stacked
-217. attr:NavigationBarViewState.alwaysShowLeftButtonTitle
-218. attr:NavigationBarViewState.controls
-219. attr:NavigationBarViewState.leftButtonTitle
-220. attr:NavigationBarViewState.shortLeftButtonTitle
-221. attr:NavigationBarViewState.showLeftButton
-222. attr:NavigationBarViewState.title
-223. attr:RPCRequest.actionURL
-224. attr:RPCRequest.bypassCache
-225. attr:RPCRequest.callback
-226. attr:RPCRequest.callbackParam
-227. attr:RPCRequest.clientContext
-228. attr:RPCRequest.containsCredentials
-229. attr:RPCRequest.contentType
-230. attr:RPCRequest.data
-231. attr:RPCRequest.downloadResult
-232. attr:RPCRequest.downloadToNewWindow
-233. attr:RPCRequest.evalResult
-234. attr:RPCRequest.evalVars
-235. attr:RPCRequest.httpHeaders
-236. attr:RPCRequest.httpMethod
-237. attr:RPCRequest.ignoreTimeout
-238. attr:RPCRequest.omitNullMapValuesInResponse
-239. attr:RPCRequest.params
-240. attr:RPCRequest.paramsOnly
-241. attr:RPCRequest.prompt
-242. attr:RPCRequest.promptCursor
-243. attr:RPCRequest.promptDelay
-244. attr:RPCRequest.promptStyle
-245. attr:RPCRequest.sendNoQueue
-246. attr:RPCRequest.serverOutputAsString
-247. attr:RPCRequest.showPrompt
-248. attr:RPCRequest.suppressAutoDraw
-249. attr:RPCRequest.timeout
-250. attr:RPCRequest.transport
-251. attr:RPCRequest.useSimpleHttp
-252. attr:RPCRequest.useXmlHttpRequest
-253. attr:RPCRequest.willHandleError
-254. attr:SectionStackSection.showClippedTitleOnHover
-255. attr:SummaryConfiguration.badFormulaResultValue
-256. attr:SummaryConfiguration.invalidSummaryValue
-257. attr:Tab.canClose
-258. attr:Tab.canEditTitle
-259. attr:Tab.closeIcon
-260. attr:Tab.closeIconSize
-261. attr:Tab.disabled
-262. attr:Tab.icon
-263. attr:Tab.iconHeight
-264. attr:Tab.iconSize
-265. attr:Tab.iconWidth
-266. attr:Tab.ID
-267. attr:Tab.name
-268. attr:Tab.pane
-269. attr:Tab.pickerTitle
-270. attr:Tab.prompt
-271. attr:Tab.title
-272. attr:Tab.width
-273. attr:TestFunctionResult.emptyTestValue
-274. attr:TestFunctionResult.errorText
-275. attr:TestFunctionResult.failedExecution
-276. attr:TestFunctionResult.failedGeneration
-277. attr:TestFunctionResult.record
-278. attr:TestFunctionResult.result
-279. attr:TileRecord.tileConstructor
-280. attr:TileRecord.tileProperties
-281. attr:TreeGridField.treeField
-282. attr:TreeNode.children
-283. attr:TreeNode.icon
-284. attr:TreeNode.showDropIcon
-285. attr:TreeNode.showOpenIcon
-286. attr:TreeNode.showSelectedIcon
-287. attr:UserFormula.text
-288. attr:UserSummary.text
+170. attr:ListGridField.selectCellTextOnClick
+171. attr:ListGridField.shouldPrint
+172. attr:ListGridField.showAlternateStyle
+173. attr:ListGridField.showDefaultContextMenu
+174. attr:ListGridField.showHilitesInGroupSummary
+175. attr:ListGridField.showHover
+176. attr:ListGridField.showHoverComponents
+177. attr:ListGridField.showTitle
+178. attr:ListGridField.showValueIconOnly
+179. attr:ListGridField.sortByDisplayField
+180. attr:ListGridField.sortByMappedValue
+181. attr:ListGridField.sortDirection
+182. attr:ListGridField.spannedHeaderBaseStyle
+183. attr:ListGridField.summaryTitle
+184. attr:ListGridField.summaryValue
+185. attr:ListGridField.suppressValueIcon
+186. attr:ListGridField.target
+187. attr:ListGridField.timeFormatter
+188. attr:ListGridField.title
+189. attr:ListGridField.userFormula
+190. attr:ListGridField.userSummary
+191. attr:ListGridField.validateOnChange
+192. attr:ListGridField.validators
+193. attr:ListGridField.valueField
+194. attr:ListGridField.valueIconHeight
+195. attr:ListGridField.valueIconLeftPadding
+196. attr:ListGridField.valueIconOrientation
+197. attr:ListGridField.valueIconRightPadding
+198. attr:ListGridField.valueIcons
+199. attr:ListGridField.valueIconSize
+200. attr:ListGridField.valueIconWidth
+201. attr:ListGridField.valueMap
+202. attr:ListGridField.width
+203. attr:ListGridField.wrap
+204. attr:ListGridRecord._baseStyle
+205. attr:ListGridRecord._canRemove
+206. attr:ListGridRecord.customStyle
+207. attr:ListGridRecord.detailDS
+208. attr:ListGridRecord.includeInSummary
+209. attr:ListGridRecord.isGridSummary
+210. attr:ListGridRecord.isGroupSummary
+211. attr:ListGridRecord.linkText
+212. attr:ListGridRecord.singleCellValue
+213. attr:MetricSettings.chartType
+214. attr:MetricSettings.dataColors
+215. attr:MetricSettings.filled
+216. attr:MetricSettings.proportional
+217. attr:MetricSettings.stacked
+218. attr:NavigationBarViewState.alwaysShowLeftButtonTitle
+219. attr:NavigationBarViewState.controls
+220. attr:NavigationBarViewState.leftButtonTitle
+221. attr:NavigationBarViewState.shortLeftButtonTitle
+222. attr:NavigationBarViewState.showLeftButton
+223. attr:NavigationBarViewState.title
+224. attr:RPCRequest.actionURL
+225. attr:RPCRequest.bypassCache
+226. attr:RPCRequest.callback
+227. attr:RPCRequest.callbackParam
+228. attr:RPCRequest.clientContext
+229. attr:RPCRequest.containsCredentials
+230. attr:RPCRequest.contentType
+231. attr:RPCRequest.data
+232. attr:RPCRequest.downloadResult
+233. attr:RPCRequest.downloadToNewWindow
+234. attr:RPCRequest.evalResult
+235. attr:RPCRequest.evalVars
+236. attr:RPCRequest.httpHeaders
+237. attr:RPCRequest.httpMethod
+238. attr:RPCRequest.ignoreTimeout
+239. attr:RPCRequest.omitNullMapValuesInResponse
+240. attr:RPCRequest.params
+241. attr:RPCRequest.paramsOnly
+242. attr:RPCRequest.prompt
+243. attr:RPCRequest.promptCursor
+244. attr:RPCRequest.promptDelay
+245. attr:RPCRequest.promptStyle
+246. attr:RPCRequest.sendNoQueue
+247. attr:RPCRequest.serverOutputAsString
+248. attr:RPCRequest.showPrompt
+249. attr:RPCRequest.suppressAutoDraw
+250. attr:RPCRequest.timeout
+251. attr:RPCRequest.transport
+252. attr:RPCRequest.useSimpleHttp
+253. attr:RPCRequest.useXmlHttpRequest
+254. attr:RPCRequest.willHandleError
+255. attr:SectionStackSection.showClippedTitleOnHover
+256. attr:SummaryConfiguration.badFormulaResultValue
+257. attr:SummaryConfiguration.invalidSummaryValue
+258. attr:Tab.canClose
+259. attr:Tab.canEditTitle
+260. attr:Tab.closeIcon
+261. attr:Tab.closeIconSize
+262. attr:Tab.disabled
+263. attr:Tab.icon
+264. attr:Tab.iconHeight
+265. attr:Tab.iconSize
+266. attr:Tab.iconWidth
+267. attr:Tab.ID
+268. attr:Tab.name
+269. attr:Tab.pane
+270. attr:Tab.pickerTitle
+271. attr:Tab.prompt
+272. attr:Tab.title
+273. attr:Tab.width
+274. attr:TestFunctionResult.emptyTestValue
+275. attr:TestFunctionResult.errorText
+276. attr:TestFunctionResult.failedExecution
+277. attr:TestFunctionResult.failedGeneration
+278. attr:TestFunctionResult.record
+279. attr:TestFunctionResult.result
+280. attr:TileRecord.tileConstructor
+281. attr:TileRecord.tileProperties
+282. attr:TreeGridField.treeField
+283. attr:TreeNode.children
+284. attr:TreeNode.icon
+285. attr:TreeNode.showDropIcon
+286. attr:TreeNode.showOpenIcon
+287. attr:TreeNode.showSelectedIcon
+288. attr:UserFormula.text
+289. attr:UserSummary.text
 
 
 
@@ -652,10 +736,10 @@ The following methods were excluded
 14. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-14	240	5	306	70	3562	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	13	18	1	45	288	0	131	384	0	0	0	240	5	69	298	3295	1	1	0.9857143	0.9738562	0.9250421	
+2017-08-16	240	5	306	70	3562	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	13	18	1	46	289	0	131	384	0	0	0	240	5	69	298	3295	1	1	0.9857143	0.9738562	0.9250421	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-08-14
+Metrics for build SNAPSHOT_v12.0d_2017-08-16
 ===== Information =====
 (Informational only, not a problem)
 Types: 240
@@ -685,8 +769,8 @@ Percentage of Methods generated: 93 %
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)
 Methods with bad flags: 0
 Suspected optional parameters that are marked with optional='false': 18
-Attributes missing R flag: 45
-Object attributes marked with W flag: 288
+Attributes missing R flag: 46
+Object attributes marked with W flag: 289
 OR specified as ' or ': 0
 OR specified as ' \|\| ': 0
 OR specified as ', ': 0
