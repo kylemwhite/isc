@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/16/2017 9:16:40 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-16
+// Generated: 8/17/2017 7:00:17 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-17
 
 declare namespace Isc {
 
@@ -8203,12 +8203,13 @@ declare namespace Isc {
 	export interface Tab {
 		/** 
 		 * (Read only) If enabled, the tab will collapse to show just its icon when showing the title would
-		 * cause overflow of a containing TabBar.
+		 * cause overflow of a containing TabBar. While collapsed, the tab will show its
+		 * title on hover, unless an explicit hover has been specified such as by Tab.prompt.
 		 * Flags: IR
 		 */
 		readonly canAdaptWidth?: boolean /* Boolean */;
 		/** 
-		 * Determines whether this tab should show a close icon allowing the user to dismiss the tab
+		 * (Read only) Determines whether this tab should show a close icon allowing the user to dismiss the tab
 		 * by clicking on the close icon directly. The URL for the close icon's image will be derived from 
 		 * TabSet.closeTabIcon by default, but may be overridden by explicitly specifying
 		 * Tab.closeIcon.
@@ -8221,7 +8222,7 @@ declare namespace Isc {
 		 * 
 		 * After the TabSet has been created, you can change a tab's canClose property by calling
 		 * TabSet.setCanCloseTab.
-		 * Flags: IRW
+		 * Flags: IR
 		 */
 		readonly canClose?: boolean;
 		/** 
@@ -8249,22 +8250,22 @@ declare namespace Isc {
 		 */
 		readonly canReorder?: boolean /* Boolean */;
 		/** 
-		 * Custom src for the close icon for this tab to display if it is closeable.
+		 * (Read only) Custom src for the close icon for this tab to display if it is closeable.
 		 * See Tab.canClose and TabSet.canCloseTabs.
-		 * Flags: IRW
+		 * Flags: IR
 		 */
 		readonly closeIcon?: string /* SCImgURL */;
 		/** 
-		 * Size of the Tab.closeIcon for this tab. If unspecified the icon will be sized
+		 * (Read only) Size of the Tab.closeIcon for this tab. If unspecified the icon will be sized
 		 * according to TabSet.closeTabIconSize
-		 * Flags: IRW
+		 * Flags: IR
 		 */
 		readonly closeIconSize?: number;
 		/** 
-		 * If specified, this tab will initially be rendered in a disabled state. To enable or
+		 * (Read only) If specified, this tab will initially be rendered in a disabled state. To enable or
 		 * disable tabs on the fly use the TabSet.enableTab, and TabSet.disableTab
 		 * methods.
-		 * Flags: IRW
+		 * Flags: IR
 		 */
 		readonly disabled?: boolean;
 		/** 
@@ -8276,7 +8277,7 @@ declare namespace Isc {
 		 */
 		readonly enableWhen?: AdvancedCriteria;
 		/** 
-		 * If specified, this tab will show an icon next to the tab title. 
+		 * (Read only) If specified, this tab will show an icon next to the tab title. 
 		 * 
 		 * NOTE: if you enable TabSet.canCloseTabs','closeable tabs,
 		 * tab.icon is used for the close icon. TabSet.canCloseTabs describes
@@ -8291,27 +8292,39 @@ declare namespace Isc {
 		 * and Tab.iconHeight. Without an explicitly specified size, tabs may be drawn
 		 * overlapping or with gaps the first time a page is loaded, because the icon is not cached
 		 * and therefore its size isn't known.
-		 * Flags: IRW
+		 * 
+		 * After the TabSet has been created, you can change a tab's icon property by
+		 * calling TabSet.setTabProperties.
+		 * Flags: IR
 		 */
 		readonly icon?: string /* SCImgURL */;
 		/** 
-		 * If Tab.icon is specified, this property may be used to specify a size for the icon
-		 * Flags: IRW
+		 * (Read only) If Tab.icon is specified, this property may be used to specify a size for the icon
+		 * 
+		 * After the TabSet has been created, you can change a tab's iconHeight
+		 * property by calling TabSet.setTabProperties.
+		 * Flags: IR
 		 */
 		readonly iconHeight?: number /* integer */;
 		/** 
-		 * If Tab.icon is specified, this property may be used to specify a size for the icon.
+		 * (Read only) If Tab.icon is specified, this property may be used to specify a size for the icon.
 		 * Per side sizing may be specified instead via Tab.iconWidth and Tab.iconHeight.
-		 * Flags: IRW
+		 * 
+		 * After the TabSet has been created, you can change a tab's iconSize property
+		 * by calling TabSet.setTabProperties.
+		 * Flags: IR
 		 */
 		readonly iconSize?: number /* integer */;
 		/** 
-		 * If Tab.icon is specified, this property may be used to specify a size for the icon
-		 * Flags: IRW
+		 * (Read only) If Tab.icon is specified, this property may be used to specify a size for the icon
+		 * 
+		 * After the TabSet has been created, you can change a tab's iconWidth property
+		 * by calling TabSet.setTabProperties.
+		 * Flags: IR
 		 */
 		readonly iconWidth?: number /* integer */;
 		/** 
-		 * Optional ID for the tab, which can later be used to reference the tab.
+		 * (Read only) Optional ID for the tab, which can later be used to reference the tab.
 		 * APIs requiring a reference to a tab will accept the tab's ID 
 		 * [including TabSet.selectTab, TabSet.updateTab, TabSet.removeTab].
 		 * The ID will also be passed to the TabSet.tabSelected and TabSet.tabDeselected
@@ -8319,7 +8332,7 @@ declare namespace Isc {
 		 * 
 		 * Note that if you provide an ID, it must be globally unique. If you do not want a
 		 * globally unique identifier, set Tab.name instead.
-		 * Flags: IRW
+		 * Flags: IR
 		 */
 		readonly ID?: GlobalId;
 		/** 
@@ -8335,7 +8348,7 @@ declare namespace Isc {
 		 */
 		readonly name?: TabName;
 		/** 
-		 * Specifies the pane associated with this tab. You have two options for the value of
+		 * (Read only) Specifies the pane associated with this tab. You have two options for the value of
 		 * the pane attribute:
 		 * 
 		 * ID - The global ID of an already created Canvas (or subclass).
@@ -8343,7 +8356,7 @@ declare namespace Isc {
 		 * 
 		 * You can change the pane associated with a given tab after the TabSet has been created by
 		 * calling TabSet.updateTab.
-		 * Flags: IRW
+		 * Flags: IR
 		 */
 		readonly pane?: string | Canvas /* ID | Canvas */;
 		/** 
@@ -8353,28 +8366,37 @@ declare namespace Isc {
 		 */
 		readonly paneMargin?: number /* int */;
 		/** 
-		 * If TabSet.showTabPicker is true for this TabSet, if set this property will determine
+		 * (Read only) If TabSet.showTabPicker is true for this TabSet, if set this property will determine
 		 * the title of the picker menu item for this tab. If unset, Tab.title will be used
 		 * instead
-		 * Flags: IRW, Group: tabBarControls
+		 * 
+		 * After the TabSet has been created, you can change a tab's pickerTitle
+		 * property by calling TabSet.setTabProperties.
+		 * Flags: IR, Group: tabBarControls
 		 */
 		readonly pickerTitle?: string /* HTMLString */;
 		/** 
-		 * Specifies the prompt to be displayed when the mouse hovers over the tab.
-		 * Flags: IRW
+		 * (Read only) Specifies the prompt to be displayed when the mouse hovers over the tab.
+		 * 
+		 * After the TabSet has been created, you can change a tab's prompt property by
+		 * calling TabSet.setTabProperties.
+		 * Flags: IR
 		 */
 		readonly prompt?: string /* HTMLString */;
 		/** 
-		 * Specifies the title of the this tab. To change the title after the TabSet has been
+		 * (Read only) Specifies the title of the this tab. To change the title after the TabSet has been
 		 * created, call TabSet.setTabTitle.
-		 * Flags: IRW
+		 * Flags: IR
 		 */
 		readonly title?: string /* HTMLString */;
 		/** 
-		 * You can specify an explicit width for the tab using this property. Note that tabs
+		 * (Read only) You can specify an explicit width for the tab using this property. Note that tabs
 		 * automatically size to make room for the full title, but if you want to e.g. specify a
 		 * uniform width for all tabs in a TabSet, this property enables you to do so.
-		 * Flags: IRW
+		 * 
+		 * After the TabSet has been created, you can change a tab's width property by
+		 * calling TabSet.setTabProperties.
+		 * Flags: IR
 		 */
 		readonly width?: number;
 

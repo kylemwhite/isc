@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-16
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-17
 
 Errors during generation
-Generated: 8/16/2017 9:18:05 AM by kwhite
+Generated: 8/17/2017 7:01:37 AM by kwhite
 
 Summary
 Total Types  : 240
 Total Classes: 306
 Total Objects: 70
-Total Methods: 3562
+Total Methods: 3563
 
 Properties that override a base class property with a different type: 79
 1. Property attr:BlurbItem.textBoxStyle has type CSSStyleName overrides property attr:FormItem.textBoxStyle with type FormItemBaseStyle
@@ -207,7 +207,7 @@ Classes without inheritsFrom attribute: 61 (Maybe it should inherit from Class, 
 61. XMLTools
 
 
-Object attributes marked with W flag: 289 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
+Object attributes marked with W flag: 275 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
 1. attr:AdvancedCriteria.strictSQLFiltering
 2. attr:CalendarEvent.backgroundColor
 3. attr:CalendarEvent.borderColor
@@ -465,38 +465,24 @@ Object attributes marked with W flag: 289 (attributes on objects are always read
 255. attr:SectionStackSection.showClippedTitleOnHover
 256. attr:SummaryConfiguration.badFormulaResultValue
 257. attr:SummaryConfiguration.invalidSummaryValue
-258. attr:Tab.canClose
-259. attr:Tab.canEditTitle
-260. attr:Tab.closeIcon
-261. attr:Tab.closeIconSize
-262. attr:Tab.disabled
-263. attr:Tab.icon
-264. attr:Tab.iconHeight
-265. attr:Tab.iconSize
-266. attr:Tab.iconWidth
-267. attr:Tab.ID
-268. attr:Tab.name
-269. attr:Tab.pane
-270. attr:Tab.pickerTitle
-271. attr:Tab.prompt
-272. attr:Tab.title
-273. attr:Tab.width
-274. attr:TestFunctionResult.emptyTestValue
-275. attr:TestFunctionResult.errorText
-276. attr:TestFunctionResult.failedExecution
-277. attr:TestFunctionResult.failedGeneration
-278. attr:TestFunctionResult.record
-279. attr:TestFunctionResult.result
-280. attr:TileRecord.tileConstructor
-281. attr:TileRecord.tileProperties
-282. attr:TreeGridField.treeField
-283. attr:TreeNode.children
-284. attr:TreeNode.icon
-285. attr:TreeNode.showDropIcon
-286. attr:TreeNode.showOpenIcon
-287. attr:TreeNode.showSelectedIcon
-288. attr:UserFormula.text
-289. attr:UserSummary.text
+258. attr:Tab.canEditTitle
+259. attr:Tab.name
+260. attr:TestFunctionResult.emptyTestValue
+261. attr:TestFunctionResult.errorText
+262. attr:TestFunctionResult.failedExecution
+263. attr:TestFunctionResult.failedGeneration
+264. attr:TestFunctionResult.record
+265. attr:TestFunctionResult.result
+266. attr:TileRecord.tileConstructor
+267. attr:TileRecord.tileProperties
+268. attr:TreeGridField.treeField
+269. attr:TreeNode.children
+270. attr:TreeNode.icon
+271. attr:TreeNode.showDropIcon
+272. attr:TreeNode.showOpenIcon
+273. attr:TreeNode.showSelectedIcon
+274. attr:UserFormula.text
+275. attr:UserSummary.text
 
 
 
@@ -736,17 +722,17 @@ The following methods were excluded
 14. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-16	240	5	306	70	3562	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	13	18	1	46	289	0	131	384	0	0	0	240	5	69	298	3295	1	1	0.9857143	0.9738562	0.9250421	
+2017-08-17	240	5	306	70	3563	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	13	18	1	46	275	0	131	384	0	0	0	240	5	69	298	3296	1	1	0.9857143	0.9738562	0.9250631	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-08-16
+Metrics for build SNAPSHOT_v12.0d_2017-08-17
 ===== Information =====
 (Informational only, not a problem)
 Types: 240
 Interfaces: 5
 Classes: 306
 Objects: 70
-Methods: 3,562
+Methods: 3,563
 Excluded Classes: 8
 string values with quotes: 216
 string values without quotes: 663
@@ -758,7 +744,7 @@ Types Generated: 240
 Interfaces Generated: 5
 Objects Generated: 69
 Classes Generated: 298
-Methods Generated: 3,295
+Methods Generated: 3,296
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
@@ -770,7 +756,7 @@ Percentage of Methods generated: 93 %
 Methods with bad flags: 0
 Suspected optional parameters that are marked with optional='false': 18
 Attributes missing R flag: 46
-Object attributes marked with W flag: 289
+Object attributes marked with W flag: 275
 OR specified as ' or ': 0
 OR specified as ' \|\| ': 0
 OR specified as ', ': 0

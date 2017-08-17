@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-08-16 at 8/16/2017 9:18:05 AM by kwhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-08-17 at 8/17/2017 7:01:38 AM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -17,7 +17,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
 |3|Classes|306|Number of classes found in the referenceDocs.xml file|
 |4|Objects|70|Number of objects found in the referenceDocs.xml file|
-|5|Methods|3,562|Number of methods (instance and class) found in the referenceDocs.xml file|
+|5|Methods|3,563|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|Excluded Classes|8|Number of classes excluded from generation for various reasons.|
 |7|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |8|string values without quotes|663|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
@@ -29,7 +29,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |14|Interfaces Generated|5||
 |15|Objects Generated|69||
 |16|Classes Generated|298||
-|17|Methods Generated|3,295||
+|17|Methods Generated|3,296||
 |18|Percentage of Types generated|100%||
 |19|Percentage of Interfaces generated|100%||
 |20|Percentage of Objects generated|99%||
@@ -43,7 +43,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |   |Item|Value|Description|
 |---|--- |---  |---        |
 ||**Warnings**||**Does not prevent item from being generated but might indicate a problem or inconsistency in the docs**|
-|1|Object attributes marked with W flag|289|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
+|1|Object attributes marked with W flag|275|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
 |2|Attributes missing R flag|46|Almost all attributes have an R flag except these. Is this on purpose?|
 |3|Suspected optional parameters that are marked with optional='false'|18|Probably, although not necessarily, a mistake. Could lead to incorrect code generation.|
 |4|Methods with bad flags|0|Method flags should only contain A|
