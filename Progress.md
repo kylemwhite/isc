@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-08-17 at 8/17/2017 7:01:38 AM by kwhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-08-18 at 8/18/2017 7:01:39 AM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -24,12 +24,12 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |9|string values with period|131|These usually are really references to a constant.|
 |10|Arrays defined as 'Array of'|239|Since most arrays are described this way, this is assumed to be the 'correct' way.|
 |11|String values where reference is found|131|Possible string values that refer to a constant where the constant was found.|
-|12|OR specified as ' \| '|384|Since most ORs are defined this way, it is assumed to be the correct way.|
+|12|OR specified as ' \| '|385|Since most ORs are defined this way, it is assumed to be the correct way.|
 |13|Types Generated|240||
 |14|Interfaces Generated|5||
 |15|Objects Generated|69||
 |16|Classes Generated|298||
-|17|Methods Generated|3,296||
+|17|Methods Generated|3,297||
 |18|Percentage of Types generated|100%||
 |19|Percentage of Interfaces generated|100%||
 |20|Percentage of Objects generated|99%||
@@ -52,7 +52,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |7|OR specified as ', '|0|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 ||**Errors**||**May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented**|
 |1|Classes without inheritsFrom attribute|61|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute|
-|2|Setter Methods with parameter type that does not match the attribute type|13|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
+|2|Setter Methods with parameter type that does not match the attribute type|12|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
 |3|Arrays defined as 'List of'|10|Since most arrays are NOT described this way, this is assumed to be incorrect.|
 |4|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
 |5|String types without baseType|2|Types that are really just strings should have their own type or have the baseType='string'.|

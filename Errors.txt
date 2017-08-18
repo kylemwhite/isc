@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-17
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-18
 
 Errors during generation
-Generated: 8/17/2017 7:01:37 AM by kwhite
+Generated: 8/18/2017 7:01:39 AM by kwhite
 
 Summary
 Total Types  : 240
@@ -616,7 +616,7 @@ Contrained String Type Values without quotes: 663
 Contrained String Type Values with period: 131
 
 ==== How is OR specified? ====
-OR specified as ' | ' : 384
+OR specified as ' | ' : 385
 OR specified as ' or ' : 0
 OR specified as ' || ' : 0
 OR specified as ', ' : 0
@@ -651,20 +651,19 @@ Methods with required parameter after optional parameter: 0
 (Required parameters should all be listed BEFORE optional parameters)
 
 
-Setter Methods with parameter type that does not match the attribute type: 13
+Setter Methods with parameter type that does not match the attribute type: 12
 1. method:AdaptiveMenu.setItems, attrType='Array of MenuItem', setter Type = 'Array of MenuItem | MenuItem'
 2. method:Canvas.setValuesManager, attrType='ValuesManager | GlobalId', setter Type = 'ValuesManager'
-3. method:Canvas.setWidth, attrType='Number | String', setter Type = 'number'
-4. method:DateItem.setEndDate, attrType='Date', setter Type = 'Date | String'
-5. method:DateItem.setStartDate, attrType='Date', setter Type = 'Date | String'
-6. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | GlobalId'
-7. method:DrawItem.setFillGradient, attrType='Gradient | String', setter Type = 'Gradient'
-8. method:FormItem.setOptionDataSource, attrType='DataSource | String', setter Type = 'DataSource'
-9. method:NavigationBar.setCustomNavControl, attrType='Canvas', setter Type = 'Array of String | Array of Canvas'
-10. method:Portlet.setHeight, attrType='Number | String', setter Type = 'Number'
-11. method:Portlet.setRowHeight, attrType='Number | String', setter Type = 'Number'
-12. method:Progressbar.setLength, attrType='Number | String', setter Type = 'Number'
-13. method:TileGrid.setData, attrType='Array of Record[] | Array of TileRecord[] | RecordList', setter Type = 'Array of Record | Array of TileRecord | ResultSet'
+3. method:DateItem.setEndDate, attrType='Date', setter Type = 'Date | String'
+4. method:DateItem.setStartDate, attrType='Date', setter Type = 'Date | String'
+5. method:Deck.setCurrentPane, attrType='Canvas', setter Type = 'Canvas | GlobalId'
+6. method:DrawItem.setFillGradient, attrType='Gradient | String', setter Type = 'Gradient'
+7. method:FormItem.setOptionDataSource, attrType='DataSource | String', setter Type = 'DataSource'
+8. method:NavigationBar.setCustomNavControl, attrType='Canvas', setter Type = 'Array of String | Array of Canvas'
+9. method:Portlet.setHeight, attrType='Number | String', setter Type = 'Number'
+10. method:Portlet.setRowHeight, attrType='Number | String', setter Type = 'Number'
+11. method:Progressbar.setLength, attrType='Number | String', setter Type = 'Number'
+12. method:TileGrid.setData, attrType='Array of Record[] | Array of TileRecord[] | RecordList', setter Type = 'Array of Record | Array of TileRecord | ResultSet'
 
 Getter Methods with return type that does not match the attribute type: 1
 1. method:SectionStack.getSections, attrType='Array of SectionStackSection Properties', return Type = 'List'
@@ -709,23 +708,22 @@ The following methods were excluded
 === Setter method param type does not match attribute type ===
 2. method:AdaptiveMenu.setItems
 3. method:Canvas.setValuesManager
-4. method:Canvas.setWidth
-5. method:DateItem.setEndDate
-6. method:DateItem.setStartDate
-7. method:Deck.setCurrentPane
-8. method:DrawItem.setFillGradient
-9. method:FormItem.setOptionDataSource
-10. method:NavigationBar.setCustomNavControl
-11. method:Portlet.setHeight
-12. method:Portlet.setRowHeight
-13. method:Progressbar.setLength
-14. method:TileGrid.setData
+4. method:DateItem.setEndDate
+5. method:DateItem.setStartDate
+6. method:Deck.setCurrentPane
+7. method:DrawItem.setFillGradient
+8. method:FormItem.setOptionDataSource
+9. method:NavigationBar.setCustomNavControl
+10. method:Portlet.setHeight
+11. method:Portlet.setRowHeight
+12. method:Progressbar.setLength
+13. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-17	240	5	306	70	3563	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	13	18	1	46	275	0	131	384	0	0	0	240	5	69	298	3296	1	1	0.9857143	0.9738562	0.9250631	
+2017-08-18	240	5	306	70	3563	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	275	0	131	385	0	0	0	240	5	69	298	3297	1	1	0.9857143	0.9738562	0.9253438	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-08-17
+Metrics for build SNAPSHOT_v12.0d_2017-08-18
 ===== Information =====
 (Informational only, not a problem)
 Types: 240
@@ -739,12 +737,12 @@ string values without quotes: 663
 string values with period: 131
 Arrays defined as 'Array of': 239
 String values where reference is found: 131
-OR specified as ' \| ': 384
+OR specified as ' \| ': 385
 Types Generated: 240
 Interfaces Generated: 5
 Objects Generated: 69
 Classes Generated: 298
-Methods Generated: 3,296
+Methods Generated: 3,297
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
@@ -774,7 +772,7 @@ Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0
 Methods with required parameters after optional parameters: 0
-Setter Methods with parameter type that does not match the attribute type: 13
+Setter Methods with parameter type that does not match the attribute type: 12
 Getter Methods with return type that does not match the attribute type: 1
 String values without reference: 0
 
