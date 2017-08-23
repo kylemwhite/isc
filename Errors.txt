@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-22
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-23
 
 Errors during generation
-Generated: 8/22/2017 7:01:26 AM by kwhite
+Generated: 8/23/2017 7:01:26 AM by kwhite
 
 Summary
 Total Types  : 240
@@ -207,7 +207,7 @@ Classes without inheritsFrom attribute: 61 (Maybe it should inherit from Class, 
 61. XMLTools
 
 
-Object attributes marked with W flag: 275 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
+Object attributes marked with W flag: 274 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
 1. attr:AdvancedCriteria.strictSQLFiltering
 2. attr:CalendarEvent.backgroundColor
 3. attr:CalendarEvent.borderColor
@@ -466,23 +466,22 @@ Object attributes marked with W flag: 275 (attributes on objects are always read
 256. attr:SummaryConfiguration.badFormulaResultValue
 257. attr:SummaryConfiguration.invalidSummaryValue
 258. attr:Tab.canEditTitle
-259. attr:Tab.name
-260. attr:TestFunctionResult.emptyTestValue
-261. attr:TestFunctionResult.errorText
-262. attr:TestFunctionResult.failedExecution
-263. attr:TestFunctionResult.failedGeneration
-264. attr:TestFunctionResult.record
-265. attr:TestFunctionResult.result
-266. attr:TileRecord.tileConstructor
-267. attr:TileRecord.tileProperties
-268. attr:TreeGridField.treeField
-269. attr:TreeNode.children
-270. attr:TreeNode.icon
-271. attr:TreeNode.showDropIcon
-272. attr:TreeNode.showOpenIcon
-273. attr:TreeNode.showSelectedIcon
-274. attr:UserFormula.text
-275. attr:UserSummary.text
+259. attr:TestFunctionResult.emptyTestValue
+260. attr:TestFunctionResult.errorText
+261. attr:TestFunctionResult.failedExecution
+262. attr:TestFunctionResult.failedGeneration
+263. attr:TestFunctionResult.record
+264. attr:TestFunctionResult.result
+265. attr:TileRecord.tileConstructor
+266. attr:TileRecord.tileProperties
+267. attr:TreeGridField.treeField
+268. attr:TreeNode.children
+269. attr:TreeNode.icon
+270. attr:TreeNode.showDropIcon
+271. attr:TreeNode.showOpenIcon
+272. attr:TreeNode.showSelectedIcon
+273. attr:UserFormula.text
+274. attr:UserSummary.text
 
 
 
@@ -720,10 +719,10 @@ The following methods were excluded
 13. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-08-22	240	5	306	70	3564	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	275	0	131	385	0	0	0	240	5	69	298	3298	1	1	0.9857143	0.9738562	0.9253647	
+2017-08-23	240	5	306	70	3564	8	0	61	216	663	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	274	0	131	385	0	0	0	240	5	69	298	3298	1	1	0.9857143	0.9738562	0.9253647	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-08-22
+Metrics for build SNAPSHOT_v12.0d_2017-08-23
 ===== Information =====
 (Informational only, not a problem)
 Types: 240
@@ -754,7 +753,7 @@ Percentage of Methods generated: 93 %
 Methods with bad flags: 0
 Suspected optional parameters that are marked with optional='false': 18
 Attributes missing R flag: 46
-Object attributes marked with W flag: 275
+Object attributes marked with W flag: 274
 OR specified as ' or ': 0
 OR specified as ' \|\| ': 0
 OR specified as ', ': 0

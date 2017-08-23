@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/22/2017 7:00:08 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-22
+// Generated: 8/23/2017 7:00:09 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-23
 
 declare namespace Isc {
 
@@ -8262,8 +8262,9 @@ declare namespace Isc {
 		 */
 		readonly closeIconSize?: number;
 		/** 
-		 * (Read only) If specified, this tab will initially be rendered in a disabled state. To enable or
-		 * disable tabs on the fly use the TabSet.enableTab, and TabSet.disableTab
+		 * (Read only) If specified, this tab will initially be rendered in a disabled state. To
+		 * enable or disable tabs on the fly use the TabSet.enableTab, and
+		 * TabSet.disableTab.
 		 * methods.
 		 * Flags: IR
 		 */
@@ -8294,12 +8295,13 @@ declare namespace Isc {
 		 * and therefore its size isn't known.
 		 * 
 		 * After the TabSet has been created, you can change a tab's icon property by
-		 * calling TabSet.setTabProperties.
+		 * calling TabSet.setTabIcon.
 		 * Flags: IR
 		 */
 		readonly icon?: string /* SCImgURL */;
 		/** 
-		 * (Read only) If Tab.icon is specified, this property may be used to specify a size for the icon
+		 * (Read only) If Tab.icon is specified, this property may be used to specify a height for the
+		 * icon.
 		 * 
 		 * After the TabSet has been created, you can change a tab's iconHeight
 		 * property by calling TabSet.setTabProperties.
@@ -8316,7 +8318,8 @@ declare namespace Isc {
 		 */
 		readonly iconSize?: number /* integer */;
 		/** 
-		 * (Read only) If Tab.icon is specified, this property may be used to specify a size for the icon
+		 * (Read only) If Tab.icon is specified, this property may be used to specify a width for the
+		 * icon.
 		 * 
 		 * After the TabSet has been created, you can change a tab's iconWidth property
 		 * by calling TabSet.setTabProperties.
@@ -8336,7 +8339,7 @@ declare namespace Isc {
 		 */
 		readonly ID?: GlobalId;
 		/** 
-		 * Optional name for the tab, which can later be used to reference the tab.
+		 * (Read only) Optional name for the tab, which can later be used to reference the tab.
 		 * APIs requiring a reference to a tab will accept the tab's name
 		 * [including TabSet.selectTab, TabSet.updateTab, TabSet.removeTab].
 		 * This name will also be passed to the TabSet.tabSelected and TabSet.tabDeselected
@@ -8344,7 +8347,7 @@ declare namespace Isc {
 		 * 
 		 * This identifier is requred to be locally unique to the TabSet and cannot be used to get
 		 * a global reference to the Tab. If you want a global reference, set Tab.ID instead.
-		 * Flags: IRW
+		 * Flags: IR
 		 */
 		readonly name?: TabName;
 		/** 
@@ -8354,11 +8357,11 @@ declare namespace Isc {
 		 * ID - The global ID of an already created Canvas (or subclass).
 		 * Canvas - A live instance of a Canvas (or subclass).
 		 * 
-		 * You can change the pane associated with a given tab after the TabSet has been created by
-		 * calling TabSet.updateTab.
+		 * You can change the pane associated with a given tab after the TabSet has
+		 * been created by calling TabSet.updateTab.
 		 * Flags: IR
 		 */
-		readonly pane?: string | Canvas /* ID | Canvas */;
+		readonly pane?: Canvas | string /* Canvas | ID */;
 		/** 
 		 * (Read only) Space to leave around the pane within this Tab.
 		 * If specified, this property takes precedence over TabSet.paneMargin
@@ -8368,7 +8371,7 @@ declare namespace Isc {
 		/** 
 		 * (Read only) If TabSet.showTabPicker is true for this TabSet, if set this property will determine
 		 * the title of the picker menu item for this tab. If unset, Tab.title will be used
-		 * instead
+		 * instead.
 		 * 
 		 * After the TabSet has been created, you can change a tab's pickerTitle
 		 * property by calling TabSet.setTabProperties.
@@ -8384,8 +8387,8 @@ declare namespace Isc {
 		 */
 		readonly prompt?: string /* HTMLString */;
 		/** 
-		 * (Read only) Specifies the title of the this tab. To change the title after the TabSet has been
-		 * created, call TabSet.setTabTitle.
+		 * (Read only) Specifies the title of the this tab. To change the title after the TabSet
+		 * has been created, call TabSet.setTabTitle.
 		 * Flags: IR
 		 */
 		readonly title?: string /* HTMLString */;
@@ -8394,8 +8397,8 @@ declare namespace Isc {
 		 * automatically size to make room for the full title, but if you want to e.g. specify a
 		 * uniform width for all tabs in a TabSet, this property enables you to do so.
 		 * 
-		 * After the TabSet has been created, you can change a tab's width property by
-		 * calling TabSet.setTabProperties.
+		 * After the TabSet has been created, you can change a tab's width
+		 * property by calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
 		readonly width?: number;
