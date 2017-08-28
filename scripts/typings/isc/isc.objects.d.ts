@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 8/25/2017 7:00:09 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-25
+// Generated: 8/28/2017 2:47:49 PM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-08-28
 
 declare namespace Isc {
 
@@ -161,6 +161,565 @@ declare namespace Isc {
 
 
 	/**
+	 * The isc object contains global methods and objects of the Isomorphic SmartClient
+	 * framework.
+	 * 
+	 * See also simpleNamesMode','Simple Names mode. 
+	 */
+	export interface isc {
+
+		/* Instance Method Overrides */
+		/**  
+		 * (Advanced)  Returns the (offset) left-coordinate of an icon within its containing widget.
+		 * 
+		 * @param {any} icon - icon definition
+		 * @return {number} icon left position in px
+		 */
+		getIconLeft?(icon:any /* Object */): number; 
+
+		/**  
+		 * (Advanced)  Returns the size / position of an icon on the page as an array of coordinates.
+		 * 
+		 * @param {any} icon - icon definition for the icon you want to determine the position of (defaults to first icon in this.icons).
+		 * @return {Array<any>} four element array representing the Left, Top, Width, and Height of                      the icon in px.
+		 */
+		getIconPageRect?(icon:any /* Object */): Array<any> /* Array */; 
+
+		/**  
+		 * (Advanced)  Returns the size / position of an icon with respect to the widget rendering out the
+		 * form item as an array of coordinates.
+		 * 
+		 * @param {any} icon - icon definition for the icon you want to determine the position of (defaults to first icon in this.icons).
+		 * @return {Array<any>} four element array representing the Left, Top, Width, and Height of                      the icon in px.
+		 */
+		getIconRect?(icon:any /* Object */): Array<any> /* Array */; 
+
+		/**  
+		 * (Advanced)  Returns the (offset) top-coordinate of an icon within its containing widget.
+		 * 
+		 * @param {any} icon - icon definition
+		 * @return {number} icon top position in px
+		 */
+		getIconTop?(icon:any /* Object */): number; 
+
+	} // isc
+
+	export interface iscStatic {
+
+	/* Methods */
+		/**  
+		 * 
+		 * Copy any properties that do not already have a value in destination. Null and zero values
+		 * are not overwritten, but 'undef' values will be.
+		 * 
+		 * 
+		 * @param {any} destination - Object to which properties will be added.
+		 * @param {any} source - Object from which properties will be added.
+		 * @return {any} The destination object is returned.
+		 */
+		addDefaults(destination:any /* Object */, source:any /* Object */): any /* Object */; 
+
+		/**  
+		 *  Show a modal dialog with a message, icon, and "Yes" and "No" buttons. See Dialog.askIcon.
+		 * 
+		 * The callback will receive boolean true for a Yes button click, boolean false for a No button
+		 * click, or null if the Dialog is dismissed via the close button.
+		 * 
+		 * 
+		 * @param {string} message - message to display
+		 * @param {Callback} callback - Callback to fire when the user clicks a button to dismiss the dialog.
+		 * This has the single parameter 'value', indicating the
+		 * value returned by the Warn dialog from 'okClick()' etc.
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for
+		 * the Dialog, set properties.buttons to an array
+		 * of buttons
+		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 */
+		ask(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+
+		/**  
+		 *  Show a modal dialog with a text entry box, asking the user to enter a value.
+		 * 
+		 * As with other convenience methods that show Dialogs, such as isc.warn,
+		 * the dialog is shown and the function immediately returns. When the user responds, the
+		 * provided callback is called.
+		 * 
+		 * If the user clicks OK, the value typed in is passed to the callback (including the empty
+		 * string ("") if nothing was entered. If the user clicks cancel, the value passed to the
+		 * callback is null.
+		 * 
+		 * A default value for the text field can be passed via properties.defaultValue.
+		 * 
+		 * Keyboard focus is automatically placed in the text entry field, and hitting the enter key is
+		 * the equivalent of pressing OK.
+		 * 
+		 * 
+		 * @param {string} message - message to display
+		 * @param {Callback} callback - Callback to fire when the user clicks a button to dismiss the dialog.
+		 * This has the single parameter 'value', indicating the
+		 * user entry, or null if cancel was pressed or the window
+		 * closed
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for
+		 * the Dialog, set properties.buttons to an array of
+		 * buttons
+		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 */
+		askForValue(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+
+		/**  
+		 * 
+		 * Clear the modal prompt being shown to the user.
+		 * 
+		 * 
+		 */
+		clearPrompt(): void; 
+
+		/**  
+		 *  Create a deep clone of an object that can be edited without affecting the original
+		 * 
+		 * All mutable types, including Objects, Arrays and Dates, are copied. All immutable types
+		 * (Number, String, etc) are just preserved by reference.
+		 * 
+		 * Only JavaScript built-in types may be cloned. SmartClient UI widgets do not support
+		 * cloning, instead, use Class.create to make a new component with similar
+		 * configuration.
+		 * 
+		 * Does not handle looping references (will infinite loop).
+		 * 
+		 * 
+		 * @param {any} object - object to clone
+		 * @return {any} cloned object
+		 */
+		clone(object:any /* Object */): any /* Object */; 
+
+		/**  
+		 *  Show a modal dialog with a message, icon, and "OK" and "Cancel" buttons. See Dialog.confirmIcon.
+		 * 
+		 * The callback will receive boolean true for an OK button click, or null for a Cancel click or
+		 * if the Dialog is dismissed via the close button.
+		 * 
+		 * Note: this does not override the native window.confirm() method.
+		 * 
+		 * 
+		 * @param {string} message - message to display
+		 * @param {Callback} callback - Callback to fire when the user clicks a button to dismiss the dialog.
+		 * This has the single parameter 'value', indicating the
+		 * value returned by the Warn dialog from 'okClick()' etc.
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for
+		 * the Dialog, set properties.buttons to an array of
+		 * buttons
+		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 */
+		confirm(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+
+		/**  
+		 *  Shortcut for isc.ClassFactory.defineClass().
+		 * 
+		 * @param {string} className - Name for the new class.
+		 * @param {Class} superClass - Optional SuperClass Class object or name
+		 * @return {Class} Returns the new Class object.
+		 */
+		defineClass(className:string /* String */, superClass?:Class): Class; 
+
+		/**  
+		 *  If a dialog triggered via isc.say, isc.ask,
+		 * isc.warn, isc.confirm or
+		 * isc.askForValue is currently visible, it will be dismissed. The
+		 * callback passed to the relevant method will never fire.
+		 * 
+		 * Note this is a rarely used API with very few valid use cases. As an example, perhaps some kind of
+		 * periodic (non-user triggered) event would cause an entire area of the UI to be removed (such as a tab)
+		 * and the system wants to ensure that no modal dialogs are currently showing from that part of the UI.
+		 * In this case, while dismissCurrentDialog could be used to ensure the part of the UI being
+		 * removed didn't leave behind a modal dialog.
+		 * 
+		 * To clear a modal prompt shown by isc.showPrompt, use isc.clearPrompt instead.
+		 * 
+		 * 
+		 */
+		dismissCurrentDialog(): void; 
+
+		/**  
+		 *  Same as Log.echo.
+		 * 
+		 * 
+		 * @param {any} value - object to echo
+		 * @return {string} a short string representation of the object
+		 */
+		echo(value:any /* Any */): string /* String */; 
+
+		/**  
+		 *  Same as Log.echoAll.
+		 * 
+		 * 
+		 * @param {any} value - object to echo
+		 * @return {string} a short string representation of the object
+		 */
+		echoAll(value:any /* Any */): string /* String */; 
+
+		/**  
+		 *  Same as Log.echoLeaf.
+		 * 
+		 * 
+		 * @param {any} value - object to echo
+		 * @return {string} a short string representation of the object
+		 */
+		echoLeaf(value:any /* Any */): string /* String */; 
+
+		/**  
+		 *  Evaluate a string of script and return the result. Falls through to
+		 * Class.evaluate','Class.evaluate()
+		 * 
+		 * 
+		 * @param {string} expression - Expression to evaluate
+		 * @return {any} Result of evaluating the expression passed in
+		 */
+		eval(expression:string /* String */): any /* Any */; 
+
+		/**  
+		 *  Return the first property name in a given Object, according to for..in iteration order.
+		 * 
+		 * 
+		 * @param {any} object - Object to get properties from
+		 * @return {string} first property name, or null if Object has no properties
+		 */
+		firstKey(object:any /* Object */): string /* String */; 
+
+		/**  
+		 *  Given a value and an object of key:value pairs, return a key that corresponds
+		 * to that value.
+		 * 
+		 * If the key is not found, defaultKey will be returned if provided, otherwise the
+		 * value will be returned.
+		 * 
+		 * 
+		 * @param {string} value - value to look for
+		 * @param {any} valueMap - object of key:value pairs
+		 * @param {any} defaultKey - default key to return if value not found
+		 * @return {any} returns first key in valueMap with value, or                                              defaultKey if value not found
+		 */
+		getKeyForValue(value:string | number /* String | number */, valueMap:any /* Object */, defaultKey?:any /* Any */): any /* Any */; 
+
+		/**  
+		 * 
+		 * Return all keys (property names) of a given object
+		 * 
+		 * 
+		 * @param {any} object - object to get properties from
+		 * @return {Array<any>} String names of all properties.  NOTE: never null
+		 */
+		getKeys(object:any /* Object */): Array<any> /* Array */; 
+
+		/**  
+		 *  Given a key and an object of key:value pairs, return the value that corresponds to
+		 * that key.
+		 * 
+		 * If the key is not found, defaultValue will be returned if provided, otherwise the
+		 * key will be returned.
+		 * 
+		 * 
+		 * @param {string} key - key to look for
+		 * @param {any} valueMap - object of key:value pairs
+		 * @param {any} defaultValue - default value to return if key not found
+		 * @return {any} returns value in valueMap under name key, or                                              defaultValue if key not found
+		 */
+		getValueForKey(key:string | number /* String | number */, valueMap:any /* Object */, defaultValue?:any /* Any */): any /* Any */; 
+
+		/**  
+		 * 
+		 * Return all values of a given object
+		 * 
+		 * 
+		 * @param {any} object - object to get properties from
+		 * @return {Array<any>} values of all properties.  NOTE: never null
+		 */
+		getValues(object:any /* Object */): Array<any> /* Array */; 
+
+		/**  
+		 *  Logs the echoed object (using isc.echo) as a warning, prefixed with an
+		 * optional message.
+		 * 
+		 * 
+		 * @param {any} value - object to echo
+		 * @param {string} message - message to log
+		 */
+		logEcho(value:any /* Any */, message:string /* String */): void; 
+
+		/**  
+		 *  Logs the echoed object (using isc.echoAll) as a warning, prefixed with an
+		 * optional message.
+		 * 
+		 * 
+		 * @param {any} value - object to echo
+		 * @param {string} message - message to log
+		 */
+		logEchoAll(value:any /* Any */, message:string /* String */): void; 
+
+		/**  
+		 *  Same as Log.logWarn.
+		 * 
+		 * 
+		 * @param {string} message - message to log
+		 * @param {string} category - category to log in, defaults to "Log"
+		 */
+		logWarn(message:string /* String */, category?:string /* String */): void; 
+
+		/**  
+		 *  Given a key:value map, return a new map as value:key.
+		 * 
+		 * If the same value appears more than once, the key will correspond to the last instance of that
+		 * value.
+		 * 
+		 * 
+		 * @param {any} valueMap - object of key:value pairs
+		 * @return {any} reversed value map
+		 */
+		makeReverseMap(valueMap:any /* Object */): any /* Object */; 
+
+		/**  
+		 *  Shortcut for isc.ClassFactory.overwriteClass().
+		 * 
+		 */
+		overwriteClass(): void; 
+
+		/**  
+		 * 
+		 * Is some property specified on the object passed in? This will return true if 
+		 * object[propertyName] has ever been set to any value, and not deleted.
+		 * May return true even if object[propertyName] === undefined if the property 
+		 * is present on the object and has been explicitly set to undefined.
+		 * 
+		 * 
+		 * @param {any} object - Object to test
+		 * @param {string} propertyName - Which property is being tested for?
+		 * @return {boolean} true if property is defined
+		 */
+		propertyDefined(object:any /* Object */, propertyName:string /* String */): boolean; 
+
+		/**  
+		 *  Show a modal dialog with a message, icon, and "OK" button. Intended for notifications which
+		 * are not really warnings (default icon is less severe). See Dialog.sayIcon.
+		 * 
+		 * The callback will receive boolean true for an OK button click, or null if the Dialog is
+		 * dismissed via the close button.
+		 * 
+		 * 
+		 * @param {string} message - message to display
+		 * @param {Callback} callback - Optional Callback to fire when the user dismisses the dialog. This has the single parameter
+		 * 'value', indicating the value returned by the Warn
+		 * dialog from 'okClick()' etc.
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for
+		 * the Dialog, set properties.buttons to an array of
+		 * buttons
+		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 */
+		say(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+
+		/**  
+		 *  Set the global default setting for Canvas.autoDraw.
+		 * 
+		 * After calling isc.setAutoDraw(), any newly created Canvas which is not given an
+		 * explicit setting for Canvas.autoDraw','autoDraw will follow the new default setting.
+		 * 
+		 * autoDraw:false is the recommended default setting for most applications since it ensures
+		 * that extra draws will not occur when developers inadvertently omit the autoDraw:false
+		 * setting on child components.
+		 * 
+		 * 
+		 * @param {boolean} enable - whether autoDraw should be enabled or disabled. Defaults to true.
+		 */
+		setAutoDraw(enable?:boolean): void; 
+
+		/**  
+		 *  Enables full screen reader mode. Must be called before any components are created. See
+		 * accessibility.
+		 * 
+		 * @param {boolean} newState - new setting
+		 */
+		setScreenReaderMode(newState:boolean): void; 
+
+		/**  
+		 *  Creates a shallow copy of the passed-in Object or Array of Objects, that is, copies all
+		 * properties of an Object to a new Object, so that the clone now has exactly the same property
+		 * values as the original Object.
+		 * 
+		 * If shallowClone() is passed an immutable type such as String and Number, it is returned
+		 * unchanged. Dates are copied via new Date(originalDate.getTime()).
+		 * 
+		 * Note that if an Array is passed, all members of the Array will be cloned. For a copy of an
+		 * Array that contains exactly the same members (not copies), use Array.duplicate().
+		 * 
+		 * Only an Array directly passed to shallowClone() is copied. Arrays contained
+		 * within Arrays will not be copied.
+		 * 
+		 * 
+		 * @param {any} object - object to be cloned
+		 * @return {any | Array<any>} a shallow copy of the passed-in data
+		 */
+		shallowClone(object:any | Array<any> | any /* Object | Array | Object */): any | Array<any> /* Object | Array of Object */; 
+
+		/**  
+		 * 
+		 * Method available on the isc object to open the Developer Console.
+		 * 
+		 * 
+		 */
+		showConsole(): void; 
+
+		/**  
+		 * 
+		 * Method available on the isc object to show a temporary modal prompt to the user.
+		 * This method will display the message using the Dialog.Prompt singleton object, then hide it
+		 * using a fade animation effect.
+		 * Note: if this prompt is to be shown to the user during some slow JavaScript logic, we
+		 * advise calling this method, then using Class.delayCall or Timer.setTimeout
+		 * to kick off the slow logic in a separate thread. This ensures that the prompt is showing
+		 * before the lengthy execution begins.
+		 * 
+		 * The prompt may be cleared before the duration has elapsed via a call to isc.clearPrompt
+		 * and any callback specified will still be fired even if the prompt is dismissed early.
+		 * 
+		 * 
+		 * @param {string} message - message to display
+		 * @param {number} duration - how long the message should appear for in milliseconds before fading from view.
+		 * @param {Callback} callback - When the prompt is hidden, callback will be fired.
+		 * @param {DialogProps} properties - additional properties for the Dialog, applied before the Dialog is shown
+		 */
+		showFadingPrompt(message:string /* String */, duration:number, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+
+		/**  
+		 *  Handle a complete login interaction with a typical login dialog asking for username and
+		 * password credentials using the LoginDialog class.
+		 * 
+		 * As with other convenience methods that show Dialogs, such as isc.warn,
+		 * the dialog is shown and the function immediately returns. When the user responds, the
+		 * provided callback function is called.
+		 * 
+		 * If the user clicks the "Log in" button, the credentials entered by the user are passed to
+		 * the provided "loginFunc" as an Object with properties "username" and "password" (NOTE: both
+		 * property names are all lowercase), as the variable "credentials". For example:
+		 * { username: "barney", password: "rUbbL3" }
+		 * 
+		 * The "loginFunc" should then attempt to log in by whatever means is necessary. The second
+		 * parameter to the loginFunc, "dialogCallback", is a function, which must be called whether
+		 * login succeeds or fails with a true/false value indicating whether login succeeded.
+		 * 
+		 * If the login dialog is dismissable (settable as properties.dismissable, default false) and
+		 * the user dismisses it, the loginFunc will be fired with null for the credentials.
+		 * 
+		 * The following code shows typical usage. This code assumes you have created a global
+		 * function sendCredentials() that send credentials to some authentication system and fires a
+		 * callback function with the result:
+		 * 
+		 * isc.showLoginDialog(function (credentials, dialogCallback) {
+		 * if (credentials == null) return; // dismissed
+		 * 
+		 * // send credentials
+		 * sendCredentials(credentials, function (loginSucceeded) {
+		 * // report success or failure
+		 * dialogCallback(loginSucceeded);
+		 * })
+		 * })
+		 * 
+		 * The login dialog has several built-in behaviors:
+		 * 
+		 * keyboard focus is automatically placed in the username field
+		 * hitting enter in the username field proceeds to the password field
+		 * hitting enter in the password field submits (fires the provided callback)
+		 * 
+		 * In addition to normal properties supported by Dialog/Window, the following special
+		 * properties can be passed:
+		 * 
+		 * username: initial value for the username field
+		 * password: initial value for the password field
+		 * usernameTitle: title for the username field
+		 * passwordTitle: title for the password field
+		 * errorMessage: default error message on login failure
+		 * loginButtonTitle: title for the login button
+		 * dismissable: whether the dialog can be dismissed, default false
+		 * errorStyle: CSS style for the error message, if shown
+		 * 
+		 * See below for links to the default values for these properties.
+		 * 
+		 * 
+		 * @param {Callback} loginFunc - Function to call to attempt login. Receives parameters "credentials" and "dialogCallback", described above
+		 * @param {LoginDialogProps} properties - additional properties for the Dialog
+		 */
+		showLoginDialog(loginFunc:Callback, properties?:LoginDialogProps /* LoginDialog Properties */): void; 
+
+		/**  
+		 * 
+		 * Method available on the isc object to show a modal prompt to the user.
+		 * This method will display the message using the Dialog.Prompt singleton object.
+		 * Note: if this prompt is to be shown to the user during some slow JavaScript logic, we
+		 * advise calling this method, then using Class.delayCall or Timer.setTimeout
+		 * to kick off the slow logic in a separate thread. This ensures that the prompt is showing
+		 * before the lengthy execution begins.
+		 * <p/>Use "&#36;{loadingImage}" to include Canvas.loadingImageSrc','a loading image.
+		 * 
+		 * 
+		 * 
+		 * @param {string} message - message to display
+		 * @param {DialogProps} properties - additional properties for the Dialog, applied before the Dialog is shown
+		 */
+		showPrompt(message:string /* String */, properties?:DialogProps /* Dialog Properties */): void; 
+
+		/**  
+		 *  Given a simple javascript object, return that object sorted by keys, such that when iterating
+		 * through the properties of the object, they will show up in sorted order.
+		 * Usage example - may be used to sort a FormItem.valueMap','formItem valueMap defined
+		 * as an object.
+		 * 
+		 * @param {any} object - Object to sort
+		 * @param {any} comparator - Comparator function to use when sorting the objects keys
+		 * @return {any} sorted version of the object passed in.
+		 */
+		sortObject(object:any /* Object */, comparator?:any /* Function */): any /* Object */; 
+
+		/**  
+		 *  Given a simple javascript object, return that object sorted by properties, such that when 
+		 * iterating through the properties of the object, values will show up in sorted order.
+		 * Usage example - may be used to sort a FormItem.valueMap','formItem valueMap defined
+		 * as an object by display value.
+		 * 
+		 * @param {any} object - Object to sort
+		 * @param {any} comparator - Comparator function to use when sorting the object properties
+		 * @return {any} sorted version of the object passed in.
+		 */
+		sortObjectByProperties(object:any /* Object */, comparator?:any /* Function */): any /* Object */; 
+
+		/**  
+		 *  Shorthand for new Date().getTime();, this returns a timeStamp - a large number
+		 * which is incremented by 1 every millisecond. Can be used to generate unique identifiers,
+		 * or perform timing tasks.
+		 * 
+		 * 
+		 * @return {number} a large integer (actually the number of milliseconds since 1/1/1970)
+		 */
+		timeStamp(): number /* int */; 
+
+		/**  
+		 *  Show a modal dialog with a message, icon, and "OK" button. See Dialog.warnIcon.
+		 * 
+		 * The callback will receive boolean true for an OK button click, or null if the Dialog is
+		 * dismissed via the close button.
+		 * 
+		 * 
+		 * @param {string} message - message to display
+		 * @param {Callback} callback - Optional Callback to fire when the user dismisses the dialog. This has the single parameter
+		 * 'value', indicating the value returned by the Warn
+		 * dialog from 'okClick()' etc.
+		 * @param {DialogProps} properties - additional properties for the Dialog. To set Dialog.buttons','custom buttons for
+		 * the Dialog, set properties.buttons to
+		 * an array of buttons
+		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
+		 */
+		warn(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+
+	} // iscStatic
+
+
+	/**
 	 * Settings to control EditContext serialization. 
 	 */
 	export interface SerializationSettings {
@@ -190,6 +749,161 @@ declare namespace Isc {
 
 
 	/**
+	 * Facet value definition object made use of by the CubeGrid','CubeGrid and
+	 * FacetChart','FacetChart classes (contained by facets). 
+	 */
+	export interface FacetValue {
+		/** 
+		 * (Read only) Default alignment for facet label title and cells for this facetValue.
+		 * Can be overridden by setting titleAlign or cellAlign on the facetValue.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids (see, for
+		 * example, CubeGrid.facetValueAlign).
+		 * Flags: IR
+		 */
+		readonly align?: Alignment;
+		/** 
+		 * (Read only) CSS line style to apply as a border after this facetValue.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Flags: IR
+		 */
+		readonly borderAfter?: string /* String */;
+		/** 
+		 * (Read only) CSS line style to apply as a border before this facetValue.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Flags: IR
+		 */
+		readonly borderBefore?: string /* String */;
+		/** 
+		 * (Read only) For individual parent facetValues within a hierarchical facet, this flag controls
+		 * whether an expand/collapse control will be shown.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids (see, for
+		 * example, CubeGrid.canCollapseFacets).
+		 * Flags: IR
+		 */
+		readonly canCollapse?: boolean /* Boolean */;
+		/** 
+		 * Whether cells for this facetValue can be edited. Defaults to CubeGrid.canEdit.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Flags: IRW
+		 */
+		readonly canEdit?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Default alignment of cells (in the body) for this facetValue.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids (see, for
+		 * example, CubeGrid.cellAlign).
+		 * Flags: IR
+		 */
+		readonly cellAlign?: Alignment;
+		/** 
+		 * (Read only) For tree facets, initial collapse state for this node. Defaults to Facet.collapsed.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Flags: IR
+		 */
+		readonly collapsed?: boolean /* Boolean */;
+		/** 
+		 * id of this facetValue. Any string or number.
+		 * Flags: IRW
+		 */
+		readonly id?: string | number /* String | Number */;
+		/** 
+		 * (Read only) Used to determine which facetValue is to be shown when the facet is minimized.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids. See
+		 * CubeGrid.canMinimizeFacets.
+		 * Flags: IR
+		 */
+		readonly isMinimizeValue?: boolean /* Boolean */;
+		/** 
+		 * (Read only, Advanced) For tree facets (Facet.isTree','facet.isTree), id of this facetValue's
+		 * parent facetValue.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Flags: IRA
+		 */
+		readonly parentId?: string | number /* String | Number */;
+		/** 
+		 * (Read only) Selection boundary determining what facets / facetValues can be selected together by
+		 * drag selection / shift+click selection.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Flags: IR
+		 */
+		readonly selectionBoundary?: SelectionBoundary;
+		/** 
+		 * User-visible title of this facetValue. Shown on the field header.
+		 * Flags: IRW
+		 */
+		readonly title?: string /* String */;
+		/** 
+		 * (Read only) Hilite style to apply to the title for this facetValue.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids. See
+		 * CubeGrid.hilites.
+		 * Flags: IR
+		 */
+		readonly titleHilite?: string /* String */;
+		/** 
+		 * (Read only) Width of the cube grid facetValue in pixels.
+		 * 
+		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Flags: IR
+		 */
+		readonly width?: number;
+
+		/* Instance Method Overrides */
+		/**  
+		 *  Formatter to apply to values displayed for cells under this facetValue.
+		 * 
+		 * Can only be set on the CubeGrid.metricFacetId','metric facet or, if no metric facet
+		 * is specified, on the innermost column facet.
+		 * 
+		 * If a single, grid-wide formatting style is desired, implement
+		 * ListGrid.formatCellValue','grid.formatCellValue() instead.
+		 * 
+		 * Note: This method is specific to CubeGrid','CubeGrids.
+		 * 
+		 * 
+		 * @param {any} value - raw value for the cell being
+		 * @param {CellRecord} record - record object for the cell. Note: If this is a new cell that has not been saved, in an 
+		 * editable grid, it has no associated record object. In this case the edit values will
+		 * be passed in as this parameter.
+		 * @param {number} rowNum - row number for the cell
+		 * @param {number} colNum - column number for the cell.
+		 * @return {string} formatted value to display in the cell.
+		 */
+		formatCellValue?(value:any /* Any */, record:CellRecord, rowNum:number, colNum:number): string /* String */; 
+
+		/**  
+		 *  Callout to determine custom value to display for cells displayed for this facetValue.
+		 * 
+		 * Can only be set on the CubeGrid.metricFacetId','metric facet or, if no metric facet
+		 * is specified, on the innermost column facet.
+		 * 
+		 * Note: This method is specific to CubeGrid','CubeGrids.
+		 * 
+		 * 
+		 * @param {CubeGrid} viewer - this facetValue's CubeGrid
+		 * @param {any} record - cell record
+		 * @param {number} rowNum - row value for the cell
+		 * @param {number} colNum - column value for the cell
+		 * @return {string} HTML to display
+		 */
+		getCellValue?(viewer:CubeGrid, record:any /* Object */, rowNum:number, colNum:number): string /* String */; 
+
+	} // FacetValue
+
+	export interface FacetValueStatic {
+	} // FacetValueStatic
+
+
+	/**
 	 * A library of functions for determining the types of other objects.
 	 * 
 	 * The "isA" methods for the basic JavaScript types are much faster and more consistent across
@@ -202,182 +916,6 @@ declare namespace Isc {
 	} // isA
 
 	export interface isAStatic {
-
-	/* Methods */
-		/**  
-		 * 
-		 * Is object an Array object?
-		 * 
-		 * NOTE: if you prefer, you can call this as isAn.Array()
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is an Array
-		 */
-		Array(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object a Boolean object?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a Boolean
-		 */
-		Boolean(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object a class object?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a Class Object
-		 */
-		ClassObject(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object a Date object?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a Date
-		 */
-		Date(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object an Array with no items?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is an empty array
-		 */
-		emptyArray(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object an object with no properties (i.e.: {})?
-		 * 
-		 * Note that an object that has properties with null values is considered non-empty, eg 
-		 * { propName:null } is non-empty.
-		 * 
-		 * NOTE: if you prefer, you can call this as isAn.emptyObject()
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is the empty object
-		 */
-		emptyObject(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object the empty string?
-		 * 
-		 * NOTE: if you prefer, you can call this as isAn.emptyString()
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a null string
-		 */
-		emptyString(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object a Function object?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a Function
-		 */
-		Function(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object an instance of some class?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is an instance of some class
-		 */
-		Instance(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object an interface object?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a Interface Object
-		 */
-		Interface(object:any /* Object */): boolean; 
-
-		/**  
-		 *  Does object implement the List interface?
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} <code>true</code> if the object is an Array or belongs to another class that                   implements the <code>List</code> API.
-		 */
-		List(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object a non-empty String?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a non-empty string
-		 */
-		nonemptyString(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object a Number object?
-		 * 
-		 * NOTE: this returns false if object is an invalid number (isNaN(object) == true)
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a Number
-		 */
-		Number(object:any /* Object */): boolean; 
-
-		/**  
-		 *  Returns whether the passed value is a non-null Object.
-		 * 
-		 * Returns false for values that are Numbers, Strings, Booleans, Functions or are null or
-		 * undefined. 
-		 * 
-		 * Returns true for Object, Array, Regular Expression, Date and other kinds of
-		 * native objects which are considered to extend from window.Object.
-		 * 
-		 * 
-		 * @param {any} object - value to test for whether it's an object
-		 * @return {boolean} whether passed value is an Object
-		 */
-		Object(object:any /* Any */): boolean; 
-
-		/**  
-		 * 
-		 * Is object a Regular Expression (RegExp) object?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a Boolean
-		 */
-		RegularExpression(object:any /* Object */): boolean; 
-
-		/**  
-		 * 
-		 * Is object a String object?
-		 * 
-		 * 
-		 * @param {any} object - object to test
-		 * @return {boolean} true == <code>object</code> is a String
-		 */
-		String(object:any /* Object */): boolean; 
-
 	} // isAStatic
 
 
@@ -2379,6 +2917,59 @@ declare namespace Isc {
 
 
 	/**
+	 * Generic extensions to JavaScript Strings. You can call these on any String. 
+	 */
+	export interface String {
+
+		/* Instance Method Overrides */
+		/**  
+		 *  Returns true if this string contains the specified substring.
+		 * 
+		 * @param {string} substring - string to look for
+		 * @return {boolean} true == this string contains the substring
+		 */
+		contains?(substring:string /* String */): boolean; 
+
+		/**  
+		 *  Returns true if this string ends with another string, or if the other string
+		 * occurs in this string beginning at position - substring.length.
+		 * 
+		 * 
+		 * @param {string} substring - other string to check
+		 * @param {number} position - optional position in this string. Defaults to the length of this string.
+		 * @return {boolean} <code>true</code> if <code>substring</code> occurs within this string ending with <code>position - 1</code>.
+		 */
+		endsWith?(substring:string /* String */, position?:number /* int */): boolean; 
+
+		/**  
+		 *  Returns true if this string starts with another string, or if the other string
+		 * occurs at the given position within this string.
+		 * 
+		 * 
+		 * @param {string} substring - other string to check
+		 * @param {number} position - optional position in this string. Defaults to 0.
+		 * @return {boolean} <code>true</code> if <code>substring</code> occurs within this string at position <code>position</code>.
+		 */
+		startsWith?(substring:string /* String */, position?:number /* int */): boolean; 
+
+	} // String
+
+	export interface StringStatic {
+
+	/* Methods */
+		/**  
+		 *  Tests whether the given string is a valid JavaScript identifier.
+		 * 
+		 * 
+		 * @param {string} string - the string to test.
+		 * @return {boolean} true if string is a valid JavaScript identifier; false otherwise.
+		 */
+		isValidID(string:string /* String */): boolean; 
+
+	} // StringStatic
+
+
+	/**
 	 * A Record is an ordinary JavaScript Object with properties that are treated as data to
 	 * be displayed and edited by a DataBoundComponent. 
 	 * 
@@ -3033,76 +3624,6 @@ declare namespace Isc {
 	} // ClassFactory
 
 	export interface ClassFactoryStatic {
-
-	/* Methods */
-		/**  
-		 * 
-		 * Create a new SmartClient class, which can then be used to create instances of this
-		 * object type, via Class.create.
-		 * 
-		 * The new Class is returned by defineClass, is available as
-		 * isc.ClassName and is also available in global scope if not in
-		 * isc','portal mode. Typically, Class.addProperties is then
-		 * called to establish different defaults in the new class, or to add methods. For
-		 * example:
-		 * 
-		 * isc.defineClass("MyListGrid", "ListGrid").addProperties({
-		 * headerHeight : 40, // change default for listGrid.headerHeight
-		 * 
-		 * // override listGrid.recordClick
-		 * recordClick : function (viewer, record) { 
-		 * isc.say(record.description);
-		 * }
-		 * })
-		 * isc.MyListGrid.create(); // create an instance of the new class
-		 * 
-		 * 
-		 * See also Class.Super','Super() for calling superclass methods.
-		 * 
-		 * NOTE: isc.defineClass() also creates a new function
-		 * isA','class:isA.ClassName() object for identifying instances of
-		 * this Class.
-		 * 
-		 * 
-		 * @param {string} className - Name for the new class.
-		 * @param {Class} superClass - Optional SuperClass Class object or name
-		 * @return {Class} Returns the new Class object.
-		 */
-		defineClass(className:string /* String */, superClass?:Class): Class; 
-
-		/**  
-		 * 
-		 * Given a class name, return a pointer to the Class object for that class
-		 * 
-		 * 
-		 * @param {string} className - name of a class
-		 * @return {Class} Class object, or null if not found
-		 */
-		getClass(className:string /* String */): Class; 
-
-		/**  
-		 * 
-		 * Given the name of a class, create an instance of that class.
-		 * 
-		 * 
-		 * @param {string} className - Name of a class. (ClassObject) Actual class object to use.
-		 * @param {any} props - Properties to apply to the instance.
-		 * @param {any} props2 - More properties to apply to the instance.
-		 * @param {any} props3 - Yet more properties to apply to the instance.
-		 * @return {Class} Pointer to the new class.
-		 */
-		newInstance(className:string /* String */, props?:any /* Object */, props2?:any /* Object */, props3?:any /* Object */): Class; 
-
-		/**  
-		 * 
-		 * Intentionally clobber an existing SmartClient Class, if it already exists. Works 
-		 * identically to ClassFactory.defineClass, except that no warning is logged to the
-		 * console.
-		 * 
-		 * 
-		 */
-		overwriteClass(): void; 
-
 	} // ClassFactoryStatic
 
 
@@ -3641,6 +4162,471 @@ declare namespace Isc {
 
 
 	/**
+	 * Extensions to the Date class, including added static methods on the Date object, and
+	 * additional instance methods available on all date instances. 
+	 */
+	export interface Date {
+
+		/* Instance Method Overrides */
+		/**  
+		 * (Advanced)  Copy the value of this date into a new Date() object for independent manipulation
+		 * 
+		 */
+		duplicate?(): void; 
+
+		/**  
+		 *  Return the full day of week name for this date (Monday, Tuesday, etc).
+		 * To modify the value returned by this method, set DateUtil.dayNames
+		 * 
+		 * 
+		 * @return {string} Day name
+		 */
+		getDayName?(): string /* String */; 
+
+		/**  
+		 *  gets the default date separator string
+		 * 
+		 * @return {string} the default date separator
+		 */
+		getDefaultDateSeparator?(): string /* String */; 
+
+		/**  
+		 *  Returns the fiscal week number of the current date, according to the global
+		 * DateUtil.setFiscalCalendar','FiscalCalendar.
+		 * 
+		 * @param {FiscalCalendar} fiscalCalendar - the object representing the starts of fiscal years
+		 * @return {number} the week number, offset from the start of the fiscal period
+		 */
+		getFiscalWeek?(fiscalCalendar?:FiscalCalendar): number /* int */; 
+
+		/**  
+		 *  Returns the FiscalYear object appropriate for the the current date, according to the
+		 * FiscalCalendar','FiscalCalendar.
+		 * 
+		 * @return {FiscalYear} the fiscal year object
+		 */
+		getFiscalYear?(): FiscalYear; 
+
+		/**  
+		 *  Return the full name of the month for this date (January, February, etc)
+		 * To modify the value returned by this method,
+		 * set DateUtil.shortMonthNames
+		 * .
+		 * 
+		 * @return {string} Month name
+		 */
+		getMonthName?(): string /* String */; 
+
+		/**  
+		 *  Return the abbreviated (up to 3 chars) day of week name for this date (Mon, Tue, etc).
+		 * To modify the value returned by this method, set DateUtil.shortDayNames
+		 * 
+		 * 
+		 * @param {number} length - Number of characters to return (Defaults to 3, can't be longer than 3)
+		 * @return {string} Abbreviated day name
+		 */
+		getShortDayName?(length:number /* int */): string /* String */; 
+
+		/**  
+		 *  Return the abbreviated name of the month for this date (Jan, Feb, etc)
+		 * To modify the value returned by this method,
+		 * set DateUtil.shortMonthNames
+		 * .
+		 * 
+		 * @param {number} length - Number of characters to return (Defaults to 3, can't be longer than 3)
+		 * @return {string} Abbreviated month name (3 character string)
+		 */
+		getShortMonthName?(length:number /* int */): string /* String */; 
+
+		/**  
+		 *  Return a 2 digit year for this date.
+		 * 
+		 * @return {string} year number, padded to 2 characters
+		 */
+		getShortYear?(): string /* String */; 
+
+		/**  
+		 *  Returns an integer containing the week number.
+		 * 
+		 * @return {number} week number, starting with 1
+		 */
+		getWeek?(): number /* int */; 
+
+		/**  
+		 *  Sets a new default separator that will be used when formatting dates. By default, this
+		 * is a forward slash character: "/"
+		 * 
+		 * @param {string} separator - separator to use in dates
+		 */
+		setDefaultDateSeparator?(separator:string /* String */): void; 
+
+		/**  
+		 *  Return this date in the format (UTC timezone):
+		 * YYYYMMDDTHHMMSS[Z]
+		 * 
+		 * @return {string} formatted date string
+		 */
+		toDateStamp?(): string /* String */; 
+
+		/**  
+		 *  Return this date in the format: DD/MM/YYYY
+		 * 
+		 * @return {string} formatted date string
+		 */
+		toEuropeanShortDate?(): string /* String */; 
+
+		/**  
+		 *  Return this date in the format: DD/MM/YYYY HH:MM.
+		 * 
+		 * @return {string} formatted date string
+		 */
+		toEuropeanShortDateTime?(): string /* String */; 
+
+		/**  
+		 *  Return the date in this format: YYYY/MM/DD
+		 * 
+		 * @return {string} formatted date string
+		 */
+		toJapanShortDate?(): string /* String */; 
+
+		/**  
+		 *  Return this date in the format: YYYY/MM/DD HH:MM:SS
+		 * 
+		 * @return {string} formatted date string
+		 */
+		toJapanShortDateTime?(): string /* String */; 
+
+		/**  
+		 *  Returns the date as a formatted string using the format set up via the
+		 * setNormalDisplayFormat() method. Note that the default formatter for this
+		 * method is "toLocaleString".
+		 * 
+		 * @param {DateDisplayFormat} format - Optional Format for the date returned
+		 * @return {string} formatted date string
+		 */
+		toNormalDate?(format:DateDisplayFormat): string /* String */; 
+
+		/**  
+		 *  Returns the datetime as a formatted string using the format set up via the
+		 * setNormalDatetimeDisplayFormat() method.
+		 * 
+		 * @param {DateDisplayFormat} format - Optional Format for the date returned
+		 * @param {boolean} useCustomTimezone - If a custom timezone has been set via Time.setDefaultDisplayTimezone(), by default date formatters will respect this timezone.
+		 * To suppress this behavior, this parameter should be set to false.
+		 * @return {string} formatted date string
+		 */
+		toNormalDatetime?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): string /* String */; 
+
+		/**  
+		 * (Advanced)  Return this date in 'serialized' format YYYY-MM-DD HH:MM:SS
+		 * 
+		 * @return {string} formatted date string
+		 */
+		toSerializeableDate?(): string /* String */; 
+
+		/**  
+		 *  Returns the date as a formatted string using the format set up via the
+		 * setShortDisplayFormat() method.
+		 * 
+		 * @param {DateDisplayFormat} format - Optional Format for the date returned
+		 * @param {boolean} useCustomTimezone - If a custom timezone has been set via Time.setDefaultDisplayTimezone(), by default date formatters will respect this timezone.
+		 * to suppress this behavior, this parameter should be set to false.
+		 * @return {string} formatted date string
+		 */
+		toShortDate?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): string /* String */; 
+
+		/**  
+		 *  Returns the datetime as a formatted string using the format set up via the
+		 * setShortDatetimeDisplayFormat() method.
+		 * 
+		 * @param {DateDisplayFormat} format - Optional Format for the date returned
+		 * @param {boolean} useCustomTimezone - If a custom timezone has been set via Time.setDefaultDisplayTimezone(), by default date formatters will respect this timezone.
+		 * to suppress this behavior, this parameter should be set to false.
+		 * @return {string} formatted date string
+		 */
+		toShortDateTime?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): string /* String */; 
+
+		/**  
+		 *  Return this date in the format: MM/DD/YYYY
+		 * 
+		 * @return {string} formatted date string
+		 */
+		toUSShortDate?(): string /* String */; 
+
+		/**  
+		 *  Return this date in the format: MM/DD/YYYY HH:MM
+		 * 
+		 * 
+		 * @return {string} formatted date string
+		 */
+		toUSShortDateTime?(): string /* String */; 
+
+	} // Date
+
+	export interface DateStatic {
+		/** 
+		 * (Advanced) This property may be set to an array of names of days of the week. 
+		 * For example:
+		 * 
+		 * ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+		 * 
+		 * The appropriate day name will then be returned from Date.getDayName, and may
+		 * be used whenever SmartClient components display day-names (for example in the
+		 * DateItem','DateItem class).
+		 * Flags: IRWA, Group: i18nMessages
+		 */
+		readonly dayNames?: Array<any> /* Array */;
+		/** 
+		 * (Advanced) This property may be set to an array of names of months.
+		 * For example:
+		 * 
+		 * ["January", "February", "March", "April", "May", "June", "July", 
+		 * "August", "September", "October", "November", "December"]
+		 * 
+		 * The appropriate month name will then be returned from Date.getMonthName,
+		 * and may be used whenever SmartClient components display month-names (for example in the
+		 * DateItem','DateItem class).
+		 * Flags: IRWA, Group: i18nMessages
+		 */
+		readonly monthNames?: Array<any> /* Array */;
+		/** 
+		 * (Advanced) This property may be set to an array of names of days of the week. 
+		 * For example:
+		 * 
+		 * ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+		 * 
+		 * The appropriate day name will then be returned from Date.getShortDayName, and may
+		 * be used whenever SmartClient components display day-names (for example in the
+		 * DateItem','DateItem class).
+		 * Note: For US based applications the first item in the array should be the name for Sunday,
+		 * then Monday, Tuesday, etc. For browsers with different locales this may vary.
+		 * To determine the first day for some locale, you can run the following code:
+		 * 
+		 * alert(new Date(2000, 0, 2).getDay());
+		 * 
+		 * You should see an alert with a number between zero and 6. This represents the numerical
+		 * 'day' value for Sunday for your browser's locale, since Jan 2nd 2000 was a Sunday.
+		 * Therefore if this code alerted the number 6, Sunday should appear last in your list
+		 * of day-names, and Monday first.
+		 * Flags: IRWA, Group: i18nMessages
+		 */
+		readonly shortDayNames?: Array<any> /* Array */;
+		/** 
+		 * (Advanced) This property may be set to an array of shortened month-names.
+		 * For example:
+		 * 
+		 * ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+		 * 
+		 * The appropriate month name will then be returned from Date.getShortMonthName,
+		 * and may be used whenever SmartClient components display month-names (for example in the
+		 * DateItem','DateItem class).
+		 * Flags: IRWA, Group: i18nMessages
+		 */
+		readonly shortMonthNames?: Array<any> /* Array */;
+		/** 
+		 * (Read only) Days that are considered "weekend" days. Values should be the integers returned by the
+		 * JavaScript built-in Date.getDay(), eg, 0 is Sunday and 6 is Saturday. Override to
+		 * accommodate different workweeks such as Saudi Arabia (Saturday -> Wednesday) or Israel
+		 * (Sunday -> Thursday).
+		 * Flags: IR
+		 */
+		readonly weekendDays?: Array<number> /* Array of int */;
+
+	/* Methods */
+		/**
+		 * (DEPRECATED) Use DateUtil.combineLogicalDateAndTime.
+		 * @deprecated Use DateUtil.combineLogicalDateAndTime.
+		 * @return {Date} a Date instance representing a datetime value combining the logical date and                time passed
+		 */
+		combineLogicalDateAndTime(): Date; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.compareDates.
+		 * @deprecated Use DateUtil.compareDates.
+		 * @return {number} 0 if equal, -1 if first date &gt; second date, 1 if second date &gt; first date
+		 */
+		compareDates(): number /* int */; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.compareLogicalDates.
+		 * @deprecated Use DateUtil.compareLogicalDates.
+		 * @return {number} 0 if equal, -1 if first date &gt; second date, 1 if second date &gt;                      first date.  Returns false if either argument is not a date
+		 */
+		compareLogicalDates(): number /* int */; 
+
+/* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
+
+		/**
+		 * (DEPRECATED) Use DateUtil.create.
+		 * @deprecated Use DateUtil.create.
+		 * @return {Date} Date object
+		 * /
+		create(): Date; 
+
+
+ */ 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.createLogicalDate.
+		 * @deprecated Use DateUtil.createLogicalDate.
+		 * @return {Date} new javascript Date object representing the Date in question
+		 */
+		createLogicalDate(): Date; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.createLogicalTime.
+		 * @deprecated Use DateUtil.createLogicalTime.
+		 * @return {Date} new Javascript Date object representing the time in question
+		 */
+		createLogicalTime(): Date; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getDefaultDateSeparator.
+		 * @deprecated Use DateUtil.getDefaultDateSeparator.
+		 * @return {string} the default date separator
+		 */
+		getDefaultDateSeparator(): string /* String */; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getFirstDayOfWeek.
+		 * @deprecated Use DateUtil.getFirstDayOfWeek.
+		 * @return {number} the number of the day being used as the first day of the week
+		 */
+		getFirstDayOfWeek(): number /* int */; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getFiscalCalendar.
+		 * @deprecated Use DateUtil.getFiscalCalendar.
+		 * @return {FiscalCalendar} the FiscalCalendar object
+		 */
+		getFiscalCalendar(): FiscalCalendar; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getFiscalStartDate.
+		 * @deprecated Use DateUtil.getFiscalStartDate.
+		 * @return {Date} the start of the fiscal year for the passed date and fiscalCalendar
+		 */
+		getFiscalStartDate(): Date; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getFiscalWeek.
+		 * @deprecated Use DateUtil.getFiscalWeek.
+		 * @return {number} the fiscal week for the passed date
+		 */
+		getFiscalWeek(): number /* int */; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getFiscalYear.
+		 * @deprecated Use DateUtil.getFiscalYear.
+		 * @return {FiscalYear} the ${isc.DocUtils.linkForRef('object:FiscalYear')} object for the passed date
+		 */
+		getFiscalYear(): FiscalYear; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getInputFormat.
+		 * @deprecated Use DateUtil.getInputFormat.
+		 * @return {string} the current inputFormat for dates
+		 */
+		getInputFormat(): string /* String */; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getLogicalDateOnly.
+		 * @deprecated Use DateUtil.getLogicalDateOnly.
+		 * @return {Date} a Date instance representing just the date portion of the datetime value, as                a logical date
+		 */
+		getLogicalDateOnly(): Date; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getLogicalTimeOnly.
+		 * @deprecated Use DateUtil.getLogicalTimeOnly.
+		 * @return {Date} a Date instance representing just the time portion of the datetime value, as                a logical time
+		 */
+		getLogicalTimeOnly(): Date; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.getWeekendDays.
+		 * @deprecated Use DateUtil.getWeekendDays.
+		 * @return {Array<number>} array of weekend days
+		 */
+		getWeekendDays(): Array<number> /* Array of integer */; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.parseInput.
+		 * @deprecated Use DateUtil.parseInput.
+		 * @return {Date} date value, or null if the string could not be parsed to a valid date.
+		 */
+		parseInput(): Date; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setDefaultDateSeparator.
+		 * @deprecated Use DateUtil.setDefaultDateSeparator.
+		 */
+		setDefaultDateSeparator(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setFirstDayOfWeek.
+		 * @deprecated Use DateUtil.setFirstDayOfWeek.
+		 */
+		setFirstDayOfWeek(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setFiscalCalendar.
+		 * @deprecated Use DateUtil.setFiscalCalendar.
+		 */
+		setFiscalCalendar(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setInputFormat.
+		 * @deprecated Use DateUtil.setInputFormat.
+		 */
+		setInputFormat(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setNormalDatetimeDisplayFormat.
+		 * @deprecated Use DateUtil.setNormalDatetimeDisplayFormat.
+		 */
+		setNormalDatetimeDisplayFormat(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setNormalDisplayFormat.
+		 * @deprecated Use DateUtil.setNormalDisplayFormat.
+		 */
+		setNormalDisplayFormat(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setShortDatetimeDisplayFormat.
+		 * @deprecated Use DateUtil.setShortDatetimeDisplayFormat.
+		 */
+		setShortDatetimeDisplayFormat(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setShortDisplayFormat.
+		 * @deprecated Use DateUtil.setShortDisplayFormat.
+		 */
+		setShortDisplayFormat(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setShowChooserFiscalYearPickers.
+		 * @deprecated Use DateUtil.setShowChooserFiscalYearPickers.
+		 */
+		setShowChooserFiscalYearPickers(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setShowChooserWeekPickers.
+		 * @deprecated Use DateUtil.setShowChooserWeekPickers.
+		 */
+		setShowChooserWeekPickers(): void; 
+
+		/**
+		 * (DEPRECATED) Use DateUtil.setWeekendDays.
+		 * @deprecated Use DateUtil.setWeekendDays.
+		 */
+		setWeekendDays(): void; 
+
+	} // DateStatic
+
+
+	/**
 	 * An object containing details for mouse events occurring over a FormItem. 
 	 */
 	export interface FormItemEventInfo {
@@ -4143,6 +5129,129 @@ declare namespace Isc {
 
 
 	/**
+	 * A WSRequest (or "web service request") is an extended RPCRequest with additional properties
+	 * applicable to WSDL/SOAP web services.
+	 * 
+	 * All properties which are legal on RPCRequest are legal on a WSRequest, in
+	 * addition to the properties listed here. 
+	 */
+	export interface WSRequest {
+		/** 
+		 * (Read only) Data to be serialized to XML to form the SOAP body.
+		 * Flags: IR
+		 */
+		readonly data?: any /* Any */;
+		/** 
+		 * (Read only) Data to be serialized to form the SOAP headers, as a map from the header part name to the
+		 * data. For example, given WSDL like this:
+		 * 
+		 * &lt;soap:header part="SessionHeader" message="tns:HeaderMessage"/&gt;
+		 * &lt;soap:header part="CallOptions" message="tns:HeaderMessage/&gt;
+		 * 
+		 * headerData like this might be provided:
+		 * 
+		 * dsRequest.headerData = 
+		 * { SessionHeader : data
+		 * CallOptions : data };
+		 * 
+		 * The provided data will be serialized to XML by the
+		 * WebService.getInputHeaderSchema','SOAP header schema via
+		 * DataSource.xmlSerialize
+		 * Flags: IR
+		 */
+		readonly headerData?: any /* Any */;
+		/** 
+		 * (Read only) When useFlatFields is set for a request to be sent to a WSDL web service, when
+		 * creating the input XML message to send to the web service, properties in
+		 * WSRequest.data','request.data will be used as the values for XML elements of the same name, at
+		 * any level of nesting.
+		 * 
+		 * useFlatFields allows you to ignore gratuitous XML message structure, such as
+		 * extra levels of nested elements, and provides some insulation against changes in the
+		 * required structure of the input message.
+		 * 
+		 * For example, given this input message:
+		 * 
+		 * &lt;FindServices&gt;
+		 * &lt;searchFor&gt;search text&lt;/searchFor&gt;
+		 * &lt;Options&gt;
+		 * &lt;caseSensitive&gt;false&lt;/caseSensitive&gt;
+		 * &lt;/Options&gt;
+		 * &lt;IncludeInSearch&gt;
+		 * &lt;serviceName&gt;true&lt;/serviceName&gt;
+		 * &lt;documentation&gt;true&lt;/documentation&gt;
+		 * &lt;keywords&gt;true&lt;/keywords&gt;
+		 * &lt;/IncludeInSearch&gt;
+		 * &lt;/FindServices&gt;
+		 * 
+		 * If useFlatFields were not set, in order to fill out this message
+		 * correctly, request.data would need to be:
+		 * {
+		 * searchFor: "search text",
+		 * Options : {
+		 * caseSensitive: false,
+		 * },
+		 * IncludeInSearch : {
+		 * serviceName: true,
+		 * documentation : true,
+		 * keywords : true
+		 * }
+		 * }
+		 * However if useFlatFields were set, request.data could be just:
+		 * {
+		 * searchFor: "search text",
+		 * caseSensitive: false,
+		 * serviceName: true,
+		 * documentation : true,
+		 * keywords : true
+		 * }
+		 * useFlatFields is often set when the input data comes from a DynamicForm
+		 * to avoid the cumbersome and fragile process of mapping input fields to an XML structure.
+		 * 
+		 * OperationBinding.useFlatFields can also be set to cause all dsRequests of a
+		 * particular type to useFlatFields automatically.
+		 * 
+		 * For DataBoundComponent','DataBoundComponents, 
+		 * DataBoundComponent.useFlatFields','component.useFlatFields can be set use "flattened"
+		 * binding to fields of a WSDL message or XML Schema.
+		 * 
+		 * Note that useFlatFields is not generally recommended for use with XML input
+		 * messages where multiple simple type fields exist with the same name, however if used in this
+		 * way, the first field to use a given name wins. "first" means the first field encountered in a
+		 * depth first search. "wins" means only the first field will be populated in the generated
+		 * XML message.
+		 * Flags: IR, Group: flatFields
+		 */
+		readonly useFlatFields?: boolean;
+		/** 
+		 * (Read only) Name of the web service operation to invoke.
+		 * Flags: IR
+		 */
+		readonly wsOperation?: string /* String */;
+		/** 
+		 * (Read only) Optional object declaring namespace prefixes for use in evaluating the
+		 * resultType parameter of WebService.callOperation, if resultType is an
+		 * XPath.
+		 * 
+		 * Format is identical to OperationBinding.xmlNamespaces, and default namespaces
+		 * bindings are also identical.
+		 * Flags: IR
+		 */
+		readonly xmlNamespaces?: any /* Object */;
+		/** 
+		 * (Read only) Valid only with WebService.callOperation. If set, do not transform XML results to
+		 * JavaScript. Instead just return the XML nodes selected by the passed XPath or recordName,
+		 * or all nodes within the SOAP body if no XPath was passed.
+		 * Flags: IR
+		 */
+		readonly xmlResult?: boolean;
+	} // WSRequest
+
+	export interface WSRequestStatic {
+	} // WSRequestStatic
+
+
+	/**
 	 * A header span appears as a second level of headers in a ListGrid, spanning one or more
 	 * ListGrid columns and their associated headers.
 	 * 
@@ -4459,6 +5568,231 @@ declare namespace Isc {
 
 	export interface NumberStatic {
 	} // NumberStatic
+
+
+	/**
+	 * This class provides synthetic history support. Using this class, you can create history
+	 * entries at any point and be called back when the user next navigates to any of these history
+	 * entries via any of the browser mechanisms that enable navigation: back/forward buttons,
+	 * history dropdown and bookmarks.
+	 * 
+	 * The history entries created using this mechanism work just like history entries created
+	 * natively by the browser, except you get a callback whenever a transition occurs. This
+	 * implementation correctly handles "deep" history - i.e. it correctly maintains forward and
+	 * back history when the user navigates forward or back away from the page that uses this
+	 * module.
+	 * 
+	 * This module is usable independent of the rest of SmartClient - you can use it on pages that
+	 * don't load any other modules.
+	 * 
+	 * Platform Notes:
+	 * In Safari (4.0 and above), this module has the limitation that the arbitrary data parameter
+	 * in addHistoryEntry() is not reliable.
+	 * Internet Explorer: If you set document.domain on the top-level page, the History
+	 * mechanism will behave sub-optimally in IE - three clicks one the forward/back buttons will
+	 * be required to transition to the next history entry.
+	 * 
+	 * Usage overview
+	 * Synthetic history entries are added to the browser history via History.addHistoryEntry.
+	 * When this method is called, the page's URL will be modified and the native browser back button
+	 * will become active.
+	 * The History.registerCallback allows the developer to register a callback method to
+	 * fire when the user navigates to these generated history entries. This method will be fired
+	 * with an appropriate history ID when the user hits the back-button or explicitly navigates to
+	 * the URL generated for some synthetic history entry. 
+	 */
+	export interface History {
+	} // History
+
+	export interface HistoryStatic {
+
+	/* Methods */
+		/**  
+		 * 
+		 * Call this method to add a synthetic history entry. The new history entry is added in the
+		 * history stack after the currently visible page - in exactly the same way as the browser
+		 * would treat a new page transition at this point. In other words, if the user has navigated
+		 * ten pages using, say, a mixture of synthetic and real history entries, then presses back
+		 * five times and then triggers a call to this method, the history entry will be created at the
+		 * 6th position in the history stack and any history entries forward of that will be discarded.
+		 * 
+		 * NOTE: Browsers including Chrome and Firefox require a delay, even a minimal 1 millisecond
+		 * timeout, between additions to the browser's history stack or else only the last addition
+		 * will have an effect. The History module does not allow two different (by id) history entries
+		 * to be added in the same thread of execution. To check whether another history entry can be
+		 * added by the current thread, call History.readyForAnotherHistoryEntry.
+		 * 
+		 * This method must be called with an id. This id can be any string - it will be URL-encoded
+		 * and added to the current page URL as an anchor (e.g. #foo). This URL change allows the user
+		 * to bookmark this particular application state. When the user next navigates to this history
+		 * entry, the id you supplied here will be passed back to the callback you supplied via
+		 * History.registerCallback.
+		 * 
+		 * You may also optionally supply some arbitrary data to associate with this history entry.
+		 * If you do this, the data you passed in will be passed back to you as part of the callback
+		 * you specified via History.registerCallback. This data object can be anything you
+		 * want, but there are some caveats:
+		 * 
+		 * The data parameter is currently supported by all SmartClient-supported browsers except
+		 * Safari
+		 * As long as the user has not navigated away from the top-level page (i.e. the user is
+		 * navigating within synthetic history entries only), whatever data you pass in will be handed
+		 * back to you.
+		 * When the user navigates away from the current page, SmartClient will attempt to
+		 * serialize the data into a string so that when/if the user comes back to this history entry,
+		 * it can be deserialized and passed back to your logic. To take advantage of this, you need
+		 * to make sure that your data is serializeable. As long as your data is a native datatype
+		 * (String, Number, Boolean) or a collection of such datatypes (collections meaning object
+		 * literals and arrays), then it will serialize correctly. Things like pointers to the
+		 * document object and functions cannot be serialized.
+		 * In order for the serialization to occur on a page transition, you must have the
+		 * SmartClient Core module loaded on the page at the time of the transition. If it's not
+		 * available, the data will be lost, but you will still get a callback with the id you specify
+		 * if the user navigates back to this history entry later.
+		 * The data associated with this history entry will persist as long as at least one
+		 * instance of the browser remains open on the user's machine. Once the user closes all
+		 * browser instances, the data will be lost. 
+		 * Also, the user can trigger a history callback at any time by navigating to a bookmarked
+		 * history entry that may have been created in a past session, such that no data is associated
+		 * with that id in the current session. How you choose to handle that situation is up to you.
+		 * 
+		 * 
+		 * You're always guaranteed to receive the id you associate with a history entry in the
+		 * callback that you specify, but the data you associated may or may not be available, so be
+		 * careful about how you use it. Note that by passing the requiresData parameter
+		 * to History.registerCallback you can suppress the callback from firing unless the stored
+		 * data object is actually available.
+		 * 
+		 * 
+		 * @param {string} id - The id you want to associate with this history entry. This value will appear as an anchor reference at the end of the URL string. For example, if you pass in
+		 * "foo" as the id, the URL will then have a #foo tacked on the end of it. This id will be
+		 * passed back to the callback you specified in History.registerCallback when the user
+		 * navigates to this history entry in the future.
+		 * @param {string} title - The title to show in the history drop-down for this history entry. If not specified, the id is used, unless you've set an explicit history title via
+		 * History.setHistoryTitle. Note: this currently works in IE only. You may pass a
+		 * title in any other browser, but it will not change what's displayed in the history
+		 * drop-down.
+		 * @param {any} data - Arbitrary data to associate with this history entry. When the user next navigates to this history entry, this data will be provided as an argument to your callback
+		 * function. Note that the SmartClient Core module is also required to be loaded on the page
+		 * for this particular feature to work.
+		 */
+		addHistoryEntry(id:string /* String */, title?:string /* String */, data?:any /* Any */): void; 
+
+		/**  
+		 * 
+		 * Returns the current history id as reflected by the current URL.
+		 * 
+		 * 
+		 * @return {string} The current history id as reflected by the current URL.
+		 */
+		getCurrentHistoryId(): string /* String */; 
+
+		/**  
+		 * 
+		 * Returns the data associated with the specified history id.
+		 * 
+		 * 
+		 * @param {string} id - The id for which to fetch history data.
+		 * @return {any} The data associated with the specified history id.
+		 */
+		getHistoryData(id:string /* String */): any /* Any */; 
+
+		/**  
+		 * 
+		 * Can another history entry be added to the browser's history stack in the current thread?
+		 * 
+		 * Browsers including Chrome and Firefox require a delay, even a minimal 1 millisecond
+		 * timeout, between additions to the browser's history stack or else only the last addition
+		 * will have an effect. The History module does not allow two different (by id) history entries
+		 * to be added in the same thread of execution.
+		 * 
+		 * 
+		 * @return {boolean} whether another history entry can be added via ${isc.DocUtils.linkForRef('staticMethod:History.addHistoryEntry')}.
+		 */
+		readyForAnotherHistoryEntry(): boolean; 
+
+		/**  
+		 *  Registers a callback to be called when the user navigates to a synthetic history entry.
+		 * 
+		 * NOTE: Only one primary callback can be registered at a time. Unless isAdditional
+		 * is true, then registerCallback() registers the primary callback. To register
+		 * a callback that is called in addition to the primary callback, if set, pass true
+		 * for isAdditional.
+		 * 
+		 * If the SmartClient Core module is loaded on the page where you're using the History module,
+		 * you can use any format acceptable to Class.fireCallback as the callback. The
+		 * parameters 'id' and 'data' will be passed to your callback, in that order.
+		 * 
+		 * If the SmartClient Core module is not loaded on the page, you can use one of the following
+		 * formats:
+		 * 
+		 * A function that takes an id and a data argument, in that order.
+		 * An object literal with a property named 'method' whose value is a function that takes
+		 * an id and a data argument, in that order; and a property named 'target' that specifies the
+		 * object on which the callback function should be applied. So, e.g:
+		 * 
+		 * {target: myObj, method: myObj.myFunction}
+		 * 
+		 * 
+		 * The user can navigate to a synthetic history entry (and trip this callback) in one of two ways:
+		 * 
+		 * When History.addHistoryEntry method is called, a new URL associated with the
+		 * history entry is generated, and the browser's back/forward navigation buttons become active.
+		 * The user can then navigate back to a stored history entry via standard browser history
+		 * navigation, or by explicitly hitting the appropriate URL. In this case both the ID and
+		 * data parameter passed to History.addHistoryEntry will be available when the
+		 * callback fires.
+		 * Alternatively the user can store a generated history URL (for example in a browser bookmark)
+		 * and navigate directly to it in a new browser session. In this case the 'addHistoryEntry()'
+		 * may not have been fired within the browser session. This callback will still fire with the
+		 * appropriate history ID but the data parameter will be null. You can disable this behavior
+		 * by passing in the requiresData parameter.
+		 * 
+		 * 
+		 * If this method is called before the page has loaded, and the page initially has a URL with 
+		 * a history ID, the callback will be fired with the appropriate ID on page load.
+		 * However if a history callback is registered after the page has loaded, it will not be fired
+		 * until the user moves to a new synthetic history entry. If you wish to explicitly check the
+		 * current URL for a history entry, you can use the History.getCurrentHistoryId method.
+		 * 
+		 * When the user transitions to the history entry immediately before the first synthetic
+		 * history entry, the callback is fired with an id of null.
+		 * 
+		 * 
+		 * @param {string} callback - The callback to invoke when the user navigates to a synthetic history entry.
+		 * @param {boolean} requiresData - If passed, this callback will only be fired if the user is navigating to a history entry that was explicitly generated in this browser session.
+		 * @param {boolean} isAdditional - If false or unspecified, then the callback is considered to be the primary callback, replacing the previous primary callback if the primary callback was
+		 * previously registered. If true, then the callback is an additive callback; that is, it is
+		 * called in addition to the primary callback, and after the primary callback is called.
+		 * @return {number} the ID of the callback. This can be passed to ${isc.DocUtils.linkForRef('staticMethod:History.unregisterCallback')} to remove the callback.
+		 */
+		registerCallback(callback:string | any /* String | Object */, requiresData:boolean, isAdditional?:boolean): number /* int */; 
+
+		/**  
+		 * 
+		 * Sets the title associated with all history entries. This is the string that appears in the
+		 * history drop-down. If left unset, this default to the history id that is passed into
+		 * History.addHistoryEntry.
+		 * 
+		 * Note: Currently, this works in IE only. You may call this method in all other browsers,
+		 * but it will not change what's displayed in the history drop-down.
+		 * 
+		 * 
+		 * @param {string} title - The title to show in the history drop-down.
+		 */
+		setHistoryTitle(title:string /* String */): void; 
+
+		/**  
+		 *  Unregisters a callback so that it will no longer be called when the user navigates to a synthetic
+		 * history entry.
+		 * 
+		 * 
+		 * @param {number} id - the ID of the callback that was returned by History.registerCallback.
+		 * @return {boolean} <code>true</code> if the callback registration was located and removed; <code>false</code> otherwise.
+		 */
+		unregisterCallback(id:number /* int */): boolean; 
+
+	} // HistoryStatic
 
 
 	/**
@@ -8587,6 +9921,375 @@ declare namespace Isc {
 
 
 	/**
+	 * This class enables background (deferred) loading and caching of JS, CSS and Image files. It is
+	 * designed to work standalone from the rest of the SmartClient framework to provide a lightweight
+	 * caching and loading mechanism for SmartClient modules as well as user-built application
+	 * modules/fragments.
+	 * 
+	 * The most common usage scenarios are:
+	 * 
+	 * Caching JS, CSS, Image files in the browser in anticipation of a transition to a page
+	 * that requires these files. For example, a plain HTML (non-SmartClient) login page or
+	 * landing page can begin caching SmartClient in the background while allowing the user
+	 * to login, or giving the user something to read. Normally, loading SmartClient or other
+	 * large JavaScript files would block page loading and display. By loading SmartClient in
+	 * the background only after a simple HTML landing page has loaded, you can completely
+	 * eliminate perceived download time associated with loading a rich UI application, making a
+	 * much larger difference in user experience than any difference in framework/application size.
+	 * Loading a multi-phase UI. In this scenario, an initial rendering of a page is done with
+	 * minimal data transfer to the browser. Then JS, CSS, and Image files are fetched in the
+	 * background to provide richer UI components. During this time the user can continue to normally
+	 * interact with the initial page. Once loading is complete, the UI is updated with richer
+	 * components.
+	 * 
+	 * 
+	 * The recommended usage pattern is to use the loadISC custom tag provided as part of
+	 * the SmartClient SDK. You can specify cacheOnly="true" to loadISC to cache the
+	 * SmartClient framework in the background or alternately defer="true" to load the
+	 * SmartClient framework and make it available in the current page. You can specify the
+	 * onload attribute of the tag to provide a JavaScript callback to your code that will
+	 * be called when the framework loading is complete.
+	 * 
+	 * If you're not working in a JSP environment, you can use the
+	 * FileLoader.cacheISC/FileLoader.loadISC APIs to accomplish
+	 * the same effect as the loadISC JSP tag.
+	 * 
+	 * Additional APIs are provided for performing dynamic caching and loading of other JS, CSS, and
+	 * Image files to improve the performance of your application. See below.
+	 * 
+	 * You must set window.isomorphicDir before loading and using this module unless the
+	 * default of '../isomorphic/' is acceptable. E.g. if your html file is in your toplevel webroot
+	 * directory, then your HTML file should say (note the trailing slash):
+	 * 
+	 * &lt;SCRIPT&gt;window.isomorphicDir='isomorphic/'&lt;/SCRIPT&gt;
+	 * &lt;SCRIPT SRC=isomorphic/system/modules/ISC_FileLoader.js&gt;&lt;/SCRIPT&gt;
+	 * 
+	 * In addition, if you are using Smart GWT, you must set FileLoader.modulesDir','modulesDir to
+	 * "modules/", as follows:
+	 * 
+	 * isc.FileLoader.modulesDir = "modules/";
+	 * 
+	 * 
+	 * This module is usable independent of the rest of SmartClient - you can use it on pages that
+	 * don't load any other modules. In practice, the general pattern is to use this module on
+	 * static HTML pages such as a login page to pre-cache SmartClient modules, application logic,
+	 * skin files, and css so that once the user logs in, there's no latency to load the rich UI.
+	 * 
+	 * You can also load the FileLoader itself dynamically - see FileLoader.ensureLoaded
+	 * 
+	 * Note: You can also reference this class via the alias isc.FL 
+	 */
+	export interface FileLoader {
+	} // FileLoader
+
+	export interface FileLoaderStatic {
+		/** 
+		 * By default we add the version to the URL. Using this attribute you can turn this feature off.
+		 * The parameter name used for this can be set via FileLoader.versionParamName','versionParamName.
+		 * 
+		 * Note that if you are using FileLoader.cacheISC','cacheISC() to pre-cache the Smartclient
+		 * framework and in your application code use manual script tags to load the framework files
+		 * you will have to call Page.setAddVersionToSkinCSS before loading the skin in order to get
+		 * the skins stylesheet to have a cache-busting parameter appended to its url.
+		 * 
+		 * It is recommended to use FileLoader.loadISC','loadISC() if you plan on using
+		 * FileLoader.cacheISC','cacheISC() for pre-caching as this will ensure that the loaded
+		 * files and their urls will be consistent provided the FileLoader configuration is the same for
+		 * both pages.
+		 * Flags: RW
+		 */
+		readonly addVersionToLoadTags?: boolean;
+		/** 
+		 * Default list of modules for
+		 * FileLoader.loadISC/FileLoader.cacheISC to use if none are
+		 * provided by the user.
+		 * Flags: RW
+		 */
+		readonly defaultModules?: string /* String */;
+		/** 
+		 * Default skin for FileLoader.loadISC/FileLoader.cacheISC to
+		 * use if one is not provided by the user.
+		 * Flags: RW
+		 */
+		readonly defaultSkin?: string /* String */;
+		/** 
+		 * (Read only) Path to module files (ISC_Core.js et al) relative to the isomorphicDir (see
+		 * FileLoader','FileLoader overview).
+		 * 
+		 * Does not normally need to be set for SmartClient. If using Smart GWT, set to "modules/".
+		 * Flags: IR
+		 */
+		readonly modulesDir?: string /* String */;
+		/** 
+		 * Name of the query parameter to use for version-specific cache-busting. This will be used by
+		 * FileLoader.addVersionToLoadTags.
+		 * 
+		 * Also remember that both FileLoader.loadISC','loadISC() and FileLoader.cacheISC','cacheISC()
+		 * uses this so if you change it for one remember to change it for the other to not get inconsistencies
+		 * in the url's generated by FileLoader.
+		 * Flags: RW
+		 */
+		readonly versionParamName?: string /* String */;
+
+	/* Methods */
+		/**  
+		 * 
+		 * Caches a set of edge images derived from a base image.
+		 * For example this code:
+		 * 
+		 * isc.FileLoader.cacheEdgeImages("/isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6.png");
+		 * 
+		 * Will cause the following images to be cached:
+		 * 
+		 * /isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6_TL.png
+		 * /isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6_T.png
+		 * /isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6_TR.png
+		 * /isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6_L.png
+		 * /isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6_R.png
+		 * /isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6_BL.png
+		 * /isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6_B.png
+		 * /isomorphic/skins/SmartClient/images/edges/rounded/frame/A3B2CC/6_BR.png
+		 * 
+		 * 
+		 * 
+		 * @param {string} baseURLs - List of base image URLs from which position-specific edge names are to be derived. This can either be a
+		 * string with comma separated baseURLs or an Array of baseURLs.
+		 * @param {boolean} showCenter - If true, also causes the center image to be cached. Default is false.
+		 * @param {string} edges - List of edges to load. If none specified, The following default list will be used:
+		 * "TL,T,TR,L,R,BL,B,BR". The list of valid values is the
+		 * set of extensions specified by
+		 * EdgedCanvas.edgeImage. This can
+		 * either be a string with comma separated edge extension or an
+		 * Array of edge extensions.
+		 * @param {string} colors - List of colors to cache. If not specified, no color is specified. The list of valid colors are those that you have
+		 * specified as EdgedCanvas.edgeColor.
+		 * This can either be a string with comma separated colors or an Array
+		 * of colors.
+		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 */
+		cacheEdgeImages(baseURLs:string | Array<any> /* String | Array */, showCenter?:boolean /* Boolean */, edges?:string | Array<any> /* String | Array */, colors?:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Caches the specified list of files.
+		 * 
+		 * 
+		 * @param {string} URLs - List of URLs to cache. These may point to image, js, or css files. This can either be a string with comma separated URLs or an
+		 * Array of URLs.
+		 * @param {string} onload - Optional code to execute when the last of the specified files has been cached.
+		 * @param {string} type - Specifies the type of the files referenced by the URLs. Valid values are: "js", "css", and "image". If not specified, the type is auto-derived from
+		 * the file extension. If a type cannot be derived, the cache directive
+		 * for that specific URL will be ignored and an error will be logged to
+		 * the Developer Console. You must specify a type if you use a
+		 * non-standard extension for your file - for example if you use a JSP
+		 * or a servlet with no extension to generate images.
+		 */
+		cacheFiles(URLs:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */, type?:string /* String */): void; 
+
+		/**  
+		 * 
+		 * Caches a set of state images derived from a base image. This is useful for caching a set of
+		 * images for a single component. For example this code:
+		 * 
+		 * isc.FileLoader.cacheImgStates("/isomorphic/skins/SmartClient/images/TreeGrid/opener.png",
+		 * "closed,opening,opened");
+		 * 
+		 * Will cause the following images to be cached:
+		 * 
+		 * /isomorphic/skins/SmartClient/images/TreeGrid/opener_closed.png
+		 * /isomorphic/skins/SmartClient/images/TreeGrid/opener_opening.png
+		 * /isomorphic/skins/SmartClient/images/TreeGrid/opener_opened.png
+		 * 
+		 * 
+		 * 
+		 * @param {string} baseURLs - List of base image URLs from which stateful names are to be derived. This can either be a
+		 * string with comma separated baseURLs or an Array of baseURLs.
+		 * @param {string} states - List of states to load. If none specified, The following default list will be used:
+		 * "Down,Over,Selected,Selected_Down,Selected_Over". This can
+		 * either be a string with comma separated states or an Array
+		 * of states.
+		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 */
+		cacheImgStates(baseURLs:string | Array<any> /* String | Array */, states?:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Caches the specified SmartClient modules and skin. Calling this method is equivalent to using
+		 * the loadISC JSP tag with cacheOnly="true".
+		 * 
+		 * 
+		 * @param {string} skin - Name of the skin to load. If not specified, the skin specified by the default FileLoader.defaultSkin will be used.
+		 * Instead of a skin name, you can specify a skinDir - this works just
+		 * like Page.setSkinDir - the skin assumed to be a skinDir if
+		 * there's at least one forward slash (/) in the name.
+		 * @param {string} modules - List of modules to load. If not specified, the list of modules specified by the default
+		 * FileLoader.defaultModules will be used. You
+		 * can specify modules as "Core,Foundation" or as ["Core",
+		 * "Foundation"]
+		 * @param {string} onload - Optional code to execute when all specified modules and skin have been cached.
+		 */
+		cacheISC(skin?:string /* String */, modules?:string | List /* String | List */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Caches the specified locale.
+		 * 
+		 * 
+		 * @param {string} locale - Name of the locale to cache..
+		 * @param {string} onload - Optional code to execute when all specified locale has been cached..
+		 */
+		cacheLocale(locale?:string /* String */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Caches the specified SmartClient modules.
+		 * 
+		 * 
+		 * @param {string} modules - List of SmartClient modules to cache. This can either be a string with comma separated module names or an Array of module
+		 * names.
+		 * @param {string} onload - Optional code to execute when the last of the specified modules has been cached.
+		 */
+		cacheModules(modules:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Caches a set of shadow images at various depths. For example this code:
+		 * 
+		 * isc.FileLoader.cacheShadows("/isomorphic/skins/SmartClient/images/shared/shadows", "5");
+		 * 
+		 * Will cause the following images to be cached:
+		 * 
+		 * /isomorphic/skins/SmartClient/images/shared/shadows/ds5_TL.png
+		 * /isomorphic/skins/SmartClient/images/shared/shadows/ds5_T.png
+		 * /isomorphic/skins/SmartClient/images/shared/shadows/ds5_TR.png
+		 * /isomorphic/skins/SmartClient/images/shared/shadows/ds5_L.png
+		 * /isomorphic/skins/SmartClient/images/shared/shadows/ds5_R.png
+		 * /isomorphic/skins/SmartClient/images/shared/shadows/ds5_BL.png
+		 * /isomorphic/skins/SmartClient/images/shared/shadows/ds5_B.png
+		 * /isomorphic/skins/SmartClient/images/shared/shadows/ds5_BR.png
+		 * 
+		 * 
+		 * 
+		 * @param {string} baseDir - Base directory containing the shadow images.
+		 * @param {string} depths - List of depths to load. These values corresponds to the Canvas attribute Canvas.shadowDepth. This can either be
+		 * a string with comma separated depths or an Array of depths.
+		 * @param {string} baseShadowImage - Name of the base shadow image from which list of URLs is generated. If not specified, this defaults to "ds.png".
+		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 */
+		cacheShadows(baseDir:string /* String */, depths:string | Array<any> /* String | Array */, baseShadowImage?:string /* String */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Caches a set of state stretch images derived from a base image. This is useful for caching a set
+		 * of images for a single component. For example this code:
+		 * 
+		 * isc.FileLoader.cacheStretchImgStates("/isomorphic/skins/SmartClient/images/button/button.png",
+		 * "Down,Over");
+		 * 
+		 * Will cause the following images to be cached:
+		 * 
+		 * /isomorphic/skins/SmartClient/images/button/button_start.png
+		 * /isomorphic/skins/SmartClient/images/button/button_stretch.png
+		 * /isomorphic/skins/SmartClient/images/button/button_end.png
+		 * /isomorphic/skins/SmartClient/images/button/button_Down_start.png
+		 * /isomorphic/skins/SmartClient/images/button/button_Down_stretch.png
+		 * /isomorphic/skins/SmartClient/images/button/button_Down_end.png
+		 * /isomorphic/skins/SmartClient/images/button/button_Over_start.png
+		 * /isomorphic/skins/SmartClient/images/button/button_Over_stretch.png
+		 * /isomorphic/skins/SmartClient/images/button/button_Over_end.png
+		 * 
+		 * 
+		 * 
+		 * @param {string} baseURLs - List of base image URLs from which stateful names are to be derived. This can either be a
+		 * string with comma separated baseURLs or an Array of baseURLs.
+		 * @param {string} states - List of states to load. If none specified, The following default list will be used:
+		 * "Down,Over,Selected,Selected_Down,Selected_Over". This can
+		 * either be a string with comma separated states or an Array
+		 * of states
+		 * @param {string} pieces - List of StretchImg pieces to cache. If not specified, the following list will be used: "start,stretch,end". This can
+		 * either be a string with comma separated piece names or an Array
+		 * of piece names.
+		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 */
+		cacheStretchImgStates(baseURLs:string | Array<any> /* String | Array */, states?:string | Array<any> /* String | Array */, pieces?:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Loads the FileLoader into the page if it has not already been loaded. Whether the FileLoader
+		 * is loaded or not, the callback fires.
+		 * 
+		 * The purpose of this method is to enable a canonical way of loading/caching code and assets.
+		 * As follows:
+		 * 
+		 * isc.FileLoader.ensureLoaded(function () {
+		 * isc.FileLoader.loadModules(["DataBinding", "SomethingElse"]);
+		 * isc.FileLoader.loadJSFiles("/my/precious.js", function () {
+		 * isc.Log.logWarn("All necessary assets loaded!");
+		 * });
+		 * });
+		 * 
+		 * 
+		 * 
+		 * @param {Callback} callback - Callback to fire when FileLoader has loaded.
+		 */
+		ensureLoaded(callback:Callback): void; 
+
+		/**  
+		 * 
+		 * Loads the specified SmartClient modules and skin in defer mode. Calling this method is
+		 * equivalent to using the loadISC JSP tag with defer="true".
+		 * 
+		 * 
+		 * @param {string} skin - Name of the skin to load. If not specified, the skin specified by the default FileLoader.defaultSkin will be used.
+		 * Instead of a skin name, you can specify a skinDir - this works just
+		 * like Page.setSkinDir - the skin assumed to be a skinDir if
+		 * there's at least one forward slash (/) in the name.
+		 * @param {string} modules - List of modules to load. If not specified, the list of modules specified by the default
+		 * FileLoader.defaultModules will be used. You
+		 * can specify modules as e.g: "Core,Foundation" or as ["Core",
+		 * "Foundation"]
+		 * @param {string} onload - Optional code to execute when all specified modules and skin have loaded.
+		 */
+		loadISC(skin?:string /* String */, modules?:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Loads the specified JS files into the context of the current page.
+		 * 
+		 * 
+		 * @param {string} URLs - List of URLs pointing to JS files to load. This can either be a string with comma separated URLs or an Array of URLs.
+		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed loading.
+		 */
+		loadJSFiles(URLs:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Loads the specified locale in defer mode.
+		 * 
+		 * 
+		 * @param {string} locale - Name of the locale to load.
+		 * @param {string} onload - Optional code to execute when all specified locale has loaded.
+		 */
+		loadLocale(locale?:string /* String */, onload?:string | any /* String | Function */): void; 
+
+		/**  
+		 * 
+		 * Loads the specified SmartClient modules into the context of the current page. 
+		 * 
+		 * This call is idempotent in that duplicate module loads are automatically suppressed (no
+		 * request is issued) and your specified onload callback will still fire.
+		 * 
+		 * 
+		 * @param {string} modules - List of SmartClient modules to load. This can either be a string with comma separated module names or an Array of module
+		 * names.
+		 * @param {string} onload - Optional code to execute when the last of the specified modules has completed loading.
+		 */
+		loadModules(modules:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+
+	} // FileLoaderStatic
+
+
+	/**
 	 * Form item icon descriptor objects used by Form Items to specify the appearance and
 	 * behavior of icons displayed after the item in the page flow. 
 	 */
@@ -9098,6 +10801,155 @@ declare namespace Isc {
 
 	export interface OperatorStatic {
 	} // OperatorStatic
+
+
+	/**
+	 * The ServerObject tells the ISC server how to find or create a server-side object involved in
+	 * dmiOverview','DMI (Direct Method Invocation). 
+	 * 
+	 * A ServerObject declaration appears in the XML definition of a DataSource (for
+	 * responding to DSRequests) or in an Application configuration file (.app.xml) for
+	 * responding to RPCRequests.
+	 * 
+	 * NOTE: Please take note of the points made in 
+	 * serverDataSourceImplementation','this discussion of caching and thread-safety
+	 * issues in server-side DataSources. 
+	 */
+	export interface ServerObject {
+		/** 
+		 * (Read only) Specifies the name of the attribute by which to look up the DMI instance. This attribute is
+		 * consulted only when the value of ServerObject.lookupStyle is "attribute".
+		 * Flags: IR
+		 */
+		readonly attributeName?: string /* String */;
+		/** 
+		 * (Read only) Specifies the scope in which the DMI instance is to be looked up. Valid values are: 
+		 * "request", "session", and "application". If
+		 * attributeScope is left out of the ServerObject definition, then
+		 * all scopes are searched in the order in which they are listed above.
+		 * 
+		 * This attribute is consulted only when the value of ServerObject.lookupStyle is
+		 * "attribute".
+		 * Flags: IR
+		 */
+		readonly attributeScope?: "request" | "session" | "application";
+		/** 
+		 * (Read only) For use when ServerObject.lookupStyle is "spring" or "cdi", 
+		 * id (name) of the bean to ask Spring (CDI) to create.
+		 * Flags: IR
+		 */
+		readonly bean?: string /* String */;
+		/** 
+		 * (Read only) Specifies the fully-qualified class name that provides the server-side endpoint of the DMI
+		 * (ServerObject.lookupStyle:"new") or the class name of the factory that produces the
+		 * DMI instance (ServerObject.lookupStyle:"factory").
+		 * 
+		 * This is one of the values that you need to pass to DMI.call to invoke the DMI from
+		 * the client.
+		 * 
+		 * The value of this attribute is used for "new" and "factory"
+		 * values of ServerObject.lookupStyle.
+		 * 
+		 * It is also used for "cdi" value of ServerObject.lookupStyle, to provide 
+		 * class name of the bean to ask CDI to create.
+		 * Flags: IR
+		 */
+		readonly className?: string /* String */;
+		/** 
+		 * (Read only) For a ServerObject defined at the DataSource.serverObject','DataSource level, by 
+		 * default we only allow it to intercept standard CRUD operations (ie, ordinary fetches, adds,
+		 * updates and removes). To allow the ServerObject to intercept other types of operation - 
+		 * custom operations, validations, etc - set this property to false. Note that ServerObjects 
+		 * declared at the OperationBinding.serverObject','OperationBinding level always intercept
+		 * that operation, whatever its type, and this property has no effect.
+		 * 
+		 * NOTE: If you are intercepting operations on the server because you wish to inspect
+		 * them before deciding whether to process them with bespoke code or allow them to proceed 
+		 * with normal processing, the way to invoke normal processing without causing any interference
+		 * is:
+		 * return dsRequest.execute();
+		 * 
+		 * Flags: IR
+		 */
+		readonly crudOnly?: boolean;
+		/** 
+		 * (Read only) By default, for DMI DSResponses, DSResponse.data is filtered on the server to just the set
+		 * of fields defined on the DataSource. This behavior can be overridden in several ways - see
+		 * the overview in dmiOverview','DMI for details. The value of this attribute overrides
+		 * DataSource.dropExtraFields.
+		 * Flags: IR
+		 */
+		readonly dropExtraFields?: boolean /* Boolean */;
+		/** 
+		 * (Read only) You can optionally specify an ID on the ServerObject config block - in which case you can
+		 * use that value as the "className" argument when calling DMI.call. This allows you to
+		 * hide the name of the server-side class used as the factory or implementer of the DMI from
+		 * the browser as a security precaution.
+		 * Flags: IR
+		 */
+		readonly ID?: string /* String */;
+		/** 
+		 * (Read only) Specifies the mechanism for locating the class instance on which to invoke the method.
+		 * Valid values are as follows:
+		 * 
+		 * "spring": For use with the <a href='http://springframework.com' target='_blank'>Spring framework</a>.
+		 * ServerObject.bean contains the name of the bean to invoke. Which application context
+		 * is used can be configured via web.xml (see the example web.xml in the SDK). See also
+		 * serverInit for special concerns with framework initialization when using
+		 * Spring.
+		 * "cdi": For use with 
+		 * <a href='http://docs.oracle.com/javaee/6/tutorial/doc/giwhb.html' target='_blank'>CDI (Contexts and Dependency Injection)</a>.
+		 * Use ServerObject.bean to configure the name of the 
+		 * bean to invoke or, alternatively, ServerObject.className to configure its class name.
+		 * "new": A new instance of the class specified by ServerObject.className will be
+		 * created and the DMI method will be invoked on that instance (unless the specified method is
+		 * static, in which case no instance is created, but the class specified by
+		 * ServerObject.className is still used).
+		 * "factory": A custom factory provides the class instance on which the DMI method is to be
+		 * invoked. In this case, ServerObject.className specifies the className of the factory
+		 * that will provide the instance on which the DMI method is to be invoked. The class
+		 * specified by ServerObject.className must provide exactly one method named
+		 * create that must return the class instance on which you wish the DMI method to
+		 * be invoked. Like the DMI methods, the create method can request a standard set of
+		 * values as arguments. See dmiOverview','DMI for a list of available values.
+		 * "attribute": The instance on which the DMI method is to be invoked is looked up in the
+		 * scope defined by ServerObject.attributeScope via the attribute name specified in
+		 * ServerObject.attributeName.
+		 * 
+		 * Flags: IR
+		 */
+		readonly lookupStyle?: "new" | "factory" | "attribute" | "spring" | "cdi";
+		/** 
+		 * (Read only) Specifies the name of the method to call for operations using this ServerObject. This is 
+		 * a DataSource-level default; you can override it for individual operations either by 
+		 * specifying the OperationBinding.serverMethod attribute, or by declaring an 
+		 * operation-level serverObject that specifies a different methodName (if you specify both 
+		 * an operationBinding.serverMethod and an operation-level serverObject.methodName, the 
+		 * latter takes precedence)
+		 * Flags: IR
+		 */
+		readonly methodName?: string /* String */;
+		/** 
+		 * (Read only) If set, the SmartClient server will use JXPath to call your server code. The
+		 * JXPathContext (start point) will be the object arrived at by applying the 
+		 * ServerObject.lookupStyle','lookupStyle and related ServerObject properties. The 
+		 * intention of this property is to allow easier access to your existing Java objects 
+		 * and reduce the need to write SmartClient-specific server code.
+		 * Flags: IR
+		 */
+		readonly targetXPath?: string /* String */;
+		/** 
+		 * (Read only) When the ServerObject appears in a .app.xml file (for RPC DMI), this property
+		 * specifies the list of methods on the ServerObject that are callable from the client. See
+		 * the builtin.app.xml file in the /shared/app directory of the SDK for an example of a
+		 * visibleMethods declaration block.
+		 * Flags: IR
+		 */
+		readonly visibleMethods?: List;
+	} // ServerObject
+
+	export interface ServerObjectStatic {
+	} // ServerObjectStatic
 
 
 	/**
