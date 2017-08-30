@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-08-29 at 8/29/2017 7:01:33 AM by kwhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-08-30 at 8/30/2017 7:01:32 AM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -43,7 +43,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |   |Item|Value|Description|
 |---|--- |---  |---        |
 ||**Warnings**||**Does not prevent item from being generated but might indicate a problem or inconsistency in the docs**|
-|1|Object attributes marked with W flag|277|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
+|1|Object attributes marked with W flag|276|Attributes on objects are always read only on the object (right?). There may be other methods in parent or container classes to modify the attribute.|
 |2|Attributes missing R flag|46|Almost all attributes have an R flag except these. Is this on purpose?|
 |3|Suspected optional parameters that are marked with optional='false'|18|Probably, although not necessarily, a mistake. Could lead to incorrect code generation.|
 |4|Methods with bad flags|0|Method flags should only contain A|
