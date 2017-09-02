@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/1/2017 7:00:08 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-01
+// Generated: 9/2/2017 7:00:19 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-02
 
 declare namespace Isc {
 
@@ -916,6 +916,182 @@ declare namespace Isc {
 	} // isA
 
 	export interface isAStatic {
+
+	/* Methods */
+		/**  
+		 * 
+		 * Is object an Array object?
+		 * 
+		 * NOTE: if you prefer, you can call this as isAn.Array()
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is an Array
+		 */
+		Array(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object a Boolean object?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a Boolean
+		 */
+		Boolean(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object a class object?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a Class Object
+		 */
+		ClassObject(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object a Date object?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a Date
+		 */
+		Date(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object an Array with no items?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is an empty array
+		 */
+		emptyArray(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object an object with no properties (i.e.: {})?
+		 * 
+		 * Note that an object that has properties with null values is considered non-empty, eg 
+		 * { propName:null } is non-empty.
+		 * 
+		 * NOTE: if you prefer, you can call this as isAn.emptyObject()
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is the empty object
+		 */
+		emptyObject(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object the empty string?
+		 * 
+		 * NOTE: if you prefer, you can call this as isAn.emptyString()
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a null string
+		 */
+		emptyString(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object a Function object?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a Function
+		 */
+		Function(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object an instance of some class?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is an instance of some class
+		 */
+		Instance(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object an interface object?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a Interface Object
+		 */
+		Interface(object:any /* Object */): boolean; 
+
+		/**  
+		 *  Does object implement the List interface?
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} <code>true</code> if the object is an Array or belongs to another class that                   implements the <code>List</code> API.
+		 */
+		List(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object a non-empty String?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a non-empty string
+		 */
+		nonemptyString(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object a Number object?
+		 * 
+		 * NOTE: this returns false if object is an invalid number (isNaN(object) == true)
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a Number
+		 */
+		Number(object:any /* Object */): boolean; 
+
+		/**  
+		 *  Returns whether the passed value is a non-null Object.
+		 * 
+		 * Returns false for values that are Numbers, Strings, Booleans, Functions or are null or
+		 * undefined. 
+		 * 
+		 * Returns true for Object, Array, Regular Expression, Date and other kinds of
+		 * native objects which are considered to extend from window.Object.
+		 * 
+		 * 
+		 * @param {any} object - value to test for whether it's an object
+		 * @return {boolean} whether passed value is an Object
+		 */
+		Object(object:any /* Any */): boolean; 
+
+		/**  
+		 * 
+		 * Is object a Regular Expression (RegExp) object?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a Boolean
+		 */
+		RegularExpression(object:any /* Object */): boolean; 
+
+		/**  
+		 * 
+		 * Is object a String object?
+		 * 
+		 * 
+		 * @param {any} object - object to test
+		 * @return {boolean} true == <code>object</code> is a String
+		 */
+		String(object:any /* Object */): boolean; 
+
 	} // isAStatic
 
 

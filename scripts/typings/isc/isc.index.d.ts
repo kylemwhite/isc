@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 9/1/2017 7:01:24 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-01
+// Generated: 9/2/2017 7:01:38 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-02
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -1691,6 +1691,32 @@ declare namespace Isc {
 		 * default TileLayout.layoutPolicy is "flow" instead of "fit".
 		 */ 
 		FlowLayout: FlowLayoutStatic<FlowLayout, FlowLayoutProps>;
+
+		/** 
+		 * Force-loads the custom fonts declared in the skinning','current skin\'s CSS file
+		 * and updates any potentially-affected, already-drawn canvii when loading completes. Without
+		 * FontLoader, auto-sized canvii that use custom fonts may end up with the wrong size if a page
+		 * is loaded when its custom fonts not available in the browser cache.
+		 * 
+		 * To disable FontLoader, set &nbsp;window.isc_loadCustomFonts = false&nbsp; before
+		 * SmartClient is loaded.
+		 * 
+		 * If you want to avoid the Framework redrawing canvii after the fonts load, you may want to
+		 * code your app to delay drawing anything until the skin fonts are loaded. You can check
+		 * FontLoader.isLoadingComplete to check whether loading is done, and if it's not, you
+		 * can override FontLoader.onLoadingComplete to run code when it's done or
+		 * FontLoader.onLoadingFailed to run code if there's an error.
+		 * 
+		 * <h3>Advanced Usage</h3>
+		 * FontLoader will use the new 
+		 * <a href='https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API' target='_blank'>CSS Font Loading API</a>
+		 * in browsers in which it's available and has proven reliable. Otherwise, we fall back to
+		 * canvas measurement techniques to detect loading. To force fallback and avoid the API, set
+		 * &nbsp;window.isc_useCSSFontAPI = false&nbsp;, or to force the API to be used (where it
+		 * exists but may be unreliable), set &nbsp;window.isc_useCSSFontAPI = true&nbsp, before
+		 * SmartClient is loaded.
+		 */ 
+		FontLoader: FontLoaderStatic<FontLoader, FontLoaderProps>;
 
 		/** 
 		 * FormItem extends Class

@@ -1,15 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-01
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-02
 
 Errors during generation
-Generated: 9/1/2017 7:01:25 AM by kwhite
+Generated: 9/2/2017 7:01:38 AM by kwhite
 
 Summary
 Total Types  : 240
 Total Classes: 298
 Total Objects: 78
-Total Methods: 3564
+Total Methods: 3563
 
 Properties that override a base class property with a different type: 79
 1. Property attr:BlurbItem.textBoxStyle has type CSSStyleName overrides property attr:FormItem.textBoxStyle with type FormItemBaseStyle
@@ -155,12 +155,12 @@ Classes without inheritsFrom attribute: 53 (Maybe it should inherit from Class, 
 9. DataSourceField (manually checked, does NOT inherit from Class. Should be object?)
 10. DateUtil
 11. DMI
-12. EBay (manually checked, does NOT inherit from Class. Should be object?)
-13. EditContext
-14. EditProxy
-15. EventHandler
-16. Facet (manually checked, does NOT inherit from Class. Should be object?)
-17. FieldPickerField
+12. EditContext
+13. EditProxy
+14. EventHandler
+15. Facet (manually checked, does NOT inherit from Class. Should be object?)
+16. FieldPickerField
+17. FontLoader
 18. FormItem (manually checked, inheritsFrom Class)
 19. GroupingMessages
 20. HiddenPalette
@@ -715,17 +715,17 @@ The following methods were excluded
 13. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-09-01	240	5	298	78	3564	10	0	53	216	663	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	276	0	131	385	0	0	0	240	5	77	288	3252	1	1	0.9871795	0.9664429	0.9124579	
+2017-09-02	240	5	298	78	3563	10	0	53	216	663	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	276	0	131	385	0	0	0	240	5	77	288	3267	1	1	0.9871795	0.9664429	0.9169239	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-09-01
+Metrics for build SNAPSHOT_v12.0d_2017-09-02
 ===== Information =====
 (Informational only, not a problem)
 Types: 240
 Interfaces: 5
 Classes: 298
 Objects: 78
-Methods: 3,564
+Methods: 3,563
 Excluded Classes: 10
 string values with quotes: 216
 string values without quotes: 663
@@ -737,12 +737,12 @@ Types Generated: 240
 Interfaces Generated: 5
 Objects Generated: 77
 Classes Generated: 288
-Methods Generated: 3,252
+Methods Generated: 3,267
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
 Percentage of Classes generated: 97 %
-Percentage of Methods generated: 91 %
+Percentage of Methods generated: 92 %
 
 ===== Warnings =====
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)

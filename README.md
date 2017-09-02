@@ -1,13 +1,13 @@
 ## Isomorphic SmartClient TypeScript type definitions
-SmartClient Version: SNAPSHOT_v12.0d_2017-09-01
+SmartClient Version: SNAPSHOT_v12.0d_2017-09-02
 
-Generated: 9/1/2017 7:01:25 AM
+Generated: 9/2/2017 7:01:38 AM
 
 Work in progress. See [Progress.md](./Progress.md)
 
 Class coverage: 97%
 
-Method coverage: 91%
+Method coverage: 92%
 
 Update: Repository is now a sample Visual Studio 2015 application. ts.d files can be found in [/scripts/typings/isc](./scripts/typings/isc). Demo can be seen [here](https://kylemwhite.github.io/isc/).
 
