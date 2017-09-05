@@ -6,7 +6,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 9/5/2017 7:01:29 AM by kwhite
+// Generated: 9/5/2017 9:58:06 AM by kwhite
 // Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-05
 
 /**
@@ -254,6 +254,12 @@ declare namespace Isc {
 		 * Set the defaultValue of this item to the HTML you want to embed in the form.
 		 */ 
 		BlurbItem: BlurbItemStatic<BlurbItem, BlurbItemProps>;
+
+		/** 
+		 * BooleanItem extends FormItem
+		 * Boolean form item, implemented with customizable checkbox images
+		 */ 
+		BooleanItem: BooleanItemStatic<BooleanItem, BooleanItemProps>;
 
 		/** 
 		 * The Browser class contains various class attributes that indicate basic properties
@@ -2371,6 +2377,93 @@ declare namespace Isc {
 		MockupElement: MockupElementStatic<MockupElement, MockupElementProps>;
 
 		/** 
+		 * MultiFileItem extends CanvasItem
+		 * The MultiFileItem provides an interface for a user to save one or more files that are
+		 * related to a DataSource record, where each file is represented by a record in a
+		 * related DataSource.
+		 * 
+		 * Use MultiFileItem when a record may have one or more files associated with it (such as
+		 * attachments to an email message) where no information about the files needs to be stored other
+		 * than the files themselves. If you have several fields associated with each file (such as an
+		 * uploaded document with a version, comments and processes associated with it), consider
+		 * instead an ordinary DataSource with on field of type "binary", and using the FileItem
+		 * for upload.
+		 * 
+		 * See the upload','Uploading Files overview for more information on upload.
+		 * 
+		 * DataSource Setup
+		 * 
+		 * In a relationship sometimes called a "master-detail" relationship, the MultiFileItem stores
+		 * files in a "detail" DataSource which are related to a "master" DataSource record being
+		 * edited by the form which contains the MultiFileItem.
+		 * 
+		 * To use a MultiFileItem:
+		 * 
+		 * declare a "detail" DataSource to store the related files. At a minimum, this
+		 * DataSource must have:
+		 * 
+		 * a DataSourceField.primaryKey','primaryKey field
+		 * a field declaring a DataSourceField.foreignKey','foreignKey relationship to the
+		 * primaryKey of the "master" DataSource
+		 * a field of type "binary"
+		 * 
+		 * DataBoundComponent.dataSource','bind a DynamicForm to the "master" DataSource 
+		 * in the DynamicForm bound to the "master" DataSource, declare a field with
+		 * FormItem.editorType','editorType:"MultiFileItem" and a dataSource
+		 * property set to the ID of the "detail" DataSource
+		 * 
+		 * An example "detail" DataSource for storing files is shown below. This "detail" DataSource
+		 * assumes a "master" DataSource with DataSource.ID "masterRecord" and with a primaryKey
+		 * field "id".
+		 * 
+		 * 
+		 * &lt;DataSource ID="uploadedFiles" serverType="sql"&gt;
+		 * &lt;fields&gt;
+		 * &lt;field name="fileId" type="sequence" primaryKey="true" hidden="true"/&gt;
+		 * &lt;field name="masterRecordId" type="number" foreignKey="masterRecord.id" hidden="true"/&gt;
+		 * &lt;field name="file" type="binary" title="File"/&gt;
+		 * &lt;/fields&gt;
+		 * &lt;/DataSource&gt;
+		 * 
+		 * 
+		 * 
+		 * Aside from a single "binary" field, the "detail" DataSource should generally have only
+		 * hidden fields, as shown above. Additional internal fields (such as a "lastUpdated" field)
+		 * may be added, but will not be editable via MultiFileItem. 
+		 * 
+		 * Display
+		 * 
+		 * The MultiFileItem appears as a list of files related to the current record. An optional
+		 * button, the MultiFileItem.removeButton','removeButton allows removing files. A
+		 * second optional button, the MultiFileItem.editButton','editButton, launches a
+		 * picker for uploading further files.
+		 * 
+		 * Saving
+		 * 
+		 * In all cases, uploading a new file is an "add" DSRequest against the
+		 * MultiFileItem.dataSource.
+		 * 
+		 * The MultiFileItem has two modes, according to whether the "master" record is being newly created
+		 * via an "add" operation or whether the master record is pre-existing ("update" operation).
+		 * 
+		 * If the master record is pre-existing, each file added by the user is uploaded as soon as the
+		 * user exits the picker launched from the edit button, and the list of files shown in the main
+		 * form reflects the actual list of stored files. 
+		 * 
+		 * If the master record is being newly created, files are not actually uploaded until
+		 * after the master record is confirmed saved, and the list of fields shown in the main
+		 * form reflects files which will be uploaded after the master record is saved.
+		 * 
+		 * In both cases, if there are multiple files to upload, they are uploaded one at a time, as a
+		 * series of separate "add" DSRequests against the MultiFileItem.dataSource.
+		 * 
+		 * Also in both cases, deletion of any file is immediate. In the case of a pre-existing master
+		 * record, all files shown actually exist as DataSource records, and deletion is performed as a
+		 * "remove" DSRequest against the MultiFileItem.dataSource.
+		 */ 
+		MultiFileItem: MultiFileItemStatic<MultiFileItem, MultiFileItemProps>;
+
+		/** 
 		 * MultiFilePicker extends VStack
 		 * The MultiFilePicker is a pop-up picker used by the MultiFileItem to allow the user to
 		 * enter several files for upload.
@@ -2532,6 +2625,15 @@ declare namespace Isc {
 		 * FormItem for password fields, where text input by the user should not be shown in readable text.
 		 */ 
 		PasswordItem: PasswordItemStatic<PasswordItem, PasswordItemProps>;
+
+		/** 
+		 * PickListMenu extends ListGrid
+		 * ListGrid subclass used, by default, by FormItems which implement
+		 * PickList to display
+		 * a list of selectable options. Can be subclassed, customized and assigned to FormItems 
+		 * via the ComboBoxItem.pickListConstructor','pickListConstructor attribute.
+		 */ 
+		PickListMenu: PickListMenuStatic<PickListMenu, PickListMenuProps>;
 
 		/** 
 		 * PickTreeItem extends CanvasItem
@@ -3555,6 +3657,13 @@ declare namespace Isc {
 		RichTextEditor: RichTextEditorStatic<RichTextEditor, RichTextEditorProps>;
 
 		/** 
+		 * RichTextItem extends CanvasItem
+		 * FormItem for rich text (HTML) editing. Makes use of a RichTextEditor as the 
+		 * editing interface.
+		 */ 
+		RichTextItem: RichTextItemStatic<RichTextItem, RichTextItemProps>;
+
+		/** 
 		 * RowSpacerItem extends SpacerItem
 		 * Form item that renders as a blank row in the form layout.
 		 * Set RowSpacerItem.startRow to false to create a rowSpacer that simply
@@ -3721,17 +3830,6 @@ declare namespace Isc {
 		 * left-hand Nav), or to allow multiple sections to be visible and share the available space.
 		 */ 
 		SectionStack: SectionStackStatic<SectionStack, SectionStackProps>;
-
-		/** 
-		 * This static singleton class implements a component that can be used to highlight any other
-		 * Canvas or FormItem by drawing a line around it and optional label. The selection outline 
-		 * moves, resizes and hides with the target object, and does not occlude any part of it. The
-		 * outline is not a peer, child or member of the target object; the target object does not 
-		 * know about the outline.
-		 * 
-		 * NOTE: This class is for internal use only by EditContext.
-		 */ 
-		SelectionOutline: SelectionOutlineStatic;
 
 		/** 
 		 * SelectionTreeMenu extends Menu
@@ -4232,6 +4330,12 @@ declare namespace Isc {
 		 * such as ListGrid headers.
 		 */ 
 		Toolbar: ToolbarStatic<Toolbar, ToolbarProps>;
+
+		/** 
+		 * ToolbarItem extends CanvasItem
+		 * Set of horizontally arranged buttons.
+		 */ 
+		ToolbarItem: ToolbarItemStatic<ToolbarItem, ToolbarItemProps>;
 
 		/** 
 		 * ToolStrip extends Layout

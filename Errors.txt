@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-05
 
 Errors during generation
-Generated: 9/5/2017 7:01:29 AM by kwhite
+Generated: 9/5/2017 9:58:06 AM by kwhite
 
 Summary
 Total Types  : 240
@@ -182,7 +182,7 @@ Classes without inheritsFrom attribute: 53 (Maybe it should inherit from Class, 
 36. RPCResponse
 37. SchemaSet
 38. Selection
-39. SelectionOutline (manually checked, does NOT inherit from Class. Should be object?)
+39. SelectionOutline (manually checked, excluded because NOTE: This class is for internal use only by EditContext.)
 40. SelectOtherItem (manually checked, does NOT inherit from Class. Should be object?)
 41. SimpleType
 42. SyntaxHiliter
@@ -685,16 +685,12 @@ Suspected optional parameters that are marked with optional='false': 18. Paramet
 
 
 The following classes were excluded
-1. BooleanItem: Extends CycleItem but CycleItem is not defined.
-2. ComboBoxItem: Interface 'ComboBoxItem' incorrectly extends interface 'TextItem'. Types of property 'canEditCriterion' are incompatible.
-3. MultiComboBoxItem: Cannot find name 'ComboBoxItem'
-4. MultiFileItem: Extends RelationItem but RelationItem is not defined
-5. PickListMenu: Extends ScrollingMenu but ScrollingMenu is not defined
-6. RelativeDateItem: Interface 'RelativeDateItem' incorrectly extends interface 'CanvasItem'. Types of property 'valueField' are incompatible.
-7. RichTextItem: Interface 'RichTextItem' incorrectly extends interface 'CanvasItem'. Types of property 'colSpan' are incompatible.
-8. ToolbarItem: Interface 'ToolbarItem' incorrectly extends interface 'CanvasItem'. Types of property 'colSpan' are incompatible.
-9. Callbacks: 'Callbacks' is neither a Class nor an Object, it's just a way of organizing the docs. This one item needs to be flagged as something to be ignored in terms of API generation.
-10. VisualBuilder: This is an internal only class - do not try to use it directly in your applications.
+1. ComboBoxItem: Interface 'ComboBoxItem' incorrectly extends interface 'TextItem'. Types of property 'canEditCriterion' are incompatible.
+2. MultiComboBoxItem: Cannot find name 'ComboBoxItem'
+3. RelativeDateItem: Interface 'RelativeDateItem' incorrectly extends interface 'CanvasItem'. Types of property 'valueField' are incompatible.
+4. Callbacks: 'Callbacks' is neither a Class nor an Object, it's just a way of organizing the docs. This one item needs to be flagged as something to be ignored in terms of API generation.
+5. VisualBuilder: This is an internal only class - do not try to use it directly in your applications.
+6. SelectionOutline: NOTE: This class is for internal use only by EditContext.
 
 The following methods were excluded
 === Getter method return type does not match attribute type ===
@@ -715,7 +711,7 @@ The following methods were excluded
 13. method:TileGrid.setData
 
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-09-05	240	5	298	78	3563	10	0	53	216	663	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	276	0	131	385	0	0	0	240	5	77	288	3267	1	1	0.9871795	0.9664429	0.9169239	
+2017-09-05	240	5	298	78	3563	6	0	53	216	663	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	276	0	131	385	0	0	0	240	5	77	292	3264	1	1	0.9871795	0.9798658	0.916082	
 
 ======= For Display Somewhere =======
 Metrics for build SNAPSHOT_v12.0d_2017-09-05
@@ -726,7 +722,7 @@ Interfaces: 5
 Classes: 298
 Objects: 78
 Methods: 3,563
-Excluded Classes: 10
+Excluded Classes: 6
 string values with quotes: 216
 string values without quotes: 663
 string values with period: 131
@@ -736,12 +732,12 @@ OR specified as ' \| ': 385
 Types Generated: 240
 Interfaces Generated: 5
 Objects Generated: 77
-Classes Generated: 288
-Methods Generated: 3,267
+Classes Generated: 292
+Methods Generated: 3,264
 Percentage of Types generated: 100 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
-Percentage of Classes generated: 97 %
+Percentage of Classes generated: 98 %
 Percentage of Methods generated: 92 %
 
 ===== Warnings =====

@@ -1,11 +1,11 @@
 ## Isomorphic SmartClient TypeScript type definitions
 SmartClient Version: SNAPSHOT_v12.0d_2017-09-05
 
-Generated: 9/5/2017 7:01:30 AM
+Generated: 9/5/2017 9:58:06 AM
 
 Work in progress. See [Progress.md](./Progress.md)
 
-Class coverage: 97%
+Class coverage: 98%
 
 Method coverage: 92%
 
