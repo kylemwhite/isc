@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 Errors during generation
-Generated: 9/20/2017 1:10:38 PM by kwhite
+Generated: 9/20/2017 1:59:38 PM by kwhite
 
 Summary
 Total Types  : 249
@@ -584,6 +584,10 @@ Suspected optional parameters that are marked with optional='false': 18. Paramet
 20. method:Date.toShortDateTime, ParamType= DateDisplayFormat, ParamName=format, ParamDesc=Optional Format for the date returned
 
 
+The following types were excluded
+1. boolean: Cannot declare a type with the same name as a JavaScript primitive
+2. DSCallback: Defined as a type and also as a Callbacks method. Using the Callbacks method because it is more descriptive.
+
 The following classes were excluded
 1. VisualBuilder: This is an internal only class - do not try to use it directly in your applications.
 2. SelectionOutline: NOTE: This class is for internal use only by EditContext.
@@ -829,8 +833,8 @@ String types no longer found in the refDocs file (can be removed): 0
 Any types no longer found in the refDocs file (can be removed): 0
 
 
-Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-09-20	249	5	297	82	3559	2	0	1	216	665	131	0	239	0	0	8	10	17	0	0	0	0	12	18	1	46	288	0	131	384	0	0	0	247	5	81	295	21	14	5	96	66	3314	1.108434	1	0.9878049	0.993266	0.9311604	
+Date	Types	Interfaces	Classes	Objects	Methods	Excluded Types	Excluded Classes	Excluded Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
+2017-09-20	249	5	297	82	3559	2	2	19	0	1	216	665	131	0	239	0	0	8	10	17	0	0	0	0	12	18	1	46	288	0	131	384	0	0	0	247	5	81	295	21	14	5	96	66	3314	1.108434	1	0.9878049	0.993266	0.9311604	
 
 ======= For Display Somewhere =======
 Metrics for build SNAPSHOT_v12.0d_2017-09-20
@@ -841,7 +845,9 @@ Interfaces: 5
 Classes: 297
 Objects: 82
 Methods: 3,559
+Excluded Types: 2
 Excluded Classes: 2
+Excluded Methods: 19
 string values with quotes: 216
 string values without quotes: 665
 string values with period: 131

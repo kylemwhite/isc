@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-09-20 at 9/20/2017 1:10:38 PM by kwhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-09-20 at 9/20/2017 1:59:38 PM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -18,23 +18,25 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |3|Classes|297|Number of classes found in the referenceDocs.xml file|
 |4|Objects|82|Number of objects found in the referenceDocs.xml file|
 |5|Methods|3,559|Number of methods (instance and class) found in the referenceDocs.xml file|
-|6|Excluded Classes|2|Number of classes excluded from generation for various reasons.|
-|7|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
-|8|string values without quotes|665|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
-|9|string values with period|131|These usually are really references to a constant.|
-|10|Arrays defined as 'Array of'|239|Since most arrays are described this way, this is assumed to be the 'correct' way.|
-|11|String values where reference is found|131|Possible string values that refer to a constant where the constant was found.|
-|12|OR specified as ' \| '|384|Since most ORs are defined this way, it is assumed to be the correct way.|
-|13|Types Generated|247||
-|14|Interfaces Generated|5||
-|15|Objects Generated|81||
-|16|Classes Generated|295||
-|17|Methods Generated|3,314||
-|18|Percentage of Types generated|111%||
-|19|Percentage of Interfaces generated|100%||
-|20|Percentage of Objects generated|99%||
-|21|Percentage of Classes generated|99%||
-|22|Percentage of Methods generated|93%||
+|6|Excluded Types|2|Number of Types excluded from generation for various reasons.|
+|7|Excluded Classes|2|Number of Classes excluded from generation for various reasons.|
+|8|Excluded Methods|19|Number of Methods excluded from generation for various reasons.|
+|9|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
+|10|string values without quotes|665|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
+|11|string values with period|131|These usually are really references to a constant.|
+|12|Arrays defined as 'Array of'|239|Since most arrays are described this way, this is assumed to be the 'correct' way.|
+|13|String values where reference is found|131|Possible string values that refer to a constant where the constant was found.|
+|14|OR specified as ' \| '|384|Since most ORs are defined this way, it is assumed to be the correct way.|
+|15|Types Generated|247||
+|16|Interfaces Generated|5||
+|17|Objects Generated|81||
+|18|Classes Generated|295||
+|19|Methods Generated|3,314||
+|20|Percentage of Types generated|111%|May be more than 100% because the Callbacks methods are generated as types.|
+|21|Percentage of Interfaces generated|100%||
+|22|Percentage of Objects generated|99%||
+|23|Percentage of Classes generated|99%||
+|24|Percentage of Methods generated|93%||
 
 
 ### Issues with referenceDocs.xml file
