@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 9/7/2017 7:01:38 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-05
+// Generated: 9/20/2017 7:01:45 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -98,6 +98,7 @@ declare namespace Isc {
 		AutoFitTextAreaItem: AutoFitTextAreaItemStatic<AutoFitTextAreaItem, AutoFitTextAreaItemProps>;
 
 		/** 
+		 * AutoTest extends Class
 		 * Standalone class providing a general interface for integration with Automated Testing Tools
 		 * 
 		 * 
@@ -262,10 +263,11 @@ declare namespace Isc {
 		BooleanItem: BooleanItemStatic<BooleanItem, BooleanItemProps>;
 
 		/** 
+		 * Browser extends Class
 		 * The Browser class contains various class attributes that indicate basic properties
 		 * of the browser and whether certain features are enabled.
 		 */ 
-		Browser: BrowserStatic;
+		Browser: BrowserStatic<Browser, BrowserProps>;
 
 		/** 
 		 * BrowserPlugin extends Canvas
@@ -345,6 +347,13 @@ declare namespace Isc {
 		CalendarView: CalendarViewStatic<CalendarView, CalendarViewProps>;
 
 		/** 
+		 * Callbacks extends Class
+		 * This object cannot be used; it exists for documentation purposes only as a place to put
+		 * documentation for callback methods, such as the callback for Callbacks.DSCallback','DataSource.fetchData().
+		 */ 
+		Callbacks: CallbacksStatic<Callbacks, CallbacksProps>;
+
+		/** 
 		 * CancelItem extends ButtonItem
 		 * Button that cancels any changes in the form, by calling DynamicForm.cancelEditing 
 		 * when clicked.
@@ -386,6 +395,12 @@ declare namespace Isc {
 		Canvas: CanvasStatic<Canvas, CanvasProps>;
 
 		/** 
+		 * CanvasEditProxy extends EditProxy
+		 * EditProxy that handles Canvas','Canvas objects when editMode is enabled.
+		 */ 
+		CanvasEditProxy: CanvasEditProxyStatic<CanvasEditProxy, CanvasEditProxyProps>;
+
+		/** 
 		 * CanvasItem extends FormItem
 		 * FormItem which renders a Canvas inline in a DynamicForm instance.
 		 * 
@@ -420,10 +435,23 @@ declare namespace Isc {
 		CanvasItem: CanvasItemStatic<CanvasItem, CanvasItemProps>;
 
 		/** 
+		 * CellSelection extends Class
+		 * Maintains a representation of selection over a 2-dimensional grid of objects.
+		 * Automatically created to manage cell-selection on CubeGrid widgets.
+		 */ 
+		CellSelection: CellSelectionStatic<CellSelection, CellSelectionProps>;
+
+		/** 
 		 * CheckboxItem extends FormItem
 		 * Checkbox form item, implemented with customizable checkbox images.
 		 */ 
 		CheckboxItem: CheckboxItemStatic<CheckboxItem, CheckboxItemProps>;
+
+		/** 
+		 * CheckboxItemEditProxy extends FormItemEditProxy
+		 * EditProxy that handles CheckboxItem when editMode is enabled.
+		 */ 
+		CheckboxItemEditProxy: CheckboxItemEditProxyStatic<CheckboxItemEditProxy, CheckboxItemEditProxyProps>;
 
 		/** 
 		 * The Class object is root of the Isomorphic SmartClient inheritance tree -- it includes
@@ -520,6 +548,12 @@ declare namespace Isc {
 		 * in the Apple&trade; iTunes&trade; application.
 		 */ 
 		ColumnTree: ColumnTreeStatic<ColumnTree, ColumnTreeProps>;
+
+		/** 
+		 * Comm extends Class
+		 * Provides background communication with an HTTP server
+		 */ 
+		Comm: CommStatic<Comm, CommProps>;
 
 		/** 
 		 * CubeGrid extends ListGrid
@@ -750,6 +784,12 @@ declare namespace Isc {
 		DateItem: DateItemStatic<DateItem, DateItemProps>;
 
 		/** 
+		 * DateItemEditProxy extends FormItemEditProxy
+		 * EditProxy that handles DateItem when editMode is enabled.
+		 */ 
+		DateItemEditProxy: DateItemEditProxyStatic<DateItemEditProxy, DateItemEditProxyProps>;
+
+		/** 
 		 * DateRangeDialog extends Window
 		 * Simple modal dialog for collecting a date range from the end user.
 		 */ 
@@ -783,9 +823,18 @@ declare namespace Isc {
 		DateTimeItem: DateTimeItemStatic<DateTimeItem, DateTimeItemProps>;
 
 		/** 
+		 * DateUtil extends Class
 		 * Static singleton class containing APIs for interacting with Dates.
 		 */ 
 		DateUtil: DateUtilStatic<DateUtil, DateUtilProps>;
+
+		/** 
+		 * DecisionGateway extends ProcessElement
+		 * Chooses a next element in a Process by evaluating a series of criteria against the
+		 * Process.state and choosing the element associated with the criteria that matched, or
+		 * a DecisionGateway.defaultElement','defaultElement if none of the criteria match.
+		 */ 
+		DecisionGateway: DecisionGatewayStatic<DecisionGateway, DecisionGatewayProps>;
 
 		/** 
 		 * Deck extends Layout
@@ -817,18 +866,26 @@ declare namespace Isc {
 		DetailViewer: DetailViewerStatic<DetailViewer, DetailViewerProps>;
 
 		/** 
+		 * DetailViewerEditProxy extends CanvasEditProxy
+		 * EditProxy that handles DetailViewer components when editMode is enabled.
+		 */ 
+		DetailViewerEditProxy: DetailViewerEditProxyStatic<DetailViewerEditProxy, DetailViewerEditProxyProps>;
+
+		/** 
 		 * Dialog extends Window
-		 * Dialogs are a specialized version of Window used for small windows that contain just a text
-		 * message or a text mesage with some standard buttons.
+		 * Dialogs are a specialized version of Window used for small windows that contain just
+		 * a text message or a text mesage with some standard buttons.
 		 * 
-		 * Many typical modal dialogs such as alerts and confirmations are built into the system with convenience
-		 * APIs - see isc.say, isc.warn and isc.askForValue.
+		 * Many typical modal dialogs such as alerts and confirmations are built into the system with
+		 * convenience APIs - see isc.say, isc.warn and
+		 * isc.askForValue.
 		 * 
 		 * Dialogs can be modal or non-modal according to Window.isModal','isModal.
 		 * 
-		 * NOTE: If you are building a dialog that will involve more than just buttons and a message, consider
-		 * starting from the Window class instead, where arbitrary components can be added to the body
-		 * area via Window.addItem.
+		 * NOTE: If you are building a dialog that will involve more than just buttons and a message,
+		 * consider starting from the Window class instead, where arbitrary components can be
+		 * added to the body area via Window.addItem.
+		 * 
 		 * This is an example of creating a custom dialog:
 		 * 
 		 * 
@@ -850,6 +907,7 @@ declare namespace Isc {
 		Dialog: DialogStatic<Dialog, DialogProps>;
 
 		/** 
+		 * DMI extends Class
 		 * Static singleton class with APIs for dmiOverview','Direct Method Invocation of
 		 * server side methods when running the SmartClient java server.
 		 */ 
@@ -933,6 +991,13 @@ declare namespace Isc {
 		DrawItem: DrawItemStatic<DrawItem, DrawItemProps>;
 
 		/** 
+		 * DrawItemEditProxy extends EditProxy
+		 * EditProxy that handles DrawItem','DrawItems except for
+		 * DrawLabel','DrawLabels when editMode is enabled.
+		 */ 
+		DrawItemEditProxy: DrawItemEditProxyStatic<DrawItemEditProxy, DrawItemEditProxyProps>;
+
+		/** 
 		 * DrawKnob extends Canvas
 		 * Canvas that renders a DrawItem into a DrawPane and provides interactivity for
 		 * that drawItem, including drag and drop.
@@ -949,6 +1014,12 @@ declare namespace Isc {
 		 * DrawItem subclass to render a single-line text label.
 		 */ 
 		DrawLabel: DrawLabelStatic<DrawLabel, DrawLabelProps>;
+
+		/** 
+		 * DrawLabelEditProxy extends DrawItemEditProxy
+		 * EditProxy that handles DrawLabel','DrawLabels when editMode is enabled.
+		 */ 
+		DrawLabelEditProxy: DrawLabelEditProxyStatic<DrawLabelEditProxy, DrawLabelEditProxyProps>;
 
 		/** 
 		 * DrawLine extends DrawItem
@@ -1063,6 +1134,12 @@ declare namespace Isc {
 		DrawPane: DrawPaneStatic<DrawPane, DrawPaneProps>;
 
 		/** 
+		 * DrawPaneEditProxy extends CanvasEditProxy
+		 * EditProxy that handles DrawPane','DrawPanes when editMode is enabled.
+		 */ 
+		DrawPaneEditProxy: DrawPaneEditProxyStatic<DrawPaneEditProxy, DrawPaneEditProxyProps>;
+
+		/** 
 		 * DrawPath extends DrawItem
 		 * Draws a multi-segment line.
 		 */ 
@@ -1161,6 +1238,40 @@ declare namespace Isc {
 		EdgedCanvas: EdgedCanvasStatic<EdgedCanvas, EdgedCanvasProps>;
 
 		/** 
+		 * EditContext extends Class
+		 * An EditContext provides an editing environment for a set of components.
+		 * 
+		 * An EditContext is typically populated by adding a series of EditNode','EditNodes created via a
+		 * Palette, either via drag and drop creation, or when loading from a saved version,
+		 * via EditContext.addFromPaletteNode','addFromPaletteNode() or 
+		 * EditContext.addPaletteNodesFromXML','addPaletteNodesFromXML().
+		 * 
+		 * An EditContext then provides interfaces for further editing of the components represented
+		 * by EditNodes.
+		 * 
+		 * Developers may explicitly define an edit context and initialize it with a
+		 * EditContext.rootComponent - the root of the user interface being created.
+		 * The EditContext itself is not visible to the user, but the root component's 
+		 * EditNode.liveObject','liveObject may be.
+		 * As child editNodes are added to the rootComponent node or its descendants, liveObjects
+		 * in the user will update to reflect these changes. The live objects for the
+		 * edit nodes will be nested using the appropriate parent-child relationships, for 
+		 * the types of node in question. For example Canvases will be added as
+		 * Layout.members','members of layouts and FormItems will be added as 
+		 * DynamicForm.fields','fields of DynamicForms.
+		 * 
+		 * To enable drag and drop creation of widgets from a Palette, a developer can
+		 * use Canvas.setEditMode to enable editing behaviors on the live object of the
+		 * desired drop target (typically the root component).
+		 * To enable editNode creation via double-click on a Palette, developers can set
+		 * the Palette.defaultEditContext.
+		 * 
+		 * Developers can also make use of EditPane or EditTree classes which provide
+		 * a visual interface for managing an EditContext.
+		 */ 
+		EditContext: EditContextStatic<EditContext, EditContextProps>;
+
+		/** 
 		 * EditPane extends Canvas
 		 * A container that allows drag and drop instantiation of visual components from a
 		 * Palette, and direct manipulation of the position and size of those components.
@@ -1172,6 +1283,13 @@ declare namespace Isc {
 		 * settings that are passthroughs to the underlying EditContext for convenience.
 		 */ 
 		EditPane: EditPaneStatic<EditPane, EditPaneProps>;
+
+		/** 
+		 * EditProxy extends Class
+		 * An EditProxy is attached to an editable component when editMode is enabled. This proxy
+		 * has methods and properties which affect the component during editing.
+		 */ 
+		EditProxy: EditProxyStatic<EditProxy, EditProxyProps>;
 
 		/** 
 		 * EditTree extends TreeGrid
@@ -1214,6 +1332,7 @@ declare namespace Isc {
 		EventCanvas: EventCanvasStatic<EventCanvas, EventCanvasProps>;
 
 		/** 
+		 * EventHandler extends Class
 		 * 
 		 * The ISC system provides a predictable cross-browser event-handling mechanism for ISC
 		 * widgets. Events can be handled both at the page level (i.e., globally), and at the level of
@@ -1283,6 +1402,13 @@ declare namespace Isc {
 		 * See also the overview of the dsFacade','DataSource Facade pattern.
 		 */ 
 		FacadeDataSource: FacadeDataSourceStatic<FacadeDataSource, FacadeDataSourceProps>;
+
+		/** 
+		 * Facet extends Class
+		 * Facet definition object made use of by the CubeGrid','CubeGrid and
+		 * FacetChart','FacetChart classes.
+		 */ 
+		Facet: FacetStatic<Facet, FacetProps>;
 
 		/** 
 		 * FacetChart extends DrawPane
@@ -1531,6 +1657,12 @@ declare namespace Isc {
 		FacetChart: FacetChartStatic<FacetChart, FacetChartProps>;
 
 		/** 
+		 * FacetChartEditProxy extends DrawPaneEditProxy
+		 * EditProxy that handles FacetChart','FacetCharts when editMode is enabled.
+		 */ 
+		FacetChartEditProxy: FacetChartEditProxyStatic<FacetChartEditProxy, FacetChartEditProxyProps>;
+
+		/** 
 		 * FieldPicker extends VLayout
 		 * FieldPicker provides a configuration dialog that displays, side-by-side, the available and
 		 * currently-displayed fields of a DataBoundComponent. It allows for easy customization 
@@ -1540,6 +1672,13 @@ declare namespace Isc {
 		 * a FieldPickerWindow
 		 */ 
 		FieldPicker: FieldPickerStatic<FieldPicker, FieldPickerProps>;
+
+		/** 
+		 * FieldPickerField extends Class
+		 * Class containing properties that configure the display of
+		 * and interaction with the fields showing in a FieldPicker.
+		 */ 
+		FieldPickerField: FieldPickerFieldStatic<FieldPickerField, FieldPickerFieldProps>;
 
 		/** 
 		 * FieldPickerWindow extends Window
@@ -1699,30 +1838,46 @@ declare namespace Isc {
 		FlowLayout: FlowLayoutStatic<FlowLayout, FlowLayoutProps>;
 
 		/** 
+		 * FontLoader extends Class
 		 * Force-loads the custom fonts declared in the skinning','current skin\'s CSS file
 		 * and updates any potentially-affected, already-drawn canvii when loading completes. Without
 		 * FontLoader, auto-sized canvii that use custom fonts may end up with the wrong size if a page
-		 * is loaded when its custom fonts not available in the browser cache.
+		 * is loaded when its custom fonts are not available in the browser cache.
 		 * 
 		 * To disable FontLoader, set &nbsp;window.isc_loadCustomFonts = false&nbsp; before
 		 * SmartClient is loaded.
 		 * 
 		 * If you want to avoid the Framework redrawing canvii after the fonts load, you may want to
 		 * code your app to delay drawing anything until the skin fonts are loaded. You can check
-		 * FontLoader.isLoadingComplete to check whether loading is done, and if it's not, you
-		 * can override FontLoader.onLoadingComplete to run code when it's done or
-		 * FontLoader.onLoadingFailed to run code if there's an error.
+		 * FontLoader.isLoadingComplete to see whether loading is done, and if it's not, you
+		 * can set a "fontsLoaded" Page.setEvent','page event
+		 * to run code
+		 * when it's done or
+		 * a "fontLoadingFailed" Page.setEvent','page event
+		 * to
+		 * run code if there's an error.
 		 * 
 		 * <h3>Advanced Usage</h3>
 		 * FontLoader will use the new 
 		 * <a href='https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API' target='_blank'>CSS Font Loading API</a>
 		 * in browsers in which it's available and has proven reliable. Otherwise, we fall back to
 		 * canvas measurement techniques to detect loading. To force fallback and avoid the API, set
-		 * &nbsp;window.isc_useCSSFontAPI = false&nbsp;, or to force the API to be used (where it
-		 * exists but may be unreliable), set &nbsp;window.isc_useCSSFontAPI = true&nbsp, before
-		 * SmartClient is loaded.
+		 * &nbsp;window.isc_useCSSFontAPI = false&nbsp;, or to force the API to be used
+		 * (where it exists but may be unreliable) set &nbsp;window.isc_useCSSFontAPI = 
+		 * true&nbsp, before SmartClient is loaded.
+		 * 
+		 * If you're loading additional style sheets, beyond the skin, that declare custom fonts with
+		 * &#064;font-face, you can request that the FontLoader force-load them as well by
+		 * specifying them in window.isc_additionalFonts as an array of the font family
+		 * names matching those from the &#064;font-face declarations.
 		 */ 
 		FontLoader: FontLoaderStatic<FontLoader, FontLoaderProps>;
+
+		/** 
+		 * FormEditProxy extends CanvasEditProxy
+		 * EditProxy that handles DynamicForm','DynamicForms when editMode is enabled.
+		 */ 
+		FormEditProxy: FormEditProxyStatic<FormEditProxy, FormEditProxyProps>;
 
 		/** 
 		 * FormItem extends Class
@@ -1738,6 +1893,12 @@ declare namespace Isc {
 		 * See the DynamicForm documentation for details and sample code.
 		 */ 
 		FormItem: FormItemStatic<FormItem, FormItemProps>;
+
+		/** 
+		 * FormItemEditProxy extends EditProxy
+		 * EditProxy that handles FormItems when editMode is enabled.
+		 */ 
+		FormItemEditProxy: FormItemEditProxyStatic<FormItemEditProxy, FormItemEditProxyProps>;
 
 		/** 
 		 * FormulaBuilder extends VLayout
@@ -1783,10 +1944,23 @@ declare namespace Isc {
 		Gauge: GaugeStatic<Gauge, GaugeProps>;
 
 		/** 
+		 * GridEditProxy extends LayoutEditProxy
+		 * EditProxy that handles ListGrid and TreeGrid components when editMode is enabled.
+		 */ 
+		GridEditProxy: GridEditProxyStatic<GridEditProxy, GridEditProxyProps>;
+
+		/** 
 		 * GridRenderer extends Canvas
 		 * A flexible, high-speed table that offers consistent cross-platform sizing, clipping, and events.
 		 */ 
 		GridRenderer: GridRendererStatic<GridRenderer, GridRendererProps>;
+
+		/** 
+		 * GroupingMessages extends Class
+		 * Grouping titles that will be displayed when data is grouped
+		 * in a ListGrid.
+		 */ 
+		GroupingMessages: GroupingMessagesStatic<GroupingMessages, GroupingMessagesProps>;
 
 		/** 
 		 * HeaderItem extends FormItem
@@ -1819,6 +1993,12 @@ declare namespace Isc {
 		 * DynamicForm.submitForm method.
 		 */ 
 		HiddenItem: HiddenItemStatic<HiddenItem, HiddenItemProps>;
+
+		/** 
+		 * HiddenPalette extends Class
+		 * A Palette with no visible representation that handles programmatic creation of components.
+		 */ 
+		HiddenPalette: HiddenPaletteStatic<HiddenPalette, HiddenPaletteProps>;
 
 		/** 
 		 * HiliteEditor extends VLayout
@@ -1888,6 +2068,7 @@ declare namespace Isc {
 		HLayout: HLayoutStatic<HLayout, HLayoutProps>;
 
 		/** 
+		 * Hover extends Class
 		 * The Hover class handles showing a simple SmartClient canvas containing arbitrary HTML, or
 		 * triggering some other action in response to a user holding the mouse-pointer (or hovering)
 		 * over a specific widget.
@@ -1987,6 +2168,12 @@ declare namespace Isc {
 		ImgButton: ImgButtonStatic<ImgButton, ImgButtonProps>;
 
 		/** 
+		 * ImgEditProxy extends CanvasEditProxy
+		 * EditProxy that handles Img objects when editMode is enabled.
+		 */ 
+		ImgEditProxy: ImgEditProxyStatic<ImgEditProxy, ImgEditProxyProps>;
+
+		/** 
 		 * ImgSectionHeader extends HLayout
 		 * SectionHeader class based on an HLayout with StretchImg background.
 		 */ 
@@ -2070,9 +2257,25 @@ declare namespace Isc {
 		ITreeMenuButton: ITreeMenuButtonStatic<ITreeMenuButton, ITreeMenuButtonProps>;
 
 		/** 
+		 * JSON extends Class
 		 * Utilities for working with JSON data.
 		 */ 
 		JSON: JSONStatic<JSON, JSONProps>;
+
+		/** 
+		 * JSONEncoder extends Class
+		 * Class for encoding objects as JSON strings.
+		 */ 
+		JSONEncoder: JSONEncoderStatic<JSONEncoder, JSONEncoderProps>;
+
+		/** 
+		 * JSSyntaxHiliter extends SyntaxHiliter
+		 * Regular expression-based source code colorizer for JS source.
+		 * 
+		 * NOTE: This class exists only for use with the SmartClient Feature Explorer and 
+		 * SmartGWT Showcases and cannot be used in any other environment.
+		 */ 
+		JSSyntaxHiliter: JSSyntaxHiliterStatic<JSSyntaxHiliter, JSSyntaxHiliterProps>;
 
 		/** 
 		 * Label extends Button
@@ -2083,6 +2286,12 @@ declare namespace Isc {
 		 * instead.
 		 */ 
 		Label: LabelStatic<Label, LabelProps>;
+
+		/** 
+		 * LabelEditProxy extends StatefulCanvasEditProxy
+		 * EditProxy that handles Label and SectionHeader objects when editMode is enabled.
+		 */ 
+		LabelEditProxy: LabelEditProxyStatic<LabelEditProxy, LabelEditProxyProps>;
 
 		/** 
 		 * Layout extends Canvas
@@ -2115,6 +2324,12 @@ declare namespace Isc {
 		 * parent component), set width and height to "100%".
 		 */ 
 		Layout: LayoutStatic<Layout, LayoutProps>;
+
+		/** 
+		 * LayoutEditProxy extends CanvasEditProxy
+		 * EditProxy that handles Layout objects when editMode is enabled.
+		 */ 
+		LayoutEditProxy: LayoutEditProxyStatic<LayoutEditProxy, LayoutEditProxyProps>;
 
 		/** 
 		 * LayoutSpacer extends Canvas
@@ -2173,6 +2388,7 @@ declare namespace Isc {
 		ListPropertiesPane: ListPropertiesPaneStatic<ListPropertiesPane, ListPropertiesPaneProps>;
 
 		/** 
+		 * Log extends Class
 		 * A logging system similar to the Java log4j package: messages are logged with a "category" and
 		 * "priority", and developers can dynamically set which log messages are being displayed.
 		 * 
@@ -2217,6 +2433,59 @@ declare namespace Isc {
 		 * dialogCallback once the authentication process completes.
 		 */ 
 		LoginDialog: LoginDialogStatic<LoginDialog, LoginDialogProps>;
+
+		/** 
+		 * Mail extends Class
+		 * A Mail object describes an email that will be sent automatically by the 
+		 * SmartClient Server as part of a normal DataSource operation. Mail definitions
+		 * are part of an OperationBinding, and they can only be specified in a 
+		 * DataSource's XML definition. Despite the declarative nature of mail definitions, templating
+		 * support via Velocity makes it very flexible; it is very easy to include values from records
+		 * just fetched from permanent storage by this operation, for example. See 
+		 * velocitySupport for an overview of SmartClient Server's pervasive support for 
+		 * templated declarative operations using Velocity. 
+		 * 
+		 * The default context for the message is the dsResponse.data; that is, $foo in the
+		 * message refers to the field "foo" in the DataSource response (the equivalent of
+		 * calling dsResponse.getFieldValue("foo") in Java). You also have access to the normal
+		 * Velocity variables described in the overview linked to above.
+		 * 
+		 * If multiple records appear in the dsResponse, one message will be sent per record
+		 * in the response unless "multiple" is set to false. This allows a set of
+		 * recipients to be selected by a "fetch" operationBinding and messages sent to each.
+		 * This also means that if no data is selected by a fetch or affected by an update,
+		 * no mail is sent.
+		 * 
+		 * If you have the transactionChaining','Transaction Chaining feature (available 
+		 * in Power and better versions), all of the variables normally accessible in other Velocity 
+		 * contexts are available in the message template as well, for example: 
+		 * $responseData.last('order').orderId
+		 * 
+		 * You can provide the body of the email directly in the Mail.messageTemplate','messageTemplate
+		 * tag, or you can provide a filename in the Mail.templateFile','templateFile attribute,
+		 * which tells SmartClient to use the contents of that file as the body of the email. If you 
+		 * provide neither of these, your email will have no body; if you provide both, SmartClient will
+		 * ignore the file and just use the content directly provided.
+		 * 
+		 * Mail server configuration
+		 * The mail server to use for sending emails is configured in the server_properties','server.properties
+		 * file. The following values can be provided:
+		 * mail.system.mail.smtp.host: The name of the SMTP server to use; defaults 
+		 * to "localhost"
+		 * mail.system.mail.smtp.port: What port is the MTA listening on; defaults to 25
+		 * mail.system.mail.smtp.auth: Whether this server requires authentication; 
+		 * defaults to false
+		 * mail.system.mail.smtp.user: SMTP user, if authentication is on; no default
+		 * mail.system.mail.smtp.password: Password, if authentication is on; no default
+		 * 
+		 * Note that we will also pass any other properties that start mail.system through
+		 * to the underlying Javamail Session object, so you can use Javamail features
+		 * that aren't explicitly exposed by SmartClient's mail support. For example, many cloud-based
+		 * SMTP providers require that you issue a STARTTLS command before authenticating; you can 
+		 * achieve this by adding the following line to server_properties','server.properties:
+		 * mail.system.mail.smtp.starttls.enable: true
+		 */ 
+		Mail: MailStatic<Mail, MailProps>;
 
 		/** 
 		 * MathFunction extends Class
@@ -2310,6 +2579,12 @@ declare namespace Isc {
 		MenuButton: MenuButtonStatic<MenuButton, MenuButtonProps>;
 
 		/** 
+		 * MenuEditProxy extends CanvasEditProxy
+		 * EditProxy that handles MenuButton and MenuBar objects when editMode is enabled.
+		 */ 
+		MenuEditProxy: MenuEditProxyStatic<MenuEditProxy, MenuEditProxyProps>;
+
+		/** 
 		 * MenuPalette extends Menu
 		 * A Menu that implements the Palette behavior, so it can be used as the source for 
 		 * drag and drop instantiation of components when combined with an EditContext as 
@@ -2320,6 +2595,7 @@ declare namespace Isc {
 		MenuPalette: MenuPaletteStatic<MenuPalette, MenuPaletteProps>;
 
 		/** 
+		 * Messaging extends Class
 		 * The Real-Time Messaging module creates a channel for messages to be sent from the server to
 		 * the client (a.k.a. "server push") in real-time (as opposed to periodically polling the
 		 * server for updates).
@@ -2589,11 +2865,13 @@ declare namespace Isc {
 		NavPanel: NavPanelStatic<NavPanel, NavPanelProps>;
 
 		/** 
+		 * NumberUtil extends Class
 		 * Static singleton class containing APIs for interacting with Numbers.
 		 */ 
 		NumberUtil: NumberUtilStatic<NumberUtil, NumberUtilProps>;
 
 		/** 
+		 * Offline extends Class
 		 * The Offline class provides features for storing and retrieving values in persistent browser
 		 * storage. Because this storage is both persistent (ie, it remains available after the 
 		 * browser is closed and re-opened) and local to the browser, it allows applications to operate
@@ -2615,6 +2893,27 @@ declare namespace Isc {
 		Offline: OfflineStatic<Offline, OfflineProps>;
 
 		/** 
+		 * OperationBinding extends Class
+		 * An operationBinding tells a DataSource how to execute one of the basic DS operations: fetch,
+		 * add, update, remove. See DataSource.operationBindings.
+		 */ 
+		OperationBinding: OperationBindingStatic<OperationBinding, OperationBindingProps>;
+
+		/** 
+		 * Operators extends Class
+		 * The Operators class provides a collection of class-level properties that can be used to
+		 * modify the descriptions associated with the logical Operators used in 
+		 * AdvancedCriteria. This is primarily intended for internationalization.
+		 * 
+		 * To add or override an operator's description, use
+		 * Operators.Class.addClassProperties','addClassProperties(). For example:
+		 * 
+		 * Operators.addClassProperties({lessOrEqualTitle: "Less than or equal to"});
+		 */ 
+		Operators: OperatorsStatic<Operators, OperatorsProps>;
+
+		/** 
+		 * Page extends Class
 		 * Provides information about the page you're loaded in. We define "page" here to be roughly
 		 * equivalent to the browser window or frame the libraries have been loaded in.
 		 */ 
@@ -2754,11 +3053,35 @@ declare namespace Isc {
 		Process: ProcessStatic<Process, ProcessProps>;
 
 		/** 
+		 * ProcessElement extends Class
+		 * A ProcessElement is an abstract superclass for elements involved in a Process, such
+		 * as a Task or XORGateway.
+		 */ 
+		ProcessElement: ProcessElementStatic<ProcessElement, ProcessElementProps>;
+
+		/** 
+		 * ProcessSequence extends ProcessElement
+		 * An Array of ProcessElements involved in a Process. A 
+		 * ProcessSequence is used to reduce the number of explicit
+		 * ProcessElement.IDs that need to be assigned, by creating an implicit next element -
+		 * the next in the sequence.
+		 * 
+		 * A sequence cannot be executed outside of a Process and has no state.
+		 */ 
+		ProcessSequence: ProcessSequenceStatic<ProcessSequence, ProcessSequenceProps>;
+
+		/** 
 		 * Progressbar extends StretchImg
 		 * The Progressbar widget class extends the StretchImg class to implement image-based progress
 		 * bars (graphical bars whose lengths represent percentages, typically of task completion).
 		 */ 
 		Progressbar: ProgressbarStatic<Progressbar, ProgressbarProps>;
+
+		/** 
+		 * ProgressbarEditProxy extends StatefulCanvasEditProxy
+		 * EditProxy that handles Progressbar objects when editMode is enabled.
+		 */ 
+		ProgressbarEditProxy: ProgressbarEditProxyStatic<ProgressbarEditProxy, ProgressbarEditProxyProps>;
 
 		/** 
 		 * PropertySheet extends DynamicForm
@@ -3672,6 +3995,7 @@ declare namespace Isc {
 		RowSpacerItem: RowSpacerItemStatic<RowSpacerItem, RowSpacerItemProps>;
 
 		/** 
+		 * RPCManager extends Class
 		 * RPCManager is a static singleton class that manages transparent client/server RPC (remote
 		 * procedure call). This class provides a generic, low-level client/server communication
 		 * integration point.
@@ -3761,16 +4085,25 @@ declare namespace Isc {
 		RPCManager: RPCManagerStatic<RPCManager, RPCManagerProps>;
 
 		/** 
+		 * RPCResponse extends Class
 		 * Encapsulates an RPC response from the server. Instances of this class are automatically created
 		 * and optionally passed to you in the callback you specify as part of your RPCRequest.
 		 */ 
 		RPCResponse: RPCResponseStatic<RPCResponse, RPCResponseProps>;
 
 		/** 
+		 * SchemaSet extends Class
 		 * A set of schema derived from the &lt;xsd:schema&gt; element in a WSDL or XML schema file
 		 * loaded by XMLTools.loadWSDL or XMLTools.loadXMLSchema.
 		 */ 
 		SchemaSet: SchemaSetStatic<SchemaSet, SchemaSetProps>;
+
+		/** 
+		 * ScriptTask extends Task
+		 * Task that executes arbitrary code, either synchronous or asynchronous. Override the
+		 * ScriptTask.execute','execute() method to provide custom logic.
+		 */ 
+		ScriptTask: ScriptTaskStatic<ScriptTask, ScriptTaskProps>;
 
 		/** 
 		 * Scrollbar extends StretchImg
@@ -3832,6 +4165,30 @@ declare namespace Isc {
 		SectionStack: SectionStackStatic<SectionStack, SectionStackProps>;
 
 		/** 
+		 * SectionStackEditProxy extends LayoutEditProxy
+		 * EditProxy that handles SectionStack objects when editMode is enabled.
+		 */ 
+		SectionStackEditProxy: SectionStackEditProxyStatic<SectionStackEditProxy, SectionStackEditProxyProps>;
+
+		/** 
+		 * Selection extends Class
+		 * Maintains a 'selected' subset of a List or Array of objects, such as records in a record
+		 * set, or widgets in a selectable header.
+		 * 
+		 * Includes methods for selecting objects and checking which objects are selected, and also for
+		 * selecting objects as a result of mouse events, including drag selection support.
+		 * The selection object is used automatically to handle selection APIs on ListGrid
+		 * and TreeGrid instances.
+		 * 
+		 * Note that selection and deselection are skipped for objects that aren't enabled, or that are
+		 * marked as non-selectable. For a ListGrid, the relevant properties are 
+		 * ListGrid.recordEnabledProperty and ListGrid.recordCanSelectProperty. The 
+		 * recommended approach to affect disabled objects via the Selection APIs is to temporarily
+		 * enable them beforehand.
+		 */ 
+		Selection: SelectionStatic<Selection, SelectionProps>;
+
+		/** 
 		 * SelectionTreeMenu extends Menu
 		 * A simple subclass of Menu created by TreeMenuButton.
 		 * Shows the selected node's path in a custom style.
@@ -3853,6 +4210,52 @@ declare namespace Isc {
 		SelectItem: SelectItemStatic<SelectItem, SelectItemProps>;
 
 		/** 
+		 * SelectItemEditProxy extends FormItemEditProxy
+		 * EditProxy that handles SelectItem','SelectItems, ComboBoxItem','ComboBoxItems
+		 * and RadioGroupItem','RadioGroupItems when editMode is enabled.
+		 */ 
+		SelectItemEditProxy: SelectItemEditProxyStatic<SelectItemEditProxy, SelectItemEditProxyProps>;
+
+		/** 
+		 * SelectOtherItem extends Class
+		 * FormItem that shows a list of options, plus an "Other..." option that allows them to enter
+		 * another value.
+		 */ 
+		SelectOtherItem: SelectOtherItemStatic<SelectOtherItem, SelectOtherItemProps>;
+
+		/** 
+		 * ServiceTask extends Task
+		 * A ServiceTask is an element of a Process which calls a DataSource operation, 
+		 * optionally using part of the Process.state','process state as inputs or storing outputs
+		 * in the process state.
+		 * 
+		 * By default a ServiceTask takes the data indicated by Task.inputField and uses it as
+		 * DSRequest.data. This means the input data becomes Criteria for a "fetch"
+		 * operation, new record values for an "add" operation, etc.
+		 * 
+		 * Alternatively, you can set ServiceTask.criteria for a "fetch" operation, or
+		 * ServiceTask.values for other operationTypes. In both cases, you have the ability to
+		 * use simple expressions like $input.fieldName to take portions of the input data and
+		 * use it as part of the criteria or values.
+		 * 
+		 * As a special case, if the inputField is an atomic value (just a String or
+		 * Number rather than a Record) and operationType is "fetch", it will be assumed to be value
+		 * for the primary key field of the target DataSource if ServiceTask.criteria','criteria
+		 * is not explicitly specified
+		 * 
+		 * OutputData and outputFieldList work as filters. You should determine which properties should
+		 * be fetched into the process state. If you want to load all data without defining every
+		 * property manually you can pass a name started with '$' and fetched record or records will be 
+		 * placed as a record or an array of records by the name without this specific symbol.
+		 * 
+		 * For example if you specify 'id' and 'name' in outputFieldList, only these properties will be
+		 * fetched in the process state. If you pass '$record' in outputField a whole record will be 
+		 * stored in process state under the 'record' key. Also you can use javascript syntax there.
+		 * For example '$record.item[0]'.
+		 */ 
+		ServiceTask: ServiceTaskStatic<ServiceTask, ServiceTaskProps>;
+
+		/** 
 		 * SimpleTabButton extends Button
 		 * Simple subclass of Button used for tabs in a TabSet if TabSet.useSimpleTabs
 		 * is true. See also TabSet.simpleTabButtonConstructor.
@@ -3869,6 +4272,7 @@ declare namespace Isc {
 		SimpleTile: SimpleTileStatic<SimpleTile, SimpleTileProps>;
 
 		/** 
+		 * SimpleType extends Class
 		 * An atomic type such as a string or number, that is generally stored, displayed and
 		 * manipulated as a single value.
 		 * 
@@ -4093,11 +4497,30 @@ declare namespace Isc {
 		SplitPane: SplitPaneStatic<SplitPane, SplitPaneProps>;
 
 		/** 
+		 * SplitPaneEditProxy extends LayoutEditProxy
+		 * EditProxy that handles SplitPane objects when editMode is enabled.
+		 */ 
+		SplitPaneEditProxy: SplitPaneEditProxyStatic<SplitPaneEditProxy, SplitPaneEditProxyProps>;
+
+		/** 
 		 * StatefulCanvas extends Canvas
 		 * A component that has a set of possible states, and which presents itself differently according to
 		 * which state it is in. An example is a button, which can be "up", "down", "over" or "disabled".
 		 */ 
 		StatefulCanvas: StatefulCanvasStatic<StatefulCanvas, StatefulCanvasProps>;
+
+		/** 
+		 * StatefulCanvasEditProxy extends CanvasEditProxy
+		 * EditProxy that handles StatefulCanvas objects when editMode is enabled.
+		 */ 
+		StatefulCanvasEditProxy: StatefulCanvasEditProxyStatic<StatefulCanvasEditProxy, StatefulCanvasEditProxyProps>;
+
+		/** 
+		 * StateTask extends Task
+		 * StateTask can either copy fields of Process.state to other fields, or apply hardcoded
+		 * values to Process.state via StateTask.value.
+		 */ 
+		StateTask: StateTaskStatic<StateTask, StateTaskProps>;
 
 		/** 
 		 * StaticTextItem extends FormItem
@@ -4157,6 +4580,18 @@ declare namespace Isc {
 		SVG: SVGStatic<SVG, SVGProps>;
 
 		/** 
+		 * SyntaxHiliter extends Class
+		 * Abstract base class for regular expression-based source code colorizer.
+		 * 
+		 * An instance of this class is never instantiated. Instead, use one of the source-specific
+		 * subclasses: XMLSyntaxHiliter or JSSyntaxHiliter. 
+		 * 
+		 * NOTE: This class exists only for use with the SmartClient Feature Explorer and 
+		 * SmartGWT Showcases and cannot be used in any other environment.
+		 */ 
+		SyntaxHiliter: SyntaxHiliterStatic<SyntaxHiliter, SyntaxHiliterProps>;
+
+		/** 
 		 * TabBar extends Toolbar
 		 * Shows a set of Tabs. TabBars are automatically created by TabSets and shouldn't be used
 		 * directly. The TabBar is documented for skinning purposes.
@@ -4164,6 +4599,7 @@ declare namespace Isc {
 		TabBar: TabBarStatic<TabBar, TabBarProps>;
 
 		/** 
+		 * TabIndexManager extends Class
 		 * Singleton class with static APIs for managing automatically assigned tab order for
 		 * SmartClient components and other focusable elements.
 		 * 
@@ -4218,16 +4654,60 @@ declare namespace Isc {
 		TabSet: TabSetStatic<TabSet, TabSetProps>;
 
 		/** 
+		 * TabSetEditProxy extends CanvasEditProxy
+		 * EditProxy that handles TabSet objects when editMode is enabled.
+		 */ 
+		TabSetEditProxy: TabSetEditProxyStatic<TabSetEditProxy, TabSetEditProxyProps>;
+
+		/** 
+		 * Task extends ProcessElement
+		 * A Task is an abstract superclass for Process and for all Task types that can be
+		 * involved in a Process, such as a ServiceTask.
+		 */ 
+		Task: TaskStatic<Task, TaskProps>;
+
+		/** 
 		 * TextAreaItem extends FormItem
 		 * Class for editable multi-line text areas (uses HTML &lt;TEXTAREA&gt; object)
 		 */ 
 		TextAreaItem: TextAreaItemStatic<TextAreaItem, TextAreaItemProps>;
 
 		/** 
+		 * TextAreaItemEditProxy extends TextItemEditProxy
+		 * EditProxy that handles TextAreaItem','TextAreaItems when editMode is enabled.
+		 */ 
+		TextAreaItemEditProxy: TextAreaItemEditProxyStatic<TextAreaItemEditProxy, TextAreaItemEditProxyProps>;
+
+		/** 
+		 * TextExportSettings extends TextSettings
+		 * Settings for use with DataSource.recordsAsText.
+		 */ 
+		TextExportSettings: TextExportSettingsStatic<TextExportSettings, TextExportSettingsProps>;
+
+		/** 
+		 * TextImportSettings extends TextSettings
+		 * Settings for use with DataSource.recordsFromText.
+		 */ 
+		TextImportSettings: TextImportSettingsStatic<TextImportSettings, TextImportSettingsProps>;
+
+		/** 
 		 * TextItem extends FormItem
 		 * FormItem for managing a text field.
 		 */ 
 		TextItem: TextItemStatic<TextItem, TextItemProps>;
+
+		/** 
+		 * TextItemEditProxy extends FormItemEditProxy
+		 * EditProxy that handles TextItem','TextItems, StaticTextItem','StaticTextItems
+		 * and BlurbItem','BlurbItems when editMode is enabled.
+		 */ 
+		TextItemEditProxy: TextItemEditProxyStatic<TextItemEditProxy, TextItemEditProxyProps>;
+
+		/** 
+		 * TextSettings extends Class
+		 * Common base class of TextImportSettings.
+		 */ 
+		TextSettings: TextSettingsStatic<TextSettings, TextSettingsProps>;
 
 		/** 
 		 * TileGrid extends TileLayout
@@ -4314,6 +4794,7 @@ declare namespace Isc {
 		Timeline: TimelineStatic<Timeline, TimelineProps>;
 
 		/** 
+		 * Timer extends Class
 		 * The Timer class provides a predictable cross-browser system for creating
 		 * timed events.
 		 */ 
@@ -4400,12 +4881,19 @@ declare namespace Isc {
 		ToolStripSeparator: ToolStripSeparatorStatic<ToolStripSeparator, ToolStripSeparatorProps>;
 
 		/** 
+		 * ToolStripSeparatorEditProxy extends Class
+		 * EditProxy that handles ToolStripSeparator objects when editMode is enabled.
+		 */ 
+		ToolStripSeparatorEditProxy: ToolStripSeparatorEditProxyStatic<ToolStripSeparatorEditProxy, ToolStripSeparatorEditProxyProps>;
+
+		/** 
 		 * ToolStripSpacer extends LayoutSpacer
 		 * Simple subclass of LayoutSpacer with appearance appropriate for a ToolStrip spacer
 		 */ 
 		ToolStripSpacer: ToolStripSpacerStatic<ToolStripSpacer, ToolStripSpacerProps>;
 
 		/** 
+		 * Tree extends Class
 		 * A Tree is a data model representing a set of objects linked into a hierarchy.
 		 * 
 		 * A Tree has no visual presentation, it is displayed by a TreeGrid or ColumnTree
@@ -4502,6 +4990,29 @@ declare namespace Isc {
 		UploadItem: UploadItemStatic<UploadItem, UploadItemProps>;
 
 		/** 
+		 * UserTask extends Task
+		 * A task that involves showing a user interface to the end user allowing the user to view and
+		 * input data and press a button (or do some other UI gesture) to complete the task.
+		 * 
+		 * A UserTask takes the following steps:
+		 * 
+		 * Optionally show() or otherwise make visible the UserTask.targetView','targetView
+		 * Provide values to either a DynamicForm designated as the UserTask.targetForm','targetForm or to
+		 * a ValuesManager designated as the UserTask.targetVM','targetVM, via ValuesManager.setValues','setValues()
+		 * Waits for notification of completion or cancellation. The UserTask is notified of
+		 * completion if a SubmitItem is pressed in either the targetForm or
+		 * any form that is a member of the targetVM. Likewise a CancelItem
+		 * triggers cancellation. Direct calls to DynamicForm.cancelEditing or
+		 * DynamicForm.completeEditing achieve the same result.
+		 * if cancellation occurs, the process continues to the UserTask.cancelElement','cancelElement
+		 * if completion occurs, values are retrieved from the form or valuesManager and applied
+		 * to the process state
+		 * 
+		 */ 
+		UserTask: UserTaskStatic<UserTask, UserTaskProps>;
+
+		/** 
+		 * Validator extends Class
 		 * A validator describes a check that should be performed on a value the user is trying to
 		 * save.
 		 * 
@@ -4523,6 +5034,7 @@ declare namespace Isc {
 		Validator: ValidatorStatic<Validator, ValidatorProps>;
 
 		/** 
+		 * ValuesManager extends Class
 		 * The ValuesManager manages data from multiple member forms.
 		 * 
 		 * If a single logical form needs to be separated into multiple DynamicForm instances for
@@ -4618,6 +5130,7 @@ declare namespace Isc {
 		VStack: VStackStatic<VStack, VStackProps>;
 
 		/** 
+		 * WebService extends Class
 		 * Class representing a WebService definition derived from a WSDL file.
 		 * 
 		 * A Web Service object allows you to invoke operations (via
@@ -4648,6 +5161,12 @@ declare namespace Isc {
 		 * isc.warn','shortcuts for common application dialogs.
 		 */ 
 		Window: WindowStatic<Window, WindowProps>;
+
+		/** 
+		 * WindowEditProxy extends LayoutEditProxy
+		 * EditProxy that handles Window objects when editMode is enabled.
+		 */ 
+		WindowEditProxy: WindowEditProxyStatic<WindowEditProxy, WindowEditProxyProps>;
 
 		/** 
 		 * WSDataSource extends DataSource
@@ -4703,10 +5222,33 @@ declare namespace Isc {
 		XJSONDataSource: XJSONDataSourceStatic<XJSONDataSource, XJSONDataSourceProps>;
 
 		/** 
+		 * XMLSyntaxHiliter extends SyntaxHiliter
+		 * Regular expression-based source code colorizer for XML source.
+		 * 
+		 * NOTE: This class exists only for use with the SmartClient Feature Explorer and 
+		 * SmartGWT Showcases and cannot be used in any other environment.
+		 */ 
+		XMLSyntaxHiliter: XMLSyntaxHiliterStatic<XMLSyntaxHiliter, XMLSyntaxHiliterProps>;
+
+		/** 
+		 * XMLTools extends Class
 		 * Utility methods for dealing with XML elements, XML Schema, WSDL files, XSLT, and other
 		 * XML-related functionality.
 		 */ 
 		XMLTools: XMLToolsStatic<XMLTools, XMLToolsProps>;
+
+		/** 
+		 * XORGateway extends ProcessElement
+		 * Chooses one or another next process element based on AdvancedCriteria applied to
+		 * Process.state.
+		 * 
+		 * If the AdvancedCriteria evaluate to true, the XORGateway.nextElement','nextElement is
+		 * chosen, otherwise the XORGateway.failureElement','failureElement.
+		 * 
+		 * Note that "XOR" in XORGateway means "exclusive or" - only one next element is
+		 * chosen.
+		 */ 
+		XORGateway: XORGatewayStatic<XORGateway, XORGatewayProps>;
 
 		/** 
 		 * ZoneCanvas extends EventCanvas

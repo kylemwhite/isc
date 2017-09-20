@@ -1,97 +1,15 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-05
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 Errors during generation
-Generated: 9/7/2017 7:01:38 AM by kwhite
+Generated: 9/20/2017 7:01:45 AM by kwhite
 
 Summary
-Total Types  : 240
-Total Classes: 298
-Total Objects: 78
-Total Methods: 3563
-
-Properties that override a base class property with a different type: 79
-1. Property attr:BlurbItem.textBoxStyle has type CSSStyleName overrides property attr:FormItem.textBoxStyle with type FormItemBaseStyle
-2. Property attr:ButtonItem.height has type number overrides property attr:CanvasItem.height with type int | String
-3. Property attr:CheckboxItem.valueMap has type Object | Array overrides property attr:FormItem.valueMap with type Array | Object
-4. Property attr:CheckboxItem.width has type number overrides property attr:FormItem.width with type int | String
-5. Property attr:ComboBoxItem.showHintInField has type boolean overrides property attr:TextItem.showHintInField with type Boolean
-6. Property attr:CubeGrid.data has type Array of CellRecord overrides property attr:ListGrid.data with type List of ListGridRecord
-7. Property attr:CubeGrid.dataSource has type DataSource overrides property attr:ListGrid.dataSource with type DataSource | ID
-8. Property attr:CubeGrid.editByCell has type Boolean overrides property attr:ListGrid.editByCell with type boolean
-9. Property attr:CubeGrid.saveByCell has type Boolean overrides property attr:ListGrid.saveByCell with type boolean
-10. Property attr:DatabaseBrowser.title has type String overrides property attr:Window.title with type HTMLString
-11. Property attr:DateItem.displayFormat has type DateDisplayFormat overrides property attr:FormItem.displayFormat with type Varies
-12. Property attr:DateItem.pickerConstructor has type String overrides property attr:FormItem.pickerConstructor with type SCClassName
-13. Property attr:DateItem.pickerProperties has type DateChooser Properties overrides property attr:FormItem.pickerProperties with type Canvas Properties
-14. Property attr:DateTimeItem.displayFormat has type DateDisplayFormat overrides property attr:FormItem.displayFormat with type Varies
-15. Property attr:DSResponse.data has type Array of Record | RecordList overrides property attr:RPCResponse.data with type String | Object
-16. Property attr:DynamicForm.canFocus has type Boolean overrides property attr:Canvas.canFocus with type boolean
-17. Property attr:EdgedCanvas.edgeOffset has type integer overrides property attr:Canvas.edgeOffset with type number
-18. Property attr:EdgedCanvas.edgeSize has type integer overrides property attr:Canvas.edgeSize with type number
-19. Property attr:FieldPickerWindow.title has type String overrides property attr:Window.title with type HTMLString
-20. Property attr:GridRenderer.showHover has type boolean overrides property attr:Canvas.showHover with type Boolean
-21. Property attr:HeaderItem.defaultValue has type String overrides property attr:FormItem.defaultValue with type Any
-22. Property attr:HibernateBrowser.title has type String overrides property attr:Window.title with type HTMLString
-23. Property attr:IconButton.iconSize has type Number overrides property attr:Button.iconSize with type int
-24. Property attr:IMenuButton.hiliteAccessKey has type Boolean overrides property attr:Button.hiliteAccessKey with type boolean
-25. Property attr:IMenuButton.title has type String overrides property attr:Button.title with type HTMLString
-26. Property attr:ImgSplitbar.src has type String overrides property attr:Img.src with type SCImgURL
-27. Property attr:ImgTab.showFocus has type boolean overrides property attr:StretchImgButton.showFocus with type Boolean
-28. Property attr:ListPropertiesDialog.title has type String overrides property attr:Window.title with type HTMLString
-29. Property attr:LoginDialog.dismissOnEscape has type boolean overrides property attr:Window.dismissOnEscape with type Boolean
-30. Property attr:LoginDialog.items has type Array of String overrides property attr:Window.items with type Array of Canvas | Canvas | String
-31. Property attr:LoginDialog.showCloseButton has type boolean overrides property attr:Window.showCloseButton with type Boolean
-32. Property attr:LoginDialog.title has type String overrides property attr:Window.title with type HTMLString
-33. Property attr:Menu.data has type Array of MenuItem | Array of Record[] | Tree | RecordList overrides property attr:ListGrid.data with type List of ListGridRecord
-34. Property attr:Menu.dataProperties has type Tree Properties overrides property attr:ListGrid.dataProperties with type ResultSet
-35. Property attr:Menu.dataSource has type DataSource overrides property attr:ListGrid.dataSource with type DataSource | ID
-36. Property attr:Menu.fields has type Array of MenuFieldID | Array of ListGridField overrides property attr:ListGrid.fields with type Array of ListGridField
-37. Property attr:MenuButton.hiliteAccessKey has type Boolean overrides property attr:Button.hiliteAccessKey with type boolean
-38. Property attr:MenuButton.title has type String overrides property attr:Button.title with type HTMLString
-39. Property attr:MultiGroupDialog.title has type String overrides property attr:Window.title with type HTMLString
-40. Property attr:MultiSortDialog.title has type String overrides property attr:Window.title with type HTMLString
-41. Property attr:PickListMenu.emptyMessage has type String overrides property attr:ListGrid.emptyMessage with type HTMLString
-42. Property attr:PrintWindow.title has type String overrides property attr:Window.title with type HTMLString
-43. Property attr:RestDataSource.dataURL has type String overrides property attr:DataSource.dataURL with type URL
-44. Property attr:RestDataSource.recordXPath has type String overrides property attr:DataSource.recordXPath with type XPathExpression
-45. Property attr:ResultTree.discardParentlessNodes has type boolean overrides property attr:Tree.discardParentlessNodes with type Boolean
-46. Property attr:SearchForm.canEditFieldAttribute has type String overrides property attr:DynamicForm.canEditFieldAttribute with type Identifier
-47. Property attr:SelectItem.defaultValue has type boolean overrides property attr:FormItem.defaultValue with type Any
-48. Property attr:SelectItem.emptyDisplayValue has type HTMLString overrides property attr:FormItem.emptyDisplayValue with type String
-49. Property attr:SelectItem.filterLocally has type Boolean overrides property attr:FormItem.filterLocally with type boolean
-50. Property attr:SelectItem.height has type number overrides property attr:FormItem.height with type int | String
-51. Property attr:SelectItem.optionFilterContext has type DSRequest Properties overrides property attr:FormItem.optionFilterContext with type RPCRequest Properties
-52. Property attr:Slider.canFocus has type Boolean overrides property attr:Canvas.canFocus with type boolean
-53. Property attr:Snapbar.showDownGrip has type Boolean overrides property attr:StretchImg.showDownGrip with type boolean
-54. Property attr:Snapbar.showGrip has type Boolean overrides property attr:StretchImg.showGrip with type boolean
-55. Property attr:Snapbar.showRollOverGrip has type Boolean overrides property attr:StretchImg.showRollOverGrip with type boolean
-56. Property attr:SpacerItem.height has type number overrides property attr:FormItem.height with type int | String
-57. Property attr:SpacerItem.width has type number overrides property attr:FormItem.width with type int | String
-58. Property attr:Splitbar.capSize has type integer overrides property attr:StretchImg.capSize with type number
-59. Property attr:Splitbar.showDownGrip has type Boolean overrides property attr:StretchImg.showDownGrip with type boolean
-60. Property attr:Splitbar.showGrip has type Boolean overrides property attr:StretchImg.showGrip with type boolean
-61. Property attr:Splitbar.showRollOverGrip has type Boolean overrides property attr:StretchImg.showRollOverGrip with type boolean
-62. Property attr:Splitbar.vertical has type boolean overrides property attr:StretchImg.vertical with type Boolean
-63. Property attr:SummaryBuilder.dataSource has type DataSource | ID overrides property attr:FormulaBuilder.dataSource with type DataSource | String
-64. Property attr:TextAreaItem.height has type number overrides property attr:FormItem.height with type int | String
-65. Property attr:TextAreaItem.pickerIconHeight has type Integer overrides property attr:FormItem.pickerIconHeight with type int
-66. Property attr:TextAreaItem.width has type number overrides property attr:FormItem.width with type int | String
-67. Property attr:TextItem.height has type number overrides property attr:FormItem.height with type int | String
-68. Property attr:TextItem.width has type number overrides property attr:FormItem.width with type int | String
-69. Property attr:TimeItem.displayFormat has type TimeDisplayFormat overrides property attr:FormItem.displayFormat with type Varies
-70. Property attr:TimeItem.textBoxStyle has type CSSStyleName overrides property attr:FormItem.textBoxStyle with type FormItemBaseStyle
-71. Property attr:Toolbar.vertical has type Boolean overrides property attr:Layout.vertical with type boolean
-72. Property attr:ToolStrip.vertical has type Boolean overrides property attr:Layout.vertical with type boolean
-73. Property attr:ToolStripResizer.hSrc has type SCImgURL overrides property attr:ImgSplitbar.hSrc with type String
-74. Property attr:TreeGrid.data has type Tree overrides property attr:ListGrid.data with type List of ListGridRecord
-75. Property attr:TreeGrid.dataProperties has type Tree overrides property attr:ListGrid.dataProperties with type ResultSet
-76. Property attr:TreeGrid.fields has type Array of TreeGridField overrides property attr:ListGrid.fields with type Array of ListGridField
-77. Property attr:TreeMenuButton.title has type String overrides property attr:Button.title with type HTMLString
-78. Property attr:UploadItem.height has type number overrides property attr:FormItem.height with type int | String
-79. Property attr:UploadItem.width has type number overrides property attr:FormItem.width with type int | String
-
+Total Types  : 249
+Total Classes: 297
+Total Objects: 82
+Total Methods: 3559
 
 Attributes missing R flag (or missing flags altogether): 46 (Should they all have an R flag?)
 1. attr:Calendar.eventCanvas, Flags=A
@@ -143,63 +61,11 @@ Attributes missing R flag (or missing flags altogether): 46 (Should they all hav
 
 
 Methods with bad flags: 0 (methods should not have any flags except A?)
-Classes without inheritsFrom attribute: 53 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake)
-1. AutoTest
-2. BaseWidget (manually checked, inheritsFrom Class)
-3. Browser (manually checked, does NOT inherit from Class. Should be object?)
-4. Callbacks (manually checked, excluded because 'Callbacks' is neither a Class nor an Object, it's just a way of organizing the docs. This one item needs to be flagged as something to be ignored in terms of API generation.)
-5. CellSelection
-6. Class
-7. Comm
-8. DataSource (manually checked, inheritsFrom Class)
-9. DataSourceField (manually checked, does NOT inherit from Class. Should be object?)
-10. DateUtil
-11. DMI
-12. EditContext
-13. EditProxy
-14. EventHandler
-15. Facet (manually checked, does NOT inherit from Class. Should be object?)
-16. FieldPickerField
-17. FontLoader
-18. FormItem (manually checked, inheritsFrom Class)
-19. GroupingMessages
-20. HiddenPalette
-21. Hover
-22. JSON
-23. JSONEncoder
-24. Log
-25. Mail (manually checked, does NOT inherit from Class. Should be object?)
-26. MathFunction (manually checked, inheritsFrom Class)
-27. Messaging
-28. NumberUtil
-29. Offline
-30. OperationBinding (manually checked, does NOT inherit from Class. Should be object?)
-31. Operators
-32. Page
-33. ProcessElement
-34. ResultSet (manually checked, inheritsFrom Class)
-35. RPCManager
-36. RPCResponse
-37. SchemaSet
-38. Selection
-39. SelectionOutline (manually checked, excluded because NOTE: This class is for internal use only by EditContext.)
-40. SelectOtherItem (manually checked, does NOT inherit from Class. Should be object?)
-41. SimpleType
-42. SyntaxHiliter
-43. TabIndexManager
-44. TextSettings
-45. Time (manually checked, inheritsFrom Class)
-46. Timer
-47. ToolStripSeparatorEditProxy
-48. Tree
-49. Validator
-50. ValuesManager
-51. VisualBuilder (manually checked, excluded because This is an internal only class - do not try to use it directly in your applications.)
-52. WebService
-53. XMLTools
+Classes without inheritsFrom attribute: 1 (Maybe it should inherit from Class, maybe it's really supposed to be an object or maybe it's a mistake, or maybe it IS Class, which is ok of course)
+1. Class
 
 
-Object attributes marked with W flag: 276 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
+Object attributes marked with W flag: 288 (attributes on objects are always read only on the object. There may be other methods in parent classes to modify the attribute)
 1. attr:AdvancedCriteria.strictSQLFiltering
 2. attr:CalendarEvent.backgroundColor
 3. attr:CalendarEvent.borderColor
@@ -220,262 +86,274 @@ Object attributes marked with W flag: 276 (attributes on objects are always read
 18. attr:CalendarEvent.startDate
 19. attr:CalendarEvent.sublane
 20. attr:CalendarEvent.textColor
-21. attr:DetailViewerField.canHilite
-22. attr:DetailViewerField.cellStyle
-23. attr:DetailViewerField.dateFormatter
-24. attr:DetailViewerField.decimalPad
-25. attr:DetailViewerField.decimalPrecision
-26. attr:DetailViewerField.hiliteIconHeight
-27. attr:DetailViewerField.hiliteIconLeftPadding
-28. attr:DetailViewerField.hiliteIconRightPadding
-29. attr:DetailViewerField.hiliteIconSize
-30. attr:DetailViewerField.hiliteIconWidth
-31. attr:DetailViewerField.imageHeight
-32. attr:DetailViewerField.imageSize
-33. attr:DetailViewerField.imageURLPrefix
-34. attr:DetailViewerField.imageWidth
-35. attr:DetailViewerField.linkText
-36. attr:DetailViewerField.linkTextProperty
-37. attr:DetailViewerField.linkURLPrefix
-38. attr:DetailViewerField.linkURLSuffix
-39. attr:DetailViewerField.printCellStyle
-40. attr:DetailViewerField.target
-41. attr:DetailViewerField.timeFormatter
-42. attr:DetailViewerRecord.linkText
-43. attr:DiscoverTreeSettings.nameProperty
-44. attr:DiscoverTreeSettings.newChildrenProperty
-45. attr:DiscoverTreeSettings.scanMode
-46. attr:DiscoverTreeSettings.tieMode
-47. attr:DiscoverTreeSettings.typeProperty
-48. attr:DSLoadSettings.forceReload
-49. attr:DSLoadSettings.loadParents
-50. attr:DSLoadSettings.mockMode
-51. attr:DSRequest.clientContext
-52. attr:DSRequest.dataProtocol
-53. attr:DSRequest.exportHeaderless
-54. attr:DSRequest.exportPropertyIdentifier
-55. attr:DSRequest.exportRawValues
-56. attr:DSRequest.fieldValueExpressions
-57. attr:DSRequest.generateRelatedUpdates
-58. attr:DSRequest.headerData
-59. attr:DSRequest.keepParentsOnFilter
-60. attr:DSRequest.progressiveLoading
-61. attr:DSRequest.shouldUseCache
-62. attr:DSRequest.useFlatHeaderFields
-63. attr:EditNode.canDuplicate
-64. attr:FacetValue.canEdit
-65. attr:FacetValue.id
-66. attr:FacetValue.title
-67. attr:FileSpec.fileFormat
-68. attr:FileSpec.fileName
-69. attr:FileSpec.fileType
-70. attr:FiscalCalendar.defaultDate
-71. attr:FiscalCalendar.defaultMonth
-72. attr:FiscalCalendar.defaultYearMode
-73. attr:FiscalCalendar.fiscalYears
-74. attr:FiscalYear.date
-75. attr:FiscalYear.fiscalYear
-76. attr:FiscalYear.month
-77. attr:FiscalYear.year
-78. attr:FormItemIcon.baseStyle
-79. attr:FormItemIcon.disabled
-80. attr:FormItemIcon.disableOnReadOnly
-81. attr:FormItemIcon.height
-82. attr:FormItemIcon.neverDisable
-83. attr:FormItemIcon.prompt
-84. attr:FormItemIcon.showDisabledOnFocus
-85. attr:FormItemIcon.showFocused
-86. attr:FormItemIcon.showFocusedWithItem
-87. attr:FormItemIcon.showOnFocus
-88. attr:FormItemIcon.showOver
-89. attr:FormItemIcon.showOverWhen
-90. attr:FormItemIcon.src
-91. attr:FormItemIcon.text
-92. attr:FormItemIcon.width
-93. attr:HeaderSpan.headerBaseStyle
-94. attr:HeaderSpan.headerTitleStyle
-95. attr:Hilite.backgroundColor
-96. attr:Hilite.disabled
-97. attr:Hilite.textColor
-98. attr:Hilite.title
-99. attr:ImgProperties.extraStuff
-100. attr:ImgProperties.height
-101. attr:ImgProperties.imgDir
-102. attr:ImgProperties.name
-103. attr:ImgProperties.src
-104. attr:ImgProperties.width
-105. attr:Lane.eventStyleName
-106. attr:ListGridField.align
-107. attr:ListGridField.applyAfterSummary
-108. attr:ListGridField.autoComplete
-109. attr:ListGridField.autoFetchDisplayMap
-110. attr:ListGridField.autoFitWidthApproach
-111. attr:ListGridField.baseStyle
-112. attr:ListGridField.canEdit
-113. attr:ListGridField.canFilter
-114. attr:ListGridField.canGroupBy
-115. attr:ListGridField.canHilite
-116. attr:ListGridField.canSort
-117. attr:ListGridField.canSortClientOnly
-118. attr:ListGridField.canToggle
-119. attr:ListGridField.cellAlign
-120. attr:ListGridField.dateFormatter
-121. attr:ListGridField.decimalPad
-122. attr:ListGridField.decimalPrecision
-123. attr:ListGridField.defaultFilterValue
-124. attr:ListGridField.defaultValue
-125. attr:ListGridField.displayField
-126. attr:ListGridField.displayFormat
-127. attr:ListGridField.displayValueFromRecord
-128. attr:ListGridField.editorImageURLPrefix
-129. attr:ListGridField.editorImageURLSuffix
-130. attr:ListGridField.editorProperties
-131. attr:ListGridField.editorType
-132. attr:ListGridField.editorValueIconHeight
-133. attr:ListGridField.editorValueIcons
-134. attr:ListGridField.editorValueIconWidth
-135. attr:ListGridField.editorValueMap
-136. attr:ListGridField.emptyCellValue
-137. attr:ListGridField.enterKeyEditAction
-138. attr:ListGridField.escapeHTML
-139. attr:ListGridField.escapeKeyEditAction
-140. attr:ListGridField.exportFieldWidth
-141. attr:ListGridField.filterEditorProperties
-142. attr:ListGridField.filterEditorType
-143. attr:ListGridField.filterEditorValueMap
-144. attr:ListGridField.filterOnKeypress
-145. attr:ListGridField.headerBaseStyle
-146. attr:ListGridField.headerHoverDelay
-147. attr:ListGridField.headerTitleStyle
-148. attr:ListGridField.hiliteIconHeight
-149. attr:ListGridField.hiliteIconLeftPadding
-150. attr:ListGridField.hiliteIconRightPadding
-151. attr:ListGridField.hiliteIconSize
-152. attr:ListGridField.hiliteIconWidth
-153. attr:ListGridField.hoverDelay
-154. attr:ListGridField.hoverWidth
-155. attr:ListGridField.hoverWrap
-156. attr:ListGridField.ignoreKeyboardClicks
-157. attr:ListGridField.imageHeight
-158. attr:ListGridField.imageSize
-159. attr:ListGridField.imageURLPrefix
-160. attr:ListGridField.imageURLSuffix
-161. attr:ListGridField.imageWidth
-162. attr:ListGridField.inputFormat
-163. attr:ListGridField.leaveHeaderMenuButtonSpace
-164. attr:ListGridField.linkText
-165. attr:ListGridField.linkTextProperty
-166. attr:ListGridField.linkURLPrefix
-167. attr:ListGridField.linkURLSuffix
-168. attr:ListGridField.maxWidth
-169. attr:ListGridField.minWidth
-170. attr:ListGridField.optionCriteria
-171. attr:ListGridField.optionDataSource
-172. attr:ListGridField.required
-173. attr:ListGridField.selectCellTextOnClick
-174. attr:ListGridField.shouldPrint
-175. attr:ListGridField.showAlternateStyle
-176. attr:ListGridField.showDefaultContextMenu
-177. attr:ListGridField.showHilitesInGroupSummary
-178. attr:ListGridField.showHover
-179. attr:ListGridField.showHoverComponents
-180. attr:ListGridField.showTitle
-181. attr:ListGridField.showValueIconOnly
-182. attr:ListGridField.sortByDisplayField
-183. attr:ListGridField.sortByMappedValue
-184. attr:ListGridField.sortDirection
-185. attr:ListGridField.spannedHeaderBaseStyle
-186. attr:ListGridField.summaryTitle
-187. attr:ListGridField.summaryValue
-188. attr:ListGridField.suppressValueIcon
-189. attr:ListGridField.target
-190. attr:ListGridField.timeFormatter
-191. attr:ListGridField.title
-192. attr:ListGridField.userFormula
-193. attr:ListGridField.userSummary
-194. attr:ListGridField.validateOnChange
-195. attr:ListGridField.validators
-196. attr:ListGridField.valueField
-197. attr:ListGridField.valueIconHeight
-198. attr:ListGridField.valueIconLeftPadding
-199. attr:ListGridField.valueIconOrientation
-200. attr:ListGridField.valueIconRightPadding
-201. attr:ListGridField.valueIcons
-202. attr:ListGridField.valueIconSize
-203. attr:ListGridField.valueIconWidth
-204. attr:ListGridField.valueMap
-205. attr:ListGridField.width
-206. attr:ListGridField.wrap
-207. attr:ListGridRecord._baseStyle
-208. attr:ListGridRecord._canRemove
-209. attr:ListGridRecord.customStyle
-210. attr:ListGridRecord.detailDS
-211. attr:ListGridRecord.includeInSummary
-212. attr:ListGridRecord.isGridSummary
-213. attr:ListGridRecord.isGroupSummary
-214. attr:ListGridRecord.linkText
-215. attr:ListGridRecord.singleCellValue
-216. attr:MetricSettings.chartType
-217. attr:MetricSettings.dataColors
-218. attr:MetricSettings.filled
-219. attr:MetricSettings.proportional
-220. attr:MetricSettings.stacked
-221. attr:NavigationBarViewState.alwaysShowLeftButtonTitle
-222. attr:NavigationBarViewState.controls
-223. attr:NavigationBarViewState.leftButtonTitle
-224. attr:NavigationBarViewState.shortLeftButtonTitle
-225. attr:NavigationBarViewState.showLeftButton
-226. attr:NavigationBarViewState.title
-227. attr:RPCRequest.actionURL
-228. attr:RPCRequest.bypassCache
-229. attr:RPCRequest.callback
-230. attr:RPCRequest.callbackParam
-231. attr:RPCRequest.clientContext
-232. attr:RPCRequest.containsCredentials
-233. attr:RPCRequest.contentType
-234. attr:RPCRequest.data
-235. attr:RPCRequest.downloadResult
-236. attr:RPCRequest.downloadToNewWindow
-237. attr:RPCRequest.evalResult
-238. attr:RPCRequest.evalVars
-239. attr:RPCRequest.httpHeaders
-240. attr:RPCRequest.httpMethod
-241. attr:RPCRequest.ignoreTimeout
-242. attr:RPCRequest.omitNullMapValuesInResponse
-243. attr:RPCRequest.params
-244. attr:RPCRequest.paramsOnly
-245. attr:RPCRequest.prompt
-246. attr:RPCRequest.promptCursor
-247. attr:RPCRequest.promptDelay
-248. attr:RPCRequest.promptStyle
-249. attr:RPCRequest.sendNoQueue
-250. attr:RPCRequest.serverOutputAsString
-251. attr:RPCRequest.showPrompt
-252. attr:RPCRequest.suppressAutoDraw
-253. attr:RPCRequest.timeout
-254. attr:RPCRequest.transport
-255. attr:RPCRequest.useSimpleHttp
-256. attr:RPCRequest.useXmlHttpRequest
-257. attr:RPCRequest.willHandleError
-258. attr:SectionStackSection.showClippedTitleOnHover
-259. attr:SummaryConfiguration.badFormulaResultValue
-260. attr:SummaryConfiguration.invalidSummaryValue
-261. attr:TestFunctionResult.emptyTestValue
-262. attr:TestFunctionResult.errorText
-263. attr:TestFunctionResult.failedExecution
-264. attr:TestFunctionResult.failedGeneration
-265. attr:TestFunctionResult.record
-266. attr:TestFunctionResult.result
-267. attr:TileRecord.tileConstructor
-268. attr:TileRecord.tileProperties
-269. attr:TreeGridField.treeField
-270. attr:TreeNode.children
-271. attr:TreeNode.icon
-272. attr:TreeNode.showDropIcon
-273. attr:TreeNode.showOpenIcon
-274. attr:TreeNode.showSelectedIcon
-275. attr:UserFormula.text
-276. attr:UserSummary.text
+21. attr:DataSourceField.canSortClientOnly
+22. attr:DataSourceField.dateFormatter
+23. attr:DataSourceField.decimalPad
+24. attr:DataSourceField.decimalPrecision
+25. attr:DataSourceField.deepCloneOnEdit
+26. attr:DataSourceField.encodeInResponse
+27. attr:DataSourceField.exportFormat
+28. attr:DataSourceField.format
+29. attr:DataSourceField.ignoreTextMatchStyle
+30. attr:DataSourceField.precision
+31. attr:DataSourceField.requiredMessage
+32. attr:DataSourceField.timeFormatter
+33. attr:DetailViewerField.canHilite
+34. attr:DetailViewerField.cellStyle
+35. attr:DetailViewerField.dateFormatter
+36. attr:DetailViewerField.decimalPad
+37. attr:DetailViewerField.decimalPrecision
+38. attr:DetailViewerField.hiliteIconHeight
+39. attr:DetailViewerField.hiliteIconLeftPadding
+40. attr:DetailViewerField.hiliteIconRightPadding
+41. attr:DetailViewerField.hiliteIconSize
+42. attr:DetailViewerField.hiliteIconWidth
+43. attr:DetailViewerField.imageHeight
+44. attr:DetailViewerField.imageSize
+45. attr:DetailViewerField.imageURLPrefix
+46. attr:DetailViewerField.imageWidth
+47. attr:DetailViewerField.linkText
+48. attr:DetailViewerField.linkTextProperty
+49. attr:DetailViewerField.linkURLPrefix
+50. attr:DetailViewerField.linkURLSuffix
+51. attr:DetailViewerField.printCellStyle
+52. attr:DetailViewerField.target
+53. attr:DetailViewerField.timeFormatter
+54. attr:DetailViewerRecord.linkText
+55. attr:DiscoverTreeSettings.nameProperty
+56. attr:DiscoverTreeSettings.newChildrenProperty
+57. attr:DiscoverTreeSettings.scanMode
+58. attr:DiscoverTreeSettings.tieMode
+59. attr:DiscoverTreeSettings.typeProperty
+60. attr:DSLoadSettings.forceReload
+61. attr:DSLoadSettings.loadParents
+62. attr:DSLoadSettings.mockMode
+63. attr:DSRequest.clientContext
+64. attr:DSRequest.dataProtocol
+65. attr:DSRequest.exportHeaderless
+66. attr:DSRequest.exportPropertyIdentifier
+67. attr:DSRequest.exportRawValues
+68. attr:DSRequest.fieldValueExpressions
+69. attr:DSRequest.generateRelatedUpdates
+70. attr:DSRequest.headerData
+71. attr:DSRequest.keepParentsOnFilter
+72. attr:DSRequest.progressiveLoading
+73. attr:DSRequest.shouldUseCache
+74. attr:DSRequest.useFlatHeaderFields
+75. attr:EditNode.canDuplicate
+76. attr:FacetValue.canEdit
+77. attr:FacetValue.id
+78. attr:FacetValue.title
+79. attr:FileSpec.fileFormat
+80. attr:FileSpec.fileName
+81. attr:FileSpec.fileType
+82. attr:FiscalCalendar.defaultDate
+83. attr:FiscalCalendar.defaultMonth
+84. attr:FiscalCalendar.defaultYearMode
+85. attr:FiscalCalendar.fiscalYears
+86. attr:FiscalYear.date
+87. attr:FiscalYear.fiscalYear
+88. attr:FiscalYear.month
+89. attr:FiscalYear.year
+90. attr:FormItemIcon.baseStyle
+91. attr:FormItemIcon.disabled
+92. attr:FormItemIcon.disableOnReadOnly
+93. attr:FormItemIcon.height
+94. attr:FormItemIcon.neverDisable
+95. attr:FormItemIcon.prompt
+96. attr:FormItemIcon.showDisabledOnFocus
+97. attr:FormItemIcon.showFocused
+98. attr:FormItemIcon.showFocusedWithItem
+99. attr:FormItemIcon.showOnFocus
+100. attr:FormItemIcon.showOver
+101. attr:FormItemIcon.showOverWhen
+102. attr:FormItemIcon.src
+103. attr:FormItemIcon.text
+104. attr:FormItemIcon.width
+105. attr:HeaderSpan.headerBaseStyle
+106. attr:HeaderSpan.headerTitleStyle
+107. attr:Hilite.backgroundColor
+108. attr:Hilite.disabled
+109. attr:Hilite.textColor
+110. attr:Hilite.title
+111. attr:ImgProperties.extraStuff
+112. attr:ImgProperties.height
+113. attr:ImgProperties.imgDir
+114. attr:ImgProperties.name
+115. attr:ImgProperties.src
+116. attr:ImgProperties.width
+117. attr:Lane.eventStyleName
+118. attr:ListGridField.align
+119. attr:ListGridField.applyAfterSummary
+120. attr:ListGridField.autoComplete
+121. attr:ListGridField.autoFetchDisplayMap
+122. attr:ListGridField.autoFitWidthApproach
+123. attr:ListGridField.baseStyle
+124. attr:ListGridField.canEdit
+125. attr:ListGridField.canFilter
+126. attr:ListGridField.canGroupBy
+127. attr:ListGridField.canHilite
+128. attr:ListGridField.canSort
+129. attr:ListGridField.canSortClientOnly
+130. attr:ListGridField.canToggle
+131. attr:ListGridField.cellAlign
+132. attr:ListGridField.dateFormatter
+133. attr:ListGridField.decimalPad
+134. attr:ListGridField.decimalPrecision
+135. attr:ListGridField.defaultFilterValue
+136. attr:ListGridField.defaultValue
+137. attr:ListGridField.displayField
+138. attr:ListGridField.displayFormat
+139. attr:ListGridField.displayValueFromRecord
+140. attr:ListGridField.editorImageURLPrefix
+141. attr:ListGridField.editorImageURLSuffix
+142. attr:ListGridField.editorProperties
+143. attr:ListGridField.editorType
+144. attr:ListGridField.editorValueIconHeight
+145. attr:ListGridField.editorValueIcons
+146. attr:ListGridField.editorValueIconWidth
+147. attr:ListGridField.editorValueMap
+148. attr:ListGridField.emptyCellValue
+149. attr:ListGridField.enterKeyEditAction
+150. attr:ListGridField.escapeHTML
+151. attr:ListGridField.escapeKeyEditAction
+152. attr:ListGridField.exportFieldWidth
+153. attr:ListGridField.filterEditorProperties
+154. attr:ListGridField.filterEditorType
+155. attr:ListGridField.filterEditorValueMap
+156. attr:ListGridField.filterOnKeypress
+157. attr:ListGridField.headerBaseStyle
+158. attr:ListGridField.headerHoverDelay
+159. attr:ListGridField.headerTitleStyle
+160. attr:ListGridField.hiliteIconHeight
+161. attr:ListGridField.hiliteIconLeftPadding
+162. attr:ListGridField.hiliteIconRightPadding
+163. attr:ListGridField.hiliteIconSize
+164. attr:ListGridField.hiliteIconWidth
+165. attr:ListGridField.hoverDelay
+166. attr:ListGridField.hoverWidth
+167. attr:ListGridField.hoverWrap
+168. attr:ListGridField.ignoreKeyboardClicks
+169. attr:ListGridField.imageHeight
+170. attr:ListGridField.imageSize
+171. attr:ListGridField.imageURLPrefix
+172. attr:ListGridField.imageURLSuffix
+173. attr:ListGridField.imageWidth
+174. attr:ListGridField.inputFormat
+175. attr:ListGridField.leaveHeaderMenuButtonSpace
+176. attr:ListGridField.linkText
+177. attr:ListGridField.linkTextProperty
+178. attr:ListGridField.linkURLPrefix
+179. attr:ListGridField.linkURLSuffix
+180. attr:ListGridField.maxWidth
+181. attr:ListGridField.minWidth
+182. attr:ListGridField.optionCriteria
+183. attr:ListGridField.optionDataSource
+184. attr:ListGridField.required
+185. attr:ListGridField.selectCellTextOnClick
+186. attr:ListGridField.shouldPrint
+187. attr:ListGridField.showAlternateStyle
+188. attr:ListGridField.showDefaultContextMenu
+189. attr:ListGridField.showHilitesInGroupSummary
+190. attr:ListGridField.showHover
+191. attr:ListGridField.showHoverComponents
+192. attr:ListGridField.showTitle
+193. attr:ListGridField.showValueIconOnly
+194. attr:ListGridField.sortByDisplayField
+195. attr:ListGridField.sortByMappedValue
+196. attr:ListGridField.sortDirection
+197. attr:ListGridField.spannedHeaderBaseStyle
+198. attr:ListGridField.summaryTitle
+199. attr:ListGridField.summaryValue
+200. attr:ListGridField.suppressValueIcon
+201. attr:ListGridField.target
+202. attr:ListGridField.timeFormatter
+203. attr:ListGridField.title
+204. attr:ListGridField.userFormula
+205. attr:ListGridField.userSummary
+206. attr:ListGridField.validateOnChange
+207. attr:ListGridField.validators
+208. attr:ListGridField.valueField
+209. attr:ListGridField.valueIconHeight
+210. attr:ListGridField.valueIconLeftPadding
+211. attr:ListGridField.valueIconOrientation
+212. attr:ListGridField.valueIconRightPadding
+213. attr:ListGridField.valueIcons
+214. attr:ListGridField.valueIconSize
+215. attr:ListGridField.valueIconWidth
+216. attr:ListGridField.valueMap
+217. attr:ListGridField.width
+218. attr:ListGridField.wrap
+219. attr:ListGridRecord._baseStyle
+220. attr:ListGridRecord._canRemove
+221. attr:ListGridRecord.customStyle
+222. attr:ListGridRecord.detailDS
+223. attr:ListGridRecord.includeInSummary
+224. attr:ListGridRecord.isGridSummary
+225. attr:ListGridRecord.isGroupSummary
+226. attr:ListGridRecord.linkText
+227. attr:ListGridRecord.singleCellValue
+228. attr:MetricSettings.chartType
+229. attr:MetricSettings.dataColors
+230. attr:MetricSettings.filled
+231. attr:MetricSettings.proportional
+232. attr:MetricSettings.stacked
+233. attr:NavigationBarViewState.alwaysShowLeftButtonTitle
+234. attr:NavigationBarViewState.controls
+235. attr:NavigationBarViewState.leftButtonTitle
+236. attr:NavigationBarViewState.shortLeftButtonTitle
+237. attr:NavigationBarViewState.showLeftButton
+238. attr:NavigationBarViewState.title
+239. attr:RPCRequest.actionURL
+240. attr:RPCRequest.bypassCache
+241. attr:RPCRequest.callback
+242. attr:RPCRequest.callbackParam
+243. attr:RPCRequest.clientContext
+244. attr:RPCRequest.containsCredentials
+245. attr:RPCRequest.contentType
+246. attr:RPCRequest.data
+247. attr:RPCRequest.downloadResult
+248. attr:RPCRequest.downloadToNewWindow
+249. attr:RPCRequest.evalResult
+250. attr:RPCRequest.evalVars
+251. attr:RPCRequest.httpHeaders
+252. attr:RPCRequest.httpMethod
+253. attr:RPCRequest.ignoreTimeout
+254. attr:RPCRequest.omitNullMapValuesInResponse
+255. attr:RPCRequest.params
+256. attr:RPCRequest.paramsOnly
+257. attr:RPCRequest.prompt
+258. attr:RPCRequest.promptCursor
+259. attr:RPCRequest.promptDelay
+260. attr:RPCRequest.promptStyle
+261. attr:RPCRequest.sendNoQueue
+262. attr:RPCRequest.serverOutputAsString
+263. attr:RPCRequest.showPrompt
+264. attr:RPCRequest.suppressAutoDraw
+265. attr:RPCRequest.timeout
+266. attr:RPCRequest.transport
+267. attr:RPCRequest.useSimpleHttp
+268. attr:RPCRequest.useXmlHttpRequest
+269. attr:RPCRequest.willHandleError
+270. attr:SectionStackSection.showClippedTitleOnHover
+271. attr:SummaryConfiguration.badFormulaResultValue
+272. attr:SummaryConfiguration.invalidSummaryValue
+273. attr:TestFunctionResult.emptyTestValue
+274. attr:TestFunctionResult.errorText
+275. attr:TestFunctionResult.failedExecution
+276. attr:TestFunctionResult.failedGeneration
+277. attr:TestFunctionResult.record
+278. attr:TestFunctionResult.result
+279. attr:TileRecord.tileConstructor
+280. attr:TileRecord.tileProperties
+281. attr:TreeGridField.treeField
+282. attr:TreeNode.children
+283. attr:TreeNode.icon
+284. attr:TreeNode.showDropIcon
+285. attr:TreeNode.showOpenIcon
+286. attr:TreeNode.showSelectedIcon
+287. attr:UserFormula.text
+288. attr:UserSummary.text
 
 
 
@@ -602,14 +480,14 @@ GOOD: These are possible values of types that refer to a classAttr that was foun
 
 ==== Should string type values have quotes or not? ====
 Contrained String Type Values with quotes: 216
-Contrained String Type Values without quotes: 663
+Contrained String Type Values without quotes: 665
 
 
 ==== Values with a period probably means a reference to a constant instead of the actual string ====
 Contrained String Type Values with period: 131
 
 ==== How is OR specified? ====
-OR specified as ' | ' : 385
+OR specified as ' | ' : 384
 OR specified as ' or ' : 0
 OR specified as ' || ' : 0
 OR specified as ', ' : 0
@@ -623,17 +501,7 @@ array[] of: 0
 Just Array or array: 8
 List of: 10
 
-baseType attributes != 'string': 10
-1. type:Identifier, baseType=String
-2. type:GlobalId, baseType=Identifier
-3. type:KeyName, baseType=String
-4. type:RelativeDateShortcut, baseType=String
-5. type:URI, baseType=String
-6. type:TabName, baseType=Identifier
-7. type:SCSpriteConfig, baseType=SCImgURL
-8. type:URL, baseType=URI
-9. type:AutoTestLocator, baseType=String
-10. type:SCImgURL, baseType=URL
+baseType attributes that are not a JS primitive nor an isc Type nor an isc Object: 0
 
 Attributes suspected as string types but do not have the baseType set: 2.
 === Field:2 ===
@@ -688,9 +556,8 @@ The following classes were excluded
 1. ComboBoxItem: Interface 'ComboBoxItem' incorrectly extends interface 'TextItem'. Types of property 'canEditCriterion' are incompatible.
 2. MultiComboBoxItem: Cannot find name 'ComboBoxItem'
 3. RelativeDateItem: Interface 'RelativeDateItem' incorrectly extends interface 'CanvasItem'. Types of property 'valueField' are incompatible.
-4. Callbacks: 'Callbacks' is neither a Class nor an Object, it's just a way of organizing the docs. This one item needs to be flagged as something to be ignored in terms of API generation.
-5. VisualBuilder: This is an internal only class - do not try to use it directly in your applications.
-6. SelectionOutline: NOTE: This class is for internal use only by EditContext.
+4. VisualBuilder: This is an internal only class - do not try to use it directly in your applications.
+5. SelectionOutline: NOTE: This class is for internal use only by EditContext.
 
 The following methods were excluded
 === Getter method return type does not match attribute type ===
@@ -710,31 +577,184 @@ The following methods were excluded
 12. method:Progressbar.setLength
 13. method:TileGrid.setData
 
+Properties that override a base class property with a different type: 88
+1. Property [attr:BlurbItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
+2. Property [attr:ButtonItem.height] has type [number] which overrides property [attr:CanvasItem.height] with type [int | String]
+3. Property [attr:CancelItem.title] has type [String] which overrides property [attr:FormItem.title] with type [HTMLString]
+4. Property [attr:CheckboxItem.valueMap] has type [Object | Array] which overrides property [attr:FormItem.valueMap] with type [Array | Object]
+5. Property [attr:CheckboxItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+6. Property [attr:ColorItem.pickerIconHeight] has type [Integer] which overrides property [attr:FormItem.pickerIconHeight] with type [int]
+7. Property [attr:ColorItem.pickerIconWidth] has type [Integer] which overrides property [attr:FormItem.pickerIconWidth] with type [int]
+8. Property [attr:CubeGrid.data] has type [Array of CellRecord] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
+9. Property [attr:CubeGrid.dataSource] has type [DataSource] which overrides property [attr:ListGrid.dataSource] with type [DataSource | ID]
+10. Property [attr:CubeGrid.editByCell] has type [Boolean] which overrides property [attr:ListGrid.editByCell] with type [boolean]
+11. Property [attr:CubeGrid.saveByCell] has type [Boolean] which overrides property [attr:ListGrid.saveByCell] with type [boolean]
+12. Property [attr:DatabaseBrowser.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+13. Property [attr:DateItem.displayFormat] has type [DateDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
+14. Property [attr:DateItem.pickerConstructor] has type [String] which overrides property [attr:FormItem.pickerConstructor] with type [SCClassName]
+15. Property [attr:DateItem.pickerProperties] has type [DateChooser Properties] which overrides property [attr:FormItem.pickerProperties] with type [Canvas Properties]
+16. Property [attr:DSResponse.data] has type [Array of Record | RecordList] which overrides property [attr:RPCResponse.data] with type [String | Object]
+17. Property [attr:DynamicForm.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
+18. Property [attr:EdgedCanvas.edgeOffset] has type [Integer] which overrides property [attr:Canvas.edgeOffset] with type [number]
+19. Property [attr:EdgedCanvas.edgeSize] has type [Integer] which overrides property [attr:Canvas.edgeSize] with type [number]
+20. Property [attr:EventCanvas.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+21. Property [attr:FieldPickerWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+22. Property [attr:GridRenderer.showHover] has type [boolean] which overrides property [attr:Canvas.showHover] with type [Boolean]
+23. Property [attr:HeaderItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
+24. Property [attr:HibernateBrowser.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+25. Property [attr:IconButton.iconSize] has type [Number] which overrides property [attr:Button.iconSize] with type [int]
+26. Property [attr:ImgSplitbar.src] has type [String] which overrides property [attr:Img.src] with type [SCImgURL]
+27. Property [attr:ImgTab.showFocus] has type [boolean] which overrides property [attr:StretchImgButton.showFocus] with type [Boolean]
+28. Property [attr:ImgTab.skinImgDir] has type [URL] which overrides property [attr:Canvas.skinImgDir] with type [SCImgURL]
+29. Property [attr:ListPropertiesDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+30. Property [attr:LoginDialog.dismissOnEscape] has type [boolean] which overrides property [attr:Window.dismissOnEscape] with type [Boolean]
+31. Property [attr:LoginDialog.items] has type [Array of String] which overrides property [attr:Window.items] with type [Array of Canvas | Canvas | String]
+32. Property [attr:LoginDialog.showCloseButton] has type [boolean] which overrides property [attr:Window.showCloseButton] with type [Boolean]
+33. Property [attr:LoginDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+34. Property [attr:Menu.data] has type [Array of MenuItem | Array of Record[] | Tree | RecordList] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
+35. Property [attr:Menu.dataSource] has type [DataSource] which overrides property [attr:ListGrid.dataSource] with type [DataSource | ID]
+36. Property [attr:Menu.fields] has type [Array of MenuFieldID | Array of ListGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
+37. Property [attr:MenuButton.hiliteAccessKey] has type [Boolean] which overrides property [attr:Button.hiliteAccessKey] with type [boolean]
+38. Property [attr:MenuButton.title] has type [String] which overrides property [attr:Button.title] with type [HTMLString]
+39. Property [attr:MiniDateRangeItem.canFocus] has type [Boolean] which overrides property [attr:FormItem.canFocus] with type [boolean]
+40. Property [attr:MultiGroupDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+41. Property [attr:MultiSortDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+42. Property [attr:PickListMenu.emptyMessage] has type [String] which overrides property [attr:ListGrid.emptyMessage] with type [HTMLString]
+43. Property [attr:PickTreeItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
+44. Property [attr:PickTreeItem.optionDataSource] has type [DataSource] which overrides property [attr:FormItem.optionDataSource] with type [DataSource | String]
+45. Property [attr:PortalLayout.dropTypes] has type [Array of String] which overrides property [attr:Canvas.dropTypes] with type [Array of String | String]
+46. Property [attr:Portlet.canDrop] has type [boolean] which overrides property [attr:Canvas.canDrop] with type [Boolean]
+47. Property [attr:Portlet.minHeight] has type [Number] which overrides property [attr:Canvas.minHeight] with type [number]
+48. Property [attr:Portlet.minWidth] has type [Number] which overrides property [attr:Canvas.minWidth] with type [number]
+49. Property [attr:PresetCriteriaItem.valueMap] has type [Object] which overrides property [attr:FormItem.valueMap] with type [Array | Object]
+50. Property [attr:PrintWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+51. Property [attr:RestDataSource.dataURL] has type [String] which overrides property [attr:DataSource.dataURL] with type [URL]
+52. Property [attr:RestDataSource.recordXPath] has type [String] which overrides property [attr:DataSource.recordXPath] with type [XPathExpression]
+53. Property [attr:ResultTree.discardParentlessNodes] has type [boolean] which overrides property [attr:Tree.discardParentlessNodes] with type [Boolean]
+54. Property [attr:SearchForm.canEditFieldAttribute] has type [String] which overrides property [attr:DynamicForm.canEditFieldAttribute] with type [Identifier]
+55. Property [attr:SectionItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
+56. Property [attr:SelectItem.defaultValue] has type [boolean] which overrides property [attr:FormItem.defaultValue] with type [Any]
+57. Property [attr:SelectItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
+58. Property [attr:SelectItem.filterLocally] has type [Boolean] which overrides property [attr:FormItem.filterLocally] with type [boolean]
+59. Property [attr:SelectItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+60. Property [attr:SelectItem.optionFilterContext] has type [DSRequest Properties] which overrides property [attr:FormItem.optionFilterContext] with type [RPCRequest Properties]
+61. Property [attr:Slider.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
+62. Property [attr:SliderItem.defaultValue] has type [int] which overrides property [attr:FormItem.defaultValue] with type [Any]
+63. Property [attr:SliderItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+64. Property [attr:SpacerItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+65. Property [attr:SpacerItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+66. Property [attr:Splitbar.capSize] has type [Integer] which overrides property [attr:StretchImg.capSize] with type [number]
+67. Property [attr:Splitbar.showDownGrip] has type [Boolean] which overrides property [attr:StretchImg.showDownGrip] with type [boolean]
+68. Property [attr:Splitbar.showGrip] has type [Boolean] which overrides property [attr:StretchImg.showGrip] with type [boolean]
+69. Property [attr:Splitbar.showRollOverGrip] has type [Boolean] which overrides property [attr:StretchImg.showRollOverGrip] with type [boolean]
+70. Property [attr:Splitbar.vertical] has type [boolean] which overrides property [attr:StretchImg.vertical] with type [Boolean]
+71. Property [attr:SubmitItem.title] has type [String] which overrides property [attr:FormItem.title] with type [HTMLString]
+72. Property [attr:SummaryBuilder.dataSource] has type [DataSource | ID] which overrides property [attr:FormulaBuilder.dataSource] with type [DataSource | String]
+73. Property [attr:TextAreaItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+74. Property [attr:TextAreaItem.pickerIconHeight] has type [Integer] which overrides property [attr:FormItem.pickerIconHeight] with type [int]
+75. Property [attr:TextAreaItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+76. Property [attr:TextItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+77. Property [attr:TextItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+78. Property [attr:TimeItem.displayFormat] has type [TimeDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
+79. Property [attr:TimeItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
+80. Property [attr:Toolbar.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+81. Property [attr:ToolStrip.height] has type [Number] which overrides property [attr:Canvas.height] with type [Number | String]
+82. Property [attr:ToolStrip.members] has type [Array of Canvas] which overrides property [attr:Layout.members] with type [Array<Canvas | string>]
+83. Property [attr:ToolStrip.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+84. Property [attr:ToolStripResizer.hSrc] has type [SCImgURL] which overrides property [attr:ImgSplitbar.hSrc] with type [String]
+85. Property [attr:TreeGrid.data] has type [Tree] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
+86. Property [attr:TreeGrid.fields] has type [Array of TreeGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
+87. Property [attr:Window.keepInParentRect] has type [boolean | Rect] which overrides property [attr:Canvas.keepInParentRect] with type [Boolean | Array of Integer]
+88. Property [attr:Window.opacity] has type [Integer] which overrides property [attr:Canvas.opacity] with type [number]
+
+
+Methods that override a base class method with a different return type: 59
+1. Method [classMethod:DateUtil.create] has return type [Date] which overrides method [classMethod:Class.create] with return type [T]
+2. Method [classMethod:FormItem.create] has return type [] which overrides method [classMethod:Class.create] with return type [T]
+3. Method [classMethod:RPCResponse.create] has return type [] which overrides method [classMethod:Class.create] with return type [T]
+4. Method [classMethod:Validator.create] has return type [] which overrides method [classMethod:Class.create] with return type [T]
+5. Method [method:Button.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
+6. Method [method:Canvas.getID] has return type [GlobalId] which overrides method [method:Class.getID] with return type [String]
+7. Method [method:CanvasItem.getCriterion] has 0 parameters and overrides method [method:FormItem.getCriterion] with 1 parameters.
+8. Method [method:CheckboxItem.setValueMap] has 0 parameters and overrides method [method:FormItem.setValueMap] with 1 parameters.
+9. Method [method:ColorPicker.setOpacity] parameter 0 has type [Number] and overrides method [method:Canvas.setOpacity] with parameter type [number].
+10. Method [method:CubeGrid.cellSelectionChanged] has return type [] which overrides method [method:ListGrid.cellSelectionChanged] with return type [boolean]
+11. Method [method:CubeGrid.clearEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.clearEditValue] with parameter type [number | String].
+12. Method [method:CubeGrid.dataArrived] has 0 parameters and overrides method [method:ListGrid.dataArrived] with 2 parameters.
+13. Method [method:CubeGrid.discardAllEdits] parameter 0 has type [Array of Array of int] and overrides method [method:ListGrid.discardAllEdits] with parameter type [Array of Number].
+14. Method [method:CubeGrid.exportClientData] has 3 parameters and overrides method [method:ListGrid.exportClientData] with 2 parameters.
+15. Method [method:CubeGrid.getCellRecord] has 2 parameters and overrides method [method:ListGrid.getCellRecord] with 1 parameters.
+16. Method [method:CubeGrid.getEditedCell] parameter 1 has type [number] and overrides method [method:ListGrid.getEditedCell] with parameter type [number | String].
+17. Method [method:CubeGrid.getEditedRecord] has 2 parameters and overrides method [method:ListGrid.getEditedRecord] with 1 parameters.
+18. Method [method:CubeGrid.getEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.getEditValue] with parameter type [number | String].
+19. Method [method:CubeGrid.getEditValues] has 2 parameters and overrides method [method:ListGrid.getEditValues] with 1 parameters.
+20. Method [method:CubeGrid.saveAllEdits] parameter 0 has type [Array of Array of int] and overrides method [method:ListGrid.saveAllEdits] with parameter type [Array of Number].
+21. Method [method:CubeGrid.saveEdits] has 4 parameters and overrides method [method:ListGrid.saveEdits] with 3 parameters.
+22. Method [method:CubeGrid.setEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.setEditValue] with parameter type [number | String].
+23. Method [method:CubeGrid.setEditValues] parameter 0 has type [Array of number] and overrides method [method:ListGrid.setEditValues] with parameter type [number].
+24. Method [method:DateRangeItem.getValue] has return type [DateRange] which overrides method [method:FormItem.getValue] with return type [Any]
+25. Method [method:DateRangeItem.setValue] parameter 0 has type [DateRange] and overrides method [method:FormItem.setValue] with parameter type [Any].
+26. Method [method:DynamicForm.setValuesManager] parameter 0 has type [ValuesManager | GlobalId] and overrides method [method:Canvas.setValuesManager] with parameter type [ValuesManager].
+27. Method [method:IconButton.iconClick] has return type [Boolean] which overrides method [method:Button.iconClick] with return type [boolean]
+28. Method [method:IconButton.setIcon] has 0 parameters and overrides method [method:Button.setIcon] with 1 parameters.
+29. Method [method:Img.getHoverHTML] has return type [String] which overrides method [method:Canvas.getHoverHTML] with return type [HTMLString]
+30. Method [method:ImgButton.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
+31. Method [method:ImgSectionHeader.setAlign] parameter 0 has type [String] and overrides method [method:Layout.setAlign] with parameter type [Alignment | VerticalAlignment].
+32. Method [method:Menu.setData] parameter 0 has type [Array of MenuItem | Array of Record[] | Tree | RecordList] and overrides method [method:ListGrid.setData] with parameter type [List of ListGridRecord].
+33. Method [method:Menu.showContextMenu] has return type [Boolean] which overrides method [method:Canvas.showContextMenu] with return type [boolean]
+34. Method [method:MiniDateRangeItem.getCriterion] has 0 parameters and overrides method [method:FormItem.getCriterion] with 1 parameters.
+35. Method [method:MiniDateRangeItem.getValue] has return type [DateRange] which overrides method [method:FormItem.getValue] with return type [Any]
+36. Method [method:MiniDateRangeItem.setValue] parameter 0 has type [DateRange] and overrides method [method:FormItem.setValue] with parameter type [Any].
+37. Method [method:Portlet.closeClick] has return type [] which overrides method [method:Window.closeClick] with return type [Boolean]
+38. Method [method:PresetCriteriaItem.getCriterion] has return type [Criterion | AdvancedCriteria] which overrides method [method:FormItem.getCriterion] with return type [Criterion]
+39. Method [method:RadioGroupItem.valueHoverHTML] has 3 parameters and overrides method [method:FormItem.valueHoverHTML] with 2 parameters.
+40. Method [method:RestDataSource.transformRequest] has return type [] which overrides method [method:DataSource.transformRequest] with return type [Any]
+41. Method [method:ResultTree.setChildren] has 3 parameters and overrides method [method:Tree.setChildren] with 2 parameters.
+42. Method [method:SelectItem.defaultDynamicValue] has 0 parameters and overrides method [method:FormItem.defaultDynamicValue] with 3 parameters.
+43. Method [method:StretchImgButton.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
+44. Method [method:TileGrid.addTile] has 0 parameters and overrides method [method:TileLayout.addTile] with 2 parameters.
+45. Method [method:TileGrid.getTile] parameter 0 has type [TileRecord | int] and overrides method [method:TileLayout.getTile] with parameter type [int].
+46. Method [method:TileGrid.removeTile] has return type [] which overrides method [method:TileLayout.removeTile] with return type [boolean]
+47. Method [method:TreeGrid.canEditCell] has return type [Boolean] which overrides method [method:ListGrid.canEditCell] with return type [boolean]
+48. Method [method:TreeGrid.dataArrived] has 1 parameters and overrides method [method:ListGrid.dataArrived] with 2 parameters.
+49. Method [method:TreeGrid.getViewState] has return type [TreeGridViewState] which overrides method [method:ListGrid.getViewState] with return type [ListGridViewState]
+50. Method [method:TreeGrid.recordDoubleClick] has return type [] which overrides method [method:ListGrid.recordDoubleClick] with return type [boolean]
+51. Method [method:TreeGrid.recordDrop] has 0 parameters and overrides method [method:ListGrid.recordDrop] with 4 parameters.
+52. Method [method:TreeGrid.rowClick] has return type [] which overrides method [method:ListGrid.rowClick] with return type [Boolean]
+53. Method [method:TreeGrid.setData] parameter 0 has type [Tree] and overrides method [method:ListGrid.setData] with parameter type [List of ListGridRecord].
+54. Method [method:TreeGrid.setViewState] parameter 0 has type [TreeGridViewState] and overrides method [method:ListGrid.setViewState] with parameter type [ListGridViewState].
+55. Method [method:TreeGrid.startEditingNew] parameter 0 has type [Object] and overrides method [method:ListGrid.startEditingNew] with parameter type [Map | Record].
+56. Method [method:TreeGrid.startEditingNew] parameter 1 has type [boolean] and overrides method [method:ListGrid.startEditingNew] with parameter type [Boolean].
+57. Method [method:TreeGrid.transferSelectedData] has 4 parameters and overrides method [method:ListGrid.transferSelectedData] with 3 parameters.
+58. Method [method:UploadItem.setSelectionRange] has 0 parameters and overrides method [method:TextItem.setSelectionRange] with 2 parameters.
+59. Method [method:UploadItem.setValue] has 0 parameters and overrides method [method:FormItem.setValue] with 1 parameters.
+
+
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-09-05	240	5	298	78	3563	6	0	53	216	663	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	276	0	131	385	0	0	0	240	5	77	292	3264	1	1	0.9871795	0.9798658	0.916082	
+2017-09-20	249	5	297	82	3559	5	0	1	216	665	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	288	0	131	384	0	0	0	247	5	81	292	3286	1.108434	1	0.9878049	0.983165	0.9232931	
 
 ======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-09-05
+Metrics for build SNAPSHOT_v12.0d_2017-09-20
 ===== Information =====
 (Informational only, not a problem)
-Types: 240
+Types: 249
 Interfaces: 5
-Classes: 298
-Objects: 78
-Methods: 3,563
-Excluded Classes: 6
+Classes: 297
+Objects: 82
+Methods: 3,559
+Excluded Classes: 5
 string values with quotes: 216
-string values without quotes: 663
+string values without quotes: 665
 string values with period: 131
 Arrays defined as 'Array of': 239
 String values where reference is found: 131
-OR specified as ' \| ': 385
-Types Generated: 240
+OR specified as ' \| ': 384
+Types Generated: 247
 Interfaces Generated: 5
-Objects Generated: 77
+Objects Generated: 81
 Classes Generated: 292
-Methods Generated: 3,264
-Percentage of Types generated: 100 %
+Methods Generated: 3,286
+Percentage of Types generated: 111 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
 Percentage of Classes generated: 98 %
@@ -745,14 +765,14 @@ Percentage of Methods generated: 92 %
 Methods with bad flags: 0
 Suspected optional parameters that are marked with optional='false': 18
 Attributes missing R flag: 46
-Object attributes marked with W flag: 276
+Object attributes marked with W flag: 288
 OR specified as ' or ': 0
 OR specified as ' \|\| ': 0
 OR specified as ', ': 0
 
 ===== Errors =====
 (May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented)
-Classes without inheritsFrom attribute: 53
+Classes without inheritsFrom attribute: 1
 Arrays defined as 'array of': 0
 Arrays defined as 'Array[] of': 0
 Arrays defined as 'array[] of': 0

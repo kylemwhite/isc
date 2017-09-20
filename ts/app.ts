@@ -85,19 +85,22 @@ window.onload = () => {
     });
 
     let viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'pop' }] })";
+
+    // Using (isc.DataSource as any) because the operationBindings are declared as Array<OperationBinding> and OperationBinding has a bunch of required fields.
+    // Need to generate it as Array<OperationBindingProps> or make everything optional in OperationBinding.
     let countryDS = (isc.DataSource as any).create({
-        ID: "countryDS",
-        dataFormat: "xml",
-        recordXPath: "//country",
-        viewState: viewState,
-        fields: [
-            { name: "countryCode", title: "Code", primaryKey: true, canEdit: "false" },
-            { name: "countryName", title: "Country" },
-            { name: "capital", title: "Capital" },
-            { name: "population" }, 
-            { name: "independence" }
+        ID: "countryDS"
+        , dataFormat: "xml"
+        , recordXPath: "//country"
+        , viewState: viewState
+        , fields: [
+             { name: "countryCode", title: "Code", primaryKey: true, canEdit: "false" },
+           , { name: "countryName", title: "Country" },
+           , { name: "capital", title: "Capital" },
+           , { name: "population" }
+           , { name: "independence" }
         ]
-        ,operationBindings: [
+        , operationBindings: [
             {
                 operationType: "fetch",
                 dataURL: "[ISOMORPHIC]/system/reference/inlineExamples/dataIntegration/xml/responses/country_fetch.xml"
@@ -113,13 +116,13 @@ window.onload = () => {
             {
                 operationType: "remove",
                 dataURL: "[ISOMORPHIC]/system/reference/inlineExamples/dataIntegration/xml/responses/country_remove.xml"
-            }
+            } 
         ]
     });
 
     //let countryDS: any;
 
-    let grid = (isc.ListGrid as any).create({
+    let grid = isc.ListGrid.create({
         ID: "countryList"
         , autoDraw: false
         , width: "100%"

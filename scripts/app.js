@@ -66,6 +66,8 @@ window.onload = function () {
         width: 600
     });
     var viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'pop' }] })";
+    // Using (isc.DataSource as any) because the operationBindings are declared as Array<OperationBinding> and OperationBinding has a bunch of required fields.
+    // Need to generate it as Array<OperationBindingProps> or make everything optional in OperationBinding.
     var countryDS = isc.DataSource.create({
         ID: "countryDS",
         dataFormat: "xml",
@@ -73,8 +75,11 @@ window.onload = function () {
         viewState: viewState,
         fields: [
             { name: "countryCode", title: "Code", primaryKey: true, canEdit: "false" },
+            ,
             { name: "countryName", title: "Country" },
+            ,
             { name: "capital", title: "Capital" },
+            ,
             { name: "population" },
             { name: "independence" }
         ],

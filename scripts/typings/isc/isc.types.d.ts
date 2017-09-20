@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/7/2017 7:00:14 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-05
+// Generated: 9/20/2017 7:00:15 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 declare namespace Isc {
 
@@ -37,7 +37,7 @@ declare namespace Isc {
 	 * 
 	 * function can be used to test whether a name is a valid JavaScript identifier.
 	 */
-	export type Identifier = string; // baseType='String'
+	export type Identifier = String; // baseType='String'
 
 
 	/**
@@ -114,7 +114,7 @@ declare namespace Isc {
 	 * CSS borders, margins and padding to be treated as purely visual properties with no
 	 * effect on sizing or layout.
 	 */
-	export type CSSStyleName = string; // baseType='string'
+	export type CSSStyleName = String; // baseType='String'
 
 
 	/**
@@ -122,7 +122,7 @@ declare namespace Isc {
 	 * Note that this object is not intended to be interrogated directly, but may be stored
 	 * (for example) as a blob on the server for state persistence across sessions.
 	 */
-	export type ListGridGroupState = string; // baseType='string'
+	export type ListGridGroupState = String; // baseType='String'
 
 
 	/**
@@ -138,7 +138,7 @@ declare namespace Isc {
 	 * DateUtil.parseInput as the inputFormat parameter.
 	 * 
 	 */
-	export type DateInputFormat = string; // baseType='string'
+	export type DateInputFormat = String; // baseType='String'
 
 	export type PreserveOpenState = 
 		/** Never try to automatically preserve the openState. Nodes will be initially open 
@@ -353,7 +353,7 @@ declare namespace Isc {
 	 * DataSource.operationBindings','operation to use for the uniqueness check with the 
 	 * Validator.operationId','operationId attribute.
 	 * 
-	 * Validators of this type have validatorDefinition.requiresServer','requiresServer 
+	 * Validators of this type have ValidatorDefinition.requiresServer','requiresServer 
 	 * set to true and do not run on the client.
 	 * 
 	 * Note when isUnique validator is executed as part of validation process during update 
@@ -372,7 +372,7 @@ declare namespace Isc {
 	 * applied to all fields that specify a DataSourceField.foreignKey','foreignKey -
 	 * see DataSource.validateRelatedRecords.
 	 * 
-	 * Validators of this type have validatorDefinition.requiresServer','requiresServer 
+	 * Validators of this type have ValidatorDefinition.requiresServer','requiresServer 
 	 * set to true and do not run on the client.
 	 * 
 	 * Note that this validation is generally unnecessary for data coming from a UI. The 
@@ -407,7 +407,7 @@ declare namespace Isc {
 	 * or makes DMI call to Validator.serverObject','serverObject to evaluate condition
 	 * (see dmiValidation).
 	 * 
-	 * Validators of this type have validatorDefinition.requiresServer','requiresServer 
+	 * Validators of this type have ValidatorDefinition.requiresServer','requiresServer 
 	 * set to true and do not run on the client. */
 		| "serverCustom"  // How found:  Original value
 		;
@@ -486,6 +486,19 @@ declare namespace Isc {
 
 
 	/**
+	 * A decimal (or "floating point") number, for example, 5.5. Null is allowed.
+	 */
+	export type Float = Number; // baseType='Number'
+
+
+	/**
+	 * A positive whole number or 0, for example, 5. Negative values are not allowed. Null is
+	 * allowed.
+	 */
+	export type PositiveInteger = Integer; // baseType='Integer'
+
+
+	/**
 	 * Selection model for CubeGrid indicating which cells in the body should
 	 * be selected when row or column headers are selected.
 	 */
@@ -502,10 +515,16 @@ declare namespace Isc {
 
 
 	/**
+	 * A decimal (or "floating point") number, for example, 5.5. May not be null.
+	 */
+	export type double = Double; // baseType='Double'
+
+
+	/**
 	 * An Identifier that's unique in the global scope. For example, the 
 	 * Canvas.ID','ID of a Canvas is a GlobalId.
 	 */
-	export type GlobalId = any; // baseType='Identifier'
+	export type GlobalId = Identifier; // baseType='Identifier'
 
 
 	/**
@@ -574,6 +593,12 @@ declare namespace Isc {
 	 * See also DrawItem.rotateKnob. */
 		| "rotate"
 		;
+
+
+	/**
+	 * A decimal (or "floating point") number, for example, 5.5. Null is allowed.
+	 */
+	export type Double = Number; // baseType='Number'
 
 
 	/**
@@ -665,7 +690,7 @@ declare namespace Isc {
 	 * 
 	 * function can be used to test whether a name is a valid JavaScript identifier.
 	 */
-	export type FieldName = string; // baseType='string'
+	export type FieldName = String; // baseType='String'
 
 
 	/**
@@ -862,7 +887,7 @@ declare namespace Isc {
 	 * Note that this object is not intended to be interrogated directly, but may be stored 
 	 * (for example) as a blob on the server for state persistence across sessions.
 	 */
-	export type DetailViewerViewState = string; // baseType='string'
+	export type DetailViewerViewState = String; // baseType='String'
 
 
 	/**
@@ -877,7 +902,7 @@ declare namespace Isc {
 	 * Layout','layout and Canvas.styleName','styling features wherever possible to
 	 * avoid this. See also CSSStyleName.
 	 */
-	export type HTMLString = string; // baseType='string'
+	export type HTMLString = String; // baseType='String'
 
 
 	/**
@@ -897,7 +922,7 @@ declare namespace Isc {
 	 * Name of a SmartClient Class, that is, a Class that has been created via
 	 * isc.defineClass, including Classes built into SmartClient, such as "ListGrid".
 	 */
-	export type SCClassName = string; // baseType='string'
+	export type SCClassName = String; // baseType='String'
 
 
 	/**
@@ -1131,7 +1156,7 @@ declare namespace Isc {
 	 * be gathered in groups of three
 	 * 
 	 */
-	export type FormatString = string; // baseType='string'
+	export type FormatString = String; // baseType='String'
 
 	export type Overflow = 
 		/** Content that extends beyond the widget's width or height is displayed.
@@ -1238,6 +1263,15 @@ declare namespace Isc {
 		/** The column names to sort by, for a fetch operation only */
 		| "$defaultOrderClause"
 		;
+
+
+	/**
+	 * A String containing a valid JavaScript expression that's automatically converted to a
+	 * function with a return value matching the value of the last statement.
+	 * 
+	 * See stringMethods for an example.
+	 */
+	export type StringMethod = String; // baseType='String'
 
 
 	/**
@@ -1357,7 +1391,7 @@ declare namespace Isc {
 	 * 
 	 * [Note: Some keys may not be available for capture on every platform]
 	 */
-	export type KeyName = string; // baseType='String'
+	export type KeyName = String; // baseType='String'
 
 
 	/**
@@ -1636,7 +1670,14 @@ declare namespace Isc {
 	 * 
 	 * 
 	 */
-	export type RelativeDateShortcut = string; // baseType='String'
+	export type RelativeDateShortcut = String; // baseType='String'
+
+
+	/**
+	 * A whole number, for example, 5. Decimal numbers, for example 5.5, are not allowed. May not
+	 * be null.
+	 */
+	export type int = Integer; // baseType='Integer'
 
 
 	/**
@@ -1693,7 +1734,7 @@ declare namespace Isc {
 	 * Note that this object is not intended to be interrogated directly, but may be stored
 	 * (for example) as a blob on the server for state persistence across sessions.
 	 */
-	export type ListGridSelectedState = string; // baseType='string'
+	export type ListGridSelectedState = String; // baseType='String'
 
 
 	/**
@@ -1793,7 +1834,7 @@ declare namespace Isc {
 	 * is true, when the form item receives focus, the form item's cell will have the "formCellFocused"
 	 * style applied to it.
 	 */
-	export type FormItemBaseStyle = string; // baseType='string'
+	export type FormItemBaseStyle = String; // baseType='String'
 
 
 	/**
@@ -1889,7 +1930,7 @@ declare namespace Isc {
 	 * A Uniform Resource Identifier string, as defined by 
 	 * <a href='https://tools.ietf.org/html/rfc3986' target='_blank'>https://tools.ietf.org/html/rfc3986</a>.
 	 */
-	export type URI = string; // baseType='String'
+	export type URI = String; // baseType='String'
 
 
 	/**
@@ -2482,7 +2523,7 @@ declare namespace Isc {
 	 * Nested canvases can also have dataPaths specified, which will similarly be combined. See
 	 * the Canvas.dataPath attribute for more information and examples of this.
 	 */
-	export type DataPath = string; // baseType='string'
+	export type DataPath = String; // baseType='String'
 
 
 	/**
@@ -2646,7 +2687,7 @@ declare namespace Isc {
 	/**
 	 * A synonym for HTMLString.
 	 */
-	export type HTML = string; // baseType='string'
+	export type HTML = String; // baseType='String'
 
 
 	/**
@@ -2686,11 +2727,16 @@ declare namespace Isc {
 		| "showContextMenu"
 		/** Fires when a user presses a key on the keyboard. */
 		| "keyPress"
-		/** Fires when the Page.getOrientation changes due to browser-window resize or rotation of a mobile device.
+		/** Fires when the Page.getOrientation changes due to browser-window resize or rotation of a mobile device. */
+		| "orientationChange"
+		/** Fires when the FontLoader completes loading custom fonts. */
+		| "fontsLoaded"
+		/** Fires after a timeout if the FontLoader fails to load all custom
+	 * fonts.
 	 * 
 	 * see classMethod:Page.setEvent()
 	 * see classMethod:Page.clearEvent() */
-		| "orientationChange"
+		| "fontLoadingFailed"
 		;
 
 
@@ -2934,7 +2980,7 @@ declare namespace Isc {
 	/**
 	 * An Identifier that must be locally unique within the containing TabSet.
 	 */
-	export type TabName = any; // baseType='Identifier'
+	export type TabName = Identifier; // baseType='Identifier'
 
 
 	/**
@@ -3044,7 +3090,7 @@ declare namespace Isc {
 	 * StatefulCanvas.baseStyle stateful suffixes
 	 * 
 	 */
-	export type SCSpriteConfig = any; // baseType='SCImgURL'
+	export type SCSpriteConfig = SCImgURL; // baseType='SCImgURL'
 
 
 	/**
@@ -3234,7 +3280,7 @@ declare namespace Isc {
 	 * CanvasItem','"CanvasItem"
 	 * 
 	 */
-	export type FormItemClassName = string; // baseType='string'
+	export type FormItemClassName = String; // baseType='String'
 
 
 	/**
@@ -3257,7 +3303,7 @@ declare namespace Isc {
 	 * Note that this object is not intended to be interrogated directly, but may be stored 
 	 * (for example) as a blob on the server for state persistence across sessions.
 	 */
-	export type TreeGridOpenState = string; // baseType='string'
+	export type TreeGridOpenState = String; // baseType='String'
 
 
 	/**
@@ -3324,7 +3370,7 @@ declare namespace Isc {
 	 * Note that this object is a JavaScript string, and may be stored (for example) as a blob
 	 * on the server for state persistence across sessions.
 	 */
-	export type ListGridFieldState = string; // baseType='string'
+	export type ListGridFieldState = String; // baseType='String'
 
 
 	/**
@@ -3536,7 +3582,7 @@ declare namespace Isc {
 	 * <a href='https://www.w3.org/Addressing/URL/url-spec.html' target='_blank'>https://www.w3.org/Addressing/URL/url-spec.html</a>. For example,
 	 * "https://www.smartclient.com/product/" is a valid URL.
 	 */
-	export type URL = string; // baseType='URI'
+	export type URL = URI; // baseType='URI'
 
 
 	/**
@@ -3550,6 +3596,12 @@ declare namespace Isc {
 		/** start with all groups closed */
 		| "none"
 		;
+
+
+	/**
+	 * A decimal (or "floating point") number, for example, 5.5. May not be null.
+	 */
+	export type float = Float; // baseType='Float'
 
 
 	/**
@@ -3583,7 +3635,7 @@ declare namespace Isc {
 	 * <a href="http://www.google.com/search?q=xpath+tutorial" target="_blank"
 	 * >http://www.google.com/search?q=xpath+tutorial</a>
 	 */
-	export type XPathExpression = string; // baseType='string'
+	export type XPathExpression = String; // baseType='String'
 
 
 	/**
@@ -4031,7 +4083,7 @@ declare namespace Isc {
 	 * Note that this object is a JavaScript string, and may be stored (for example) as a blob
 	 * on the server for state persistence across sessions.
 	 */
-	export type ListGridViewState = string; // baseType='string'
+	export type ListGridViewState = String; // baseType='String'
 
 
 	/**
@@ -4042,7 +4094,7 @@ declare namespace Isc {
 	 * call to AutoTest.getLocator. Note also that the debugging','Developer Console
 	 * has built-in functionality to create and display autoTestLocators for a live app.
 	 */
-	export type AutoTestLocator = string; // baseType='String'
+	export type AutoTestLocator = String; // baseType='String'
 
 	export type PromptStyle = 
 		/** Displays a centered modal prompt with text specified by RPCRequest.prompt */
@@ -4068,41 +4120,7 @@ declare namespace Isc {
 	/**
 	 * A String of CSS that can be added directly to a style attribute.
 	 */
-	export type CSSText = string; // baseType='string'
-
-
-	/**
-	 * A Callback to evaluate when a DataSource request completes.
-	 * 
-	 * The parameters available in the DSCallback expression are:
-	 * 
-	 * dsResponse: a DSResponse instance with metadata about the returned data
-	 * data: data returned to satisfy the DataSource request. See the
-	 * dataSourceOperations','DataSource operations topic for expected results
-	 * for each type of DataSource operation
-	 * dsRequest: the DSRequest that was sent. You can use
-	 * DSRequest.clientContext to track state during the server turnaround.
-	 * 
-	 * For example, if you had a DynamicForm with ID "myForm" and you wanted to retrieve a 
-	 * record from a DataSource "myUsers", where each record has a "userId" field:
-	 * 
-	 * myUsers.fetchData({ userId : "fred" }, "myForm.setValues(data)");
-	 * 
-	 * or
-	 * 
-	 * myUsers.fetchData({ userId : "fred" }, function (dsResponse, data, dsRequest) {
-	 * myForm.setValues(data);
-	 * });
-	 * 
-	 * 
-	 * Note that if the request encounters a low-level error (such as 500 server error), by
-	 * default the callback will not be fired, instead, DataSource.handleError
-	 * is called to invoke the default system-wide error handling. Set
-	 * RPCRequest.willHandleError','willHandleError:true to have your callback invoked
-	 * regardless of whether there are errors, however, make sure your callback properly
-	 * handles malformed responses when DSResponse.status is non-zero.
-	 */
-	export type DSCallback = any; // baseType='<none>'
+	export type CSSText = String; // baseType='String'
 
 	export type VerticalAlignment = 
 		/** At the top of the container */
@@ -4139,15 +4157,15 @@ declare namespace Isc {
 	 */
 	export type LogPriority = 
 		/** unrecoverable error */
-		1  // Original Value: Log.FATAL, How found: Looked up constant number
+		1  // Original Value: Log.FATAL, How found: Looked up constant string
 		/** error, may be recoverable */
-		| 2  // Original Value: Log.ERROR, How found: Looked up constant number
+		| 2  // Original Value: Log.ERROR, How found: Looked up constant string
 		/** apparent problem, misused API, partial result */
-		| 3  // Original Value: Log.WARN, How found: Looked up constant number
+		| 3  // Original Value: Log.WARN, How found: Looked up constant string
 		/** significant events in normal operation */
-		| 4  // Original Value: Log.INFO, How found: Looked up constant number
+		| 4  // Original Value: Log.INFO, How found: Looked up constant string
 		/** diagnostics for developers */
-		| 5  // Original Value: Log.DEBUG, How found: Looked up constant number
+		| 5  // Original Value: Log.DEBUG, How found: Looked up constant string
 		;
 
 
@@ -4167,7 +4185,7 @@ declare namespace Isc {
 	 * Note that this object is not intended to be interrogated directly, but may be stored
 	 * (for example) as a blob on the server for state persistence across sessions.
 	 */
-	export type ListGridSortState = string; // baseType='string'
+	export type ListGridSortState = String; // baseType='String'
 
 
 	/**
@@ -4622,7 +4640,7 @@ declare namespace Isc {
 	 * Canvas.HIDDEN, which is itself a class attribute with type Constant and
 	 * the value "hidden".
 	 */
-	export type Constant = string; // baseType='string'
+	export type Constant = String; // baseType='String'
 
 
 	/**
@@ -4651,7 +4669,7 @@ declare namespace Isc {
 	 * evaluate to a Java Map object, or a Java List containing only 
 	 * Maps.
 	 */
-	export type VelocityExpression = string; // baseType='string'
+	export type VelocityExpression = String; // baseType='String'
 
 
 	/**
@@ -4899,6 +4917,13 @@ declare namespace Isc {
 
 
 	/**
+	 * A whole number, for example, 5. Decimal numbers, for example 5.5, are not allowed. Null is
+	 * allowed.
+	 */
+	export type Integer = Number; // baseType='Number'
+
+
+	/**
 	 * Strategies for calculating the FiscalYear within a FiscalCalendar from the
 	 * specified FiscalCalendar.defaultDate and FiscalCalendar.defaultMonth
 	 * If the specified fiscal year date starts in one calendar year and ends in the next.
@@ -4979,7 +5004,7 @@ declare namespace Isc {
 	 * information on statefulness and the Img.src documentation for information on how
 	 * stateful image URLs are formed.
 	 */
-	export type SCImgURL = string; // baseType='URL'
+	export type SCImgURL = URL; // baseType='URL'
 
 
 	/**
@@ -5029,7 +5054,7 @@ declare namespace Isc {
 	 * overrides of FacetChart.getDataColor and FacetChart.getDataLineColor.
 	 * 
 	 */
-	export type CSSColor = string; // baseType='string'
+	export type CSSColor = String; // baseType='String'
 
 	export type ZoomStartPosition = 
 		/** start at the beginning of the range */
@@ -5083,7 +5108,7 @@ declare namespace Isc {
 	 * +1w[-0W]: Beginning of next week.
 	 * +1w[-0D]: Beginning of the current day of next week.
 	 */
-	export type RelativeDateString = string; // baseType='string'
+	export type RelativeDateString = String; // baseType='String'
 
 
 	/**
@@ -5400,7 +5425,7 @@ declare namespace Isc {
 	 * Note that this object is not intended to be interrogated directly, but may be stored 
 	 * (for example) as a blob on the server for view state persistence across sessions.
 	 */
-	export type TreeGridViewState = string; // baseType='string'
+	export type TreeGridViewState = String; // baseType='String'
 
 
 	/**
@@ -5417,6 +5442,302 @@ declare namespace Isc {
 	 * DataSource class */
 		| "none"
 		;
+
+	/*
+	 * These come from the Callbacks class methods but are really used as types.
+	/*
+	/**  
+	 *  A Callback fired when DataSource.hasFileVersion completes.
+	 * 
+	 * 
+	 * @param {DSResponse} dsResponse - A DSResponse instance with metadata about the returned data.
+	 * @param {boolean} data - Whether the file version exists.
+	 * @param {DSRequest} dsRequest - The DSRequest that was sent.
+	 */
+	export type HasFileVersionCallback = (dsResponse:DSResponse, data:boolean, dsRequest:DSRequest) => void; 
+
+	/**  
+	 *  A Callback to evaluate when a screen is loaded via RPCManager.loadScreen.
+	 * 
+	 * 
+	 * @param {Canvas} screen - The last top-level component loaded
+	 * @param {RPCResponse} rpcResponse - 
+	 * @param {any} suppressedGlobals - A collection of suppressed globals.
+	 */
+	export type LoadScreenCallback = (screen?:Canvas, rpcResponse?:RPCResponse, suppressedGlobals?:any /* Map */) => void; 
+
+	/**  
+	 *  Callback fired with the PaletteNode','PaletteNodes obtained asynchronously.
+	 * 
+	 * @param {Array<PaletteNode>} paletteNodes - an array of PaletteNodes
+	 */
+	export type PaletteNodeCallback = (paletteNodes:Array<PaletteNode> /* Array of PaletteNode */) => void; 
+
+	/**  
+	 *  A Callback fired when DataSource.hasFile completes.
+	 * 
+	 * 
+	 * @param {DSResponse} dsResponse - A DSResponse instance with metadata about the returned data.
+	 * @param {boolean} data - Whether the file exists.
+	 * @param {DSRequest} dsRequest - The DSRequest that was sent.
+	 */
+	export type HasFileCallback = (dsResponse:DSResponse, data:boolean, dsRequest:DSRequest) => void; 
+
+	/**  
+	 *  A Callback fired when Sound.load completes.
+	 * 
+	 * 
+	 */
+	export type CanPlayCallback = () => void; 
+
+	/**  
+	 *  Callback fired when DataSource.getFileVersion completes.
+	 * 
+	 * 
+	 * @param {DSResponse} dsResponse - A DSResponse instance with metadata about the returned data.
+	 * @param {String} data - The file contents, or null if there was an error (such as file not found).
+	 * @param {DSRequest} dsRequest - The DSRequest that was sent.
+	 */
+	export type GetFileVersionCallback = (dsResponse:DSResponse, data:String, dsRequest:DSRequest) => void; 
+
+	/**  
+	 *  A Callback to evaluate when an RPCRequest completes.
+	 * 
+	 * Parameters passed to this callback are:
+	 * 
+	 * rpcResponse: an RPCResponse encapsulating the server response to your
+	 * request
+	 * data: just the "data" property from the RPCResponse, for convenience
+	 * rpcRequest: the RPCRequest that was sent. You can use
+	 * RPCRequest.clientContext to track state during the server turnaround.
+	 * 
+	 * For example, to take the data returned by the server and display it in a previously created
+	 * ListGrid with the ID "myGrid":
+	 * 
+	 * isc.RPCManager.send("getData", "myGrid.setData(data)");
+	 * 
+	 * Or
+	 * 
+	 * isc.RPCManager.send("getData", function (rpcResponse, data, rpcRequest) { 
+	 * myGrid.setData(data)
+	 * });
+	 * 
+	 * 
+	 * 
+	 * @param {RPCResponse} response - response a RPCResponse encapsulating the server response to your request
+	 * @param {any} rawData - rawData The "data" property from the RPCResponse, for convenience. The data can also be obtained via {@link RPCResponse#getDataAsMap()}, {@link RPCResponse#getDataAsString()},
+	 * or {@link RPCResponse#getDataAsObject()}, depending on the type of data that is expected to be
+	 * returned from the server.
+	 * @param {RPCRequest} request - the RPCRequest that was sent.
+	 */
+	export type RPCCallback = (response:RPCResponse, rawData:any /* Any */, request:RPCRequest) => void; 
+
+	/**  
+	 *  Callback to execute after the section has been collapsed.
+	 * 
+	 */
+	export type CollapseSectionCallback = () => void; 
+
+	/**  
+	 *  A Callback fired when Sound.play completes.
+	 * 
+	 * 
+	 */
+	export type PlaybackCompleteCallback = () => void; 
+
+	/**  
+	 *  Callback to execute after the section has been expanded.
+	 * 
+	 */
+	export type ExpandSectionCallback = () => void; 
+
+	/**  
+	 *  A notification Callback fired by the TabIndexManager to allow 
+	 * application code to react to the numeric tab-index of some registered target being
+	 * modified.
+	 * 
+	 * @param {String} ID - the ID String passed to TabIndexManager.addTarget when the callback was registered.
+	 */
+	export type TabIndexUpdatedCallback = (ID:String) => void; 
+
+	/**  
+	 *  Callback for DrawPane.getDataURL.
+	 * 
+	 * @param {String} dataURL - the data URL
+	 */
+	export type DataURLCallback = (dataURL:String) => void; 
+
+	/**  
+	 *  Callback required for the property Validator.condition and
+	 * ValidatorDefinition.condition.
+	 * 
+	 * @param {DataSourceField | FormItem} item - FormItem or DataSourceField on which this validator was declared. NOTE: FormItem will not
+	 * be available during a save performed without a
+	 * form (eg programmatic save) or if the field 
+	 * is not available in the form.
+	 * @param {Validator} validator - Validator declaration from eg DataSourceField.validators.
+	 * @param {any} value - value to validate
+	 * @param {any} record - Field values for record being validated.
+	 * @return {boolean} whether the value passed validation.  True for passed, false for fail.
+	 */
+	export type ValidatorConditionCallback = (item:DataSourceField | FormItem, validator:Validator, value:any /* Any */, record:any /* Object */) => boolean; 
+
+	/**  
+	 *  Callback fired when DataSource.getFile completes.
+	 * 
+	 * 
+	 * @param {DSResponse} dsResponse - A DSResponse instance with metadata about the returned data.
+	 * @param {String} data - The file contents, or null if there was an error (such as file not found).
+	 * @param {DSRequest} dsRequest - The DSRequest that was sent.
+	 */
+	export type GetFileCallback = (dsResponse:DSResponse, data:String, dsRequest:DSRequest) => void; 
+
+	/**  
+	 *  A Callback to evaluate when form validation completes.
+	 * 
+	 * The available parameters are:
+	 * 
+	 * @param {any} errorMap - null if validation succeeded for all fields, or an object mapping field names to the associated
+	 * errors, for those fields that failed validation.
+	 */
+	export type ValidationStatusCallback = (errorMap:any /* Map */) => void; 
+
+	/**  
+	 *  A Callback fired by the TabIndexManager when application code or user
+	 * action attempts to synthetically shift focus to some registered target. 
+	 * See TabIndexManager.shiftFocus.
+	 * 
+	 * A typical implementation will shift focus to some native element associated
+	 * with the registered target, or if this is not currently possible, return false.
+	 * 
+	 * 
+	 * @param {String} ID - The ID String passed to TabIndexManager.addTarget when the callback was registered.
+	 * @return {boolean} Return true if focus could be successfully moved to the desired                  target. Returning false indicates the target could not accept focus and&#010                  will often cause the TabIndexManager to find the next registered target&#010                  and attempt to shift focus there.
+	 */
+	export type ShiftFocusCallback = (ID:String) => boolean; 
+
+	/**  
+	 *  Callback fired when DataSource methods that send DSRequests complete (such as DataSource.fetchData).
+	 * 
+	 * 
+	 * @param {DSResponse} dsResponse - a DSResponse instance with metadata about the returned data
+	 * @param {any} data - data returned to satisfy the DataSource request. See the dataSourceOperations','DataSource operations topic for expected results
+	 * for each type of DataSource operation
+	 * @param {DSRequest} dsRequest - the DSRequest that was sent. You can use DSRequest.clientContext to track state during the server turnaround.
+	 */
+	export type DSCallback = (dsResponse:DSResponse, data:any /* Any */, dsRequest:DSRequest) => void; 
+
+	/**  
+	 *  Callback for RPCManager.exportImage.
+	 * 
+	 * @param {String} imageData - image data from the server, in base64 format
+	 */
+	export type ExportImageCallback = (imageData:String) => void; 
+
+	/**  
+	 *  Callback required for the property ValidatorDefinition.action.
+	 * 
+	 * 
+	 * @param {boolean} result - The result of the validator. The value will be null if the validator was skipped because of conditional criteria.
+	 * @param {DataSourceField | FormItem} item - FormItem or DataSourceField on which this validator was declared. NOTE: FormItem will not
+	 * be available during a save performed without a
+	 * form (eg programmatic save) or if the field 
+	 * is not available in the form.
+	 * @param {Validator} validator - Validator declaration from eg DataSourceField.validators.
+	 * @param {Record} record - Record that was validated
+	 * @param {DataBoundComponent} component - The DataBoundComponent holding the item such DynamicForm or ListGrid.
+	 */
+	export type ValidatorActionCallback = (result:boolean, item:DataSourceField | FormItem, validator:Validator, record:Record, component:DataBoundComponent) => void; 
+
+	/**  
+	 *  Callback executed when a PrintCanvas.setHTML','supplied html is rendered into
+	 * a printCanvas.
+	 * 
+	 * 
+	 * @param {PrintCanvas} printPreview - The canvas being printed.
+	 */
+	export type PrintCanvasCallback = (printPreview:PrintCanvas) => void; 
+
+	/**  
+	 *  A Callback called when the move completes.
+	 * 
+	 * 
+	 * @param {boolean} earlyFinish - true if the animation was cut short. To quit an animation early, simply call the non-animated version of the same
+	 * API, so for example call Canvas.hide to cut short
+	 * an animation from Canvas.animateHide already in
+	 * progress.
+	 */
+	export type AnimationCallback = (earlyFinish:boolean) => void; 
+
+	/**  
+	 *  Callback required for the property DataSourceField.getFieldValue.
+	 * 
+	 * 
+	 * @param {any} record - record object selected from web service response data by OperationBinding.recordXPath','recordXPath
+	 * @param {any} value - default value derived by the method described in DataSourceField.valueXPath
+	 * @param {DataSourceField} field - DataSourceField definition
+	 * @param {string} fieldName - name of the DataSource field
+	 */
+	export type GetFieldValueCallback = (record:any | XMLElement /* Object | XMLElement */, value:any /* Any */, field:DataSourceField, fieldName:string /* FieldName */) => void; 
+
+	/**  
+	 *  Callback executed when a message is sent to a channel that you have
+	 * Messaging.subscribe','subscribed to.
+	 * 
+	 * @param {any} data - data contained in the message
+	 */
+	export type MessagingCallback = (data:any /* Any */) => void; 
+
+	/**  
+	 *  Callback to execute after the section has been hidden.
+	 * 
+	 */
+	export type HideSectionCallback = () => void; 
+
+	/**  
+	 *  Callback to fire when a queue of requests sent via 
+	 * {@link com.smartgwt.client.rpc.RPCManager#sendQueue(RPCQueueCallback)} returns.
+	 * Note that the Array of RPCResponses passed to this callback
+	 * will actually be DSResponse objects for any requests that were actually 
+	 * DSRequests. 
+	 * 
+	 * 
+	 * 
+	 * @param {Array<RPCResponse>} response - array of responses returned from the sent queue of requests
+	 */
+	export type RPCQueueCallback = (response:Array<RPCResponse> /* Array of RPCResponse */) => void; 
+
+	/**  
+	 *  Generic callback interface.
+	 * 
+	 * 
+	 */
+	export type Function = () => void; 
+
+	/**  
+	 *  Generic callback interface.
+	 * 
+	 * 
+	 * @param {DataSource} clientOnly - Client only Data Source.
+	 */
+	export type ClientOnlyDataSourceCallback = (clientOnly:DataSource) => void; 
+
+	/**  
+	 *  A Callback to evaluate when an {Process.loadProcess} method completes.
+	 * 
+	 * Loaded process passed as a parameter to this callback are:
+	 * 
+	 * 
+	 * @param {DSResponse} dsResponse - a DSResponse instance with metadata about the returned data
+	 * @param {Process} process - 
+	 */
+	export type ProcessCallback = (dsResponse:DSResponse, process:Process) => void; 
+
+	/**  
+	 *  Callback to execute after the section has been shown.
+	 * 
+	 */
+	export type ShowSectionCallback = () => void; 
 
 
 

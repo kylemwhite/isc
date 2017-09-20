@@ -1,7 +1,7 @@
 ## Isomorphic SmartClient TypeScript type definitions
-SmartClient Version: SNAPSHOT_v12.0d_2017-09-05
+SmartClient Version: SNAPSHOT_v12.0d_2017-09-20
 
-Generated: 9/7/2017 7:01:39 AM
+Generated: 9/20/2017 7:01:46 AM
 
 Work in progress. See [Progress.md](./Progress.md)
 

@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/7/2017 7:00:14 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-05
+// Generated: 9/20/2017 7:00:15 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 declare namespace Isc {
 
@@ -22,17 +22,17 @@ declare namespace Isc {
 		 * correspond to clockwise rotations of the default gradient.
 		 * Flags: IR
 		 */
-		readonly direction?: number /* float */;
+		readonly direction?: Float /* float */;
 		/** 
 		 * (Read only) The end color of the gradient.
 		 * Flags: IR
 		 */
-		readonly endColor?: string /* CSSColor */;
+		readonly endColor?: CSSColor;
 		/** 
 		 * (Read only) The start color of the gradient.
 		 * Flags: IR
 		 */
-		readonly startColor?: string /* CSSColor */;
+		readonly startColor?: CSSColor;
 	} // SimpleGradient
 
 	export interface SimpleGradientStatic extends GradientStatic {
@@ -49,13 +49,13 @@ declare namespace Isc {
 		 * NavPanel.headerStyle.
 		 * Flags: IR
 		 */
-		readonly customStyle?: string /* CSSStyleName */;
+		readonly customStyle?: CSSStyleName;
 		/** 
 		 * (Read only) Icon to show for this NavItem. If not specified, the
 		 * TreeGrid.folderIcon','navGrid\'s folderIcon is used.
 		 * Flags: IR
 		 */
-		readonly icon?: string /* SCImgURL */;
+		readonly icon?: SCImgURL;
 		/** 
 		 * (Read only) An optional ID for this NavItem. If specified, this must be unique within
 		 * the NavPanel.
@@ -66,12 +66,14 @@ declare namespace Isc {
 		 * (Read only) If set, this NavItem will be styled like a header. In this case NavItem.pane
 		 * is ignored and nothing happens when the header is clicked. However, NavItem.items can
 		 * still be configured to place items hierarchically under the header.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly isHeader?: boolean /* Boolean */;
 		/** 
 		 * (Read only) If set, this NavItem will be styled as a separator. A separator does not
 		 * have a NavItem.pane','pane and nothing happens when the separator is clicked.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly isSeparator?: boolean /* Boolean */;
@@ -92,7 +94,7 @@ declare namespace Isc {
 		 * (Read only) Title to show for this NavItem.
 		 * Flags: IR
 		 */
-		readonly title?: string /* HTMLString */;
+		readonly title?: HTMLString;
 	} // NavItem
 
 	export interface NavItemStatic extends TreeNodeStatic {
@@ -121,7 +123,7 @@ declare namespace Isc {
 		 * or RelativeDateShortcut.
 		 * Flags: IR
 		 */
-		readonly value?: string | RelativeDateShortcut /* RelativeDateString | RelativeDateShortcut */;
+		readonly value?: RelativeDateString | RelativeDateShortcut;
 	} // RelativeDate
 
 	export interface RelativeDateStatic {
@@ -145,7 +147,7 @@ declare namespace Isc {
 		 * canvas).
 		 * Flags: IR
 		 */
-		readonly endsAt?: string /* String */;
+		readonly endsAt?: String;
 		/** 
 		 * (Read only) For show animations of type "wipe" and
 		 * "slide" this attribute specifies where the wipe / slide should originate.
@@ -153,7 +155,7 @@ declare namespace Isc {
 		 * default behavior), and "L" (horizontal animation from the left side).
 		 * Flags: IR
 		 */
-		readonly startFrom?: string /* String */;
+		readonly startFrom?: String;
 	} // AnimateShowEffect
 
 	export interface AnimateShowEffectStatic {
@@ -226,7 +228,7 @@ declare namespace Isc {
 		 * click, or null if the Dialog is dismissed via the close button.
 		 * 
 		 * 
-		 * @param {string} message - message to display
+		 * @param {String} message - message to display
 		 * @param {Callback} callback - Callback to fire when the user clicks a button to dismiss the dialog.
 		 * This has the single parameter 'value', indicating the
 		 * value returned by the Warn dialog from 'okClick()' etc.
@@ -235,7 +237,7 @@ declare namespace Isc {
 		 * of buttons
 		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		ask(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+		ask(message:String, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/**  
 		 *  Show a modal dialog with a text entry box, asking the user to enter a value.
@@ -254,7 +256,7 @@ declare namespace Isc {
 		 * the equivalent of pressing OK.
 		 * 
 		 * 
-		 * @param {string} message - message to display
+		 * @param {String} message - message to display
 		 * @param {Callback} callback - Callback to fire when the user clicks a button to dismiss the dialog.
 		 * This has the single parameter 'value', indicating the
 		 * user entry, or null if cancel was pressed or the window
@@ -264,7 +266,7 @@ declare namespace Isc {
 		 * buttons
 		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		askForValue(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+		askForValue(message:String, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/**  
 		 * 
@@ -301,7 +303,7 @@ declare namespace Isc {
 		 * Note: this does not override the native window.confirm() method.
 		 * 
 		 * 
-		 * @param {string} message - message to display
+		 * @param {String} message - message to display
 		 * @param {Callback} callback - Callback to fire when the user clicks a button to dismiss the dialog.
 		 * This has the single parameter 'value', indicating the
 		 * value returned by the Warn dialog from 'okClick()' etc.
@@ -310,16 +312,16 @@ declare namespace Isc {
 		 * buttons
 		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		confirm(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+		confirm(message:String, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/**  
 		 *  Shortcut for isc.ClassFactory.defineClass().
 		 * 
-		 * @param {string} className - Name for the new class.
+		 * @param {String} className - Name for the new class.
 		 * @param {Class} superClass - Optional SuperClass Class object or name
 		 * @return {Class} Returns the new Class object.
 		 */
-		defineClass(className:string /* String */, superClass?:Class): Class; 
+		defineClass(className:String, superClass?:Class): Class; 
 
 		/**  
 		 *  If a dialog triggered via isc.say, isc.ask,
@@ -344,46 +346,46 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {any} value - object to echo
-		 * @return {string} a short string representation of the object
+		 * @return {String} a short string representation of the object
 		 */
-		echo(value:any /* Any */): string /* String */; 
+		echo(value:any /* Any */): String; 
 
 		/**  
 		 *  Same as Log.echoAll.
 		 * 
 		 * 
 		 * @param {any} value - object to echo
-		 * @return {string} a short string representation of the object
+		 * @return {String} a short string representation of the object
 		 */
-		echoAll(value:any /* Any */): string /* String */; 
+		echoAll(value:any /* Any */): String; 
 
 		/**  
 		 *  Same as Log.echoLeaf.
 		 * 
 		 * 
 		 * @param {any} value - object to echo
-		 * @return {string} a short string representation of the object
+		 * @return {String} a short string representation of the object
 		 */
-		echoLeaf(value:any /* Any */): string /* String */; 
+		echoLeaf(value:any /* Any */): String; 
 
 		/**  
 		 *  Evaluate a string of script and return the result. Falls through to
 		 * Class.evaluate','Class.evaluate()
 		 * 
 		 * 
-		 * @param {string} expression - Expression to evaluate
+		 * @param {String} expression - Expression to evaluate
 		 * @return {any} Result of evaluating the expression passed in
 		 */
-		eval(expression:string /* String */): any /* Any */; 
+		eval(expression:String): any /* Any */; 
 
 		/**  
 		 *  Return the first property name in a given Object, according to for..in iteration order.
 		 * 
 		 * 
 		 * @param {any} object - Object to get properties from
-		 * @return {string} first property name, or null if Object has no properties
+		 * @return {String} first property name, or null if Object has no properties
 		 */
-		firstKey(object:any /* Object */): string /* String */; 
+		firstKey(object:any /* Object */): String; 
 
 		/**  
 		 *  Given a value and an object of key:value pairs, return a key that corresponds
@@ -393,12 +395,12 @@ declare namespace Isc {
 		 * value will be returned.
 		 * 
 		 * 
-		 * @param {string} value - value to look for
+		 * @param {String | number} value - value to look for
 		 * @param {any} valueMap - object of key:value pairs
 		 * @param {any} defaultKey - default key to return if value not found
 		 * @return {any} returns first key in valueMap with value, or                                              defaultKey if value not found
 		 */
-		getKeyForValue(value:string | number /* String | number */, valueMap:any /* Object */, defaultKey?:any /* Any */): any /* Any */; 
+		getKeyForValue(value:String | number, valueMap:any /* Object */, defaultKey?:any /* Any */): any /* Any */; 
 
 		/**  
 		 * 
@@ -418,12 +420,12 @@ declare namespace Isc {
 		 * key will be returned.
 		 * 
 		 * 
-		 * @param {string} key - key to look for
+		 * @param {String | number} key - key to look for
 		 * @param {any} valueMap - object of key:value pairs
 		 * @param {any} defaultValue - default value to return if key not found
 		 * @return {any} returns value in valueMap under name key, or                                              defaultValue if key not found
 		 */
-		getValueForKey(key:string | number /* String | number */, valueMap:any /* Object */, defaultValue?:any /* Any */): any /* Any */; 
+		getValueForKey(key:String | number, valueMap:any /* Object */, defaultValue?:any /* Any */): any /* Any */; 
 
 		/**  
 		 * 
@@ -441,9 +443,9 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {any} value - object to echo
-		 * @param {string} message - message to log
+		 * @param {String} message - message to log
 		 */
-		logEcho(value:any /* Any */, message:string /* String */): void; 
+		logEcho(value:any /* Any */, message:String): void; 
 
 		/**  
 		 *  Logs the echoed object (using isc.echoAll) as a warning, prefixed with an
@@ -451,18 +453,18 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {any} value - object to echo
-		 * @param {string} message - message to log
+		 * @param {String} message - message to log
 		 */
-		logEchoAll(value:any /* Any */, message:string /* String */): void; 
+		logEchoAll(value:any /* Any */, message:String): void; 
 
 		/**  
 		 *  Same as Log.logWarn.
 		 * 
 		 * 
-		 * @param {string} message - message to log
-		 * @param {string} category - category to log in, defaults to "Log"
+		 * @param {String} message - message to log
+		 * @param {String} category - category to log in, defaults to "Log"
 		 */
-		logWarn(message:string /* String */, category?:string /* String */): void; 
+		logWarn(message:String, category?:String): void; 
 
 		/**  
 		 *  Given a key:value map, return a new map as value:key.
@@ -491,10 +493,10 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {any} object - Object to test
-		 * @param {string} propertyName - Which property is being tested for?
+		 * @param {String} propertyName - Which property is being tested for?
 		 * @return {boolean} true if property is defined
 		 */
-		propertyDefined(object:any /* Object */, propertyName:string /* String */): boolean; 
+		propertyDefined(object:any /* Object */, propertyName:String): boolean; 
 
 		/**  
 		 *  Show a modal dialog with a message, icon, and "OK" button. Intended for notifications which
@@ -504,7 +506,7 @@ declare namespace Isc {
 		 * dismissed via the close button.
 		 * 
 		 * 
-		 * @param {string} message - message to display
+		 * @param {String} message - message to display
 		 * @param {Callback} callback - Optional Callback to fire when the user dismisses the dialog. This has the single parameter
 		 * 'value', indicating the value returned by the Warn
 		 * dialog from 'okClick()' etc.
@@ -513,7 +515,7 @@ declare namespace Isc {
 		 * buttons
 		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		say(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+		say(message:String, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/**  
 		 *  Set the global default setting for Canvas.autoDraw.
@@ -580,12 +582,12 @@ declare namespace Isc {
 		 * and any callback specified will still be fired even if the prompt is dismissed early.
 		 * 
 		 * 
-		 * @param {string} message - message to display
+		 * @param {String} message - message to display
 		 * @param {number} duration - how long the message should appear for in milliseconds before fading from view.
 		 * @param {Callback} callback - When the prompt is hidden, callback will be fired.
 		 * @param {DialogProps} properties - additional properties for the Dialog, applied before the Dialog is shown
 		 */
-		showFadingPrompt(message:string /* String */, duration:number, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+		showFadingPrompt(message:String, duration:number, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/**  
 		 *  Handle a complete login interaction with a typical login dialog asking for username and
@@ -659,10 +661,10 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * 
-		 * @param {string} message - message to display
+		 * @param {String} message - message to display
 		 * @param {DialogProps} properties - additional properties for the Dialog, applied before the Dialog is shown
 		 */
-		showPrompt(message:string /* String */, properties?:DialogProps /* Dialog Properties */): void; 
+		showPrompt(message:String, properties?:DialogProps /* Dialog Properties */): void; 
 
 		/**  
 		 *  Given a simple javascript object, return that object sorted by keys, such that when iterating
@@ -694,9 +696,9 @@ declare namespace Isc {
 		 * or perform timing tasks.
 		 * 
 		 * 
-		 * @return {number} a large integer (actually the number of milliseconds since 1/1/1970)
+		 * @return {int} a large integer (actually the number of milliseconds since 1/1/1970)
 		 */
-		timeStamp(): number /* int */; 
+		timeStamp(): int; 
 
 		/**  
 		 *  Show a modal dialog with a message, icon, and "OK" button. See Dialog.warnIcon.
@@ -705,7 +707,7 @@ declare namespace Isc {
 		 * dismissed via the close button.
 		 * 
 		 * 
-		 * @param {string} message - message to display
+		 * @param {String} message - message to display
 		 * @param {Callback} callback - Optional Callback to fire when the user dismisses the dialog. This has the single parameter
 		 * 'value', indicating the value returned by the Warn
 		 * dialog from 'okClick()' etc.
@@ -714,7 +716,7 @@ declare namespace Isc {
 		 * an array of buttons
 		 * eg: { buttons : [Dialog.OK, Dialog.CANCEL] }
 		 */
-		warn(message:string /* String */, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
+		warn(message:String, callback?:Callback, properties?:DialogProps /* Dialog Properties */): void; 
 
 	} // iscStatic
 
@@ -726,6 +728,7 @@ declare namespace Isc {
 		/** 
 		 * (Read only) Overrides the default indention setting during serialization. XML defaults
 		 * to indented and JSON defaults to non-indented.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly indent?: boolean /* Boolean */;
@@ -733,12 +736,14 @@ declare namespace Isc {
 		 * (Read only) Overrides the default component output setting during serialization. By default
 		 * Canvas and DrawItem components are serialized individually and referenced by their
 		 * containers.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly outputComponentsIndividually?: boolean /* Boolean */;
 		/** 
 		 * (Read only) When true specify DataSources in full rather than assuming they can be
 		 * downloaded from the server.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly serverless?: boolean /* Boolean */;
@@ -768,20 +773,21 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IR
 		 */
-		readonly borderAfter?: string /* String */;
+		readonly borderAfter?: String;
 		/** 
 		 * (Read only) CSS line style to apply as a border before this facetValue.
 		 * 
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IR
 		 */
-		readonly borderBefore?: string /* String */;
+		readonly borderBefore?: String;
 		/** 
 		 * (Read only) For individual parent facetValues within a hierarchical facet, this flag controls
 		 * whether an expand/collapse control will be shown.
 		 * 
 		 * Note: This property is specific to CubeGrid','CubeGrids (see, for
 		 * example, CubeGrid.canCollapseFacets).
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canCollapse?: boolean /* Boolean */;
@@ -789,6 +795,7 @@ declare namespace Isc {
 		 * Whether cells for this facetValue can be edited. Defaults to CubeGrid.canEdit.
 		 * 
 		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canEdit?: boolean /* Boolean */;
@@ -804,6 +811,7 @@ declare namespace Isc {
 		 * (Read only) For tree facets, initial collapse state for this node. Defaults to Facet.collapsed.
 		 * 
 		 * Note: This property is specific to CubeGrid','CubeGrids.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly collapsed?: boolean /* Boolean */;
@@ -811,12 +819,13 @@ declare namespace Isc {
 		 * id of this facetValue. Any string or number.
 		 * Flags: IRW
 		 */
-		readonly id?: string | number /* String | Number */;
+		readonly id?: String | Number;
 		/** 
 		 * (Read only) Used to determine which facetValue is to be shown when the facet is minimized.
 		 * 
 		 * Note: This property is specific to CubeGrid','CubeGrids. See
 		 * CubeGrid.canMinimizeFacets.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly isMinimizeValue?: boolean /* Boolean */;
@@ -827,7 +836,7 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IRA
 		 */
-		readonly parentId?: string | number /* String | Number */;
+		readonly parentId?: String | Number;
 		/** 
 		 * (Read only) Selection boundary determining what facets / facetValues can be selected together by
 		 * drag selection / shift+click selection.
@@ -840,7 +849,7 @@ declare namespace Isc {
 		 * User-visible title of this facetValue. Shown on the field header.
 		 * Flags: IRW
 		 */
-		readonly title?: string /* String */;
+		readonly title?: String;
 		/** 
 		 * (Read only) Hilite style to apply to the title for this facetValue.
 		 * 
@@ -848,7 +857,7 @@ declare namespace Isc {
 		 * CubeGrid.hilites.
 		 * Flags: IR
 		 */
-		readonly titleHilite?: string /* String */;
+		readonly titleHilite?: String;
 		/** 
 		 * (Read only) Width of the cube grid facetValue in pixels.
 		 * 
@@ -876,9 +885,9 @@ declare namespace Isc {
 		 * be passed in as this parameter.
 		 * @param {number} rowNum - row number for the cell
 		 * @param {number} colNum - column number for the cell.
-		 * @return {string} formatted value to display in the cell.
+		 * @return {String} formatted value to display in the cell.
 		 */
-		formatCellValue?(value:any /* Any */, record:CellRecord, rowNum:number, colNum:number): string /* String */; 
+		formatCellValue?(value:any /* Any */, record:CellRecord, rowNum:number, colNum:number): String; 
 
 		/**  
 		 *  Callout to determine custom value to display for cells displayed for this facetValue.
@@ -893,9 +902,9 @@ declare namespace Isc {
 		 * @param {any} record - cell record
 		 * @param {number} rowNum - row value for the cell
 		 * @param {number} colNum - column value for the cell
-		 * @return {string} HTML to display
+		 * @return {String} HTML to display
 		 */
-		getCellValue?(viewer:CubeGrid, record:any /* Object */, rowNum:number, colNum:number): string /* String */; 
+		getCellValue?(viewer:CubeGrid, record:any /* Object */, rowNum:number, colNum:number): String; 
 
 	} // FacetValue
 
@@ -1119,7 +1128,7 @@ declare namespace Isc {
 		 * See also FiscalCalendar.defaultYearMode.
 		 * Flags: IRW
 		 */
-		readonly defaultDate?: number /* integer */;
+		readonly defaultDate?: Integer;
 		/** 
 		 * The default zero-based month-number to use for calculating fiscal dates when no
 		 * FiscalCalendar.fiscalYears','fiscal years are provided. This value together
@@ -1129,7 +1138,7 @@ declare namespace Isc {
 		 * See also FiscalCalendar.defaultYearMode.
 		 * Flags: IRW
 		 */
-		readonly defaultMonth?: number /* integer */;
+		readonly defaultMonth?: Integer;
 		/** 
 		 * This attribute controls how the displayed fiscalYear value should be calculated for
 		 * dates falling within a period not explicitly listed in the
@@ -1159,8 +1168,8 @@ declare namespace Isc {
 	 * A class used to define a shadow used in a Draw&lt;Shape&gt; Types. 
 	 */
 	export interface Shadow {
-		readonly blur?: number /* int */;
-		readonly color?: string /* CSSColor */;
+		readonly blur?: int;
+		readonly color?: CSSColor;
 		readonly offset?: Point;
 	} // Shadow
 
@@ -1177,12 +1186,12 @@ declare namespace Isc {
 		 * to use for the markers.
 		 * Flags: IR
 		 */
-		readonly image?: string /* SCImgURL */;
+		readonly image?: SCImgURL;
 		/** 
 		 * (Read only) For ordered lists, the number to start the first item with. Must be non-negative.
 		 * Flags: IR
 		 */
-		readonly startNumber?: number /* int */;
+		readonly startNumber?: int;
 		/** 
 		 * (Read only) The style of list item marker. If "custom-image", the ListProperties.image','image
 		 * should be specified.
@@ -1213,12 +1222,12 @@ declare namespace Isc {
 		 * (Read only) The x coordinate of this point.
 		 * Flags: IR
 		 */
-		readonly x?: number /* int */;
+		readonly x?: int;
 		/** 
 		 * (Read only) The y coordinate of this point.
 		 * Flags: IR
 		 */
-		readonly y?: number /* int */;
+		readonly y?: int;
 	} // Point
 
 	export interface PointStatic {
@@ -1258,7 +1267,7 @@ declare namespace Isc {
 		 * with additionalOutputs that differ from what was sent by the client is to create a new DSRequest
 		 * Flags: IRA
 		 */
-		readonly additionalOutputs?: string /* String */;
+		readonly additionalOutputs?: String;
 		/** 
 		 * (Read only) A callback method that will be called with an instance of DSResponse, as sent by the server.
 		 * Queuing does not affect callbacks in any way - your specified callback will be invoked for 
@@ -1306,7 +1315,7 @@ declare namespace Isc {
 		 * dsRequestEquivalence','request equivalence.
 		 * Flags: IR
 		 */
-		readonly componentId?: string /* String */;
+		readonly componentId?: String;
 		/** 
 		 * (Read only) Data, such as search criteria or an updated record, to be acted upon. Contents differ by
 		 * operationType, see dataSourceOperations','DataSource Operations for
@@ -1345,7 +1354,7 @@ declare namespace Isc {
 		 * DataSource.
 		 * Flags: IR
 		 */
-		readonly dataSource?: string /* String */;
+		readonly dataSource?: String;
 		/** 
 		 * (Read only) End row of requested results, used only with fetch operations.
 		 * 
@@ -1371,13 +1380,13 @@ declare namespace Isc {
 		 * generated PDF to use landscape mode, so that all content fits without clipping.
 		 * Flags: IR
 		 */
-		readonly exportCSS?: string /* String */;
+		readonly exportCSS?: String;
 		/** 
 		 * (Read only) Only applies to request properties passed to ListGrid.exportClientData.
 		 * If specified this property contains an arbitrary set of data to be exported.
 		 * Flags: IR
 		 */
-		readonly exportData?: Array<any> /* Array of Record */;
+		readonly exportData?: Array<Record> /* Array of Record */;
 		/** 
 		 * (Read only) When exporting via ListGrid.exportClientData to an XLS or
 		 * OOXML spreadsheet, forces dates to export as a string rather than a true date
@@ -1401,6 +1410,7 @@ declare namespace Isc {
 		 * strings that exactly match the formatting shown in the DataBoundComponent.
 		 * As noted above, this means the spreadsheet program will not recognize the value as
 		 * a date.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: exportFormatting
 		 */
 		readonly exportDatesAsFormattedString?: boolean;
@@ -1408,7 +1418,7 @@ declare namespace Isc {
 		 * (Read only) The character to use as a field-separator in CSV exports. The default delimiter is comma.
 		 * Flags: IR
 		 */
-		readonly exportDelimiter?: string /* String */;
+		readonly exportDelimiter?: String;
 		/** 
 		 * (Read only) Specifies whether the exported data will be downloaded as an attachment or displayed in a 
 		 * new browser window. See ExportDisplay for more information.
@@ -1436,7 +1446,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly exportFields?: Array<string> /* Array of String */;
+		readonly exportFields?: Array<String> /* Array of String */;
 		/** 
 		 * (Read only) The name of the file to save the exported data into. If 
 		 * DSRequest.exportToFilesystem','exportToFilesystem is set, this is the name of the 
@@ -1447,19 +1457,20 @@ declare namespace Isc {
 		 * it based on the ExportFormat specified by DSRequest.exportAs.
 		 * Flags: IR
 		 */
-		readonly exportFilename?: string /* String */;
+		readonly exportFilename?: String;
 		/** 
 		 * (Read only) Optional text to appear at the end of the file.
 		 * Flags: IR
 		 */
-		readonly exportFooter?: string /* String */;
+		readonly exportFooter?: String;
 		/** 
 		 * (Read only) Optional text to appear at the beginning of the file.
 		 * Flags: IR
 		 */
-		readonly exportHeader?: string /* String */;
+		readonly exportHeader?: String;
 		/** 
 		 * This property allows omitting column names from CSV and Excel exports (no effect on JSON or XML exports).
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly exportHeaderless?: boolean /* Boolean */;
@@ -1474,7 +1485,7 @@ declare namespace Isc {
 		 * least quality but smallest file size.
 		 * Flags: IR
 		 */
-		readonly exportImageQuality?: number /* float */;
+		readonly exportImageQuality?: Float /* float */;
 		/** 
 		 * (Read only) If DSRequest.exportToFilesystem','exportToFilesystem is set, optionally specifies a 
 		 * path to use when saving the file. This path is relative to the default export path, which
@@ -1491,7 +1502,7 @@ declare namespace Isc {
 		 * is set.
 		 * Flags: IR
 		 */
-		readonly exportPath?: string /* String */;
+		readonly exportPath?: String;
 		/** 
 		 * Determines the PropertyIdentifier to be used in the exported data. This
 		 * essentially means, should we export internal field names like "countryCode" or
@@ -1518,6 +1529,7 @@ declare namespace Isc {
 		 * Whether formatting settings should be applied to data being exported. Default behavior and
 		 * the effect of setting of exportRawValues is described in the
 		 * exportFormatting','Export Formatting overview.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: exportFormatting
 		 */
 		readonly exportRawValues?: boolean /* Boolean */;
@@ -1576,6 +1588,7 @@ declare namespace Isc {
 		 * id,displayName
 		 * 10101,"Record 10101"
 		 * 
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly exportResults?: boolean /* Boolean */;
@@ -1583,6 +1596,7 @@ declare namespace Isc {
 		 * (Read only) When you erxport a ListGrid that has ListGrid.headerSpans','headerSpans,
 		 * should headerSpans also be exported. See DSRequest.exportSpanTitleSeparator for details of
 		 * of what it means to export headerSpans to different export targets.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly exportShowHeaderSpanTitles?: boolean /* Boolean */;
@@ -1602,7 +1616,7 @@ declare namespace Isc {
 		 * string used when constructing these amalgamated headers.
 		 * Flags: IR
 		 */
-		readonly exportSpanTitleSeparator?: string /* String */;
+		readonly exportSpanTitleSeparator?: String;
 		/** 
 		 * (Read only) When exporting to OOXML format (this is the standard file format used by Excel 2007 and 
 		 * later), we default to using streaming mode, for memory efficiency. You can override this 
@@ -1620,6 +1634,7 @@ declare namespace Isc {
 		 * streaming the XLS format is impractical bcause it is a self-referential binary format, and
 		 * in any case the problem of huge exports overflowing JVM memory is less likely to arise with 
 		 * XLS, because it is innately limited to 65535 rows.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly exportStreaming?: boolean;
@@ -1628,7 +1643,7 @@ declare namespace Isc {
 		 * specified in the request, the server uses "".
 		 * Flags: IR
 		 */
-		readonly exportTitleSeparatorChar?: string /* String */;
+		readonly exportTitleSeparatorChar?: String;
 		/** 
 		 * (Read only) If set, SmartClient Server will export data back to the client, either as a file download 
 		 * or as content in a new browser window, depending on the setting of
@@ -1638,6 +1653,7 @@ declare namespace Isc {
 		 * DSRequest.exportToFilesystem','exportToFilesystem; in this case the data is both 
 		 * exported to a file on the server filesystem, and downloaded to the client. If you specify 
 		 * <em>neither</em> property, the export no-ops.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly exportToClient?: boolean /* Boolean */;
@@ -1659,6 +1675,7 @@ declare namespace Isc {
 		 * you provide. You use this when you want to make some use of the export document other than 
 		 * writing it to a disk file - for example, attaching it to an email or writing it to a 
 		 * database table. See the server-side Javadocs for DSRequest.setExportTo().
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly exportToFilesystem?: boolean /* Boolean */;
@@ -1687,7 +1704,7 @@ declare namespace Isc {
 		 * time.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly exportTZ?: string /* String */;
+		readonly exportTZ?: String;
 		/** 
 		 * (Read only) This flag has a different meaning depending on whether you are doing a client-driven or
 		 * server-driven export.
@@ -1713,6 +1730,7 @@ declare namespace Isc {
 		 * have a DataSource-defined DataSourceField.valueMap','valueMap will have the mapped
 		 * value exported instead. This is similar to the client-side treatment of valueMaps, except
 		 * that the defaults are reversed.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly exportValueFields?: boolean;
@@ -1806,6 +1824,7 @@ declare namespace Isc {
 		 * </table>
 		 * 
 		 * Note that Many-to-Many works the same way as One-to-Many.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly generateRelatedUpdates?: boolean;
@@ -1816,7 +1835,7 @@ declare namespace Isc {
 		 * serverSummaries','Server Summaries overview for details and examples of usage.
 		 * Flags: IR, Group: serverSummaries
 		 */
-		readonly groupBy?: Array<string> /* Array of String */;
+		readonly groupBy?: Array<String> /* Array of String */;
 		/** 
 		 * For DataSources using SOAP messaging with a WSDL web service, data to be serialized to form
 		 * SOAP headers, as a map from the header part name to the data. See
@@ -1845,6 +1864,7 @@ declare namespace Isc {
 		 * 
 		 * Currently, no built-in server-side connectors (SQL, JPA, Hibernate) implement support for
 		 * the keepParentsOnFilter flag.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: treeDataBinding
 		 */
 		readonly keepParentsOnFilter?: boolean /* Boolean */;
@@ -1853,7 +1873,7 @@ declare namespace Isc {
 		 * more information.
 		 * Flags: IR
 		 */
-		readonly lineBreakStyle?: string /* String */;
+		readonly lineBreakStyle?: String;
 		/** 
 		 * (Read only) For an update or remove operation, the original values from the
 		 * record that is being updated or removed. oldValues is automatically added to
@@ -1872,7 +1892,7 @@ declare namespace Isc {
 		 * discarding edits, or reconciling new and old values in a special interface.
 		 * Flags: IR
 		 */
-		readonly oldValues?: any /* Record */;
+		readonly oldValues?: Record;
 		/** 
 		 * (Read only) When a DataBoundComponent sends a DSRequest, the
 		 * dsRequest.operationId will be automatically picked up from the
@@ -1913,7 +1933,7 @@ declare namespace Isc {
 		 * dsRequestEquivalence.
 		 * Flags: IR, Group: operations
 		 */
-		readonly operationId?: string /* String */;
+		readonly operationId?: String;
 		/** 
 		 * (Read only) Type of operation being performed: "fetch", "add", "remove", "update" or "custom".
 		 * 
@@ -1936,7 +1956,7 @@ declare namespace Isc {
 		 * from the client side.
 		 * Flags: IR
 		 */
-		readonly outputs?: string /* String */;
+		readonly outputs?: String;
 		/** 
 		 * (Read only) For advanced use in integrating trees that 
 		 * TreeGrid.loadDataOnDemand','load data on demand with web services,
@@ -1962,6 +1982,7 @@ declare namespace Isc {
 		 * for some validators because the nature of the validation depends on whether we are adding
 		 * or updating a record. The system sets this flag when processing interim validations, such
 		 * as those fired when DynamicForm.validateOnChange is in force.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly pendingAdd?: boolean;
@@ -1970,6 +1991,7 @@ declare namespace Isc {
 		 * request, overriding the OperationBinding- and DataSource-level settings. Note that this 
 		 * setting applies only to fetch requests - it has no effect if specified on any other kind 
 		 * of request.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: progressiveLoading
 		 */
 		readonly progressiveLoading?: boolean;
@@ -1978,7 +2000,7 @@ declare namespace Isc {
 		 * making use of the DSProtocol','"clientCustom" dataProtocol.
 		 * Flags: RA
 		 */
-		readonly requestId?: string /* String */;
+		readonly requestId?: String;
 		/** 
 		 * (Read only) For advanced use in integrating dataset paging with web services,
 		 * the ResultSet that issued this "fetch" DSRequest is automatically made available as the
@@ -2006,6 +2028,7 @@ declare namespace Isc {
 		 * DataSource.cacheAllData, DataSource.cacheAllOperationId and
 		 * DataSource.cacheAcrossOperationIds for caching management for all requests of a 
 		 * dataSource.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly shouldUseCache?: boolean;
@@ -2064,6 +2087,7 @@ declare namespace Isc {
 		 * 
 		 * Note, that streaming results does not support fields with SummaryFunction','"concat" summary function 
 		 * on non-Oracle databases. Such fields will be skipped.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly streamResults?: boolean;
@@ -2157,12 +2181,14 @@ declare namespace Isc {
 		 * way, the first field to use a given name wins. "first" means the first field encountered in a
 		 * depth first search. "wins" means only the first field will be populated in the generated
 		 * XML message.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: flatFields
 		 */
 		readonly useFlatFields?: boolean /* Boolean */;
 		/** 
 		 * Cause the DSRequest.useFlatFields','useFlatFields XML serialization behavior to be used
 		 * for all soap headers in the request. See also DSRequest.headerData.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: flatFields
 		 */
 		readonly useFlatHeaderFields?: boolean;
@@ -2174,6 +2200,7 @@ declare namespace Isc {
 		 * 
 		 * Only applies to requests sent a server with
 		 * DataSource.dataFormat set to "json" or "iscServer".
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly useStrictJSON?: boolean;
@@ -2241,7 +2268,7 @@ declare namespace Isc {
 		 * you can use Velocity expressions if you have a Power or better license.
 		 * Flags: IR, Group: transactionChaining
 		 */
-		readonly end?: string /* String */;
+		readonly end?: String;
 		/** 
 		 * (Read only) The name of the field to add or replace on the DSRequest - whether this appears in the DSRequest's
 		 * values or criteria depends on whether this is part of a OperationBinding.values or
@@ -2255,7 +2282,7 @@ declare namespace Isc {
 		 * attribute.
 		 * Flags: IR
 		 */
-		readonly operator?: string /* String */;
+		readonly operator?: String;
 		/** 
 		 * (Read only) The value to use for the start of a range. This property only applies to criteria, and it 
 		 * only applies to operators of type "rangeCheck" - for example, the "between" operator.
@@ -2266,7 +2293,7 @@ declare namespace Isc {
 		 * you can use Velocity expressions if you have a Power or better license.
 		 * Flags: IR, Group: transactionChaining
 		 */
-		readonly start?: string /* String */;
+		readonly start?: String;
 		/** 
 		 * (Read only) The value to assign to the field named by DSRequestModifier.fieldName','fieldName. This
 		 * value can be static, and for Pro licenses that is the only option. With Power and better
@@ -2341,7 +2368,7 @@ declare namespace Isc {
 		 * com.isomorphic.velocity.ResponseDataHandler class.
 		 * Flags: IR, Group: transactionChaining
 		 */
-		readonly value?: string /* String */;
+		readonly value?: String;
 	} // DSRequestModifier
 
 	export interface DSRequestModifierStatic {
@@ -2398,11 +2425,74 @@ declare namespace Isc {
 		 * (Read only) The property name, eg a ListGridField','field name, to which this sortSpecifier applies.
 		 * Flags: IR
 		 */
-		readonly property?: string /* String */;
+		readonly property?: String;
 	} // SortSpecifier
 
 	export interface SortSpecifierStatic {
 	} // SortSpecifierStatic
+
+
+	/**
+	 * Validator definition for a built-in Validator.type. 
+	 */
+	export interface ValidatorDefinition {
+		/** 
+		 * (Read only) Callback, function, or JavaScript expression called after every validation (i.e. call
+		 * to ValidatorDefinition.condition) whether it passed or failed. This allows the
+		 * validator perform an operation on the field based on the validation outcome.
+		 * 
+		 * An action() function is not needed to report an error message only.
+		 * 
+		 * For the required parameters, see the documentation for
+		 * Callbacks.ValidatorActionCallback','ValidatorActionCallback.
+		 * Flags: IR
+		 */
+		readonly action?: StringMethod | ValidatorActionCallback;
+		/** 
+		 * (Read only) Callback, function or JavaScript expression invoked to perform the actual validation
+		 * of a value.
+		 * 
+		 * Because the validator itself is passed as a parameter, you can effectively parameterize it.
+		 * For example, to create a validator that checks that the value is after a certain date:
+		 * { type:"custom", afterDate:new Date(), 
+		 * condition:"value.getTime() > validator.afterDate.getTime()" }
+		 * 
+		 * Note that, if a field is declared with a builtin FieldType, the value passed in
+		 * will already have been converted to the specified type, if possible.
+		 * 
+		 * For the required parameters, see the documentation for
+		 * Callbacks.ValidatorConditionCallback','ValidatorConditionCallback.
+		 * Flags: IR
+		 */
+		readonly condition?: StringMethod | ValidatorConditionCallback;
+		/** 
+		 * (Read only) Default error message to be shown when validator fails validation. Can be overridden
+		 * for an individual validator by setting Validator.errorMessage.
+		 * Flags: IR
+		 */
+		readonly defaultErrorMessage?: String;
+		/** 
+		 * (Read only) Does this validator only run server-side?
+		 * boolean - Null not allowed
+		 * Flags: IR
+		 */
+		readonly requiresServer?: boolean;
+		/** 
+		 * (Read only) Optional name to be shown in tools that edit validators. If not specified,
+		 * the tools will derive the short name from the ValidatorDefinition.type by assuming it is
+		 * camelCaps similar to DataSource.getAutoTitle.
+		 * Flags: IR
+		 */
+		readonly shortName?: String;
+		/** 
+		 * (Read only) Type of the validator unique in ValidatorType.
+		 * Flags: IR
+		 */
+		readonly type?: String;
+	} // ValidatorDefinition
+
+	export interface ValidatorDefinitionStatic {
+	} // ValidatorDefinitionStatic
 
 
 	/**
@@ -2454,7 +2544,7 @@ declare namespace Isc {
 		 * (Read only) Same as FacetChart.axisStartValue but affects only one metric.
 		 * Flags: IR
 		 */
-		readonly axisStartValue?: number /* Float */;
+		readonly axisStartValue?: Float;
 		/** 
 		 * See ChartType for a list of known types - Column, Bar, Line, Pie, Doughnut,
 		 * Area, Radar, and Histogram charts are supported.
@@ -2469,7 +2559,7 @@ declare namespace Isc {
 		 * "#FFFFFF" is white, "#FF0000" is pure red.
 		 * Flags: IRW
 		 */
-		readonly dataColors?: Array<string> /* Array of CSSColor */;
+		readonly dataColors?: Array<CSSColor> /* Array of CSSColor */;
 		/** 
 		 * (Read only) Properties for lines that show data (as opposed to gradations or borders around the data
 		 * area).
@@ -2491,7 +2581,7 @@ declare namespace Isc {
 		 * (Read only) Size in pixels for data points drawn for line, area, radar and other chart types.
 		 * Flags: IR
 		 */
-		readonly dataPointSize?: number /* int */;
+		readonly dataPointSize?: int;
 		/** 
 		 * (Read only) Properties for data shapes (filled areas in area or radar charts).
 		 * Flags: IR
@@ -2501,7 +2591,7 @@ declare namespace Isc {
 		 * (Read only) The FacetChart.decimalPrecision used to render the numeric labels of this metric axis.
 		 * Flags: IR
 		 */
-		readonly decimalPrecision?: number /* int */;
+		readonly decimalPrecision?: int;
 		/** 
 		 * Whether shapes are filled, for example, whether a multi-series line chart appears as a
 		 * stack of filled regions as opposed to just multiple lines.
@@ -2512,6 +2602,7 @@ declare namespace Isc {
 		 * You can explicitly set filled:false to create multi-facet Line or Radar charts where
 		 * translucent regions overlap, or filled:true to fill in a single-facet Line or Radar
 		 * chart.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly filled?: boolean;
@@ -2521,7 +2612,7 @@ declare namespace Isc {
 		 * obtains the series of values to plot. The default facet value is the first facet value of the second facet.
 		 * Flags: IR
 		 */
-		readonly fixedFacetValue?: string | number /* String | Number */;
+		readonly fixedFacetValue?: String | Number;
 		/** 
 		 * (Read only) Properties for gradation labels
 		 * Flags: IR
@@ -2546,14 +2637,14 @@ declare namespace Isc {
 		 * legendLabel to provide custom text for the legend label.
 		 * Flags: IR
 		 */
-		readonly legendLabel?: string /* String */;
+		readonly legendLabel?: String;
 		/** 
 		 * (Read only) When MetricSettings.useLogGradations, base value for logarithmic gradation lines. Gradation
 		 * lines will be shown at every power of this value plus intervening values specified by
 		 * MetricSettings.logGradations.
 		 * Flags: IR
 		 */
-		readonly logBase?: number /* int */;
+		readonly logBase?: int;
 		/** 
 		 * (Read only) When MetricSettings.useLogGradations is set, gradation lines to show in between powers,
 		 * expressed as a series of integer or float values between 1 and MetricSettings.logBase.
@@ -2572,13 +2663,14 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly logGradations?: Array<number> /* Array of Float */;
+		readonly logGradations?: Array<Float> /* Array of Float */;
 		/** 
 		 * (Read only) Whether to use logarithmic scaling for values.
 		 * 
 		 * Logarithmic scale charts show an equivalent percentage increase as equivalent distance
 		 * on the chart. That is, 10 and 100 are the same distance apart as 100 and 1000 (each
 		 * being a 10 times or 1000% increase).
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly logScale?: boolean /* Boolean */;
@@ -2590,17 +2682,18 @@ declare namespace Isc {
 		 * facet whose values will be displayed by the chart.
 		 * Flags: IR
 		 */
-		readonly matchGradations?: string /* String */;
+		readonly matchGradations?: String;
 		/** 
 		 * (Read only) Same as FacetChart.minDataSpreadPercent but affects only one metric. Default of
 		 * null means that the chart-wide setting facetChart.minDataSpreadPercent
 		 * will be used.
 		 * Flags: IR
 		 */
-		readonly minDataSpreadPercent?: number /* Integer */;
+		readonly minDataSpreadPercent?: Integer;
 		/** 
 		 * (Read only) Whether this extra value axis plots values while varying the facet values of just the
 		 * first facet (single-facet) or both first and second facets (multi-facet).
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly multiFacet?: boolean /* Boolean */;
@@ -2614,6 +2707,7 @@ declare namespace Isc {
 		 * MetricSettings.stacked','stacked mode. Stacked columns will be as tall as the chart rect and
 		 * stacked bars will be as wide as the chart rect. Area and Radar charts will be
 		 * completely filled except for facet values where all values are 0.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly proportional?: boolean;
@@ -2624,7 +2718,7 @@ declare namespace Isc {
 		 * Facet.proportionalTitle','proportionalTitle.
 		 * Flags: IR, Group: i18nMessages
 		 */
-		readonly proportionalAxisLabel?: string /* String */;
+		readonly proportionalAxisLabel?: String;
 		/** 
 		 * (Read only) Properties for shadows.
 		 * Flags: IR
@@ -2632,6 +2726,7 @@ declare namespace Isc {
 		readonly shadowProperties?: DrawOvalProps /* DrawOval Properties */;
 		/** 
 		 * (Read only) Whether to show the extra value axis.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly showAxis?: boolean /* Boolean */;
@@ -2639,6 +2734,7 @@ declare namespace Isc {
 		 * (Read only) Whether to show an axis line for this extra value axis if it is not placed
 		 * directly adjacent to the chart rect. The default setting is the value
 		 * of the FacetChart.showChartRect','showChartRect property of the FacetChart.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly showAxisLine?: boolean;
@@ -2648,6 +2744,7 @@ declare namespace Isc {
 		 * 
 		 * If shown, the MetricSettings.pointClick and MetricSettings.getPointHoverHTML APIs can be used to create
 		 * interactivity.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly showDataPoints?: boolean /* Boolean */;
@@ -2660,11 +2757,13 @@ declare namespace Isc {
 		 * If set to true, data values will be shown unless the data density is high enough that
 		 * labels will potentially overlap, in which case, data values will not be shown and
 		 * hovers will be shown instead, in the same way as MetricSettings.showValueOnHover shows hovers.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly showDataValues?: boolean;
 		/** 
 		 * (Read only) Whether to automatically show shadows for various charts.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly showShadows?: boolean /* Boolean */;
@@ -2672,6 +2771,7 @@ declare namespace Isc {
 		 * (Read only) Whether to show the MetricSettings.valueTitle','valueTitle (or, in the case of
 		 * MetricSettings.proportional','proportional rendering mode,
 		 * MetricSettings.proportionalAxisLabel) as a label on this extra value axis.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly showValueAxisLabel?: boolean;
@@ -2685,6 +2785,7 @@ declare namespace Isc {
 		 * 
 		 * The data value will be formatted using FacetChart.formatDataValue.
 		 * The label's appearance is controlled by FacetChart.hoverLabelProperties.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly showValueOnHover?: boolean;
@@ -2692,6 +2793,7 @@ declare namespace Isc {
 		 * If the ChartType is "Column" then the metric settings may include
 		 * a setting for FacetChart.stacked.
 		 * 
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly stacked?: boolean;
@@ -2701,6 +2803,7 @@ declare namespace Isc {
 		 * of magnitude. For example, 1,2,4,6,8,10,20,40,60,80,100.
 		 * 
 		 * Default gradations can be overridden via MetricSettings.logBase and MetricSettings.logGradations.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly useLogGradations?: boolean /* Boolean */;
@@ -2721,12 +2824,12 @@ declare namespace Isc {
 		 * the value axis.
 		 * Flags: IR
 		 */
-		readonly valueTitle?: string /* String */;
+		readonly valueTitle?: String;
 		/** 
 		 * (Read only) Same as FacetChart.xAxisEndValue but affects only one metric.
 		 * Flags: IR
 		 */
-		readonly xAxisEndValue?: number /* Float */;
+		readonly xAxisEndValue?: Float;
 
 		/* Instance Method Overrides */
 		/**  
@@ -2739,9 +2842,9 @@ declare namespace Isc {
 		 * MetricSettings.formatDataValue.
 		 * 
 		 * @param {any} value - raw value of the metric
-		 * @return {string} the text to display.
+		 * @return {String} the text to display.
 		 */
-		formatAxisValue?(value:any /* Any */): string /* String */; 
+		formatAxisValue?(value:any /* Any */): String; 
 
 		/**  
 		 *  Return the text string to display in MetricSettings.showValueOnHover','hovers or via MetricSettings.showDataValues
@@ -2751,9 +2854,9 @@ declare namespace Isc {
 		 * MetricSettings.formatAxisValue.
 		 * 
 		 * @param {any} value - raw value of the metric
-		 * @return {string} the text to display.
+		 * @return {String} the text to display.
 		 */
-		formatDataValue?(value:any /* Any */): string /* String */; 
+		formatDataValue?(value:any /* Any */): String; 
 
 		/**  
 		 *  Get a color from the MetricSettings.dataColors Array.
@@ -2764,12 +2867,12 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * 
-		 * @param {number} index - index of the legend facet value to be colored
-		 * @param {string} facetValueId - id of the legend facet value to be colored
-		 * @param {string} purpose - purpose for the requested color - such as "legend", "line", "area", "points", etc.
-		 * @return {string} 
+		 * @param {Number} index - index of the legend facet value to be colored
+		 * @param {String | Number | Date} facetValueId - id of the legend facet value to be colored
+		 * @param {String} purpose - purpose for the requested color - such as "legend", "line", "area", "points", etc.
+		 * @return {CSSColor} 
 		 */
-		getDataColor?(index:number /* Number */, facetValueId:string | number | Date /* String | Number | Date */, purpose:string /* String */): string /* CSSColor */; 
+		getDataColor?(index:Number, facetValueId:String | Number | Date, purpose:String): CSSColor; 
 
 		/**  
 		 *  Get a gradient from the MetricSettings.dataGradients Array.
@@ -2777,12 +2880,12 @@ declare namespace Isc {
 		 * Override to provide a dynamic gradient generation scheme.
 		 * 
 		 * 
-		 * @param {number} index - index of the legend facet value to be colored
-		 * @param {string} facetValueId - id of the legend facet value to be colored
-		 * @param {string} purpose - purpose for the requested gradient - such as "legend", "line", "area", "points", etc.
-		 * @return {string} the gradient identifier
+		 * @param {Number} index - index of the legend facet value to be colored
+		 * @param {String | Number | Date} facetValueId - id of the legend facet value to be colored
+		 * @param {String} purpose - purpose for the requested gradient - such as "legend", "line", "area", "points", etc.
+		 * @return {String} the gradient identifier
 		 */
-		getDataGradient?(index:number /* Number */, facetValueId:string | number | Date /* String | Number | Date */, purpose:string /* String */): string /* String */; 
+		getDataGradient?(index:Number, facetValueId:String | Number | Date, purpose:String): String; 
 
 		/**  
 		 *  Specifies the color to use for data lines in the chart. No default implementation. If not
@@ -2795,12 +2898,12 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * 
-		 * @param {number} index - index of the legend facet value to be colored
-		 * @param {string} facetValueId - id of the legend facet value to be colored
-		 * @param {string} purpose - purpose for the requested color - such as "legend", "line", "area", "points", etc.
-		 * @return {string} color to use for data lines or null to default to                     ${isc.DocUtils.linkForRef('method:MetricSettings.getDataColor')}
+		 * @param {Number} index - index of the legend facet value to be colored
+		 * @param {String | Number | Date} facetValueId - id of the legend facet value to be colored
+		 * @param {String} purpose - purpose for the requested color - such as "legend", "line", "area", "points", etc.
+		 * @return {CSSColor} color to use for data lines or null to default to                     ${isc.DocUtils.linkForRef('method:MetricSettings.getDataColor')}
 		 */
-		getDataLineColor?(index:number /* Number */, facetValueId:string | number | Date /* String | Number | Date */, purpose:string /* String */): string /* CSSColor */; 
+		getDataLineColor?(index:Number, facetValueId:String | Number | Date, purpose:String): CSSColor; 
 
 		/**  
 		 *  Specifies the width to use for data lines in the chart. No default implementation. If not
@@ -2812,12 +2915,12 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * 
-		 * @param {number} index - index of the legend facet value to target
-		 * @param {string} facetValueId - id of the legend facet value to target
-		 * @param {string} purpose - purpose for the requested width - such as "legend", "line", "area", "points", etc.
-		 * @return {number} width to use for data lines or null to use ${isc.DocUtils.linkForRef('type:ChartType')} default
+		 * @param {Number} index - index of the legend facet value to target
+		 * @param {String | Number | Date} facetValueId - id of the legend facet value to target
+		 * @param {String} purpose - purpose for the requested width - such as "legend", "line", "area", "points", etc.
+		 * @return {int} width to use for data lines or null to use ${isc.DocUtils.linkForRef('type:ChartType')} default
 		 */
-		getDataLineWidth?(index:number /* Number */, facetValueId:string | number | Date /* String | Number | Date */, purpose:string /* String */): number /* int */; 
+		getDataLineWidth?(index:Number, facetValueId:String | Number | Date, purpose:String): int; 
 
 		/**  
 		 *  Return an array of the gradation values used in the current chart. Pass these values
@@ -2827,21 +2930,21 @@ declare namespace Isc {
 		 * This is only allowed to be called when FacetChart.chartDrawn fires.
 		 * 
 		 * 
-		 * @return {Array<number>} an array of gradation values used in the current chart.
+		 * @return {Array<float>} an array of gradation values used in the current chart.
 		 */
-		getGradations?(): Array<number> /* Array of float */; 
+		getGradations?(): Array<float> /* Array of float */; 
 
 		/**  
 		 *  When MetricSettings.showDataPoints is true and the mouse hovers over a point, this method is called
 		 * and may return HTML to show in a hover.
 		 * 
 		 * 
-		 * @param {number} value - the value at the point
-		 * @param {any} record - the record at the point
-		 * @param {string} metricId - the ID of the metric at the point
-		 * @return {string} String of HTML to show in a hover
+		 * @param {Float} value - the value at the point
+		 * @param {Record} record - the record at the point
+		 * @param {String} metricId - the ID of the metric at the point
+		 * @return {String} String of HTML to show in a hover
 		 */
-		getPointHoverHTML?(value:number /* float */, record:any /* Record */, metricId:string /* String */): string /* String */; 
+		getPointHoverHTML?(value:Float /* float */, record:Record, metricId:String): String; 
 
 		/**  
 		 *  Returns the X coordinate where the passed data value either was or would be drawn.
@@ -2862,10 +2965,10 @@ declare namespace Isc {
 		 * FacetChart.zoomEndValue','zoomEndValue.
 		 * 
 		 * 
-		 * @param {number} value - the value to be drawn.
-		 * @return {number} the X coordinate where the passed data value would be drawn; or null if the passed <code>FacetValueMap</code> does not identify a currently-drawn data cell.
+		 * @param {Float} value - the value to be drawn.
+		 * @return {Float} the X coordinate where the passed data value would be drawn; or null if the passed <code>FacetValueMap</code> does not identify a currently-drawn data cell.
 		 */
-		getXCoord?(value:number | FacetValueMap /* float | FacetValueMap */): number /* Float */; 
+		getXCoord?(value:Float | FacetValueMap /* float | FacetValueMap */): Float; 
 
 		/**  
 		 *  Returns the Y coordinate where the passed data value either was or would be drawn.
@@ -2883,20 +2986,20 @@ declare namespace Isc {
 		 * whose Y-axis coordinate is to be retrieved.
 		 * 
 		 * 
-		 * @param {number} value - the value to be drawn.
-		 * @return {number} the Y coordinate where the passed data value would be drawn.
+		 * @param {Float} value - the value to be drawn.
+		 * @return {Float} the Y coordinate where the passed data value would be drawn.
 		 */
-		getYCoord?(value:number /* float */): number /* float */; 
+		getYCoord?(value:Float /* float */): Float /* float */; 
 
 		/**  
 		 *  When MetricSettings.showDataPoints is true, fires when a point is clicked on.
 		 * 
 		 * 
-		 * @param {number} value - the value at the point
-		 * @param {any} record - the record at the point
-		 * @param {string} metricId - the ID of the metric at the point
+		 * @param {Float} value - the value at the point
+		 * @param {Record} record - the record at the point
+		 * @param {String} metricId - the ID of the metric at the point
 		 */
-		pointClick?(value:number /* float */, record:any /* Record */, metricId:string /* String */): void; 
+		pointClick?(value:Float /* float */, record:Record, metricId:String): void; 
 
 		/**  
 		 *  Method to change the current ChartType','chartType.
@@ -2915,9 +3018,9 @@ declare namespace Isc {
 		/**  
 		 *  Setter for MetricSettings.dataColors.
 		 * 
-		 * @param {Array<string>} dataColors - New set of data colors
+		 * @param {Array<CSSColor>} dataColors - New set of data colors
 		 */
-		setDataColors?(dataColors:Array<string> /* Array of CSSColor */): void; 
+		setDataColors?(dataColors:Array<CSSColor> /* Array of CSSColor */): void; 
 
 		/**  
 		 *  Method to change MetricSettings.filled','filled.
@@ -2965,11 +3068,12 @@ declare namespace Isc {
 		 * attributes are set automatically.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly backgroundColor?: string /* String */;
+		readonly backgroundColor?: String;
 		/** 
 		 * (Read only) Can highlight be edited from header context menu? Setting attribute to
 		 * false prevents editing. A null or true
 		 * value allows editing.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: hiliting
 		 */
 		readonly canEdit?: boolean /* Boolean */;
@@ -2983,11 +3087,12 @@ declare namespace Isc {
 		 * "background-color:#FF0000"
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly cssText?: string /* CSSText */;
+		readonly cssText?: CSSText;
 		/** 
 		 * Whether this hilite is currently disabled.
 		 * 
 		 * Hilites can be programmatically enabled and disabled via DataBoundComponent.enableHilite.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: hiliting
 		 */
 		readonly disabled?: boolean /* Boolean */;
@@ -3002,12 +3107,12 @@ declare namespace Isc {
 		 * (Read only) HTML to append to the end of cell values where this hilite is applied.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly htmlAfter?: string /* HTMLString */;
+		readonly htmlAfter?: HTMLString;
 		/** 
 		 * (Read only) HTML to pre-pend to cell values where this hilite is applied.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly htmlBefore?: string /* HTMLString */;
+		readonly htmlBefore?: HTMLString;
 		/** 
 		 * (Read only) Value to show in place of the actual value from the record, for a record that matches
 		 * this hilite.
@@ -3017,14 +3122,14 @@ declare namespace Isc {
 		 * "Negligible", and similar use cases.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly htmlValue?: string /* String */;
+		readonly htmlValue?: String;
 		/** 
 		 * (Read only) URL of an icon to show when this hilite is applied to a cell. Position of the icon 
 		 * is controlled by DataBoundComponent.hiliteIconPosition or 
 		 * ListGridField.hiliteIconPosition.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly icon?: string /* SCImgURL */;
+		readonly icon?: SCImgURL;
 		/** 
 		 * (Read only) Unique id for this hilite definition. 
 		 * 
@@ -3034,7 +3139,7 @@ declare namespace Isc {
 		 * DataBoundComponent.hiliteProperty on the record to this id.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly id?: string /* String */;
+		readonly id?: String;
 		/** 
 		 * (Read only) HTML which replaces the cell's textual value where this hilite is applied.
 		 * 
@@ -3044,7 +3149,7 @@ declare namespace Isc {
 		 * to be displayed as text such as "current" or "past due".
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly replacementValue?: string /* HTMLString */;
+		readonly replacementValue?: HTMLString;
 		/** 
 		 * When edited via a HiliteEditor, the value for the foreground color of this 
 		 * hilite. If this is omitted, it will be automatically derived from the textColor
@@ -3052,13 +3157,13 @@ declare namespace Isc {
 		 * attributes are set automatically.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly textColor?: string /* String */;
+		readonly textColor?: String;
 		/** 
 		 * User-visible title for this hilite. Used for interfaces such as menus that can enable or
 		 * disable hilites.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly title?: string /* String */;
+		readonly title?: String;
 	} // Hilite
 
 	export interface HiliteStatic {
@@ -3074,18 +3179,18 @@ declare namespace Isc {
 		 * (Read only) The column number occupied by a Portlet within a PortalLayout.
 		 * Flags: IR
 		 */
-		readonly colNum?: number /* int */;
+		readonly colNum?: int;
 		/** 
 		 * (Read only) The position occupied by a Portlet within a PortalLayout row
 		 * (generally 0, unless there is more than one Portlet in the row).
 		 * Flags: IR
 		 */
-		readonly position?: number /* int */;
+		readonly position?: int;
 		/** 
 		 * (Read only) The row number occupied by a Portlet within a PortalLayout column.
 		 * Flags: IR
 		 */
-		readonly rowNum?: number /* int */;
+		readonly rowNum?: int;
 	} // PortalPosition
 
 	export interface PortalPositionStatic {
@@ -3101,32 +3206,32 @@ declare namespace Isc {
 		/**  
 		 *  Returns true if this string contains the specified substring.
 		 * 
-		 * @param {string} substring - string to look for
+		 * @param {String} substring - string to look for
 		 * @return {boolean} true == this string contains the substring
 		 */
-		contains?(substring:string /* String */): boolean; 
+		contains?(substring:String): boolean; 
 
 		/**  
 		 *  Returns true if this string ends with another string, or if the other string
 		 * occurs in this string beginning at position - substring.length.
 		 * 
 		 * 
-		 * @param {string} substring - other string to check
-		 * @param {number} position - optional position in this string. Defaults to the length of this string.
+		 * @param {String} substring - other string to check
+		 * @param {int} position - optional position in this string. Defaults to the length of this string.
 		 * @return {boolean} <code>true</code> if <code>substring</code> occurs within this string ending with <code>position - 1</code>.
 		 */
-		endsWith?(substring:string /* String */, position?:number /* int */): boolean; 
+		endsWith?(substring:String, position?:int): boolean; 
 
 		/**  
 		 *  Returns true if this string starts with another string, or if the other string
 		 * occurs at the given position within this string.
 		 * 
 		 * 
-		 * @param {string} substring - other string to check
-		 * @param {number} position - optional position in this string. Defaults to 0.
+		 * @param {String} substring - other string to check
+		 * @param {int} position - optional position in this string. Defaults to 0.
 		 * @return {boolean} <code>true</code> if <code>substring</code> occurs within this string at position <code>position</code>.
 		 */
-		startsWith?(substring:string /* String */, position?:number /* int */): boolean; 
+		startsWith?(substring:String, position?:int): boolean; 
 
 	} // String
 
@@ -3137,10 +3242,10 @@ declare namespace Isc {
 		 *  Tests whether the given string is a valid JavaScript identifier.
 		 * 
 		 * 
-		 * @param {string} string - the string to test.
+		 * @param {String} string - the string to test.
 		 * @return {boolean} true if string is a valid JavaScript identifier; false otherwise.
 		 */
-		isValidID(string:string /* String */): boolean; 
+		isValidID(string:String): boolean; 
 
 	} // StringStatic
 
@@ -3186,7 +3291,7 @@ declare namespace Isc {
 		 * has an effect on the innermost headerLevel.
 		 * Flags: IR
 		 */
-		readonly headerWidth?: number /* integer */;
+		readonly headerWidth?: Integer;
 		/** 
 		 * (Read only) Optional sparse array of titles for the spans on this headerLevel. If a given span in this
 		 * headerLevel has a corresponding entry in this array, it will be used as the span's title.
@@ -3196,7 +3301,7 @@ declare namespace Isc {
 		 * for further customization.
 		 * Flags: IR
 		 */
-		readonly titles?: Array<string> /* Array of String */;
+		readonly titles?: Array<String> /* Array of String */;
 		/** 
 		 * (Read only) Unit of time shown at this level of header.
 		 * Flags: IR
@@ -3216,16 +3321,27 @@ declare namespace Isc {
 		 * @param {HeaderLevel} headerLevel - a reference to this headerLevel
 		 * @param {Date} startDate - the start of the date-range covered by this span in this level
 		 * @param {Date} endDate - the end of the date-range covered by this span in this level - may be null
-		 * @param {string} defaultValue - the default title as generated by the Timeline
+		 * @param {String} defaultValue - the default title as generated by the Timeline
 		 * @param {Calendar} viewer - a reference to the Calendar or Timeline
-		 * @return {string} The formatted title for the values passed in
+		 * @return {HTMLString} The formatted title for the values passed in
 		 */
-		titleFormatter?(headerLevel:HeaderLevel, startDate:Date, endDate:Date, defaultValue:string /* String */, viewer:Calendar): string /* HTMLString */; 
+		titleFormatter?(headerLevel:HeaderLevel, startDate:Date, endDate:Date, defaultValue:String, viewer:Calendar): HTMLString; 
 
 	} // HeaderLevel
 
 	export interface HeaderLevelStatic {
 	} // HeaderLevelStatic
+
+
+	/**
+	 * Boolean object. Attributes, parameters, or return values declared as Boolean
+	 * may be null. Contrast with boolean. 
+	 */
+	export interface Boolean {
+	} // Boolean
+
+	export interface BooleanStatic {
+	} // BooleanStatic
 
 
 	/**
@@ -3242,7 +3358,7 @@ declare namespace Isc {
 		 * the Developer Console.
 		 * Flags: IRW
 		 */
-		readonly actionURL?: string /* URL */;
+		readonly actionURL?: URL;
 		/** 
 		 * (Read only, Advanced) Advanced flag to avoid a potential memory leak in Internet Explorer 9 for requests
 		 * with JSON formatted responses.
@@ -3264,12 +3380,14 @@ declare namespace Isc {
 		 * 
 		 * Note: This memory leak and workaround is discussed further in the online 
 		 * <a href="http://forums.smartclient.com/showthread.php?t=8159">SmartClient FAQ</a>.
+		 * boolean - Null not allowed
 		 * Flags: IRA
 		 */
 		readonly allowIE9Leak?: boolean;
 		/** 
 		 * (Advanced) For xmlHttp transport + httpMethod: "GET" only, set to true to force a conditional
 		 * GET request even if the browser thinks it has a current cached response.
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly bypassCache?: boolean /* Boolean */;
@@ -3314,7 +3432,7 @@ declare namespace Isc {
 		 * scriptInclude.
 		 * Flags: IRW
 		 */
-		readonly callbackParam?: string /* String */;
+		readonly callbackParam?: String;
 		/** 
 		 * An object to be held onto for the duration of the RPC turnaround to track
 		 * application-specific context.
@@ -3338,6 +3456,7 @@ declare namespace Isc {
 		 * It is not required to set containsCredentials, however, it does typically
 		 * simplify relogin logic by separating the handling of RPCs that are login attempts from RPCs
 		 * that are not.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: relogin
 		 */
 		readonly containsCredentials?: boolean /* Boolean */;
@@ -3346,7 +3465,7 @@ declare namespace Isc {
 		 * RPCRequest.httpMethod is set to "POST".
 		 * Flags: IRW
 		 */
-		readonly contentType?: string /* String */;
+		readonly contentType?: String;
 		/** 
 		 * This attribute specifies the payload of the RPCRequest. 
 		 * 
@@ -3386,7 +3505,7 @@ declare namespace Isc {
 		 * for details.
 		 * Flags: IRW
 		 */
-		readonly data?: string | any | any /* String | Record | Object */;
+		readonly data?: String | Record | any /* String | Record | Object */;
 		/** 
 		 * (Advanced) If enabled, causes the RPCRequest to download the requested resource as a file, either 
 		 * showing the browser's Save dialog or displaying the file-content in 
@@ -3394,12 +3513,14 @@ declare namespace Isc {
 		 * 
 		 * Setting this attribute to true means that no callback will be fired and implies that the 
 		 * request will silently use RPCRequest.transport','transport: "hiddenFrame".
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly downloadResult?: boolean /* Boolean */;
 		/** 
 		 * (Advanced) When RPCRequest.downloadResult','downloadResult is true, setting this attribute to
 		 * true causes the content of the downloaded file to be displayed in a new browser window.
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly downloadToNewWindow?: boolean /* Boolean */;
@@ -3435,6 +3556,7 @@ declare namespace Isc {
 		 * 
 		 * This feature relies on the XMLHttpRequest object which can be disabled by end-users in some
 		 * supported browsers. See platformDependencies for more information.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: viewLoading
 		 */
 		readonly evalResult?: boolean /* Boolean */;
@@ -3464,19 +3586,20 @@ declare namespace Isc {
 		 * are supported by the Safari browser previous to version 3.0.
 		 * Flags: IRW
 		 */
-		readonly httpMethod?: string /* String */;
+		readonly httpMethod?: String;
 		/** 
 		 * (Read only) The proxy URL to use for this request (if RPCRequest.useHttpProxy is set for this
 		 * request). If unset, the value of RPCManager.httpProxyURL will be used instead.
 		 * Flags: IR
 		 */
-		readonly httpProxyURL?: string /* String */;
+		readonly httpProxyURL?: String;
 		/** 
 		 * (Advanced) When set to true, no reply is expected from the server. However, if a reply is received, it will
 		 * be processed.
 		 * 
 		 * Note: setting this to true, forces RPCRequest.sendNoQueue to true for
 		 * this request.
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly ignoreTimeout?: boolean /* Boolean */;
@@ -3484,6 +3607,7 @@ declare namespace Isc {
 		 * (Read only) If enabled and request is applied to RPCManager.cacheScreens or
 		 * RPCManager.loadScreen indicates that
 		 * referenced DataSources should be loaded in mock mode.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly mockMode?: boolean;
@@ -3493,6 +3617,7 @@ declare namespace Isc {
 		 * 
 		 * To enable this globally for all responses you can set RPCManager.omitNullMapValuesInResponse
 		 * in server_properties','server.properties.
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly omitNullMapValuesInResponse?: boolean /* Boolean */;
@@ -3547,6 +3672,7 @@ declare namespace Isc {
 		 * 
 		 * Setting this to true automatically defaults RPCRequest.serverOutputAsString to true
 		 * as well.
+		 * boolean - Null not allowed
 		 * Flags: IRWA
 		 */
 		readonly paramsOnly?: boolean;
@@ -3555,13 +3681,13 @@ declare namespace Isc {
 		 * prompt string from the first request in the queue is the one that is shown to the user.
 		 * Flags: IRW, Group: rpcPrompt
 		 */
-		readonly prompt?: string /* HTMLString */;
+		readonly prompt?: HTMLString;
 		/** 
 		 * Controls the cursor shown when RPCManager.promptStyle is set to
 		 * "cursor" for this request only. Defaults to RPCManager.promptCursor.
 		 * Flags: IRW, Group: rpcPrompt
 		 */
-		readonly promptCursor?: string /* String */;
+		readonly promptCursor?: String;
 		/** 
 		 * (Advanced) Overrides RPCManager.promptDelay for this request only. Defaults to RPCManager.promptDelay.
 		 * 
@@ -3577,6 +3703,7 @@ declare namespace Isc {
 		readonly promptStyle?: PromptStyle;
 		/** 
 		 * (Advanced) When set to true, this request is sent to the server immediately, bypassing any current queue.
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly sendNoQueue?: boolean /* Boolean */;
@@ -3602,6 +3729,7 @@ declare namespace Isc {
 		 * ViewLoader for loading SmartClient components, XMLTools.loadXML for loading
 		 * XML, RPCRequest.evalResult for loading <a href='http://www.json.org/' target='_blank'>JSON</a>, and
 		 * DataSource for loading structured data in various formats.
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly serverOutputAsString?: boolean /* Boolean */;
@@ -3614,6 +3742,7 @@ declare namespace Isc {
 		 * 
 		 * If promptStyle is set to "cursor" for the request that specified showPrompt: true, then the
 		 * entire queue uses the "cursor" style for the prompt.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: rpcPrompt
 		 */
 		readonly showPrompt?: boolean /* Boolean */;
@@ -3623,6 +3752,7 @@ declare namespace Isc {
 		 * which is generally what you want if you're returning new components from the server.
 		 * 
 		 * This also effects components loaded via the RPCManager.loadScreen API.
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly suppressAutoDraw?: boolean /* Boolean */;
@@ -3655,7 +3785,7 @@ declare namespace Isc {
 		 * Messaging (see <a href='http://smartclient.com/product' target='_blank'>http://smartclient.com/product</a>).
 		 * Flags: IRWA
 		 */
-		readonly timeout?: number /* int */;
+		readonly timeout?: int;
 		/** 
 		 * (Advanced) Selects the transport used for this RPCRequest. If unset, the value of
 		 * RPCManager.defaultTransport will be used.
@@ -3696,6 +3826,7 @@ declare namespace Isc {
 		 * 
 		 * You can also set RPCManager.useHttpProxy:false to avoid ever using the
 		 * HttpProxyServlet.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly useHttpProxy?: boolean;
@@ -3718,6 +3849,7 @@ declare namespace Isc {
 		 * 
 		 * Setting useSimpleHttp to true also automatically sets
 		 * RPCRequest.serverOutputAsString to true as well.
+		 * Boolean - Null allowed
 		 * Flags: IRWA
 		 */
 		readonly useSimpleHttp?: boolean /* Boolean */;
@@ -3739,6 +3871,7 @@ declare namespace Isc {
 		 * XMLHttp transport is unavailable (this can happen if the end user is using Internet Explorer
 		 * and has disabled ActiveX). You can query the availability of XMLHttp by calling
 		 * RPCManager.xmlHttpRequestAvailable
+		 * boolean - Null not allowed
 		 * Flags: IRWA
 		 */
 		readonly useXmlHttpRequest?: boolean;
@@ -3750,6 +3883,7 @@ declare namespace Isc {
 		 * that have an error status and must handle them.
 		 * 
 		 * See also the error handling section in the RPCManager docs.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: errorHandling
 		 */
 		readonly willHandleError?: boolean /* Boolean */;
@@ -3767,6 +3901,7 @@ declare namespace Isc {
 		 * 
 		 * Note that Internet Explorer 10 and 11 do not send cookies as part of user credentials:
 		 * <a href='https://connect.microsoft.com/IE/Feedback/Details/759587/' target='_blank'>IE10 doesn't support cookies on cross origin XMLHttpRequest withCredentials=true</a>.
+		 * Boolean - Null allowed
 		 * Flags: IRA
 		 */
 		readonly withCredentials?: boolean /* Boolean */;
@@ -3779,6 +3914,7 @@ declare namespace Isc {
 		 * RPCRequest.promptCursor.
 		 * 
 		 * If left unspecified, the default value is set by RPCManager.useCursorTracker.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: rpcPrompt
 		 */
 		readonly useCursorTracker?: boolean;
@@ -3820,7 +3956,7 @@ declare namespace Isc {
 		 * are set then Gradient.colorStops','colorStops is ignored.
 		 * Flags: IR
 		 */
-		readonly endColor?: string /* CSSColor */;
+		readonly endColor?: CSSColor;
 		/** 
 		 * (Read only) Identifier which can be used by one or more DrawItems when gradient is assigned
 		 * to DrawPane.gradients. The ID property is optional when gradient is assigned directly
@@ -3835,7 +3971,7 @@ declare namespace Isc {
 		 * are set then Gradient.colorStops','colorStops is ignored.
 		 * Flags: IR
 		 */
-		readonly startColor?: string /* CSSColor */;
+		readonly startColor?: CSSColor;
 	} // Gradient
 
 	export interface GradientStatic {
@@ -3848,6 +3984,7 @@ declare namespace Isc {
 	export interface SerializationContext {
 		/** 
 		 * (Read only) Enables flat serialization mode, as described for DSRequest.useFlatFields.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly useFlatFields?: boolean;
@@ -3883,16 +4020,19 @@ declare namespace Isc {
 	export interface DSLoadSettings {
 		/** 
 		 * Forcibly reload a dataSource if it's already loaded.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly forceReload?: boolean /* Boolean */;
 		/** 
 		 * Load parent DataSources
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly loadParents?: boolean /* Boolean */;
 		/** 
 		 * Place loaded DataSource into DataSource.mockMode','mockMode
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly mockMode?: boolean /* Boolean */;
@@ -3917,13 +4057,13 @@ declare namespace Isc {
 		 * in the auto-created object
 		 * Flags: IRW
 		 */
-		readonly nameProperty?: string /* String */;
+		readonly nameProperty?: String;
 		/** 
 		 * What to rename the array of children once discovered.
 		 * If not set, it will default to the value of Tree.childrenProperty inside discoverTree()
 		 * Flags: IRW
 		 */
-		readonly newChildrenProperty?: string /* String */;
+		readonly newChildrenProperty?: String;
 		/** 
 		 * Determines how to scan for the Tree.childrenProperty
 		 * Flags: IRW
@@ -3940,7 +4080,7 @@ declare namespace Isc {
 		 * of the property that held the children
 		 * Flags: IRW
 		 */
-		readonly typeProperty?: string /* String */;
+		readonly typeProperty?: String;
 	} // DiscoverTreeSettings
 
 	export interface DiscoverTreeSettingsStatic {
@@ -3965,6 +4105,7 @@ declare namespace Isc {
 	export interface EditNode extends PaletteNode {
 		/** 
 		 * See PaletteNode.canDuplicate.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canDuplicate?: boolean /* Boolean */;
@@ -3993,10 +4134,11 @@ declare namespace Isc {
 		 * , for example, "ListGrid".
 		 * Flags: IR
 		 */
-		readonly type?: string /* SCClassName */;
+		readonly type?: SCClassName;
 		/** 
 		 * (Read only) Shortcut property to be applied to the
 		 * EditNode.liveObject','liveObject.Canvas.editProxy','editProxy when created.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly useEditMask?: boolean /* Boolean */;
@@ -4017,7 +4159,7 @@ declare namespace Isc {
 		 * entire summary.
 		 * Flags: IRW
 		 */
-		readonly badFormulaResultValue?: string /* String */;
+		readonly badFormulaResultValue?: String;
 		/** 
 		 * (Advanced) The field value to treat as an invalid value from a summary row (see 
 		 * ListGrid.showGridSummary or ListGrid.showGroupSummary) or as an invalid value
@@ -4027,7 +4169,7 @@ declare namespace Isc {
 		 * entire summary.
 		 * Flags: IRWA
 		 */
-		readonly invalidSummaryValue?: string /* String */;
+		readonly invalidSummaryValue?: String;
 	} // SummaryConfiguration
 
 	export interface SummaryConfigurationStatic {
@@ -4042,12 +4184,12 @@ declare namespace Isc {
 		 * (Read only) For bar and column charts, thickness of the bar representing this data value.
 		 * Flags: IR
 		 */
-		readonly barThickness?: number /* int */;
+		readonly barThickness?: int;
 		/** 
 		 * (Read only) For pie mode only, start angle of the segment for the data value.
 		 * Flags: IR
 		 */
-		readonly endAngle?: number /* int */;
+		readonly endAngle?: int;
 		/** 
 		 * (Read only) FacetValues for the data value.
 		 * Flags: IR
@@ -4057,7 +4199,7 @@ declare namespace Isc {
 		 * (Read only) For pie mode only, the radius of the segment for the data value.
 		 * Flags: IR
 		 */
-		readonly radius?: number /* Double */;
+		readonly radius?: Double;
 		/** 
 		 * (Read only) The data record of the data point from which this drawnValue was created.
 		 * 
@@ -4073,24 +4215,24 @@ declare namespace Isc {
 		 * (Read only) For pie mode only, start angle of the segment for the data value.
 		 * Flags: IR
 		 */
-		readonly startAngle?: number /* int */;
+		readonly startAngle?: int;
 		/** 
 		 * (Read only) Data value this drawnValue represents.
 		 * Flags: IR
 		 */
-		readonly value?: number /* float */;
+		readonly value?: Float /* float */;
 		/** 
 		 * (Read only) X coordinate where the data value is rendered. In pie mode, returns the X coordinate of the
 		 * center of the pie where the data value appears.
 		 * Flags: IR
 		 */
-		readonly x?: number /* int */;
+		readonly x?: int;
 		/** 
 		 * (Read only) Y coordinate where the data value is rendered. In pie mode, returns the Y coordinate of the
 		 * center of the pie where the data value appears.
 		 * Flags: IR
 		 */
-		readonly y?: number /* int */;
+		readonly y?: int;
 	} // DrawnValue
 
 	export interface DrawnValueStatic {
@@ -4114,7 +4256,7 @@ declare namespace Isc {
 		 * SimpleType.groupingModes','data-type.
 		 * Flags: IR
 		 */
-		readonly grouping?: string /* String */;
+		readonly grouping?: String;
 		/** 
 		 * (Read only) A normalizer function which this groupSpecifier will use to group.
 		 * Flags: IR
@@ -4124,7 +4266,7 @@ declare namespace Isc {
 		 * (Read only) The property name, eg a ListGridField','field name, to which this groupSpecifier applies.
 		 * Flags: IR
 		 */
-		readonly property?: string /* String */;
+		readonly property?: String;
 	} // GroupSpecifier
 
 	export interface GroupSpecifierStatic {
@@ -4141,25 +4283,25 @@ declare namespace Isc {
 		 * bounding box of the DrawItem to which it is applied.
 		 * Flags: IR
 		 */
-		readonly x1?: string /* String */;
+		readonly x1?: String;
 		/** 
 		 * (Read only) X coordinate of the end point. This can be a number or a percentage of the width of the
 		 * bounding box of the DrawItem to which it is applied.
 		 * Flags: IR
 		 */
-		readonly x2?: string /* String */;
+		readonly x2?: String;
 		/** 
 		 * (Read only) Y coordinate of the start point. This can be a number or a percentage of the height of the
 		 * bounding box of the DrawItem to which it is applied.
 		 * Flags: IR
 		 */
-		readonly y1?: string /* String */;
+		readonly y1?: String;
 		/** 
 		 * (Read only) Y coordinate of the end point. This can be a number or a percentage of the height of the
 		 * bounding box of the DrawItem to which it is applied.
 		 * Flags: IR
 		 */
-		readonly y2?: string /* String */;
+		readonly y2?: String;
 	} // LinearGradient
 
 	export interface LinearGradientStatic extends GradientStatic {
@@ -4180,6 +4322,7 @@ declare namespace Isc {
 		/** 
 		 * (Read only) Default property name denoting whether this record is enabled. Property name may be
 		 * modified for some grid via ListGrid.recordEnabledProperty.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly enabled?: boolean;
@@ -4205,11 +4348,13 @@ declare namespace Isc {
 		 * (Read only) This attribute controls whether or not the expand/collapse UI control is shown on the
 		 * header of this section. Any section can still be expanded/collapsed programmatically,
 		 * regardless of this setting.
+		 * Boolean - Null allowed
 		 * Flags: I
 		 */
 		readonly canCollapse?: boolean /* Boolean */;
 		/** 
 		 * (Read only) When explicitly set to false, disallows drop before this member in the Layout.
+		 * boolean - Null not allowed
 		 * Flags: I, Group: layoutMember
 		 */
 		readonly canDropBefore?: boolean;
@@ -4218,6 +4363,7 @@ declare namespace Isc {
 		 * reorder, if SectionStack.canReorderSections is true.
 		 * You can also disable dropping other sections before this one by setting 
 		 * Canvas.canDropBefore','canDropBefore to false.
+		 * boolean - Null not allowed
 		 * Flags: I
 		 */
 		readonly canReorder?: boolean;
@@ -4227,6 +4373,7 @@ declare namespace Isc {
 		 * SectionStack.canTabToHeaders.
 		 * 
 		 * See accessibility.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canTabToHeader?: boolean;
@@ -4236,6 +4383,7 @@ declare namespace Isc {
 		 * 
 		 * This feature is supported only in browsers that support the CSS UI text-overflow
 		 * property (IE6+, Firefox 7+, Safari, Chrome, Opera 9+).
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly clipTitle?: boolean /* Boolean */;
@@ -4257,6 +4405,7 @@ declare namespace Isc {
 		 * set to false in which case they default to the expanded state. This
 		 * attribute allows you to explicitly control the expand/collapse state of the
 		 * section by overriding the above default behavior.
+		 * boolean - Null not allowed
 		 * Flags: I
 		 */
 		readonly expanded?: boolean;
@@ -4264,6 +4413,7 @@ declare namespace Isc {
 		 * (Read only) Sections default to the visible state. This
 		 * attribute allows you to explicitly control the visible/hidden state of the
 		 * section by overriding the above default behavior.
+		 * boolean - Null not allowed
 		 * Flags: I
 		 */
 		readonly hidden?: boolean;
@@ -4275,7 +4425,7 @@ declare namespace Isc {
 		 * Not shown if SectionStackSection.canCollapse is false.
 		 * Flags: IR
 		 */
-		readonly icon?: string /* SCImgURL */;
+		readonly icon?: SCImgURL;
 		/** 
 		 * (Read only) Optional ID for the section. If SectionStack.useGlobalSectionIDs is true, this property will
 		 * be applied to the generated SectionStackHeader widget as a standard widget ID, meaning
@@ -4292,7 +4442,7 @@ declare namespace Isc {
 		 * SectionStack.useGlobalSectionIDs to false.
 		 * Flags: IR
 		 */
-		readonly ID?: string /* String */;
+		readonly ID?: String;
 		/** 
 		 * (Read only) List of Canvases that constitute the section. These Canvases will be shown and hidden
 		 * together.
@@ -4307,22 +4457,25 @@ declare namespace Isc {
 		 * (should start with a letter and not contain space or special characters such as "*").
 		 * Flags: IR
 		 */
-		readonly name?: string /* String */;
+		readonly name?: String;
 		/** 
 		 * (Read only) If set to false, then the items in this section will not be resized by sectionHeader
 		 * repositioning. You may also set this flag directly on any of the items in any section to
 		 * cause that item to not be resizeable.
+		 * boolean - Null not allowed
 		 * Flags: I
 		 */
 		readonly resizeable?: boolean;
 		/** 
 		 * If true and the title is clipped, then a hover containing the full title of this section header
 		 * is enabled.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: hovers
 		 */
 		readonly showClippedTitleOnHover?: boolean /* Boolean */;
 		/** 
 		 * (Read only) If true, a header will be shown for this section. If false, no header will be shown.
+		 * Boolean - Null allowed
 		 * Flags: I
 		 */
 		readonly showHeader?: boolean /* Boolean */;
@@ -4330,7 +4483,7 @@ declare namespace Isc {
 		 * (Read only) Title to show for the section
 		 * Flags: IR
 		 */
-		readonly title?: string /* HTMLString */;
+		readonly title?: HTMLString;
 	} // SectionStackSection
 
 	export interface SectionStackSectionStatic {
@@ -4355,25 +4508,25 @@ declare namespace Isc {
 		 * To modify the value returned by this method, set DateUtil.dayNames
 		 * 
 		 * 
-		 * @return {string} Day name
+		 * @return {String} Day name
 		 */
-		getDayName?(): string /* String */; 
+		getDayName?(): String; 
 
 		/**  
 		 *  gets the default date separator string
 		 * 
-		 * @return {string} the default date separator
+		 * @return {String} the default date separator
 		 */
-		getDefaultDateSeparator?(): string /* String */; 
+		getDefaultDateSeparator?(): String; 
 
 		/**  
 		 *  Returns the fiscal week number of the current date, according to the global
 		 * DateUtil.setFiscalCalendar','FiscalCalendar.
 		 * 
 		 * @param {FiscalCalendar} fiscalCalendar - the object representing the starts of fiscal years
-		 * @return {number} the week number, offset from the start of the fiscal period
+		 * @return {int} the week number, offset from the start of the fiscal period
 		 */
-		getFiscalWeek?(fiscalCalendar?:FiscalCalendar): number /* int */; 
+		getFiscalWeek?(fiscalCalendar?:FiscalCalendar): int; 
 
 		/**  
 		 *  Returns the FiscalYear object appropriate for the the current date, according to the
@@ -4389,19 +4542,19 @@ declare namespace Isc {
 		 * set DateUtil.shortMonthNames
 		 * .
 		 * 
-		 * @return {string} Month name
+		 * @return {String} Month name
 		 */
-		getMonthName?(): string /* String */; 
+		getMonthName?(): String; 
 
 		/**  
 		 *  Return the abbreviated (up to 3 chars) day of week name for this date (Mon, Tue, etc).
 		 * To modify the value returned by this method, set DateUtil.shortDayNames
 		 * 
 		 * 
-		 * @param {number} length - Number of characters to return (Defaults to 3, can't be longer than 3)
-		 * @return {string} Abbreviated day name
+		 * @param {int} length - Number of characters to return (Defaults to 3, can't be longer than 3)
+		 * @return {String} Abbreviated day name
 		 */
-		getShortDayName?(length:number /* int */): string /* String */; 
+		getShortDayName?(length:int): String; 
 
 		/**  
 		 *  Return the abbreviated name of the month for this date (Jan, Feb, etc)
@@ -4409,68 +4562,68 @@ declare namespace Isc {
 		 * set DateUtil.shortMonthNames
 		 * .
 		 * 
-		 * @param {number} length - Number of characters to return (Defaults to 3, can't be longer than 3)
-		 * @return {string} Abbreviated month name (3 character string)
+		 * @param {int} length - Number of characters to return (Defaults to 3, can't be longer than 3)
+		 * @return {String} Abbreviated month name (3 character string)
 		 */
-		getShortMonthName?(length:number /* int */): string /* String */; 
+		getShortMonthName?(length:int): String; 
 
 		/**  
 		 *  Return a 2 digit year for this date.
 		 * 
-		 * @return {string} year number, padded to 2 characters
+		 * @return {String} year number, padded to 2 characters
 		 */
-		getShortYear?(): string /* String */; 
+		getShortYear?(): String; 
 
 		/**  
 		 *  Returns an integer containing the week number.
 		 * 
-		 * @return {number} week number, starting with 1
+		 * @return {int} week number, starting with 1
 		 */
-		getWeek?(): number /* int */; 
+		getWeek?(): int; 
 
 		/**  
 		 *  Sets a new default separator that will be used when formatting dates. By default, this
 		 * is a forward slash character: "/"
 		 * 
-		 * @param {string} separator - separator to use in dates
+		 * @param {String} separator - separator to use in dates
 		 */
-		setDefaultDateSeparator?(separator:string /* String */): void; 
+		setDefaultDateSeparator?(separator:String): void; 
 
 		/**  
 		 *  Return this date in the format (UTC timezone):
 		 * YYYYMMDDTHHMMSS[Z]
 		 * 
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toDateStamp?(): string /* String */; 
+		toDateStamp?(): String; 
 
 		/**  
 		 *  Return this date in the format: DD/MM/YYYY
 		 * 
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toEuropeanShortDate?(): string /* String */; 
+		toEuropeanShortDate?(): String; 
 
 		/**  
 		 *  Return this date in the format: DD/MM/YYYY HH:MM.
 		 * 
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toEuropeanShortDateTime?(): string /* String */; 
+		toEuropeanShortDateTime?(): String; 
 
 		/**  
 		 *  Return the date in this format: YYYY/MM/DD
 		 * 
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toJapanShortDate?(): string /* String */; 
+		toJapanShortDate?(): String; 
 
 		/**  
 		 *  Return this date in the format: YYYY/MM/DD HH:MM:SS
 		 * 
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toJapanShortDateTime?(): string /* String */; 
+		toJapanShortDateTime?(): String; 
 
 		/**  
 		 *  Returns the date as a formatted string using the format set up via the
@@ -4478,9 +4631,9 @@ declare namespace Isc {
 		 * method is "toLocaleString".
 		 * 
 		 * @param {DateDisplayFormat} format - Optional Format for the date returned
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toNormalDate?(format:DateDisplayFormat): string /* String */; 
+		toNormalDate?(format:DateDisplayFormat): String; 
 
 		/**  
 		 *  Returns the datetime as a formatted string using the format set up via the
@@ -4489,16 +4642,16 @@ declare namespace Isc {
 		 * @param {DateDisplayFormat} format - Optional Format for the date returned
 		 * @param {boolean} useCustomTimezone - If a custom timezone has been set via Time.setDefaultDisplayTimezone(), by default date formatters will respect this timezone.
 		 * To suppress this behavior, this parameter should be set to false.
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toNormalDatetime?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): string /* String */; 
+		toNormalDatetime?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): String; 
 
 		/**  
 		 * (Advanced)  Return this date in 'serialized' format YYYY-MM-DD HH:MM:SS
 		 * 
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toSerializeableDate?(): string /* String */; 
+		toSerializeableDate?(): String; 
 
 		/**  
 		 *  Returns the date as a formatted string using the format set up via the
@@ -4507,9 +4660,9 @@ declare namespace Isc {
 		 * @param {DateDisplayFormat} format - Optional Format for the date returned
 		 * @param {boolean} useCustomTimezone - If a custom timezone has been set via Time.setDefaultDisplayTimezone(), by default date formatters will respect this timezone.
 		 * to suppress this behavior, this parameter should be set to false.
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toShortDate?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): string /* String */; 
+		toShortDate?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): String; 
 
 		/**  
 		 *  Returns the datetime as a formatted string using the format set up via the
@@ -4518,24 +4671,24 @@ declare namespace Isc {
 		 * @param {DateDisplayFormat} format - Optional Format for the date returned
 		 * @param {boolean} useCustomTimezone - If a custom timezone has been set via Time.setDefaultDisplayTimezone(), by default date formatters will respect this timezone.
 		 * to suppress this behavior, this parameter should be set to false.
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toShortDateTime?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): string /* String */; 
+		toShortDateTime?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): String; 
 
 		/**  
 		 *  Return this date in the format: MM/DD/YYYY
 		 * 
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toUSShortDate?(): string /* String */; 
+		toUSShortDate?(): String; 
 
 		/**  
 		 *  Return this date in the format: MM/DD/YYYY HH:MM
 		 * 
 		 * 
-		 * @return {string} formatted date string
+		 * @return {String} formatted date string
 		 */
-		toUSShortDateTime?(): string /* String */; 
+		toUSShortDateTime?(): String; 
 
 	} // Date
 
@@ -4606,7 +4759,7 @@ declare namespace Isc {
 		 * (Sunday -> Thursday).
 		 * Flags: IR
 		 */
-		readonly weekendDays?: Array<number> /* Array of int */;
+		readonly weekendDays?: Array<int> /* Array of int */;
 
 	/* Methods */
 		/**
@@ -4619,16 +4772,16 @@ declare namespace Isc {
 		/**
 		 * (DEPRECATED) Use DateUtil.compareDates.
 		 * @deprecated Use DateUtil.compareDates.
-		 * @return {number} 0 if equal, -1 if first date &gt; second date, 1 if second date &gt; first date
+		 * @return {int} 0 if equal, -1 if first date &gt; second date, 1 if second date &gt; first date
 		 */
-		compareDates(): number /* int */; 
+		compareDates(): int; 
 
 		/**
 		 * (DEPRECATED) Use DateUtil.compareLogicalDates.
 		 * @deprecated Use DateUtil.compareLogicalDates.
-		 * @return {number} 0 if equal, -1 if first date &gt; second date, 1 if second date &gt;                      first date.  Returns false if either argument is not a date
+		 * @return {int} 0 if equal, -1 if first date &gt; second date, 1 if second date &gt;                      first date.  Returns false if either argument is not a date
 		 */
-		compareLogicalDates(): number /* int */; 
+		compareLogicalDates(): int; 
 
 /* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
 
@@ -4659,16 +4812,16 @@ declare namespace Isc {
 		/**
 		 * (DEPRECATED) Use DateUtil.getDefaultDateSeparator.
 		 * @deprecated Use DateUtil.getDefaultDateSeparator.
-		 * @return {string} the default date separator
+		 * @return {String} the default date separator
 		 */
-		getDefaultDateSeparator(): string /* String */; 
+		getDefaultDateSeparator(): String; 
 
 		/**
 		 * (DEPRECATED) Use DateUtil.getFirstDayOfWeek.
 		 * @deprecated Use DateUtil.getFirstDayOfWeek.
-		 * @return {number} the number of the day being used as the first day of the week
+		 * @return {int} the number of the day being used as the first day of the week
 		 */
-		getFirstDayOfWeek(): number /* int */; 
+		getFirstDayOfWeek(): int; 
 
 		/**
 		 * (DEPRECATED) Use DateUtil.getFiscalCalendar.
@@ -4687,9 +4840,9 @@ declare namespace Isc {
 		/**
 		 * (DEPRECATED) Use DateUtil.getFiscalWeek.
 		 * @deprecated Use DateUtil.getFiscalWeek.
-		 * @return {number} the fiscal week for the passed date
+		 * @return {int} the fiscal week for the passed date
 		 */
-		getFiscalWeek(): number /* int */; 
+		getFiscalWeek(): int; 
 
 		/**
 		 * (DEPRECATED) Use DateUtil.getFiscalYear.
@@ -4701,9 +4854,9 @@ declare namespace Isc {
 		/**
 		 * (DEPRECATED) Use DateUtil.getInputFormat.
 		 * @deprecated Use DateUtil.getInputFormat.
-		 * @return {string} the current inputFormat for dates
+		 * @return {String} the current inputFormat for dates
 		 */
-		getInputFormat(): string /* String */; 
+		getInputFormat(): String; 
 
 		/**
 		 * (DEPRECATED) Use DateUtil.getLogicalDateOnly.
@@ -4722,9 +4875,9 @@ declare namespace Isc {
 		/**
 		 * (DEPRECATED) Use DateUtil.getWeekendDays.
 		 * @deprecated Use DateUtil.getWeekendDays.
-		 * @return {Array<number>} array of weekend days
+		 * @return {Array<Integer>} array of weekend days
 		 */
-		getWeekendDays(): Array<number> /* Array of integer */; 
+		getWeekendDays(): Array<Integer> /* Array of Integer */; 
 
 		/**
 		 * (DEPRECATED) Use DateUtil.parseInput.
@@ -4803,6 +4956,2649 @@ declare namespace Isc {
 
 
 	/**
+	 * Metadata about a DataSourceField, including its type and validators. 
+	 */
+	export interface DataSourceField {
+		/** 
+		 * (Read only) Affects whether client dsRequests can request summaries for this field.
+		 * 
+		 * Default setting of null means that the DataSource-wide default setting
+		 * DataSource.allowClientRequestedSummaries is used for this field.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: serverSummaries
+		 */
+		readonly allowClientRequestedSummaries?: boolean;
+		/** 
+		 * (Read only) Setting audit to false explicitly indicates that this field will
+		 * not be saved to the audit DataSource when DataSource.audit','auditing is enabled.
+		 * boolean - Null not allowed
+		 * Flags: IR
+		 */
+		readonly audit?: boolean;
+		/** 
+		 * (Read only) Indicates that values for this field are automatically generated by the database or ORM 
+		 * provider. Setting this flag makes the field behave somewhat like a 
+		 * DataSourceField.sequenceName','sequence field, in that server-side logic does not expect client code
+		 * to provide values for the field on "add" operations. However, it is not entirely the same
+		 * as a sequence:
+		 * Sequences must be integers, whereas autoGenerated fields can be of any type
+		 * SmartClient Server's DataSource implementations are capable of discovering the value 
+		 * that was generated by the database for sequence fields, which may not be possible 
+		 * with an autoGenerated field. See the docs for 
+		 * DataSourceField.customInsertExpression','customInsertExpression for a discussion
+		 * of this
+		 * 
+		 * Unrelated to the autoGenerated flag, you have a general ability for field 
+		 * values to be generated by application code (as opposed to being generated by the database
+		 * or ORM provider). For example, you can use dmiOverview','DMI methods, 
+		 * serverScript','server scripts, or customQuerying','custom SQL. (Note, 
+		 * if you want to have application code generate values for primaryKey fields, you may need to
+		 * use an OperationBinding','operationBinding that specifies 
+		 * OperationBinding.providesMissingKeys','providesMissingKeys).
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: dataType
+		 */
+		readonly autoGenerated?: boolean;
+		/** 
+		 * (Read only) If explicitly set to false, switches off automatic quoting and escaping of values in
+		 * custom expressions that are derived from Velocity evaluations.
+		 * 
+		 * By default, any part of a DataSourceField.customSelectExpression','customSelectExpression,
+		 * DataSourceField.customCriteriaExpression','customCriteriaExpression,
+		 * DataSourceField.customUpdateExpression','customUpdateExpression or 
+		 * DataSourceField.customInsertExpression','customInsertExpression that comes ultimately from evaluating
+		 * a Velocity expression, will be automatically quoted and escaped according to the syntax 
+		 * of the underlying database. We do this because "raw" values are vulnerable to 
+		 * <a href="http://en.wikipedia.org/wiki/SQL_injection">SQL injection attacks</a>.
+		 * 
+		 * However, it is possible that the exact SQL logic you desire for a custom expression cannot
+		 * be expressed without access to the raw, unquoted value. To work around this, you can either
+		 * use the special velocitySupport','$rawValue context variable, or you can set this
+		 * property to false to switch off auto-quoting completely for all custom expressions on this
+		 * field.
+		 * 
+		 * Warning: Bear in mind that it is dangerous to use raw values. There are some
+		 * cases where using the raw value is necessary, but even so, all such cases are likely to be
+		 * vulnerable to injection attacks. Generally, the presence of $rawValue in a 
+		 * custom expression, or any fields with autoQuoteCustomExpressions: false 
+		 * specified, should be viewed as a red flag.
+		 * boolean - Null not allowed
+		 * Flags: IR
+		 */
+		readonly autoQuoteCustomExpressions?: boolean;
+		/** 
+		 * (Read only) Controls whether, by default, DataBoundComponents consider this field editable. 
+		 * Set to false to draw this field read-only. 
+		 * 
+		 * For a field that should never be changed from the UI, consider using DataSourceField.canSave instead,
+		 * which will both mark a field as non-editable and reject any attempt to programmatically
+		 * change the value on the server (when using the SmartClient Server).
+		 * 
+		 * This attribute may not effect all dataBoundComponents - the 
+		 * DataBoundComponent.canEditFieldAttribute may be set at the component level to look
+		 * for a different attribute on the dataSourceField, and components allow developers to explicitly
+		 * override this default (see ListGridField.canEdit. FormItem.canEdit for example).
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly canEdit?: boolean;
+		/** 
+		 * (Read only) Dictates whether the data in this field be exported. Explicitly setting 
+		 * canExport to false overrides the setting on any component-fields, such
+		 * as ListGridField.canExport','ListGrid fields.
+		 * Boolean - Null allowed
+		 * Flags: IR
+		 */
+		readonly canExport?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Should the user be able to filter data by this field?
+		 * Affects whether this field will show up in dataBoundComponents with UI for filtering data.
+		 * 
+		 * boolean - Null not allowed
+		 * Flags: IR
+		 */
+		readonly canFilter?: boolean;
+		/** 
+		 * (Read only) Whether values in this field can be updated and saved to the dataSource.
+		 * 
+		 * If set to false, this field will default to being non-editable in standard editing
+		 * components (DynamicForm, editable ListGrid), but will be editable when displayed
+		 * for filtering purposes only (in a SearchForm or ListGrid.showFilterEditor','ListGrid\n filter editor. If DataSourceField.canEdit','canEdit is explicitly specified it will take 
+		 * precedence over this client-side behavior, but the server will still enforce the no-save
+		 * policy (described below).
+		 * 
+		 * NOTE: If you are using SmartClient Server and have specified canSave: false 
+		 * for a field in a DataSource definition (.ds.xml file), this is enforced on 
+		 * the server. This means that we will strip out any attempt to set the value of such a 
+		 * field before trying to process any update or add request, similar to what happens when 
+		 * a DataSourceField.editRequiresAuthentication','field-level declarative security check fails.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly canSave?: boolean;
+		/** 
+		 * When true, this field can only be used for sorting if the data is entirely client-side.
+		 * boolean - Null not allowed
+		 * Flags: IRW
+		 */
+		readonly canSortClientOnly?: boolean;
+		/** 
+		 * (Read only) If false, this property indicates that this field is considered "server only". This means:
+		 * 
+		 * Components cannot bind to the field; even if you explicitly add a field with the same 
+		 * name to your DataBoundComponent','dataBoundComponent, it will be dropped
+		 * If you are using SmartClient Server, the client will never be sent a value for the 
+		 * field
+		 * If you are using SmartClient Server, then similar to DataSourceField.canEdit','canEdit, no updates
+		 * to the field are allowed from the client. If you explicitly add a value for the field 
+		 * to, eg, a record you are passing to DataSource.updateData, the server will strip
+		 * the value out of the record before processing the update request.
+		 * 
+		 * canView:false is not the same thing as DataSourceField.hidden','hidden. Use 
+		 * canView:false when you want to prevent the client from ever seeing a field's 
+		 * definition or values; use hidden:true if it is fine from a security perspective
+		 * that a field's definition and values are sent to the browser, but the field should not by
+		 * default appear in user interface elements (but could do in some cases, like a special screen
+		 * for advanced users or administrators, for example).
+		 * 
+		 * Note that this property must be set explicitly to false to have an effect; a null or 
+		 * undefined setting is treated the same as true.
+		 * 
+		 * This property is used to implement field-level view security: failing a 
+		 * DataSourceField.viewRequiresAuthentication','viewRequiresAuthentication, 
+		 * DataSourceField.viewRequiresRole','viewRequiresRole or DataSourceField.viewRequires','viewRequires test is 
+		 * equivalent to setting canView:false on the field (and, indeed, from the 
+		 * client's perspective, the field <em>has</em> had canView:false set).
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly canView?: boolean;
+		/** 
+		 * (Read only) If true, this property indicates that this field will hold an explicit array of child nodes 
+		 * for the current node.
+		 * This has the same effect as specifying DataSource.childrenField to this field's 
+		 * name.
+		 * Boolean - Null allowed
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly childrenProperty?: boolean /* Boolean */;
+		/** 
+		 * (Read only) For a field that is DataSourceField.multiple','multiple:"true", controls the name of the XML tag used for each
+		 * subelement during DataSource.xmlSerialize.
+		 * 
+		 * If unset, the default tag name is "value" for a field of simple type, and for a field of
+		 * DataSource type, is the tagName or ID of the DataSource (as though
+		 * xmlSerialize() were called on the child DataSource).
+		 * Flags: IR, Group: xmlSerialize
+		 */
+		readonly childTagName?: String;
+		/** 
+		 * (Read only) See DataSource.tableCode.
+		 * Flags: R
+		 */
+		readonly columnCode?: String;
+		/** 
+		 * (Read only) Indicates that normal declarative security rules specified on this field are waived for 
+		 * rows that were created by the current user, as described in the discussion of 
+		 * DataSource.creatorOverrides','dataSource.creatorOverrides. This setting overrides 
+		 * dataSource.creatorOverrides, for this field only.
+		 * 
+		 * Note that field-level creatorOverrides is conceptually slightly different to
+		 * the setting at DataSource and OperationBinding levels. To give the example of a fetch 
+		 * operation, at the other two levels, it results in a limited set of rows being returned, 
+		 * rather than a security exception being thrown. At the field-level, it results in values 
+		 * for individual fields being present in those rows, rather than them being stripped out on
+		 * the server.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly creatorOverrides?: boolean;
+		/** 
+		 * (Read only) This property indicates that this field should be represented by a custom expression
+		 * embedded in the WHERE clause of the generated SQL, instead of the generated expression
+		 * containing this field name that would ordinarily be used. You use this property when 
+		 * you have to accomodate some special way of using a field's value in criteria, other than by
+		 * directly comparing it to the criteria. For example, if you have a column that contains 
+		 * bit-packed information you will generally need to perform a bitwise AND to filter on that 
+		 * column, rather than an equality check. In this case, you would use a 
+		 * customCriteriaExpression something like this (in Oracle):
+		 * 
+		 * &nbsp;&nbsp;&nbsp;BITAND(myField, $criteria.myField)+0 = $criteria.myField
+		 * 
+		 * Or this (in MySQL or SQL Server):
+		 * 
+		 * &nbsp;&nbsp;&nbsp;myField & $criteria.myField = $criteria.myField
+		 * 
+		 * As this example shows, a customCriteriaExpression is expected to be a complete
+		 * logical expression that provides both sides of the comparison. After Velocity processing,
+		 * this example would result in SQL similar to this (for the MySQL case); the colored part 
+		 * comes entirely from the customCriteriaExpression:
+		 * 
+		 * SELECT myField, myOtherField FROM myTable WHERE <font color='blue'>myField & 32 = 32</font>
+		 * 
+		 * customCriteriaExpression can also be used with AdvancedCriteria.
+		 * Note that the point mentioned above, about a customCriteriaExpression being a 
+		 * complete logical expression that provides both sides of the comparison still applies. This
+		 * means that when you use customCriteriaExpression in conjunction with 
+		 * AdvancedCriteria, you effectively switch off support for different 
+		 * OperatorIds to be used on that field, unless you use Velocity expressions 
+		 * containing the special $criteriaOperator variable (see below).
+		 * 
+		 * When you use customCriteriaExpression with AdvancedCriteria, the 
+		 * way you access criteria values differs slightly. One option is to use the 
+		 * $advancedCriteria Velocity variable, as described in the "Using AdvancedCriteria"
+		 * section of the customQuerying','custom querying overview. However, this 
+		 * variable only returns the value from the first Criterion that uses the field,
+		 * as found by depth-first search. If your AdvancedCriteria contains multiple 
+		 * references to this field, this will not be satisfactory. Therefore, specifically for 
+		 * customCriteriaExpression, we provide another Velocity variable, 
+		 * $criteriaValue. This variable means "the value on a Criterion referencing 
+		 * this field". An example may serve to clarify this:
+		 * 
+		 * Assume you need to extend the above example to filter records where a certain bit is set 
+		 * OR a certain other bit is set. An AdvancedCriteria like this would be 
+		 * required (note that the choice of "equals" as the operator in these clauses is completely
+		 * arbitrary - as discussed above, the operator is ignored when we have a 
+		 * customCriteriaExpression, so it would make no difference to the end product 
+		 * if we had used different operators here):
+		 * { _constructor: "AdvancedCriteria", operator: "or", criteria: [
+		 * { fieldName: "myField", operator: "equals", value: 32 },
+		 * { fieldName: "myField", operator: "equals", value: 64 },
+		 * ]
+		 * } 
+		 * 
+		 * If you used the customCriteriaExpression from above unchanged with this criteria,
+		 * the following SQL would be generated (in the MySQL case):
+		 * 
+		 * SELECT myField, myOtherField FROM myTable WHERE myField & null = null OR myField & null = null
+		 * 
+		 * This is because $criteria is a variable that only works correctly with simple
+		 * criteria. If you changed the $criteria references in the expression to 
+		 * $advancedCriteria, the generated SQL would be:
+		 * 
+		 * SELECT myField, myOtherField FROM myTable WHERE myField & 32 = 32 OR myField & 32 = 32
+		 * 
+		 * This is because $advancedCriteria always returns the first value it finds for
+		 * a particular field, as described above. However, if you change the expression so it reads:
+		 * 
+		 * &nbsp;&nbsp;&nbsp;myField & $criteriaValue = $criteriaValue
+		 * 
+		 * you will now get the correct SQL generated:
+		 * 
+		 * SELECT myField, myOtherField FROM myTable WHERE myField & 32 = 32 OR myField & 64 = 64
+		 * 
+		 * Similar to $criteriaValue, we provide a special variable, 
+		 * $criteriaOperator. This is intended for use in Velocity expressions, so that 
+		 * your customCriteriaExpression can process different operators in different ways.
+		 * How you choose to interpret an operator is entirely up to you; this variable is both 
+		 * advanced and rarely used. This example is contrived and does not show a usage that would be 
+		 * remotely likely in a real application, but it does show how to use the variable in a Velocity
+		 * expression:
+		 * 
+		 * &nbsp;&nbsp;&nbsp;myField #if ($criteriaOperator == "greaterThan") & #else | #end $criteriaValue = $criteriaValue
+		 * 
+		 * For simple criteria, note that $criteriaOperator will vary depending on field
+		 * type and the TextMatchStyle','textMatchStyle in force, as follows:
+		 * Text fields with textMatchStyle "substring" - "iContains"
+		 * Text fields with textMatchStyle "startsWith" - "iStartsWith"
+		 * Text fields with textMatchStyle "exact" - "iEquals"
+		 * All other cases (including text fields with textMatchStyle "exactCase") - "equals"
+		 * 
+		 * You can use Velocity expressions in your customCriteriaExpressions, and the 
+		 * velocitySupport','usual context variables are available. Note that the results
+		 * of Velocity evaluations are automatically quoted and escaped by default; this behavior can
+		 * be switched off - see DataSourceField.autoQuoteCustomExpressions','autoQuoteCustomExpressions, and 
+		 * particularly note the warnings about its use.
+		 * 
+		 * Note that this property only applies to users of the SmartClient server using dataSources of
+		 * type "sql".
+		 * Flags: IR
+		 */
+		readonly customCriteriaExpression?: String;
+		/** 
+		 * (Read only) This property is similar to DataSourceField.customUpdateExpression','customUpdateExpression; its value
+		 * is used during "add" operations. If you do not specify this property, but do specify a 
+		 * customUpdateExpression, the customUpdateExpression is used instead.
+		 * 
+		 * Everything that applies to customUpdateExpression also applies to this property,
+		 * including the observation that fields which specify a 
+		 * DataSourceField.customSelectExpression','customSelectExpression but no corresponding 
+		 * customUpdateExpression or customInsertExpression, will be ignored
+		 * when adding new records.
+		 * 
+		 * As with customUpdateExpression, this property is only intended to be used when
+		 * you have a need to customize the actual SQL. If you simply want to use a server-derived 
+		 * value in the query, you should use transactionChaining','Transaction Chaining, 
+		 * dmiOverview','DMI, or a serverScript','server script instead.
+		 * 
+		 * <h3>customInsertExpression with primaryKey fields</h3>
+		 * 
+		 * if you use customInsertExpression to derive a value for a 
+		 * DataSourceField.primaryKey','primaryKey field, the key value will not by default be 
+		 * available to the framework, so the built-in cache synchronization system will not work.
+		 * It may be possible to to work around this with the 
+		 * DataSourceField.autoGenerated','autoGenerated flag, as described below, but otherwise 
+		 * you must also create a OperationBinding.cacheSyncOperation','cacheSyncOperation which 
+		 * can retrieve the record just added to the database. Please also see the documentation for
+		 * SequenceMode','SequenceMode "none", which talks further about cacheSyncOperation.
+		 * 
+		 * Typically, primaryKey fields that need to be auto-generated are implemented
+		 * using a sequence field, which at the database level translates to either an actual sequence,
+		 * or an auto-increment or "identity" column. JDBC drivers have special support for such
+		 * columns, so we are able to determine the generated value. This is important for primaryKey 
+		 * fields because, without it, we cannot re-fetch the record just inserted for cache 
+		 * synchronization purposes, as described above. Where a value is generated by something other
+		 * than a sequence field, this special ability is lost - or at least, it is no longer 
+		 * guaranteed to be present.
+		 * 
+		 * There are use cases where this may seem to be a restriction. A common case would be where 
+		 * you wish to use a generated UUID as primaryKey value, rather than an ordinary ascending 
+		 * sequence. If you had intended to do this using the database itself - for example, 
+		 * specifying a customInsertExpression that calls something like MySQL's 
+		 * UUID() built-in function - this is potentially a problem. What we
+		 * would recommend in this case and anything similar, is to use the general ability for field 
+		 * values to be generated by application code, as described above. (Note, if you want to have
+		 * application code generate values for primaryKey fields, you may need to use an 
+		 * OperationBinding','operationBinding that specifies 
+		 * OperationBinding.providesMissingKeys','providesMissingKeys). 
+		 * 
+		 * That said, different database vendors implement their JDBC drivers in different ways, and 
+		 * with the SQLDataSource and certain database products it is possible to retrieve 
+		 * values that were generated at the database level by a customInsertExpression 
+		 * that expresses either a user-defined function call or an inline subselect, as long as the 
+		 * field is marked with the autoGenerated flag. Because this behavior
+		 * is potentially useful, we do not inhibit it; however, we also do not recommend that you make 
+		 * use of it, because the behavior is not portable across databases, and may also not be 
+		 * portable across JDBC driver versions (because the behavior is unspecified and undocumented,
+		 * and relies on implementation details that may change). Databases where this behavior has 
+		 * been observed to work include Oracle, Postgres and HSQLDB; databases where this behavior is 
+		 * known not to work include MySQL, SQL Server, DB2 and Firebird (the latter because its JDBC 
+		 * driver does not support the getGeneratedKeys() API)
+		 * 
+		 * Note that this property only applies to users of the SmartClient server using dataSources of
+		 * type "sql".
+		 * Flags: IR
+		 */
+		readonly customInsertExpression?: String;
+		/** 
+		 * (Read only) This property indicates that this field represents a custom expression that should be 
+		 * embedded in the generated SQL instead of a reference to this field. For example, if 
+		 * you have a field partialName where this value is set to 
+		 * SUBSTR(surname, 2), the generated SQL would look similar to this:
+		 * 
+		 * SELECT ... SUBSTR(surname, 2) AS partialName ...
+		 * 
+		 * Note that adding "AS partialName" as shown above is required - this is how the framework
+		 * identifies the expression as producing a value for this particular DataSourceField when
+		 * results are received from the database.
+		 * 
+		 * Fields with customSelectExpression set can be used for sorting and filtering in
+		 * the normal way, but they are only applicable to update-type operations if you also provide a
+		 * corresponding DataSourceField.customUpdateExpression','customUpdateExpression and/or 
+		 * DataSourceField.customInsertExpression','customInsertExpression. See the documentation 
+		 * for those methods for the rules of how they are applied.
+		 * 
+		 * You can use Velocity expressions in your customSelectExpressions, and the 
+		 * velocitySupport','usual context variables are available. Note that the results
+		 * of Velocity evaluations are automatically quoted and escaped by default; this behavior can
+		 * be switched off - see DataSourceField.autoQuoteCustomExpressions','autoQuoteCustomExpressions, and 
+		 * particularly note the warnings about its use.
+		 * 
+		 * Note that this property only applies to users of the SmartClient server using dataSources of
+		 * type "sql".
+		 * Flags: IR
+		 */
+		readonly customSelectExpression?: String;
+		/** 
+		 * (Read only) For a DataSource with DataSource.serverType','serverType "sql" or "hibernate",
+		 * indicates that this field should be omitted by default from all SQL or Hibernate operations,
+		 * and will only be used with customQuerying','custom queries.
+		 * 
+		 * Having marked a field as customSQL you can refer to it via
+		 * $criteria.fieldName or $values.fieldName in customized queries.
+		 * 
+		 * The following are situations where you would not use customSQL:
+		 * 
+		 * simple joins where you want to enable users to see and search on a field from another
+		 * table; consider DataSourceField.includeFrom instead
+		 * fields where you want to calculate or transform values in SQL on load or save, but
+		 * always perform the same calculation for each operationType; consider instead
+		 * DataSourceField.sqlStorageStrategy for some common cases, or 
+		 * DataSourceField.customSelectExpression, DataSourceField.customUpdateExpression and
+		 * DataSourceField.customInsertExpression for full customization
+		 * a special fetch is needed where the field needs to be excluded from the
+		 * $defaultWhereClause so that it can be used in a custom &lt;whereClause&gt; - consider
+		 * OperationBinding.excludeCriteriaFields instead
+		 * 
+		 * 
+		 * Use customSQL in situations like:
+		 * 
+		 * there are multiple variations of the "fetch" operation with different
+		 * OperationBinding.operationId','operationIds, and the field is only used in some of them;
+		 * in that case, consider using OperationBinding.customFields to selectively re-introduce
+		 * SQL generation for the field only in operations where it's used.
+		 * the field represents hidden criteria on a field in another table where the field is
+		 * never shown to the user
+		 * the field is a write-only value only saved in some operations
+		 * more than one data access strategy is in use (eg direct SQL for fetch and bean-based
+		 * persistence accessed via DMI for saves) and certain fields are not available in SQL
+		 * 
+		 * boolean - Null not allowed
+		 * Flags: IR
+		 */
+		readonly customSQL?: boolean;
+		/** 
+		 * (Read only) This property specifies the value to use to update this column on "update" operations.
+		 * The value of this property will be passed through Velocity evaluation and then embedded
+		 * directly in the SQL generated to perform the update. It can be used in conjunction with
+		 * DataSourceField.customSelectExpression','customSelectExpression to provide bi-directional mapping 
+		 * between application data formats and persisted data formats. Or, it can be used 
+		 * unilaterally as a means of silently enforcing data rules - for example, ensuring that all 
+		 * values for a given field are in upper case.
+		 * 
+		 * You can use Velocity expressions in your customUpdateExpressions, and the 
+		 * velocitySupport','usual context variables are available. Note that the results
+		 * of Velocity evaluations are automatically quoted and escaped by default; this behavior can
+		 * be switched off - see DataSourceField.autoQuoteCustomExpressions','autoQuoteCustomExpressions, and 
+		 * particularly note the warnings about its use.
+		 * 
+		 * The value must be a string that will end up as a valid SQL snippet after Velocity
+		 * evaluation. The following examples are valid:
+		 * 
+		 * "SUBSTR(ANOTHER_COLUMN, 1, 10)"
+		 * "SUBSTR($values.someTextField.toUpperCase(), 1, 10)"
+		 * "SOME_NUMERIC_COLUMN * 1000"
+		 * "$values.someTextField.toUpperCase()" (this is a technically valid but 
+		 * incorrect usage - see below)
+		 * 
+		 * NOTE: although all these examples are valid, customUpdateExpression is
+		 * intended to be used when you have a need to customize the actual SQL. If you simply want
+		 * to use a server-derived value in the query (as is the case with the last of these 
+		 * examples), you should use transactionChaining','Transaction Chaining, 
+		 * dmiOverview','DMI, or a serverScript','server script instead. 
+		 * 
+		 * In the examples above, the first is an actual SQL snippet and must not be enclosed
+		 * in quotes. The second shows an SQL snippet containing a literal - because the literal is 
+		 * the result of a Velocity evaluation, it will be automatically quoted so there is no need 
+		 * to do so manually. The third example yields a number, so it must not be quoted.
+		 * The last example is also the result of a Velocity evaluation and thus does not need to
+		 * be quoted. Note, however, that this example involves no SQL customization - this kind of 
+		 * usage should be avoided, as noted above.
+		 * 
+		 * When an "update" operation runs, any fields that specify 
+		 * DataSourceField.customSelectExpression','customSelectExpression but do not specify 
+		 * customUpdateExpression will be ignored. When an "add" operation runs, this property acts 
+		 * as a default for any fields that do not specify a 
+		 * DataSourceField.customInsertExpression','customInsertExpression; similar to update, any fields that 
+		 * specify a customSelectExpression but do not specify either a customUpdateExpression or 
+		 * customInsertExpression, will be ignored when "add" operations run.
+		 * 
+		 * Note that this property only applies to users of the SmartClient server using dataSources of
+		 * type "sql".
+		 * Flags: IR
+		 */
+		readonly customUpdateExpression?: String;
+		/** 
+		 * (Advanced) Preferred display format to use for date type values within this field.
+		 * If this property is set on a field displayed in a databound component such as a
+		 * DynamicForm or ListGrid it will be respected (See FormItem.dateFormatter and
+		 * ListGridField.dateFormatter).
+		 * 
+		 * Note that this property is also honored when exporting directly to 
+		 * Excel spreadsheets (ie, when using XLS or XLSX/OOXML form, not CSV); "date" and
+		 * "datetime" fields with this property set will deliver real dates and formatting information
+		 * to Excel, rather than formatted strings or unformatted dates.
+		 * Flags: IRWA, Group: appearance
+		 */
+		readonly dateFormatter?: DateDisplayFormat;
+		/** 
+		 * Applies only to fields of type "float" and enforces a minimum number of digits shown after
+		 * the decimal point.
+		 * 
+		 * For example, a field value of 343.1, 343.104 and 343.09872677 would all be shown as 343.10
+		 * if decimalPad is 2.
+		 * 
+		 * The original unpadded value is always shown when the value is edited.
+		 * Flags: IRW, Group: appearance
+		 */
+		readonly decimalPad?: number;
+		/** 
+		 * Applies only to fields of type "float" and affects how many significant digits are shown.
+		 * 
+		 * For example, with decimalPrecision 3, if the field value is 343.672677, 343.673 is shown.
+		 * 
+		 * If the value is 125.2, 125.2 is shown - decimalPrecision will not cause extra zeros to be
+		 * added. Use DataSourceField.decimalPad for this.
+		 * 
+		 * A number is always shown with its original precision when edited.
+		 * Flags: IRW, Group: appearance
+		 */
+		readonly decimalPrecision?: number;
+		/** 
+		 * (Advanced) Before we start editing this field in a DataBoundComponent, should we perform a deep clone 
+		 * of the underlying field value. See DataSource.deepCloneOnEdit for details of what 
+		 * this means.
+		 * 
+		 * If this value is not explicitly set, it defaults first to the value of 
+		 * DataBoundComponent.deepCloneOnEdit, then to the value of DataSource.deepCloneOnEdit.
+		 * 
+		 * Like the other deepCloneOnEdit settings, this flag only has an effect if you are 
+		 * editing a values object that contains nested objects or arrays, using 
+		 * Canvas.dataPath','dataPaths.
+		 * Boolean - Null allowed
+		 * Flags: IRWA
+		 */
+		readonly deepCloneOnEdit?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Whether this field should be considered a "detail" field by a DataBoundComponent.
+		 * 
+		 * Detail fields won't be shown by default in a DataBoundComponent where 
+		 * DataBoundComponent.showDetailFields is false. This allows for some DataBound
+		 * components, like a ListGrid, to show a summary view of records which displays only 
+		 * the most commonly viewed fields by default, while other DataBoundComponents, like a
+		 * DetailViewer, show all fields by default.
+		 * 
+		 * In addition, the FormItem.showIf','formItem.showIf property is supported in multiple
+		 * components for conditional visibility - see for example ListGridField.showIf and
+		 * FormItem.showIf).
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly detail?: boolean;
+		/** 
+		 * (Read only) Name of another field in this DataSource that should be used as the display value for this
+		 * field.
+		 * 
+		 * Typically used for editable 
+		 * DataSourceField.foreignKey','foreignKey fields: the foreignKey field
+		 * stores an ID value, and this ID value is the right value to use when editing (typically by a
+		 * SelectItem with SelectItem.optionDataSource','optionDataSource set). However,
+		 * when the foreignKey field is viewed read-only, it should display a name, title
+		 * or other friendly value from the related record. In order to accomplish this, a second,
+		 * hidden field carries the display value, and the foreignKey field has
+		 * displayField set to this second, hidden field.
+		 * 
+		 * For a more in-depth discussion, see DataSourceField.includeFrom.
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly displayField?: String;
+		/** 
+		 * (Read only) The default date formatter to use for displaying this field. Only applicable to fields of 
+		 * type "date" and "datetime". Note that this property is honored when exporting directly to 
+		 * Excel spreadsheets (ie, when using XLS or XLSX/OOXML form, not CSV); "date" and
+		 * "datetime" fields with this property set will deliver real dates and formatting information
+		 * to Excel, rather than formatted strings or unformatted dates.
+		 * Flags: IR
+		 */
+		readonly displayFormat?: DateDisplayFormat;
+		/** 
+		 * (Read only) Sets the default FormItem to be used whenever this field is edited (whether in a grid, form,
+		 * or other component).
+		 * 
+		 * If unset, a FormItem will be automatically chosen based on the type of the field, by the
+		 * rules explained FormItemType','here.
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly editorType?: string /* FormItemClassName */;
+		/** 
+		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
+		 * writes to this field are to be allowed. If the specified expression does not evaluate
+		 * to true, the field will be removed from the request as described for 
+		 * DataSourceField.editRequiresAuthentication','editRequiresAuthentication.
+		 * 
+		 * In addition to the normal context variables available to Velocity expressions in SmartClient,
+		 * expressions you write for field-level requires clauses - editRequires, 
+		 * DataSourceField.viewRequires','viewRequires, DataSourceField.initRequires','initRequires and 
+		 * DataSourceField.updateRequires','updateRequires - can reference two additional variables: 
+		 * $fieldName and $dsName. These are the names of the dataSource and 
+		 * field currently undergoing requires checks. They are helpful because they allow
+		 * you to write a generic checker function that can be used to handle requires
+		 * checks for multiple fields and dataSources.
+		 * 
+		 * NOTE: This property prevents both initialization and updates for a field. If you 
+		 * have a need to prevent <em>just</em> initialization or <em>just</em> updates, you can use
+		 * DataSourceField.initRequires or DataSourceField.updateRequires.
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly editRequires?: VelocityExpression;
+		/** 
+		 * (Read only) Whether a user must be authenticated in order to write to this field. If this property is 
+		 * set and the user is not authenticated, the SmartClient Server will not allow this field to
+		 * be updated or initialized.
+		 * 
+		 * This property affects two things. Firstly, the server determines when the DataSource is 
+		 * first loaded if we have an authenticated user; if we don't, the field is marked 
+		 * canEdit: false. Secondly, when an insert or update request is received from 
+		 * the client, the server removes the field from the values clause before the
+		 * request is processed.
+		 * 
+		 * Note that you can override this behavior. The canEdit setting can be overridden 
+		 * on the the client-side DataSource like any other client-side property. The value-removing 
+		 * behavior can be overridden on a per-request basis by providing a DMI that re-adds values for
+		 * the fields you want for that particular request to the values object (the values originally 
+		 * sent up by the client are available on the DSRequest). See the server-side Javadocs for 
+		 * DSRequest.getValues() and DSRequest.getClientSuppliedValues().
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly editRequiresAuthentication?: boolean;
+		/** 
+		 * (Read only) Comma-separated list of user roles that are allowed to write to this field. If the current
+		 * user does not have any of the roles listed, the system will not allow this field to be 
+		 * initialized or updated. Please see OperationBinding.requiresRole for further 
+		 * details of SmartClient's declarative role-based security. Please also see 
+		 * DataSourceField.editRequiresAuthentication','editRequiresAuthentication for details
+		 * of how declarative field-level security settings can be overridden per-request.
+		 * 
+		 * NOTE: This property prevents both initialization and updates for a field. If you 
+		 * have a need to prevent <em>just</em> initialization or <em>just</em> updates, you can use
+		 * DataSourceField.initRequiresRole or DataSourceField.updateRequiresRole.
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly editRequiresRole?: String;
+		/** 
+		 * (Read only) Text to be used for display by client-side components when this field has a null or 
+		 * undefined value. This value will be overridden by a component's emptyCellValue, if set.
+		 * Flags: IR, Group: appearance
+		 */
+		readonly emptyDisplayValue?: HTMLString;
+		/** 
+		 * When set for a field with binary data, binary data will be delivered as a Base64 encoded
+		 * string. 
+		 * 
+		 * When encodeInResponse is not set normal responses will not contain values for
+		 * binary fields at all. Instead, UI components, such as TileGrid issue a second
+		 * binary fetch for binary data when appropriate, and APIs such as DataSource.downloadFile','downloadFile() and
+		 * DataSource.viewFile','viewFile() can be used to programmatically trigger downloads.
+		 * 
+		 * Only applicable to fields of a type that are represented by binary data (currently "binary"
+		 * and "imageFile", see FieldType).
+		 * boolean - Null not allowed
+		 * Flags: IRW
+		 */
+		readonly encodeInResponse?: boolean;
+		/** 
+		 * (Read only) When data values are displayed in DataBound components, by default strings will be interpreted
+		 * as HTML by the browser in most cases.
+		 * 
+		 * If set, this property will be picked up by components bound to this dataSource, notifying them
+		 * that any HTML characters should be escaped when displaying values for this field.
+		 * Boolean - Null allowed
+		 * Flags: IR
+		 */
+		readonly escapeHTML?: boolean /* Boolean */;
+		/** 
+		 * (Read only) If true, then this field is excluded from the bound component's view state. In addition,
+		 * the field will not be selected as the default title field
+		 * by DataBoundComponent.getTitleField
+		 * if DataBoundComponent.titleField is not provided.
+		 * Boolean - Null allowed
+		 * Flags: IR, Group: viewState
+		 */
+		readonly excludeFromState?: boolean /* Boolean */;
+		/** 
+		 * (Read only) When using DataSource.recordsAsText, determines what approach (if any) should be used
+		 * to force values to be intepreted as text instead of heuristically parsed as dates, times or
+		 * other structured types.
+		 * boolean - Null not allowed
+		 * Flags: IR
+		 */
+		readonly exportForceText?: boolean;
+		/** 
+		 * An optional FormatString for this field, for use when 
+		 * DataBoundComponent.exportData','exporting data to spreadsheet formats (XLS and 
+		 * OOXML/XLSX), XML, JSON or CSV. You can use this property to override the normal
+		 * DataSourceField.format','format of this field, if any, specifically for exports. 
+		 * 
+		 * Note, for server-driven exports you can specify default formats for date, time and 
+		 * datetime fields by specifying properties export.format.default.date, 
+		 * export.format.default.time and export.format.default.datetime
+		 * in your server.properties file. These formats will be used for fields 
+		 * that do not have a "format" or "exportFormat" property specified in the 
+		 * .ds.xml file.
+		 * 
+		 * Specifically when exporting to spreadsheet formats, the FormatString is
+		 * translated to the type of format string used by spreadsheet programs like Excel. A handful
+		 * of features are not present in Excel format strings, and some features behave slightly
+		 * differently. These differences are explained below.
+		 * 
+		 * <h3>Excel cannot handle dates prior to January 1st 1900</h3>
+		 * This is a well-known limitation of Excel dates; it is not a formatting issue as such.
+		 * 
+		 * <h3>Currency symbols become fixed to the current locale at export time</h3>
+		 * The placeholder currency symbol "&#x00A4" (\u00A4) in a numeric
+		 * format string is rendered as the 
+		 * 
+		 * NumberUtil.currencySymbol','localized currency symbol.
+		 * 
+		 * 
+		 * When exporting, the format string provided to Excel contains the currency symbol for the
+		 * current locale of the SmartClient application, and not a placeholder currency symbol that
+		 * would make Excel pick up a currency symbol based on the operating system locale. We do this
+		 * to ensure that the spreadsheet reflects the <em>application's</em> localization, rather than
+		 * the localization of the current user's computer, because they may be different.
+		 * 
+		 * <h3>Rounding differences</h3>
+		 * The approach to rounding a positive number to a set number of decimal places is fairly 
+		 * universally agreed upon for non-specialized requirements: add 0.5 (or 0.05, or 0.005, or 
+		 * whatever) to the number and then truncate. This leads to the well understood convention 
+		 * that numbers exactly halfway between two possible rounding outcomes, go to the larger one. 
+		 * So 7.5 becomes 8 and 7.15 becomes 7.2.
+		 * 
+		 * However, there is no such universal agreement when it come to rounding negative numbers. 
+		 * Some take the view that you should round by taking the number to the larger absolute value,
+		 * so -7.15 becomes -7.2. Others feel that you should round by taking the number to the larger
+		 * value in the sense of it being "less negative", so -7.15 becomes -7.1.
+		 * 
+		 * SmartClient formatting takes the first approach and rounds negative numbers away from zero.
+		 * We do this simply because that is what Java DecimalFormat does. Unfortunately, Excel does
+		 * the opposite. Therefore, you will see rounding differences on negative numbers on exact 
+		 * 50% boundaries: SmartClient will format -7.15 as -7.2, while Excel will format the same 
+		 * value as -7.1.
+		 * 
+		 * <h3>Different treatment of '#'</h3>
+		 * Both SmartClient and Excel use '#' to mean "digit, do not show zeroes". However, Excel
+		 * does not implement this strictly in the integer part when the number it is formatting has
+		 * a value of 0 in the integer part. So, with a format of "#.##", the value 0.25 is formatted 
+		 * as "0.25". SmartClient (like Java DecimalFormat) is strict: with that format, 0.25 is 
+		 * formatted as ".25"; if you want to match Excel's output, you must use the format "0.##".
+		 * 
+		 * <h3>Miscellaneous edge cases</h3>
+		 * There is quite a lot of variation in behavior between Java DecimalFormat and Excel around 
+		 * the edges. For actual error cases - for example, a format string that just contains 
+		 * nonsense - it is normal and expected that the SmartClient behavior and the Excel behavior
+		 * do not match - this is just two systems producing different garbage out for the same 
+		 * garbage in, which is to be expected. For valid but weird usages - for example, a format 
+		 * with multiple percent signs - SmartClient's formatting is in line with what DecimalFormat 
+		 * does, unless DecimalFormat throws an Exception, in which case we just do the thing that 
+		 * seems most sensible, or the thing that was easiest to implement.
+		 * 
+		 * Known differences in behavior in edge cases include:
+		 * SmartClient ignores formatting characters in the number part of the format string, 
+		 * whereas Excel rejects the format (this behavior may vary with different releases of Excel
+		 * and supposedly compatible libraries: POI, for example, will accept such format strings). 
+		 * If you attempt to format 5.175 with the format string "#b0.#a#", SmartClient will return
+		 * "5.72", and Excel will reject the format
+		 * SmartClient ignores quoted characters in the number part of the format string, 
+		 * whereas Excel preserves them. If you attempt to format 5.175 with the format string 
+		 * "#'b'0.#'a'#", SmartClient will return "5.72", and Excel will return "b5.7a2"
+		 * If you specify the empty string as a format string, SmartClient returns the result of 
+		 * calling toString() on the number; Excel uses the built-in "General" format. These two 
+		 * approaches will generally give the same or very similar results, but that is really a 
+		 * coincidence: the correct way to obtain matching results in the browser and the spreadsheet
+		 * is to specify a valid format string
+		 * If you specify a format string that contains no number part (ie, no '#' or '0' 
+		 * characters), SmartClient does what DecimalFormat does, which is to output the integer part
+		 * of the number alongside the fixed part of the format. Excel just outputs the fixed part.
+		 * So, if you attempt to format -5.3 with the format string "'Hello world'", SmartClient will
+		 * output "-Hello world5", whereas Excel will output just "Hello world"
+		 * If you specify multiple percent signs in the format, SmartClient treats all but the 
+		 * first one as static text, so 0.5 formatted with "#%%%" is "50%%%" (ie, all the signs are 
+		 * preserved but there is only one multiplcation by 100). Excel multiplies for each percent
+		 * sign, so 0.5 formatted with "#%%%" is "500000%%%"
+		 * 
+		 * 
+		 * <h3>Date format functionality not supported by Excel</h3>
+		 * The following date/time/datetime functionality is not supported by Excel; if you use 
+		 * formatters that use any of this functionality, your values will be exported to Excel 
+		 * incorrectly formatted. In cases like this, we recommend that you use a separate 
+		 * exportFormat, with the intent of exporting your values in a way that is 
+		 * similar to your application formatting (which would be specified with the 
+		 * DataSourceField.format','format property), but within the confines of what Excel 
+		 * supports.
+		 * 
+		 * Fiscal year, week and day (LL, LLLL, C, CC, c, cc)
+		 * Week in year (w, ww)
+		 * Day in year (D, DD)
+		 * Day number in week (u)
+		 * Explicit control over whether to use 12- or 24-hour notation. In Excel, this is 
+		 * implied by the presence or absence of the AM/PM designator
+		 * If the user's operating system locale is different to the locale in use in the 
+		 * SmartClient application, day and month names may be different in the spreadsheet
+		 * 
+		 * <h3>Number format functionality not supported by Excel</h3>
+		 * The only SmartClient number-formatting functionality not supported for 
+		 * export to Excel is "multiply by 1000 and show as per mille".
+		 * 
+		 * <h3>Limit on number of custom Excel formats</h3>
+		 * Excel limits the number of custom format strings in a single spreadsheet to somewhere
+		 * between 200 and 250, depending on your locale and language. Hitting this limit in an export
+		 * would require hundreds of field definitions, each defining unique
+		 * FormatStrings. If you do hit the limit, the only workaround is to use fewer
+		 * unique FormatStrings.
+		 * Flags: IRW
+		 */
+		readonly exportFormat?: FormatString;
+		/** 
+		 * (Read only) Optional different field-title used for exports.
+		 * Flags: IR
+		 */
+		readonly exportTitle?: String;
+		/** 
+		 * (Read only) Sets the default FormItem to be used for this field if it appears in a filter row,
+		 * and DataSourceField.canFilter is not false.
+		 * 
+		 * Note: If this is not specified, the edit-formItem type may be derived from the
+		 * DataSourceField.editorType property, or from the field's DataSourceField.type.
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly filterEditorType?: string /* FormItemClassName */;
+		/** 
+		 * (Read only) See DataSource.tableCode.
+		 * Flags: R
+		 */
+		readonly fkColumnCode?: String;
+		/** 
+		 * (Read only) See DataSource.tableCode.
+		 * Flags: R
+		 */
+		readonly fkTableCode?: String;
+		/** 
+		 * (Read only) Name of another field in a separate dataSource that should be used as the display
+		 * value for this field in the case where a foreignKey relationship
+		 * exists.
+		 * 
+		 * This property is useful for fields being edited in a FormItem where options are
+		 * being retrieved from an FormItem.optionDataSource, for the case where a separate
+		 * DataSourceField.displayField name is used within the local dataSource than the field name for
+		 * the display field within the foreign dataSource.
+		 * 
+		 * See FormItem.foreignDisplayField for more on this, and see 
+		 * DataSourceField.includeFrom for a discussion about picking up dataSource field
+		 * values from a related dataSource.
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly foreignDisplayField?: String;
+		/** 
+		 * (Read only) Declares that this field holds values that can be matched to values from another DataSource
+		 * field, to create a relationship between records from different DataSources or even records
+		 * within the same DataSource.
+		 * 
+		 * The format of foreignKey is
+		 * dataSourceId.fieldName.
+		 * 
+		 * For a foreignKey within the same dataSource, you can omit the dataSourceId
+		 * and just specify fieldName. For example, to create a tree relationship
+		 * within a DataSource:
+		 * 
+		 * isc.DataSource.create({
+		 * ID:"supplyItem",
+		 * fields : [
+		 * {name:"itemId", type:"sequence", primaryKey:true},
+		 * {name:"parentId", type:"integer", foreignKey:"itemId"},
+		 * ...
+		 * ]
+		 * });
+		 * 
+		 * 
+		 * foreignKey declarations also allow other automatic behaviors by
+		 * DataBoundComponent','DataBoundComponents, such as ListGrid.fetchRelatedData.
+		 * 
+		 * For SQLDataSources foreign keys can be automatically discovered from SQL tables if
+		 * DataSource.autoDeriveSchema','autoDeriveSchema is set.
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly foreignKey?: String;
+		/** 
+		 * Format string to use when rendering the value in any DataBoundComponent or when
+		 * exporting via DataSource.exportData or ListGrid.exportData or 
+		 * ListGrid.exportClientData.
+		 * 
+		 * Supported for fields of type "date", "time", "datetime", "int", "float" or any derived
+		 * SimpleType. 
+		 * 
+		 * To configure a different format for export, use DataSourceField.exportFormat.
+		 * 
+		 * This is a per-field setting; you can alternatively set a default format for all "date",
+		 * "time" or "datetime" fields via 
+		 * 
+		 * DateUtil.setNormalDatetimeDisplayFormat and related methods on Date.
+		 * 
+		 * 
+		 * See also localizedNumberFormatting for built-in FieldType','FieldTypes
+		 * that handle localized currency formatting.
+		 * 
+		 * Also note, this property takes precedence over any specified 
+		 * DataSourceField.dateFormatter','dateFormatter, but can be overridden on a per-component
+		 * basis by providing a formatter directly on the component, for example, via
+		 * ListGrid.formatCellValue or FormItem.formatValue.
+		 * Flags: IRW
+		 */
+		readonly format?: FormatString;
+		/** 
+		 * (Read only, Advanced) A Callback, function, or JavaScript expression used to retrieve the field's value from
+		 * the XML element or JSON record returned from a web service.
+		 * 
+		 * This is an advanced attribute for use when a DataSourceField.valueXPath','valueXPath
+		 * setting is insufficient to derive a field's value, yet an implementation of
+		 * DataSource.transformResponse is overkill.
+		 * 
+		 * For the required parameters, see the documentation for
+		 * Callbacks.GetFieldValueCallback','GetFieldValueCallback.
+		 * Flags: IRA, Group: clientDataIntegration
+		 */
+		readonly getFieldValue?: GetFieldValueCallback;
+		/** 
+		 * (Read only) For use in componentSchema, indicates what group to place the property in when
+		 * editing in Visual Builder.
+		 * Flags: IR, Group: componentSchema
+		 */
+		readonly group?: String;
+		/** 
+		 * (Read only) Whether this field should be hidden from users by default within a DataBound component.
+		 * This is generally used for internal IDs and other fields not meaningful to users.
+		 * 
+		 * See DataSourceField.detail for fields that should be hidden in a summary view such as
+		 * a ListGrid, but still available to the user.
+		 * 
+		 * NOTE: This property is not a security setting - data for hidden fields is 
+		 * still delivered to the client, it just isn't shown to the user. If you wish to make sure 
+		 * that only appropriate data reaches the client, use OperationBinding.outputs,
+		 * DataSourceField.canView:false on the field, or a field-level declarative security setting like 
+		 * DataSourceField.viewRequiresRole.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly hidden?: boolean;
+		/** 
+		 * (Read only) Whether this field should be completely excluded from this dataSource, as if it had never been
+		 * defined.
+		 * 
+		 * If set to true, the field will be entirely omitted when serving a DataSource derived 
+		 * from a server-side definition (typically a .ds.xml file) to the client.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly ignore?: boolean;
+		/** 
+		 * NOTE: Only applicable to DataSource.clientOnly','clientOnly DataSources and the
+		 * built-in sqlDataSource','SQL, jpaIntegration','JPA and 
+		 * hibernateIntegration','Hibernate DataSources available in Pro, Power and 
+		 * Enterprise versions of SmartClient.
+		 * 
+		 * Use this flag to inhibit the normal use of TextMatchStyle for this field. A 
+		 * field with this flag set will always be tested for exact equality in generated queries, 
+		 * even for filter-style queries where normal behavior would be to use a substring match or 
+		 * similar.
+		 * 
+		 * Whether or not the exact match is case-sensitive is determined by the DataSource's 
+		 * DataSource.ignoreTextMatchStyleCaseSensitive','ignoreTextMatchStyleCaseSensitive
+		 * setting.
+		 * Boolean - Null allowed
+		 * Flags: IRW
+		 */
+		readonly ignoreTextMatchStyle?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Height of the image-content of this field. If set as a string, represents the name of 
+		 * another field in the record that holds the imageHeight. Applicable only to fields of image 
+		 * type or fields that use a ViewFileItem','ViewFileItem as an editor.
+		 * Flags: IR
+		 */
+		readonly imageHeight?: number | String;
+		/** 
+		 * (Read only) Width and height of the image-content of this field. If set as a string, represents the 
+		 * name of another field in the record that holds the imageSize. Applicable only to fields 
+		 * of image type or fields that use a ViewFileItem','ViewFileItem as an editor.
+		 * Flags: IR
+		 */
+		readonly imageSize?: number | String;
+		/** 
+		 * (Read only) Width of the image-content of this field. If set as a string, represents the name of 
+		 * another field in the record that holds the imageWidth. Applicable only to fields of image 
+		 * type or fields that use a ViewFileItem','ViewFileItem as an editor.
+		 * Flags: IR
+		 */
+		readonly imageWidth?: number | String;
+		/** 
+		 * (Read only) For a field of FieldType','type "sequence" on a DataSource with 
+		 * DataSource.serverType','serverType:"sql", this flag indicates that the field is 
+		 * implicitly bound to a sequence. This setting means that SmartClient does not expect to 
+		 * find a value for the field in "add" operations, even if it is marked as a 
+		 * DataSourceField.primaryKey','primaryKey, as such fields usually are. It also means that SmartClient
+		 * does not attempt to retrieve the field value from an actual database sequence, instead
+		 * relying on the JDBC driver to return the generated value (see the note on
+		 * sequenceMode below).
+		 * 
+		 * Implicitly bound columns are a syntactic convenience provided by some databases to simulate 
+		 * the "auto-increment" or "identity" columns available natively in other products, without 
+		 * the underlying sequence having to be explicitly referenced in SQL queries. Currently, these
+		 * database products support this idea:
+		 * PostgreSQL has had a "serial" column type for a long time - 
+		 * <a href=http://www.postgresql.org/docs/9.3/static/datatype-numeric.html#DATATYPE-SERIAL>
+		 * http://www.postgresql.org/docs/9.3/static/datatype-numeric.html#DATATYPE-SERIAL</a>
+		 * DB2 has long supported a "GENERATED AS IDENTITY" notation for numeric fields. This may
+		 * or may not be implemented with a sequence - the documentation does not specify - but we 
+		 * support it via the implicitSequence mechanism because it is so similar to the implicit
+		 * sequence approach in Oracle. 
+		 * <a href="http://publib.boulder.ibm.com/infocenter/dzichelp/v2r2/index.jsp?topic=/com.ibm.db2z10.doc.apsg/src/tpc/db2z_identitycols.htm">
+		 * http://publib.boulder.ibm.com/infocenter/dzichelp/v2r2/index.jsp?topic=/com.ibm.db2z10.doc.apsg/src/tpc/db2z_identitycols.htm</a>
+		 * Oracle introduced a "GENERATED AS IDENTITY" notation for numeric fields in version 12c - 
+		 * <a href=http://www.oracle-base.com/articles/12c/identity-columns-in-oracle-12cr1.php>
+		 * http://www.oracle-base.com/articles/12c/identity-columns-in-oracle-12cr1.php</a>
+		 * 
+		 * If you have columns like these in your database, declare them as type "sequence" and mark 
+		 * them with the implicitSequence flag.
+		 * 
+		 * NOTE: If you use this property, you should also set the 
+		 * DataSource.sequenceMode','DataSource sequenceMode to "jdbcDriver". This is necessary
+		 * because SmartClient cannot directly query the implicit sequence that is being used behind the 
+		 * scenes, so we must rely on the JDBC driver to do that.
+		 * 
+		 * If you use DataSource.autoDeriveSchema','autoDeriveSchema to automatically derive a 
+		 * dataSource from table metadata, SmartClient attempts to identify these special Oracle and
+		 * Postgres columns by heuristic examination of the metadata. When it identifies such a 
+		 * column, it marks the corresponding dataSourceField implicitSequence: true, 
+		 * and changes the sequenceMode on the DataSource to "jdbcDriver". If your table contains
+		 * one of these columns and SmartClient does not automatically identify it, bear in mind that
+		 * you can always set this flag manually, even if you are using autoDeriveSchema.
+		 * 
+		 * This setting has no effect for non-SQL dataSources, or for databases other than those 
+		 * mentioned above.
+		 * Boolean - Null allowed
+		 * Flags: IR, Group: sqlDataSource
+		 */
+		readonly implicitSequence?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Declares the FieldImportStrategy for this field. The default setting of null 
+		 * has the same meaning as "auto". Note, this attribute only has an effect if all of the 
+		 * following are true:
+		 * The field declares a DataSourceField.foreignKey','foreignKey
+		 * The field declares a DataSourceField.displayField','displayField
+		 * The displayField so declared is DataSourceField.includeFrom','included from the 
+		 * same DataSource that the foreignKey declaration refers to
+		 * 
+		 * In any other circumstances, this attribute is ignored.
+		 * 
+		 * importStrategy is applied by the server-side 
+		 * DataImport.importToRows() method, which is in turn used by
+		 * BatchUploader and several other DataImport APIs such as 
+		 * importToDataSource(), importDataSourceRecords() and 
+		 * importAndValidateDSRows(). See the server-side documentation for
+		 * details of these APIs. The actual data transformation is carried out by the 
+		 * server-side API DataSource.transformImportValue(); this method can 
+		 * be overridden to carry out any other transformation you may require.
+		 * Flags: IR
+		 */
+		readonly importStrategy?: FieldImportStrategy;
+		/** 
+		 * (Read only) For use in componentSchema, a field DataSource.inheritsFrom','inherited from
+		 * another schema can be redeclared with this property set in order to indicate that the
+		 * property should not be used.
+		 * 
+		 * This is primarily used to influence visualBuilder. For simple type properties,
+		 * this avoids the property appearing in the Component Editor. 
+		 * 
+		 * For fields that hold subcomponents, this prevents inappropriate drag and drop. For example,
+		 * a custom class called MyDialog may automatically create a series of children,
+		 * and not allow arbitrary other children to be added. In this case, the inherited property
+		 * Canvas.children should be marked inapplicable in order to prevent arbitrary
+		 * components being dropped onto a MyDialog instance.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: componentSchema
+		 */
+		readonly inapplicable?: boolean;
+		/** 
+		 * (Read only) Indicates this field should be fetched from another, related DataSource.
+		 * 
+		 * The incluedFrom attribute should be of the form
+		 * "dataSourceId.fieldName", for example:
+		 * 
+		 * &lt;field includeFrom="supplyItem.itemName"/&gt;
+		 * 
+		 * 
+		 * A DataSourceField.foreignKey declaration must exist between the two DataSources, establishing either
+		 * a 1-to-1 relationship or a many-to-1 relationship from this DataSource to the related
+		 * DataSource. The inclusion can be indirect (traverse multiple DataSources) so long as there
+		 * is a chain of foreignKey declarations from the target DataSource to the
+		 * DataSource where the includeFrom field is declared. For including from a
+		 * related DataSource where there are multiple related records, see
+		 * DataSourceField.includeSummaryFunction','includeSummaryFunction.
+		 * 
+		 * DataSourceField.name will default to the name of the included field, or you can
+		 * specify a different name.
+		 * 
+		 * If both DataSources are SQLDataSources, HibernateDataSources or JPADataSources (with
+		 * Hibernate as the provider) the related data will be retrieved via a SQL join and criteria
+		 * and sort directions applied to the field work normally (they become part of the generated
+		 * SQL query).
+		 * 
+		 * Otherwise, the related data will be retrieved via performing a DSRequest against
+		 * the related DataSource once the data from the primary DataSource has been retrieved. In
+		 * this case, criteria or sorting directions applied to the included field are only allowed if
+		 * data paging is not in use (for example ListGrid.dataFetchMode:"basic"); otherwise,
+		 * criteria and sort direction are ignored for the included field and a warning is logged on
+		 * the server.
+		 * 
+		 * Editing included fields
+		 * 
+		 * An included field is DataSourceField.canEdit','canEdit:false by default. Note that 
+		 * included fields are not updatable, even if you set canEdit:true; the server will simply drop
+		 * values for included fields if client code sends them. 
+		 * 
+		 * When thinking about editing an included field value, typically what is really intended is to
+		 * edit the value of the foreignKey field. For example, take the scenario of a
+		 * system that tracks accounts and the employees assigned to manage them. Given a DataSource
+		 * "account" related one-to-one with DataSource "employee" by a "managerId" foreignKey field,
+		 * we might declare an includeFrom so that the name of the account manager can
+		 * be shown with each "account" record. 
+		 * 
+		 * Editing the manager's name while viewing the account would be intended to pick a new account
+		 * manager, and not to change the legal name of the employee who happens to be the
+		 * current account manager. 
+		 * 
+		 * To correctly set up this scenario, declare an includeFrom field that is hidden,
+		 * but is used as the DataSourceField.displayField','displayField for the foreign key
+		 * field. Setting useLocalDisplayFieldValue to true will ensure the
+		 * display field value is picked up from the record currently being edited:
+		 * 
+		 * &lt;field name="managerId" foreignKey="employee.id" displayField="managerName" useLocalDisplayFieldValue="true"/&gt; 
+		 * &lt;field name="managerName" includeFrom="employee.name" hidden="true"/&gt; 
+		 * 
+		 * Now:
+		 * 
+		 * the "managerId" foreignKey field is shown in grids and forms, but takes its displayed
+		 * value from the hidden includeFrom field.
+		 * the automatically chosen editor will be a SelectItem with
+		 * SelectItem.optionDataSource','optionDataSource set to "employees": it will allow
+		 * picking a different "employee" record from the "employee" DataSource
+		 * saving will save the ID of a new "employee" record to the "managerId" foreign key
+		 * field, as intended
+		 * 
+		 * You can alternatively set editorType="ComboBoxItem" on the
+		 * "managerId" field to allow typeahead search of the "employee" DataSource.
+		 * 
+		 * Note that the DataSourceField.foreignDisplayField attribute allows developers to have a different
+		 * fieldName be used locally as a displayField from the field name for the display field
+		 * in the foreign dataSource.
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly includeFrom?: String;
+		/** 
+		 * (Read only) When DataSourceField.includeFrom','field.includeFrom is specified and multiple records
+		 * exist in the related DataSource per record in the including DataSource,
+		 * includeSummaryFunction indicates which SummaryFunction is used to
+		 * produce the field value.
+		 * 
+		 * This feature is available with Power or better licenses only. 
+		 * See <a href="http://smartclient.com/product">smartclient.com/product</a> for details.
+		 * 
+		 * For example, give a DataSource "order" and related DataSource "orderItem", the "itemCount"
+		 * field below will show the total number of items in each order.
+		 * 
+		 * &lt;DataSource ID="order"&gt;
+		 * &lt;fields&gt;
+		 * &lt;field name="orderID" type="integer" primaryKey="true" foreignKey="orderItem.orderID" /&gt;
+		 * &lt;field name="customerName" type="text" /&gt;
+		 * &lt;field name="orderDate" type="date" /&gt;
+		 * &lt;field name="itemsCount" includeFrom="orderItem.quantity" includeSummaryFunction="sum" /&gt;
+		 * &lt;/fields&gt;
+		 * &lt;/DataSource&gt;
+		 * 
+		 * This is analogous to the following SQL statement: 
+		 * 
+		 * SELECT
+		 * order.orderID,
+		 * order.customerName,
+		 * order.orderDate,
+		 * (select sum(orderItem.quantity)
+		 * from orderItem
+		 * where orderItem.orderID = order.orderID) as itemsCount
+		 * FROM
+		 * order
+		 * 
+		 * Some other common uses:
+		 * 
+		 * using "max" to show the most recent "order" for a "customer"
+		 * using "avg" to show the average order size for a "customer"
+		 * using "concat" to show the names of all "salesReps" involved in an "order" (note:
+		 * "concat" has limited support - see SummaryFunction).
+		 * 
+		 * 
+		 * NOTE: includeSummaryFunction and 
+		 * serverSummaries','Server Summaries cannot be used in the same DSRequest.
+		 * If both configurations are present, Server Summaries settings always take priority.
+		 * Flags: R, Group: serverSummaries
+		 */
+		readonly includeSummaryFunction?: SummaryFunction;
+		/** 
+		 * (Read only) For a field that uses DataSourceField.includeFrom, specifies which
+		 * DataSourceField.foreignKey','foreignKey field should be used to find records in the
+		 * related DataSource.
+		 * 
+		 * includeVia only needs to be set when you have more than one
+		 * foreignKey to the same related DataSource. If you have multiple
+		 * foreignKeys to multiple different DataSources, there is no need to set
+		 * includeVia.
+		 * 
+		 * For example, perhaps you have a DataSource "moneyTransfer" where each record represents a
+		 * money transfer, where the source and payment currencies are different, and the list of
+		 * currencies is stored in a related DataSource "currency". Each "moneyTransfer" record is
+		 * linked to 2 "currency" records, through two different foreignKey fields,
+		 * "sourceCurrencyId" and "paymentCurrencyId".
+		 * 
+		 * The following declarations would be required to use includeFrom to get a
+		 * include the field "currencySymbol" from each of the two related "currency" records.
+		 * 
+		 * &lt;field name="sourceCurrencyId" foreignKey="currency.id"/&gt;
+		 * &lt;field name="paymentCurrencyId" foreignKey="currency.id"/&gt;
+		 * &lt;field name="sourceCurrencySymbol" includeFrom="currency.currencySymbol" includeVia="sourceCurrencyId"/&gt;
+		 * &lt;field name="paymentCurrencySymbol" includeFrom="currency.currencySymbol" includeVia="paymentCurrencyId"/&gt;
+		 * 
+		 * 
+		 * <h3>SQL Templating and includeVia</h3>
+		 * 
+		 * The includeVia feature uses SQL table aliases in the generated SQL when generating multiple SQL joins 
+		 * to the same SQL table. When using customQuerying','SQL Templating, it's sometimes necessary to know 
+		 * the names of the aliases in the generated SQL. The table alias used can be configured via
+		 * setting DataSourceField.relatedTableAlias on the foreignKey field, for
+		 * example, using the declarations below, aliases "source" and "payment" would be used for the
+		 * two "currency" tables.
+		 * 
+		 * &lt;field name="sourceCurrencyId" foreignKey="currency.id" relatedTableAlias="source"/&gt;
+		 * &lt;field name="paymentCurrencyId" foreignKey="currency.id" relatedTableAlias="payment"/&gt;
+		 * &lt;field name="sourceCurrencySymbol" includeFrom="currency.currencySymbol" includeVia="sourceCurrencyId"/&gt;
+		 * &lt;field name="paymentCurrencySymbol" includeFrom="currency.currencySymbol" includeVia="paymentCurrencyId"/&gt;
+		 * 
+		 * 
+		 * <h3>Multiple indirection and relatedTableAlias</h3>
+		 * 
+		 * Sometimes you may have two includeFrom fields that include a field which is itself included from 
+		 * another DataSource, for example:
+		 * 
+		 * &lt;field name="sourceCurId" nativeName="sourceCurrencyId" foreignKey="currency.id" relatedTableAlias="source"/&gt;
+		 * &lt;field name="sourceCurrencySymbol" includeFrom="currency.currencySymbol" includeVia="sourceCurId"/&gt;
+		 * &lt;field name="sourceCurrencyGroup" includeFrom="currency.groupName" includeVia="sourceCurId"/&gt;
+		 * &lt;field name="paymentCurId" nativeName="paymentCurrencyId" foreignKey="currency.id" relatedTableAlias="payment"/&gt;
+		 * &lt;field name="paymentCurrencySymbol" includeFrom="currency.currencySymbol" includeVia="paymentCurId"/&gt;
+		 * &lt;field name="paymentCurrencyGroup" includeFrom="currency.groupName" includeVia="paymentCurId"/&gt;
+		 * 
+		 * .. where the "currency" DataSource used above is related to the "currencyGroup" DataSource via fields:
+		 * 
+		 * &lt;field name="groupId" type="integer" foreignKey="currencyGroup.id" relatedTableAlias="group"/&gt;
+		 * &lt;field name="groupName" type="text" includeFrom="currencyGroup.groupName"/&gt;
+		 * 
+		 * Fields "sourceCurrencyGroup" and "paymentCurrencyGroup" include a field that is itself an included field.
+		 * In this case "currencyGroup" table will be referenced two times, and its relatedTableAlias defined in 
+		 * "currency" DataSource will be prefixed with the includeVia value to make
+		 * aliases unique in generated SQL: "sourceCurId_group" and "paymentCurId_group".
+		 * 
+		 * The same aliases would be used if "sourceCurrencyGroup" and "paymentCurrencyGroup" fields
+		 * were to include "currencyGroup.groupName" indirectly:
+		 * 
+		 * &lt;field name="sourceCurrencyGroup" includeFrom="currency.currencyGroup.groupName" includeVia="sourceCurId"/&gt;
+		 * &lt;field name="paymentCurrencyGroup" includeFrom="currency.currencyGroup.groupName" includeVia="paymentCurId"/&gt;
+		 * 
+		 * 
+		 * This works the same for more complex relationships. If we add a "moneyTransferDetail"
+		 * DataSource to the sample above which has multiple references to "moneyTransfer" 
+		 * DataSource and would include fields from "currency" and "currencyGroup" DataSources:
+		 * 
+		 * &lt;field name="mtId" nativeName="moneyTransferId" type="integer" foreignKey="moneyTransfer.id" relatedTableAlias="main" /&gt;
+		 * &lt;field name="mainTransferName" includeFrom="moneyTransfer.name" includeVia="mtId" /&gt;
+		 * &lt;field name="mainSourceSymbol" includeFrom="moneyTransfer.sourceCurrencySymbol" includeVia="mtId" /&gt;
+		 * &lt;field name="mainSourceGroup" includeFrom="moneyTransfer.sourceCurrencyGroup" includeVia="mtId" /&gt;
+		 * &lt;field name="mainPaymentSymbol" includeFrom="moneyTransfer.paymentCurrencySymbol" includeVia="mtId" /&gt;
+		 * &lt;field name="mainPaymentGroup" includeFrom="moneyTransfer.paymentCurrencyGroup" includeVia="mtId" /&gt;
+		 * &lt;field name="mtPrevId" nativeName="moneyTransferPreviousId" type="integer" foreignKey="moneyTransfer.id" relatedTableAlias="prev" /&gt;
+		 * &lt;field name="previousTransferName" includeFrom="moneyTransfer.name" includeVia="mtPrevId" /&gt;
+		 * &lt;field name="previousSourceSymbol" includeFrom="moneyTransfer.sourceCurrencySymbol" includeVia="mtPrevId" /&gt;
+		 * &lt;field name="previousSourceGroup" includeFrom="moneyTransfer.sourceCurrencyGroup" includeVia="mtPrevId" /&gt;
+		 * &lt;field name="previousPaymentSymbol" includeFrom="moneyTransfer.paymentCurrencySymbol" includeVia="mtPrevId" /&gt;
+		 * &lt;field name="previousPaymentGroup" includeFrom="moneyTransfer.paymentCurrencyGroup" includeVia="mtPrevId" /&gt;
+		 * 
+		 * In this scenario the "currencyGroup" table will be joined 4 times - for all main/prev transfer
+		 * and payment/source currency combinations. So, aliases will be prefixed with both
+		 * intermediate includeVia values: "mtId_sourceCurId_group",
+		 * "mtId_paymentCurId_group", "mtPrevId_sourceCurId_group", "mtPrevId_paymentCurId_group".
+		 * 
+		 * It is also allowed to specify a series of FK fields in includeVia, for example
+		 * "moneyTransferDetail" could declare:
+		 * 
+		 * &lt;field name="mainSourceCurrencyGroup" includeFrom="moneyTransfer.currency.currencyGroup.groupName" includeVia="mtId.sourceCurId"/&gt;
+		 * &lt;field name="mainPaymentCurrencyGroup" includeFrom="moneyTransfer.currency.currencyGroup.groupName" includeVia="mtId.paymentCurId"/&gt;
+		 * 
+		 * In this case the prefix used for table aliases will be the includeVia value
+		 * with "_" substituted for ".", so the table aliases will be "mtId_sourceCurId_group" and "mtId_paymentCurId_group".
+		 * 
+		 * Note that if DataSourceField.relatedTableAlias','related table alias is not
+		 * specified, then we don't make any guarantees what alias will be generated.
+		 * 
+		 * Note that Oracle has a limit of 30 characters on identifier names. We limit table
+		 * aliases to 30 characters all databases despite actual database in use to support
+		 * portability across databases. If the generated table alias would exceed 30 chars, 
+		 * we instead use a generated and unpredictable value like "a123". To avoid hitting this limit
+		 * for the advanced cases discussed above:
+		 * 
+		 * use relatively short strings for relatedTableAlias
+		 * for rare, multi-step inclusion scenarios where multiple field names are used as a
+		 * prefix, if field names are very long in order to match database column names, you can
+		 * use a shorter field name and use DataSourceField.nativeName to specify the
+		 * underlying column name (this is demonstrated in samples above - note field "mtPrevId")
+		 * 
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly includeVia?: String;
+		/** 
+		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
+		 * initializations of this field are to be allowed. If the specified expression does not 
+		 * evaluate to true, the field will be removed from the request as described for 
+		 * DataSourceField.editRequiresAuthentication','editRequiresAuthentication.
+		 * 
+		 * In addition to the normal context variables available to Velocity expressions in SmartClient,
+		 * expressions you write for field-level requires clauses - initRequires, 
+		 * DataSourceField.viewRequires','viewRequires, DataSourceField.editRequires','editRequires and 
+		 * DataSourceField.updateRequires','updateRequires - can reference two additional variables: 
+		 * $fieldName and $dsName. These are the names of the dataSource and 
+		 * field currently undergoing requires checks. They are helpful because they allow
+		 * you to write a generic checker function that can be used to handle requires
+		 * checks for multiple fields and dataSources.
+		 * 
+		 * NOTE: This property only prevents initialization of a field; updates will still be 
+		 * allowed. You should only use this property if you have a special requirement; ordinarily,
+		 * use DataSourceField.editRequires, which applies security for both types of write.
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly initRequires?: VelocityExpression;
+		/** 
+		 * (Read only) Whether a user must be authenticated in order to initialize to this field. If this property is 
+		 * set and the user is not authenticated, the SmartClient Server will not allow this field to
+		 * be initialized.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly initRequiresAuthentication?: boolean;
+		/** 
+		 * (Read only) Comma-separated list of user roles that are allowed to initialize this field. If the current
+		 * user does not have any of the roles listed, the system will not allow this field to be 
+		 * initialized.
+		 * 
+		 * NOTE: This property only prevents initialization of a field; updates will still be 
+		 * allowed. You should only use this property if you have a special requirement; ordinarily,
+		 * use DataSourceField.editRequiresRole, which applies security for both types of write.
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly initRequiresRole?: String;
+		/** 
+		 * (Read only) Explicitly declares the Java class that should be used when data from the client is
+		 * validated by the SmartClient server and/or applied to Java Beans / POJOs via the server-side
+		 * API com.isomorphic.datasource.DataSource.setProperties(). This includes 
+		 * auto-populating POJO arguments of a dmiOverview','DMI method, or populating
+		 * JPA/Hibernate beans with data when using the built-in JPA and Hibernate DataSources.
+		 * 
+		 * For DataSources that do not use Java Beans, fields declared to be of type "integer" or
+		 * "float" can use javaClass to force a particular numeric representation for 
+		 * validated DSRequest data (e.g. data passed to a DMI). Valid settings include "BigInteger",
+		 * "Long", "Integer", "Short", "Byte", "AtomicInteger", "AtomicLong", "BigDecimal", "Double", "Float".
+		 * 
+		 * When populating Java Beans/ POJOs, javaClass does not normally have to
+		 * specified: SmartClient will use Java reflection to inspect the type of argument expected by
+		 * a setter method and will attempt conversion of inbound data to that type. As described in
+		 * the documentation for DataTools.setProperties(), this works for almost all
+		 * typical cases. However field.javaClass is useful for:
+		 * 
+		 * subobject of abstract or interface type: in this case Java Reflection is not sufficient
+		 * to discover the concrete type that should be instantiated, and javaClass should be
+		 * set instead.
+		 * subobject of Collection or Map type, when Java generics are not used or the Collection
+		 * member type or Map value type is abstract. When Java generics are used (for example the
+		 * setter takes an argument is of type Collection&lt;SomePOJO&gt; or Map&lt;KeyType,SomePOJO&gt;,
+		 * SmartClient will automatically attempt to convert inbound data to the type of the members of
+		 * the Collection or values of the Map. Without generics, javaClass needs to be
+		 * specified. Note that javaClass will take precedence over generics if both 
+		 * are used. Also note that DataSourceField.javaCollectionClass can be specified if a
+		 * particular Collection or Map type is needed, and DataSourceField.javaKeyClass can be
+		 * specified for a field of type java.util.Map.
+		 * 
+		 * NOTE: It is also possible to make SmartClient Server determine the javaClass to use 
+		 * dynamically at runtime. See the description of DataSource.getPropertyJavaClass() 
+		 * in the server documentation for details.
+		 * Flags: IR
+		 */
+		readonly javaClass?: String;
+		/** 
+		 * (Read only) See DataSourceField.javaClass - when auto-populating of Java Beans / POJOs based on 
+		 * inbound DSRequest data, for a field of type Collection or Map, 
+		 * javaCollectionClass can 
+		 * be used to specify a particular concrete class to use. If not specified, and a concrete
+		 * Collection or Map class cannot be discovered using Java Reflection, the following concrete
+		 * classes are used:
+		 * 
+		 * java.util.ArrayList is used for fields of type List
+		 * java.util.HashSet is used for fields of type Set
+		 * java.util.LinkedList is used for fields of type Queue
+		 * org.apache.commons.collections.map.LinkedMap is used for fields of type Map
+		 * java.util.ArrayList is used for fields that are otherwise of type Collection
+		 * 
+		 * Note that this value is used even if the target Collection or Map is declared as a concrete
+		 * class. So, for example, if you set javaCollectionClass to 
+		 * java.util.LinkedList but your setter method accepts a 
+		 * java.util.ArrayList, you will get a ClassCastException.
+		 * Flags: IR
+		 */
+		readonly javaCollectionClass?: String;
+		/** 
+		 * (Read only) See DataSourceField.javaClass - when auto-populating of Java Beans / POJOs based on 
+		 * inbound DSRequest data, for a field of Map type, javaKeyClass can be used to
+		 * specify a particular concrete class for the map keys. If not specified, and a concrete
+		 * type cannot be discovered using Java Reflection, java.lang.Object is used.
+		 * 
+		 * Note that javaKeyClass take precedence over generics if both are used.
+		 * Flags: IR
+		 */
+		readonly javaKeyClass?: String;
+		/** 
+		 * (Read only) Defines prefix before concatenated values if field is used with 
+		 * serverSummaries','Server summaries feature and the 
+		 * SummaryFunction','summary function is "concat".
+		 * Flags: IR, Group: serverSummaries
+		 */
+		readonly joinPrefix?: String;
+		/** 
+		 * (Read only) Defines the delimiter between concatenated values if field is used with 
+		 * serverSummaries','Server summaries feature and the 
+		 * SummaryFunction','summary function is "concat". The default 
+		 * value is ", ".
+		 * Flags: IR, Group: serverSummaries
+		 */
+		readonly joinString?: String;
+		/** 
+		 * (Read only) Defines suffix after concatenated values if field is used with 
+		 * serverSummaries','Server summaries feature and the 
+		 * SummaryFunction','summary function is "concat".
+		 * Flags: IR, Group: serverSummaries
+		 */
+		readonly joinSuffix?: String;
+		/** 
+		 * (Read only) This property is only applicable to fields of SQL DataSources that also specify a 
+		 * DataSourceField.foreignKey','foreignKey property; it is ignored for all other fields. Indicates the 
+		 * type of join to make between the tables underlying this DataSource and the other DataSource
+		 * referred to in the foreignKey property, when resolving DataSourceField.includeFrom','includeFrom 
+		 * fields. The default value of null is the same as specifying "inner".
+		 * 
+		 * Note, outer joins are allowed for all supported database products only if you are using 
+		 * DataSource.useAnsiJoins','ANSI-style joins, which is not the case by default. If you
+		 * are using the older strategy of additional join expressions in the WHERE clause, outer 
+		 * joins are only supported for database products that provide a proprietary native syntax for 
+		 * expressing outer joins. Those products are:
+		 * Oracle
+		 * Versions of Microsoft SQL Server earlier than 2012, and running in compatibility mode 80
+		 * 
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly joinType?: JoinType;
+		/** 
+		 * (Read only) Maximum number of characters allowed. Applicable only to fields of text type.
+		 * For fields of this type a ValidatorType','length range validator will be automatically
+		 * generated on both the client and server side to enforce this maximum length
+		 * (unless such a validator is explicitly present for the field already).
+		 * 
+		 * The TextItem.enforceLength attribute can also 
+		 * explicitly limit user input for freeform text items editing fields with an explicit
+		 * length specified.
+		 * 
+		 * NOTE: For DataSources of type "sql", this property has a bearing on the type of 
+		 * column we use when the underlying table is created by a DataSource 
+		 * sqlDataSource','import in the adminConsole','Admin Console. Below 
+		 * a certain length (which is database-specific, see below), we use standard VARCHAR
+		 * columns; above that length, we use an alternate strategy (again, database-specific). For 
+		 * these long fields, we sometimes also generate different SQL for "update" and "add" 
+		 * operations, using JDBC "?" replacement parameters rather than embedding values directly in 
+		 * the generated SQL; whether or not this is done depends entirely on what the underlying 
+		 * database product and/or JDBC driver will allow.
+		 * 
+		 * Table of field length limits for supported databases:
+		 * <table style="font-size:10px;text-align:center;border:1px solid black;">
+		 * <tr><td style="color:white;background-color:black;">Database product</td>
+		 * <td style="color:white;background-color:black;">VARCHAR limit *</td>
+		 * <td style="color:white;background-color:black;">Type used above limit</td></tr>
+		 * <tr><td>HSQLDB</td><td>None</td><td>-</td></tr>
+		 * <tr><td>IBM DB2</td><td>4000</td><td>CLOB</td></tr>
+		 * <tr><td>Firebird</td><td>32767</td><td>BLOB with subtype 1</td></tr>
+		 * <tr><td>Informix</td><td>255 / 32739</td><td>LVARCHAR / TEXT ** </td></tr>
+		 * <tr><td> Microsoft SQL Server </td><td>8000</td><td>TEXT</td></tr>
+		 * <tr><td>MySQL</td><td> 255 / 65535 / 16M </td><td> TEXT / MEDIUMTEXT / LONGTEXT *** </td></tr>
+		 * <tr><td>Oracle</td><td>4000</td><td>CLOB</td></tr>
+		 * <tr><td>PostgreSQL</td><td>4000</td><td>TEXT</td></tr>
+		 * </table>
+		 * * The "VARCHAR limit" referred to here is a limit used by the SmartClient Server; it
+		 * is not necessarily imposed by the database. For example, DB2's VARCHAR limit is not 4000
+		 * characters; it actually varies from about 4K to about 32K, depending on how the server has 
+		 * been configured.
+		 * ** Informix has a limit of just 255 characters for VARCHAR, but has a native LVARCHAR
+		 * type which supports nearly 32K characters without needing to fall back on long datatypes. 
+		 * Therefore, with that one product, we have two thresholds for a change in storage type.
+		 * *** MySQL has a limit of 255 characters for VARCHAR, 65,535 characters for TEXT and 
+		 * 16,777,215 for MEDIUMTEXT; therefore, with that one product, we have three thresholds for a 
+		 * change in storage type.
+		 * Flags: IR, Group: dataType
+		 */
+		readonly length?: number;
+		/** 
+		 * (Read only) Indicates that getting DataSourceField.valueXPath for this field should
+		 * not perform any validation at all and will return null for non existing XPaths.
+		 * Otherwise warning message will be logged for non-existing XPath or with null objects
+		 * in the middle of XPath.
+		 * 
+		 * NOTE: this applies to server-side processing of valueXPath only.
+		 * boolean - Null not allowed
+		 * Flags: IR
+		 */
+		readonly lenientXPath?: boolean;
+		/** 
+		 * (Read only) For fields of a type that are represented by binary data initially uploaded from a file
+		 * (currently "binary" and "imageFile", see FieldType), this sets the maximum 
+		 * file size allowed, in bytes.
+		 * Flags: IR
+		 */
+		readonly maxFileSize?: Integer;
+		/** 
+		 * (Read only) For a binaryFields','binary field, sets a fixed mime type for all files stored
+		 * to this field. Should be set to a standard mime type string, for example, "text/plain" for
+		 * a .txt file.
+		 * 
+		 * This is useful if a binary field only stored one type of file and you chose not to store 
+		 * filenames, since the extension of the file name is normally used to determine the mime type.
+		 * Flags: IR
+		 */
+		readonly mimeType?: String;
+		/** 
+		 * (Read only) Indicates that this field should always be Array-valued. If the value derived from
+		 * DataSource.dataFormat','XML or JSON data is singular, it will be wrapped in an Array.
+		 * 
+		 * JPA and Hibernate DataSources use multiple:true as part of the declaration of
+		 * One-To-Many and Many-to-Many relations - see jpaHibernateRelations for details.
+		 * 
+		 * <h4>Criteria on multiple:true fields: client-side filtering</h4>
+		 * 
+		 * For simple Criteria, the criteria value is compared to each field value in the
+		 * multiple:true field, according to the
+		 * DSRequest.textMatchStyle','textMatchStyle. If any field value matches the
+		 * filter value, the field is considered to match the criteria.
+		 * 
+		 * For AdvancedCriteria, for normal OperatorId','search operators the field
+		 * value is considered as matching the Criterion if any of the field values
+		 * match the Criterion. Specifically, this is true of all operators that have an 
+		 * OperatorValueType','operatorValueType of "fieldType" or "valueRange".
+		 * 
+		 * For operators that compare against other fields in same record, such as "equalsField", 
+		 * if the other field is not multiple:true, matching works the same as for
+		 * normal operators, that is, as if criterion.value directly contained the value
+		 * rather than the name of another field.
+		 * 
+		 * If the other field is also multiple:true, only "equalsField", "notEqualsField",
+		 * "iEqualsField" and "iNotEqualsField" are allowed (any other operator will
+		 * cause a warning and be ignored) and the set of values in the field must be identical (aside
+		 * from case, for operators prefixed with "i") and in identical order to match.
+		 * 
+		 * For the inSet operator, the field matches if there is any intersection between
+		 * the field values and the array of values provided in criterion.value.
+		 * notInSet is the reverse.
+		 * 
+		 * Finally, for "isBlank", "notBlank", "isNull" and "notNull", an empty Array is considered non-null. For example,
+		 * if you use dataFormat:"json" and the field value is provided to the browser as
+		 * [] (JSON for an empty Array), the field is considered non-null.
+		 * 
+		 * <h4>Server-side Representation and Storage</h4>
+		 * 
+		 * Values for multiple:true fields appear as Java Lists when received in server code such as a
+		 * DMI. The SmartClient Server supports simple storage of values that are multiple:true, controlled
+		 * via the DataSourceField.multipleStorage setting.
+		 * 
+		 * For server-side behavior of JPA and Hibernate relation fields that are multiple:true, see
+		 * jpaHibernateRelations.
+		 * 
+		 * For non-relation fields, the SmartClient Server supports simple storage of values that are
+		 * multiple:true, controlled via the DataSourceField.multipleStorage setting, with some limited support
+		 * for server-side filtering, as described in the DataSourceField.multipleStorage docs.
+		 * 
+		 * For the built-in SQL, Hibernate and JPA connectors, if criteria are specified for a
+		 * multiple:true field where multipleStorage is null or "none", the SmartClient
+		 * server knows nothing about how the multiple values are stored, so as a fallback the criteria
+		 * will operate as though the field were a normal, non-multiple "text" field. This will
+		 * generally not match the client-side filtering behavior described above, so filtering
+		 * should either be performed entirely on the client (for example, via
+		 * ListGrid.dataFetchMode','dataFetchMode:"local" or entirely on the server (via
+		 * ResultSet.useClientFiltering:"false")
+		 * 
+		 * The server-side filtering is done through a criteria transform which happens with
+		 * DataSource.transformMultipleFields','transformMultipleFields.
+		 * 
+		 * <h4>XML Serialization</h4>
+		 * 
+		 * Specifically for XML serialization and deserialization, multiple:true behaves
+		 * similarly to the 
+		 * <a href='http://www.google.com/search?hl=en&q=soap+array' target='_blank'>SOAP array idiom</a>, that is,
+		 * there will be a "wrapper element" named after the field name, whose contents will be several
+		 * elements of the specified DataSourceField.type','field.type. 
+		 * 
+		 * For example, Layout.members is declared with type:"Canvas",
+		 * multiple:true. The correct XML format is thus:
+		 * 
+		 * &lt;VLayout&gt;
+		 * &lt;members&gt;
+		 * &lt;Canvas ID="myCanvas" ... /&gt;
+		 * &lt;ListGrid ID="myGrid" .../&gt;
+		 * &lt;Toolstrip ID="myToolStrip" ... /&gt;
+		 * &lt;/members&gt;
+		 * &lt;/VLayout&gt;
+		 * 
+		 * 
+		 * See DataSourceField.childTagName for customizing the tagName used for subelements.
+		 * Boolean - Null allowed
+		 * Flags: IR, Group: xmlSerialize
+		 */
+		readonly multiple?: boolean /* Boolean */;
+		/** 
+		 * (Read only) How values for a DataSourceField.multiple','multiple:true field should be stored.
+		 * 
+		 * On the server, field values for multiple:true fields are represented as Java
+		 * Lists in DSRequest and DSResponse objects, but when multipleStorage is used,
+		 * are ultimately stored as Strings. 
+		 * 
+		 * This storage mechanism is "denormalized" in the sense of
+		 * <a href='http://en.wikipedia.org/wiki/Database_normalization' target='_blank'>database normalization</a>
+		 * because the field contains a compound value rather than an atomic value. Specifically, this
+		 * makes the field harder to use with database features like SQL joins, since its value cannot
+		 * be directly compared to other, singular fields. For this reason, there's really only a
+		 * narrow set of cases where it makes sense to use this storage mechanism, consider it if:
+		 * 
+		 * the values don't appear in any other tables or columns elsewhere in your database (so
+		 * joins and other comparisons wouldn't be possible anyway)
+		 * there is no authoritative list of all possible values, or even of popular values; it's
+		 * basically freeform, like arbitrary, uncurated "tags" applied to photos or links
+		 * 
+		 * 
+		 * A multiple:true field can be of any SimpleType, including "date",
+		 * "time", "datetime", "float", "int" etc. Type will be preserved across a store and reload
+		 * cycle, so for example a List of values for a field of type "int" will arrive at the server
+		 * in a DSRequest as a List of Integer, be stored as a String, but appear again as a List of
+		 * Integer inside a DSResponse. When storing "date", "time" or "datetime" values as Strings,
+		 * XML schema formats are used - the same that are used for transmission in XML or JSON (see
+		 * dateFormatAndStorage','Date and Time Format and Storage overview for details).
+		 * 
+		 * The multipleStorage feature works by transforming from List to String and back
+		 * inside the server-side DataSource.execute() method. Specifically, inbound DSRequests are
+		 * transformed before methods that perform actual storage are called (executeUpdate() et al),
+		 * and DSResponses received from these methods have multiple:true field values
+		 * transformed back into Lists before DataSource.execute() returns the DSResponse.
+		 * 
+		 * This transformation approach means that the built-in SQL, JPA and Hibernate connectors all
+		 * support multipleStorage, and multipleStorage is also automatically
+		 * available for any custom DataSource that is capable of storing String values, and implements
+		 * its storage methods via overrides of executeUpdate(), executeAdd() et al as described in the
+		 * writeCustomDataSource','custom DataSource overview.
+		 * 
+		 * Note that when using the built-in SQL, JPA and Hibernate connectors, the underlying SQL
+		 * column should be of 'text' type. The dbConfigTool','Database Configuration Tool will
+		 * automatically generate columns of the correct type for a SQLDataSource. For JPA or
+		 * Hibernate DataSources, just ensure the type of the Java bean property on your Java object is
+		 * String.
+		 * 
+		 * The default multipleStorage setting of null means that the "simpleString"
+		 * MultipleFieldStorage approach will be used if:
+		 * 
+		 * the field is of a known SimpleType
+		 * the field is not a DataSourceField.foreignKey
+		 * 
+		 * Otherwise, MultipleFieldStorage "none" will be used.
+		 * 
+		 * <h4>Criteria and AdvancedCriteria handling</h4>
+		 * 
+		 * For the built-in SQL, JPA and Hibernate connectors, when
+		 * multipleStorage:"simpleString" or "json" is used, criteria are transformed to
+		 * replicate the client-side filtering behavior for multiple:true fields, where possible.
+		 * The following operators are supported with the same behavior as client-side filtering:
+		 * 
+		 * all String-oriented operators including patternOperators','pattern operators,
+		 * but not regexp/iRegexp
+		 * isBlank / notBlank
+		 * isNull / notNull
+		 * inSet / notInSet
+		 * equalsField / notEqualsField / iEqualsField / iNotEqualsField
+		 * 
+		 * The following operators, which are supported for client-side filtering of multiple:true
+		 * fields, are not supported for server filtering when using multipleStorage:
+		 * 
+		 * greaterThan/lessThan(OrEqual)
+		 * "between" and all other operators with OperatorValueType of "valueRange" 
+		 * regexp / iRegexp as noted above
+		 * 
+		 * Note that for string-based filtering operators such as "equals", no characters which are
+		 * part of the DataSourceField.multipleStorageSeparator may be used in the filter string. If any
+		 * characters from the multipleStorageSeparator are present in the filter value,
+		 * it will always fail to match. For "json" mode, the multipleStorageSeparator is
+		 * effectively the String '","'.
+		 * Flags: IR, Group: multipleField
+		 */
+		readonly multipleStorage?: MultipleFieldStorage;
+		/** 
+		 * (Read only) For fields that are DataSourceField.multiple','multiple:true and use DataSourceField.multipleStorage, the
+		 * separator used in the "simpleString" MultipleFieldStorage mode.
+		 * 
+		 * Default value of null means the DataSourceField.multipleValueSeparator is used instead.
+		 * Flags: IR, Group: multipleField
+		 */
+		readonly multipleStorageSeparator?: String;
+		/** 
+		 * (Read only) For fields that are DataSourceField.multiple','multiple:true, the separator used 
+		 * between values when they are displayed.
+		 * Flags: IR, Group: multipleField
+		 */
+		readonly multipleValueSeparator?: String;
+		/** 
+		 * (Read only) Name for this field. 
+		 * 
+		 * Must be unique across all fields within the DataSource as well as a valid JavaScript
+		 * identifier - see FieldName for details and how to check for validity.
+		 * 
+		 * The field name is also the property in each DataSource record which holds the value for this
+		 * field.
+		 * Flags: IR, Group: basics
+		 */
+		readonly name?: string /* FieldName */;
+		/** 
+		 * (Read only) Only applicable to "sql" dataSources. If set, this property indicates that the field is 
+		 * bound to the column named in the property. It is used to bind a DataSourceField to a 
+		 * database column with a different name.
+		 * 
+		 * nativeName is useful for disambiguating in cases where you have customized 
+		 * SQL. For example, assume you are joining two tables - call them product and
+		 * supplier - that both contain a column called "name". Only one field in the 
+		 * DataSource can be called "name"; to disambiguate, we need to specify both 
+		 * DataSourceField.tableName','tableName and nativeName. A field declaration 
+		 * like this would be needed:
+		 * &lt;field name="supplierName" type="text" tableName="supplier" nativeName="name" />
+		 * 
+		 * You may also wish to use this property to map legacy column names to more meaningful field
+		 * names in the DataSource. For example:
+		 * &lt;field name="productName" type="text" nativeName="PRDNM" />
+		 * 
+		 * Note that it is not allowed to have multiple fields with the same nativeName 
+		 * bound to the same database table.
+		 * Flags: IR
+		 */
+		readonly nativeName?: String;
+		/** 
+		 * (Read only) Controls whether an explicit null-valued Record attribute for this field
+		 * should result in xsi:nil being used to transmit the value when serializing
+		 * to XML, like so:
+		 * 
+		 * &lt;book&gt;
+		 * &lt;title&gt;Beowulf&lt;/title&gt;
+		 * &lt;author xsi:nil="true"/&gt;
+		 * &lt;/book&gt;
+		 * 
+		 * If nillable is not set, no XML element will be generated for
+		 * the explicit null value.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: dataType
+		 */
+		readonly nillable?: boolean;
+		/** 
+		 * (Read only) If DataSource.noNullUpdates is set, the value to use for this field when a null
+		 * value is assigned to it on an update operation. This property overrides the DataSource-level
+		 * properties DataSource.nullStringValue','nullStringValue, 
+		 * DataSource.nullIntegerValue','nullIntegerValue, 
+		 * DataSource.nullFloatValue','nullFloatValue and 
+		 * DataSource.nullDateValue','nullDateValue, for this field only.
+		 * 
+		 * NOTE: If you use this property, you are responsible for ensuring that the replacement value
+		 * is appropriate and valid.
+		 * Flags: IR
+		 */
+		readonly nullReplacementValue?: any /* Any */;
+		/** 
+		 * Applies only to fields of type "float" or "integer" and affects how many significant
+		 * digits are shown.
+		 * 
+		 * For example, a field value of 343.1, 343.104 and 343.09872677 would all be shown as 343.10
+		 * if precision is 5.
+		 * 
+		 * The original value is always shown when the value is edited.
+		 * Flags: IRW, Group: appearance
+		 */
+		readonly precision?: number;
+		/** 
+		 * (Read only) Indicates either that this field holds a value unique across all records in this
+		 * DataSource, or that it is one of a number of fields marked as primary keys, and the
+		 * combination of the values held in all of those fields is unique across all records in the
+		 * DataSource. Note that the latter usage - so-called "composite" or "multipart" keys - is 
+		 * intended for support of legacy databases only: if you are able to choose an approach, 
+		 * Isomorphic recommends the use of one primaryKey field per DataSource, and 
+		 * ideally this field should be of DataSourceField.type','type "sequence". If you have
+		 * control of the underlying tables, there is nothing to stop you from adding a field like 
+		 * this (a so-called "synthetic" or "surrogate" key), even for tables that already have a set
+		 * of columns that could combine to make a composite key (a so-called "natural" key). Also, 
+		 * it is neither necessary nor correct to use a composite primaryKey because you want to 
+		 * enforce uniqueness across that combination of fields. You can achieve that by declaring
+		 * a unique constraint in the table schema, or use an ValidatorType','isUnique 
+		 * validator with validator.criteriaFields, or both; there is no need to use a 
+		 * composite key to enforce uniqueness
+		 * 
+		 * Note that composite primaryKeys are not supported in tree-structured datasets 
+		 * (Tree and ResultTree) or components (TreeGrid, 
+		 * ColumnTree). Tree-structured data requires that nodes have a unique 
+		 * Tree.idField','idField, with the parent/child relationship expressed through the 
+		 * Tree.parentIdField','parentIdField. This implies that binding a Tree to a DataSource
+		 * requires that the DataSource have a singular primaryKey, and that the primaryKey field is 
+		 * also the idField, as described in the treeDataBinding','tree databinding overview
+		 * 
+		 * A DataSource that can only perform the "fetch" operation does not require a
+		 * primaryKey unless it contains binaryFields','binary fields. If a DataSource 
+		 * allows modification of DataSource records through add, update and remove DataSource 
+		 * operations, or it contains one or more binary fields, one or more fields must be marked as 
+		 * the primary key.
+		 * 
+		 * SmartClient requires a primary key value to uniquely identify records when communicating
+		 * updates or deletions to the server. There is no requirement that the primaryKey field be
+		 * mapped to an actual "primary key" in your object model, web service, or database (though 
+		 * this is the most obvious and natural thing to do, of course). The only requirement is 
+		 * that the combined values of the primaryKey fields be unique for a given browser instance
+		 * for the lifetime of the page. 
+		 * 
+		 * If using SmartClient's sqlDataSource','SQL engine and generating SQL tables using
+		 * the dbConfigTool','Database Configuration Tool, the table column generated from a
+		 * primaryKey field will have a unique constraint applied in the database table and, if the field
+		 * is of type "sequence", the database column will also be created as an "identity column" in those
+		 * databases that implement sequence-type handling with identity columns.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly primaryKey?: boolean;
+		/** 
+		 * (Read only) For use in componentSchema for fields that contain other components, this flag
+		 * suppresses auto-construction for subcomponents that appear under this field.
+		 * 
+		 * For example, the VLayout schema sets this for its Layout.members','members
+		 * property, so that when a VLayout is constructed via XML as follows:
+		 * 
+		 * &lt;VLayout&gt;
+		 * &lt;members&gt;
+		 * &lt;ListGrid ID="myGrid" .../&gt;
+		 * &lt;Toolstrip ID="myToolStrip" ... /&gt;
+		 * &lt;/members&gt;
+		 * &lt;/VLayout&gt;
+		 * 
+		 * The ListGrid and ToolStrip do not construct themselves automatically. Instead, the VLayout
+		 * receives the properties of the ListGrid and ToolStrip as ordinary JavaScript Objects, with
+		 * the special property _constructor set to the name of the class that should be
+		 * constructed.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: componentSchema
+		 */
+		readonly propertiesOnly?: boolean;
+		/** 
+		 * (Read only) Sets the default FormItem to be used if this field is marked as 
+		 * DataSourceField.canEdit','canEdit false and displayed in an editor component such
+		 * as a DynamicForm.
+		 * 
+		 * This property may also be specified at the type level by specifying 
+		 * SimpleType.readOnlyEditorType.
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly readOnlyEditorType?: string /* FormItemClassName */;
+		/** 
+		 * (Read only) For a sqlDataSource','SQL DataSource field that specifies a
+		 * DataSourceField.foreignKey','foreignKey, this property defines the table alias name to
+		 * use in generated SQL. 
+		 * 
+		 * Aliasing is necessary when the same table appears more than once in a query. This can 
+		 * happen when using DataSourceField.includeVia','Multiple includeFrom \n fields referring to the same related DataSource. It can also happen when a
+		 * DataSourceField.foreignKey','foreignKey definition references the same dataSource
+		 * that the field is defined in; this happens with hierarchical structures, for example where
+		 * every Employee reports to another Employee. This is a so-called "self join", and it 
+		 * <em>always</em> requires relatedTableAlias to be specified; failure to do so
+		 * will result in invalid SQL.
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly relatedTableAlias?: String;
+		/** 
+		 * (Read only) Indicates this field must be non-null in order for a record to pass validation. Or, in the
+		 * case of a "binary" field, a non-empty file must be uploaded. Setting this property has the
+		 * same effect as giving the field a ValidatorType','"required" validator. 
+		 * 
+		 * Note that required should not be set for a server-generated field, such as a
+		 * sequence, or validation will fail on the client.
+		 * <h3>Conditionally required fields</h3>
+		 * Adding an Validator.applyWhen','applyWhen condition to a required 
+		 * validator introduces subtle complexities to the process of validating an existing record. 
+		 * The client is not guaranteed to know the the full and complete state of the record it is 
+		 * editing because it is common for a DynamicForm to be editing a subset of
+		 * fields. When a field is unconditionally required, things are simple: if the 
+		 * DynamicForm has a FormItem for that field, then the required validation
+		 * passes if that FormItem has a value, and fails if it does not. If the form has no FormItem
+		 * for the field, it can assume that the field has a value because otherwise it would have 
+		 * failed validation when we attempted to add it (when we are adding a record, we of course do 
+		 * know the full and complete state of the record - it is whatever we are about to add).
+		 * 
+		 * When a field is conditionally required, the client can no longer assume that all 
+		 * required fields will have a value. It may be the case that the condition of requirement 
+		 * was not met when the record was added, but now it is. For example, consider these field
+		 * definitions:
+		 * &lt;field name="yearsAtCurrentAddress" type="integer" /&gt;
+		 * &lt;field name="previousAddress" type="text" &gt;
+		 * &lt;validator type="required" errorMessage="Previous address is required if you have been at your current address less than three years"&gt;
+		 * &lt;applyWhen operator="and"&gt;
+		 * &lt;criteria&gt;
+		 * &lt;criterion fieldName="yearsAtCurrentAddress" operator="lessThan" value="3" /&gt;
+		 * &lt;/criteria&gt;
+		 * &lt;/applyWhen&gt;
+		 * &lt;/validator&gt;
+		 * &lt;/field&gt;
+		 * 
+		 * Imagine a record for this DataSource is added where the user has entered a value of "3" for 
+		 * "yearsAtCurrentAddress", and no previous address. Later, the value of that field is 
+		 * changed to "2". If this is done using a form that is also showing the "previousAddress" 
+		 * field, we will know that "previousAddress" has not been provided, so we can fail the 
+		 * validation and the user will get a helpful error message explaining what the problem is.
+		 * 
+		 * However, if the form does not also show the "previousAddress" field, we may choose to use an
+		 * OperationBinding that uses OperationBinding.outputs','outputs to trim the
+		 * record down to just the fields the form does contain, in the interests of avoiding 
+		 * information leakage. Or perhaps that value is automatically culled from the record before
+		 * the client sees it by the application of a DataSourceField.viewRequires','declarative security rule.
+		 * Whatever the reason, if the client does not have the complete record, it is not possible 
+		 * for the client to sensibly apply this validation. And because the client has no way of 
+		 * knowing if a value is missing because it is genuinely null, or because it has been trimmed
+		 * away by the server, we must treat any null value with suspicion (unless it has a matching 
+		 * FormItem - the presence of the FormItem means that the user can edit the value, so it 
+		 * would make no sense to pair it with a trimmed record that excludes that field value).
+		 * 
+		 * When this happens, we mark the validation as having passed on the client, but in need of 
+		 * running on the server. The server validation makes use of the "storedRecord" facility 
+		 * (look for the description of $storedRecord in the 
+		 * velocitySupport','Velocity support overview) to overlay the changed record on
+		 * top of the existing record as it currently exists in the database. This gives the validator
+		 * the complete record including both changed and unchanged values, so it is able to carry 
+		 * out the required check in a meaningful way. However, you should be aware that the 
+		 * combination of conditional "required" validators and DynamicForms that edit partial 
+		 * records can result in a validation that cannot run on the client and must do both a server 
+		 * roundtrip and a database fetch.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: dataType
+		 */
+		readonly required?: boolean;
+		/** 
+		 * The required message when a field that has been marked as
+		 * DataSourceField.required','required is not filled in by the user.
+		 * 
+		 * Note that this setting wins over DataSource.requiredMessage if both are set.
+		 * Flags: IRW, Group: formTitles
+		 */
+		readonly requiredMessage?: String;
+		/** 
+		 * (Read only) For a field that is a foreignKey establishing a tree relationship, what value indicates a
+		 * root-level node. Defaults to null.
+		 * 
+		 * Note that the rootValue may be overridden on a specific ResultTree instance by setting
+		 * ResultTree.rootNode, or if the ResultTree is auto-generated by a TreeGrid,
+		 * by setting TreeGrid.treeRootValue. This allows a component to navigate a subtree of
+		 * the hierarchical data from this dataSource starting at a particular node.
+		 * Flags: IR, Group: dataSourceRelations
+		 */
+		readonly rootValue?: any /* Any */;
+		/** 
+		 * (Read only) For a DataSource with DataSource.serverType','serverType:"sql" with a field of type
+		 * "sequence", the name of the SQL sequence that should be used when inserting new records into
+		 * this table.
+		 * 
+		 * Note that this is never required for SQL tables that are generated from SmartClient
+		 * DataSources (a default sequence name of tableName + "_" + columnName is chosen, but see the
+		 * notes below regarding this), and is never required for databases where inserting null into a 
+		 * sequence column is sufficient (MySQL, SQL Server, DB2 and others). 
+		 * 
+		 * You would only need to set sequenceName if you are integrating with a pre-existing table
+		 * stored in a database where the sequence must be named for insertion to work (Oracle,
+		 * Postgres, Firebird) OR you are trying to use the same sequence across multiple DataSources.
+		 * 
+		 * Note: If you specify the sql.{database type}.sequence.name.prefix and/or 
+		 * sql.{database type}.sequence.name.suffix properties in your 
+		 * server_properties','server.properties file,the generated sequence name will include the prefix and/or
+		 * suffix. For example, with a prefix of "order_system_" and a suffix of "_seq", the sequence
+		 * generated for column "orderNumber" on table "orders" would be:
+		 * order_system_orders_orderNumber_seq
+		 * 
+		 * Flags: IR, Group: sqlDataSource
+		 */
+		readonly sequenceName?: String;
+		/** 
+		 * (Read only) For a field of type:"imageFile", indicates whether to stream the image and display it
+		 * inline or to display the View and Download icons.
+		 * boolean - Null not allowed
+		 * Flags: IR
+		 */
+		readonly showFileInline?: boolean;
+		/** 
+		 * (Read only) Causes values for this field to be sorted according to values for another field, for
+		 * both client- and server-side sorting.
+		 * 
+		 * This can be used to establish a sort order for a field that is not the normal sorting
+		 * order indicated by the field value, typically by having the sortByField as
+		 * a DataSourceField.hidden','hidden field. 
+		 * 
+		 * If using SQLDataSource, consider using a DataSourceField.customSelectExpression as an efficient
+		 * way to populate the sortByField with the results of a SQL expression.
+		 * Flags: IR
+		 */
+		readonly sortByField?: String;
+		/** 
+		 * (Read only) For fields of type "date", "time", and "datetime" that specify an
+		 * DataSourceField.sqlStorageStrategy','sqlStorageStrategy of "number" or "text", this
+		 * property allows you to specify the format SmartClient should use to map to/from the 
+		 * underlying value stored in the database. The string provided must be a valid 
+		 * <a href=http://download.oracle.com/javase/1.4.2/docs/api/java/text/SimpleDateFormat.html>
+		 * SimpleDateFormat pattern string</a>.
+		 * 
+		 * For fields of type "datetime" and "time" that specify an
+		 * DataSourceField.sqlStorageStrategy','sqlStorageStrategy of "number", two special
+		 * sqlDateFormat values are supported:
+		 * 
+		 * "epoch" - The datetime or time value is stored as the number of full seconds that have
+		 * elapsed since January 1, 1970, 00:00:00 GMT.
+		 * "epochms" - The datetime or time value is stored as the number of milliseconds that
+		 * have elapsed since January 1, 1970, 00:00:00 GMT. Millisecond precision is preserved
+		 * through database roundtrips with this setting
+		 * 
+		 * 
+		 * This property and the "number" and "text" strategies for date/datetime fields are provided
+		 * to allow transparent two-way mapping of legacy date values that are stored in numeric or
+		 * text columns respectively rather than a true "date" column. You would not ordinarily use them
+		 * in the absence of a legacy database.
+		 * 
+		 * Note that this property only applies to users of SmartClient server and data sources of
+		 * type "sql".
+		 * Flags: IR
+		 */
+		readonly sqlDateFormat?: String;
+		/** 
+		 * (Read only) For fields of type "boolean" that specify a 
+		 * DataSourceField.sqlStorageStrategy','sqlStorageStrategy of "singleChar", this is the
+		 * value to persist for false values. Note that the common use cases of storing booleans as 
+		 * T/F, Y/N and 1/0 are already catered for without the need for this property.
+		 * For fields of type "boolean" that specify a 
+		 * DataSourceField.sqlStorageStrategy','sqlStorageStrategy of "string", this is the value
+		 * to persist for false values that require using the entire value.
+		 * 
+		 * You can specify NULL as a valid value for sqlFalseValue, using this XML notation:
+		 * 
+		 * &lt;sqlFalseValue xsi:nil="true"&gt;&lt;/sqlFalseValue&gt;
+		 * 
+		 * Flags: IR
+		 */
+		readonly sqlFalseValue?: String;
+		/** 
+		 * (Read only) For certain field types, indicates the strategy to be used to store values to the underlying
+		 * SQL column.
+		 * 
+		 * Fields of type "boolean"
+		 * The default strategy for boolean fields is to assume the underlying type of the field is 
+		 * text and store boolean true and false values as the character strings "true" and "false". 
+		 * The following additional strategies are available:
+		 * 
+		 * "number" or "integer": store true as 1, false as 0
+		 * "singleChar10": store true as "1", false as "0"
+		 * "singleCharYN": store true as "Y", false as "N"
+		 * "singleCharTF": store true as "T", false as "F"
+		 * "singleChar": store as a single character, using the values defined by 
+		 * DataSourceField.sqlTrueValue','sqlTrueValue and 
+		 * DataSourceField.sqlFalseValue','sqlFalseValue
+		 * "string": store the entire values defined by 
+		 * DataSourceField.sqlTrueValue','sqlTrueValue and 
+		 * DataSourceField.sqlFalseValue','sqlFalseValue
+		 * 
+		 * 
+		 * Fields of type "date", "time", and "datetime"
+		 * The default strategy for these types is to use a native type that supports date and 
+		 * time values to the nearest second; the actual type used varies by database. The following
+		 * additional strategies are available:
+		 * 
+		 * "nativeDate": Use a native SQL DATE type
+		 * "number" or "integer": Store the value as a plain numeric value
+		 * "text": Store the value as a plain text value
+		 * 
+		 * The "number" and "text" strategies for date/time/datetime fields are provided to allow transparent
+		 * two-way mapping of legacy date values; you would not ordinarily use them in the absence of a
+		 * legacy database. In both cases, the actual format of the number or text string is determined
+		 * by specifying a DataSourceField.sqlDateFormat','sqlDateFormat on the field; if no 
+		 * format is specified, the framework defaults to "yyyyMMdd".
+		 * 
+		 * 
+		 * Fields of type "text"
+		 * <em>NOTE: This section is only applicable for users of Microsoft SQL Server. The "ntext"
+		 * strategy is ignored for all other databases.</em>
+		 * If you are integrating with Microsoft SQL Server, you may run into an issue with that database
+		 * and double-byte character sets. Although the documentation indicates that string values are 
+		 * sent to the database as Unicode by default, they may undergo conversion at the database end, 
+		 * depending on the collation settings of the database. 
+		 * <a href=http://support.microsoft.com/kb/239530>This Microsoft support article</a> describes
+		 * the situation, which is that Unicode is converted to the code page of the database before
+		 * being used, in order to "provide backward compatibility with existing applications".
+		 * 
+		 * To work around this, we provide an sqlStorageStrategy of "ntext". Fields that
+		 * declare this strategy are inserted into queries using the "N syntax", like so:
+		 * &nbsp;&nbsp;&nbsp;UPDATE MyTable SET MyTextColumn = N'some text' WHERE MyPK = N'some key'
+		 * 
+		 * This syntax overrides defaults and forces the database to treat strings as Unicode.
+		 * 
+		 * Note that declaring a field to be of FieldType','type "ntext" is exactly 
+		 * equivalent to specifying type "text" and an sqlStorageStrategy of "ntext". 
+		 * If you declare a field of type "ntext" when the back-end database is something other than 
+		 * SQL Server, it will be treated as a normal field of type "text".
+		 * 
+		 * This property only applies to users of the SmartClient server using dataSources of
+		 * type "sql".
+		 * Flags: IR
+		 */
+		readonly sqlStorageStrategy?: String;
+		/** 
+		 * (Read only) For fields of type "boolean" that specify a 
+		 * DataSourceField.sqlStorageStrategy','sqlStorageStrategy of "singleChar", this is the
+		 * value to persist for true values. Note that the common use cases of storing booleans as 
+		 * T/F, Y/N and 1/0 are already catered for without the need for this property.
+		 * For fields of type "boolean" that specify a 
+		 * DataSourceField.sqlStorageStrategy','sqlStorageStrategy of "string", this is the value
+		 * to persist for true values that require using the entire value.
+		 * Flags: IR
+		 */
+		readonly sqlTrueValue?: String;
+		/** 
+		 * (Read only) For fields of type "datetime", indicates whether the framework should attempt to preserve
+		 * the millisecond part when persisting to native SQL datetime-type columns. Whether this 
+		 * is possible depends on the type and version of the underlying database product; some 
+		 * databases - for example SQL Server earlier than 2008 and MySQL versions earlier than 
+		 * 5.6 - do not provide fractional seconds support. If you set this flag when your underlying 
+		 * database cannot support fractional seconds, it will be ignored.
+		 * 
+		 * Other than the two cases just mentioned which are known to fail, storeMilliseconds 
+		 * has been tested and is officially supported with the following products and minimum 
+		 * versions:
+		 * Oracle 10g
+		 * Microsoft SQL Server 2008
+		 * MySQL 5.6
+		 * PostgreSQL 9.1
+		 * HSQLDB 2.2
+		 * DB2 for Unix/Linux 9.7
+		 * Firebird 11.2
+		 * Informix IDS 11.5
+		 * 
+		 * Note that you can use DataSourceField.sqlStorageStrategy','sqlStorageStrategy to store a datetime 
+		 * value with sub-second precision in <em>any</em> database - see below.
+		 * 
+		 * When the system generates SQL to insert or update datetime values including a millisecond
+		 * element, it does so using a database-specific format string specified in property 
+		 * defaultDateTimeFormatWithMilliseconds in your server.properties 
+		 * file. These format strings should conform to the rules of the
+		 * <a href=http://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html>
+		 * Java SimpleDateFormat class</a>. Suitable format strings are provided for all default 
+		 * databases out of the box; if you need to override one or provide a new one, you do so as
+		 * shown in this example:
+		 * sql.MyNewDatabase.defaultDateTimeFormatWithMilliseconds: yy-MM-dd'T'hh.mm.ss.SSS
+		 * 
+		 * Note that this property only controls the persistence of milliseconds into the database;
+		 * there is no built-in support for sub-second elements of datetimes in any SmartClient visual
+		 * components. See also the documentation for DataSource.trimMilliseconds for more 
+		 * details of how sub-second datetime elements are handled in the client-server flow.
+		 * 
+		 * This property is only applicable to DataSources of DSServerType','serverType 
+		 * "sql" and fields of FieldType','type "datetime". It is ignored in all other 
+		 * cases. However, note that the built-in JPA and Hibernate dataSources will always persist
+		 * millisecond values automatically if the underlying Java type, database and column support
+		 * it.
+		 * 
+		 * Finally, note that this property only has an effect on <em>native</em> datetime-type fields.
+		 * When you use DataSourceField.sqlStorageStrategy','sqlStorageStrategy to store a temporal value in a 
+		 * text or number column, it is the DataSourceField.sqlDateFormat','sqlDateFormat you use that dictates 
+		 * the precision. For example, a field with sqlStorageStrategy:"text" and 
+		 * sqlDateFormat:"yyyy-MM-dd hh:mm:ss.SSS" would store and retrieve with millisecond
+		 * precsion; the same field with sqlDateFormat:"yyyy-MM-dd hh:mm" would store
+		 * and retrieve with precision to the nearest minute only.
+		 * Boolean - Null allowed
+		 * Flags: IR
+		 */
+		readonly storeMilliseconds?: boolean /* Boolean */;
+		/** 
+		 * (Read only) If set, causes the field to be securely hashed before saving on an "add" or "update" 
+		 * operation.
+		 * Flags: IR
+		 */
+		readonly storeWithHash?: HashAlgorithm;
+		/** 
+		 * (Read only) Server-side setting that causes values for fields of type "integer" or "float" to be represented 
+		 * as Strings when delivered to a web browser, in order to avoid mangling values which cannot be
+		 * represented faithfully in JavaScript.
+		 * 
+		 * JavaScript has a single "Number" type which internally stores numbers in a format equivalent to
+		 * Java's "Double" - double-precision floating point. This means it cannot represent the full
+		 * range of Java's Long type: Java Longs can represent integral values between -2^63 to 2^63-1,
+		 * whereas JavaScript Number can only represent exact integer values between -2^53 and 2^53.
+		 * Similarly, JavaScript's Number type cannot represent Java's unlimited-size BigInteger or
+		 * unlimited-precision BigDecimal objects at all.
+		 * 
+		 * The stringInBrowser setting can be used to deliver numeric values as Strings to the
+		 * browser. This is intended to allow read-only display and successful round-tripping of the
+		 * numeric value, however, it will not cause number-oriented features such as SpinnerItem,
+		 * Slider, ListGrid.showGridSummary','ListGrid summaries or range-checking
+		 * Validator','validators or AdvancedCriteria','criteria to actually work.
+		 * 
+		 * If stringInBrowser is not set, the default behavior is configured by the 
+		 * server.properties setting datasource.defaultStringInBrowser. If 
+		 * this flag is false, numeric values are delivered to the client as numbers, even where 
+		 * this will lead to a loss of precision. If the flag is true (which is the the default),
+		 * the behavior is to prevent range overflow for numeric values:
+		 * 
+		 * Java values of type Long, BigInteger and BigDecimal will be delivered as
+		 * String only if they exceed JavaScript's number range. 
+		 * Client-side validation will allow inputs that are outside of JavaScript's normal
+		 * integer range, and such numbers will remain as Strings after validation, instead of being
+		 * converted to Numbers
+		 * Values submitted to the server will be converted to BigInteger if they exceed the range
+		 * of Java's Long type. This happens during DSRequest validation, before any defined
+		 * dmiOverview','DMI methods are called.
+		 * 
+		 * 
+		 * This default set of behaviors is intended to automatically deal with cases like numeric
+		 * DataSourceField.primaryKey or DataSourceField.foreignKey values that are never used as numbers, but happen to use
+		 * the full Java Long range. To disable the above behaviors, set stringInBrowser="false".
+		 * 
+		 * If stringInBrowser is explicitly set to true:
+		 * 
+		 * the value for the field will always be delivered to the browser as a String (no
+		 * attempt is made to detect the value as out of range / too high precision)
+		 * client-side validation will do a check for valid format only, and always leave the value
+		 * as a String. Numeric range validators are ignored client-side (always pass), but are
+		 * still active server-side.
+		 * AdvancedCriteria OperatorId','operators that check if values are in a particular
+		 * range will always pass
+		 * the field is treated as though DataSourceField.canFilter','canFilter:false were set, to avoid showing
+		 * non-functional search interfaces to the user. Set canFilter="true" to avoid
+		 * this effect
+		 * 
+		 * 
+		 * This setting is recommended for presenting out-of-range issues or precision loss on fields that
+		 * represent actual quantities (as opposed to primaryKey or foreignKey fields, which really
+		 * represent IDs). To ensure unlimited-precision BigDecimal values are preserved, you should also
+		 * set DataSourceField.javaClass.
+		 * 
+		 * Note that responses delivered as JSON or XML, such as responses from the
+		 * servletDetails','RESTHandler servlet, are not affected. This setting applies only
+		 * to responses delivered to a web browser.
+		 * 
+		 * The entirety of stringInBrowser processing can be completely disabled by setting 
+		 * server.properties flag datasource.disableStringInBrowser to true.
+		 * This will cause all numeric values to be delivered as numbers without even attempting to 
+		 * detect if this will lead to a loss of precision. This setting overrides both the 
+		 * stringInBrowser field setting and the 
+		 * datasource.defaultStringInBrowser server.properties flag.
+		 * Boolean - Null allowed
+		 * Flags: IR
+		 */
+		readonly stringInBrowser?: boolean /* Boolean */;
+		/** 
+		 * (Read only) If ListGrid.showGridSummary or ListGrid.showGroupSummary is true,
+		 * this attribute can be used to specify
+		 * an explicit SummaryFunction for calculating the summary value to
+		 * display.
+		 * 
+		 * If an array of summaryFunctions is specified, they will be executed in turn and the
+		 * grid will show multiple summary rows at the grid or group level (or both)
+		 * containing the resulting values.
+		 * Flags: IR
+		 */
+		readonly summaryFunction?: SummaryFunction;
+		/** 
+		 * (Read only) Title to show in a SummaryFunction','Summary of type "title" for this field. If unspecified
+		 * title summaries will show the DataSourceField.title for the field.
+		 * Flags: IR
+		 */
+		readonly summaryValueTitle?: String;
+		/** 
+		 * (Read only) Only applicable to "sql" dataSources, setting tableName indicates that this
+		 * field will be coming from another table by way of a 
+		 * customQuerying','customized SQL query.
+		 * 
+		 * By default, the SQL generator will not include this field in generated SQL for "add"
+		 * or "update" operations. It will include the field in the SELECT clause and WHERE clause of
+		 * customized "fetch" operations, where it is expected that you will make the table available
+		 * via a custom &lt;tableClause&gt; as shown in largeValueMapSQL', 'this sample.
+		 * 
+		 * The table name will also be used to qualifying the column name unless
+		 * DataSource.qualifyColumnNames or OperationBinding.qualifyColumnNames has been
+		 * disabled.
+		 * 
+		 * Note: This property is only required when including fields from tables other than the
+		 * default table specified by DataSource.tableName.
+		 * Flags: IR
+		 */
+		readonly tableName?: String;
+		/** 
+		 * (Advanced) Preferred time-format to apply to date type values within this field. If this property is
+		 * specified on a field displayed within a dataBound component such as a ListGrid or
+		 * DynamicForm, any dates displayed in this field will be formatted as times using the
+		 * appropriate format.
+		 * 
+		 * This is most commonly only applied to fields specified as type "time" though
+		 * if no explicit FormItem.dateFormatter is specified it will be respected for other 
+		 * fields as well.
+		 * 
+		 * See ListGridField.timeFormatter and FormItem.timeFormatter for more information.
+		 * Flags: IRWA, Group: appearance
+		 */
+		readonly timeFormatter?: TimeDisplayFormat;
+		/** 
+		 * (Read only) Default user-visible title for this field.
+		 * 
+		 * This will be picked up by DataBound components and other views over this DataSource.
+		 * 
+		 * Note this property frequently does not need to be set since DataSource.autoDeriveTitles (on by
+		 * default) usually picks an appropriate user-visible title if you have a reasonable naming convention
+		 * for your field names.
+		 * 
+		 * Note that if this field is being displayed in a ListGrid bound to this dataSource,
+		 * the ListGridField.headerTitle attribute may be used to specify a
+		 * different string for display in the listGrid column header.
+		 * Flags: IR, Group: componentBinding
+		 */
+		readonly title?: String;
+		/** 
+		 * (Read only) Type of this field. Required for all DataSource fields.
+		 * 
+		 * Field type may imply automatic validators (for example, an integer field cannot accept the
+		 * value "foo"). Field type also affects the default behaviors of DataBound components, for
+		 * example, if a field is declared as type "date", components that edit that field will
+		 * automatically choose a date-editing interface with pop-up date picker.
+		 * Flags: IR, Group: basics
+		 */
+		readonly type?: FieldType;
+		/** 
+		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
+		 * updates to this field are to be allowed. If the specified expression does not 
+		 * evaluate to true, the field will be removed from the request as described for 
+		 * DataSourceField.editRequiresAuthentication','editRequiresAuthentication.
+		 * 
+		 * In addition to the normal context variables available to Velocity expressions in SmartClient,
+		 * expressions you write for field-level requires clauses - updateRequires, 
+		 * DataSourceField.viewRequires','viewRequires, DataSourceField.editRequires','editRequires and 
+		 * DataSourceField.initRequires','initRequires - can reference two additional variables: 
+		 * $fieldName and $dsName. These are the names of the dataSource and 
+		 * field currently undergoing requires checks. They are helpful because they allow
+		 * you to write a generic checker function that can be used to handle requires
+		 * checks for multiple fields and dataSources.
+		 * 
+		 * NOTE: This property only prevents update of a field; initialization will still be 
+		 * allowed. You should only use this property if you have a special requirement; ordinarily,
+		 * use DataSourceField.editRequires, which applies security for both types of write.
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly updateRequires?: VelocityExpression;
+		/** 
+		 * (Read only) Whether a user must be authenticated in order to update to this field. If this property is 
+		 * set and the user is not authenticated, the SmartClient Server will not allow this field to
+		 * be updated.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly updateRequiresAuthentication?: boolean;
+		/** 
+		 * (Read only) Comma-separated list of user roles that are allowed to update this field. If the current
+		 * user does not have any of the roles listed, the system will not allow this field to be 
+		 * updated.
+		 * 
+		 * NOTE: This property only prevents a field from being updated; initialization will 
+		 * still be allowed. You should only use this property if you have a special requirement; 
+		 * ordinarily, use DataSourceField.editRequiresRole, which applies security for both 
+		 * types of write.
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly updateRequiresRole?: String;
+		/** 
+		 * (Read only) Used by the BatchUploader to map a field in an upload file to this 
+		 * dataSourceField. This is only necessary if the dataSourceField's name and title differ 
+		 * from the name of the field in the upload file (SmartClient will automatically map upload 
+		 * fields using the dataSourceField's title, if possible, if it does not get a direct match 
+		 * on field name).
+		 * Flags: IR
+		 */
+		readonly uploadFieldName?: String;
+		/** 
+		 * (Read only) If this field has a specified DataSourceField.displayField, this attribute
+		 * allows you to explicitly tell editor components to pick up the display-field value
+		 * from the record currently being edited, rather than fetching against a
+		 * specified FormItem.optionDataSource.
+		 * 
+		 * See FormItem.useLocalDisplayFieldValue for more detail.
+		 * 
+		 * Note that for the common pattern described DataSourceField.includeFrom','here of
+		 * having an editable foreignKey field with a static display value (derived from a displayField
+		 * with 'includeFrom' set), the framework will automatically default this property to true
+		 * if not explicitly specified in the dataSource configuration file.
+		 * Boolean - Null allowed
+		 * Flags: IR
+		 */
+		readonly useLocalDisplayFieldValue?: boolean /* Boolean */;
+		/** 
+		 * (Read only) Validators to be applied to this field.
+		 * 
+		 * Validators are applied whenever there is an attempt to save changes to a field.
+		 * 
+		 * For the available set of built-in validators, and how to define a custom validator, see the
+		 * Validator class.
+		 * Flags: IR, Group: dataType
+		 */
+		readonly validators?: Array<Validator> /* Array of Validator */;
+		/** 
+		 * (Read only) List of operators valid on this field. 
+		 * 
+		 * If not specified, all operators that are valid for the field type are allowed.
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly validOperators?: Array<OperatorId> /* Array of OperatorId */;
+		/** 
+		 * (Read only) A ValueMap is a set of legal values for a field.
+		 * 
+		 * The valueMap can be specified as either an Array of legal values, or as an
+		 * Object where each property maps a stored value to a user-displayable value.
+		 * 
+		 * To enforce that a field should be constrained to only the values in the valueMap, either
+		 * declare DataSourceField.type','field.type as "enum", or use a
+		 * ValidatorType of "isOneOf" with explicitly listed values. Otherwise,
+		 * although a normal SelectItem control will only allow values from the valueMap to be
+		 * entered, other controls such as a ComboBoxItem','ComboBox will allow other values 
+		 * to be entered.
+		 * 
+		 * In XML, a valueMap that specifies only a list of legal values is specified as follows:
+		 * 
+		 * &lt;valueMap&gt;
+		 * &lt;value&gt;Pens &amp; Pencils&lt;/value&gt;
+		 * &lt;value&gt;Stationery&lt;/value&gt;
+		 * &lt;value&gt;Computer Products&lt;/value&gt;
+		 * &lt;value&gt;Furniture&lt;/value&gt;
+		 * &lt;value&gt;Misc&lt;/value&gt;
+		 * &lt;/valueMap&gt;
+		 * 
+		 * A ValueMap that specifies stored values mapped to user-visible values is specified as
+		 * follows:
+		 * 
+		 * &lt;valueMap&gt;
+		 * &lt;value ID="1"&gt;Pens &amp; Pencils&lt;/value&gt;
+		 * &lt;value ID="2"&gt;Stationery&lt;/value&gt;
+		 * &lt;value ID="3"&gt;Computer Products&lt;/value&gt;
+		 * &lt;value ID="4"&gt;Furniture&lt;/value&gt;
+		 * &lt;value ID="5"&gt;Misc&lt;/value&gt;
+		 * &lt;/valueMap&gt;
+		 * 
+		 * Flags: IR, Group: dataType
+		 */
+		readonly valueMap?: ValueMap;
+		/** 
+		 * (Read only) Fully qualified Java className of an Enum that should be used to derive this field's
+		 * ValueMap.
+		 * 
+		 * This has the same behavior of auto-deriving a valueMap from a Java Enum as
+		 * DataSource.autoDeriveSchema except it applies only to one field.
+		 * 
+		 * If you enable autoDeriveSchema there is no need to set
+		 * valueMapEnum for Enum fields unless you want to actually override the
+		 * behavior to use a different Enum for the field (eg, a superclass Enum that is more
+		 * restrictive).
+		 * Flags: IR
+		 */
+		readonly valueMapEnum?: String;
+		/** 
+		 * (Read only) Alternative XPath expression used to set the field's value.
+		 * 
+		 * If is not set, then DataSourceField.valueXPath','dataSourceField.valueXPath is
+		 * used, see its description for details.
+		 * Flags: IR, Group: clientDataIntegration
+		 */
+		readonly valueWriteXPath?: XPathExpression;
+		/** 
+		 * (Read only) XPath expression used to retrieve the field's value.
+		 * 
+		 * This XPath expression will be evaluated in the scope of the record objects selected by 
+		 * the DataSource.recordXPath. For XML data 
+		 * (DataSource.dataFormat','dataFormat:"xml") this means a call to
+		 * XMLTools.selectString passing the selected XML element. For JSON data
+		 * (DataSource.dataFormat','dataFormat:"json"), this means a call to 
+		 * XMLTools.selectObjects passing the selected JSON object.
+		 * 
+		 * In the absence of a valueXPath, for JSON data the value for the field will
+		 * be the value of the same-named property in the record object selected by
+		 * DataSource.recordXPath','recordXPath. 
+		 * 
+		 * For XML data, the value will be the attribute or subelement named after the field name.
+		 * For example, for a field "author" on a record element &lt;book&gt;, the following structures
+		 * require no valueXPath:
+		 * 
+		 * &lt;book author="Mark Jones"/&gt;
+		 * 
+		 * &lt;book&gt;
+		 * &lt;author&gt;Mark Jones&lt;/author&gt;
+		 * &lt;/book&gt;
+		 * 
+		 * 
+		 * If valueXPath is not required for your field because of the default handling
+		 * described above, don't specify it, as it's slightly slower.
+		 * 
+		 * To learn about XPath, try the following search:
+		 * <a href="http://www.google.com/search?q=xpath+tutorial" target="_blank"
+		 * >http://www.google.com/search?q=xpath+tutorial</a>
+		 * 
+		 * Using valueXPath with the SmartClient server
+		 * 
+		 * If you're using the SmartClient server to return data via the DSResponse object (or
+		 * indirectly doing so using DataSource DMI), the valueXPath you specify on the DataSource
+		 * fields will be applied to the data you return via the 
+		 * <a href='http://commons.apache.org/jxpath/' target='_blank'>JXPath</a> library.
+		 * 
+		 * If you are returning Java Beans as your DSResponse data, normally each dataSource field
+		 * receives the value of the same-named Java Bean property, that is, a field "zipCode" is
+		 * populated by looking for "getZipCode()" on the objects passed as DSResponse data. You can
+		 * use valueXPath to retrieve properties from subobjects, so long as a chain of
+		 * getter methods exists that corresponds to the valueXPath. For example, a valueXPath of
+		 * "address/zipCode" expects to call "getAddress()" on the bean(s) passed to
+		 * DSResponse.setData(), followed by "getZipCode()" on whatever object "getAddress()" returns.
+		 * 
+		 * When you are saving data, the inbound DSRequest values, available as a Java Map, will use 
+		 * just dataSource field names as Map keys, not the valueXPath used to derive them. However,
+		 * to achieve bidirectional valueXPath binding, you can use the server-side method
+		 * dataSource.setProperties() to use the valueXPath when setting properties on your server
+		 * object model. When applied as a setter, an XPath like "address/zipCode" attempts
+		 * "getAddress()" followed by "setZipCode()" on the returned object. JXPath also has some
+		 * ability to auto-create intervening objects if they are missing, such as auto-creating an
+		 * "address" subobject when applying "address/zipCode" as a valueXPath.
+		 * 
+		 * See the
+		 * <a href='http://jakarta.apache.org/commons/jxpath/' target='_blank'>JXPath</a> library documentation for
+		 * complete details, including other types of server object models supported, such as
+		 * server-side XML.
+		 * Flags: IR, Group: clientDataIntegration
+		 */
+		readonly valueXPath?: XPathExpression;
+		/** 
+		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
+		 * values for the field are to be fetched. If the specified expression does not evaluate
+		 * to true, the field will be dropped as described for 
+		 * DataSourceField.viewRequiresAuthentication','viewRequiresAuthentication.
+		 * 
+		 * In addition to the normal context variables available to Velocity expressions in SmartClient,
+		 * expressions you write for field-level requires clauses - viewRequires, 
+		 * DataSourceField.editRequires','editRequires, DataSourceField.initRequires','initRequires and 
+		 * DataSourceField.updateRequires','updateRequires - can reference two additional variables: 
+		 * $fieldName and $dsName. These are the names of the dataSource and 
+		 * field currently undergoing requires checks. They are helpful because they allow
+		 * you to write a generic checker function that can be used to handle requires
+		 * checks for multiple fields and dataSources.
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly viewRequires?: VelocityExpression;
+		/** 
+		 * (Read only) Whether a user must be authenticated in order to fetch this field. If this property is 
+		 * set and the user is not authenticated, SmartClient Server will not return values for this
+		 * field to the client.
+		 * 
+		 * The way this behavior works is to remove the field from the expressed or implied list of
+		 * fields to return. A list of fields can be expressed using OperationBinding.outputs
+		 * or DSRequest.outputs; in the absence of those, the entire set of fields defined in 
+		 * the DataSource is implied. You can override this behavior on a per-request basis by 
+		 * providing a DMI that just re-adds the names of the fields you want for that particular 
+		 * request to the "consolidated outputs". See the server-side Javadoc for 
+		 * DSRequest.getConsolidatedOutputs().
+		 * 
+		 * In addition to this behavior of trimming off values in fetched records, a field that fails
+		 * a field-level security check (either this one or one of the two more specific checks, 
+		 * DataSourceField.viewRequiresRole','viewRequiresRole and DataSourceField.viewRequires','viewRequires) will be 
+		 * altered in the version of the dataSource returned to the client by the 
+		 * loadDSTag','&lt;loadDS&gt; JSP tag or 
+		 * dataSourceDeclaration','DataSourceLoader servlet.
+		 * 
+		 * If the field is also not editable (see the discussion of this below), it will be marked 
+		 * DataSourceField.canView','canView:false, and thus effectively be inert and unusable on the client
+		 * If the field is editable, it will be marked DataSourceField.hidden','hidden. By default, this means
+		 * that DataBoundComponents will not show the field, though this can be overridden for 
+		 * individual components. If you do choose to unhide the field, bear in mind that it will 
+		 * never actually show any data, because the underlying security test has still failed
+		 * 
+		 * By default, view constraints automatically imply edit constraints - almost all of the time,
+		 * if a user is not allowed to view a field, he should not be allowed to update it either. If
+		 * you specify a view constraint, the system behaves as if you had also specified the 
+		 * corresponding edit constraint - so viewRequiresAuthentication on a field 
+		 * implies DataSourceField.editRequiresAuthentication','editRequiresAuthentication.
+		 * You override this behavior simply by specifying some kind of edit constraint for the field,
+		 * either a different one (eg, "users" can view a field, but only "managers" can update it) or 
+		 * a blank one (if you have some unusual requirement whereby users are not allowed to view a 
+		 * field, but they can update it).
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly viewRequiresAuthentication?: boolean;
+		/** 
+		 * (Read only) Comma-separated list of user roles that are allowed to fetch this field. If the current user
+		 * has any of the roles listed, values for the field will be fetched. Please see 
+		 * OperationBinding.requiresRole for further details of SmartClient's declarative 
+		 * role-based security. Please also see 
+		 * DataSourceField.viewRequiresAuthentication','viewRequiresAuthentication for details
+		 * of how declarative field-level security settings can be overridden per-request.
+		 * Flags: IR, Group: fieldLevelAuth
+		 */
+		readonly viewRequiresRole?: String;
+		/** 
+		 * (Read only) Indicates that DataSource.xmlSerialize should serialize this value as an XML
+		 * attribute.
+		 * 
+		 * Note this does not need to be declared in order for DataSource records to be derived from
+		 * XML data: a field will be populated with either an attribute or subelement with matching
+		 * name.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: xmlSerialize
+		 */
+		readonly xmlAttribute?: boolean;
+	} // DataSourceField
+
+	export interface DataSourceFieldStatic {
+	} // DataSourceFieldStatic
+
+
+	/**
 	 * An object containing details for mouse events occurring over a FormItem. 
 	 */
 	export interface FormItemEventInfo {
@@ -4811,7 +7607,7 @@ declare namespace Isc {
 		 * FormItemIcon.name for the icon.
 		 * Flags: IR
 		 */
-		readonly icon?: string /* String */;
+		readonly icon?: String;
 		/** 
 		 * (Read only) Item over which the event occurred.
 		 * Flags: R
@@ -4821,12 +7617,14 @@ declare namespace Isc {
 		 * (Read only) True if the event occurred over the item's data or input element. Note that it can be bad 
 		 * practice to implement custom context menus when overElement is true, since this will
 		 * replace browser-default menus that users might expect.
+		 * Boolean - Null allowed
 		 * Flags: R
 		 */
 		readonly overElement?: boolean /* Boolean */;
 		/** 
 		 * (Read only) True if the event occurred over the form's 
 		 * DynamicForm.errorItemProperties','single error item.
+		 * Boolean - Null allowed
 		 * Flags: R
 		 */
 		readonly overInlineError?: boolean /* Boolean */;
@@ -4834,16 +7632,19 @@ declare namespace Isc {
 		 * (Read only) True if the event occurred over the main body of the item (for example the text-box), rather
 		 * than over the title or within the form item's cell in the DynamicForm but outside the
 		 * text box area.
+		 * Boolean - Null allowed
 		 * Flags: R
 		 */
 		readonly overItem?: boolean /* Boolean */;
 		/** 
 		 * (Read only) True if the event occurred within the item's FormItem.textBoxStyle','textBox.
+		 * Boolean - Null allowed
 		 * Flags: R
 		 */
 		readonly overTextBox?: boolean /* Boolean */;
 		/** 
 		 * (Read only) True if the event occurred over the item's title.
+		 * Boolean - Null allowed
 		 * Flags: R
 		 */
 		readonly overTitle?: boolean /* Boolean */;
@@ -4861,27 +7662,27 @@ declare namespace Isc {
 		 * (Read only) x coordinate of outer radial
 		 * Flags: IR
 		 */
-		readonly cx?: string /* String */;
+		readonly cx?: String;
 		/** 
 		 * (Read only) y coordinate of outer radial
 		 * Flags: IR
 		 */
-		readonly cy?: string /* String */;
+		readonly cy?: String;
 		/** 
 		 * (Read only) x coordinate of inner radial
 		 * Flags: IR
 		 */
-		readonly fx?: string /* String */;
+		readonly fx?: String;
 		/** 
 		 * (Read only) y coordinate of inner radial
 		 * Flags: IR
 		 */
-		readonly fy?: string /* String */;
+		readonly fy?: String;
 		/** 
 		 * (Read only) radius
 		 * Flags: IR
 		 */
-		readonly r?: string /* String */;
+		readonly r?: String;
 	} // RadialGradient
 
 	export interface RadialGradientStatic extends GradientStatic {
@@ -4895,11 +7696,13 @@ declare namespace Isc {
 	export interface KeyIdentifier {
 		/** 
 		 * (Read only) If set, whether the Alt key must be held down.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly altKey?: boolean /* Boolean */;
 		/** 
 		 * (Read only) If set, whether the Control key must be held down.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly ctrlKey?: boolean /* Boolean */;
@@ -4910,6 +7713,7 @@ declare namespace Isc {
 		readonly keyName?: KeyName;
 		/** 
 		 * (Read only) If set, whether the Shift key must be held down.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly shiftKey?: boolean /* Boolean */;
@@ -4954,6 +7758,7 @@ declare namespace Isc {
 		/** 
 		 * (Read only) Whether a click on this specific menuItem automatically dismisses the menu. See
 		 * Menu.autoDismiss.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: menuBasic
 		 */
 		readonly autoDismiss?: boolean /* Boolean */;
@@ -4961,6 +7766,7 @@ declare namespace Isc {
 		 * (Read only) A MenuItem that has a submenu normally cannot be selected, instead clicking or hitting Enter
 		 * while keyboard focus is on the item shows the submenu. Setting canSelectParent:true allows
 		 * a menu item with a submenu to be selected directly.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canSelectParent?: boolean;
@@ -4969,6 +7775,7 @@ declare namespace Isc {
 		 * can set the checkmark image URL by setting Menu.checkmarkImage.
 		 * 
 		 * If you need to set this state dynamically, use MenuItem.checkIf instead.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: menuIcons
 		 */
 		readonly checked?: boolean;
@@ -4981,7 +7788,7 @@ declare namespace Isc {
 		 * If you need to set this state dynamically, use MenuItem.dynamicIcon instead.
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly disabledIcon?: string /* String */;
+		readonly disabledIcon?: String;
 		/** 
 		 * (Read only) Arbitrary UI component that should appear in this MenuItem. See
 		 * ListGridRecord.embeddedComponent for an overview and options for controlling placement.
@@ -5006,7 +7813,7 @@ declare namespace Isc {
 		 * title and key fields, leaving the icon and submenu fields visible.
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly embeddedComponentFields?: Array<string> /* Array of String */;
+		readonly embeddedComponentFields?: Array<String> /* Array of String */;
 		/** 
 		 * (Read only) See ListGridRecord.embeddedComponentPosition, except that when used in a
 		 * menuItem, default behavior is EmbeddedPosition "expand".
@@ -5018,6 +7825,7 @@ declare namespace Isc {
 		 * false, the menu item will not respond to mouse rollovers or clicks.
 		 * 
 		 * If you need to set this state dynamically, use MenuItem.enableIf instead.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: menuBasic
 		 */
 		readonly enabled?: boolean /* Boolean */;
@@ -5034,6 +7842,7 @@ declare namespace Isc {
 		/** 
 		 * (Read only) If false, no submenus will be fetched for this MenuItem. This can be set globally via
 		 * Menu.fetchSubmenus.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly fetchSubmenus?: boolean /* Boolean */;
@@ -5047,7 +7856,7 @@ declare namespace Isc {
 		 * If you need to set this state dynamically, use MenuItem.dynamicIcon instead.
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly icon?: string /* String */;
+		readonly icon?: String;
 		/** 
 		 * (Read only) The height applied to this item's icon. The default of 16 can be changed
 		 * for all MenuItems by overriding Menu.iconHeight.
@@ -5064,6 +7873,7 @@ declare namespace Isc {
 		 * (Read only) When set to true, this menu item shows a horizontal separator instead of
 		 * the MenuItem.title text. Typically specified as the only property of a menu item,
 		 * since the separator will not respond to mouse events.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: menuBasic
 		 */
 		readonly isSeparator?: boolean /* Boolean */;
@@ -5079,10 +7889,11 @@ declare namespace Isc {
 		 * specified, the first KeyName value in MenuItem.keys will be used by default.
 		 * Flags: IR, Group: menuKeys
 		 */
-		readonly keyTitle?: string /* String */;
+		readonly keyTitle?: String;
 		/** 
 		 * (Read only) When used in an AdaptiveMenu, should this MenuItem show only it's
 		 * MenuItem.icon','icon when displayed inline?
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly showIconOnlyInline?: boolean;
@@ -5096,7 +7907,7 @@ declare namespace Isc {
 		 * (Read only) The text displayed for the menu item
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly title?: string /* HTMLString */;
+		readonly title?: HTMLString;
 
 		/* Instance Method Overrides */
 		/**  
@@ -5147,9 +7958,9 @@ declare namespace Isc {
 		 * @param {Canvas} target - Menu.target','target attribute for the top level menu.
 		 * @param {Menu} menu - Menu','menu contains the reference to the menu that contains the current item
 		 * @param {MenuItem} item - contains the reference to the current item
-		 * @return {string} the url of this menuItems icon
+		 * @return {SCImgURL} the url of this menuItems icon
 		 */
-		dynamicIcon?(target:Canvas, menu:Menu, item:MenuItem): string /* SCImgURL */; 
+		dynamicIcon?(target:Canvas, menu:Menu, item:MenuItem): SCImgURL; 
 
 		/**  
 		 *  Contains the condition that will change the current items' title when met. The handler must be specified
@@ -5163,9 +7974,9 @@ declare namespace Isc {
 		 * @param {Canvas} target - Menu.target','target attribute for the top level menu.
 		 * @param {Menu} menu - Menu','menu contains the reference to the menu that contains the current item
 		 * @param {MenuItem} item - contains the reference to the current item
-		 * @return {string} the title of this menuItem
+		 * @return {String} the title of this menuItem
 		 */
-		dynamicTitle?(target:Canvas, menu:Menu, item:MenuItem): string /* String */; 
+		dynamicTitle?(target:Canvas, menu:Menu, item:MenuItem): String; 
 
 		/**  
 		 *  Contains the condition that will enable or disable the current menuItem. The handler must be specified
@@ -5198,7 +8009,7 @@ declare namespace Isc {
 		 * included when printing, even if a superclass is listed in PrintProperties.omitControls.
 		 * Flags: IR, Group: printing
 		 */
-		readonly includeControls?: Array<string> /* Array of String */;
+		readonly includeControls?: Array<String> /* Array of String */;
 		/** 
 		 * (Read only) An array of Strings indicating the classNames of controls that should be omitted from
 		 * printing. By default, omitControls includes all button-based controls, menus
@@ -5209,7 +8020,7 @@ declare namespace Isc {
 		 * See also PrintProperties.includeControls.
 		 * Flags: IR, Group: printing
 		 */
-		readonly omitControls?: Array<string> /* Array of String */;
+		readonly omitControls?: Array<String> /* Array of String */;
 		/** 
 		 * (Read only) If true, generates HTML for export.
 		 * 
@@ -5218,6 +8029,7 @@ declare namespace Isc {
 		 * the printForExport property is set to true automatically. If not using RPCManager.exportContent(),
 		 * but the generated HTML will be sent for export, the PrintProperties passed to
 		 * Canvas.getPrintHTML must have printForExport:true.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: printing
 		 */
 		readonly printForExport?: boolean /* Boolean */;
@@ -5247,7 +8059,7 @@ declare namespace Isc {
 		 * Calendar.getEventCanvasStyle','getEventCanvasStyle() for more information.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly eventStyleName?: string /* CSSStyleName */;
+		readonly eventStyleName?: CSSStyleName;
 		/** 
 		 * (Read only) In Timelines, the height of this Lane's row. Has no effect when set on a Lane 
 		 * being displayed in a Calendar.dayView','day view as a result of 
@@ -5260,13 +8072,13 @@ declare namespace Isc {
 		 * initial slice and the specified one.
 		 * Flags: IR
 		 */
-		readonly height?: number /* Number */;
+		readonly height?: Number;
 		/** 
 		 * (Read only) To determine whether a CalendarEvent should be placed in this lane, the value of this 
 		 * attribute is compared with the Calendar.laneNameField property on the CalendarEvent.
 		 * Flags: IR
 		 */
-		readonly name?: string /* String */;
+		readonly name?: String;
 		/** 
 		 * (Read only) Array of Lane objects that will share the available space in the parent Lane,
 		 * vertically in Calendar.timelineView','timelines and horizontally in 
@@ -5284,7 +8096,7 @@ declare namespace Isc {
 		 * (Read only) Title to show for this lane. Has no effect if set directly on Lane.sublanes','sublanes.
 		 * Flags: IR
 		 */
-		readonly title?: string /* HTMLString */;
+		readonly title?: HTMLString;
 		/** 
 		 * (Read only) When set on a Lane being displayed in a Calendar.dayView','day view as a result of 
 		 * Calendar.showDayLanes being set, dictates the width of the Lane's column. Has no 
@@ -5297,7 +8109,7 @@ declare namespace Isc {
 		 * initial slice and the specified one.
 		 * Flags: IR
 		 */
-		readonly width?: number /* Number */;
+		readonly width?: Number;
 	} // Lane
 
 	export interface LaneStatic {
@@ -5396,6 +8208,7 @@ declare namespace Isc {
 		 * way, the first field to use a given name wins. "first" means the first field encountered in a
 		 * depth first search. "wins" means only the first field will be populated in the generated
 		 * XML message.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: flatFields
 		 */
 		readonly useFlatFields?: boolean;
@@ -5403,7 +8216,7 @@ declare namespace Isc {
 		 * (Read only) Name of the web service operation to invoke.
 		 * Flags: IR
 		 */
-		readonly wsOperation?: string /* String */;
+		readonly wsOperation?: String;
 		/** 
 		 * (Read only) Optional object declaring namespace prefixes for use in evaluating the
 		 * resultType parameter of WebService.callOperation, if resultType is an
@@ -5418,6 +8231,7 @@ declare namespace Isc {
 		 * (Read only) Valid only with WebService.callOperation. If set, do not transform XML results to
 		 * JavaScript. Instead just return the XML nodes selected by the passed XPath or recordName,
 		 * or all nodes within the SOAP body if no XPath was passed.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly xmlResult?: boolean;
@@ -5453,7 +8267,7 @@ declare namespace Isc {
 		 * however a span cannot be specified with both fields and spans.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly fields?: Array<string> /* Array of String */;
+		readonly fields?: Array<String> /* Array of String */;
 		/** 
 		 * Custom base style to apply to the header button created for this span instead
 		 * of ListGrid.headerBaseStyle.
@@ -5462,14 +8276,14 @@ declare namespace Isc {
 		 * HeaderSpan.headerTitleStyle as well.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly headerBaseStyle?: string /* CSSStyleName */;
+		readonly headerBaseStyle?: CSSStyleName;
 		/** 
 		 * (Read only) Optional title for the headerSpan button for this headerSpan. If specified this will be
 		 * displayed in the headerSpan button instead of HeaderSpan.title. Set to an empty
 		 * string to suppress the title in the header button entirely.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly headerTitle?: string /* String */;
+		readonly headerTitle?: String;
 		/** 
 		 * Custom titleStyle to apply to the header button created for this span instead of
 		 * ListGrid.headerTitleStyle.
@@ -5479,12 +8293,12 @@ declare namespace Isc {
 		 * thereof.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly headerTitleStyle?: string /* CSSStyleName */;
+		readonly headerTitleStyle?: CSSStyleName;
 		/** 
 		 * (Read only) Height of this headerSpan. Defaults to ListGrid.headerSpanHeight.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly height?: number /* integer */;
+		readonly height?: Integer;
 		/** 
 		 * (Read only) Name for this headerSpan, for use in APIs like ListGrid.setHeaderSpanTitle.
 		 * 
@@ -5525,7 +8339,7 @@ declare namespace Isc {
 		 * appears in the UI are not affected. Refer to discussion at ListGridField.title.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly title?: string /* String */;
+		readonly title?: String;
 		/** 
 		 * (Read only) Vertical alignment of the title of this headerSpan.
 		 * 
@@ -5537,6 +8351,7 @@ declare namespace Isc {
 		 * (Read only) Should the span title wrap if there is not enough space horizontally to accommodate it.
 		 * If unset, default behavior is derived from ListGrid.wrapHeaderSpanTitles. (This
 		 * is a soft-wrap - if set the title will wrap at word boundaries.)
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly wrap?: boolean /* Boolean */;
@@ -5625,7 +8440,7 @@ declare namespace Isc {
 		 * mapping with UserFormula.formulaVars is needed.
 		 * Flags: IRW
 		 */
-		readonly text?: string /* String */;
+		readonly text?: String;
 	} // UserFormula
 
 	export interface UserFormulaStatic {
@@ -5641,6 +8456,7 @@ declare namespace Isc {
 		/** 
 		 * The new NavigationBar.alwaysShowLeftButtonTitle setting. If unset, the
 		 * alwaysShowLeftButtonTitle setting is not changed.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly alwaysShowLeftButtonTitle?: boolean /* Boolean */;
@@ -5649,22 +8465,23 @@ declare namespace Isc {
 		 * is not changed.
 		 * Flags: IRW
 		 */
-		readonly controls?: Array<string> | Array<Canvas> /* Array of String | Array of Canvas */;
+		readonly controls?: Array<String> | Array<Canvas> /* Array of String | Array of Canvas */;
 		/** 
 		 * The new NavigationBar.leftButtonTitle setting. If unset, the
 		 * leftButtonTitle is not changed.
 		 * Flags: IRW
 		 */
-		readonly leftButtonTitle?: string /* HTMLString */;
+		readonly leftButtonTitle?: HTMLString;
 		/** 
 		 * The new NavigationBar.shortLeftButtonTitle setting. If unset, the
 		 * shortLeftButtonTitle is not changed.
 		 * Flags: IRW
 		 */
-		readonly shortLeftButtonTitle?: string /* HTMLString */;
+		readonly shortLeftButtonTitle?: HTMLString;
 		/** 
 		 * The new NavigationBar.showLeftButton setting. If unset, the
 		 * showLeftButton setting is not changed.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly showLeftButton?: boolean /* Boolean */;
@@ -5672,7 +8489,7 @@ declare namespace Isc {
 		 * The new NavigationBar.title setting. If unset, the title is not changed.
 		 * Flags: IRW
 		 */
-		readonly title?: string /* HTMLString */;
+		readonly title?: HTMLString;
 	} // NavigationBarViewState
 
 	export interface NavigationBarViewStateStatic {
@@ -5687,7 +8504,7 @@ declare namespace Isc {
 		 * Specifies the additional attributes to write in the tag.
 		 * Flags: IRW
 		 */
-		readonly extraStuff?: string /* String */;
+		readonly extraStuff?: String;
 		/** 
 		 * Specifies the height of the image.
 		 * Flags: IRW
@@ -5697,7 +8514,7 @@ declare namespace Isc {
 		 * Specifies the image-specific image directory to override the default.
 		 * Flags: IRW
 		 */
-		readonly imgDir?: string /* URL */;
+		readonly imgDir?: URL;
 		/** 
 		 * Specifies the name of the image. This is an identifier unique to the canvas, and subsequent
 		 * calls to Canvas.getImage and
@@ -5705,12 +8522,12 @@ declare namespace Isc {
 		 * with this name will act on the image object created using this ImgProperties object.
 		 * Flags: IRW
 		 */
-		readonly name?: string /* String */;
+		readonly name?: String;
 		/** 
 		 * Specifies the URL of the image local to the skin or application directory.
 		 * Flags: IRW
 		 */
-		readonly src?: string /* URL */;
+		readonly src?: URL;
 		/** 
 		 * Specifies the width of the image.
 		 * Flags: IRW
@@ -5723,7 +8540,8 @@ declare namespace Isc {
 
 
 	/**
-	 * Extra methods added to the Number object, available on all number variables. 
+	 * Extra methods added to the Number object, available on all number variables. Attributes,
+	 * parameters, or return values declared as Number may be null. 
 	 */
 	export interface Number {
 
@@ -5840,11 +8658,11 @@ declare namespace Isc {
 		 * data object is actually available.
 		 * 
 		 * 
-		 * @param {string} id - The id you want to associate with this history entry. This value will appear as an anchor reference at the end of the URL string. For example, if you pass in
+		 * @param {String} id - The id you want to associate with this history entry. This value will appear as an anchor reference at the end of the URL string. For example, if you pass in
 		 * "foo" as the id, the URL will then have a #foo tacked on the end of it. This id will be
 		 * passed back to the callback you specified in History.registerCallback when the user
 		 * navigates to this history entry in the future.
-		 * @param {string} title - The title to show in the history drop-down for this history entry. If not specified, the id is used, unless you've set an explicit history title via
+		 * @param {String} title - The title to show in the history drop-down for this history entry. If not specified, the id is used, unless you've set an explicit history title via
 		 * History.setHistoryTitle. Note: this currently works in IE only. You may pass a
 		 * title in any other browser, but it will not change what's displayed in the history
 		 * drop-down.
@@ -5852,26 +8670,26 @@ declare namespace Isc {
 		 * function. Note that the SmartClient Core module is also required to be loaded on the page
 		 * for this particular feature to work.
 		 */
-		addHistoryEntry(id:string /* String */, title?:string /* String */, data?:any /* Any */): void; 
+		addHistoryEntry(id:String, title?:String, data?:any /* Any */): void; 
 
 		/**  
 		 * 
 		 * Returns the current history id as reflected by the current URL.
 		 * 
 		 * 
-		 * @return {string} The current history id as reflected by the current URL.
+		 * @return {String} The current history id as reflected by the current URL.
 		 */
-		getCurrentHistoryId(): string /* String */; 
+		getCurrentHistoryId(): String; 
 
 		/**  
 		 * 
 		 * Returns the data associated with the specified history id.
 		 * 
 		 * 
-		 * @param {string} id - The id for which to fetch history data.
+		 * @param {String} id - The id for which to fetch history data.
 		 * @return {any} The data associated with the specified history id.
 		 */
-		getHistoryData(id:string /* String */): any /* Any */; 
+		getHistoryData(id:String): any /* Any */; 
 
 		/**  
 		 * 
@@ -5935,14 +8753,14 @@ declare namespace Isc {
 		 * history entry, the callback is fired with an id of null.
 		 * 
 		 * 
-		 * @param {string} callback - The callback to invoke when the user navigates to a synthetic history entry.
+		 * @param {String} callback - The callback to invoke when the user navigates to a synthetic history entry.
 		 * @param {boolean} requiresData - If passed, this callback will only be fired if the user is navigating to a history entry that was explicitly generated in this browser session.
 		 * @param {boolean} isAdditional - If false or unspecified, then the callback is considered to be the primary callback, replacing the previous primary callback if the primary callback was
 		 * previously registered. If true, then the callback is an additive callback; that is, it is
 		 * called in addition to the primary callback, and after the primary callback is called.
-		 * @return {number} the ID of the callback. This can be passed to ${isc.DocUtils.linkForRef('staticMethod:History.unregisterCallback')} to remove the callback.
+		 * @return {int} the ID of the callback. This can be passed to ${isc.DocUtils.linkForRef('staticMethod:History.unregisterCallback')} to remove the callback.
 		 */
-		registerCallback(callback:string | any /* String | Object */, requiresData:boolean, isAdditional?:boolean): number /* int */; 
+		registerCallback(callback:String | any /* String | Object */, requiresData:boolean, isAdditional?:boolean): int; 
 
 		/**  
 		 * 
@@ -5954,19 +8772,19 @@ declare namespace Isc {
 		 * but it will not change what's displayed in the history drop-down.
 		 * 
 		 * 
-		 * @param {string} title - The title to show in the history drop-down.
+		 * @param {String} title - The title to show in the history drop-down.
 		 */
-		setHistoryTitle(title:string /* String */): void; 
+		setHistoryTitle(title:String): void; 
 
 		/**  
 		 *  Unregisters a callback so that it will no longer be called when the user navigates to a synthetic
 		 * history entry.
 		 * 
 		 * 
-		 * @param {number} id - the ID of the callback that was returned by History.registerCallback.
+		 * @param {int} id - the ID of the callback that was returned by History.registerCallback.
 		 * @return {boolean} <code>true</code> if the callback registration was located and removed; <code>false</code> otherwise.
 		 */
-		unregisterCallback(id:number /* int */): boolean; 
+		unregisterCallback(id:int): boolean; 
 
 	} // HistoryStatic
 
@@ -6042,16 +8860,18 @@ declare namespace Isc {
 		 * property name can be changed via ListGrid.recordBaseStyleProperty.
 		 * Flags: IRW
 		 */
-		readonly _baseStyle?: string /* CSSStyleName */;
+		readonly _baseStyle?: CSSStyleName;
 		/** 
 		 * (Read only) Default property name denoting whether this record can be edited. Property name may be
 		 * modified for the grid via ListGrid.recordEditProperty.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: editing
 		 */
 		readonly _canEdit?: boolean;
 		/** 
 		 * Default property name denoting whether this record can be removed. Property name may be
 		 * modified for the grid via ListGrid.recordCanRemoveProperty.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: editing
 		 */
 		readonly _canRemove?: boolean;
@@ -6069,24 +8889,28 @@ declare namespace Isc {
 		/** 
 		 * (Read only) When set to false, other records cannot be dropped on (i.e., inserted
 		 * via drag and drop) immediately before this record.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canAcceptDrop?: boolean;
 		/** 
 		 * (Read only) When set to false, this record cannot be dragged. If canDrag is false for
 		 * any record in the current selection, none of the records will be draggable.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canDrag?: boolean;
 		/** 
 		 * (Read only) Default property name denoting whether this record can be expanded. Property name may be
 		 * modified for the grid via ListGrid.canExpandRecordProperty.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: expansionField
 		 */
 		readonly canExpand?: boolean;
 		/** 
 		 * (Read only) Default property name denoting whether this record can be selected. Property name may be
 		 * modified for the grid via ListGrid.recordCanSelectProperty.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canSelect?: boolean;
@@ -6108,7 +8932,7 @@ declare namespace Isc {
 		 * property name can be changed via ListGrid.recordCustomStyleProperty.
 		 * Flags: IRW
 		 */
-		readonly customStyle?: string /* CSSStyleName */;
+		readonly customStyle?: CSSStyleName;
 		/** 
 		 * (Advanced) The default value of ListGrid.recordDetailDSProperty.
 		 * Flags: IRWA
@@ -6164,7 +8988,7 @@ declare namespace Isc {
 		 * are shown.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly embeddedComponentFields?: Array<string> /* Array of String */;
+		readonly embeddedComponentFields?: Array<String> /* Array of String */;
 		/** 
 		 * (Read only) Sizing policy applied to the embedded component. Default behavior if unspecified is the same
 		 * as EmbeddedPosition "within" (fill space allocated to the record, including the ability
@@ -6176,6 +9000,7 @@ declare namespace Isc {
 		/** 
 		 * (Read only) Default property name denoting whether this record is enabled. Property name may be
 		 * modified for some grid via ListGrid.recordEnabledProperty.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly enabled?: boolean;
@@ -6185,6 +9010,7 @@ declare namespace Isc {
 		 * 
 		 * Note that includeInSummary is the default property name for this attribute,
 		 * but it may be modified via ListGrid.includeInSummaryProperty.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly includeInSummary?: boolean;
@@ -6194,6 +9020,7 @@ declare namespace Isc {
 		 * 
 		 * Note that isGridSummary is the default property name for this attribute but
 		 * it may be modified by setting ListGrid.gridSummaryRecordProperty
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly isGridSummary?: boolean /* Boolean */;
@@ -6203,6 +9030,7 @@ declare namespace Isc {
 		 * 
 		 * Note that isGroupSummary is the default property name for this attribute but
 		 * it may be modified by setting ListGrid.groupSummaryRecordProperty
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly isGroupSummary?: boolean /* Boolean */;
@@ -6212,6 +9040,7 @@ declare namespace Isc {
 		 * object. Typically this is specified as the only property of a record object, since a
 		 * record with isSeparator:true will not display any values.
 		 * Note: this attribute name is governed by ListGrid.isSeparatorProperty.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly isSeparator?: boolean;
@@ -6220,13 +9049,14 @@ declare namespace Isc {
 		 * ListGridField.linkText.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly linkText?: string /* String */;
+		readonly linkText?: String;
 		/** 
 		 * (Read only) Set to false to disable rollover for this individual record when ListGrid.showRollOver
 		 * is true.
 		 * 
 		 * Note this property can be renamed to prevent collision with data members - see
 		 * ListGrid.recordShowRollOverProperty.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: appearance
 		 */
 		readonly showRollOver?: boolean /* Boolean */;
@@ -6238,7 +9068,7 @@ declare namespace Isc {
 		 * Note: this attribute name is governed by ListGrid.singleCellValueProperty.
 		 * Flags: IRW
 		 */
-		readonly singleCellValue?: string /* HTMLString */;
+		readonly singleCellValue?: HTMLString;
 	} // ListGridRecord
 
 	export interface ListGridRecordStatic extends RecordStatic {
@@ -6253,17 +9083,17 @@ declare namespace Isc {
 		 * (Read only) eg #ff0000 or red or rgb(255,0,0)
 		 * Flags: IR
 		 */
-		readonly color?: string /* CSSColor */;
+		readonly color?: CSSColor;
 		/** 
 		 * (Read only) The relative offset for the color.
 		 * Flags: IR
 		 */
-		readonly offset?: number /* float */;
+		readonly offset?: Float /* float */;
 		/** 
 		 * (Read only) 0 is transparent, 1 is fully opaque
 		 * Flags: IR
 		 */
-		readonly opacity?: number /* float */;
+		readonly opacity?: Float /* float */;
 	} // ColorStop
 
 	export interface ColorStopStatic {
@@ -6304,7 +9134,7 @@ declare namespace Isc {
 		 * DataPath','dataPath for more information.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly fieldName?: string /* String */;
+		readonly fieldName?: String;
 		/** 
 		 * (Read only) Operator this criterion applies.
 		 * Flags: IR, Group: advancedFilter
@@ -6338,7 +9168,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly valuePath?: string /* String */;
+		readonly valuePath?: String;
 	} // Criterion
 
 	export interface CriterionStatic {
@@ -6356,12 +9186,13 @@ declare namespace Isc {
 	 * This class documents just those properties that are specific to TreeGridFields - see
 	 * ListGridField for the set of inherited properties. 
 	 */
-	export interface TreeGridField {
+	export interface TreeGridField extends ListGridField {
 		/** 
 		 * (Read only) Dictates whether the data in this field be exported. Explicitly set this
 		 * to false to prevent exporting. Has no effect if the underlying 
 		 * DataSourceField.canExport','dataSourceField is explicitly set to 
 		 * canExport: false.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canExport?: boolean /* Boolean */;
@@ -6375,12 +9206,13 @@ declare namespace Isc {
 		 * 
 		 * If none of the above rules apply, the first field in TreeGrid.fields is assigned to
 		 * display the Tree.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: treeField
 		 */
 		readonly treeField?: boolean /* Boolean */;
 	} // TreeGridField
 
-	export interface TreeGridFieldStatic {
+	export interface TreeGridFieldStatic extends ListGridFieldStatic {
 	} // TreeGridFieldStatic
 
 
@@ -6388,7 +9220,7 @@ declare namespace Isc {
 	 * An ordinary JavaScript object containing properties that configures the display of
 	 * and interaction with the columns of a ListGrid. 
 	 */
-	export interface ListGridField {
+	export interface ListGridField extends DBCField {
 		/** 
 		 * Horizontal alignment for field's column header: "left", "right"
 		 * or "center". Applied to the column header title and cells by default. A separate
@@ -6399,10 +9231,22 @@ declare namespace Isc {
 		 */
 		readonly align?: Alignment;
 		/** 
+		 * (Read only) Field-level setting for ListGrid.allowFilterExpressions:true - controls whether search 
+		 * expressions can be entered directly into the filter item for this field. You can also have
+		 * parsing of the expression remove the operator symbol and apply it to an 
+		 * ListGrid.allowFilterOperators','icon in the editor.,
+		 * 
+		 * This attribute can also be set at the ListGrid.allowFilterExpressions','ListGrid level.
+		 * boolean - Null not allowed
+		 * Flags: IR, Group: advancedFilter
+		 */
+		readonly allowFilterExpressions?: boolean;
+		/** 
 		 * (Read only) Per-field setting for ListGrid.allowFilterOperators. Can be used to enable
 		 * the filter operators UI for a particular field if the ListGrid-level setting is not
 		 * enabled, or to disable filter operators for a particular field if the ListGrid-level setting
 		 * is enabled.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly allowFilterOperators?: boolean /* Boolean */;
@@ -6410,6 +9254,7 @@ declare namespace Isc {
 		 * (Read only) Per-field setting for ListGrid.alwaysShowOperatorIcon. Can be used to force a particular
 		 * field to always show it's ListGrid.operatorIcon','operatorIcon, even if it has no 
 		 * filter-value, or is using the default ListGridField.filterOperator','search operator.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly alwaysShowOperatorIcon?: boolean /* Boolean */;
@@ -6422,6 +9267,7 @@ declare namespace Isc {
 		 * user-formula values displayed in the grid?
 		 * 
 		 * Default behavior may be specified at the grid level via ListGrid.applyFormulaAfterSummary
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly applyAfterSummary?: boolean /* Boolean */;
@@ -6437,6 +9283,7 @@ declare namespace Isc {
 		 * ListGridField.optionDataSource.
 		 * 
 		 * Same as ListGrid.autoFetchDisplayMap, but defined on a per-field basis.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: display_values
 		 */
 		readonly autoFetchDisplayMap?: boolean;
@@ -6455,6 +9302,7 @@ declare namespace Isc {
 		 * This is particularly pertinent where ListGrid.recordComponentPosition
 		 * is set to "within", in which case cells' content is often empty or completely covered
 		 * by record-components.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: autoFitFields
 		 */
 		readonly autoFitWidth?: boolean /* Boolean */;
@@ -6476,6 +9324,7 @@ declare namespace Isc {
 		 * 
 		 * You can control the position of this field in the array of frozen fields by providing a
 		 * ListGridField.getAutoFreezePosition implementation.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: frozenFields
 		 */
 		readonly autoFreeze?: boolean;
@@ -6486,7 +9335,7 @@ declare namespace Isc {
 		 * instead.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly baseStyle?: string /* CSSStyleName */;
+		readonly baseStyle?: CSSStyleName;
 		/** 
 		 * (Read only) Should the user be allowed to perform one-time autofitting of this field via
 		 * a header context-menu option?
@@ -6514,12 +9363,14 @@ declare namespace Isc {
 		 * This is particularly pertinent where ListGrid.recordComponentPosition
 		 * is set to "within", in which case cells' content is often empty or completely covered
 		 * by record-components.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canAutoFitWidth?: boolean /* Boolean */;
 		/** 
 		 * (Read only) Whether this field can be dragResized using the mouse. If unset, the default behavior
 		 * is governed by ListGrid.canResizeFields.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canDragResize?: boolean;
@@ -6532,6 +9383,7 @@ declare namespace Isc {
 		 * ListGrid.canEditCell.
 		 * 
 		 * 
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: editing
 		 */
 		readonly canEdit?: boolean;
@@ -6541,6 +9393,7 @@ declare namespace Isc {
 		 * value allows editing.
 		 * 
 		 * Has no effect when ListGrid.canAddFormulaFields is false.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canEditFormula?: boolean /* Boolean */;
@@ -6550,6 +9403,7 @@ declare namespace Isc {
 		 * value allows editing.
 		 * 
 		 * Has no effect when ListGrid.canAddSummaryFields is false.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canEditSummary?: boolean /* Boolean */;
@@ -6558,23 +9412,27 @@ declare namespace Isc {
 		 * to false to prevent exporting. Has no effect if the underlying
 		 * DataSourceField.canExport','dataSourceField is explicitly set to
 		 * canExport: false.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canExport?: boolean /* Boolean */;
 		/** 
 		 * If showing a filter row for this ListGrid, should the filter criteria for this
 		 * field be editable
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: filterEditor
 		 */
 		readonly canFilter?: boolean;
 		/** 
 		 * (Read only) Whether this field should display freezing/unfreezing options in its header context menu.
 		 * See frozenFields.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: frozenFields
 		 */
 		readonly canFreeze?: boolean;
 		/** 
 		 * Determines whether this field will be groupable in the header context menu.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canGroupBy?: boolean /* Boolean */;
@@ -6589,12 +9447,14 @@ declare namespace Isc {
 		 * is ListGridField.hidden, the field will not show in the list of available fields. If the
 		 * field is visible, it will be displayed in the list of currently visible fields, but
 		 * the advanced field picker user interface will disallow hiding it.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: appearance
 		 */
 		readonly canHide?: boolean;
 		/** 
 		 * Determines whether this field can be hilited. Set to false to prevent this
 		 * field from appearing in HiliteEditor.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly canHilite?: boolean;
@@ -6609,6 +9469,7 @@ declare namespace Isc {
 		 * field), then it is possible that this locked field may be
 		 * reordered automatically, as a result of the user dragging one unlocked field onto another
 		 * unlocked field.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canReorder?: boolean;
@@ -6617,11 +9478,13 @@ declare namespace Isc {
 		 * sorting via header-clicks or menu-items will have no effect, but direct scripted calls
 		 * to ListGrid.sort','sort() or ListGrid.setSort','setSort() will work as
 		 * expected.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: sorting
 		 */
 		readonly canSort?: boolean /* Boolean */;
 		/** 
 		 * When true, this field can only be used for sorting if the data is entirely client-side.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canSortClientOnly?: boolean /* Boolean */;
@@ -6644,6 +9507,7 @@ declare namespace Isc {
 		 * Otherwise the toggled value will be saved immediately to the server, or if
 		 * ListGrid.autoSaveEdits has been set to false, will be stored as an edit value
 		 * for the record.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: editing
 		 */
 		readonly canToggle?: boolean /* Boolean */;
@@ -6664,13 +9528,13 @@ declare namespace Isc {
 		 * use ListGrid.setFieldCellIcon.
 		 * Flags: IR
 		 */
-		readonly cellIcon?: string /* SCImgURL */;
+		readonly cellIcon?: SCImgURL;
 		/** 
 		 * (Read only, Advanced) dataPath for this field. This property allows the grid to display details of nested data
 		 * structures in a flat list of columns.
 		 * Flags: IRA, Group: data
 		 */
-		readonly dataPath?: string /* String */;
+		readonly dataPath?: String;
 		/** 
 		 * Display format to use for date type values within this field.
 		 * 
@@ -6737,7 +9601,7 @@ declare namespace Isc {
 		 * cells within this field as FormItem.defaultIconSrc.
 		 * Flags: IRA, Group: editing
 		 */
-		readonly defaultIconSrc?: string /* String */;
+		readonly defaultIconSrc?: String;
 		/** 
 		 * If this field ListGridField.canEdit','can be edited, this property can be used to
 		 * specify a default value for this field's editor when adding new rows to the grid.
@@ -6750,7 +9614,7 @@ declare namespace Isc {
 		 * the field's content.
 		 * Flags: IR, Group: autoFitFields
 		 */
-		readonly defaultWidth?: number /* Integer */;
+		readonly defaultWidth?: Integer;
 		/** 
 		 * Specifies the ListGridField.optionDataSource field used to retrieve the display
 		 * values that are to be mapped from the internal values specified by ListGridField.valueField.
@@ -6768,7 +9632,7 @@ declare namespace Isc {
 		 * picked up via ListGrid.getDisplayValue.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly displayField?: string /* String */;
+		readonly displayField?: String;
 		/** 
 		 * (Advanced) For fields of type "date", set this property to a valid
 		 * DateDisplayFormat to specify how the date should be formatted.
@@ -6799,6 +9663,7 @@ declare namespace Isc {
 		 * 
 		 * Note that this property has no effect on fields with an explicitly specified valueMap, or
 		 * with an optionDataSource where ListGridField.autoFetchDisplayMap is true.
+		 * boolean - Null not allowed
 		 * Flags: IRWA
 		 */
 		readonly displayValueFromRecord?: boolean;
@@ -6832,7 +9697,7 @@ declare namespace Isc {
 		 * instead.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorImageURLPrefix?: string /* String */;
+		readonly editorImageURLPrefix?: String;
 		/** 
 		 * (Advanced) When some cell in this field is being edited, this property can be used to apply
 		 * an explicit FormItem.imageURLSuffix to the editor in question.
@@ -6841,7 +9706,7 @@ declare namespace Isc {
 		 * instead.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorImageURLSuffix?: string /* String */;
+		readonly editorImageURLSuffix?: String;
 		/** 
 		 * (Advanced) Properties to apply the the form item created to edit this field. (Only used if
 		 * this field is editable).
@@ -6913,7 +9778,7 @@ declare namespace Isc {
 		 * level to define the emptyCellValue for all empty fields in the grid.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly emptyCellValue?: string /* HTMLString */;
+		readonly emptyCellValue?: HTMLString;
 		/** 
 		 * What to do when a user hits enter while editing this field?
 		 * Overrides the enterKeyEditAction as specified at the listGrid level while
@@ -6926,6 +9791,7 @@ declare namespace Isc {
 		 * Setting this flag to true will causes HTML characters to be escaped, meaning the
 		 * raw value of the field (for example "&lt;b&gt;AAA&lt;/b&gt;") is displayed
 		 * to the user rather than the interpreted HTML (for example "AAA")
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly escapeHTML?: boolean;
@@ -6941,6 +9807,7 @@ declare namespace Isc {
 		 * the field will not be selected as the default title field
 		 * by DataBoundComponent.getTitleField
 		 * if DataBoundComponent.titleField is not provided.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: viewState
 		 */
 		readonly excludeFromState?: boolean /* Boolean */;
@@ -6952,6 +9819,7 @@ declare namespace Isc {
 		 * that content is not clipped).
 		 * 
 		 * This setting has no effect if listGrid.exportFieldWidths is not set.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly exportFieldWidth?: boolean;
@@ -6960,12 +9828,13 @@ declare namespace Isc {
 		 * DataSourceField.exportFormat.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly exportFormat?: string /* FormatString */;
+		readonly exportFormat?: FormatString;
 		/** 
 		 * (Read only) Dictates whether the data in this field should be exported raw by
 		 * ListGrid.exportClientData','exportClientData(). If set to true for a
 		 * field, the values in the field-formatters will not be executed for data in this field.
 		 * Decreases the time taken for large exports.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly exportRawValues?: boolean /* Boolean */;
@@ -7001,6 +9870,7 @@ declare namespace Isc {
 		 * 
 		 * The ListGrid.fetchDelay governs the delay in milliseconds between the user editing the
 		 * filter editor value, and the new filter being applied to the grid.
+		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: filterEditor
 		 */
 		readonly filterOnKeypress?: boolean;
@@ -7023,7 +9893,7 @@ declare namespace Isc {
 		 * (Read only) FormatString for numeric or date formatting. See DataSourceField.format.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly format?: string /* FormatString */;
+		readonly format?: FormatString;
 		/** 
 		 * (Read only) Optional stringMethod to format the summary value displayed
 		 * in the ListGrid.showGridSummary','grid summary.
@@ -7038,7 +9908,7 @@ declare namespace Isc {
 		 * such fields, specify an explicit 'formatGridSummary' and/or 'formatGroupSummary' method
 		 * Flags: IR
 		 */
-		readonly formatGridSummary?: string /* StringMethod */;
+		readonly formatGridSummary?: StringMethod;
 		/** 
 		 * (Read only) Optional stringMethod to format the group level summary values for this field displayed via
 		 * ListGrid.showGroupSummary.
@@ -7053,10 +9923,11 @@ declare namespace Isc {
 		 * such fields, specify an explicit 'formatGridSummary' and/or 'formatGroupSummary' method
 		 * Flags: IR
 		 */
-		readonly formatGroupSummary?: string /* StringMethod */;
+		readonly formatGroupSummary?: StringMethod;
 		/** 
 		 * (Read only) Whether this field should be "frozen" for the purposes of horizontal scrolling. See
 		 * frozenFields.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: frozenFields
 		 */
 		readonly frozen?: boolean;
@@ -7067,7 +9938,7 @@ declare namespace Isc {
 		 * example, if groupGranularity were 1000, groups would be 0-1000, 1000-2000, etc.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly groupGranularity?: number /* integer */;
+		readonly groupGranularity?: Integer;
 		/** 
 		 * (Read only) For a field that allows multiple ListGridField.groupingModes','grouping modes,
 		 * the current grouping mode.
@@ -7110,7 +9981,7 @@ declare namespace Isc {
 		 * ranges.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly groupPrecision?: number /* integer */;
+		readonly groupPrecision?: Integer;
 		/** 
 		 * Custom base style to apply to this field's header button instead of
 		 * ListGrid.headerBaseStyle.
@@ -7118,7 +9989,7 @@ declare namespace Isc {
 		 * ListGridField.headerTitleStyle as well.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly headerBaseStyle?: string /* CSSStyleName */;
+		readonly headerBaseStyle?: CSSStyleName;
 		/** 
 		 * Delay in ms for hovers shown over this field's header.
 		 * 
@@ -7126,7 +9997,7 @@ declare namespace Isc {
 		 * and hovers shown over cells in the grid's body.
 		 * Flags: IRW
 		 */
-		readonly headerHoverDelay?: number /* integer */;
+		readonly headerHoverDelay?: Integer;
 		/** 
 		 * (Read only) Optional title for the header button for this field. If specified this will be
 		 * displayed in the header button instead of ListGridField.title or
@@ -7134,7 +10005,7 @@ declare namespace Isc {
 		 * header button entirely.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly headerTitle?: string /* String */;
+		readonly headerTitle?: String;
 		/** 
 		 * Custom titleStyle to apply to this field's header button instead of
 		 * ListGrid.headerTitleStyle.
@@ -7143,7 +10014,7 @@ declare namespace Isc {
 		 * thereof.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly headerTitleStyle?: string /* CSSStyleName */;
+		readonly headerTitleStyle?: CSSStyleName;
 		/** 
 		 * (Read only) Marks field as initially hidden.
 		 * The user will still be able to show the field via a context menu. 
@@ -7153,6 +10024,7 @@ declare namespace Isc {
 		 * 
 		 * To mark a field as completely hidden (not shown to a user at all, in any component), set
 		 * DataSourceField.hidden instead.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: appearance
 		 */
 		readonly hidden?: boolean /* Boolean */;
@@ -7163,6 +10035,7 @@ declare namespace Isc {
 		 * 
 		 * This attribute overrides ListGrid.hiliteHTMLAfterFormat as defined at the
 		 * component level.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly hiliteHTMLAfterFormat?: boolean /* Boolean */;
@@ -7219,20 +10092,21 @@ declare namespace Isc {
 		 * in addition to this property.
 		 * Flags: IRW
 		 */
-		readonly hoverDelay?: number /* integer */;
+		readonly hoverDelay?: Integer;
 		/** 
 		 * Specifies the width of the canvas shown when the mouse hovers over cells in this field. 
 		 * 
 		 * If unset, default behavior is derived from ListGrid.headerHoverWidth.
 		 * Flags: IRW
 		 */
-		readonly hoverWidth?: number /* Integer */;
+		readonly hoverWidth?: Integer;
 		/** 
 		 * This property may be set to customize the wrap attribute for the
 		 * canvas shown when the mouse hovers over cells in this field. Note that this causes a 
 		 * soft-wrap - if set, the hover text will wrap at word boundaries.
 		 * 
 		 * If unset, default behavior is derived from ListGrid.headerHoverWrap.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly hoverWrap?: boolean /* Boolean */;
@@ -7249,7 +10123,7 @@ declare namespace Isc {
 		 * use ListGrid.setFieldIcon.
 		 * Flags: IR
 		 */
-		readonly icon?: string /* SCImgURL */;
+		readonly icon?: SCImgURL;
 		/** 
 		 * (Read only) If ListGridField.icon is specified, this property can be used to specify the
 		 * height of the icon to be displayed in the ListGrid header button.
@@ -7260,13 +10134,13 @@ declare namespace Isc {
 		 * in the editor.
 		 * Flags: IR
 		 */
-		readonly iconHeight?: number /* integer */;
+		readonly iconHeight?: Integer;
 		/** 
 		 * (Read only) If this field is showing an icon, should it appear to the left or right of the title?
 		 * Valid options are "left" or "right"
 		 * Flags: IR
 		 */
-		readonly iconOrientation?: string /* String */;
+		readonly iconOrientation?: String;
 		/** 
 		 * (Read only, Advanced) If this field is editable, this property can be used to specify
 		 * FormItem.icons','icons to be displayed in the editors displayed for this field
@@ -7279,18 +10153,18 @@ declare namespace Isc {
 		 * (See StatefulCanvas.iconSize)
 		 * Flags: IR
 		 */
-		readonly iconSize?: number /* integer */;
+		readonly iconSize?: Integer;
 		/** 
 		 * (Read only) Pixels between icon and title text.
 		 * Flags: IR, Group: buttonIcon
 		 */
-		readonly iconSpacing?: number /* int */;
+		readonly iconSpacing?: int;
 		/** 
 		 * (Read only, Advanced) If this field is editable, this property will be passed to editors displayed for
 		 * cells within this field as FormItem.iconVAlign.
 		 * Flags: IRA, Group: editing
 		 */
-		readonly iconVAlign?: string /* String */;
+		readonly iconVAlign?: String;
 		/** 
 		 * (Read only) If ListGridField.icon is specified, this property can be used to specify the
 		 * width of the icon to be displayed in the ListGrid header button.
@@ -7301,7 +10175,7 @@ declare namespace Isc {
 		 * in the editor.
 		 * Flags: IR
 		 */
-		readonly iconWidth?: number /* integer */;
+		readonly iconWidth?: Integer;
 		/** 
 		 * If the user is navigating through the grid using the keyboard, record click or double click
 		 * events may be generated via keyboard interactions (see ListGrid.generateClickOnSpace,
@@ -7311,6 +10185,7 @@ declare namespace Isc {
 		 * These synthetic events have both a target row and column.
 		 * Setting this flag to true ensures that this field will never be considered the target for
 		 * a keyboard click event.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: events
 		 */
 		readonly ignoreKeyboardClicks?: boolean;
@@ -7342,7 +10217,7 @@ declare namespace Isc {
 		 * URL for the image.
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLPrefix?: string /* String */;
+		readonly imageURLPrefix?: String;
 		/** 
 		 * (Advanced) If any cells in this field are showing a value icon (see: ListGridField.valueIcons)
 		 * or this is has ListGridFieldType set to "image", this the value
@@ -7353,7 +10228,7 @@ declare namespace Isc {
 		 * FormItem.imageURLSuffix.
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLSuffix?: string /* String */;
+		readonly imageURLSuffix?: String;
 		/** 
 		 * Width of images shown for fieldTypes image and imageFile in this field.
 		 * 
@@ -7402,13 +10277,14 @@ declare namespace Isc {
 		 * always included in server responses, avoiding the issue.
 		 * Flags: IR, Group: display_values
 		 */
-		readonly includeFrom?: string /* String */;
+		readonly includeFrom?: String;
 		/** 
 		 * (Read only) If a listGrid is showing a field of type summary, should this field be passed to the
 		 * recordSummaryFunction when calculating the summary value to display.
 		 * If unset, fields are included if they are of type "integer" or "float" only (since most
 		 * summary functions perform numeric calculations). See also
 		 * ListGridField.includeInRecordSummaryFields.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly includeInRecordSummary?: boolean;
@@ -7440,13 +10316,14 @@ declare namespace Isc {
 		 * applied to the editor for this field.
 		 * Flags: IRWA
 		 */
-		readonly inputFormat?: string /* DateInputFormat */;
+		readonly inputFormat?: DateInputFormat;
 		/** 
 		 * (Read only, Advanced) If set to true and ListGrid.canRemoveRecords is true, this field will be rendered
 		 * as the remove-field for this grid. In most common usage scenarios this field will essentially
 		 * be a placeholder indicating where the remove field should be rendered, meaning properties
 		 * other than isRemoveField, such as name or title, may
 		 * be left unset.
+		 * boolean - Null not allowed
 		 * Flags: IRA
 		 */
 		readonly isRemoveField?: boolean;
@@ -7461,6 +10338,7 @@ declare namespace Isc {
 		 * specified space will be left for fields with
 		 * ListGridField.align set to "left" or "right", but not for
 		 * fields with align set to "center".
+		 * boolean - Null not allowed
 		 * Flags: IWA, Group: headerMenuButton
 		 */
 		readonly leaveHeaderMenuButtonSpace?: boolean;
@@ -7471,25 +10349,25 @@ declare namespace Isc {
 		 * on a per-record basis via ListGridRecord.linkText.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly linkText?: string /* String */;
+		readonly linkText?: String;
 		/** 
 		 * Name of the property in a ListGridRecord that holds the HTML to display in cells of this
 		 * field if the fieldType is set to "link".
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly linkTextProperty?: string /* String */;
+		readonly linkTextProperty?: String;
 		/** 
 		 * (Advanced) If this field has type [ListGridFieldType] set to "link",
 		 * setting this property will apply a standard prefix to the link URL for cells in this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLPrefix?: string /* String */;
+		readonly linkURLPrefix?: String;
 		/** 
 		 * (Advanced) If this field has type [ListGridFieldType] set to "link",
 		 * setting this property will apply a standard suffix to the link URL for cells in this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLSuffix?: string /* String */;
+		readonly linkURLSuffix?: String;
 		/** 
 		 * When ListGrid.showHeader is false and a field is subject to autofitting (see
 		 * ListGrid.autoFitFieldWidths), sets the maximum width of the field. The actual
@@ -7497,7 +10375,7 @@ declare namespace Isc {
 		 * ListGridField.minWidth dominates this property.)
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly maxWidth?: number /* Number */;
+		readonly maxWidth?: Number;
 		/** 
 		 * When a field is subject to autofitting (see ListGrid.autoFitFieldWidths), sets the
 		 * minimum width of the field. The actual allowed minimum will be the maximum of:
@@ -7508,7 +10386,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly minWidth?: number /* Number */;
+		readonly minWidth?: Number;
 		/** 
 		 * (Read only) Indicates that this field should always be Array-valued. This property will be
 		 * passed through to the generated edit-item when editing the field - so if
@@ -7517,6 +10395,7 @@ declare namespace Isc {
 		 * 
 		 * Note that for databound grids it typically makes sense to set DataSourceField.multiple
 		 * rather than setting the property directly on the ListGridField object.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: editing
 		 */
 		readonly multiple?: boolean /* Boolean */;
@@ -7544,7 +10423,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: R
 		 */
-		readonly operator?: string /* String */;
+		readonly operator?: String;
 		/** 
 		 * If ListGridField.optionDataSource is set for this ListGridField, criteria specified in this
 		 * attribute will be passed to the dataSource when performing the fetch operation to
@@ -7621,7 +10500,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly optionDataSource?: string /* String */;
+		readonly optionDataSource?: String;
 		/** 
 		 * (Read only) If this field has an optionDataSource specified and
 		 * ListGridField.autoFetchDisplayMap','autoFetchDisplayMap is set, this attribute
@@ -7639,7 +10518,7 @@ declare namespace Isc {
 		 * dataSource.
 		 * Flags: IR, Group: display_values
 		 */
-		readonly optionOperationId?: string /* String */;
+		readonly optionOperationId?: String;
 		/** 
 		 * (Read only) For fields with an ListGridField.optionDataSource, where
 		 * ListGridField.autoFetchDisplayMap is true, this property will govern
@@ -7657,6 +10536,7 @@ declare namespace Isc {
 		 * 
 		 * Note that this feature would typically be used with
 		 * ListGrid.canReorderFields','canReorderFields:false
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly partialSummary?: boolean;
@@ -7665,7 +10545,7 @@ declare namespace Isc {
 		 * sets Canvas.prompt for the header).
 		 * Flags: IR
 		 */
-		readonly prompt?: string /* HTMLString */;
+		readonly prompt?: HTMLString;
 		/** 
 		 * (Read only) Only applies to fields of type "summary".
 		 * Fields of this type will display a calculated value based on the other field values
@@ -7691,6 +10571,7 @@ declare namespace Isc {
 		 * in order for validation to pass.
 		 * Note: for databound listGrids, this property may be specified on the
 		 * DataSourceField, enabling both client and server side validation.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: gridValidation
 		 */
 		readonly required?: boolean /* Boolean */;
@@ -7699,39 +10580,46 @@ declare namespace Isc {
 		 * on click?
 		 * 
 		 * See ListGrid.selectCellTextOnClick for more information.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly selectCellTextOnClick?: boolean /* Boolean */;
 		/** 
 		 * Whether this field should be included in the printable representation of the grid.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: printing
 		 */
 		readonly shouldPrint?: boolean;
 		/** 
 		 * (Advanced) When set to false, don't apply alternate-row styling to this field.
+		 * boolean - Null not allowed
 		 * Flags: IRWA
 		 */
 		readonly showAlternateStyle?: boolean;
 		/** 
 		 * When set to false, this field will not show a context menu in its header.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly showDefaultContextMenu?: boolean /* Boolean */;
 		/** 
 		 * (Read only) If using an icon for this button, whether to switch the icon image if the button becomes
 		 * disabled.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: buttonIcon
 		 */
 		readonly showDisabledIcon?: boolean /* Boolean */;
 		/** 
 		 * (Read only) If using an icon for this button, whether to switch the icon image when the mouse goes
 		 * down on the button.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: buttonIcon
 		 */
 		readonly showDownIcon?: boolean /* Boolean */;
 		/** 
 		 * (Read only) For a field of type:"imageFile", indicates whether to stream the image and display it
 		 * inline or to display the View and Download icons.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly showFileInline?: boolean;
@@ -7742,6 +10630,7 @@ declare namespace Isc {
 		 * If StatefulCanvas.showFocusedAsOver is true, the "Over" icon will be
 		 * displayed when the canvas has focus, otherwise a separate "Focused" icon
 		 * will be displayed
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: buttonIcon
 		 */
 		readonly showFocusedIcon?: boolean /* Boolean */;
@@ -7751,6 +10640,7 @@ declare namespace Isc {
 		 * explicit ListGridField.summaryFunction is specified or if a
 		 * SimpleType.getDefaultSummaryFunction','default summary function is defined
 		 * for the specified field type.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly showGridSummary?: boolean /* Boolean */;
@@ -7761,6 +10651,7 @@ declare namespace Isc {
 		 * explicit ListGridField.summaryFunction is specified or if a
 		 * SimpleType.getDefaultSummaryFunction','default summary function is defined
 		 * for the specified field type.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly showGroupSummary?: boolean;
@@ -7770,6 +10661,7 @@ declare namespace Isc {
 		 * 
 		 * All hilites in group summary rows can be controlled with the
 		 * ListGrid.showHilitesInGroupSummary property.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly showHilitesInGroupSummary?: boolean /* Boolean */;
@@ -7784,6 +10676,7 @@ declare namespace Isc {
 		 * 
 		 * All hovers can be disabled, regardless of other settings, by setting
 		 * ListGrid.showHover to false.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly showHover?: boolean;
@@ -7794,23 +10687,27 @@ declare namespace Isc {
 		 * A number of builtin modes are provided - see HoverMode.
 		 * 
 		 * Also supported at the ListGrid.showHoverComponents','ListGrid-level.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: hoverComponents
 		 */
 		readonly showHoverComponents?: boolean /* Boolean */;
 		/** 
 		 * (Read only) If using an icon for this button, whether to switch the icon image on mouse rollover.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: buttonIcon
 		 */
 		readonly showRollOverIcon?: boolean /* Boolean */;
 		/** 
 		 * (Read only) If using an icon for this button, whether to switch the icon image when the button
 		 * becomes selected.
+		 * Boolean - Null allowed
 		 * Flags: IR, Group: buttonIcon
 		 */
 		readonly showSelectedIcon?: boolean /* Boolean */;
 		/** 
 		 * This property may be set to false to explicitly suppress display of
 		 * the field title in the column header button for the field.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly showTitle?: boolean;
@@ -7825,6 +10722,7 @@ declare namespace Isc {
 		 * 
 		 * Note that if this field is editable FormItem.showValueIconOnly will be passed
 		 * through to editors displayed in this field.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: imageColumns
 		 */
 		readonly showValueIconOnly?: boolean;
@@ -7832,6 +10730,7 @@ declare namespace Isc {
 		 * For a field with displayField configured, should client-side sorting
 		 * be performed on the display field value? Unless explicitly set to false
 		 * the display field value is used.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: display_values
 		 */
 		readonly sortByDisplayField?: boolean;
@@ -7841,6 +10740,7 @@ declare namespace Isc {
 		 * mapped display value. If unset, will sort by display value. Set to false
 		 * to sort by underlying data value. Note that this has no effect if
 		 * a ListGridField.sortNormalizer has been specified.
+		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
 		readonly sortByMappedValue?: boolean;
@@ -7860,7 +10760,7 @@ declare namespace Isc {
 		 * ListGrid.spannedHeaderBaseStyle when the grid is showing header spans.
 		 * Flags: IRW, Group: gridHeader
 		 */
-		readonly spannedHeaderBaseStyle?: string /* CSSStyleName */;
+		readonly spannedHeaderBaseStyle?: CSSStyleName;
 		/** 
 		 * (Read only) If ListGrid.showGridSummary or ListGrid.showGroupSummary is true,
 		 * this attribute can be used to specify
@@ -7883,14 +10783,14 @@ declare namespace Isc {
 		 * for showing/hiding the listGrid field when the user right-clicks on the ListGrid header.
 		 * Flags: IRWA, Group: appearance
 		 */
-		readonly summaryTitle?: string /* String */;
+		readonly summaryTitle?: String;
 		/** 
 		 * The value to display for a ListGridField when it appears in the ListGrid.summaryRow','summaryRow. The
 		 * default for normal fields is null and for special fields, like the ListGrid.checkboxField','checkboxField,
 		 * the default is to show a blank value (a non-breaking space).
 		 * Flags: IRW
 		 */
-		readonly summaryValue?: string /* HTMLString */;
+		readonly summaryValue?: HTMLString;
 		/** 
 		 * (Read only) If ListGrid.showGridSummary or ListGrid.showGroupSummary is true and the
 		 * ListGridField.summaryFunction is set to "title", this attribute may be
@@ -7898,7 +10798,7 @@ declare namespace Isc {
 		 * ListGridField.title will show up in the summary.
 		 * Flags: IR
 		 */
-		readonly summaryValueTitle?: string /* String */;
+		readonly summaryValueTitle?: String;
 		/** 
 		 * If this field has a valueIcons property specified, setting this property to true will
 		 * prevent the valueIcon being written out into this field's cells.
@@ -7906,6 +10806,7 @@ declare namespace Isc {
 		 * Note this property may also be set to false to avoid showing the standard
 		 * ListGrid.booleanTrueImage and ListGrid.booleanFalseImage for fields of type
 		 * boolean.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: imageColumns
 		 */
 		readonly suppressValueIcon?: boolean;
@@ -7920,7 +10821,7 @@ declare namespace Isc {
 		 * ListGrid.cellClick event is fired for the containing cell.
 		 * Flags: IRW
 		 */
-		readonly target?: string /* String */;
+		readonly target?: String;
 		/** 
 		 * (Advanced) Time-format to apply to date type values within this field. If specified, any
 		 * dates displayed in this field will be formatted as times using the appropriate format.
@@ -7952,7 +10853,7 @@ declare namespace Isc {
 		 * HTML for the field title.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly title?: string /* String */;
+		readonly title?: String;
 		/** 
 		 * (Read only) ListGrids picks a renderer for the view and edit mode of a field based on this attribute.
 		 * See ListGridFieldType for a summary of how types are rendered.
@@ -7984,6 +10885,7 @@ declare namespace Isc {
 		 * the value of the field is changed.
 		 * 
 		 * Analogous to the FormItem.validateOnChange property.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: gridValidation
 		 */
 		readonly validateOnChange?: boolean;
@@ -8002,7 +10904,7 @@ declare namespace Isc {
 		 * be applied to this field's editors.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly valueField?: string /* String */;
+		readonly valueField?: String;
 		/** 
 		 * Height for value icons for this listGrid field.
 		 * Overrides ListGrid.valueIconSize, ListGrid.valueIconHeight, and
@@ -8023,7 +10925,7 @@ declare namespace Isc {
 		 * Has no effect if ListGridField.showValueIconOnly is true
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIconOrientation?: string /* String */;
+		readonly valueIconOrientation?: String;
 		/** 
 		 * How much padding should there be on the right of valueIcons for this field
 		 * Overrides ListGrid.valueIconRightPadding
@@ -8109,7 +11011,7 @@ declare namespace Isc {
 		 * See also DataSourceField.valueMap.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly valueMap?: any | Array<string> /* Object | Array of String */;
+		readonly valueMap?: any | Array<String> /* Object | Array of String */;
 		/** 
 		 * The width of this field, specified as either an absolute number of pixels,
 		 * a percentage of the remaining space like "25%", or "*" to split remaining space among
@@ -8130,7 +11032,7 @@ declare namespace Isc {
 		 * the ListGrid is drawn.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly width?: number | string /* Number | String */;
+		readonly width?: Number | String;
 		/** 
 		 * Should the field title wrap if there is not enough space horizontally to accommodate it.
 		 * If unset, default behavior is derived from ListGrid.wrapHeaderTitles. (This is a
@@ -8141,6 +11043,7 @@ declare namespace Isc {
 		 * minimum field width - see the links for details.
 		 * This feature is incompatible with ListGrid.clipHeaderTitles, and
 		 * clipHeaderTitles will be disabled for wrapping fields.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly wrap?: boolean /* Boolean */;
@@ -8232,11 +11135,11 @@ declare namespace Isc {
 		 * 
 		 * @param {ListGridRecord} record - record for the cell being edited. Will be null for a new, unsaved record.
 		 * @param {any} value - value for the cell being edited
-		 * @param {number} rowNum - row number for the cell
-		 * @param {number} colNum - column number of the cell
+		 * @param {int} rowNum - row number for the cell
+		 * @param {int} colNum - column number of the cell
 		 * @param {ListGrid} grid - ListGrid to which this field belongs
 		 */
-		editorEnter?(record:ListGridRecord, value:any /* Any */, rowNum:number /* int */, colNum:number /* int */, grid:ListGrid): void; 
+		editorEnter?(record:ListGridRecord, value:any /* Any */, rowNum:int, colNum:int, grid:ListGrid): void; 
 
 		/**  
 		 * (Advanced)  Callback fired when the user attempts to navigate away from the current edit cell,
@@ -8248,12 +11151,12 @@ declare namespace Isc {
 		 * @param {EditCompletionEvent} editCompletionEvent - What interaction triggered this edit cell exit
 		 * @param {ListGridRecord} record - record for the cell being edited
 		 * @param {any} newValue - new value for the cell being edited
-		 * @param {number} rowNum - row number for the cell
-		 * @param {number} colNum - column number of the cell
+		 * @param {int} rowNum - row number for the cell
+		 * @param {int} colNum - column number of the cell
 		 * @param {ListGrid} grid - ListGrid to which this field belongs
 		 * @return {boolean} Returning false from this method will cancel the default behavior                      (for example saving the row) and leave the editor visible and focus&#010                      in this edit cell.
 		 */
-		editorExit?(editCompletionEvent:EditCompletionEvent, record:ListGridRecord, newValue:any /* Any */, rowNum:number /* int */, colNum:number /* int */, grid:ListGrid): boolean; 
+		editorExit?(editCompletionEvent:EditCompletionEvent, record:ListGridRecord, newValue:any /* Any */, rowNum:int, colNum:int, grid:ListGrid): boolean; 
 
 		/**  
 		 *  Return the HTML to display in cells of this field.
@@ -8277,9 +11180,9 @@ declare namespace Isc {
 		 * @param {number} rowNum - row number for the cell
 		 * @param {number} colNum - column number for the cell.
 		 * @param {ListGrid} grid - the ListGrid displaying the cell
-		 * @return {string} HTML to display in the cell
+		 * @return {HTMLString} HTML to display in the cell
 		 */
-		formatCellValue?(value:any /* Any */, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid): string /* HTMLString */; 
+		formatCellValue?(value:any /* Any */, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid): HTMLString; 
 
 		/**  
 		 *  Return the value to display in cells of this field which are being edited.
@@ -8346,9 +11249,9 @@ declare namespace Isc {
 		 * 
 		 * @param {ListGrid} viewer - pointer back to the ListGrid
 		 * @param {number} fieldNum - index of this field in the grid's fields array.
-		 * @return {string} Field title.
+		 * @return {String} Field title.
 		 */
-		getFieldTitle?(viewer:ListGrid, fieldNum:number): string /* String */; 
+		getFieldTitle?(viewer:ListGrid, fieldNum:number): String; 
 
 		/**  
 		 * (Advanced)  If ListGrid.showGridSummary is true, and this method is specified it will be
@@ -8399,11 +11302,11 @@ declare namespace Isc {
 		 * @param {any} groupValue - the value from the group is created, the result of ListGridField.getGroupValue
 		 * @param {GroupNode} groupNode - the node in the grid containing the group.
 		 * @param {any} field - Field object for which to get group value
-		 * @param {string} fieldName - The name of the field
+		 * @param {String} fieldName - The name of the field
 		 * @param {ListGrid} grid - the ListGrid displaying the cell
 		 * @return {any} Group value to which this record belongs
 		 */
-		getGroupTitle?(groupValue:any /* Any */, groupNode:GroupNode, field:any /* Object */, fieldName:string /* String */, grid:ListGrid): any /* Any */; 
+		getGroupTitle?(groupValue:any /* Any */, groupNode:GroupNode, field:any /* Object */, fieldName:String, grid:ListGrid): any /* Any */; 
 
 		/**  
 		 *  Return the value which records should be grouped by.
@@ -8421,11 +11324,11 @@ declare namespace Isc {
 		 * editable grid, it has no associated record object. In this case the edit values will
 		 * be passed in as this parameter (see ListGrid.getEditValues)
 		 * @param {any} field - Field object for which to get group value
-		 * @param {string} fieldName - The name of the field
+		 * @param {String} fieldName - The name of the field
 		 * @param {ListGrid} grid - the ListGrid displaying the cell
 		 * @return {any} Group value to which this record belongs
 		 */
-		getGroupValue?(value:any /* Any */, record:ListGridRecord, field:any /* Object */, fieldName:string /* String */, grid:ListGrid): any /* Any */; 
+		getGroupValue?(value:any /* Any */, record:ListGridRecord, field:any /* Object */, fieldName:String, grid:ListGrid): any /* Any */; 
 
 		/**  
 		 * (Advanced)  Only applies to ListGridFieldType','summary-type fields. If specified, this
@@ -8466,9 +11369,9 @@ declare namespace Isc {
 		 * @param {number} rowNum - row number where hover occurred
 		 * @param {number} colNum - column number where hover occurred
 		 * @param {ListGrid} grid - ListGrid this field is a part of
-		 * @return {string} HTML to show in the hover
+		 * @return {HTMLString} HTML to show in the hover
 		 */
-		hoverHTML?(record:ListGridRecord, value:any /* Any */, rowNum:number, colNum:number, grid:ListGrid): string /* HTMLString */; 
+		hoverHTML?(record:ListGridRecord, value:any /* Any */, rowNum:number, colNum:number, grid:ListGrid): HTMLString; 
 
 		/**  
 		 *  Method used to convert the value displayed in an editor for some cell in this field into
@@ -8548,10 +11451,10 @@ declare namespace Isc {
 		 * 
 		 * @param {ListGrid} list - A pointer to the listGrid containing the field
 		 * @param {ListGridField} field - the ListGridField object
-		 * @param {number} fieldNum - the index of the field
+		 * @param {Integer} fieldNum - the index of the field
 		 * @return {boolean} whether the field should be shown
 		 */
-		showIf?(list:ListGrid, field:ListGridField, fieldNum:number /* integer */): boolean; 
+		showIf?(list:ListGrid, field:ListGridField, fieldNum:Integer): boolean; 
 
 		/**  
 		 * (Advanced)  Optional function to return the value that should be used when sorting this field.
@@ -8565,12 +11468,12 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {any} recordObject - record to normalize
-		 * @param {string} fieldName - name of the field on which sorting occurred
+		 * @param {String} fieldName - name of the field on which sorting occurred
 		 * @param {ListGrid} context - A pointer back to the list grid displaying this field will be available as the context argument. Note that you can also get a pointer
 		 * to the field definition object by calling context.getField(fieldName)
 		 * @return {any} normalized value for sorting
 		 */
-		sortNormalizer?(recordObject:any /* Object */, fieldName:string /* String */, context:ListGrid): any /* Any */; 
+		sortNormalizer?(recordObject:any /* Object */, fieldName:String, context:ListGrid): any /* Any */; 
 
 		/**  
 		 * 
@@ -8593,7 +11496,7 @@ declare namespace Isc {
 
 	} // ListGridField
 
-	export interface ListGridFieldStatic {
+	export interface ListGridFieldStatic extends DBCFieldStatic {
 	} // ListGridFieldStatic
 
 
@@ -8611,6 +11514,7 @@ declare namespace Isc {
 		 * this node. Only has an effect if this node is displayed in a TreeGrid where
 		 * TreeGrid.canAcceptDroppedRecords, TreeGrid.canReorderRecords or 
 		 * TreeGrid.canReparentNodes is true.
+		 * boolean - Null not allowed
 		 * Flags: IRA
 		 */
 		readonly canAcceptDrop?: boolean;
@@ -8618,6 +11522,7 @@ declare namespace Isc {
 		 * (Read only, Advanced) Governs whether this node can be dragged. Only has an effect if this node is displayed in
 		 * a TreeGrid where TreeGrid.canDragRecordsOut, TreeGrid.canReorderRecords
 		 * or TreeGrid.canReparentNodes is true.
+		 * boolean - Null not allowed
 		 * Flags: IRA
 		 */
 		readonly canDrag?: boolean;
@@ -8632,6 +11537,7 @@ declare namespace Isc {
 		/** 
 		 * (Read only) Default property name denoting whether this record is enabled. Property name may be
 		 * modified for some grid via ListGrid.recordEnabledProperty.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly enabled?: boolean;
@@ -8648,7 +11554,7 @@ declare namespace Isc {
 		 * TreeGrid.customIconProperty.
 		 * Flags: IRW, Group: treeIcons
 		 */
-		readonly icon?: string /* SCImgURL */;
+		readonly icon?: SCImgURL;
 		/** 
 		 * (Read only) Specifies the unique ID of this node. 
 		 * 
@@ -8659,7 +11565,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.idField.
 		 * Flags: IR
 		 */
-		readonly id?: string | number /* String | Number */;
+		readonly id?: String | Number;
 		/** 
 		 * (Read only) Set to true or a string that is not equal to (ignoring case)
 		 * "false" to explicitly mark this node as a folder. See Tree.isFolder for
@@ -8668,7 +11574,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.isFolderProperty.
 		 * Flags: IR
 		 */
-		readonly isFolder?: boolean | string /* Boolean | String */;
+		readonly isFolder?: boolean | String /* Boolean | String */;
 		/** 
 		 * (Read only) Provides a name for the node that is unique among its immediate siblings, thus allowing a
 		 * unique path to be used to identify the node, similar to a file system. See
@@ -8690,7 +11596,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.nameProperty.
 		 * Flags: IR
 		 */
-		readonly name?: string /* String */;
+		readonly name?: String;
 		/** 
 		 * (Read only) For trees with modelType:"parent", this property specifies the unique ID of this node's 
 		 * parent node.
@@ -8700,7 +11606,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.parentIdField.
 		 * Flags: IR
 		 */
-		readonly parentId?: string | number /* String | Number */;
+		readonly parentId?: String | Number;
 		/** 
 		 * (Advanced) For folder nodes showing custom icons (set via TreeNode.icon),
 		 * this property allows the developer to specify on a per-node basis whether a
@@ -8712,6 +11618,7 @@ declare namespace Isc {
 		 * for this node.
 		 * You can change the name of this property by setting 
 		 * TreeGrid.customIconDropProperty.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: treeIcons
 		 */
 		readonly showDropIcon?: boolean /* Boolean */;
@@ -8725,6 +11632,7 @@ declare namespace Isc {
 		 * for this node.
 		 * You can change the name of this property by setting 
 		 * TreeGrid.customIconOpenProperty.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: treeIcons
 		 */
 		readonly showOpenIcon?: boolean /* Boolean */;
@@ -8738,6 +11646,7 @@ declare namespace Isc {
 		 * for this node.
 		 * You can change the name of this property by setting 
 		 * TreeGrid.customIconSelectedProperty.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: treeIcons
 		 */
 		readonly showSelectedIcon?: boolean /* Boolean */;
@@ -8749,7 +11658,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.titleProperty.
 		 * Flags: IR
 		 */
-		readonly title?: string /* HTMLString */;
+		readonly title?: HTMLString;
 	} // TreeNode
 
 	export interface TreeNodeStatic {
@@ -8855,6 +11764,7 @@ declare namespace Isc {
 		 * (Advanced) When set to true, causes filtering using this criteria object to follow SQL99 behavior for 
 		 * dealing with NULL values. See DataSource.strictSQLFiltering','this discussion for
 		 * more detail.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: advancedFilter
 		 */
 		readonly strictSQLFiltering?: boolean /* Boolean */;
@@ -8878,7 +11788,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly backgroundColor?: string /* String */;
+		readonly backgroundColor?: String;
 		/** 
 		 * An optional border color for the body portion of EventCanvas','canvases
 		 * representing this event in the various CalendarView','calendar views.
@@ -8888,7 +11798,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly borderColor?: string /* String */;
+		readonly borderColor?: String;
 		/** 
 		 * Optional boolean value controlling whether this event can be dragged with the mouse.
 		 * The name of this field within the CalendarEvent can be changed via
@@ -8896,6 +11806,7 @@ declare namespace Isc {
 		 * Calendar.canEditEvents','editing is enabled.
 		 * 
 		 * You can separately disallow drag-resize via CalendarEvent.canResize','canResize.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canDrag?: boolean /* Boolean */;
@@ -8903,6 +11814,7 @@ declare namespace Isc {
 		 * Optional boolean value controlling the editability of this particular calendarEvent.
 		 * The name of this field within the CalendarEvent can be changed via
 		 * Calendar.canEditField.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canEdit?: boolean /* Boolean */;
@@ -8912,6 +11824,7 @@ declare namespace Isc {
 		 * 
 		 * The name of this field within the CalendarEvent can be changed via 
 		 * Calendar.canEditLaneField.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canEditLane?: boolean /* Boolean */;
@@ -8921,6 +11834,7 @@ declare namespace Isc {
 		 * 
 		 * The name of this field within the CalendarEvent can be changed via 
 		 * Calendar.canEditSublaneField.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canEditSublane?: boolean /* Boolean */;
@@ -8931,6 +11845,7 @@ declare namespace Isc {
 		 * 
 		 * Only has an effect if Calendar.canEditEvents','editing and 
 		 * Calendar.canDragEvents','dragging are also enabled.
+		 * Boolean - Null allowed
 		 * Flags: IRW
 		 */
 		readonly canResize?: boolean /* Boolean */;
@@ -8940,14 +11855,14 @@ declare namespace Isc {
 		 * Calendar.descriptionField
 		 * Flags: IRW
 		 */
-		readonly description?: string /* String */;
+		readonly description?: String;
 		/** 
 		 * The duration of this event. May be specified instead of an 
 		 * CalendarEvent.endDate','end date and implies that this is a "Period" type event. If
 		 * set to zero, implies an "Instant" type event - an event with a start date but no length.
 		 * Flags: IRW
 		 */
-		readonly duration?: number /* Integer */;
+		readonly duration?: Integer;
 		/** 
 		 * When a CalendarEvent.duration','duration is set for this event, this is the unit of
 		 * that duration. The default is minutes.
@@ -8969,7 +11884,7 @@ declare namespace Isc {
 		 * Calendar.eventWindowStyleField
 		 * Flags: IR
 		 */
-		readonly eventWindowStyle?: string /* CSSStyleName */;
+		readonly eventWindowStyle?: CSSStyleName;
 		/** 
 		 * An optional background color for the header portion of EventCanvas','canvases
 		 * representing this event in the various CalendarView','calendar views.
@@ -8979,7 +11894,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly headerBackgroundColor?: string /* String */;
+		readonly headerBackgroundColor?: String;
 		/** 
 		 * An optional border color for the header portion of EventCanvas','canvases
 		 * representing this event in the various CalendarView','calendar views.
@@ -8989,7 +11904,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly headerBorderColor?: string /* String */;
+		readonly headerBorderColor?: String;
 		/** 
 		 * An optional text color for the header portion of EventCanvas','canvases
 		 * representing this event in the various CalendarView','calendar views.
@@ -8999,7 +11914,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly headerTextColor?: string /* String */;
+		readonly headerTextColor?: String;
 		/** 
 		 * When in Timeline mode, or when Calendar.showDayLanes is true, a string that 
 		 * represents the name of the Calendar.lanes','lane this CalendarEvent should 
@@ -9007,14 +11922,14 @@ declare namespace Isc {
 		 * Calendar.laneNameField.
 		 * Flags: IRW
 		 */
-		readonly lane?: string /* String */;
+		readonly lane?: String;
 		/** 
 		 * String which represents the name of a CalendarEvent
 		 * The name of this field within the CalendarEvent can be changed via
 		 * Calendar.nameField
 		 * Flags: IRW
 		 */
-		readonly name?: string /* String */;
+		readonly name?: String;
 		/** 
 		 * Date object which represents the start date of a CalendarEvent.
 		 * The name of this field within the CalendarEvent can be changed via
@@ -9035,7 +11950,7 @@ declare namespace Isc {
 		 * Calendar.eventStyleNameField
 		 * Flags: IR
 		 */
-		readonly styleName?: string /* CSSStyleName */;
+		readonly styleName?: CSSStyleName;
 		/** 
 		 * When in Timeline mode, or when Calendar.showDayLanes is true, a string that 
 		 * represents the name of the Lane.sublanes','sublane this CalendarEvent should 
@@ -9043,7 +11958,7 @@ declare namespace Isc {
 		 * Calendar.sublaneNameField.
 		 * Flags: IRW
 		 */
-		readonly sublane?: string /* String */;
+		readonly sublane?: String;
 		/** 
 		 * An optional text color for the body portion of EventCanvas','canvases
 		 * representing this event in the various CalendarView','calendar views.
@@ -9053,11 +11968,30 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly textColor?: string /* String */;
+		readonly textColor?: String;
 	} // CalendarEvent
 
 	export interface CalendarEventStatic {
 	} // CalendarEventStatic
+
+
+	/**
+	 * Represents a native DOM element used by the browser.
+	 * 
+	 * For example, you can retrieve the DOM element representing the "Set Data" button from
+	 * <a href='https://www.smartclient.com/smartclient/showcase/?id=emptyGrid' target='_blank'>"Empty Grid" Sample</a>
+	 * in the SmartClient Feature Explorer using AutoTest.getElement:
+	 * 
+	 * var buttonElement = isc.AutoTest.getElement("scLocator=//testRoot[]/child[Class=IButton||index=1||length=3||classIndex=0||classLength=2||roleIndex=0||roleLength=2||title=Set Data||scRole=button]/");
+	 * This is a more robust way to obtain a DOM element than retreiving it by ID:
+	 * 
+	 * var buttonElement = document.getElementById("isc_FZ") 
+	 */
+	export interface DOMElement {
+	} // DOMElement
+
+	export interface DOMElementStatic {
+	} // DOMElementStatic
 
 
 	/**
@@ -9074,7 +12008,7 @@ declare namespace Isc {
 		 * (StretchImg.vertical is true).
 		 * Flags: IR
 		 */
-		readonly height?: number | string /* number | String */;
+		readonly height?: number | String;
 		/** 
 		 * (Read only) A string that is appended as a suffix to the StretchImg's StretchImg.src','src
 		 * URL in order to fetch the media file for this StretchItem, if a separate StretchItem.src is
@@ -9085,12 +12019,12 @@ declare namespace Isc {
 		 * and a name of "stretch", the resulting URL would be "button_Over_stretch.png".
 		 * Flags: IR
 		 */
-		readonly name?: string /* String */;
+		readonly name?: String;
 		/** 
 		 * (Read only) The URL of the media file for this StretchItem.
 		 * Flags: IR
 		 */
-		readonly src?: string /* SCImgURL */;
+		readonly src?: SCImgURL;
 		/** 
 		 * (Read only) The width of the image. This can either be a number (for the number of pixels wide), the string
 		 * "*" (remaining space, divided amongst all items that specify width:"*"), or the name of a property
@@ -9100,7 +12034,7 @@ declare namespace Isc {
 		 * (StretchImg.vertical is false).
 		 * Flags: IR
 		 */
-		readonly width?: number | string /* number | String */;
+		readonly width?: number | String;
 	} // StretchItem
 
 	export interface StretchItemStatic {
@@ -9115,18 +12049,18 @@ declare namespace Isc {
 		 * The format of the file, e.g. "xml" or "js"
 		 * Flags: IRW
 		 */
-		readonly fileFormat?: string /* String */;
+		readonly fileFormat?: String;
 		/** 
 		 * The name of the file, without any extension to indicate FileSpec.fileType','type or
 		 * FileSpec.fileFormat','format.
 		 * Flags: IRW
 		 */
-		readonly fileName?: string /* String */;
+		readonly fileName?: String;
 		/** 
 		 * The type of the file, e.g. "ds" for datasource, or "proj" for project.
 		 * Flags: IRW
 		 */
-		readonly fileType?: string /* String */;
+		readonly fileType?: String;
 	} // FileSpec
 
 	export interface FileSpecStatic {
@@ -9144,7 +12078,7 @@ declare namespace Isc {
 		 * year starts.
 		 * Flags: IRW
 		 */
-		readonly date?: number /* integer */;
+		readonly date?: Integer;
 		/** 
 		 * The actual fiscal year that this date relates to.
 		 * 
@@ -9157,17 +12091,17 @@ declare namespace Isc {
 		 * FiscalYear.year would be set to 2019
 		 * Flags: IRW
 		 */
-		readonly fiscalYear?: number /* integer */;
+		readonly fiscalYear?: Integer;
 		/** 
 		 * The zero-based month-number when this fiscal year starts.
 		 * Flags: IRW
 		 */
-		readonly month?: number /* integer */;
+		readonly month?: Integer;
 		/** 
 		 * The 4-digit calendar year when this fiscal year starts.
 		 * Flags: IRW
 		 */
-		readonly year?: number /* integer */;
+		readonly year?: Integer;
 	} // FiscalYear
 
 	export interface FiscalYearStatic {
@@ -9178,18 +12112,20 @@ declare namespace Isc {
 	 * An object literal with a particular set of properties used to configure the display of
 	 * and interaction with the rows of a DetailViewer. 
 	 */
-	export interface DetailViewerField {
+	export interface DetailViewerField extends DBCField {
 		/** 
 		 * (Read only) Dictates whether the data in this field be exported. Explicitly set this
 		 * to false to prevent exporting. Has no effect if the underlying 
 		 * DataSourceField.canExport','dataSourceField is explicitly set to 
 		 * canExport: false.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canExport?: boolean /* Boolean */;
 		/** 
 		 * Determines whether this field can be hilited. Set to false to prevent this
 		 * field from appearing in HiliteEditor.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: hiliting
 		 */
 		readonly canHilite?: boolean;
@@ -9198,12 +12134,12 @@ declare namespace Isc {
 		 * DetailViewer.cellStyle
 		 * Flags: IRW
 		 */
-		readonly cellStyle?: string /* CSSStyleName */;
+		readonly cellStyle?: CSSStyleName;
 		/** 
 		 * (Read only, Advanced) dataPath property allows this field to display detail from nested data structures
 		 * Flags: IRA
 		 */
-		readonly dataPath?: string /* String */;
+		readonly dataPath?: String;
 		/** 
 		 * Display format to use for date type values within this field. 
 		 * 
@@ -9252,7 +12188,7 @@ declare namespace Isc {
 		 * given by the DetailViewerField.name of the field.
 		 * Flags: IR
 		 */
-		readonly displayField?: string /* String */;
+		readonly displayField?: String;
 		/** 
 		 * (Read only) The value to display for a cell whose value is null or the empty
 		 * string after applying formatCellValue and valueMap (if any).
@@ -9261,12 +12197,13 @@ declare namespace Isc {
 		 * level to define the emptyCellValue for all empty fields in the viewer.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly emptyCellValue?: string /* HTMLString */;
+		readonly emptyCellValue?: HTMLString;
 		/** 
 		 * (Read only) By default HTML values in DetailViewer cells will be interpreted by the browser.
 		 * Setting this flag to true will causes HTML characters to be escaped, meaning the
 		 * raw value of the field (for example "&lt;b&gt;AAA&lt;/b&gt;") is displayed
 		 * to the user rather than the interpreted HTML (for example "AAA")
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly escapeHTML?: boolean;
@@ -9275,11 +12212,12 @@ declare namespace Isc {
 		 * DataSourceField.exportFormat.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly exportFormat?: string /* FormatString */;
+		readonly exportFormat?: FormatString;
 		/** 
 		 * (Read only) Dictates whether the data in this field should be exported raw by
 		 * DetailViewer.exportClientData','exportClientData(). If set to true for a
 		 * field, the values in the field-formatters will not be executed for data in this field.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly exportRawValues?: boolean /* Boolean */;
@@ -9287,13 +12225,13 @@ declare namespace Isc {
 		 * (Read only) FormatString for numeric or date formatting. See DataSourceField.format.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly format?: string /* FormatString */;
+		readonly format?: FormatString;
 		/** 
 		 * (Read only) For DetailViewerField.type: "separator", this attribute specifies
 		 * the height of the separator.
 		 * Flags: IR
 		 */
-		readonly height?: number /* Number */;
+		readonly height?: Number;
 		/** 
 		 * Height for hilite icons for this field.
 		 * Overrides DetailViewer.hiliteIconSize, DetailViewer.hiliteIconHeight, and
@@ -9345,7 +12283,7 @@ declare namespace Isc {
 		 * record.logoHeight will control the height of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageHeight?: number | string /* Integer | String */;
+		readonly imageHeight?: Integer | String;
 		/** 
 		 * Size of images shown for fieldTypes image in this field.
 		 * 
@@ -9354,14 +12292,14 @@ declare namespace Isc {
 		 * record.logoSize will control the size of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageSize?: number | string /* Integer | String */;
+		readonly imageSize?: Integer | String;
 		/** 
 		 * (Advanced) If this field has type set to "image"
 		 * and the URL for the image displayed is not absolute, the path of the URL will be relative
 		 * to this string
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLPrefix?: string /* String */;
+		readonly imageURLPrefix?: String;
 		/** 
 		 * Width of images shown for fieldTypes image in this field.
 		 * 
@@ -9370,7 +12308,7 @@ declare namespace Isc {
 		 * record.logoWidth will control the width of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageWidth?: number | string /* Integer | String */;
+		readonly imageWidth?: Integer | String;
 		/** 
 		 * (Read only) Indicates this field's values come from another, related DataSource. 
 		 * The individual field will inherit settings such as DetailViewerField.type','field.type
@@ -9378,7 +12316,7 @@ declare namespace Isc {
 		 * fields from the primary DataSource.
 		 * Flags: IR
 		 */
-		readonly includeFrom?: string /* String */;
+		readonly includeFrom?: String;
 		/** 
 		 * The HTML to display for values of this field if the field type is set to "link". 
 		 * 
@@ -9386,25 +12324,25 @@ declare namespace Isc {
 		 * on a per-record basis via DetailViewerRecord.linkText.
 		 * Flags: IRW
 		 */
-		readonly linkText?: string /* String */;
+		readonly linkText?: String;
 		/** 
 		 * Name of the property in a DetailViewerRecord that holds the HTML to display for values
 		 * of this field if the field type is set to "link".
 		 * Flags: IRW
 		 */
-		readonly linkTextProperty?: string /* String */;
+		readonly linkTextProperty?: String;
 		/** 
 		 * (Advanced) If this field has type set to "link", setting this property will apply a
 		 * standard prefix to the link URL when displaying values of this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLPrefix?: string /* String */;
+		readonly linkURLPrefix?: String;
 		/** 
 		 * (Advanced) If this field has type set to "link", setting this property will apply a
 		 * standard suffix to the link URL when displaying values of this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLSuffix?: string /* String */;
+		readonly linkURLSuffix?: String;
 		/** 
 		 * (Read only) Name property used to identify the field, and determines which attribute from
 		 * records will be displayed in this field.
@@ -9423,10 +12361,11 @@ declare namespace Isc {
 		 * DetailViewer.printCellStyle
 		 * Flags: IRW
 		 */
-		readonly printCellStyle?: string /* CSSStyleName */;
+		readonly printCellStyle?: CSSStyleName;
 		/** 
 		 * (Read only) For a field of type:"imageFile", indicates whether to stream the image and display it
 		 * inline or to display the View and Download icons.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly showFileInline?: boolean;
@@ -9437,7 +12376,7 @@ declare namespace Isc {
 		 * the link. target is applicable only if the field type is set to "link".
 		 * Flags: IRW
 		 */
-		readonly target?: string /* String */;
+		readonly target?: String;
 		/** 
 		 * (Advanced) Time-format to apply to date type values within this field. If specified, any
 		 * dates displayed in this field will be formatted as times using the appropriate format.
@@ -9458,7 +12397,7 @@ declare namespace Isc {
 		 * is the value of its "name" property.
 		 * Flags: IR
 		 */
-		readonly title?: string /* HTMLString */;
+		readonly title?: HTMLString;
 		/** 
 		 * (Read only) Specifies the type of this DetailViewerField. By default (value is null)
 		 * the field shows a field title on the left and the field value on the right. There are
@@ -9488,13 +12427,13 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly type?: string /* String */;
+		readonly type?: String;
 		/** 
 		 * (Read only) When a field specifies its DetailViewerField.type to be "header", the value of
 		 * this attribute specifies the header text.
 		 * Flags: IR
 		 */
-		readonly value?: string /* HTMLString */;
+		readonly value?: HTMLString;
 		/** 
 		 * (Read only) A property list (or an expression that evaluates to a property list)
 		 * specifying a mapping of internal values to display values for the field (row).
@@ -9507,25 +12446,25 @@ declare namespace Isc {
 		 *  Optional method to format the value to display for this field's cells. Takes precedence 
 		 * over DetailViewer.formatCellValue for cells in this field.
 		 * 
-		 * @param {string} value - the raw value of the cell
+		 * @param {String} value - the raw value of the cell
 		 * @param {DetailViewerRecord} record - the record being displayed
 		 * @param {DetailViewerField} field - the field being displayed
 		 * @param {DetailViewer} viewer - the detailViewer containing this field
 		 */
-		formatCellValue?(value:string /* String */, record:DetailViewerRecord, field:DetailViewerField, viewer:DetailViewer): void; 
+		formatCellValue?(value:String, record:DetailViewerRecord, field:DetailViewerField, viewer:DetailViewer): void; 
 
 		/**  
 		 *  Optional method to return the CSS class for cells in this field. If specified, this method
 		 * will be called from DetailViewer.getCellStyle, and should return a css class name.
 		 * 
 		 * 
-		 * @param {string} value - actual value of this cell
+		 * @param {String} value - actual value of this cell
 		 * @param {any} field - field object for this cell
 		 * @param {any} record - record object for this cell
 		 * @param {DetailViewer} viewer - the viewer instance to which this cell belongs
-		 * @return {string} CSS style for this cell
+		 * @return {CSSStyleName} CSS style for this cell
 		 */
-		getCellStyle?(value:string /* String */, field:any /* Object */, record:any /* Object */, viewer:DetailViewer): string /* CSSStyleName */; 
+		getCellStyle?(value:String, field:any /* Object */, record:any /* Object */, viewer:DetailViewer): CSSStyleName; 
 
 		/**  
 		 * 
@@ -9544,86 +12483,8 @@ declare namespace Isc {
 
 	} // DetailViewerField
 
-	export interface DetailViewerFieldStatic {
+	export interface DetailViewerFieldStatic extends DBCFieldStatic {
 	} // DetailViewerFieldStatic
-
-
-	/**
-	 * Validator definition for a built-in Validator.type. 
-	 */
-	export interface validatorDefinition {
-		/** 
-		 * (Read only) Default error message to be shown when validator fails validation. Can be overridden
-		 * for an individual validator by setting Validator.errorMessage.
-		 * Flags: IR
-		 */
-		readonly defaultErrorMessage?: string /* String */;
-		/** 
-		 * (Read only) Does this validator only run server-side?
-		 * Flags: IR
-		 */
-		readonly requiresServer?: boolean;
-		/** 
-		 * (Read only) Optional name to be shown in tools that edit validators. If not specified,
-		 * the tools will derive the short name from the validatorDefinition.type by assuming it is
-		 * camelCaps similar to DataSource.getAutoTitle.
-		 * Flags: IR
-		 */
-		readonly shortName?: string /* String */;
-		/** 
-		 * (Read only) Type of the validator unique in ValidatorType.
-		 * Flags: IR
-		 */
-		readonly type?: string /* String */;
-
-		/* Instance Method Overrides */
-		/**  
-		 *  This method is called after every validation (i.e. call to
-		 * validatorDefinition.condition) whether it passed or failed. This allows the
-		 * validator perform an operation on the field based on the validation outcome.
-		 * 
-		 * An action() method is not needed to report an error message only.
-		 * 
-		 * 
-		 * @param {boolean} result - The result of the validator. The value will be null if the validator was skipped because of conditional criteria.
-		 * @param {DataSourceField | FormItem} item - FormItem or DataSourceField on which this validator was declared. NOTE: FormItem will not
-		 * be available during a save performed without a
-		 * form (eg programmatic save) or if the field 
-		 * is not available in the form.
-		 * @param {Validator} validator - Validator declaration from eg DataSourceField.validators.
-		 * @param {any} record - Record that was validated
-		 * @param {DataBoundComponent} component - The DataBoundComponent holding the item such DynamicForm or ListGrid.
-		 */
-		action?(result:boolean, item:DataSourceField | FormItem, validator:Validator, record:any /* Record */, component:DataBoundComponent): void; 
-
-		/**  
-		 *  Method invoked to perform the actual validation of a value.
-		 * 
-		 * Because the validator itself is passed as a parameter to
-		 * condition(), you can effectively parameterize the validator. For example, to
-		 * create a validator that checks that the value is after a certain date: 
-		 * { type:"custom", afterDate:new Date(), 
-		 * condition:"value.getTime() > validator.afterDate.getTime()" }
-		 * 
-		 * Note that, if a field is declared with a builtin FieldType, the value passed in
-		 * will already have been converted to the specified type, if possible.
-		 * 
-		 * 
-		 * @param {DataSourceField | FormItem} item - FormItem or DataSourceField on which this validator was declared. NOTE: FormItem will not
-		 * be available during a save performed without a
-		 * form (eg programmatic save) or if the field 
-		 * is not available in the form.
-		 * @param {Validator} validator - Validator declaration from eg DataSourceField.validators.
-		 * @param {any} value - value to validate
-		 * @param {any} record - Field values for record being validated.
-		 * @return {boolean} whether the value passed validation.  True for passed, false for fail.
-		 */
-		condition?(item:DataSourceField | FormItem, validator:Validator, value:any /* Any */, record:any /* Object */): boolean; 
-
-	} // validatorDefinition
-
-	export interface validatorDefinitionStatic {
-	} // validatorDefinitionStatic
 
 
 	/**
@@ -9643,6 +12504,7 @@ declare namespace Isc {
 	export interface TestFunctionResult {
 		/** 
 		 * Set to true if the formula or summary definition passed in was empty.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: formulaFields
 		 */
 		readonly emptyTestValue?: boolean;
@@ -9650,13 +12512,14 @@ declare namespace Isc {
 		 * If the formula or summary format caused a JavaScript error, this contains the JavaScript error text.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly errorText?: string /* String */;
+		readonly errorText?: String;
 		/** 
 		 * Set to true if calling the formula or summary format resulted in a JavaScript Error.
 		 * This would generally indicate a reference to non-existent data values. See 
 		 * TestFunctionResult.failedGeneration for other types of failure.
 		 * 
 		 * When set to true, TestFunctionResult.errorText contains the exception message.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: formulaFields
 		 */
 		readonly failedExecution?: boolean;
@@ -9664,6 +12527,7 @@ declare namespace Isc {
 		 * Set to true if there is a syntax error in the formula or summary being checked.
 		 * 
 		 * When set to true, TestFunctionResult.errorText contains the exception message.
+		 * boolean - Null not allowed
 		 * Flags: IRW, Group: formulaFields
 		 */
 		readonly failedGeneration?: boolean;
@@ -9672,17 +12536,27 @@ declare namespace Isc {
 		 * selected by FormulaBuilder.getTestRecord.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly record?: any /* Record */;
+		readonly record?: Record;
 		/** 
 		 * When a formula or summary format is valid, result contains the result returned by the
 		 * generated function when it was executed.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly result?: string /* String */;
+		readonly result?: String;
 	} // TestFunctionResult
 
 	export interface TestFunctionResultStatic {
 	} // TestFunctionResultStatic
+
+
+	/**
+	 * Represents a field in a DataBoundComponent. 
+	 */
+	export interface DBCField {
+	} // DBCField
+
+	export interface DBCFieldStatic {
+	} // DBCFieldStatic
 
 
 	/**
@@ -9715,6 +12589,7 @@ declare namespace Isc {
 		 * (Read only) If enabled, the tab will collapse to show just its icon when showing the title would
 		 * cause overflow of a containing TabBar. While collapsed, the tab will show its
 		 * title on hover, unless an explicit hover has been specified such as by Tab.prompt.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canAdaptWidth?: boolean /* Boolean */;
@@ -9730,8 +12605,9 @@ declare namespace Isc {
 		 * because it's used for the Tab.closeIcon','closeIcon - see
 		 * TabSet.canCloseTabs for a workaround.
 		 * 
-		 * After the TabSet has been created, you can change a tab's canClose property by calling
-		 * TabSet.setCanCloseTab.
+		 * After the TabSet has been created, you can change a tab's canClose property
+		 * by calling TabSet.setCanCloseTab.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canClose?: boolean;
@@ -9745,6 +12621,7 @@ declare namespace Isc {
 		 * 
 		 * After the TabSet has been created, you can change a tab's canEditTtile
 		 * property by calling TabSet.setTabProperties.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly canEditTitle?: boolean;
@@ -9759,6 +12636,7 @@ declare namespace Isc {
 		 * before or after it. However if you have a canReorder:false
 		 * tab which is not at the beginning or end of the tab bar, users can
 		 * drag reorder other tabs around it which may ultimately change its position.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canReorder?: boolean /* Boolean */;
@@ -9767,7 +12645,7 @@ declare namespace Isc {
 		 * See Tab.canClose and TabSet.canCloseTabs.
 		 * Flags: IR
 		 */
-		readonly closeIcon?: string /* SCImgURL */;
+		readonly closeIcon?: SCImgURL;
 		/** 
 		 * (Read only) Size of the Tab.closeIcon for this tab. If unspecified the icon will be sized
 		 * according to TabSet.closeTabIconSize
@@ -9779,6 +12657,7 @@ declare namespace Isc {
 		 * enable or disable tabs on the fly use the TabSet.enableTab, and
 		 * TabSet.disableTab.
 		 * methods.
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly disabled?: boolean;
@@ -9811,7 +12690,7 @@ declare namespace Isc {
 		 * calling TabSet.setTabIcon.
 		 * Flags: IR
 		 */
-		readonly icon?: string /* SCImgURL */;
+		readonly icon?: SCImgURL;
 		/** 
 		 * (Read only) If Tab.icon is specified, this property may be used to specify a height for the
 		 * icon.
@@ -9820,7 +12699,7 @@ declare namespace Isc {
 		 * property by calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly iconHeight?: number /* integer */;
+		readonly iconHeight?: Integer;
 		/** 
 		 * (Read only) If Tab.icon is specified, this property may be used to specify a size for the icon.
 		 * Per side sizing may be specified instead via Tab.iconWidth and Tab.iconHeight.
@@ -9829,7 +12708,7 @@ declare namespace Isc {
 		 * by calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly iconSize?: number /* integer */;
+		readonly iconSize?: Integer;
 		/** 
 		 * (Read only) If Tab.icon is specified, this property may be used to specify a width for the
 		 * icon.
@@ -9838,7 +12717,7 @@ declare namespace Isc {
 		 * by calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly iconWidth?: number /* integer */;
+		readonly iconWidth?: Integer;
 		/** 
 		 * (Read only) Optional ID for the tab, which can later be used to reference the tab.
 		 * APIs requiring a reference to a tab will accept the tab's ID 
@@ -9880,7 +12759,7 @@ declare namespace Isc {
 		 * If specified, this property takes precedence over TabSet.paneMargin
 		 * Flags: IR
 		 */
-		readonly paneMargin?: number /* int */;
+		readonly paneMargin?: int;
 		/** 
 		 * (Read only) If TabSet.showTabPicker is true for this TabSet, if set this property will determine
 		 * the title of the picker menu item for this tab. If unset, Tab.title will be used
@@ -9890,7 +12769,7 @@ declare namespace Isc {
 		 * property by calling TabSet.setTabProperties.
 		 * Flags: IR, Group: tabBarControls
 		 */
-		readonly pickerTitle?: string /* HTMLString */;
+		readonly pickerTitle?: HTMLString;
 		/** 
 		 * (Read only) Specifies the prompt to be displayed when the mouse hovers over the tab.
 		 * 
@@ -9898,13 +12777,13 @@ declare namespace Isc {
 		 * calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly prompt?: string /* HTMLString */;
+		readonly prompt?: HTMLString;
 		/** 
 		 * (Read only) Specifies the title of the this tab. To change the title after the TabSet
 		 * has been created, call TabSet.setTabTitle.
 		 * Flags: IR
 		 */
-		readonly title?: string /* HTMLString */;
+		readonly title?: HTMLString;
 		/** 
 		 * (Read only) You can specify an explicit width for the tab using this property. Note that tabs
 		 * automatically size to make room for the full title, but if you want to e.g. specify a
@@ -9924,15 +12803,15 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {TabSet} tabSet - the tabSet containing the tab.
-		 * @param {number} tabNum - the index of the deselected tab
+		 * @param {Integer} tabNum - the index of the deselected tab
 		 * @param {Canvas} tabPane - the deselected tab's pane if set
-		 * @param {string} ID - the ID of the deselected tab
+		 * @param {String} ID - the ID of the deselected tab
 		 * @param {Tab} tab - pointer to the tab being deselected
 		 * @param {Tab} newTab - pointer to the new tab being selected
-		 * @param {string} name - the name of the deselected tab
+		 * @param {String} name - the name of the deselected tab
 		 * @return {boolean} return <code>false</code> to cancel the tab selection
 		 */
-		tabDeselected?(tabSet:TabSet, tabNum:number /* integer */, tabPane:Canvas, ID:string /* String */, tab:Tab, newTab:Tab, name:string /* String */): boolean; 
+		tabDeselected?(tabSet:TabSet, tabNum:Integer, tabPane:Canvas, ID:String, tab:Tab, newTab:Tab, name:String): boolean; 
 
 		/**  
 		 *  Optional handler to fire when a tab is selected. As with TabSet.tabSelected this
@@ -9940,13 +12819,13 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {TabSet} tabSet - the tabSet containing the tab.
-		 * @param {number} tabNum - the index of the newly selected tab
+		 * @param {Integer} tabNum - the index of the newly selected tab
 		 * @param {Canvas} tabPane - the newly selected tab's pane if set
-		 * @param {string} ID - the ID of the newly selected tab
+		 * @param {String} ID - the ID of the newly selected tab
 		 * @param {Tab} tab - pointer to the selected tab object
-		 * @param {string} name - the name of the newly selected tab
+		 * @param {String} name - the name of the newly selected tab
 		 */
-		tabSelected?(tabSet:TabSet, tabNum:number /* integer */, tabPane:Canvas, ID:string /* String */, tab:Tab, name:string /* String */): void; 
+		tabSelected?(tabSet:TabSet, tabNum:Integer, tabPane:Canvas, ID:String, tab:Tab, name:String): void; 
 
 	} // Tab
 
@@ -9988,7 +12867,7 @@ declare namespace Isc {
 		 * mapping with UserSummary.summaryVars is needed.
 		 * Flags: IRW
 		 */
-		readonly text?: string /* String */;
+		readonly text?: String;
 	} // UserSummary
 
 	export interface UserSummaryStatic {
@@ -10021,6 +12900,7 @@ declare namespace Isc {
 		 * EditProxy.useCopyPasteShortcuts','copy &amp; pasted, including disallowing calls to
 		 * EditContext.makePaletteNode for EditNode','EditNodes created from this
 		 * PaletteNode','PaletteNode.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly canDuplicate?: boolean /* Boolean */;
@@ -10052,13 +12932,13 @@ declare namespace Isc {
 		 * (Read only) Icon for this paletteNode.
 		 * Flags: IR
 		 */
-		readonly icon?: string /* SCImgURL */;
+		readonly icon?: SCImgURL;
 		/** 
 		 * (Read only) Prefix used to create unique component ID. If not specified, PaletteNode.type
 		 * is used.
 		 * Flags: IR
 		 */
-		readonly idPrefix?: string /* String */;
+		readonly idPrefix?: String;
 		/** 
 		 * (Read only) For a paletteNode which should be a "singleton", that is, always provides the exact same
 		 * object (==) rather than a dynamically created copy, provide the singleton object as
@@ -10073,12 +12953,12 @@ declare namespace Isc {
 		 * (Read only) Textual title for this paletteNode.
 		 * Flags: IR
 		 */
-		readonly title?: string /* String */;
+		readonly title?: String;
 		/** 
 		 * (Read only) SCClassName this paletteNode creates, for example, "ListGrid".
 		 * Flags: IR
 		 */
-		readonly type?: string /* SCClassName */;
+		readonly type?: SCClassName;
 	} // PaletteNode
 
 	export interface PaletteNodeStatic {
@@ -10089,10 +12969,10 @@ declare namespace Isc {
 	 * Represents a sector on the gauge. 
 	 */
 	export interface GaugeSector {
-		readonly endAngle?: number /* float */;
-		readonly fillColor?: string /* CSSColor */;
-		readonly startAngle?: number /* float */;
-		readonly value?: number /* float */;
+		readonly endAngle?: Float /* float */;
+		readonly fillColor?: CSSColor;
+		readonly startAngle?: Float /* float */;
+		readonly value?: Float /* float */;
 	} // GaugeSector
 
 	export interface GaugeSectorStatic {
@@ -10175,6 +13055,7 @@ declare namespace Isc {
 		 * FileLoader.cacheISC','cacheISC() for pre-caching as this will ensure that the loaded
 		 * files and their urls will be consistent provided the FileLoader configuration is the same for
 		 * both pages.
+		 * boolean - Null not allowed
 		 * Flags: RW
 		 */
 		readonly addVersionToLoadTags?: boolean;
@@ -10184,13 +13065,13 @@ declare namespace Isc {
 		 * provided by the user.
 		 * Flags: RW
 		 */
-		readonly defaultModules?: string /* String */;
+		readonly defaultModules?: String;
 		/** 
 		 * Default skin for FileLoader.loadISC/FileLoader.cacheISC to
 		 * use if one is not provided by the user.
 		 * Flags: RW
 		 */
-		readonly defaultSkin?: string /* String */;
+		readonly defaultSkin?: String;
 		/** 
 		 * (Read only) Path to module files (ISC_Core.js et al) relative to the isomorphicDir (see
 		 * FileLoader','FileLoader overview).
@@ -10198,7 +13079,7 @@ declare namespace Isc {
 		 * Does not normally need to be set for SmartClient. If using Smart GWT, set to "modules/".
 		 * Flags: IR
 		 */
-		readonly modulesDir?: string /* String */;
+		readonly modulesDir?: String;
 		/** 
 		 * Name of the query parameter to use for version-specific cache-busting. This will be used by
 		 * FileLoader.addVersionToLoadTags.
@@ -10208,7 +13089,7 @@ declare namespace Isc {
 		 * in the url's generated by FileLoader.
 		 * Flags: RW
 		 */
-		readonly versionParamName?: string /* String */;
+		readonly versionParamName?: String;
 
 	/* Methods */
 		/**  
@@ -10231,39 +13112,39 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * 
-		 * @param {string} baseURLs - List of base image URLs from which position-specific edge names are to be derived. This can either be a
+		 * @param {String} baseURLs - List of base image URLs from which position-specific edge names are to be derived. This can either be a
 		 * string with comma separated baseURLs or an Array of baseURLs.
 		 * @param {boolean} showCenter - If true, also causes the center image to be cached. Default is false.
-		 * @param {string} edges - List of edges to load. If none specified, The following default list will be used:
+		 * @param {String} edges - List of edges to load. If none specified, The following default list will be used:
 		 * "TL,T,TR,L,R,BL,B,BR". The list of valid values is the
 		 * set of extensions specified by
 		 * EdgedCanvas.edgeImage. This can
 		 * either be a string with comma separated edge extension or an
 		 * Array of edge extensions.
-		 * @param {string} colors - List of colors to cache. If not specified, no color is specified. The list of valid colors are those that you have
+		 * @param {String} colors - List of colors to cache. If not specified, no color is specified. The list of valid colors are those that you have
 		 * specified as EdgedCanvas.edgeColor.
 		 * This can either be a string with comma separated colors or an Array
 		 * of colors.
-		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheEdgeImages(baseURLs:string | Array<any> /* String | Array */, showCenter?:boolean /* Boolean */, edges?:string | Array<any> /* String | Array */, colors?:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+		cacheEdgeImages(baseURLs:String | Array<any> /* String | Array */, showCenter?:boolean /* Boolean */, edges?:String | Array<any> /* String | Array */, colors?:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
 		 * Caches the specified list of files.
 		 * 
 		 * 
-		 * @param {string} URLs - List of URLs to cache. These may point to image, js, or css files. This can either be a string with comma separated URLs or an
+		 * @param {String} URLs - List of URLs to cache. These may point to image, js, or css files. This can either be a string with comma separated URLs or an
 		 * Array of URLs.
-		 * @param {string} onload - Optional code to execute when the last of the specified files has been cached.
-		 * @param {string} type - Specifies the type of the files referenced by the URLs. Valid values are: "js", "css", and "image". If not specified, the type is auto-derived from
+		 * @param {String} onload - Optional code to execute when the last of the specified files has been cached.
+		 * @param {String} type - Specifies the type of the files referenced by the URLs. Valid values are: "js", "css", and "image". If not specified, the type is auto-derived from
 		 * the file extension. If a type cannot be derived, the cache directive
 		 * for that specific URL will be ignored and an error will be logged to
 		 * the Developer Console. You must specify a type if you use a
 		 * non-standard extension for your file - for example if you use a JSP
 		 * or a servlet with no extension to generate images.
 		 */
-		cacheFiles(URLs:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */, type?:string /* String */): void; 
+		cacheFiles(URLs:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */, type?:String): void; 
 
 		/**  
 		 * 
@@ -10281,15 +13162,15 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * 
-		 * @param {string} baseURLs - List of base image URLs from which stateful names are to be derived. This can either be a
+		 * @param {String} baseURLs - List of base image URLs from which stateful names are to be derived. This can either be a
 		 * string with comma separated baseURLs or an Array of baseURLs.
-		 * @param {string} states - List of states to load. If none specified, The following default list will be used:
+		 * @param {String} states - List of states to load. If none specified, The following default list will be used:
 		 * "Down,Over,Selected,Selected_Down,Selected_Over". This can
 		 * either be a string with comma separated states or an Array
 		 * of states.
-		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheImgStates(baseURLs:string | Array<any> /* String | Array */, states?:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+		cacheImgStates(baseURLs:String | Array<any> /* String | Array */, states?:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
@@ -10297,38 +13178,38 @@ declare namespace Isc {
 		 * the loadISC JSP tag with cacheOnly="true".
 		 * 
 		 * 
-		 * @param {string} skin - Name of the skin to load. If not specified, the skin specified by the default FileLoader.defaultSkin will be used.
+		 * @param {String} skin - Name of the skin to load. If not specified, the skin specified by the default FileLoader.defaultSkin will be used.
 		 * Instead of a skin name, you can specify a skinDir - this works just
 		 * like Page.setSkinDir - the skin assumed to be a skinDir if
 		 * there's at least one forward slash (/) in the name.
-		 * @param {string} modules - List of modules to load. If not specified, the list of modules specified by the default
+		 * @param {String | List} modules - List of modules to load. If not specified, the list of modules specified by the default
 		 * FileLoader.defaultModules will be used. You
 		 * can specify modules as "Core,Foundation" or as ["Core",
 		 * "Foundation"]
-		 * @param {string} onload - Optional code to execute when all specified modules and skin have been cached.
+		 * @param {String} onload - Optional code to execute when all specified modules and skin have been cached.
 		 */
-		cacheISC(skin?:string /* String */, modules?:string | List /* String | List */, onload?:string | any /* String | Function */): void; 
+		cacheISC(skin?:String, modules?:String | List, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
 		 * Caches the specified locale.
 		 * 
 		 * 
-		 * @param {string} locale - Name of the locale to cache..
-		 * @param {string} onload - Optional code to execute when all specified locale has been cached..
+		 * @param {String} locale - Name of the locale to cache..
+		 * @param {String} onload - Optional code to execute when all specified locale has been cached..
 		 */
-		cacheLocale(locale?:string /* String */, onload?:string | any /* String | Function */): void; 
+		cacheLocale(locale?:String, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
 		 * Caches the specified SmartClient modules.
 		 * 
 		 * 
-		 * @param {string} modules - List of SmartClient modules to cache. This can either be a string with comma separated module names or an Array of module
+		 * @param {String} modules - List of SmartClient modules to cache. This can either be a string with comma separated module names or an Array of module
 		 * names.
-		 * @param {string} onload - Optional code to execute when the last of the specified modules has been cached.
+		 * @param {String} onload - Optional code to execute when the last of the specified modules has been cached.
 		 */
-		cacheModules(modules:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+		cacheModules(modules:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
@@ -10349,13 +13230,13 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * 
-		 * @param {string} baseDir - Base directory containing the shadow images.
-		 * @param {string} depths - List of depths to load. These values corresponds to the Canvas attribute Canvas.shadowDepth. This can either be
+		 * @param {String} baseDir - Base directory containing the shadow images.
+		 * @param {String} depths - List of depths to load. These values corresponds to the Canvas attribute Canvas.shadowDepth. This can either be
 		 * a string with comma separated depths or an Array of depths.
-		 * @param {string} baseShadowImage - Name of the base shadow image from which list of URLs is generated. If not specified, this defaults to "ds.png".
-		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 * @param {String} baseShadowImage - Name of the base shadow image from which list of URLs is generated. If not specified, this defaults to "ds.png".
+		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheShadows(baseDir:string /* String */, depths:string | Array<any> /* String | Array */, baseShadowImage?:string /* String */, onload?:string | any /* String | Function */): void; 
+		cacheShadows(baseDir:String, depths:String | Array<any> /* String | Array */, baseShadowImage?:String, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
@@ -10379,18 +13260,18 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * 
-		 * @param {string} baseURLs - List of base image URLs from which stateful names are to be derived. This can either be a
+		 * @param {String} baseURLs - List of base image URLs from which stateful names are to be derived. This can either be a
 		 * string with comma separated baseURLs or an Array of baseURLs.
-		 * @param {string} states - List of states to load. If none specified, The following default list will be used:
+		 * @param {String} states - List of states to load. If none specified, The following default list will be used:
 		 * "Down,Over,Selected,Selected_Down,Selected_Over". This can
 		 * either be a string with comma separated states or an Array
 		 * of states
-		 * @param {string} pieces - List of StretchImg pieces to cache. If not specified, the following list will be used: "start,stretch,end". This can
+		 * @param {String} pieces - List of StretchImg pieces to cache. If not specified, the following list will be used: "start,stretch,end". This can
 		 * either be a string with comma separated piece names or an Array
 		 * of piece names.
-		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheStretchImgStates(baseURLs:string | Array<any> /* String | Array */, states?:string | Array<any> /* String | Array */, pieces?:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+		cacheStretchImgStates(baseURLs:String | Array<any> /* String | Array */, states?:String | Array<any> /* String | Array */, pieces?:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
@@ -10419,37 +13300,37 @@ declare namespace Isc {
 		 * equivalent to using the loadISC JSP tag with defer="true".
 		 * 
 		 * 
-		 * @param {string} skin - Name of the skin to load. If not specified, the skin specified by the default FileLoader.defaultSkin will be used.
+		 * @param {String} skin - Name of the skin to load. If not specified, the skin specified by the default FileLoader.defaultSkin will be used.
 		 * Instead of a skin name, you can specify a skinDir - this works just
 		 * like Page.setSkinDir - the skin assumed to be a skinDir if
 		 * there's at least one forward slash (/) in the name.
-		 * @param {string} modules - List of modules to load. If not specified, the list of modules specified by the default
+		 * @param {String} modules - List of modules to load. If not specified, the list of modules specified by the default
 		 * FileLoader.defaultModules will be used. You
 		 * can specify modules as e.g: "Core,Foundation" or as ["Core",
 		 * "Foundation"]
-		 * @param {string} onload - Optional code to execute when all specified modules and skin have loaded.
+		 * @param {String} onload - Optional code to execute when all specified modules and skin have loaded.
 		 */
-		loadISC(skin?:string /* String */, modules?:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+		loadISC(skin?:String, modules?:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
 		 * Loads the specified JS files into the context of the current page.
 		 * 
 		 * 
-		 * @param {string} URLs - List of URLs pointing to JS files to load. This can either be a string with comma separated URLs or an Array of URLs.
-		 * @param {string} onload - Optional code to execute when the last of the specified URLs has completed loading.
+		 * @param {String} URLs - List of URLs pointing to JS files to load. This can either be a string with comma separated URLs or an Array of URLs.
+		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed loading.
 		 */
-		loadJSFiles(URLs:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+		loadJSFiles(URLs:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
 		 * Loads the specified locale in defer mode.
 		 * 
 		 * 
-		 * @param {string} locale - Name of the locale to load.
-		 * @param {string} onload - Optional code to execute when all specified locale has loaded.
+		 * @param {String} locale - Name of the locale to load.
+		 * @param {String} onload - Optional code to execute when all specified locale has loaded.
 		 */
-		loadLocale(locale?:string /* String */, onload?:string | any /* String | Function */): void; 
+		loadLocale(locale?:String, onload?:String | any /* String | Function */): void; 
 
 		/**  
 		 * 
@@ -10459,11 +13340,11 @@ declare namespace Isc {
 		 * request is issued) and your specified onload callback will still fire.
 		 * 
 		 * 
-		 * @param {string} modules - List of SmartClient modules to load. This can either be a string with comma separated module names or an Array of module
+		 * @param {String} modules - List of SmartClient modules to load. This can either be a string with comma separated module names or an Array of module
 		 * names.
-		 * @param {string} onload - Optional code to execute when the last of the specified modules has completed loading.
+		 * @param {String} onload - Optional code to execute when the last of the specified modules has completed loading.
 		 */
-		loadModules(modules:string | Array<any> /* String | Array */, onload?:string | any /* String | Function */): void; 
+		loadModules(modules:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
 
 	} // FileLoaderStatic
 
@@ -10481,11 +13362,12 @@ declare namespace Isc {
 		 * is enabled, then an "RTL" suffix will be added.
 		 * Flags: IRWA
 		 */
-		readonly baseStyle?: string /* CSSStyleName */;
+		readonly baseStyle?: CSSStyleName;
 		/** 
 		 * Whether this icon is disabled. Can be updated at runtime via the FormItem.setIconDisabled
 		 * method. Note that if the formItem containing this icon is disabled, the icon will
 		 * behave in a disabled manner regardless of the setting of the icon.disabled property.
+		 * Boolean - Null allowed
 		 * Flags: IRW, Group: appearance
 		 */
 		readonly disabled?: boolean /* Boolean */;
@@ -10494,6 +13376,7 @@ declare namespace Isc {
 		 * If unset this is determined by FormItem.disableIconsOnReadOnly.
 		 * Note that if FormItemIcon.neverDisable is set to true, the icons will
 		 * be rendered enabled regardless of this setting and whether the item is editable.
+		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
 		readonly disableOnReadOnly?: boolean;
@@ -10529,7 +13412,7 @@ declare namespace Isc {
 		 * If unset, the form item's FormItem.iconHSpace','iconHSpace will be used instead.
 		 * Flags: IR, Group: formIcons
 		 */
-		readonly hspace?: number /* Integer */;
+		readonly hspace?: Integer;
 		/** 
 		 * (Read only) For PickList items with PickListItemIconPlacement set such that the pickList does
 		 * not render near-origin, should this icon be rendered inline within
@@ -10561,6 +13444,7 @@ declare namespace Isc {
 		 * 
 		 * As an alternative to displaying an image, an inline icon may display a string of
 		 * HTML instead. See FormItemIcon.text.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly inline?: boolean /* Boolean */;
@@ -10595,6 +13479,7 @@ declare namespace Isc {
 		 * is marked as FormItem.canEdit','canEdit:false. For finer grained control over
 		 * whether icons are enabled for read-only icons see FormItem.disableIconsOnReadOnly
 		 * and FormItemIcon.disableOnReadOnly
+		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
 		readonly neverDisable?: boolean;
@@ -10605,19 +13490,21 @@ declare namespace Isc {
 		 * If unset the form item's iconPrompt property will be used instead.
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly prompt?: string /* HTMLString */;
+		readonly prompt?: HTMLString;
 		/** 
 		 * (Advanced) If show-on-focus behavior is enabled for this icon via FormItemIcon.showOnFocus
 		 * or related properties at the item level, and this icon is marked as disabled,
 		 * should it be shown on focus? If unset, will be derived from the
 		 * FormItem.showDisabledIconsOnFocus or 
 		 * FormItem.showDisabledPickerIconOnFocus settings.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
 		readonly showDisabledOnFocus?: boolean /* Boolean */;
 		/** 
 		 * (Advanced) Should this icon's image and/or FormItemIcon.baseStyle','baseStyle switch to the
 		 * appropriate "Focused" value when the user puts focus on the form item or icon?
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
 		readonly showFocused?: boolean /* Boolean */;
@@ -10627,6 +13514,7 @@ declare namespace Isc {
 		 * be shown when the item as a whole receives focus or just if the icon receives focus.
 		 * If this property is unset, default behavior is to show focused state when the item
 		 * receives focus.
+		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
 		readonly showFocusedWithItem?: boolean;
@@ -10636,6 +13524,7 @@ declare namespace Isc {
 		 * FormItem.showIconsOnFocus or FormItem.showPickerIconOnFocus, as
 		 * appropriate. This feature allows space to be saved in the form for items not being
 		 * interacted with, and helps draw attention to the item currently in focus.
+		 * Boolean - Null allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
 		readonly showOnFocus?: boolean /* Boolean */;
@@ -10647,6 +13536,7 @@ declare namespace Isc {
 		 * is set to "textBox", this icon will show over state when the user rolls over the
 		 * text box (or control table, if visible) for the item. This is most commonly used
 		 * for FormItemIcon.inline','inline icons.
+		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
 		readonly showOver?: boolean;
@@ -10668,6 +13558,7 @@ declare namespace Isc {
 		 * For example, if an icon's src is "[SKINIMG]formItemIcons/myFormIcon.png" and the baseStyle
 		 * is "myFormIcon", then in the "Down" state, SmartClient will use "[SKINIMG]formItemIcons/myFormIcon_Down_rtl.png"
 		 * for the image source and "myFormIconDownRTL" for the style name.
+		 * Boolean - Null allowed
 		 * Flags: IRA, Group: RTL
 		 */
 		readonly showRTL?: boolean /* Boolean */;
@@ -10692,7 +13583,7 @@ declare namespace Isc {
 		 * a SCSpriteConfig formatted string.
 		 * Flags: IRW, Group: formIcons
 		 */
-		readonly src?: string /* SCImgURL */;
+		readonly src?: SCImgURL;
 		/** 
 		 * (Read only, Advanced) TabIndex for this formItemIcon.
 		 * 
@@ -10705,7 +13596,7 @@ declare namespace Isc {
 		 * FormItem.globalTabIndex.
 		 * Flags: IRA, Group: formIcons
 		 */
-		readonly tabIndex?: number /* int */;
+		readonly tabIndex?: int;
 		/** 
 		 * (Advanced) As an alternative to displaying an image, an FormItemIcon.inline','inline
 		 * FormItemIcon can display a string of HTML where the icon's image would
@@ -10726,7 +13617,7 @@ declare namespace Isc {
 		 * FormItemIcon.width','width and FormItemIcon.height','height.
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly text?: string /* HTMLString */;
+		readonly text?: HTMLString;
 		/** 
 		 * (Read only) Criteria to be evaluated to determine whether this icon should be visible.
 		 * 
@@ -10803,7 +13694,7 @@ declare namespace Isc {
 		 * SmartClient Class to use to construct the tile for this particular record.
 		 * Flags: IRW
 		 */
-		readonly tileConstructor?: string /* String */;
+		readonly tileConstructor?: String;
 		/** 
 		 * Additional properties to be passed when creating a tile for this record.
 		 * Flags: IRW
@@ -10842,6 +13733,7 @@ declare namespace Isc {
 		 * 
 		 * Setting hidden:true means the operator can be used in a programmatic search, for example,
 		 * by calling ResultSet.setCriteria, but does not appear in the UI.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: advancedFilter
 		 */
 		readonly hidden?: boolean;
@@ -10859,6 +13751,7 @@ declare namespace Isc {
 		 * This implies that if a Criterion using this operator is either introduced into
 		 * AdvancedCriteria','criteria or is changed, the server will need to be contacted to
 		 * perform filtering.
+		 * boolean - Null not allowed
 		 * Flags: IR, Group: advancedFilter
 		 */
 		readonly requiresServer?: boolean;
@@ -10867,7 +13760,7 @@ declare namespace Isc {
 		 * FormItem.allowExpressions','expression in a FormItem.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly symbol?: string /* String */;
+		readonly symbol?: String;
 		/** 
 		 * (Read only) User-visible title for this operator when used with text-based fields - eg, 
 		 * "equals (match case)" rather than just "equals".
@@ -10876,7 +13769,7 @@ declare namespace Isc {
 		 * specify Operator.textTitleProperty instead of this property.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly textTitle?: string /* String */;
+		readonly textTitle?: String;
 		/** 
 		 * (Read only) Name of a property on the Operators class that provides the title for this operator
 		 * when used with text-based fields.
@@ -10890,7 +13783,7 @@ declare namespace Isc {
 		 * specify Operator.titleProperty instead of this property.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly title?: string /* String */;
+		readonly title?: String;
 		/** 
 		 * (Read only) Name of a property on the Operators class that provides the title for this operator.
 		 * Flags: IR, Group: advancedFilter
@@ -10918,9 +13811,9 @@ declare namespace Isc {
 		 * 
 		 * @param {Criterion} newCriterion - new criterion
 		 * @param {Criterion} oldCriterion - previous criterion
-		 * @return {number} 0 if the criteria are equivalent, 1 if newCriterion is guaranteed more                      restrictive, and -1 if newCriterion is not guaranteed more restrictive
+		 * @return {Number} 0 if the criteria are equivalent, 1 if newCriterion is guaranteed more                      restrictive, and -1 if newCriterion is not guaranteed more restrictive
 		 */
-		compareCriteria?(newCriterion:Criterion, oldCriterion:Criterion): number /* Number */; 
+		compareCriteria?(newCriterion:Criterion, oldCriterion:Criterion): Number; 
 
 		/**  
 		 *  Method which actually evaluates whether a given record meets a Criterion.
@@ -10940,13 +13833,13 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {any} value - value from the field supplied as Criterion.fieldName, if applicable
-		 * @param {any} record - record being evaluated
+		 * @param {Record} record - record being evaluated
 		 * @param {any} fieldName - fieldName supplied as Criterion.fieldName, if applicable
 		 * @param {Criterion} criterion - criterion definition
 		 * @param {Operator} operator - operator definition
 		 * @return {boolean} whether the field passes this criteria
 		 */
-		condition?(value:any /* Any */, record:any /* Record */, fieldName:any /* Any */, criterion:Criterion, operator:Operator): boolean; 
+		condition?(value:any /* Any */, record:Record, fieldName:any /* Any */, criterion:Criterion, operator:Operator): boolean; 
 
 		/**  
 		 *  In combination with Operator.editorType, this override point allows you to define a
@@ -11000,7 +13893,7 @@ declare namespace Isc {
 		 * consulted only when the value of ServerObject.lookupStyle is "attribute".
 		 * Flags: IR
 		 */
-		readonly attributeName?: string /* String */;
+		readonly attributeName?: String;
 		/** 
 		 * (Read only) Specifies the scope in which the DMI instance is to be looked up. Valid values are: 
 		 * "request", "session", and "application". If
@@ -11017,7 +13910,7 @@ declare namespace Isc {
 		 * id (name) of the bean to ask Spring (CDI) to create.
 		 * Flags: IR
 		 */
-		readonly bean?: string /* String */;
+		readonly bean?: String;
 		/** 
 		 * (Read only) Specifies the fully-qualified class name that provides the server-side endpoint of the DMI
 		 * (ServerObject.lookupStyle:"new") or the class name of the factory that produces the
@@ -11033,7 +13926,7 @@ declare namespace Isc {
 		 * class name of the bean to ask CDI to create.
 		 * Flags: IR
 		 */
-		readonly className?: string /* String */;
+		readonly className?: String;
 		/** 
 		 * (Read only) For a ServerObject defined at the DataSource.serverObject','DataSource level, by 
 		 * default we only allow it to intercept standard CRUD operations (ie, ordinary fetches, adds,
@@ -11048,6 +13941,7 @@ declare namespace Isc {
 		 * is:
 		 * return dsRequest.execute();
 		 * 
+		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
 		readonly crudOnly?: boolean;
@@ -11056,6 +13950,7 @@ declare namespace Isc {
 		 * of fields defined on the DataSource. This behavior can be overridden in several ways - see
 		 * the overview in dmiOverview','DMI for details. The value of this attribute overrides
 		 * DataSource.dropExtraFields.
+		 * Boolean - Null allowed
 		 * Flags: IR
 		 */
 		readonly dropExtraFields?: boolean /* Boolean */;
@@ -11066,7 +13961,7 @@ declare namespace Isc {
 		 * the browser as a security precaution.
 		 * Flags: IR
 		 */
-		readonly ID?: string /* String */;
+		readonly ID?: String;
 		/** 
 		 * (Read only) Specifies the mechanism for locating the class instance on which to invoke the method.
 		 * Valid values are as follows:
@@ -11107,7 +14002,7 @@ declare namespace Isc {
 		 * latter takes precedence)
 		 * Flags: IR
 		 */
-		readonly methodName?: string /* String */;
+		readonly methodName?: String;
 		/** 
 		 * (Read only) If set, the SmartClient server will use JXPath to call your server code. The
 		 * JXPathContext (start point) will be the object arrived at by applying the 
@@ -11116,7 +14011,7 @@ declare namespace Isc {
 		 * and reduce the need to write SmartClient-specific server code.
 		 * Flags: IR
 		 */
-		readonly targetXPath?: string /* String */;
+		readonly targetXPath?: String;
 		/** 
 		 * (Read only) When the ServerObject appears in a .app.xml file (for RPC DMI), this property
 		 * specifies the list of methods on the ServerObject that are callable from the client. See
@@ -11158,7 +14053,7 @@ declare namespace Isc {
 		 * DetailViewerField.linkText.
 		 * Flags: IRW
 		 */
-		readonly linkText?: string /* String */;
+		readonly linkText?: String;
 	} // DetailViewerRecord
 
 	export interface DetailViewerRecordStatic {
