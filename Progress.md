@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-09-20 at 9/20/2017 7:01:45 AM by kwhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-09-20 at 9/20/2017 1:10:38 PM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -18,7 +18,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |3|Classes|297|Number of classes found in the referenceDocs.xml file|
 |4|Objects|82|Number of objects found in the referenceDocs.xml file|
 |5|Methods|3,559|Number of methods (instance and class) found in the referenceDocs.xml file|
-|6|Excluded Classes|5|Number of classes excluded from generation for various reasons.|
+|6|Excluded Classes|2|Number of classes excluded from generation for various reasons.|
 |7|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |8|string values without quotes|665|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |9|string values with period|131|These usually are really references to a constant.|
@@ -28,13 +28,13 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |13|Types Generated|247||
 |14|Interfaces Generated|5||
 |15|Objects Generated|81||
-|16|Classes Generated|292||
-|17|Methods Generated|3,286||
+|16|Classes Generated|295||
+|17|Methods Generated|3,314||
 |18|Percentage of Types generated|111%||
 |19|Percentage of Interfaces generated|100%||
 |20|Percentage of Objects generated|99%||
-|21|Percentage of Classes generated|98%||
-|22|Percentage of Methods generated|92%||
+|21|Percentage of Classes generated|99%||
+|22|Percentage of Methods generated|93%||
 
 
 ### Issues with referenceDocs.xml file
@@ -51,17 +51,22 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |6|OR specified as ' \|\| '|0|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 |7|OR specified as ', '|0|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 ||**Errors**||**May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented**|
-|1|Setter Methods with parameter type that does not match the attribute type|12|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
-|2|Arrays defined as 'List of'|10|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|3|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|4|String types without baseType|2|Types that are really just strings should have their own type or have the baseType='string'.|
-|5|Classes without inheritsFrom attribute|1|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute. The only Class that should not have an inheritsFrom attribute is the base 'Class'.|
-|6|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
-|7|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|8|Arrays defined as 'Array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|9|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|10|Method params with missing name|0|All parameters should have a name.|
-|11|Method params with bad name|0|All parameters should have a name without special characters.|
-|12|Method params missing type|0|All parameters should have a type.|
-|13|Methods with required parameters after optional parameters|0|Required parameters should always be at the end of the parameter list.|
-|14|String values without reference|0|These are possible values of types that refer to a classAttr that doesn't exist. For example DateItem.DAY_MONTH|
+|1|Properties that override a base property with a different type|96|In TypeScript, a property cannot override a property with the same name in a base class if it has a different type. Some of these are probably intentional with good reason but many are just inconsistencies.|
+|2|Methods that override a base method with a different signature|66|In TypeScript, a method cannot override a method with the same name in a base class if it has a different signature. Some of these are probably intentional with good reason but many are just inconsistencies.|
+|3|Unknown types assumed to be string|21|Used as a Type but there is no definition for the type. Assumed to be and generated as [string].|
+|4|String types without baseType|17|Types that are really just strings should have their own type or have the baseType='string'.|
+|5|Unknown Types mapped to any|14|Used as a Type but there is no definition for the type. Generated as [any].|
+|6|Setter Methods with parameter type that does not match the attribute type|12|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
+|7|Arrays defined as 'List of'|10|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|8|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|9|Weird Types that require special handling|5|Types that would be difficult to make a general rule for.|
+|10|Classes without inheritsFrom attribute|1|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute. The only Class that should not have an inheritsFrom attribute is the base 'Class'.|
+|11|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
+|12|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|13|Arrays defined as 'Array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|14|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|15|Method params with missing name|0|All parameters should have a name.|
+|16|Method params with bad name|0|All parameters should have a name without special characters.|
+|17|Method params missing type|0|All parameters should have a type.|
+|18|Methods with required parameters after optional parameters|0|Required parameters should always be at the end of the parameter list.|
+|19|String values without reference|0|These are possible values of types that refer to a classAttr that doesn't exist. For example DateItem.DAY_MONTH|

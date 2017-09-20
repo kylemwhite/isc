@@ -65,21 +65,17 @@ window.onload = function () {
         autoDraw: true,
         width: 600
     });
-    var viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'pop' }] })";
+    var viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'ind' }] })";
     // Using (isc.DataSource as any) because the operationBindings are declared as Array<OperationBinding> and OperationBinding has a bunch of required fields.
     // Need to generate it as Array<OperationBindingProps> or make everything optional in OperationBinding.
     var countryDS = isc.DataSource.create({
         ID: "countryDS",
         dataFormat: "xml",
         recordXPath: "//country",
-        viewState: viewState,
         fields: [
             { name: "countryCode", title: "Code", primaryKey: true, canEdit: "false" },
-            ,
             { name: "countryName", title: "Country" },
-            ,
             { name: "capital", title: "Capital" },
-            ,
             { name: "population" },
             { name: "independence" }
         ],
@@ -102,10 +98,10 @@ window.onload = function () {
             }
         ]
     });
-    //let countryDS: any;
     var grid = isc.ListGrid.create({
         ID: "countryList",
         autoDraw: false,
+        viewState: viewState,
         width: "100%",
         height: "100%",
         alternateRecordStyles: true,
@@ -120,6 +116,7 @@ window.onload = function () {
         height: 300
     });
     //tabSet.setProperty("margin", "5px 30px 20px 10px");
+    var test;
     tabSet.addTab({
         pane: grid,
         title: "Country Data"

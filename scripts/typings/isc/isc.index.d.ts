@@ -6,7 +6,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 9/20/2017 7:01:45 AM by kwhite
+// Generated: 9/20/2017 1:10:38 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 /**
@@ -548,6 +548,38 @@ declare namespace Isc {
 		 * in the Apple&trade; iTunes&trade; application.
 		 */ 
 		ColumnTree: ColumnTreeStatic<ColumnTree, ColumnTreeProps>;
+
+		/** 
+		 * ComboBoxItem extends TextItem
+		 * The Combobox is a text input field which can show a list of options via a drop-down
+		 * PickList.
+		 * 
+		 * The set of options will be filtered based on the current value in the text field, so only
+		 * options that match what has been typed so far will be displayed.
+		 * The set of options can be derived from a ValueMap or dynamically retrieved from a
+		 * dataSource. See the PickList interface for further settings.
+		 * 
+		 * The two most common use cases for ComboBoxItems are:
+		 * With ComboBoxItem.addUnknownValues set to true, the ComboBoxItem acts as a
+		 * freeform text entry field with the picklist providing essentially a set of suggested completions
+		 * similar to a URL bar in a web browser.
+		 * With ComboBoxItem.addUnknownValues set to false, the ComboBoxItem acts similarly
+		 * to a SelectItem where a fixed set of options is available to the user and the text entry field
+		 * is essentially used to filter which of these options are visible
+		 * 
+		 * Other commonly used settings to configure ComboBoxItem behavior are:
+		 * - ComboBoxItem.defaultToFirstOption - this will select the first option from the pickList
+		 * as a default value for the item - and
+		 * - ComboBoxItem.completeOnTab which causes the
+		 * current selection in the pickList (if there is one) to be chosen when the user tabs out of the
+		 * field, allowing a user to type a few characters and hit tab to auto-complete to the first matched
+		 * option. completeOnTab is automatically set to true if ComboBoxItem.addUnknownValues','addUnknownValues is 
+		 * false.
+		 * 
+		 * ComboBoxItem does not provide built-in support for multiple selection. For a Combobox
+		 * that does provide such a multiple-select feature use MultiComboBoxItem.
+		 */ 
+		ComboBoxItem: ComboBoxItemStatic<ComboBoxItem, ComboBoxItemProps>;
 
 		/** 
 		 * Comm extends Class
@@ -2653,6 +2685,25 @@ declare namespace Isc {
 		MockupElement: MockupElementStatic<MockupElement, MockupElementProps>;
 
 		/** 
+		 * MultiComboBoxItem extends CanvasItem
+		 * A MultiComboBoxItem is a combo box that allows the user to select multiple options. Each
+		 * selected option is represented as a button that can be clicked to deselect the option.
+		 * 
+		 * The relative layout of the buttons to the combo box is specified with the
+		 * MultiComboBoxItem.layoutStyle attribute. The buttons will be kept in the order that
+		 * they were added, with the most recently added button being adjacent to the combo box.
+		 * 
+		 * MultiComboBoxItem uses the AutoChild pattern to construct the
+		 * MultiComboBoxItem.comboBox','comboBox and the MultiComboBoxItem.button','buttons
+		 * so that they can be easily customized. For example, you can customize the criteria used to
+		 * fetch by
+		 * overriding ComboBoxItem.getPickListFilterCriteria via
+		 * MultiComboBoxItem.comboBox','comboBoxProperties.
+		 * 
+		 */ 
+		MultiComboBoxItem: MultiComboBoxItemStatic<MultiComboBoxItem, MultiComboBoxItemProps>;
+
+		/** 
 		 * MultiFileItem extends CanvasItem
 		 * The MultiFileItem provides an interface for a user to save one or more files that are
 		 * related to a DataSource record, where each file is represented by a record in a
@@ -3123,6 +3174,19 @@ declare namespace Isc {
 		 * is set to true.
 		 */ 
 		RecordEditor: RecordEditorStatic<RecordEditor, RecordEditorProps>;
+
+		/** 
+		 * RelativeDateItem extends CanvasItem
+		 * A FormItem for entering a date relative to today or relative to some other date, or a specific
+		 * date. Typically used for filtering data by date.
+		 * 
+		 * The RelativeDateItem consists of a ComboBoxItem where the user may directly choose 
+		 * one of several RelativeDateItem.presetOptions','preset options, choose to enter a 
+		 * RelativeDateItem.quantityField','quantity and TimeUnit','time unit 
+		 * (eg "4 months ago" or "3 years from now") or directly type in 
+		 * an absolute date value (7/18/2009).
+		 */ 
+		RelativeDateItem: RelativeDateItemStatic<RelativeDateItem, RelativeDateItemProps>;
 
 		/** 
 		 * ResetItem extends ButtonItem

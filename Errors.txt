@@ -3,7 +3,7 @@ By Kyle White (http://kmwTech.com)
 Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 Errors during generation
-Generated: 9/20/2017 7:01:45 AM by kwhite
+Generated: 9/20/2017 1:10:38 PM by kwhite
 
 Summary
 Total Types  : 249
@@ -503,11 +503,43 @@ List of: 10
 
 baseType attributes that are not a JS primitive nor an isc Type nor an isc Object: 0
 
-Attributes suspected as string types but do not have the baseType set: 2.
+Attributes suspected as string types but do not have the baseType set: 17.
+=== Classname:4 ===
+1. attr:CubeGrid.chartConstructor, valueType=Classname
+2. attr:ListGrid.chartConstructor, valueType=Classname
+3. attr:SectionItem.sectionHeaderClass, valueType=Classname
+4. attr:SectionStack.sectionHeaderClass, valueType=Classname
+=== Class Object:2 ===
+1. attr:DataSource.resultSetClass, valueType=Class Object
+2. attr:DataSource.resultTreeClass, valueType=Class Object
+=== Align:2 ===
+1. attr:DynamicForm.errorOrientation, valueType=Align
+2. attr:FormItem.errorOrientation, valueType=Align
+=== VAlign:2 ===
+1. attr:ListGrid.headerSpanVAlign, valueType=VAlign
+2. attr:ListGrid.unspannedHeaderVAlign, valueType=VAlign
+=== URN:2 ===
+1. attr:DataSource.schemaNamespace, valueType=URN
+2. attr:DataSource.serviceNamespace, valueType=URN
+=== ClassName:1 ===
+1. attr:ListGrid.headerMenuButtonConstructor, valueType=ClassName
 === Field:2 ===
 1. attr:FormulaBuilder.field, valueType=Field
 2. attr:SummaryBuilder.field, valueType=Field
+=== FormLayoutType:1 ===
+1. attr:DynamicForm.itemLayout, valueType=FormLayoutType
+=== DataSource ID:1 ===
+1. attr:DataSource.inheritsFrom, valueType=DataSource ID
+
+
+Method parameters with missing name: 0
+
+
+Method parameters with bad name: 0
+
 Methods with one or more parameters missing a type: 0
+
+
 Methods with required parameter after optional parameter: 0
 (Required parameters should all be listed BEFORE optional parameters)
 
@@ -553,11 +585,8 @@ Suspected optional parameters that are marked with optional='false': 18. Paramet
 
 
 The following classes were excluded
-1. ComboBoxItem: Interface 'ComboBoxItem' incorrectly extends interface 'TextItem'. Types of property 'canEditCriterion' are incompatible.
-2. MultiComboBoxItem: Cannot find name 'ComboBoxItem'
-3. RelativeDateItem: Interface 'RelativeDateItem' incorrectly extends interface 'CanvasItem'. Types of property 'valueField' are incompatible.
-4. VisualBuilder: This is an internal only class - do not try to use it directly in your applications.
-5. SelectionOutline: NOTE: This class is for internal use only by EditContext.
+1. VisualBuilder: This is an internal only class - do not try to use it directly in your applications.
+2. SelectionOutline: NOTE: This class is for internal use only by EditContext.
 
 The following methods were excluded
 === Getter method return type does not match attribute type ===
@@ -577,7 +606,7 @@ The following methods were excluded
 12. method:Progressbar.setLength
 13. method:TileGrid.setData
 
-Properties that override a base class property with a different type: 88
+Properties that override a base class property with a different type: 96
 1. Property [attr:BlurbItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
 2. Property [attr:ButtonItem.height] has type [number] which overrides property [attr:CanvasItem.height] with type [int | String]
 3. Property [attr:CancelItem.title] has type [String] which overrides property [attr:FormItem.title] with type [HTMLString]
@@ -585,90 +614,98 @@ Properties that override a base class property with a different type: 88
 5. Property [attr:CheckboxItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
 6. Property [attr:ColorItem.pickerIconHeight] has type [Integer] which overrides property [attr:FormItem.pickerIconHeight] with type [int]
 7. Property [attr:ColorItem.pickerIconWidth] has type [Integer] which overrides property [attr:FormItem.pickerIconWidth] with type [int]
-8. Property [attr:CubeGrid.data] has type [Array of CellRecord] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
-9. Property [attr:CubeGrid.dataSource] has type [DataSource] which overrides property [attr:ListGrid.dataSource] with type [DataSource | ID]
-10. Property [attr:CubeGrid.editByCell] has type [Boolean] which overrides property [attr:ListGrid.editByCell] with type [boolean]
-11. Property [attr:CubeGrid.saveByCell] has type [Boolean] which overrides property [attr:ListGrid.saveByCell] with type [boolean]
-12. Property [attr:DatabaseBrowser.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-13. Property [attr:DateItem.displayFormat] has type [DateDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
-14. Property [attr:DateItem.pickerConstructor] has type [String] which overrides property [attr:FormItem.pickerConstructor] with type [SCClassName]
-15. Property [attr:DateItem.pickerProperties] has type [DateChooser Properties] which overrides property [attr:FormItem.pickerProperties] with type [Canvas Properties]
-16. Property [attr:DSResponse.data] has type [Array of Record | RecordList] which overrides property [attr:RPCResponse.data] with type [String | Object]
-17. Property [attr:DynamicForm.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
-18. Property [attr:EdgedCanvas.edgeOffset] has type [Integer] which overrides property [attr:Canvas.edgeOffset] with type [number]
-19. Property [attr:EdgedCanvas.edgeSize] has type [Integer] which overrides property [attr:Canvas.edgeSize] with type [number]
-20. Property [attr:EventCanvas.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
-21. Property [attr:FieldPickerWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-22. Property [attr:GridRenderer.showHover] has type [boolean] which overrides property [attr:Canvas.showHover] with type [Boolean]
-23. Property [attr:HeaderItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
-24. Property [attr:HibernateBrowser.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-25. Property [attr:IconButton.iconSize] has type [Number] which overrides property [attr:Button.iconSize] with type [int]
-26. Property [attr:ImgSplitbar.src] has type [String] which overrides property [attr:Img.src] with type [SCImgURL]
-27. Property [attr:ImgTab.showFocus] has type [boolean] which overrides property [attr:StretchImgButton.showFocus] with type [Boolean]
-28. Property [attr:ImgTab.skinImgDir] has type [URL] which overrides property [attr:Canvas.skinImgDir] with type [SCImgURL]
-29. Property [attr:ListPropertiesDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-30. Property [attr:LoginDialog.dismissOnEscape] has type [boolean] which overrides property [attr:Window.dismissOnEscape] with type [Boolean]
-31. Property [attr:LoginDialog.items] has type [Array of String] which overrides property [attr:Window.items] with type [Array of Canvas | Canvas | String]
-32. Property [attr:LoginDialog.showCloseButton] has type [boolean] which overrides property [attr:Window.showCloseButton] with type [Boolean]
-33. Property [attr:LoginDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-34. Property [attr:Menu.data] has type [Array of MenuItem | Array of Record[] | Tree | RecordList] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
-35. Property [attr:Menu.dataSource] has type [DataSource] which overrides property [attr:ListGrid.dataSource] with type [DataSource | ID]
-36. Property [attr:Menu.fields] has type [Array of MenuFieldID | Array of ListGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
-37. Property [attr:MenuButton.hiliteAccessKey] has type [Boolean] which overrides property [attr:Button.hiliteAccessKey] with type [boolean]
-38. Property [attr:MenuButton.title] has type [String] which overrides property [attr:Button.title] with type [HTMLString]
-39. Property [attr:MiniDateRangeItem.canFocus] has type [Boolean] which overrides property [attr:FormItem.canFocus] with type [boolean]
-40. Property [attr:MultiGroupDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-41. Property [attr:MultiSortDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-42. Property [attr:PickListMenu.emptyMessage] has type [String] which overrides property [attr:ListGrid.emptyMessage] with type [HTMLString]
-43. Property [attr:PickTreeItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
-44. Property [attr:PickTreeItem.optionDataSource] has type [DataSource] which overrides property [attr:FormItem.optionDataSource] with type [DataSource | String]
-45. Property [attr:PortalLayout.dropTypes] has type [Array of String] which overrides property [attr:Canvas.dropTypes] with type [Array of String | String]
-46. Property [attr:Portlet.canDrop] has type [boolean] which overrides property [attr:Canvas.canDrop] with type [Boolean]
-47. Property [attr:Portlet.minHeight] has type [Number] which overrides property [attr:Canvas.minHeight] with type [number]
-48. Property [attr:Portlet.minWidth] has type [Number] which overrides property [attr:Canvas.minWidth] with type [number]
-49. Property [attr:PresetCriteriaItem.valueMap] has type [Object] which overrides property [attr:FormItem.valueMap] with type [Array | Object]
-50. Property [attr:PrintWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-51. Property [attr:RestDataSource.dataURL] has type [String] which overrides property [attr:DataSource.dataURL] with type [URL]
-52. Property [attr:RestDataSource.recordXPath] has type [String] which overrides property [attr:DataSource.recordXPath] with type [XPathExpression]
-53. Property [attr:ResultTree.discardParentlessNodes] has type [boolean] which overrides property [attr:Tree.discardParentlessNodes] with type [Boolean]
-54. Property [attr:SearchForm.canEditFieldAttribute] has type [String] which overrides property [attr:DynamicForm.canEditFieldAttribute] with type [Identifier]
-55. Property [attr:SectionItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
-56. Property [attr:SelectItem.defaultValue] has type [boolean] which overrides property [attr:FormItem.defaultValue] with type [Any]
-57. Property [attr:SelectItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
-58. Property [attr:SelectItem.filterLocally] has type [Boolean] which overrides property [attr:FormItem.filterLocally] with type [boolean]
-59. Property [attr:SelectItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
-60. Property [attr:SelectItem.optionFilterContext] has type [DSRequest Properties] which overrides property [attr:FormItem.optionFilterContext] with type [RPCRequest Properties]
-61. Property [attr:Slider.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
-62. Property [attr:SliderItem.defaultValue] has type [int] which overrides property [attr:FormItem.defaultValue] with type [Any]
-63. Property [attr:SliderItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
-64. Property [attr:SpacerItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
-65. Property [attr:SpacerItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
-66. Property [attr:Splitbar.capSize] has type [Integer] which overrides property [attr:StretchImg.capSize] with type [number]
-67. Property [attr:Splitbar.showDownGrip] has type [Boolean] which overrides property [attr:StretchImg.showDownGrip] with type [boolean]
-68. Property [attr:Splitbar.showGrip] has type [Boolean] which overrides property [attr:StretchImg.showGrip] with type [boolean]
-69. Property [attr:Splitbar.showRollOverGrip] has type [Boolean] which overrides property [attr:StretchImg.showRollOverGrip] with type [boolean]
-70. Property [attr:Splitbar.vertical] has type [boolean] which overrides property [attr:StretchImg.vertical] with type [Boolean]
-71. Property [attr:SubmitItem.title] has type [String] which overrides property [attr:FormItem.title] with type [HTMLString]
-72. Property [attr:SummaryBuilder.dataSource] has type [DataSource | ID] which overrides property [attr:FormulaBuilder.dataSource] with type [DataSource | String]
-73. Property [attr:TextAreaItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
-74. Property [attr:TextAreaItem.pickerIconHeight] has type [Integer] which overrides property [attr:FormItem.pickerIconHeight] with type [int]
-75. Property [attr:TextAreaItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
-76. Property [attr:TextItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
-77. Property [attr:TextItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
-78. Property [attr:TimeItem.displayFormat] has type [TimeDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
-79. Property [attr:TimeItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
-80. Property [attr:Toolbar.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
-81. Property [attr:ToolStrip.height] has type [Number] which overrides property [attr:Canvas.height] with type [Number | String]
-82. Property [attr:ToolStrip.members] has type [Array of Canvas] which overrides property [attr:Layout.members] with type [Array<Canvas | string>]
-83. Property [attr:ToolStrip.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
-84. Property [attr:ToolStripResizer.hSrc] has type [SCImgURL] which overrides property [attr:ImgSplitbar.hSrc] with type [String]
-85. Property [attr:TreeGrid.data] has type [Tree] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
-86. Property [attr:TreeGrid.fields] has type [Array of TreeGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
-87. Property [attr:Window.keepInParentRect] has type [boolean | Rect] which overrides property [attr:Canvas.keepInParentRect] with type [Boolean | Array of Integer]
-88. Property [attr:Window.opacity] has type [Integer] which overrides property [attr:Canvas.opacity] with type [number]
+8. Property [attr:ComboBoxItem.defaultValue] has type [boolean] which overrides property [attr:FormItem.defaultValue] with type [Any]
+9. Property [attr:ComboBoxItem.filterLocally] has type [Boolean] which overrides property [attr:FormItem.filterLocally] with type [boolean]
+10. Property [attr:ComboBoxItem.optionFilterContext] has type [DSRequest Properties] which overrides property [attr:FormItem.optionFilterContext] with type [RPCRequest Properties]
+11. Property [attr:ComboBoxItem.showHintInField] has type [boolean] which overrides property [attr:TextItem.showHintInField] with type [Boolean]
+12. Property [attr:CubeGrid.data] has type [Array of CellRecord] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
+13. Property [attr:CubeGrid.dataSource] has type [DataSource] which overrides property [attr:ListGrid.dataSource] with type [DataSource | ID]
+14. Property [attr:CubeGrid.editByCell] has type [Boolean] which overrides property [attr:ListGrid.editByCell] with type [boolean]
+15. Property [attr:CubeGrid.saveByCell] has type [Boolean] which overrides property [attr:ListGrid.saveByCell] with type [boolean]
+16. Property [attr:DatabaseBrowser.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+17. Property [attr:DateItem.displayFormat] has type [DateDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
+18. Property [attr:DateItem.pickerConstructor] has type [String] which overrides property [attr:FormItem.pickerConstructor] with type [SCClassName]
+19. Property [attr:DateItem.pickerProperties] has type [DateChooser Properties] which overrides property [attr:FormItem.pickerProperties] with type [Canvas Properties]
+20. Property [attr:DSResponse.data] has type [Array of Record | RecordList] which overrides property [attr:RPCResponse.data] with type [String | Object]
+21. Property [attr:DynamicForm.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
+22. Property [attr:EdgedCanvas.edgeOffset] has type [Integer] which overrides property [attr:Canvas.edgeOffset] with type [number]
+23. Property [attr:EdgedCanvas.edgeSize] has type [Integer] which overrides property [attr:Canvas.edgeSize] with type [number]
+24. Property [attr:EventCanvas.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+25. Property [attr:FieldPickerWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+26. Property [attr:GridRenderer.showHover] has type [boolean] which overrides property [attr:Canvas.showHover] with type [Boolean]
+27. Property [attr:HeaderItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
+28. Property [attr:HibernateBrowser.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+29. Property [attr:IconButton.iconSize] has type [Number] which overrides property [attr:Button.iconSize] with type [int]
+30. Property [attr:ImgSplitbar.src] has type [String] which overrides property [attr:Img.src] with type [SCImgURL]
+31. Property [attr:ImgTab.showFocus] has type [boolean] which overrides property [attr:StretchImgButton.showFocus] with type [Boolean]
+32. Property [attr:ImgTab.skinImgDir] has type [URL] which overrides property [attr:Canvas.skinImgDir] with type [SCImgURL]
+33. Property [attr:ListPropertiesDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+34. Property [attr:LoginDialog.dismissOnEscape] has type [boolean] which overrides property [attr:Window.dismissOnEscape] with type [Boolean]
+35. Property [attr:LoginDialog.items] has type [Array of String] which overrides property [attr:Window.items] with type [Array of Canvas | Canvas | String]
+36. Property [attr:LoginDialog.showCloseButton] has type [boolean] which overrides property [attr:Window.showCloseButton] with type [Boolean]
+37. Property [attr:LoginDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+38. Property [attr:Menu.data] has type [Array of MenuItem | Array of Record[] | Tree | RecordList] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
+39. Property [attr:Menu.dataSource] has type [DataSource] which overrides property [attr:ListGrid.dataSource] with type [DataSource | ID]
+40. Property [attr:Menu.fields] has type [Array of MenuFieldID | Array of ListGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
+41. Property [attr:MenuButton.hiliteAccessKey] has type [Boolean] which overrides property [attr:Button.hiliteAccessKey] with type [boolean]
+42. Property [attr:MenuButton.title] has type [String] which overrides property [attr:Button.title] with type [HTMLString]
+43. Property [attr:MiniDateRangeItem.canFocus] has type [Boolean] which overrides property [attr:FormItem.canFocus] with type [boolean]
+44. Property [attr:MultiGroupDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+45. Property [attr:MultiSortDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+46. Property [attr:PickListMenu.emptyMessage] has type [String] which overrides property [attr:ListGrid.emptyMessage] with type [HTMLString]
+47. Property [attr:PickTreeItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
+48. Property [attr:PickTreeItem.optionDataSource] has type [DataSource] which overrides property [attr:FormItem.optionDataSource] with type [DataSource | String]
+49. Property [attr:PortalLayout.dropTypes] has type [Array of String] which overrides property [attr:Canvas.dropTypes] with type [Array of String | String]
+50. Property [attr:Portlet.canDrop] has type [boolean] which overrides property [attr:Canvas.canDrop] with type [Boolean]
+51. Property [attr:Portlet.minHeight] has type [Number] which overrides property [attr:Canvas.minHeight] with type [number]
+52. Property [attr:Portlet.minWidth] has type [Number] which overrides property [attr:Canvas.minWidth] with type [number]
+53. Property [attr:PresetCriteriaItem.valueMap] has type [Object] which overrides property [attr:FormItem.valueMap] with type [Array | Object]
+54. Property [attr:PrintWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+55. Property [attr:RelativeDateItem.defaultValue] has type [Date | RelativeDateString | TimeUnit] which overrides property [attr:FormItem.defaultValue] with type [Any]
+56. Property [attr:RelativeDateItem.displayFormat] has type [DateDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
+57. Property [attr:RelativeDateItem.pickerConstructor] has type [String] which overrides property [attr:FormItem.pickerConstructor] with type [SCClassName]
+58. Property [attr:RelativeDateItem.valueField] has type [AutoChild ComboBoxItem] which overrides property [attr:FormItem.valueField] with type [String]
+59. Property [attr:RestDataSource.dataURL] has type [String] which overrides property [attr:DataSource.dataURL] with type [URL]
+60. Property [attr:RestDataSource.recordXPath] has type [String] which overrides property [attr:DataSource.recordXPath] with type [XPathExpression]
+61. Property [attr:ResultTree.discardParentlessNodes] has type [boolean] which overrides property [attr:Tree.discardParentlessNodes] with type [Boolean]
+62. Property [attr:SearchForm.canEditFieldAttribute] has type [String] which overrides property [attr:DynamicForm.canEditFieldAttribute] with type [Identifier]
+63. Property [attr:SectionItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
+64. Property [attr:SelectItem.defaultValue] has type [boolean] which overrides property [attr:FormItem.defaultValue] with type [Any]
+65. Property [attr:SelectItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
+66. Property [attr:SelectItem.filterLocally] has type [Boolean] which overrides property [attr:FormItem.filterLocally] with type [boolean]
+67. Property [attr:SelectItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+68. Property [attr:SelectItem.optionFilterContext] has type [DSRequest Properties] which overrides property [attr:FormItem.optionFilterContext] with type [RPCRequest Properties]
+69. Property [attr:Slider.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
+70. Property [attr:SliderItem.defaultValue] has type [int] which overrides property [attr:FormItem.defaultValue] with type [Any]
+71. Property [attr:SliderItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+72. Property [attr:SpacerItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+73. Property [attr:SpacerItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+74. Property [attr:Splitbar.capSize] has type [Integer] which overrides property [attr:StretchImg.capSize] with type [number]
+75. Property [attr:Splitbar.showDownGrip] has type [Boolean] which overrides property [attr:StretchImg.showDownGrip] with type [boolean]
+76. Property [attr:Splitbar.showGrip] has type [Boolean] which overrides property [attr:StretchImg.showGrip] with type [boolean]
+77. Property [attr:Splitbar.showRollOverGrip] has type [Boolean] which overrides property [attr:StretchImg.showRollOverGrip] with type [boolean]
+78. Property [attr:Splitbar.vertical] has type [boolean] which overrides property [attr:StretchImg.vertical] with type [Boolean]
+79. Property [attr:SubmitItem.title] has type [String] which overrides property [attr:FormItem.title] with type [HTMLString]
+80. Property [attr:SummaryBuilder.dataSource] has type [DataSource | ID] which overrides property [attr:FormulaBuilder.dataSource] with type [DataSource | String]
+81. Property [attr:TextAreaItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+82. Property [attr:TextAreaItem.pickerIconHeight] has type [Integer] which overrides property [attr:FormItem.pickerIconHeight] with type [int]
+83. Property [attr:TextAreaItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+84. Property [attr:TextItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+85. Property [attr:TextItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+86. Property [attr:TimeItem.displayFormat] has type [TimeDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
+87. Property [attr:TimeItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
+88. Property [attr:Toolbar.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+89. Property [attr:ToolStrip.height] has type [Number] which overrides property [attr:Canvas.height] with type [Number | String]
+90. Property [attr:ToolStrip.members] has type [Array of Canvas] which overrides property [attr:Layout.members] with type [Array<Canvas | string>]
+91. Property [attr:ToolStrip.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+92. Property [attr:ToolStripResizer.hSrc] has type [SCImgURL] which overrides property [attr:ImgSplitbar.hSrc] with type [String]
+93. Property [attr:TreeGrid.data] has type [Tree] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
+94. Property [attr:TreeGrid.fields] has type [Array of TreeGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
+95. Property [attr:Window.keepInParentRect] has type [boolean | Rect] which overrides property [attr:Canvas.keepInParentRect] with type [Boolean | Array of Integer]
+96. Property [attr:Window.opacity] has type [Integer] which overrides property [attr:Canvas.opacity] with type [number]
 
 
-Methods that override a base class method with a different return type: 59
+Methods that override a base class method with a different return type: 66
 1. Method [classMethod:DateUtil.create] has return type [Date] which overrides method [classMethod:Class.create] with return type [T]
 2. Method [classMethod:FormItem.create] has return type [] which overrides method [classMethod:Class.create] with return type [T]
 3. Method [classMethod:RPCResponse.create] has return type [] which overrides method [classMethod:Class.create] with return type [T]
@@ -678,60 +715,122 @@ Methods that override a base class method with a different return type: 59
 7. Method [method:CanvasItem.getCriterion] has 0 parameters and overrides method [method:FormItem.getCriterion] with 1 parameters.
 8. Method [method:CheckboxItem.setValueMap] has 0 parameters and overrides method [method:FormItem.setValueMap] with 1 parameters.
 9. Method [method:ColorPicker.setOpacity] parameter 0 has type [Number] and overrides method [method:Canvas.setOpacity] with parameter type [number].
-10. Method [method:CubeGrid.cellSelectionChanged] has return type [] which overrides method [method:ListGrid.cellSelectionChanged] with return type [boolean]
-11. Method [method:CubeGrid.clearEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.clearEditValue] with parameter type [number | String].
-12. Method [method:CubeGrid.dataArrived] has 0 parameters and overrides method [method:ListGrid.dataArrived] with 2 parameters.
-13. Method [method:CubeGrid.discardAllEdits] parameter 0 has type [Array of Array of int] and overrides method [method:ListGrid.discardAllEdits] with parameter type [Array of Number].
-14. Method [method:CubeGrid.exportClientData] has 3 parameters and overrides method [method:ListGrid.exportClientData] with 2 parameters.
-15. Method [method:CubeGrid.getCellRecord] has 2 parameters and overrides method [method:ListGrid.getCellRecord] with 1 parameters.
-16. Method [method:CubeGrid.getEditedCell] parameter 1 has type [number] and overrides method [method:ListGrid.getEditedCell] with parameter type [number | String].
-17. Method [method:CubeGrid.getEditedRecord] has 2 parameters and overrides method [method:ListGrid.getEditedRecord] with 1 parameters.
-18. Method [method:CubeGrid.getEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.getEditValue] with parameter type [number | String].
-19. Method [method:CubeGrid.getEditValues] has 2 parameters and overrides method [method:ListGrid.getEditValues] with 1 parameters.
-20. Method [method:CubeGrid.saveAllEdits] parameter 0 has type [Array of Array of int] and overrides method [method:ListGrid.saveAllEdits] with parameter type [Array of Number].
-21. Method [method:CubeGrid.saveEdits] has 4 parameters and overrides method [method:ListGrid.saveEdits] with 3 parameters.
-22. Method [method:CubeGrid.setEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.setEditValue] with parameter type [number | String].
-23. Method [method:CubeGrid.setEditValues] parameter 0 has type [Array of number] and overrides method [method:ListGrid.setEditValues] with parameter type [number].
-24. Method [method:DateRangeItem.getValue] has return type [DateRange] which overrides method [method:FormItem.getValue] with return type [Any]
-25. Method [method:DateRangeItem.setValue] parameter 0 has type [DateRange] and overrides method [method:FormItem.setValue] with parameter type [Any].
-26. Method [method:DynamicForm.setValuesManager] parameter 0 has type [ValuesManager | GlobalId] and overrides method [method:Canvas.setValuesManager] with parameter type [ValuesManager].
-27. Method [method:IconButton.iconClick] has return type [Boolean] which overrides method [method:Button.iconClick] with return type [boolean]
-28. Method [method:IconButton.setIcon] has 0 parameters and overrides method [method:Button.setIcon] with 1 parameters.
-29. Method [method:Img.getHoverHTML] has return type [String] which overrides method [method:Canvas.getHoverHTML] with return type [HTMLString]
-30. Method [method:ImgButton.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
-31. Method [method:ImgSectionHeader.setAlign] parameter 0 has type [String] and overrides method [method:Layout.setAlign] with parameter type [Alignment | VerticalAlignment].
-32. Method [method:Menu.setData] parameter 0 has type [Array of MenuItem | Array of Record[] | Tree | RecordList] and overrides method [method:ListGrid.setData] with parameter type [List of ListGridRecord].
-33. Method [method:Menu.showContextMenu] has return type [Boolean] which overrides method [method:Canvas.showContextMenu] with return type [boolean]
-34. Method [method:MiniDateRangeItem.getCriterion] has 0 parameters and overrides method [method:FormItem.getCriterion] with 1 parameters.
-35. Method [method:MiniDateRangeItem.getValue] has return type [DateRange] which overrides method [method:FormItem.getValue] with return type [Any]
-36. Method [method:MiniDateRangeItem.setValue] parameter 0 has type [DateRange] and overrides method [method:FormItem.setValue] with parameter type [Any].
-37. Method [method:Portlet.closeClick] has return type [] which overrides method [method:Window.closeClick] with return type [Boolean]
-38. Method [method:PresetCriteriaItem.getCriterion] has return type [Criterion | AdvancedCriteria] which overrides method [method:FormItem.getCriterion] with return type [Criterion]
-39. Method [method:RadioGroupItem.valueHoverHTML] has 3 parameters and overrides method [method:FormItem.valueHoverHTML] with 2 parameters.
-40. Method [method:RestDataSource.transformRequest] has return type [] which overrides method [method:DataSource.transformRequest] with return type [Any]
-41. Method [method:ResultTree.setChildren] has 3 parameters and overrides method [method:Tree.setChildren] with 2 parameters.
-42. Method [method:SelectItem.defaultDynamicValue] has 0 parameters and overrides method [method:FormItem.defaultDynamicValue] with 3 parameters.
-43. Method [method:StretchImgButton.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
-44. Method [method:TileGrid.addTile] has 0 parameters and overrides method [method:TileLayout.addTile] with 2 parameters.
-45. Method [method:TileGrid.getTile] parameter 0 has type [TileRecord | int] and overrides method [method:TileLayout.getTile] with parameter type [int].
-46. Method [method:TileGrid.removeTile] has return type [] which overrides method [method:TileLayout.removeTile] with return type [boolean]
-47. Method [method:TreeGrid.canEditCell] has return type [Boolean] which overrides method [method:ListGrid.canEditCell] with return type [boolean]
-48. Method [method:TreeGrid.dataArrived] has 1 parameters and overrides method [method:ListGrid.dataArrived] with 2 parameters.
-49. Method [method:TreeGrid.getViewState] has return type [TreeGridViewState] which overrides method [method:ListGrid.getViewState] with return type [ListGridViewState]
-50. Method [method:TreeGrid.recordDoubleClick] has return type [] which overrides method [method:ListGrid.recordDoubleClick] with return type [boolean]
-51. Method [method:TreeGrid.recordDrop] has 0 parameters and overrides method [method:ListGrid.recordDrop] with 4 parameters.
-52. Method [method:TreeGrid.rowClick] has return type [] which overrides method [method:ListGrid.rowClick] with return type [Boolean]
-53. Method [method:TreeGrid.setData] parameter 0 has type [Tree] and overrides method [method:ListGrid.setData] with parameter type [List of ListGridRecord].
-54. Method [method:TreeGrid.setViewState] parameter 0 has type [TreeGridViewState] and overrides method [method:ListGrid.setViewState] with parameter type [ListGridViewState].
-55. Method [method:TreeGrid.startEditingNew] parameter 0 has type [Object] and overrides method [method:ListGrid.startEditingNew] with parameter type [Map | Record].
-56. Method [method:TreeGrid.startEditingNew] parameter 1 has type [boolean] and overrides method [method:ListGrid.startEditingNew] with parameter type [Boolean].
-57. Method [method:TreeGrid.transferSelectedData] has 4 parameters and overrides method [method:ListGrid.transferSelectedData] with 3 parameters.
-58. Method [method:UploadItem.setSelectionRange] has 0 parameters and overrides method [method:TextItem.setSelectionRange] with 2 parameters.
-59. Method [method:UploadItem.setValue] has 0 parameters and overrides method [method:FormItem.setValue] with 1 parameters.
+10. Method [method:ComboBoxItem.canEditCriterion] has return type [] which overrides method [method:FormItem.canEditCriterion] with return type [boolean]
+11. Method [method:ComboBoxItem.defaultDynamicValue] has 0 parameters and overrides method [method:FormItem.defaultDynamicValue] with 3 parameters.
+12. Method [method:ComboBoxItem.getCriterion] has 0 parameters and overrides method [method:FormItem.getCriterion] with 1 parameters.
+13. Method [method:ComboBoxItem.setCriterion] has 0 parameters and overrides method [method:FormItem.setCriterion] with 1 parameters.
+14. Method [method:CubeGrid.cellSelectionChanged] has return type [] which overrides method [method:ListGrid.cellSelectionChanged] with return type [boolean]
+15. Method [method:CubeGrid.clearEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.clearEditValue] with parameter type [number | String].
+16. Method [method:CubeGrid.dataArrived] has 0 parameters and overrides method [method:ListGrid.dataArrived] with 2 parameters.
+17. Method [method:CubeGrid.discardAllEdits] parameter 0 has type [Array of Array of int] and overrides method [method:ListGrid.discardAllEdits] with parameter type [Array of Number].
+18. Method [method:CubeGrid.exportClientData] has 3 parameters and overrides method [method:ListGrid.exportClientData] with 2 parameters.
+19. Method [method:CubeGrid.getCellRecord] has 2 parameters and overrides method [method:ListGrid.getCellRecord] with 1 parameters.
+20. Method [method:CubeGrid.getEditedCell] parameter 1 has type [number] and overrides method [method:ListGrid.getEditedCell] with parameter type [number | String].
+21. Method [method:CubeGrid.getEditedRecord] has 2 parameters and overrides method [method:ListGrid.getEditedRecord] with 1 parameters.
+22. Method [method:CubeGrid.getEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.getEditValue] with parameter type [number | String].
+23. Method [method:CubeGrid.getEditValues] has 2 parameters and overrides method [method:ListGrid.getEditValues] with 1 parameters.
+24. Method [method:CubeGrid.saveAllEdits] parameter 0 has type [Array of Array of int] and overrides method [method:ListGrid.saveAllEdits] with parameter type [Array of Number].
+25. Method [method:CubeGrid.saveEdits] has 4 parameters and overrides method [method:ListGrid.saveEdits] with 3 parameters.
+26. Method [method:CubeGrid.setEditValue] parameter 1 has type [number] and overrides method [method:ListGrid.setEditValue] with parameter type [number | String].
+27. Method [method:CubeGrid.setEditValues] parameter 0 has type [Array of number] and overrides method [method:ListGrid.setEditValues] with parameter type [number].
+28. Method [method:DateRangeItem.getValue] has return type [DateRange] which overrides method [method:FormItem.getValue] with return type [Any]
+29. Method [method:DateRangeItem.setValue] parameter 0 has type [DateRange] and overrides method [method:FormItem.setValue] with parameter type [Any].
+30. Method [method:DynamicForm.setValuesManager] parameter 0 has type [ValuesManager | GlobalId] and overrides method [method:Canvas.setValuesManager] with parameter type [ValuesManager].
+31. Method [method:IconButton.iconClick] has return type [Boolean] which overrides method [method:Button.iconClick] with return type [boolean]
+32. Method [method:IconButton.setIcon] has 0 parameters and overrides method [method:Button.setIcon] with 1 parameters.
+33. Method [method:Img.getHoverHTML] has return type [String] which overrides method [method:Canvas.getHoverHTML] with return type [HTMLString]
+34. Method [method:ImgButton.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
+35. Method [method:ImgSectionHeader.setAlign] parameter 0 has type [String] and overrides method [method:Layout.setAlign] with parameter type [Alignment | VerticalAlignment].
+36. Method [method:Menu.setData] parameter 0 has type [Array of MenuItem | Array of Record[] | Tree | RecordList] and overrides method [method:ListGrid.setData] with parameter type [List of ListGridRecord].
+37. Method [method:Menu.showContextMenu] has return type [Boolean] which overrides method [method:Canvas.showContextMenu] with return type [boolean]
+38. Method [method:MiniDateRangeItem.getCriterion] has 0 parameters and overrides method [method:FormItem.getCriterion] with 1 parameters.
+39. Method [method:MiniDateRangeItem.getValue] has return type [DateRange] which overrides method [method:FormItem.getValue] with return type [Any]
+40. Method [method:MiniDateRangeItem.setValue] parameter 0 has type [DateRange] and overrides method [method:FormItem.setValue] with parameter type [Any].
+41. Method [method:Portlet.closeClick] has return type [] which overrides method [method:Window.closeClick] with return type [Boolean]
+42. Method [method:PresetCriteriaItem.getCriterion] has return type [Criterion | AdvancedCriteria] which overrides method [method:FormItem.getCriterion] with return type [Criterion]
+43. Method [method:RadioGroupItem.valueHoverHTML] has 3 parameters and overrides method [method:FormItem.valueHoverHTML] with 2 parameters.
+44. Method [method:RelativeDateItem.formatEditorValue] has return type [] which overrides method [method:FormItem.formatEditorValue] with return type [String]
+45. Method [method:RelativeDateItem.getCriterion] has 1 parameters and overrides method [method:CanvasItem.getCriterion] with 0 parameters.
+46. Method [method:RelativeDateItem.parseEditorValue] has return type [] which overrides method [method:FormItem.parseEditorValue] with return type [Any]
+47. Method [method:RestDataSource.transformRequest] has return type [] which overrides method [method:DataSource.transformRequest] with return type [Any]
+48. Method [method:ResultTree.setChildren] has 3 parameters and overrides method [method:Tree.setChildren] with 2 parameters.
+49. Method [method:SelectItem.defaultDynamicValue] has 0 parameters and overrides method [method:FormItem.defaultDynamicValue] with 3 parameters.
+50. Method [method:StretchImgButton.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
+51. Method [method:TileGrid.addTile] has 0 parameters and overrides method [method:TileLayout.addTile] with 2 parameters.
+52. Method [method:TileGrid.getTile] parameter 0 has type [TileRecord | int] and overrides method [method:TileLayout.getTile] with parameter type [int].
+53. Method [method:TileGrid.removeTile] has return type [] which overrides method [method:TileLayout.removeTile] with return type [boolean]
+54. Method [method:TreeGrid.canEditCell] has return type [Boolean] which overrides method [method:ListGrid.canEditCell] with return type [boolean]
+55. Method [method:TreeGrid.dataArrived] has 1 parameters and overrides method [method:ListGrid.dataArrived] with 2 parameters.
+56. Method [method:TreeGrid.getViewState] has return type [TreeGridViewState] which overrides method [method:ListGrid.getViewState] with return type [ListGridViewState]
+57. Method [method:TreeGrid.recordDoubleClick] has return type [] which overrides method [method:ListGrid.recordDoubleClick] with return type [boolean]
+58. Method [method:TreeGrid.recordDrop] has 0 parameters and overrides method [method:ListGrid.recordDrop] with 4 parameters.
+59. Method [method:TreeGrid.rowClick] has return type [] which overrides method [method:ListGrid.rowClick] with return type [Boolean]
+60. Method [method:TreeGrid.setData] parameter 0 has type [Tree] and overrides method [method:ListGrid.setData] with parameter type [List of ListGridRecord].
+61. Method [method:TreeGrid.setViewState] parameter 0 has type [TreeGridViewState] and overrides method [method:ListGrid.setViewState] with parameter type [ListGridViewState].
+62. Method [method:TreeGrid.startEditingNew] parameter 0 has type [Object] and overrides method [method:ListGrid.startEditingNew] with parameter type [Map | Record].
+63. Method [method:TreeGrid.startEditingNew] parameter 1 has type [boolean] and overrides method [method:ListGrid.startEditingNew] with parameter type [Boolean].
+64. Method [method:TreeGrid.transferSelectedData] has 4 parameters and overrides method [method:ListGrid.transferSelectedData] with 3 parameters.
+65. Method [method:UploadItem.setSelectionRange] has 0 parameters and overrides method [method:TextItem.setSelectionRange] with 2 parameters.
+66. Method [method:UploadItem.setValue] has 0 parameters and overrides method [method:FormItem.setValue] with 1 parameters.
 
 
-Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-09-20	249	5	297	82	3559	5	0	1	216	665	131	0	239	0	0	8	10	2	0	0	0	0	12	18	1	46	288	0	131	384	0	0	0	247	5	81	292	3286	1.108434	1	0.9878049	0.983165	0.9232931	
+Unknown types assumed to be [string]: 21
+1. Align, count = 4
+2. Character, count = 4
+3. Class Object, count = 4
+4. Classname, count = 8
+5. ClassName, count = 2
+6. DataSource ID, count = 2
+7. DSField, count = 4
+8. ElementName, count = 2
+9. FacetId, count = 2
+10. FacetIds, count = 2
+11. FacetValueGroupId, count = 2
+12. Field, count = 18
+13. Fields, count = 2
+14. FormLayoutType, count = 2
+15. ID, count = 56
+16. Prefix, count = 3
+17. String Expression, count = 1
+18. Type, count = 2
+19. URN, count = 3
+20. VAlign, count = 4
+21. XPath, count = 5
+
+
+Unknown types mapped to [any]: 14
+1. Any, count = 480
+2. Arguments, count = 6
+3. Cell, count = 2
+4. DataSourceRecord, count = 5
+5. DataSourceRecords, count = 4
+6. Measure, count = 20
+7. PKValue, count = 2
+8. PrimaryKeys, count = 2
+9. RecordList, count = 20
+10. Rect, count = 4
+11. TimerEvent, count = 2
+12. Transaction Object, count = 1
+13. Varies, count = 2
+14. Widget, count = 4
+
+
+Weird types: 5
+1. Array of Array of int (mapped to [Array<Array<int>>]), count = 8
+2. Map (mapped to [Map<any, any>]), count = 18
+3. Map<Prefix,URI> (mapped to [Map<string, URI> /* Prefix should be defined as its own type? */]), count = 3
+4. Request (mapped to [RPCRequest | DSRequest /* Should be defined as [RPCRequest | DSRequest] ?*/]), count = 1
+5. Response (mapped to [RPCResponse | DSResponse /* Should be defined as [RPCResponse | DSResponse] ? */]), count = 1
+
+
+String types no longer found in the refDocs file (can be removed): 0
+
+
+Any types no longer found in the refDocs file (can be removed): 0
+
+
+Date	Types	Interfaces	Classes	Objects	Methods	Excluded Classes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
+2017-09-20	249	5	297	82	3559	2	0	1	216	665	131	0	239	0	0	8	10	17	0	0	0	0	12	18	1	46	288	0	131	384	0	0	0	247	5	81	295	21	14	5	96	66	3314	1.108434	1	0.9878049	0.993266	0.9311604	
 
 ======= For Display Somewhere =======
 Metrics for build SNAPSHOT_v12.0d_2017-09-20
@@ -742,7 +841,7 @@ Interfaces: 5
 Classes: 297
 Objects: 82
 Methods: 3,559
-Excluded Classes: 5
+Excluded Classes: 2
 string values with quotes: 216
 string values without quotes: 665
 string values with period: 131
@@ -752,13 +851,13 @@ OR specified as ' \| ': 384
 Types Generated: 247
 Interfaces Generated: 5
 Objects Generated: 81
-Classes Generated: 292
-Methods Generated: 3,286
+Classes Generated: 295
+Methods Generated: 3,314
 Percentage of Types generated: 111 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 99 %
-Percentage of Classes generated: 98 %
-Percentage of Methods generated: 92 %
+Percentage of Classes generated: 99 %
+Percentage of Methods generated: 93 %
 
 ===== Warnings =====
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)
@@ -778,7 +877,7 @@ Arrays defined as 'Array[] of': 0
 Arrays defined as 'array[] of': 0
 Arrays defined as 'array' or 'Array': 8
 Arrays defined as 'List of': 10
-String types without baseType: 2
+String types without baseType: 17
 Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0
@@ -786,4 +885,9 @@ Methods with required parameters after optional parameters: 0
 Setter Methods with parameter type that does not match the attribute type: 12
 Getter Methods with return type that does not match the attribute type: 1
 String values without reference: 0
+Unknown types assumed to be string: 21
+Unknown Types mapped to any: 14
+Weird Types that require special handling: 5
+Properties that override a base property with a different type: 96
+Methods that override a base method with a different signature: 66
 

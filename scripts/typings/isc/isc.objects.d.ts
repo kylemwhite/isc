@@ -6,7 +6,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/20/2017 7:00:15 AM by kwhite
+// Generated: 9/20/2017 1:09:06 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 declare namespace Isc {
@@ -61,7 +61,7 @@ declare namespace Isc {
 		 * the NavPanel.
 		 * Flags: IR
 		 */
-		readonly id?: string /* Identifier */;
+		readonly id?: Identifier;
 		/** 
 		 * (Read only) If set, this NavItem will be styled like a header. In this case NavItem.pane
 		 * is ignored and nothing happens when the header is clicked. However, NavItem.items can
@@ -89,7 +89,7 @@ declare namespace Isc {
 		 * A component can be provided directly, or its ID can be provided.
 		 * Flags: IR
 		 */
-		readonly pane?: Canvas | string /* Canvas | Identifier */;
+		readonly pane?: Canvas | Identifier;
 		/** 
 		 * (Read only) Title to show for this NavItem.
 		 * Flags: IR
@@ -138,7 +138,7 @@ declare namespace Isc {
 		 * (Read only) Effect to apply
 		 * Flags: IR
 		 */
-		readonly effect?: string /* AnimateShowEffectId */;
+		readonly effect?: AnimateShowEffectId;
 		/** 
 		 * (Read only) For hide animations of type "wipe and 
 		 * "slide" this attribute specifies where the wipe / slide should finish.
@@ -174,35 +174,35 @@ declare namespace Isc {
 		/**  
 		 * (Advanced)  Returns the (offset) left-coordinate of an icon within its containing widget.
 		 * 
-		 * @param {any} icon - icon definition
+		 * @param {Object} icon - icon definition
 		 * @return {number} icon left position in px
 		 */
-		getIconLeft?(icon:any /* Object */): number; 
+		getIconLeft?(icon:Object): number; 
 
 		/**  
 		 * (Advanced)  Returns the size / position of an icon on the page as an array of coordinates.
 		 * 
-		 * @param {any} icon - icon definition for the icon you want to determine the position of (defaults to first icon in this.icons).
+		 * @param {Object} icon - icon definition for the icon you want to determine the position of (defaults to first icon in this.icons).
 		 * @return {Array<any>} four element array representing the Left, Top, Width, and Height of                      the icon in px.
 		 */
-		getIconPageRect?(icon:any /* Object */): Array<any> /* Array */; 
+		getIconPageRect?(icon:Object): Array<any> /* Array */; 
 
 		/**  
 		 * (Advanced)  Returns the size / position of an icon with respect to the widget rendering out the
 		 * form item as an array of coordinates.
 		 * 
-		 * @param {any} icon - icon definition for the icon you want to determine the position of (defaults to first icon in this.icons).
+		 * @param {Object} icon - icon definition for the icon you want to determine the position of (defaults to first icon in this.icons).
 		 * @return {Array<any>} four element array representing the Left, Top, Width, and Height of                      the icon in px.
 		 */
-		getIconRect?(icon:any /* Object */): Array<any> /* Array */; 
+		getIconRect?(icon:Object): Array<any> /* Array */; 
 
 		/**  
 		 * (Advanced)  Returns the (offset) top-coordinate of an icon within its containing widget.
 		 * 
-		 * @param {any} icon - icon definition
+		 * @param {Object} icon - icon definition
 		 * @return {number} icon top position in px
 		 */
-		getIconTop?(icon:any /* Object */): number; 
+		getIconTop?(icon:Object): number; 
 
 	} // isc
 
@@ -215,11 +215,11 @@ declare namespace Isc {
 		 * are not overwritten, but 'undef' values will be.
 		 * 
 		 * 
-		 * @param {any} destination - Object to which properties will be added.
-		 * @param {any} source - Object from which properties will be added.
-		 * @return {any} The destination object is returned.
+		 * @param {Object} destination - Object to which properties will be added.
+		 * @param {Object} source - Object from which properties will be added.
+		 * @return {Object} The destination object is returned.
 		 */
-		addDefaults(destination:any /* Object */, source:any /* Object */): any /* Object */; 
+		addDefaults(destination:Object, source:Object): Object; 
 
 		/**  
 		 *  Show a modal dialog with a message, icon, and "Yes" and "No" buttons. See Dialog.askIcon.
@@ -289,10 +289,10 @@ declare namespace Isc {
 		 * Does not handle looping references (will infinite loop).
 		 * 
 		 * 
-		 * @param {any} object - object to clone
-		 * @return {any} cloned object
+		 * @param {Object} object - object to clone
+		 * @return {Object} cloned object
 		 */
-		clone(object:any /* Object */): any /* Object */; 
+		clone(object:Object): Object; 
 
 		/**  
 		 *  Show a modal dialog with a message, icon, and "OK" and "Cancel" buttons. See Dialog.confirmIcon.
@@ -382,10 +382,10 @@ declare namespace Isc {
 		 *  Return the first property name in a given Object, according to for..in iteration order.
 		 * 
 		 * 
-		 * @param {any} object - Object to get properties from
+		 * @param {Object} object - Object to get properties from
 		 * @return {String} first property name, or null if Object has no properties
 		 */
-		firstKey(object:any /* Object */): String; 
+		firstKey(object:Object): String; 
 
 		/**  
 		 *  Given a value and an object of key:value pairs, return a key that corresponds
@@ -396,21 +396,21 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {String | number} value - value to look for
-		 * @param {any} valueMap - object of key:value pairs
+		 * @param {Object} valueMap - object of key:value pairs
 		 * @param {any} defaultKey - default key to return if value not found
 		 * @return {any} returns first key in valueMap with value, or                                              defaultKey if value not found
 		 */
-		getKeyForValue(value:String | number, valueMap:any /* Object */, defaultKey?:any /* Any */): any /* Any */; 
+		getKeyForValue(value:String | number, valueMap:Object, defaultKey?:any /* Any */): any /* Any */; 
 
 		/**  
 		 * 
 		 * Return all keys (property names) of a given object
 		 * 
 		 * 
-		 * @param {any} object - object to get properties from
+		 * @param {Object} object - object to get properties from
 		 * @return {Array<any>} String names of all properties.  NOTE: never null
 		 */
-		getKeys(object:any /* Object */): Array<any> /* Array */; 
+		getKeys(object:Object): Array<any> /* Array */; 
 
 		/**  
 		 *  Given a key and an object of key:value pairs, return the value that corresponds to
@@ -421,21 +421,21 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {String | number} key - key to look for
-		 * @param {any} valueMap - object of key:value pairs
+		 * @param {Object} valueMap - object of key:value pairs
 		 * @param {any} defaultValue - default value to return if key not found
 		 * @return {any} returns value in valueMap under name key, or                                              defaultValue if key not found
 		 */
-		getValueForKey(key:String | number, valueMap:any /* Object */, defaultValue?:any /* Any */): any /* Any */; 
+		getValueForKey(key:String | number, valueMap:Object, defaultValue?:any /* Any */): any /* Any */; 
 
 		/**  
 		 * 
 		 * Return all values of a given object
 		 * 
 		 * 
-		 * @param {any} object - object to get properties from
+		 * @param {Object} object - object to get properties from
 		 * @return {Array<any>} values of all properties.  NOTE: never null
 		 */
-		getValues(object:any /* Object */): Array<any> /* Array */; 
+		getValues(object:Object): Array<any> /* Array */; 
 
 		/**  
 		 *  Logs the echoed object (using isc.echo) as a warning, prefixed with an
@@ -473,10 +473,10 @@ declare namespace Isc {
 		 * value.
 		 * 
 		 * 
-		 * @param {any} valueMap - object of key:value pairs
-		 * @return {any} reversed value map
+		 * @param {Object} valueMap - object of key:value pairs
+		 * @return {Object} reversed value map
 		 */
-		makeReverseMap(valueMap:any /* Object */): any /* Object */; 
+		makeReverseMap(valueMap:Object): Object; 
 
 		/**  
 		 *  Shortcut for isc.ClassFactory.overwriteClass().
@@ -492,11 +492,11 @@ declare namespace Isc {
 		 * is present on the object and has been explicitly set to undefined.
 		 * 
 		 * 
-		 * @param {any} object - Object to test
+		 * @param {Object} object - Object to test
 		 * @param {String} propertyName - Which property is being tested for?
 		 * @return {boolean} true if property is defined
 		 */
-		propertyDefined(object:any /* Object */, propertyName:String): boolean; 
+		propertyDefined(object:Object, propertyName:String): boolean; 
 
 		/**  
 		 *  Show a modal dialog with a message, icon, and "OK" button. Intended for notifications which
@@ -555,10 +555,10 @@ declare namespace Isc {
 		 * within Arrays will not be copied.
 		 * 
 		 * 
-		 * @param {any} object - object to be cloned
-		 * @return {any | Array<any>} a shallow copy of the passed-in data
+		 * @param {Object} object - object to be cloned
+		 * @return {Object | Array<Object>} a shallow copy of the passed-in data
 		 */
-		shallowClone(object:any | Array<any> | any /* Object | Array | Object */): any | Array<any> /* Object | Array of Object */; 
+		shallowClone(object:Object | Array<any> | Object /* Object | Array | Object */): Object | Array<Object> /* Object | Array of Object */; 
 
 		/**  
 		 * 
@@ -672,11 +672,11 @@ declare namespace Isc {
 		 * Usage example - may be used to sort a FormItem.valueMap','formItem valueMap defined
 		 * as an object.
 		 * 
-		 * @param {any} object - Object to sort
-		 * @param {any} comparator - Comparator function to use when sorting the objects keys
-		 * @return {any} sorted version of the object passed in.
+		 * @param {Object} object - Object to sort
+		 * @param {Function} comparator - Comparator function to use when sorting the objects keys
+		 * @return {Object} sorted version of the object passed in.
 		 */
-		sortObject(object:any /* Object */, comparator?:any /* Function */): any /* Object */; 
+		sortObject(object:Object, comparator?:Function): Object; 
 
 		/**  
 		 *  Given a simple javascript object, return that object sorted by properties, such that when 
@@ -684,11 +684,11 @@ declare namespace Isc {
 		 * Usage example - may be used to sort a FormItem.valueMap','formItem valueMap defined
 		 * as an object by display value.
 		 * 
-		 * @param {any} object - Object to sort
-		 * @param {any} comparator - Comparator function to use when sorting the object properties
-		 * @return {any} sorted version of the object passed in.
+		 * @param {Object} object - Object to sort
+		 * @param {Function} comparator - Comparator function to use when sorting the object properties
+		 * @return {Object} sorted version of the object passed in.
 		 */
-		sortObjectByProperties(object:any /* Object */, comparator?:any /* Function */): any /* Object */; 
+		sortObjectByProperties(object:Object, comparator?:Function): Object; 
 
 		/**  
 		 *  Shorthand for new Date().getTime();, this returns a timeStamp - a large number
@@ -899,12 +899,12 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {CubeGrid} viewer - this facetValue's CubeGrid
-		 * @param {any} record - cell record
+		 * @param {Object} record - cell record
 		 * @param {number} rowNum - row value for the cell
 		 * @param {number} colNum - column value for the cell
 		 * @return {String} HTML to display
 		 */
-		getCellValue?(viewer:CubeGrid, record:any /* Object */, rowNum:number, colNum:number): String; 
+		getCellValue?(viewer:CubeGrid, record:Object, rowNum:number, colNum:number): String; 
 
 	} // FacetValue
 
@@ -934,50 +934,50 @@ declare namespace Isc {
 		 * NOTE: if you prefer, you can call this as isAn.Array()
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is an Array
 		 */
-		Array(object:any /* Object */): boolean; 
+		Array(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object a Boolean object?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Boolean
 		 */
-		Boolean(object:any /* Object */): boolean; 
+		Boolean(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object a class object?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Class Object
 		 */
-		ClassObject(object:any /* Object */): boolean; 
+		ClassObject(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object a Date object?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Date
 		 */
-		Date(object:any /* Object */): boolean; 
+		Date(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object an Array with no items?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is an empty array
 		 */
-		emptyArray(object:any /* Object */): boolean; 
+		emptyArray(object:Object): boolean; 
 
 		/**  
 		 * 
@@ -989,10 +989,10 @@ declare namespace Isc {
 		 * NOTE: if you prefer, you can call this as isAn.emptyObject()
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is the empty object
 		 */
-		emptyObject(object:any /* Object */): boolean; 
+		emptyObject(object:Object): boolean; 
 
 		/**  
 		 * 
@@ -1001,58 +1001,58 @@ declare namespace Isc {
 		 * NOTE: if you prefer, you can call this as isAn.emptyString()
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a null string
 		 */
-		emptyString(object:any /* Object */): boolean; 
+		emptyString(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object a Function object?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Function
 		 */
-		Function(object:any /* Object */): boolean; 
+		Function(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object an instance of some class?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is an instance of some class
 		 */
-		Instance(object:any /* Object */): boolean; 
+		Instance(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object an interface object?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Interface Object
 		 */
-		Interface(object:any /* Object */): boolean; 
+		Interface(object:Object): boolean; 
 
 		/**  
 		 *  Does object implement the List interface?
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} <code>true</code> if the object is an Array or belongs to another class that                   implements the <code>List</code> API.
 		 */
-		List(object:any /* Object */): boolean; 
+		List(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object a non-empty String?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a non-empty string
 		 */
-		nonemptyString(object:any /* Object */): boolean; 
+		nonemptyString(object:Object): boolean; 
 
 		/**  
 		 * 
@@ -1061,10 +1061,10 @@ declare namespace Isc {
 		 * NOTE: this returns false if object is an invalid number (isNaN(object) == true)
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Number
 		 */
-		Number(object:any /* Object */): boolean; 
+		Number(object:Object): boolean; 
 
 		/**  
 		 *  Returns whether the passed value is a non-null Object.
@@ -1086,20 +1086,20 @@ declare namespace Isc {
 		 * Is object a Regular Expression (RegExp) object?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a Boolean
 		 */
-		RegularExpression(object:any /* Object */): boolean; 
+		RegularExpression(object:Object): boolean; 
 
 		/**  
 		 * 
 		 * Is object a String object?
 		 * 
 		 * 
-		 * @param {any} object - object to test
+		 * @param {Object} object - object to test
 		 * @return {boolean} true == <code>object</code> is a String
 		 */
-		String(object:any /* Object */): boolean; 
+		String(object:Object): boolean; 
 
 	} // isAStatic
 
@@ -1296,7 +1296,7 @@ declare namespace Isc {
 		 * returned data.
 		 * Flags: IRW
 		 */
-		readonly clientContext?: any /* Object */;
+		readonly clientContext?: Object;
 		/** 
 		 * (Read only) For requests submitted by a DataBoundComponent, the Canvas.ID of the
 		 * submitting component.
@@ -1325,7 +1325,7 @@ declare namespace Isc {
 		 * ListGrid.fetchData.
 		 * Flags: IR
 		 */
-		readonly data?: any | Array<any> /* Object | Array of Object */;
+		readonly data?: Object | Array<Object> /* Object | Array of Object */;
 		/** 
 		 * DataSource.dataProtocol','DataProtocol for this particular request.
 		 * 
@@ -1773,7 +1773,7 @@ declare namespace Isc {
 		 * dataSource.allowClientFieldValueExpressions: false
 		 * Flags: IRW, Group: transactionChaining
 		 */
-		readonly fieldValueExpressions?: any /* Object */;
+		readonly fieldValueExpressions?: Object;
 		/** 
 		 * Specifies should related updates have to be generated.
 		 * If not set (or set to null) then related updates will be generated only for
@@ -1850,7 +1850,7 @@ declare namespace Isc {
 		 * modified using RPCRequest.httpHeaders.
 		 * Flags: IRW
 		 */
-		readonly headerData?: any /* Object */;
+		readonly headerData?: Object;
 		/** 
 		 * This property is for advanced use in integrating trees that 
 		 * TreeGrid.loadDataOnDemand','load data on demand using data paging.
@@ -2055,7 +2055,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly sortBy?: string | Array<string> | Array<SortSpecifier> /* FieldName | Array of FieldName | Array of SortSpecifiers */;
+		readonly sortBy?: FieldName | Array<FieldName> | Array<SortSpecifier> /* FieldName | Array of FieldName | Array of SortSpecifiers */;
 		/** 
 		 * (Read only) Starting row of requested results, used only with fetch operations. If unset, 0 is assumed.
 		 * 
@@ -2275,7 +2275,7 @@ declare namespace Isc {
 		 * OperationBinding.criteria attribute.
 		 * Flags: IR
 		 */
-		readonly fieldName?: string /* FieldName */;
+		readonly fieldName?: FieldName;
 		/** 
 		 * (Read only) The name of the operator to apply when constructing criteria. This property only applies 
 		 * to criteria; it is ignored if specified as part of a OperationBinding.values 
@@ -2420,7 +2420,7 @@ declare namespace Isc {
 		 * (Read only) A normalizer function which this sortSpecifier will use to sort.
 		 * Flags: IR
 		 */
-		readonly normalizer?: any /* Function */;
+		readonly normalizer?: Function;
 		/** 
 		 * (Read only) The property name, eg a ListGridField','field name, to which this sortSpecifier applies.
 		 * Flags: IR
@@ -3102,7 +3102,7 @@ declare namespace Isc {
 		 * If unset, hilite is applied to every field of the record.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly fieldName?: string | Array<string> /* FieldName | Array of FieldName */;
+		readonly fieldName?: FieldName | Array<FieldName> /* FieldName | Array of FieldName */;
 		/** 
 		 * (Read only) HTML to append to the end of cell values where this hilite is applied.
 		 * Flags: IR, Group: hiliting
@@ -3446,7 +3446,7 @@ declare namespace Isc {
 		 * returned data.
 		 * Flags: IRW
 		 */
-		readonly clientContext?: any /* Object */;
+		readonly clientContext?: Object;
 		/** 
 		 * (Advanced) For use during relogin','Relogin, this property marks this request an attempt to
 		 * login, therefore a response containing the loginRequiredMarker is a normal
@@ -3505,7 +3505,7 @@ declare namespace Isc {
 		 * for details.
 		 * Flags: IRW
 		 */
-		readonly data?: String | Record | any /* String | Record | Object */;
+		readonly data?: String | Record | Object;
 		/** 
 		 * (Advanced) If enabled, causes the RPCRequest to download the requested resource as a file, either 
 		 * showing the browser's Save dialog or displaying the file-content in 
@@ -3569,7 +3569,7 @@ declare namespace Isc {
 		 * variable foo in the result will evaluate to "bar".
 		 * Flags: IRWA, Group: viewLoading
 		 */
-		readonly evalVars?: any /* Object */;
+		readonly evalVars?: Object;
 		/** 
 		 * HTTP headers to send, as a Object mapping Header name -> Header value, eg
 		 * { "Content-Type" : "text/xml" }
@@ -3577,7 +3577,7 @@ declare namespace Isc {
 		 * Valid with the xmlHttpRequest RPCRequest.transport','transport only.
 		 * Flags: IRW
 		 */
-		readonly httpHeaders?: any /* Object */;
+		readonly httpHeaders?: Object;
 		/** 
 		 * Selects the HTTP method that will be used for the request. Typical values are "POST" and
 		 * "GET".
@@ -3662,7 +3662,7 @@ declare namespace Isc {
 		 * logged in the Developer Console if multiple RPCRequests specified params.
 		 * Flags: IRW
 		 */
-		readonly params?: any /* Object */;
+		readonly params?: Object;
 		/** 
 		 * (Advanced) When set to true, assume the request is not going to the SmartClient server, and hence send
 		 * a simple HTTP request. Values specified in RPCRequest.params are sent to to the
@@ -3965,7 +3965,7 @@ declare namespace Isc {
 		 * The ID must be unique within DrawPane.gradients if defined.
 		 * Flags: IR
 		 */
-		readonly id?: string /* Identifier */;
+		readonly id?: Identifier;
 		/** 
 		 * (Read only) A start color for the gradient. If both startColor and Gradient.endColor','endColor
 		 * are set then Gradient.colorStops','colorStops is ignored.
@@ -4128,7 +4128,7 @@ declare namespace Isc {
 		 * if EditNode.type is "ListGrid", liveObject would be a ListGrid.
 		 * Flags: IR
 		 */
-		readonly liveObject?: any /* Object */;
+		readonly liveObject?: Object;
 		/** 
 		 * (Read only) SCClassName of the EditNode.liveObject
 		 * , for example, "ListGrid".
@@ -4261,7 +4261,7 @@ declare namespace Isc {
 		 * (Read only) A normalizer function which this groupSpecifier will use to group.
 		 * Flags: IR
 		 */
-		readonly normalizer?: any /* Function */;
+		readonly normalizer?: Function;
 		/** 
 		 * (Read only) The property name, eg a ListGridField','field name, to which this groupSpecifier applies.
 		 * Flags: IR
@@ -5539,7 +5539,7 @@ declare namespace Isc {
 		 * rules explained FormItemType','here.
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly editorType?: string /* FormItemClassName */;
+		readonly editorType?: FormItemClassName;
 		/** 
 		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
 		 * writes to this field are to be allowed. If the specified expression does not evaluate
@@ -5782,7 +5782,7 @@ declare namespace Isc {
 		 * DataSourceField.editorType property, or from the field's DataSourceField.type.
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly filterEditorType?: string /* FormItemClassName */;
+		readonly filterEditorType?: FormItemClassName;
 		/** 
 		 * (Read only) See DataSource.tableCode.
 		 * Flags: R
@@ -6695,7 +6695,7 @@ declare namespace Isc {
 		 * field.
 		 * Flags: IR, Group: basics
 		 */
-		readonly name?: string /* FieldName */;
+		readonly name?: FieldName;
 		/** 
 		 * (Read only) Only applicable to "sql" dataSources. If set, this property indicates that the field is 
 		 * bound to the column named in the property. It is used to bind a DataSourceField to a 
@@ -6836,7 +6836,7 @@ declare namespace Isc {
 		 * SimpleType.readOnlyEditorType.
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly readOnlyEditorType?: string /* FormItemClassName */;
+		readonly readOnlyEditorType?: FormItemClassName;
 		/** 
 		 * (Read only) For a sqlDataSource','SQL DataSource field that specifies a
 		 * DataSourceField.foreignKey','foreignKey, this property defines the table alias name to
@@ -8226,7 +8226,7 @@ declare namespace Isc {
 		 * bindings are also identical.
 		 * Flags: IR
 		 */
-		readonly xmlNamespaces?: any /* Object */;
+		readonly xmlNamespaces?: Object;
 		/** 
 		 * (Read only) Valid only with WebService.callOperation. If set, do not transform XML results to
 		 * JavaScript. Instead just return the XML nodes selected by the passed XPath or recordName,
@@ -8308,7 +8308,7 @@ declare namespace Isc {
 		 * identifier).
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly name?: string /* Identifier */;
+		readonly name?: Identifier;
 		/** 
 		 * (Read only) This property allows developer to "nest" header spans, grouping fields together by
 		 * multiple layers of granularity.
@@ -8423,7 +8423,7 @@ declare namespace Isc {
 		 * current Canvas.ruleScope','rule context.
 		 * Flags: IR
 		 */
-		readonly formulaVars?: any /* Map */;
+		readonly formulaVars?: Map<any, any> /* Map */;
 		/** 
 		 * Formula to be evaluated.
 		 * 
@@ -8753,14 +8753,14 @@ declare namespace Isc {
 		 * history entry, the callback is fired with an id of null.
 		 * 
 		 * 
-		 * @param {String} callback - The callback to invoke when the user navigates to a synthetic history entry.
+		 * @param {String | Object} callback - The callback to invoke when the user navigates to a synthetic history entry.
 		 * @param {boolean} requiresData - If passed, this callback will only be fired if the user is navigating to a history entry that was explicitly generated in this browser session.
 		 * @param {boolean} isAdditional - If false or unspecified, then the callback is considered to be the primary callback, replacing the previous primary callback if the primary callback was
 		 * previously registered. If true, then the callback is an additive callback; that is, it is
 		 * called in addition to the primary callback, and after the primary callback is called.
 		 * @return {int} the ID of the callback. This can be passed to ${isc.DocUtils.linkForRef('staticMethod:History.unregisterCallback')} to remove the callback.
 		 */
-		registerCallback(callback:String | any /* String | Object */, requiresData:boolean, isAdditional?:boolean): int; 
+		registerCallback(callback:String | Object, requiresData:boolean, isAdditional?:boolean): int; 
 
 		/**  
 		 * 
@@ -9595,7 +9595,7 @@ declare namespace Isc {
 		 * See ListGridField.groupingModes','field.groupingModes.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly defaultGroupingMode?: string /* Identifier */;
+		readonly defaultGroupingMode?: Identifier;
 		/** 
 		 * (Read only, Advanced) If this field is editable, this property will be passed to editors displayed for
 		 * cells within this field as FormItem.defaultIconSrc.
@@ -9740,7 +9740,7 @@ declare namespace Isc {
 		 * fields.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorType?: string /* FormItemClassName */;
+		readonly editorType?: FormItemClassName;
 		/** 
 		 * When some cell in this field is being edited, setting this property will specify the
 		 * height for value icons in the cell's editor. If unset, the editor's valueIcon width and
@@ -9754,7 +9754,7 @@ declare namespace Isc {
 		 * will be determined in the same way as it would be for a static cell.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly editorValueIcons?: any /* Map<String,String> */;
+		readonly editorValueIcons?: Map<String,String>;
 		/** 
 		 * When some cell in this field is being edited, setting this property will specify the
 		 * width for value icons in the cell's editor. If unset, the editor's valueIcon width and
@@ -9855,14 +9855,14 @@ declare namespace Isc {
 		 * 'type' of the field (showing the appropriate form item for the data-type).
 		 * Flags: IRWA, Group: filterEditor
 		 */
-		readonly filterEditorType?: string /* FormItemClassName */;
+		readonly filterEditorType?: FormItemClassName;
 		/** 
 		 * If this listGrid is showing a filter row, this property can be used to specify a
 		 * mapping of internal data to/from display values to be in the appropriate filter
 		 * row form item.
 		 * Flags: IRW, Group: filterEditor
 		 */
-		readonly filterEditorValueMap?: any /* Object */;
+		readonly filterEditorValueMap?: Object;
 		/** 
 		 * (Advanced) If we're showing the filterEditor (listGrid.showFilterEditor is true), this property
 		 * determines whether this list should be filtered every time the user edits the value of
@@ -9947,7 +9947,7 @@ declare namespace Isc {
 		 * ListGrid creation to affect the initial grouping.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly groupingMode?: string /* Identifier */;
+		readonly groupingMode?: Identifier;
 		/** 
 		 * (Read only) If this field can be grouped, this attribute represents the set of grouping styles that 
 		 * are available. For example, a "date" field might be able to be 
@@ -10298,7 +10298,7 @@ declare namespace Isc {
 		 * record summary value calculations for summary fields who's name is included in this array.
 		 * Flags: IR
 		 */
-		readonly includeInRecordSummaryFields?: Array<string> /* Array of FieldName */;
+		readonly includeInRecordSummaryFields?: Array<FieldName> /* Array of FieldName */;
 		/** 
 		 * (Read only) In an editable ListGrid, initial value for this field when the user begins editing a new
 		 * record.
@@ -10411,7 +10411,7 @@ declare namespace Isc {
 		 * ListGridField overriding those on the DataSourceField.
 		 * Flags: IR, Group: data
 		 */
-		readonly name?: string /* FieldName */;
+		readonly name?: FieldName;
 		/** 
 		 * (Read only) This value is managed by the menu item titled ListGrid.filterUsingText','"Filter using"
 		 * in the ListGrid.showHeaderContextMenu','headerContextMenu that appears when 
@@ -10985,7 +10985,7 @@ declare namespace Isc {
 		 * method will execute when the user clicks the icon.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIcons?: any /* Map<String,String> */;
+		readonly valueIcons?: Map<String,String>;
 		/** 
 		 * Default width and height of value icons in this field.
 		 * Takes precedence over valueIconWidth, valueIconHeight and valueIconSize specified at
@@ -11011,7 +11011,7 @@ declare namespace Isc {
 		 * See also DataSourceField.valueMap.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly valueMap?: any | Array<String> /* Object | Array of String */;
+		readonly valueMap?: Object | Array<String> /* Object | Array of String */;
 		/** 
 		 * The width of this field, specified as either an absolute number of pixels,
 		 * a percentage of the remaining space like "25%", or "*" to split remaining space among
@@ -11122,9 +11122,9 @@ declare namespace Isc {
 		 * - the colNum being edited [item.colNum]
 		 * - the rowNum being edited [item.rowNum]
 		 * @param {DynamicForm} form - the managing DynamicForm instance
-		 * @param {any} values - the current set of values for the form as a whole
+		 * @param {Object} values - the current set of values for the form as a whole
 		 */
-		defaultDynamicValue?(item:FormItem, form:DynamicForm, values:any /* Object */): void; 
+		defaultDynamicValue?(item:FormItem, form:DynamicForm, values:Object): void; 
 
 		/**  
 		 * (Advanced)  Callback fired when the user first starts editing a cell.
@@ -11230,13 +11230,13 @@ declare namespace Isc {
 		 * If present this method will be called from ListGrid.getEditorValueMap and the resulting
 		 * valueMap will be used instead of any static specified valueMap for the field.
 		 * 
-		 * @param {any} values - Field values for record being edited. Note that this will include the current edit values for fields that have not yet been saved.
+		 * @param {Object} values - Field values for record being edited. Note that this will include the current edit values for fields that have not yet been saved.
 		 * May be null, if editing a new record.
 		 * @param {ListGridField} field - pointer to the listGridField
 		 * @param {ListGrid} grid - pointer back to this ListGrid instance.
 		 * @return {ValueMap} ValueMap for the field (or null if no valueMap required)
 		 */
-		getEditorValueMap?(values:any /* Object */, field:ListGridField, grid:ListGrid): ValueMap; 
+		getEditorValueMap?(values:Object, field:ListGridField, grid:ListGrid): ValueMap; 
 
 		/**  
 		 *  If your derivation of the field title is more complex than specifying a static string,
@@ -11267,14 +11267,14 @@ declare namespace Isc {
 		 * 
 		 * @param {Array<ListGridRecord>} records - records for which a summary is being generated
 		 * @param {ListGridField} field - pointer to the field for which summary value is being generated
-		 * @param {Array<any>} groupSummaries - If this grid is grouped and ListGrid.showGridSummary is specified, this parameter contains an array of already-
+		 * @param {Array<Object>} groupSummaries - If this grid is grouped and ListGrid.showGridSummary is specified, this parameter contains an array of already-
 		 * calculated summary values for each group in the grid. Each element in this array will
 		 * be an object containing calculated summary values for each field in the grid, as well as
 		 * a specified groupValue and groupName, allowing the developer to determine which group this
 		 * summary value comes from
 		 * @return {any} summary value to display.
 		 */
-		getGridSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupSummaries?:Array<any> /* Array of Object */): any /* Any */; 
+		getGridSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupSummaries?:Array<Object> /* Array of Object */): any /* Any */; 
 
 		/**  
 		 * (Advanced)  If ListGrid.showGroupSummary is true, and this method is specified it will be
@@ -11287,10 +11287,10 @@ declare namespace Isc {
 		 * 
 		 * @param {Array<ListGridRecord>} records - records for which a summary is being generated (so all records in the group).
 		 * @param {ListGridField} field - pointer to the field for which summary value is being generated
-		 * @param {any} groupNode - object with specified groupValue and groupName for this group
+		 * @param {Object} groupNode - object with specified groupValue and groupName for this group
 		 * @return {any} summary value to display
 		 */
-		getGroupSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupNode?:any /* Object */): any /* Any */; 
+		getGroupSummary?(records:Array<ListGridRecord> /* Array of ListGridRecord */, field:ListGridField, groupNode?:Object): any /* Any */; 
 
 		/**  
 		 *  Return the title that should be shown to the user for the group with the
@@ -11301,12 +11301,12 @@ declare namespace Isc {
 		 * 
 		 * @param {any} groupValue - the value from the group is created, the result of ListGridField.getGroupValue
 		 * @param {GroupNode} groupNode - the node in the grid containing the group.
-		 * @param {any} field - Field object for which to get group value
+		 * @param {Object} field - Field object for which to get group value
 		 * @param {String} fieldName - The name of the field
 		 * @param {ListGrid} grid - the ListGrid displaying the cell
 		 * @return {any} Group value to which this record belongs
 		 */
-		getGroupTitle?(groupValue:any /* Any */, groupNode:GroupNode, field:any /* Object */, fieldName:String, grid:ListGrid): any /* Any */; 
+		getGroupTitle?(groupValue:any /* Any */, groupNode:GroupNode, field:Object, fieldName:String, grid:ListGrid): any /* Any */; 
 
 		/**  
 		 *  Return the value which records should be grouped by.
@@ -11323,12 +11323,12 @@ declare namespace Isc {
 		 * @param {ListGridRecord} record - Record object for the cell. Note: If this is a new row that has not been saved, in an
 		 * editable grid, it has no associated record object. In this case the edit values will
 		 * be passed in as this parameter (see ListGrid.getEditValues)
-		 * @param {any} field - Field object for which to get group value
+		 * @param {Object} field - Field object for which to get group value
 		 * @param {String} fieldName - The name of the field
 		 * @param {ListGrid} grid - the ListGrid displaying the cell
 		 * @return {any} Group value to which this record belongs
 		 */
-		getGroupValue?(value:any /* Any */, record:ListGridRecord, field:any /* Object */, fieldName:String, grid:ListGrid): any /* Any */; 
+		getGroupValue?(value:any /* Any */, record:ListGridRecord, field:Object, fieldName:String, grid:ListGrid): any /* Any */; 
 
 		/**  
 		 * (Advanced)  Only applies to ListGridFieldType','summary-type fields. If specified, this
@@ -11380,13 +11380,13 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {any} value - value displayed in the editor for the cell
-		 * @param {any} record - record object for the row being edited. May be null if this is a new row being added to the end of the list.
+		 * @param {Object} record - record object for the row being edited. May be null if this is a new row being added to the end of the list.
 		 * @param {number} rowNum - row number for the cell
 		 * @param {number} colNum - column number for the cell.
 		 * @param {ListGrid} grid - A pointer to the ListGrid displaying the cell
 		 * @return {any} raw value for the field derived from formatted value in editor
 		 */
-		parseEditorValue?(value:any /* Any */, record:any /* Object */, rowNum:number, colNum:number, grid:ListGrid /* ListGrid Instance */): any /* Any */; 
+		parseEditorValue?(value:any /* Any */, record:Object, rowNum:number, colNum:number, grid:ListGrid /* ListGrid Instance */): any /* Any */; 
 
 		/**  
 		 * 
@@ -11420,11 +11420,11 @@ declare namespace Isc {
 		 * @param {number} recordNum - number of the record clicked on in the current set of displayed records (starts with 0)
 		 * @param {ListGridField} field - the field that was clicked on (field definition)
 		 * @param {number} fieldNum - number of the field clicked on in the listGrid.fields array
-		 * @param {any} value - value of the cell (after valueMap, etc. applied)
-		 * @param {any} rawValue - raw value of the cell (before valueMap, etc applied)
+		 * @param {Object} value - value of the cell (after valueMap, etc. applied)
+		 * @param {Object} rawValue - raw value of the cell (before valueMap, etc applied)
 		 * @return {boolean} false to stop event bubbling
 		 */
-		recordDoubleClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, fieldNum:number, value:any /* Object */, rawValue:any /* Object */): boolean; 
+		recordDoubleClick?(viewer:ListGrid, record:ListGridRecord, recordNum:number, field:ListGridField, fieldNum:number, value:Object, rawValue:Object): boolean; 
 
 		/**  
 		 *  An optional stringMethods','stringMethod which if provided, is evaluated to
@@ -11467,13 +11467,13 @@ declare namespace Isc {
 		 * DataSourceField.sortByField.
 		 * 
 		 * 
-		 * @param {any} recordObject - record to normalize
+		 * @param {Object} recordObject - record to normalize
 		 * @param {String} fieldName - name of the field on which sorting occurred
 		 * @param {ListGrid} context - A pointer back to the list grid displaying this field will be available as the context argument. Note that you can also get a pointer
 		 * to the field definition object by calling context.getField(fieldName)
 		 * @return {any} normalized value for sorting
 		 */
-		sortNormalizer?(recordObject:any /* Object */, fieldName:String, context:ListGrid): any /* Any */; 
+		sortNormalizer?(recordObject:Object, fieldName:String, context:ListGrid): any /* Any */; 
 
 		/**  
 		 * 
@@ -12354,7 +12354,7 @@ declare namespace Isc {
 		 * DetailViewerField.displayField.
 		 * Flags: IR
 		 */
-		readonly name?: string /* FieldName */;
+		readonly name?: FieldName;
 		/** 
 		 * If specified, when generating print HTML for this detailViewer, 
 		 * cells in this field will be rendered using this css className rather than
@@ -12439,7 +12439,7 @@ declare namespace Isc {
 		 * specifying a mapping of internal values to display values for the field (row).
 		 * Flags: IR
 		 */
-		readonly valueMap?: any /* Object */;
+		readonly valueMap?: Object;
 
 		/* Instance Method Overrides */
 		/**  
@@ -12459,12 +12459,12 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {String} value - actual value of this cell
-		 * @param {any} field - field object for this cell
-		 * @param {any} record - record object for this cell
+		 * @param {Object} field - field object for this cell
+		 * @param {Object} record - record object for this cell
 		 * @param {DetailViewer} viewer - the viewer instance to which this cell belongs
 		 * @return {CSSStyleName} CSS style for this cell
 		 */
-		getCellStyle?(value:String, field:any /* Object */, record:any /* Object */, viewer:DetailViewer): CSSStyleName; 
+		getCellStyle?(value:String, field:Object, record:Object, viewer:DetailViewer): CSSStyleName; 
 
 		/**  
 		 * 
@@ -12852,7 +12852,7 @@ declare namespace Isc {
 		 * current Canvas.ruleScope','rule context.
 		 * Flags: IR
 		 */
-		readonly summaryVars?: any /* Map */;
+		readonly summaryVars?: Map<any, any> /* Map */;
 		/** 
 		 * Summary to be evaluated.
 		 * 
@@ -12948,7 +12948,7 @@ declare namespace Isc {
 		 * simply be assigned to EditNode.liveObject for the created editNode.
 		 * Flags: IR
 		 */
-		readonly liveObject?: any /* Object */;
+		readonly liveObject?: Object;
 		/** 
 		 * (Read only) Textual title for this paletteNode.
 		 * Flags: IR
@@ -13125,9 +13125,9 @@ declare namespace Isc {
 		 * specified as EdgedCanvas.edgeColor.
 		 * This can either be a string with comma separated colors or an Array
 		 * of colors.
-		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 * @param {String | Function} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheEdgeImages(baseURLs:String | Array<any> /* String | Array */, showCenter?:boolean /* Boolean */, edges?:String | Array<any> /* String | Array */, colors?:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
+		cacheEdgeImages(baseURLs:String | Array<any> /* String | Array */, showCenter?:boolean /* Boolean */, edges?:String | Array<any> /* String | Array */, colors?:String | Array<any> /* String | Array */, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13136,7 +13136,7 @@ declare namespace Isc {
 		 * 
 		 * @param {String} URLs - List of URLs to cache. These may point to image, js, or css files. This can either be a string with comma separated URLs or an
 		 * Array of URLs.
-		 * @param {String} onload - Optional code to execute when the last of the specified files has been cached.
+		 * @param {String | Function} onload - Optional code to execute when the last of the specified files has been cached.
 		 * @param {String} type - Specifies the type of the files referenced by the URLs. Valid values are: "js", "css", and "image". If not specified, the type is auto-derived from
 		 * the file extension. If a type cannot be derived, the cache directive
 		 * for that specific URL will be ignored and an error will be logged to
@@ -13144,7 +13144,7 @@ declare namespace Isc {
 		 * non-standard extension for your file - for example if you use a JSP
 		 * or a servlet with no extension to generate images.
 		 */
-		cacheFiles(URLs:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */, type?:String): void; 
+		cacheFiles(URLs:String | Array<any> /* String | Array */, onload?:String | Function, type?:String): void; 
 
 		/**  
 		 * 
@@ -13168,9 +13168,9 @@ declare namespace Isc {
 		 * "Down,Over,Selected,Selected_Down,Selected_Over". This can
 		 * either be a string with comma separated states or an Array
 		 * of states.
-		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 * @param {String | Function} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheImgStates(baseURLs:String | Array<any> /* String | Array */, states?:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
+		cacheImgStates(baseURLs:String | Array<any> /* String | Array */, states?:String | Array<any> /* String | Array */, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13186,9 +13186,9 @@ declare namespace Isc {
 		 * FileLoader.defaultModules will be used. You
 		 * can specify modules as "Core,Foundation" or as ["Core",
 		 * "Foundation"]
-		 * @param {String} onload - Optional code to execute when all specified modules and skin have been cached.
+		 * @param {String | Function} onload - Optional code to execute when all specified modules and skin have been cached.
 		 */
-		cacheISC(skin?:String, modules?:String | List, onload?:String | any /* String | Function */): void; 
+		cacheISC(skin?:String, modules?:String | List, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13196,9 +13196,9 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {String} locale - Name of the locale to cache..
-		 * @param {String} onload - Optional code to execute when all specified locale has been cached..
+		 * @param {String | Function} onload - Optional code to execute when all specified locale has been cached..
 		 */
-		cacheLocale(locale?:String, onload?:String | any /* String | Function */): void; 
+		cacheLocale(locale?:String, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13207,9 +13207,9 @@ declare namespace Isc {
 		 * 
 		 * @param {String} modules - List of SmartClient modules to cache. This can either be a string with comma separated module names or an Array of module
 		 * names.
-		 * @param {String} onload - Optional code to execute when the last of the specified modules has been cached.
+		 * @param {String | Function} onload - Optional code to execute when the last of the specified modules has been cached.
 		 */
-		cacheModules(modules:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
+		cacheModules(modules:String | Array<any> /* String | Array */, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13234,9 +13234,9 @@ declare namespace Isc {
 		 * @param {String} depths - List of depths to load. These values corresponds to the Canvas attribute Canvas.shadowDepth. This can either be
 		 * a string with comma separated depths or an Array of depths.
 		 * @param {String} baseShadowImage - Name of the base shadow image from which list of URLs is generated. If not specified, this defaults to "ds.png".
-		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 * @param {String | Function} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheShadows(baseDir:String, depths:String | Array<any> /* String | Array */, baseShadowImage?:String, onload?:String | any /* String | Function */): void; 
+		cacheShadows(baseDir:String, depths:String | Array<any> /* String | Array */, baseShadowImage?:String, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13269,9 +13269,9 @@ declare namespace Isc {
 		 * @param {String} pieces - List of StretchImg pieces to cache. If not specified, the following list will be used: "start,stretch,end". This can
 		 * either be a string with comma separated piece names or an Array
 		 * of piece names.
-		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed caching.
+		 * @param {String | Function} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheStretchImgStates(baseURLs:String | Array<any> /* String | Array */, states?:String | Array<any> /* String | Array */, pieces?:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
+		cacheStretchImgStates(baseURLs:String | Array<any> /* String | Array */, states?:String | Array<any> /* String | Array */, pieces?:String | Array<any> /* String | Array */, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13308,9 +13308,9 @@ declare namespace Isc {
 		 * FileLoader.defaultModules will be used. You
 		 * can specify modules as e.g: "Core,Foundation" or as ["Core",
 		 * "Foundation"]
-		 * @param {String} onload - Optional code to execute when all specified modules and skin have loaded.
+		 * @param {String | Function} onload - Optional code to execute when all specified modules and skin have loaded.
 		 */
-		loadISC(skin?:String, modules?:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
+		loadISC(skin?:String, modules?:String | Array<any> /* String | Array */, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13318,9 +13318,9 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {String} URLs - List of URLs pointing to JS files to load. This can either be a string with comma separated URLs or an Array of URLs.
-		 * @param {String} onload - Optional code to execute when the last of the specified URLs has completed loading.
+		 * @param {String | Function} onload - Optional code to execute when the last of the specified URLs has completed loading.
 		 */
-		loadJSFiles(URLs:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
+		loadJSFiles(URLs:String | Array<any> /* String | Array */, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13328,9 +13328,9 @@ declare namespace Isc {
 		 * 
 		 * 
 		 * @param {String} locale - Name of the locale to load.
-		 * @param {String} onload - Optional code to execute when all specified locale has loaded.
+		 * @param {String | Function} onload - Optional code to execute when all specified locale has loaded.
 		 */
-		loadLocale(locale?:String, onload?:String | any /* String | Function */): void; 
+		loadLocale(locale?:String, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13342,9 +13342,9 @@ declare namespace Isc {
 		 * 
 		 * @param {String} modules - List of SmartClient modules to load. This can either be a string with comma separated module names or an Array of module
 		 * names.
-		 * @param {String} onload - Optional code to execute when the last of the specified modules has completed loading.
+		 * @param {String | Function} onload - Optional code to execute when the last of the specified modules has completed loading.
 		 */
-		loadModules(modules:String | Array<any> /* String | Array */, onload?:String | any /* String | Function */): void; 
+		loadModules(modules:String | Array<any> /* String | Array */, onload?:String | Function): void; 
 
 	} // FileLoaderStatic
 
@@ -13467,7 +13467,7 @@ declare namespace Isc {
 		 * via FormItem.getIcon.
 		 * Flags: IR
 		 */
-		readonly name?: string /* Identifier */;
+		readonly name?: Identifier;
 		/** 
 		 * (Advanced) If icon.neverDisable is true, when this form item is disabled, the 
 		 * icon will remain enabled. 
@@ -13718,7 +13718,7 @@ declare namespace Isc {
 		 * null means an ordinary TextItem is fine.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly editorType?: string /* FormItemClassName */;
+		readonly editorType?: FormItemClassName;
 		/** 
 		 * (Read only) List of types that this Operator is valid for.
 		 * 
@@ -13775,7 +13775,7 @@ declare namespace Isc {
 		 * when used with text-based fields.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly textTitleProperty?: string /* Identifier */;
+		readonly textTitleProperty?: Identifier;
 		/** 
 		 * (Read only) User-visible title for this operator, such as "doesn't contain".
 		 * 
@@ -13788,7 +13788,7 @@ declare namespace Isc {
 		 * (Read only) Name of a property on the Operators class that provides the title for this operator.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly titleProperty?: string /* Identifier */;
+		readonly titleProperty?: Identifier;
 		/** 
 		 * (Read only) Indicates the kind of value expected in a Criterion that uses this operator.
 		 * OperatorValueType lists possibilities.
@@ -13863,11 +13863,11 @@ declare namespace Isc {
 		 * FormItem.getCriterion','getCriterion() on the passed FormItem','item.
 		 * 
 		 * 
-		 * @param {string} fieldName - 
+		 * @param {FieldName} fieldName - 
 		 * @param {FormItem} item - 
 		 * @return {Criterion} 
 		 */
-		getCriterion?(fieldName:string /* FieldName */, item:FormItem): Criterion; 
+		getCriterion?(fieldName:FieldName, item:FormItem): Criterion; 
 
 	} // Operator
 

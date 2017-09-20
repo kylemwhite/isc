@@ -4,7 +4,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/20/2017 7:00:15 AM by kwhite
+// Generated: 9/20/2017 1:09:06 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 declare namespace Isc {
@@ -571,7 +571,7 @@ declare namespace Isc {
 		 * current filter criteria.
 		 * Flags: IRWA, Group: dragging
 		 */
-		readonly dropValues: any /* Object */;
+		readonly dropValues: Object;
 
 		/** 
 		 * DSRequest.operationId','operationId this component should use when performing update operations.
@@ -593,7 +593,7 @@ declare namespace Isc {
 		 * can be edited - for example ListGrid.canEditCell may be overridden.
 		 * Flags: IRA
 		 */
-		readonly canEditFieldAttribute: string /* Identifier */;
+		readonly canEditFieldAttribute: Identifier;
 
 		/** 
 		 * Text for a menu item allowing users to edit the formatter for a field

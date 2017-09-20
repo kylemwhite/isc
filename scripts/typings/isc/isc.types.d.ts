@@ -3,7 +3,7 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/20/2017 7:00:15 AM by kwhite
+// Generated: 9/20/2017 1:09:06 PM by kwhite
 // Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
 
 declare namespace Isc {
@@ -5462,9 +5462,9 @@ declare namespace Isc {
 	 * 
 	 * @param {Canvas} screen - The last top-level component loaded
 	 * @param {RPCResponse} rpcResponse - 
-	 * @param {any} suppressedGlobals - A collection of suppressed globals.
+	 * @param {Map<any,} suppressedGlobals - A collection of suppressed globals.
 	 */
-	export type LoadScreenCallback = (screen?:Canvas, rpcResponse?:RPCResponse, suppressedGlobals?:any /* Map */) => void; 
+	export type LoadScreenCallback = (screen?:Canvas, rpcResponse?:RPCResponse, suppressedGlobals?:Map<any, any> /* Map */) => void; 
 
 	/**  
 	 *  Callback fired with the PaletteNode','PaletteNodes obtained asynchronously.
@@ -5577,10 +5577,10 @@ declare namespace Isc {
 	 * is not available in the form.
 	 * @param {Validator} validator - Validator declaration from eg DataSourceField.validators.
 	 * @param {any} value - value to validate
-	 * @param {any} record - Field values for record being validated.
+	 * @param {Object} record - Field values for record being validated.
 	 * @return {boolean} whether the value passed validation.  True for passed, false for fail.
 	 */
-	export type ValidatorConditionCallback = (item:DataSourceField | FormItem, validator:Validator, value:any /* Any */, record:any /* Object */) => boolean; 
+	export type ValidatorConditionCallback = (item:DataSourceField | FormItem, validator:Validator, value:any /* Any */, record:Object) => boolean; 
 
 	/**  
 	 *  Callback fired when DataSource.getFile completes.
@@ -5597,10 +5597,10 @@ declare namespace Isc {
 	 * 
 	 * The available parameters are:
 	 * 
-	 * @param {any} errorMap - null if validation succeeded for all fields, or an object mapping field names to the associated
+	 * @param {Map<any,} errorMap - null if validation succeeded for all fields, or an object mapping field names to the associated
 	 * errors, for those fields that failed validation.
 	 */
-	export type ValidationStatusCallback = (errorMap:any /* Map */) => void; 
+	export type ValidationStatusCallback = (errorMap:Map<any, any> /* Map */) => void; 
 
 	/**  
 	 *  A Callback fired by the TabIndexManager when application code or user
@@ -5673,12 +5673,12 @@ declare namespace Isc {
 	 *  Callback required for the property DataSourceField.getFieldValue.
 	 * 
 	 * 
-	 * @param {any} record - record object selected from web service response data by OperationBinding.recordXPath','recordXPath
+	 * @param {Object | XMLElement} record - record object selected from web service response data by OperationBinding.recordXPath','recordXPath
 	 * @param {any} value - default value derived by the method described in DataSourceField.valueXPath
 	 * @param {DataSourceField} field - DataSourceField definition
-	 * @param {string} fieldName - name of the DataSource field
+	 * @param {FieldName} fieldName - name of the DataSource field
 	 */
-	export type GetFieldValueCallback = (record:any | XMLElement /* Object | XMLElement */, value:any /* Any */, field:DataSourceField, fieldName:string /* FieldName */) => void; 
+	export type GetFieldValueCallback = (record:Object | XMLElement, value:any /* Any */, field:DataSourceField, fieldName:FieldName) => void; 
 
 	/**  
 	 *  Callback executed when a message is sent to a channel that you have

@@ -84,19 +84,18 @@ window.onload = () => {
        // , border: "1px solid green"
     });
 
-    let viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'pop' }] })";
+    let viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'ind' }] })";
 
     // Using (isc.DataSource as any) because the operationBindings are declared as Array<OperationBinding> and OperationBinding has a bunch of required fields.
     // Need to generate it as Array<OperationBindingProps> or make everything optional in OperationBinding.
     let countryDS = (isc.DataSource as any).create({
         ID: "countryDS"
         , dataFormat: "xml"
-        , recordXPath: "//country"
-        , viewState: viewState
+        , recordXPath: "//country"        
         , fields: [
-             { name: "countryCode", title: "Code", primaryKey: true, canEdit: "false" },
-           , { name: "countryName", title: "Country" },
-           , { name: "capital", title: "Capital" },
+             { name: "countryCode", title: "Code", primaryKey: true, canEdit: "false" }
+           , { name: "countryName", title: "Country" }
+           , { name: "capital", title: "Capital" }
            , { name: "population" }
            , { name: "independence" }
         ]
@@ -120,11 +119,11 @@ window.onload = () => {
         ]
     });
 
-    //let countryDS: any;
 
     let grid = isc.ListGrid.create({
         ID: "countryList"
         , autoDraw: false
+        , viewState: viewState
         , width: "100%"
         , height: "100%"
         , alternateRecordStyles: true
@@ -147,6 +146,8 @@ window.onload = () => {
     });
 
     //tabSet.setProperty("margin", "5px 30px 20px 10px");
+
+    let test: Map<any, any>;
 
 
     tabSet.addTab({
