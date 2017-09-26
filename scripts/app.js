@@ -11,9 +11,37 @@ function play() {
         ]
     });
     menu.setData;
-    var tof;
+    var bool;
+    //bool = true;  // ok
+    //bool = false; // ok
+    //bool = undefined;  // error is strictNullChecks = true
+    //bool = null;       // error is strictNullChecks = true
+    //let Bool: Boolean;
+    //Bool = true;   // ok
+    //Bool = false;  // ok
+    //Bool = undefined;
+    //Bool = null;
     var strTest = "Hello World!";
     var ep = strTest.indexOf("W");
+}
+function play1() {
+    var num = 8;
+    //num = null;
+    //var bool = true;        // OK
+    //console.log("typeof(bool) is " + typeof (bool));
+    //bool = false;       // OK
+    //console.log("typeof(bool) is " + typeof (bool))
+    //bool = undefined;   // OK but typeof(bool) is now "undefined"
+    //console.log("typeof(bool) is " + typeof (bool))
+    //bool = null;        // OK, but typeof(bool) is now "object"
+    //console.log("typeof(bool) is " + typeof (bool))
+    //bool = "false";     // OK but it's not a boolean anymore.
+    //console.log("bool is " + typeof (bool))
+    //var Bool = new Boolean(true);
+    //Bool = false;
+    //Bool = undefined;
+    //Bool = null;
+    //Bool = "false";
 }
 // Sample app.
 var Greeter = (function () {

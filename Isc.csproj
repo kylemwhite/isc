@@ -27,6 +27,7 @@
     <Content Include="images\KMW_16x16.png" />
     <Content Include="index.html" />
     <Content Include="scripts\app.js" />
+    <Content Include="scripts\tests.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
