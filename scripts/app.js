@@ -2,22 +2,30 @@
 "use strict";
 // Test menu
 function play() {
+    var mi;
     var menu = isc.Menu.create({
-        items: [{
+        items: [
+            {
                 title: "hello"
-            }]
+            }
+        ]
     });
     menu.setData;
+    var tof;
+    var strTest = "Hello World!";
+    var ep = strTest.indexOf("W");
 }
 // Sample app.
 var Greeter = (function () {
     function Greeter(element) {
         this.timerToken = 0;
-        this.element = element;
-        this.element.innerHTML += "The time is: ";
-        this.span = document.createElement('span');
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
+        if (element) {
+            this.element = element;
+            this.element.innerHTML += "The time is: ";
+            this.span = document.createElement('span');
+            this.element.appendChild(this.span);
+            this.span.innerText = new Date().toUTCString();
+        }
     }
     Greeter.prototype.start = function () {
         var _this = this;
@@ -38,13 +46,14 @@ var Greeter = (function () {
     return Greeter;
 }());
 window.onload = function () {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
+    var contentDomElement = isc.AutoTest.getElement('content'); // This produces an Isc.DOMElement
+    // let contentElement =  document.getElementById('content');  // This is a JavaScript HTMLElement
+    var greeter = new Greeter(contentDomElement);
     // greeter.start();
     // Add a couple buttons to the 'content' DIV
     var startButton = isc.Button.create({
         title: "Start",
-        htmlElement: el,
+        htmlElement: contentDomElement,
         click: function () {
             greeter.start();
             return true;
@@ -52,19 +61,22 @@ window.onload = function () {
     });
     var stopButton = isc.Button.create({
         title: "Stop",
-        htmlElement: el,
+        htmlElement: contentDomElement,
         click: function () {
             greeter.stop();
             return true;
         }
     });
     // Add a label to the 'footer' DIV
-    var labelVersion = isc.Label.create({
-        contents: "Isomorphic SmartClient Version: <b>" + isc.versionNumber + "</b>",
-        htmlElement: document.getElementById('footer'),
-        autoDraw: true,
-        width: 600
-    });
+    var footerEl = document.getElementById('footer');
+    if (footerEl) {
+        var labelVersion = isc.Label.create({
+            contents: "Isomorphic SmartClient Version: <b>" + isc.versionNumber + "</b>",
+            htmlElement: footerEl,
+            autoDraw: true,
+            width: 600
+        });
+    }
     var viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'ind' }] })";
     // Using (isc.DataSource as any) because the operationBindings are declared as Array<OperationBinding> and OperationBinding has a bunch of required fields.
     // Need to generate it as Array<OperationBindingProps> or make everything optional in OperationBinding.
@@ -116,12 +128,17 @@ window.onload = function () {
         height: 300
     });
     //tabSet.setProperty("margin", "5px 30px 20px 10px");
-    var test;
-    tabSet.addTab({
-        pane: grid,
-        title: "Country Data"
-    });
-    var portletLayout = isc.PortalLayout.create({
+    if (tabSet !== undefined) {
+        var asdf = tabSet.adaptiveHeightPriority;
+        if (tabSet.addTab) {
+            tabSet.addTab({
+                pane: grid,
+                title: "Country Data"
+            });
+        }
+    }
+    var portletLayout;
+    portletLayout = isc.PortalLayout.create({
         ID: 'dashboardPortalLayout',
         autoDraw: false,
         height: '100%',
@@ -168,7 +185,7 @@ window.onload = function () {
         icon: "KMW_16x16.png"
     });
     var layout = isc.VLayout.create({
-        htmlElement: document.getElementById("content"),
+        htmlElement: contentDomElement,
         height: 600,
         width: "100%",
         members: [tabSet],

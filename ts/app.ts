@@ -4,14 +4,27 @@
 
 function play() {
 
+    let mi: Isc.MenuItem;
+
     let menu = isc.Menu.create(
         {
-            items: [{
-                title: "hello"
-            }]
-        });
+            items: [
+                {
+                    title: "hello"
+                } 
+            ] 
+        }
+    );
 
     menu.setData;
+
+    let tof: boolean;
+
+    let strTest: String = "Hello World!";
+
+    let ep = strTest.indexOf("W");
+
+
 }
 
 // Sample app.
@@ -20,12 +33,14 @@ class Greeter {
     span: HTMLElement;
     timerToken: number = 0;
 
-    constructor(element: HTMLElement) {
-        this.element = element;
-        this.element.innerHTML += "The time is: ";
-        this.span = document.createElement('span');
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
+    constructor(element: HTMLElement | null) {
+        if (element) {
+            this.element = element;
+            this.element.innerHTML += "The time is: ";
+            this.span = document.createElement('span');
+            this.element.appendChild(this.span);
+            this.span.innerText = new Date().toUTCString();
+        }
     }
 
     start() {
@@ -50,8 +65,10 @@ class Greeter {
 }
 
 window.onload = () => {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
+    let contentDomElement = isc.AutoTest.getElement('content'); // This produces an Isc.DOMElement
+   // let contentElement =  document.getElementById('content');  // This is a JavaScript HTMLElement
+
+    var greeter = new Greeter(contentDomElement);
 
     
    // greeter.start();
@@ -59,7 +76,7 @@ window.onload = () => {
     // Add a couple buttons to the 'content' DIV
     let startButton = isc.Button.create({
         title: "Start"
-        , htmlElement: el
+        , htmlElement: contentDomElement
         , click: (): boolean => {
             greeter.start();
             return true;
@@ -68,7 +85,7 @@ window.onload = () => {
        
     let stopButton = isc.Button.create({
         title: "Stop"
-        , htmlElement: el
+        , htmlElement: contentDomElement
         , click: (): boolean => {
             greeter.stop();
             return true;
@@ -76,13 +93,16 @@ window.onload = () => {
     });
 
     // Add a label to the 'footer' DIV
-    let labelVersion = isc.Label.create({
-        contents: "Isomorphic SmartClient Version: <b>" + isc.versionNumber + "</b>"
-        , htmlElement: document.getElementById('footer')
-        , autoDraw: true
-        , width: 600
-       // , border: "1px solid green"
-    });
+    let footerEl = document.getElementById('footer');
+    if (footerEl) {
+        let labelVersion = isc.Label.create({
+            contents: "Isomorphic SmartClient Version: <b>" + isc.versionNumber + "</b>"
+            , htmlElement: footerEl as HTMLElement
+            , autoDraw: true
+            , width: 600
+            // , border: "1px solid green"
+        });
+    }
 
     let viewState = "({ field: [{ name: 'countryCode' }, { name: 'countryName' }, { name: 'capital' }, { name: 'population' }, { name: 'independence', align:'right', title:'ind' }] })";
 
@@ -135,7 +155,7 @@ window.onload = () => {
         //, editEvent: "click"
     }) as Isc.ListGrid;
 
-    let tabSet = isc.TabSet.create({        
+    const tabSet = isc.TabSet.create({        
        //  tabBarPosition: "top"
          canReorderTabs: true
         , paneMargin: 15
@@ -146,16 +166,20 @@ window.onload = () => {
     });
 
     //tabSet.setProperty("margin", "5px 30px 20px 10px");
+    if (tabSet !== undefined) {
+        let asdf = tabSet.adaptiveHeightPriority;
 
-    let test: Map<any, any>;
+        if (tabSet.addTab) {
+            tabSet.addTab({
+                pane: grid
+                , title: "Country Data"
+            } as Isc.Tab);
+        }
+    }
 
+    let portletLayout: Isc.PortalLayout;
 
-    tabSet.addTab({
-        pane: grid
-        , title: "Country Data"
-    });
-
-    let portletLayout = isc.PortalLayout.create({
+    portletLayout = isc.PortalLayout.create({
         ID: 'dashboardPortalLayout'
         , autoDraw: false
        // , border: '3px solid blue'
@@ -168,6 +192,7 @@ window.onload = () => {
         , canResizePortlets: true
     });
 
+
     portletLayout.addPortlet(isc.Portlet.create({
         title: "Portlet 1"
         , width: '50%'
@@ -177,7 +202,7 @@ window.onload = () => {
         , showMinimizeButton: true
         , showResizer: false
         , showCloseButton: false
-    }), 0, 0, 0);
+    } as Isc.PortletProps), 0, 0, 0);
 
     portletLayout.addPortlet(isc.Portlet.create({
         title: "Portlet 2"
@@ -207,8 +232,10 @@ window.onload = () => {
         , icon: "KMW_16x16.png"
     });
 
+
+
     let layout = isc.VLayout.create({
-        htmlElement: document.getElementById("content")
+        htmlElement: contentDomElement
         , height: 600
         , width: "100%"
         , members: [tabSet]

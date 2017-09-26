@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-26
 
 Errors during generation
-Generated: 9/20/2017 1:59:38 PM by kwhite
+Generated: 9/26/2017 7:01:44 AM by kwhite
 
 Summary
 Total Types  : 249
@@ -503,7 +503,7 @@ List of: 10
 
 baseType attributes that are not a JS primitive nor an isc Type nor an isc Object: 0
 
-Attributes suspected as string types but do not have the baseType set: 17.
+Attributes suspected as string types but do not have the baseType set: 18.
 === Classname:4 ===
 1. attr:CubeGrid.chartConstructor, valueType=Classname
 2. attr:ListGrid.chartConstructor, valueType=Classname
@@ -530,6 +530,8 @@ Attributes suspected as string types but do not have the baseType set: 17.
 1. attr:DynamicForm.itemLayout, valueType=FormLayoutType
 === DataSource ID:1 ===
 1. attr:DataSource.inheritsFrom, valueType=DataSource ID
+=== String of HTML AREA Tag:1 ===
+1. attr:Img.activeAreaHTML, valueType=String of HTML AREA Tag
 
 
 Method parameters with missing name: 0
@@ -592,6 +594,10 @@ The following classes were excluded
 1. VisualBuilder: This is an internal only class - do not try to use it directly in your applications.
 2. SelectionOutline: NOTE: This class is for internal use only by EditContext.
 
+The following attributes were excluded
+1. attr:Process.setState: Hard-coded list: Process.setState is an attribute AND a method
+2. dataGradients: Hard-coded list: [Map Gradient] is not a valid type
+
 The following methods were excluded
 === Getter method return type does not match attribute type ===
 1. method:SectionStack.getSections
@@ -610,7 +616,23 @@ The following methods were excluded
 12. method:Progressbar.setLength
 13. method:TileGrid.setData
 
-Properties that override a base class property with a different type: 96
+=== From a hard-coded list ====
+14. toShortTime: [Datetime] is not a valid type
+15. toTime: [Datetime] is not a valid type
+16. addProperties: Because A rest parameter must be of an array type
+17. setState: Process.setState is an attribute AND a method
+18. init: Because A rest parameter must be of an array type
+19. initWidget: Because A rest parameter must be of an array type
+20. getCallTrace: Arguments?
+21. getButtonNumber: weird param types
+22. closeColumn: messed up type
+23. hiliteCellList: messed up type
+24. getPortletArray: Array of Array of Portlet
+25. selectRecords: Array of Record | numbers
+26. hiliteCell: cell object | row number
+27. intersect: [All List Arguments] is not a valid type - should probably be defined as ...lists: List[] or Arguments 0-N: List[]
+
+Properties that override a base class property with a different type: 106
 1. Property [attr:BlurbItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
 2. Property [attr:ButtonItem.height] has type [number] which overrides property [attr:CanvasItem.height] with type [int | String]
 3. Property [attr:CancelItem.title] has type [String] which overrides property [attr:FormItem.title] with type [HTMLString]
@@ -630,86 +652,96 @@ Properties that override a base class property with a different type: 96
 17. Property [attr:DateItem.displayFormat] has type [DateDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
 18. Property [attr:DateItem.pickerConstructor] has type [String] which overrides property [attr:FormItem.pickerConstructor] with type [SCClassName]
 19. Property [attr:DateItem.pickerProperties] has type [DateChooser Properties] which overrides property [attr:FormItem.pickerProperties] with type [Canvas Properties]
-20. Property [attr:DSResponse.data] has type [Array of Record | RecordList] which overrides property [attr:RPCResponse.data] with type [String | Object]
-21. Property [attr:DynamicForm.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
-22. Property [attr:EdgedCanvas.edgeOffset] has type [Integer] which overrides property [attr:Canvas.edgeOffset] with type [number]
-23. Property [attr:EdgedCanvas.edgeSize] has type [Integer] which overrides property [attr:Canvas.edgeSize] with type [number]
-24. Property [attr:EventCanvas.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
-25. Property [attr:FieldPickerWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-26. Property [attr:GridRenderer.showHover] has type [boolean] which overrides property [attr:Canvas.showHover] with type [Boolean]
-27. Property [attr:HeaderItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
-28. Property [attr:HibernateBrowser.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-29. Property [attr:IconButton.iconSize] has type [Number] which overrides property [attr:Button.iconSize] with type [int]
-30. Property [attr:ImgSplitbar.src] has type [String] which overrides property [attr:Img.src] with type [SCImgURL]
-31. Property [attr:ImgTab.showFocus] has type [boolean] which overrides property [attr:StretchImgButton.showFocus] with type [Boolean]
-32. Property [attr:ImgTab.skinImgDir] has type [URL] which overrides property [attr:Canvas.skinImgDir] with type [SCImgURL]
-33. Property [attr:ListPropertiesDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-34. Property [attr:LoginDialog.dismissOnEscape] has type [boolean] which overrides property [attr:Window.dismissOnEscape] with type [Boolean]
-35. Property [attr:LoginDialog.items] has type [Array of String] which overrides property [attr:Window.items] with type [Array of Canvas | Canvas | String]
-36. Property [attr:LoginDialog.showCloseButton] has type [boolean] which overrides property [attr:Window.showCloseButton] with type [Boolean]
-37. Property [attr:LoginDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-38. Property [attr:Menu.data] has type [Array of MenuItem | Array of Record[] | Tree | RecordList] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
-39. Property [attr:Menu.dataSource] has type [DataSource] which overrides property [attr:ListGrid.dataSource] with type [DataSource | ID]
-40. Property [attr:Menu.fields] has type [Array of MenuFieldID | Array of ListGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
-41. Property [attr:MenuButton.hiliteAccessKey] has type [Boolean] which overrides property [attr:Button.hiliteAccessKey] with type [boolean]
-42. Property [attr:MenuButton.title] has type [String] which overrides property [attr:Button.title] with type [HTMLString]
-43. Property [attr:MiniDateRangeItem.canFocus] has type [Boolean] which overrides property [attr:FormItem.canFocus] with type [boolean]
-44. Property [attr:MultiGroupDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-45. Property [attr:MultiSortDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-46. Property [attr:PickListMenu.emptyMessage] has type [String] which overrides property [attr:ListGrid.emptyMessage] with type [HTMLString]
-47. Property [attr:PickTreeItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
-48. Property [attr:PickTreeItem.optionDataSource] has type [DataSource] which overrides property [attr:FormItem.optionDataSource] with type [DataSource | String]
-49. Property [attr:PortalLayout.dropTypes] has type [Array of String] which overrides property [attr:Canvas.dropTypes] with type [Array of String | String]
-50. Property [attr:Portlet.canDrop] has type [boolean] which overrides property [attr:Canvas.canDrop] with type [Boolean]
-51. Property [attr:Portlet.minHeight] has type [Number] which overrides property [attr:Canvas.minHeight] with type [number]
-52. Property [attr:Portlet.minWidth] has type [Number] which overrides property [attr:Canvas.minWidth] with type [number]
-53. Property [attr:PresetCriteriaItem.valueMap] has type [Object] which overrides property [attr:FormItem.valueMap] with type [Array | Object]
-54. Property [attr:PrintWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
-55. Property [attr:RelativeDateItem.defaultValue] has type [Date | RelativeDateString | TimeUnit] which overrides property [attr:FormItem.defaultValue] with type [Any]
-56. Property [attr:RelativeDateItem.displayFormat] has type [DateDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
-57. Property [attr:RelativeDateItem.pickerConstructor] has type [String] which overrides property [attr:FormItem.pickerConstructor] with type [SCClassName]
-58. Property [attr:RelativeDateItem.valueField] has type [AutoChild ComboBoxItem] which overrides property [attr:FormItem.valueField] with type [String]
-59. Property [attr:RestDataSource.dataURL] has type [String] which overrides property [attr:DataSource.dataURL] with type [URL]
-60. Property [attr:RestDataSource.recordXPath] has type [String] which overrides property [attr:DataSource.recordXPath] with type [XPathExpression]
-61. Property [attr:ResultTree.discardParentlessNodes] has type [boolean] which overrides property [attr:Tree.discardParentlessNodes] with type [Boolean]
-62. Property [attr:SearchForm.canEditFieldAttribute] has type [String] which overrides property [attr:DynamicForm.canEditFieldAttribute] with type [Identifier]
-63. Property [attr:SectionItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
-64. Property [attr:SelectItem.defaultValue] has type [boolean] which overrides property [attr:FormItem.defaultValue] with type [Any]
-65. Property [attr:SelectItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
-66. Property [attr:SelectItem.filterLocally] has type [Boolean] which overrides property [attr:FormItem.filterLocally] with type [boolean]
-67. Property [attr:SelectItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
-68. Property [attr:SelectItem.optionFilterContext] has type [DSRequest Properties] which overrides property [attr:FormItem.optionFilterContext] with type [RPCRequest Properties]
-69. Property [attr:Slider.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
-70. Property [attr:SliderItem.defaultValue] has type [int] which overrides property [attr:FormItem.defaultValue] with type [Any]
-71. Property [attr:SliderItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
-72. Property [attr:SpacerItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
-73. Property [attr:SpacerItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
-74. Property [attr:Splitbar.capSize] has type [Integer] which overrides property [attr:StretchImg.capSize] with type [number]
-75. Property [attr:Splitbar.showDownGrip] has type [Boolean] which overrides property [attr:StretchImg.showDownGrip] with type [boolean]
-76. Property [attr:Splitbar.showGrip] has type [Boolean] which overrides property [attr:StretchImg.showGrip] with type [boolean]
-77. Property [attr:Splitbar.showRollOverGrip] has type [Boolean] which overrides property [attr:StretchImg.showRollOverGrip] with type [boolean]
-78. Property [attr:Splitbar.vertical] has type [boolean] which overrides property [attr:StretchImg.vertical] with type [Boolean]
-79. Property [attr:SubmitItem.title] has type [String] which overrides property [attr:FormItem.title] with type [HTMLString]
-80. Property [attr:SummaryBuilder.dataSource] has type [DataSource | ID] which overrides property [attr:FormulaBuilder.dataSource] with type [DataSource | String]
-81. Property [attr:TextAreaItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
-82. Property [attr:TextAreaItem.pickerIconHeight] has type [Integer] which overrides property [attr:FormItem.pickerIconHeight] with type [int]
-83. Property [attr:TextAreaItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
-84. Property [attr:TextItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
-85. Property [attr:TextItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
-86. Property [attr:TimeItem.displayFormat] has type [TimeDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
-87. Property [attr:TimeItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
-88. Property [attr:Toolbar.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
-89. Property [attr:ToolStrip.height] has type [Number] which overrides property [attr:Canvas.height] with type [Number | String]
-90. Property [attr:ToolStrip.members] has type [Array of Canvas] which overrides property [attr:Layout.members] with type [Array<Canvas | string>]
-91. Property [attr:ToolStrip.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
-92. Property [attr:ToolStripResizer.hSrc] has type [SCImgURL] which overrides property [attr:ImgSplitbar.hSrc] with type [String]
-93. Property [attr:TreeGrid.data] has type [Tree] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
-94. Property [attr:TreeGrid.fields] has type [Array of TreeGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
-95. Property [attr:Window.keepInParentRect] has type [boolean | Rect] which overrides property [attr:Canvas.keepInParentRect] with type [Boolean | Array of Integer]
-96. Property [attr:Window.opacity] has type [Integer] which overrides property [attr:Canvas.opacity] with type [number]
+20. Property [attr:DateTimeItem.displayFormat] has type [DateDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
+21. Property [attr:DSResponse.data] has type [Array of Record | RecordList] which overrides property [attr:RPCResponse.data] with type [String | Object]
+22. Property [attr:DynamicForm.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
+23. Property [attr:EdgedCanvas.edgeOffset] has type [Integer] which overrides property [attr:Canvas.edgeOffset] with type [number]
+24. Property [attr:EdgedCanvas.edgeSize] has type [Integer] which overrides property [attr:Canvas.edgeSize] with type [number]
+25. Property [attr:EventCanvas.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+26. Property [attr:FieldPickerWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+27. Property [attr:GridRenderer.showHover] has type [boolean] which overrides property [attr:Canvas.showHover] with type [Boolean]
+28. Property [attr:HeaderItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
+29. Property [attr:HibernateBrowser.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+30. Property [attr:IconButton.iconSize] has type [Number] which overrides property [attr:Button.iconSize] with type [int]
+31. Property [attr:IMenuButton.hiliteAccessKey] has type [Boolean] which overrides property [attr:Button.hiliteAccessKey] with type [boolean]
+32. Property [attr:IMenuButton.title] has type [String] which overrides property [attr:Button.title] with type [HTMLString]
+33. Property [attr:ImgSplitbar.src] has type [String] which overrides property [attr:Img.src] with type [SCImgURL]
+34. Property [attr:ImgTab.showFocus] has type [boolean] which overrides property [attr:StretchImgButton.showFocus] with type [Boolean]
+35. Property [attr:ImgTab.skinImgDir] has type [URL] which overrides property [attr:Canvas.skinImgDir] with type [SCImgURL]
+36. Property [attr:ListPropertiesDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+37. Property [attr:LoginDialog.dismissOnEscape] has type [boolean] which overrides property [attr:Window.dismissOnEscape] with type [Boolean]
+38. Property [attr:LoginDialog.items] has type [Array of String] which overrides property [attr:Window.items] with type [Array of Canvas | Canvas | String]
+39. Property [attr:LoginDialog.showCloseButton] has type [boolean] which overrides property [attr:Window.showCloseButton] with type [Boolean]
+40. Property [attr:LoginDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+41. Property [attr:Menu.data] has type [Array of MenuItem | Array of Record[] | Tree | RecordList] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
+42. Property [attr:Menu.dataProperties] has type [Tree Properties] which overrides property [attr:ListGrid.dataProperties] with type [ResultSet]
+43. Property [attr:Menu.dataSource] has type [DataSource] which overrides property [attr:ListGrid.dataSource] with type [DataSource | ID]
+44. Property [attr:Menu.fields] has type [Array of MenuFieldID | Array of ListGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
+45. Property [attr:MenuButton.hiliteAccessKey] has type [Boolean] which overrides property [attr:Button.hiliteAccessKey] with type [boolean]
+46. Property [attr:MenuButton.title] has type [String] which overrides property [attr:Button.title] with type [HTMLString]
+47. Property [attr:MiniDateRangeItem.canFocus] has type [Boolean] which overrides property [attr:FormItem.canFocus] with type [boolean]
+48. Property [attr:MultiGroupDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+49. Property [attr:MultiSortDialog.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+50. Property [attr:PickListMenu.emptyMessage] has type [String] which overrides property [attr:ListGrid.emptyMessage] with type [HTMLString]
+51. Property [attr:PickTreeItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
+52. Property [attr:PickTreeItem.optionDataSource] has type [DataSource] which overrides property [attr:FormItem.optionDataSource] with type [DataSource | String]
+53. Property [attr:PortalLayout.dropTypes] has type [Array of String] which overrides property [attr:Canvas.dropTypes] with type [Array of String | String]
+54. Property [attr:Portlet.canDrop] has type [boolean] which overrides property [attr:Canvas.canDrop] with type [Boolean]
+55. Property [attr:Portlet.minHeight] has type [Number] which overrides property [attr:Canvas.minHeight] with type [number]
+56. Property [attr:Portlet.minWidth] has type [Number] which overrides property [attr:Canvas.minWidth] with type [number]
+57. Property [attr:PresetCriteriaItem.valueMap] has type [Object] which overrides property [attr:FormItem.valueMap] with type [Array | Object]
+58. Property [attr:PrintWindow.title] has type [String] which overrides property [attr:Window.title] with type [HTMLString]
+59. Property [attr:RelativeDateItem.defaultValue] has type [Date | RelativeDateString | TimeUnit] which overrides property [attr:FormItem.defaultValue] with type [Any]
+60. Property [attr:RelativeDateItem.displayFormat] has type [DateDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
+61. Property [attr:RelativeDateItem.pickerConstructor] has type [String] which overrides property [attr:FormItem.pickerConstructor] with type [SCClassName]
+62. Property [attr:RelativeDateItem.valueField] has type [AutoChild ComboBoxItem] which overrides property [attr:FormItem.valueField] with type [String]
+63. Property [attr:RestDataSource.dataURL] has type [String] which overrides property [attr:DataSource.dataURL] with type [URL]
+64. Property [attr:RestDataSource.recordXPath] has type [String] which overrides property [attr:DataSource.recordXPath] with type [XPathExpression]
+65. Property [attr:ResultTree.discardParentlessNodes] has type [boolean] which overrides property [attr:Tree.discardParentlessNodes] with type [Boolean]
+66. Property [attr:SearchForm.canEditFieldAttribute] has type [String] which overrides property [attr:DynamicForm.canEditFieldAttribute] with type [Identifier]
+67. Property [attr:SectionItem.defaultValue] has type [String] which overrides property [attr:FormItem.defaultValue] with type [Any]
+68. Property [attr:SelectItem.defaultValue] has type [boolean] which overrides property [attr:FormItem.defaultValue] with type [Any]
+69. Property [attr:SelectItem.emptyDisplayValue] has type [HTMLString] which overrides property [attr:FormItem.emptyDisplayValue] with type [String]
+70. Property [attr:SelectItem.filterLocally] has type [Boolean] which overrides property [attr:FormItem.filterLocally] with type [boolean]
+71. Property [attr:SelectItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+72. Property [attr:SelectItem.optionFilterContext] has type [DSRequest Properties] which overrides property [attr:FormItem.optionFilterContext] with type [RPCRequest Properties]
+73. Property [attr:Slider.canFocus] has type [Boolean] which overrides property [attr:Canvas.canFocus] with type [boolean]
+74. Property [attr:SliderItem.defaultValue] has type [int] which overrides property [attr:FormItem.defaultValue] with type [Any]
+75. Property [attr:SliderItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+76. Property [attr:Snapbar.showDownGrip] has type [Boolean] which overrides property [attr:StretchImg.showDownGrip] with type [boolean]
+77. Property [attr:Snapbar.showGrip] has type [Boolean] which overrides property [attr:StretchImg.showGrip] with type [boolean]
+78. Property [attr:Snapbar.showRollOverGrip] has type [Boolean] which overrides property [attr:StretchImg.showRollOverGrip] with type [boolean]
+79. Property [attr:SpacerItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+80. Property [attr:SpacerItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+81. Property [attr:Splitbar.capSize] has type [Integer] which overrides property [attr:StretchImg.capSize] with type [number]
+82. Property [attr:Splitbar.showDownGrip] has type [Boolean] which overrides property [attr:StretchImg.showDownGrip] with type [boolean]
+83. Property [attr:Splitbar.showGrip] has type [Boolean] which overrides property [attr:StretchImg.showGrip] with type [boolean]
+84. Property [attr:Splitbar.showRollOverGrip] has type [Boolean] which overrides property [attr:StretchImg.showRollOverGrip] with type [boolean]
+85. Property [attr:Splitbar.vertical] has type [boolean] which overrides property [attr:StretchImg.vertical] with type [Boolean]
+86. Property [attr:SubmitItem.title] has type [String] which overrides property [attr:FormItem.title] with type [HTMLString]
+87. Property [attr:SummaryBuilder.dataSource] has type [DataSource | ID] which overrides property [attr:FormulaBuilder.dataSource] with type [DataSource | String]
+88. Property [attr:TextAreaItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+89. Property [attr:TextAreaItem.pickerIconHeight] has type [Integer] which overrides property [attr:FormItem.pickerIconHeight] with type [int]
+90. Property [attr:TextAreaItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+91. Property [attr:TextItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+92. Property [attr:TextItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+93. Property [attr:TimeItem.displayFormat] has type [TimeDisplayFormat] which overrides property [attr:FormItem.displayFormat] with type [Varies]
+94. Property [attr:TimeItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
+95. Property [attr:Toolbar.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+96. Property [attr:ToolStrip.height] has type [Number] which overrides property [attr:Canvas.height] with type [Number | String]
+97. Property [attr:ToolStrip.vertical] has type [Boolean] which overrides property [attr:Layout.vertical] with type [boolean]
+98. Property [attr:ToolStripResizer.hSrc] has type [SCImgURL] which overrides property [attr:ImgSplitbar.hSrc] with type [String]
+99. Property [attr:TreeGrid.data] has type [Tree] which overrides property [attr:ListGrid.data] with type [List of ListGridRecord]
+100. Property [attr:TreeGrid.dataProperties] has type [Tree] which overrides property [attr:ListGrid.dataProperties] with type [ResultSet]
+101. Property [attr:TreeGrid.fields] has type [Array of TreeGridField] which overrides property [attr:ListGrid.fields] with type [Array of ListGridField]
+102. Property [attr:TreeMenuButton.title] has type [String] which overrides property [attr:Button.title] with type [HTMLString]
+103. Property [attr:UploadItem.height] has type [number] which overrides property [attr:FormItem.height] with type [int | String]
+104. Property [attr:UploadItem.width] has type [number] which overrides property [attr:FormItem.width] with type [int | String]
+105. Property [attr:Window.keepInParentRect] has type [boolean | Rect] which overrides property [attr:Canvas.keepInParentRect] with type [Boolean | Array of Integer]
+106. Property [attr:Window.opacity] has type [Integer] which overrides property [attr:Canvas.opacity] with type [number]
 
 
-Methods that override a base class method with a different return type: 66
+Methods that override a base class method with a different return type: 67
 1. Method [classMethod:DateUtil.create] has return type [Date] which overrides method [classMethod:Class.create] with return type [T]
 2. Method [classMethod:FormItem.create] has return type [] which overrides method [classMethod:Class.create] with return type [T]
 3. Method [classMethod:RPCResponse.create] has return type [] which overrides method [classMethod:Class.create] with return type [T]
@@ -759,26 +791,27 @@ Methods that override a base class method with a different return type: 66
 47. Method [method:RestDataSource.transformRequest] has return type [] which overrides method [method:DataSource.transformRequest] with return type [Any]
 48. Method [method:ResultTree.setChildren] has 3 parameters and overrides method [method:Tree.setChildren] with 2 parameters.
 49. Method [method:SelectItem.defaultDynamicValue] has 0 parameters and overrides method [method:FormItem.defaultDynamicValue] with 3 parameters.
-50. Method [method:StretchImgButton.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
-51. Method [method:TileGrid.addTile] has 0 parameters and overrides method [method:TileLayout.addTile] with 2 parameters.
-52. Method [method:TileGrid.getTile] parameter 0 has type [TileRecord | int] and overrides method [method:TileLayout.getTile] with parameter type [int].
-53. Method [method:TileGrid.removeTile] has return type [] which overrides method [method:TileLayout.removeTile] with return type [boolean]
-54. Method [method:TreeGrid.canEditCell] has return type [Boolean] which overrides method [method:ListGrid.canEditCell] with return type [boolean]
-55. Method [method:TreeGrid.dataArrived] has 1 parameters and overrides method [method:ListGrid.dataArrived] with 2 parameters.
-56. Method [method:TreeGrid.getViewState] has return type [TreeGridViewState] which overrides method [method:ListGrid.getViewState] with return type [ListGridViewState]
-57. Method [method:TreeGrid.recordDoubleClick] has return type [] which overrides method [method:ListGrid.recordDoubleClick] with return type [boolean]
-58. Method [method:TreeGrid.recordDrop] has 0 parameters and overrides method [method:ListGrid.recordDrop] with 4 parameters.
-59. Method [method:TreeGrid.rowClick] has return type [] which overrides method [method:ListGrid.rowClick] with return type [Boolean]
-60. Method [method:TreeGrid.setData] parameter 0 has type [Tree] and overrides method [method:ListGrid.setData] with parameter type [List of ListGridRecord].
-61. Method [method:TreeGrid.setViewState] parameter 0 has type [TreeGridViewState] and overrides method [method:ListGrid.setViewState] with parameter type [ListGridViewState].
-62. Method [method:TreeGrid.startEditingNew] parameter 0 has type [Object] and overrides method [method:ListGrid.startEditingNew] with parameter type [Map | Record].
-63. Method [method:TreeGrid.startEditingNew] parameter 1 has type [boolean] and overrides method [method:ListGrid.startEditingNew] with parameter type [Boolean].
-64. Method [method:TreeGrid.transferSelectedData] has 4 parameters and overrides method [method:ListGrid.transferSelectedData] with 3 parameters.
-65. Method [method:UploadItem.setSelectionRange] has 0 parameters and overrides method [method:TextItem.setSelectionRange] with 2 parameters.
-66. Method [method:UploadItem.setValue] has 0 parameters and overrides method [method:FormItem.setValue] with 1 parameters.
+50. Method [method:StretchImg.setState] has 2 parameters and overrides method [method:StatefulCanvas.setState] with 1 parameters.
+51. Method [method:StretchImgButton.setSelected] has 0 parameters and overrides method [method:StatefulCanvas.setSelected] with 1 parameters.
+52. Method [method:StretchImgButton.setState] has 1 parameters and overrides method [method:StretchImg.setState] with 2 parameters.
+53. Method [method:TileGrid.addTile] has 0 parameters and overrides method [method:TileLayout.addTile] with 2 parameters.
+54. Method [method:TileGrid.getTile] parameter 0 has type [TileRecord | int] and overrides method [method:TileLayout.getTile] with parameter type [int].
+55. Method [method:TileGrid.removeTile] has return type [] which overrides method [method:TileLayout.removeTile] with return type [boolean]
+56. Method [method:TreeGrid.canEditCell] has return type [Boolean] which overrides method [method:ListGrid.canEditCell] with return type [boolean]
+57. Method [method:TreeGrid.dataArrived] has 1 parameters and overrides method [method:ListGrid.dataArrived] with 2 parameters.
+58. Method [method:TreeGrid.getViewState] has return type [TreeGridViewState] which overrides method [method:ListGrid.getViewState] with return type [ListGridViewState]
+59. Method [method:TreeGrid.recordDoubleClick] has return type [] which overrides method [method:ListGrid.recordDoubleClick] with return type [boolean]
+60. Method [method:TreeGrid.recordDrop] has 0 parameters and overrides method [method:ListGrid.recordDrop] with 4 parameters.
+61. Method [method:TreeGrid.rowClick] has return type [] which overrides method [method:ListGrid.rowClick] with return type [Boolean]
+62. Method [method:TreeGrid.setData] parameter 0 has type [Tree] and overrides method [method:ListGrid.setData] with parameter type [List of ListGridRecord].
+63. Method [method:TreeGrid.setViewState] parameter 0 has type [TreeGridViewState] and overrides method [method:ListGrid.setViewState] with parameter type [ListGridViewState].
+64. Method [method:TreeGrid.startEditingNew] parameter 0 has type [Object] and overrides method [method:ListGrid.startEditingNew] with parameter type [Map | Record].
+65. Method [method:TreeGrid.startEditingNew] parameter 1 has type [boolean] and overrides method [method:ListGrid.startEditingNew] with parameter type [Boolean].
+66. Method [method:UploadItem.setSelectionRange] has 0 parameters and overrides method [method:TextItem.setSelectionRange] with 2 parameters.
+67. Method [method:UploadItem.setValue] has 0 parameters and overrides method [method:FormItem.setValue] with 1 parameters.
 
 
-Unknown types assumed to be [string]: 21
+Unknown types assumed to be [string]: 23
 1. Align, count = 4
 2. Character, count = 4
 3. Class Object, count = 4
@@ -790,21 +823,23 @@ Unknown types assumed to be [string]: 21
 9. FacetId, count = 2
 10. FacetIds, count = 2
 11. FacetValueGroupId, count = 2
-12. Field, count = 18
-13. Fields, count = 2
+12. Field, count = 122
+13. Fields, count = 16
 14. FormLayoutType, count = 2
-15. ID, count = 56
-16. Prefix, count = 3
-17. String Expression, count = 1
-18. Type, count = 2
-19. URN, count = 3
-20. VAlign, count = 4
-21. XPath, count = 5
+15. ID, count = 58
+16. ItemName, count = 2
+17. Prefix, count = 3
+18. String Expression, count = 1
+19. String of HTML AREA Tag, count = 2
+20. Type, count = 2
+21. URN, count = 3
+22. VAlign, count = 4
+23. XPath, count = 5
 
 
 Unknown types mapped to [any]: 14
-1. Any, count = 480
-2. Arguments, count = 6
+1. Any, count = 540
+2. Arguments, count = 8
 3. Cell, count = 2
 4. DataSourceRecord, count = 5
 5. DataSourceRecords, count = 4
@@ -833,11 +868,986 @@ String types no longer found in the refDocs file (can be removed): 0
 Any types no longer found in the refDocs file (can be removed): 0
 
 
-Date	Types	Interfaces	Classes	Objects	Methods	Excluded Types	Excluded Classes	Excluded Methods	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
-2017-09-20	249	5	297	82	3559	2	2	19	0	1	216	665	131	0	239	0	0	8	10	17	0	0	0	0	12	18	1	46	288	0	131	384	0	0	0	247	5	81	295	21	14	5	96	66	3314	1.108434	1	0.9878049	0.993266	0.9311604	
+Attributes and methods that are duplicated in a class that implements an interface: 969
+1. attr:Calendar.autoFetchData is also implemented by interface:DataBoundComponent
+2. attr:Calendar.dataFetchMode is also implemented by interface:DataBoundComponent
+3. attr:Calendar.dataSource is also implemented by interface:DataBoundComponent
+4. attr:Calendar.descriptionField is also implemented by interface:DataBoundComponent
+5. attr:Calendar.initialCriteria is also implemented by interface:DataBoundComponent
+6. attr:Calendar.showDetailFields is also implemented by interface:DataBoundComponent
+7. attr:Chart.chartType is also implemented by interface:Chart
+8. attr:Chart.chartType is also implemented by interface:Chart
+9. attr:Chart.data is also implemented by interface:Chart
+10. attr:Chart.data is also implemented by interface:Chart
+11. attr:Chart.facets is also implemented by interface:Chart
+12. attr:Chart.facets is also implemented by interface:Chart
+13. attr:Chart.labelValues is also implemented by interface:Chart
+14. attr:Chart.labelValues is also implemented by interface:Chart
+15. attr:Chart.shouldAnimateShow is also implemented by interface:Chart
+16. attr:Chart.shouldAnimateShow is also implemented by interface:Chart
+17. attr:Chart.stacked is also implemented by interface:Chart
+18. attr:Chart.stacked is also implemented by interface:Chart
+19. attr:Chart.subTitle is also implemented by interface:Chart
+20. attr:Chart.subTitle is also implemented by interface:Chart
+21. attr:Chart.threeD is also implemented by interface:Chart
+22. attr:Chart.threeD is also implemented by interface:Chart
+23. attr:Chart.title is also implemented by interface:Chart
+24. attr:Chart.title is also implemented by interface:Chart
+25. attr:Chart.valueProperty is also implemented by interface:Chart
+26. attr:Chart.valueProperty is also implemented by interface:Chart
+27. attr:Chart.valueTitle is also implemented by interface:Chart
+28. attr:Chart.valueTitle is also implemented by interface:Chart
+29. attr:ColumnTree.autoFetchData is also implemented by interface:DataBoundComponent
+30. attr:ColumnTree.dataFetchMode is also implemented by interface:DataBoundComponent
+31. attr:ColumnTree.dataSource is also implemented by interface:DataBoundComponent
+32. attr:ColumnTree.fields is also implemented by interface:DataBoundComponent
+33. attr:ColumnTree.initialCriteria is also implemented by interface:DataBoundComponent
+34. attr:ColumnTree.showDetailFields is also implemented by interface:DataBoundComponent
+35. attr:ComboBoxItem.cachePickListResults is also implemented by interface:PickList
+36. attr:ComboBoxItem.displayField is also implemented by interface:PickList
+37. attr:ComboBoxItem.emptyPickListMessage is also implemented by interface:PickList
+38. attr:ComboBoxItem.fetchDisplayedFieldsOnly is also implemented by interface:PickList
+39. attr:ComboBoxItem.filterLocally is also implemented by interface:PickList
+40. attr:ComboBoxItem.iconPlacement is also implemented by interface:PickList
+41. attr:ComboBoxItem.initialSort is also implemented by interface:PickList
+42. attr:ComboBoxItem.optionDataSource is also implemented by interface:PickList
+43. attr:ComboBoxItem.optionFilterContext is also implemented by interface:PickList
+44. attr:ComboBoxItem.pickListConstructor is also implemented by interface:PickList
+45. attr:ComboBoxItem.pickListCriteria is also implemented by interface:PickList
+46. attr:ComboBoxItem.pickListFields is also implemented by interface:PickList
+47. attr:ComboBoxItem.pickListProperties is also implemented by interface:PickList
+48. attr:ComboBoxItem.separatorRows is also implemented by interface:PickList
+49. attr:ComboBoxItem.showAllOptions is also implemented by interface:PickList
+50. attr:ComboBoxItem.showOptionsFromDataSource is also implemented by interface:PickList
+51. attr:ComboBoxItem.sortField is also implemented by interface:PickList
+52. attr:ComboBoxItem.specialValues is also implemented by interface:PickList
+53. attr:ComboBoxItem.textMatchStyle is also implemented by interface:PickList
+54. attr:ComboBoxItem.useClientFiltering is also implemented by interface:PickList
+55. attr:ComboBoxItem.valueField is also implemented by interface:PickList
+56. attr:DataBoundComponent.addDropValues is also implemented by interface:DataBoundComponent
+57. attr:DataBoundComponent.addDropValues is also implemented by interface:DataBoundComponent
+58. attr:DataBoundComponent.addDropValues is also implemented by interface:DataBoundComponent
+59. attr:DataBoundComponent.addDropValues is also implemented by interface:DataBoundComponent
+60. attr:DataBoundComponent.addDropValues is also implemented by interface:DataBoundComponent
+61. attr:DataBoundComponent.addDropValues is also implemented by interface:DataBoundComponent
+62. attr:DataBoundComponent.addDropValues is also implemented by interface:DataBoundComponent
+63. attr:DataBoundComponent.addDropValues is also implemented by interface:DataBoundComponent
+64. attr:DataBoundComponent.addFormulaFieldText is also implemented by interface:DataBoundComponent
+65. attr:DataBoundComponent.addFormulaFieldText is also implemented by interface:DataBoundComponent
+66. attr:DataBoundComponent.addFormulaFieldText is also implemented by interface:DataBoundComponent
+67. attr:DataBoundComponent.addFormulaFieldText is also implemented by interface:DataBoundComponent
+68. attr:DataBoundComponent.addFormulaFieldText is also implemented by interface:DataBoundComponent
+69. attr:DataBoundComponent.addFormulaFieldText is also implemented by interface:DataBoundComponent
+70. attr:DataBoundComponent.addFormulaFieldText is also implemented by interface:DataBoundComponent
+71. attr:DataBoundComponent.addFormulaFieldText is also implemented by interface:DataBoundComponent
+72. attr:DataBoundComponent.addOperation is also implemented by interface:DataBoundComponent
+73. attr:DataBoundComponent.addOperation is also implemented by interface:DataBoundComponent
+74. attr:DataBoundComponent.addOperation is also implemented by interface:DataBoundComponent
+75. attr:DataBoundComponent.addOperation is also implemented by interface:DataBoundComponent
+76. attr:DataBoundComponent.addOperation is also implemented by interface:DataBoundComponent
+77. attr:DataBoundComponent.addOperation is also implemented by interface:DataBoundComponent
+78. attr:DataBoundComponent.addOperation is also implemented by interface:DataBoundComponent
+79. attr:DataBoundComponent.addOperation is also implemented by interface:DataBoundComponent
+80. attr:DataBoundComponent.addSummaryFieldText is also implemented by interface:DataBoundComponent
+81. attr:DataBoundComponent.addSummaryFieldText is also implemented by interface:DataBoundComponent
+82. attr:DataBoundComponent.addSummaryFieldText is also implemented by interface:DataBoundComponent
+83. attr:DataBoundComponent.addSummaryFieldText is also implemented by interface:DataBoundComponent
+84. attr:DataBoundComponent.addSummaryFieldText is also implemented by interface:DataBoundComponent
+85. attr:DataBoundComponent.addSummaryFieldText is also implemented by interface:DataBoundComponent
+86. attr:DataBoundComponent.addSummaryFieldText is also implemented by interface:DataBoundComponent
+87. attr:DataBoundComponent.addSummaryFieldText is also implemented by interface:DataBoundComponent
+88. attr:DataBoundComponent.autoFetchData is also implemented by interface:DataBoundComponent
+89. attr:DataBoundComponent.autoFetchData is also implemented by interface:DataBoundComponent
+90. attr:DataBoundComponent.autoFetchData is also implemented by interface:DataBoundComponent
+91. attr:DataBoundComponent.autoFetchData is also implemented by interface:DataBoundComponent
+92. attr:DataBoundComponent.autoFetchData is also implemented by interface:DataBoundComponent
+93. attr:DataBoundComponent.autoFetchData is also implemented by interface:DataBoundComponent
+94. attr:DataBoundComponent.autoFetchData is also implemented by interface:DataBoundComponent
+95. attr:DataBoundComponent.autoFetchData is also implemented by interface:DataBoundComponent
+96. attr:DataBoundComponent.badFormulaResultValue is also implemented by interface:DataBoundComponent
+97. attr:DataBoundComponent.badFormulaResultValue is also implemented by interface:DataBoundComponent
+98. attr:DataBoundComponent.badFormulaResultValue is also implemented by interface:DataBoundComponent
+99. attr:DataBoundComponent.badFormulaResultValue is also implemented by interface:DataBoundComponent
+100. attr:DataBoundComponent.badFormulaResultValue is also implemented by interface:DataBoundComponent
+101. attr:DataBoundComponent.badFormulaResultValue is also implemented by interface:DataBoundComponent
+102. attr:DataBoundComponent.badFormulaResultValue is also implemented by interface:DataBoundComponent
+103. attr:DataBoundComponent.badFormulaResultValue is also implemented by interface:DataBoundComponent
+104. attr:DataBoundComponent.canAddFormulaFields is also implemented by interface:DataBoundComponent
+105. attr:DataBoundComponent.canAddFormulaFields is also implemented by interface:DataBoundComponent
+106. attr:DataBoundComponent.canAddFormulaFields is also implemented by interface:DataBoundComponent
+107. attr:DataBoundComponent.canAddFormulaFields is also implemented by interface:DataBoundComponent
+108. attr:DataBoundComponent.canAddFormulaFields is also implemented by interface:DataBoundComponent
+109. attr:DataBoundComponent.canAddFormulaFields is also implemented by interface:DataBoundComponent
+110. attr:DataBoundComponent.canAddFormulaFields is also implemented by interface:DataBoundComponent
+111. attr:DataBoundComponent.canAddFormulaFields is also implemented by interface:DataBoundComponent
+112. attr:DataBoundComponent.canAddSummaryFields is also implemented by interface:DataBoundComponent
+113. attr:DataBoundComponent.canAddSummaryFields is also implemented by interface:DataBoundComponent
+114. attr:DataBoundComponent.canAddSummaryFields is also implemented by interface:DataBoundComponent
+115. attr:DataBoundComponent.canAddSummaryFields is also implemented by interface:DataBoundComponent
+116. attr:DataBoundComponent.canAddSummaryFields is also implemented by interface:DataBoundComponent
+117. attr:DataBoundComponent.canAddSummaryFields is also implemented by interface:DataBoundComponent
+118. attr:DataBoundComponent.canAddSummaryFields is also implemented by interface:DataBoundComponent
+119. attr:DataBoundComponent.canAddSummaryFields is also implemented by interface:DataBoundComponent
+120. attr:DataBoundComponent.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+121. attr:DataBoundComponent.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+122. attr:DataBoundComponent.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+123. attr:DataBoundComponent.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+124. attr:DataBoundComponent.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+125. attr:DataBoundComponent.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+126. attr:DataBoundComponent.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+127. attr:DataBoundComponent.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+128. attr:DataBoundComponent.canEditHilites is also implemented by interface:DataBoundComponent
+129. attr:DataBoundComponent.canEditHilites is also implemented by interface:DataBoundComponent
+130. attr:DataBoundComponent.canEditHilites is also implemented by interface:DataBoundComponent
+131. attr:DataBoundComponent.canEditHilites is also implemented by interface:DataBoundComponent
+132. attr:DataBoundComponent.canEditHilites is also implemented by interface:DataBoundComponent
+133. attr:DataBoundComponent.canEditHilites is also implemented by interface:DataBoundComponent
+134. attr:DataBoundComponent.canEditHilites is also implemented by interface:DataBoundComponent
+135. attr:DataBoundComponent.canEditHilites is also implemented by interface:DataBoundComponent
+136. attr:DataBoundComponent.dataArity is also implemented by interface:DataBoundComponent
+137. attr:DataBoundComponent.dataArity is also implemented by interface:DataBoundComponent
+138. attr:DataBoundComponent.dataArity is also implemented by interface:DataBoundComponent
+139. attr:DataBoundComponent.dataArity is also implemented by interface:DataBoundComponent
+140. attr:DataBoundComponent.dataArity is also implemented by interface:DataBoundComponent
+141. attr:DataBoundComponent.dataArity is also implemented by interface:DataBoundComponent
+142. attr:DataBoundComponent.dataArity is also implemented by interface:DataBoundComponent
+143. attr:DataBoundComponent.dataArity is also implemented by interface:DataBoundComponent
+144. attr:DataBoundComponent.dataFetchDelay is also implemented by interface:DataBoundComponent
+145. attr:DataBoundComponent.dataFetchDelay is also implemented by interface:DataBoundComponent
+146. attr:DataBoundComponent.dataFetchDelay is also implemented by interface:DataBoundComponent
+147. attr:DataBoundComponent.dataFetchDelay is also implemented by interface:DataBoundComponent
+148. attr:DataBoundComponent.dataFetchDelay is also implemented by interface:DataBoundComponent
+149. attr:DataBoundComponent.dataFetchDelay is also implemented by interface:DataBoundComponent
+150. attr:DataBoundComponent.dataFetchDelay is also implemented by interface:DataBoundComponent
+151. attr:DataBoundComponent.dataFetchDelay is also implemented by interface:DataBoundComponent
+152. attr:DataBoundComponent.dataFetchMode is also implemented by interface:DataBoundComponent
+153. attr:DataBoundComponent.dataFetchMode is also implemented by interface:DataBoundComponent
+154. attr:DataBoundComponent.dataFetchMode is also implemented by interface:DataBoundComponent
+155. attr:DataBoundComponent.dataFetchMode is also implemented by interface:DataBoundComponent
+156. attr:DataBoundComponent.dataFetchMode is also implemented by interface:DataBoundComponent
+157. attr:DataBoundComponent.dataFetchMode is also implemented by interface:DataBoundComponent
+158. attr:DataBoundComponent.dataFetchMode is also implemented by interface:DataBoundComponent
+159. attr:DataBoundComponent.dataFetchMode is also implemented by interface:DataBoundComponent
+160. attr:DataBoundComponent.dataField is also implemented by interface:DataBoundComponent
+161. attr:DataBoundComponent.dataField is also implemented by interface:DataBoundComponent
+162. attr:DataBoundComponent.dataField is also implemented by interface:DataBoundComponent
+163. attr:DataBoundComponent.dataField is also implemented by interface:DataBoundComponent
+164. attr:DataBoundComponent.dataField is also implemented by interface:DataBoundComponent
+165. attr:DataBoundComponent.dataField is also implemented by interface:DataBoundComponent
+166. attr:DataBoundComponent.dataField is also implemented by interface:DataBoundComponent
+167. attr:DataBoundComponent.dataField is also implemented by interface:DataBoundComponent
+168. attr:DataBoundComponent.dataPageSize is also implemented by interface:DataBoundComponent
+169. attr:DataBoundComponent.dataPageSize is also implemented by interface:DataBoundComponent
+170. attr:DataBoundComponent.dataPageSize is also implemented by interface:DataBoundComponent
+171. attr:DataBoundComponent.dataPageSize is also implemented by interface:DataBoundComponent
+172. attr:DataBoundComponent.dataPageSize is also implemented by interface:DataBoundComponent
+173. attr:DataBoundComponent.dataPageSize is also implemented by interface:DataBoundComponent
+174. attr:DataBoundComponent.dataPageSize is also implemented by interface:DataBoundComponent
+175. attr:DataBoundComponent.dataPageSize is also implemented by interface:DataBoundComponent
+176. attr:DataBoundComponent.dataSource is also implemented by interface:DataBoundComponent
+177. attr:DataBoundComponent.dataSource is also implemented by interface:DataBoundComponent
+178. attr:DataBoundComponent.dataSource is also implemented by interface:DataBoundComponent
+179. attr:DataBoundComponent.dataSource is also implemented by interface:DataBoundComponent
+180. attr:DataBoundComponent.dataSource is also implemented by interface:DataBoundComponent
+181. attr:DataBoundComponent.dataSource is also implemented by interface:DataBoundComponent
+182. attr:DataBoundComponent.dataSource is also implemented by interface:DataBoundComponent
+183. attr:DataBoundComponent.dataSource is also implemented by interface:DataBoundComponent
+184. attr:DataBoundComponent.deepCloneOnEdit is also implemented by interface:DataBoundComponent
+185. attr:DataBoundComponent.deepCloneOnEdit is also implemented by interface:DataBoundComponent
+186. attr:DataBoundComponent.deepCloneOnEdit is also implemented by interface:DataBoundComponent
+187. attr:DataBoundComponent.deepCloneOnEdit is also implemented by interface:DataBoundComponent
+188. attr:DataBoundComponent.deepCloneOnEdit is also implemented by interface:DataBoundComponent
+189. attr:DataBoundComponent.deepCloneOnEdit is also implemented by interface:DataBoundComponent
+190. attr:DataBoundComponent.deepCloneOnEdit is also implemented by interface:DataBoundComponent
+191. attr:DataBoundComponent.deepCloneOnEdit is also implemented by interface:DataBoundComponent
+192. attr:DataBoundComponent.descriptionField is also implemented by interface:DataBoundComponent
+193. attr:DataBoundComponent.descriptionField is also implemented by interface:DataBoundComponent
+194. attr:DataBoundComponent.descriptionField is also implemented by interface:DataBoundComponent
+195. attr:DataBoundComponent.descriptionField is also implemented by interface:DataBoundComponent
+196. attr:DataBoundComponent.descriptionField is also implemented by interface:DataBoundComponent
+197. attr:DataBoundComponent.descriptionField is also implemented by interface:DataBoundComponent
+198. attr:DataBoundComponent.descriptionField is also implemented by interface:DataBoundComponent
+199. attr:DataBoundComponent.descriptionField is also implemented by interface:DataBoundComponent
+200. attr:DataBoundComponent.dragDataAction is also implemented by interface:DataBoundComponent
+201. attr:DataBoundComponent.dragDataAction is also implemented by interface:DataBoundComponent
+202. attr:DataBoundComponent.dragDataAction is also implemented by interface:DataBoundComponent
+203. attr:DataBoundComponent.dragDataAction is also implemented by interface:DataBoundComponent
+204. attr:DataBoundComponent.dragDataAction is also implemented by interface:DataBoundComponent
+205. attr:DataBoundComponent.dragDataAction is also implemented by interface:DataBoundComponent
+206. attr:DataBoundComponent.dragDataAction is also implemented by interface:DataBoundComponent
+207. attr:DataBoundComponent.dragDataAction is also implemented by interface:DataBoundComponent
+208. attr:DataBoundComponent.dragRecategorize is also implemented by interface:DataBoundComponent
+209. attr:DataBoundComponent.dragRecategorize is also implemented by interface:DataBoundComponent
+210. attr:DataBoundComponent.dragRecategorize is also implemented by interface:DataBoundComponent
+211. attr:DataBoundComponent.dragRecategorize is also implemented by interface:DataBoundComponent
+212. attr:DataBoundComponent.dragRecategorize is also implemented by interface:DataBoundComponent
+213. attr:DataBoundComponent.dragRecategorize is also implemented by interface:DataBoundComponent
+214. attr:DataBoundComponent.dragRecategorize is also implemented by interface:DataBoundComponent
+215. attr:DataBoundComponent.dragRecategorize is also implemented by interface:DataBoundComponent
+216. attr:DataBoundComponent.dragTrackerStyle is also implemented by interface:DataBoundComponent
+217. attr:DataBoundComponent.dragTrackerStyle is also implemented by interface:DataBoundComponent
+218. attr:DataBoundComponent.dragTrackerStyle is also implemented by interface:DataBoundComponent
+219. attr:DataBoundComponent.dragTrackerStyle is also implemented by interface:DataBoundComponent
+220. attr:DataBoundComponent.dragTrackerStyle is also implemented by interface:DataBoundComponent
+221. attr:DataBoundComponent.dragTrackerStyle is also implemented by interface:DataBoundComponent
+222. attr:DataBoundComponent.dragTrackerStyle is also implemented by interface:DataBoundComponent
+223. attr:DataBoundComponent.dragTrackerStyle is also implemented by interface:DataBoundComponent
+224. attr:DataBoundComponent.dropValues is also implemented by interface:DataBoundComponent
+225. attr:DataBoundComponent.dropValues is also implemented by interface:DataBoundComponent
+226. attr:DataBoundComponent.dropValues is also implemented by interface:DataBoundComponent
+227. attr:DataBoundComponent.dropValues is also implemented by interface:DataBoundComponent
+228. attr:DataBoundComponent.dropValues is also implemented by interface:DataBoundComponent
+229. attr:DataBoundComponent.dropValues is also implemented by interface:DataBoundComponent
+230. attr:DataBoundComponent.dropValues is also implemented by interface:DataBoundComponent
+231. attr:DataBoundComponent.dropValues is also implemented by interface:DataBoundComponent
+232. attr:DataBoundComponent.duplicateDragMessage is also implemented by interface:DataBoundComponent
+233. attr:DataBoundComponent.duplicateDragMessage is also implemented by interface:DataBoundComponent
+234. attr:DataBoundComponent.duplicateDragMessage is also implemented by interface:DataBoundComponent
+235. attr:DataBoundComponent.duplicateDragMessage is also implemented by interface:DataBoundComponent
+236. attr:DataBoundComponent.duplicateDragMessage is also implemented by interface:DataBoundComponent
+237. attr:DataBoundComponent.duplicateDragMessage is also implemented by interface:DataBoundComponent
+238. attr:DataBoundComponent.duplicateDragMessage is also implemented by interface:DataBoundComponent
+239. attr:DataBoundComponent.duplicateDragMessage is also implemented by interface:DataBoundComponent
+240. attr:DataBoundComponent.editFormulaFieldText is also implemented by interface:DataBoundComponent
+241. attr:DataBoundComponent.editFormulaFieldText is also implemented by interface:DataBoundComponent
+242. attr:DataBoundComponent.editFormulaFieldText is also implemented by interface:DataBoundComponent
+243. attr:DataBoundComponent.editFormulaFieldText is also implemented by interface:DataBoundComponent
+244. attr:DataBoundComponent.editFormulaFieldText is also implemented by interface:DataBoundComponent
+245. attr:DataBoundComponent.editFormulaFieldText is also implemented by interface:DataBoundComponent
+246. attr:DataBoundComponent.editFormulaFieldText is also implemented by interface:DataBoundComponent
+247. attr:DataBoundComponent.editFormulaFieldText is also implemented by interface:DataBoundComponent
+248. attr:DataBoundComponent.editHilitesDialogTitle is also implemented by interface:DataBoundComponent
+249. attr:DataBoundComponent.editHilitesDialogTitle is also implemented by interface:DataBoundComponent
+250. attr:DataBoundComponent.editHilitesDialogTitle is also implemented by interface:DataBoundComponent
+251. attr:DataBoundComponent.editHilitesDialogTitle is also implemented by interface:DataBoundComponent
+252. attr:DataBoundComponent.editHilitesDialogTitle is also implemented by interface:DataBoundComponent
+253. attr:DataBoundComponent.editHilitesDialogTitle is also implemented by interface:DataBoundComponent
+254. attr:DataBoundComponent.editHilitesDialogTitle is also implemented by interface:DataBoundComponent
+255. attr:DataBoundComponent.editHilitesDialogTitle is also implemented by interface:DataBoundComponent
+256. attr:DataBoundComponent.editHilitesText is also implemented by interface:DataBoundComponent
+257. attr:DataBoundComponent.editHilitesText is also implemented by interface:DataBoundComponent
+258. attr:DataBoundComponent.editHilitesText is also implemented by interface:DataBoundComponent
+259. attr:DataBoundComponent.editHilitesText is also implemented by interface:DataBoundComponent
+260. attr:DataBoundComponent.editHilitesText is also implemented by interface:DataBoundComponent
+261. attr:DataBoundComponent.editHilitesText is also implemented by interface:DataBoundComponent
+262. attr:DataBoundComponent.editHilitesText is also implemented by interface:DataBoundComponent
+263. attr:DataBoundComponent.editHilitesText is also implemented by interface:DataBoundComponent
+264. attr:DataBoundComponent.editSummaryFieldText is also implemented by interface:DataBoundComponent
+265. attr:DataBoundComponent.editSummaryFieldText is also implemented by interface:DataBoundComponent
+266. attr:DataBoundComponent.editSummaryFieldText is also implemented by interface:DataBoundComponent
+267. attr:DataBoundComponent.editSummaryFieldText is also implemented by interface:DataBoundComponent
+268. attr:DataBoundComponent.editSummaryFieldText is also implemented by interface:DataBoundComponent
+269. attr:DataBoundComponent.editSummaryFieldText is also implemented by interface:DataBoundComponent
+270. attr:DataBoundComponent.editSummaryFieldText is also implemented by interface:DataBoundComponent
+271. attr:DataBoundComponent.editSummaryFieldText is also implemented by interface:DataBoundComponent
+272. attr:DataBoundComponent.emptyExportMessage is also implemented by interface:DataBoundComponent
+273. attr:DataBoundComponent.emptyExportMessage is also implemented by interface:DataBoundComponent
+274. attr:DataBoundComponent.emptyExportMessage is also implemented by interface:DataBoundComponent
+275. attr:DataBoundComponent.emptyExportMessage is also implemented by interface:DataBoundComponent
+276. attr:DataBoundComponent.emptyExportMessage is also implemented by interface:DataBoundComponent
+277. attr:DataBoundComponent.emptyExportMessage is also implemented by interface:DataBoundComponent
+278. attr:DataBoundComponent.emptyExportMessage is also implemented by interface:DataBoundComponent
+279. attr:DataBoundComponent.emptyExportMessage is also implemented by interface:DataBoundComponent
+280. attr:DataBoundComponent.exportAll is also implemented by interface:DataBoundComponent
+281. attr:DataBoundComponent.exportAll is also implemented by interface:DataBoundComponent
+282. attr:DataBoundComponent.exportAll is also implemented by interface:DataBoundComponent
+283. attr:DataBoundComponent.exportAll is also implemented by interface:DataBoundComponent
+284. attr:DataBoundComponent.exportAll is also implemented by interface:DataBoundComponent
+285. attr:DataBoundComponent.exportAll is also implemented by interface:DataBoundComponent
+286. attr:DataBoundComponent.exportAll is also implemented by interface:DataBoundComponent
+287. attr:DataBoundComponent.exportAll is also implemented by interface:DataBoundComponent
+288. attr:DataBoundComponent.exportFields is also implemented by interface:DataBoundComponent
+289. attr:DataBoundComponent.exportFields is also implemented by interface:DataBoundComponent
+290. attr:DataBoundComponent.exportFields is also implemented by interface:DataBoundComponent
+291. attr:DataBoundComponent.exportFields is also implemented by interface:DataBoundComponent
+292. attr:DataBoundComponent.exportFields is also implemented by interface:DataBoundComponent
+293. attr:DataBoundComponent.exportFields is also implemented by interface:DataBoundComponent
+294. attr:DataBoundComponent.exportFields is also implemented by interface:DataBoundComponent
+295. attr:DataBoundComponent.exportFields is also implemented by interface:DataBoundComponent
+296. attr:DataBoundComponent.exportIncludeSummaries is also implemented by interface:DataBoundComponent
+297. attr:DataBoundComponent.exportIncludeSummaries is also implemented by interface:DataBoundComponent
+298. attr:DataBoundComponent.exportIncludeSummaries is also implemented by interface:DataBoundComponent
+299. attr:DataBoundComponent.exportIncludeSummaries is also implemented by interface:DataBoundComponent
+300. attr:DataBoundComponent.exportIncludeSummaries is also implemented by interface:DataBoundComponent
+301. attr:DataBoundComponent.exportIncludeSummaries is also implemented by interface:DataBoundComponent
+302. attr:DataBoundComponent.exportIncludeSummaries is also implemented by interface:DataBoundComponent
+303. attr:DataBoundComponent.exportIncludeSummaries is also implemented by interface:DataBoundComponent
+304. attr:DataBoundComponent.fetchOperation is also implemented by interface:DataBoundComponent
+305. attr:DataBoundComponent.fetchOperation is also implemented by interface:DataBoundComponent
+306. attr:DataBoundComponent.fetchOperation is also implemented by interface:DataBoundComponent
+307. attr:DataBoundComponent.fetchOperation is also implemented by interface:DataBoundComponent
+308. attr:DataBoundComponent.fetchOperation is also implemented by interface:DataBoundComponent
+309. attr:DataBoundComponent.fetchOperation is also implemented by interface:DataBoundComponent
+310. attr:DataBoundComponent.fetchOperation is also implemented by interface:DataBoundComponent
+311. attr:DataBoundComponent.fetchOperation is also implemented by interface:DataBoundComponent
+312. attr:DataBoundComponent.fieldEditorWindowTitle is also implemented by interface:DataBoundComponent
+313. attr:DataBoundComponent.fieldEditorWindowTitle is also implemented by interface:DataBoundComponent
+314. attr:DataBoundComponent.fieldEditorWindowTitle is also implemented by interface:DataBoundComponent
+315. attr:DataBoundComponent.fieldEditorWindowTitle is also implemented by interface:DataBoundComponent
+316. attr:DataBoundComponent.fieldEditorWindowTitle is also implemented by interface:DataBoundComponent
+317. attr:DataBoundComponent.fieldEditorWindowTitle is also implemented by interface:DataBoundComponent
+318. attr:DataBoundComponent.fieldEditorWindowTitle is also implemented by interface:DataBoundComponent
+319. attr:DataBoundComponent.fieldEditorWindowTitle is also implemented by interface:DataBoundComponent
+320. attr:DataBoundComponent.fieldNamingStrategy is also implemented by interface:DataBoundComponent
+321. attr:DataBoundComponent.fieldNamingStrategy is also implemented by interface:DataBoundComponent
+322. attr:DataBoundComponent.fieldNamingStrategy is also implemented by interface:DataBoundComponent
+323. attr:DataBoundComponent.fieldNamingStrategy is also implemented by interface:DataBoundComponent
+324. attr:DataBoundComponent.fieldNamingStrategy is also implemented by interface:DataBoundComponent
+325. attr:DataBoundComponent.fieldNamingStrategy is also implemented by interface:DataBoundComponent
+326. attr:DataBoundComponent.fieldNamingStrategy is also implemented by interface:DataBoundComponent
+327. attr:DataBoundComponent.fieldNamingStrategy is also implemented by interface:DataBoundComponent
+328. attr:DataBoundComponent.fields is also implemented by interface:DataBoundComponent
+329. attr:DataBoundComponent.fields is also implemented by interface:DataBoundComponent
+330. attr:DataBoundComponent.fields is also implemented by interface:DataBoundComponent
+331. attr:DataBoundComponent.fields is also implemented by interface:DataBoundComponent
+332. attr:DataBoundComponent.fields is also implemented by interface:DataBoundComponent
+333. attr:DataBoundComponent.fields is also implemented by interface:DataBoundComponent
+334. attr:DataBoundComponent.fields is also implemented by interface:DataBoundComponent
+335. attr:DataBoundComponent.fields is also implemented by interface:DataBoundComponent
+336. attr:DataBoundComponent.hiliteIconHeight is also implemented by interface:DataBoundComponent
+337. attr:DataBoundComponent.hiliteIconHeight is also implemented by interface:DataBoundComponent
+338. attr:DataBoundComponent.hiliteIconHeight is also implemented by interface:DataBoundComponent
+339. attr:DataBoundComponent.hiliteIconHeight is also implemented by interface:DataBoundComponent
+340. attr:DataBoundComponent.hiliteIconHeight is also implemented by interface:DataBoundComponent
+341. attr:DataBoundComponent.hiliteIconHeight is also implemented by interface:DataBoundComponent
+342. attr:DataBoundComponent.hiliteIconHeight is also implemented by interface:DataBoundComponent
+343. attr:DataBoundComponent.hiliteIconHeight is also implemented by interface:DataBoundComponent
+344. attr:DataBoundComponent.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+345. attr:DataBoundComponent.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+346. attr:DataBoundComponent.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+347. attr:DataBoundComponent.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+348. attr:DataBoundComponent.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+349. attr:DataBoundComponent.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+350. attr:DataBoundComponent.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+351. attr:DataBoundComponent.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+352. attr:DataBoundComponent.hiliteIconPosition is also implemented by interface:DataBoundComponent
+353. attr:DataBoundComponent.hiliteIconPosition is also implemented by interface:DataBoundComponent
+354. attr:DataBoundComponent.hiliteIconPosition is also implemented by interface:DataBoundComponent
+355. attr:DataBoundComponent.hiliteIconPosition is also implemented by interface:DataBoundComponent
+356. attr:DataBoundComponent.hiliteIconPosition is also implemented by interface:DataBoundComponent
+357. attr:DataBoundComponent.hiliteIconPosition is also implemented by interface:DataBoundComponent
+358. attr:DataBoundComponent.hiliteIconPosition is also implemented by interface:DataBoundComponent
+359. attr:DataBoundComponent.hiliteIconPosition is also implemented by interface:DataBoundComponent
+360. attr:DataBoundComponent.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+361. attr:DataBoundComponent.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+362. attr:DataBoundComponent.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+363. attr:DataBoundComponent.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+364. attr:DataBoundComponent.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+365. attr:DataBoundComponent.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+366. attr:DataBoundComponent.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+367. attr:DataBoundComponent.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+368. attr:DataBoundComponent.hiliteIcons is also implemented by interface:DataBoundComponent
+369. attr:DataBoundComponent.hiliteIcons is also implemented by interface:DataBoundComponent
+370. attr:DataBoundComponent.hiliteIcons is also implemented by interface:DataBoundComponent
+371. attr:DataBoundComponent.hiliteIcons is also implemented by interface:DataBoundComponent
+372. attr:DataBoundComponent.hiliteIcons is also implemented by interface:DataBoundComponent
+373. attr:DataBoundComponent.hiliteIcons is also implemented by interface:DataBoundComponent
+374. attr:DataBoundComponent.hiliteIcons is also implemented by interface:DataBoundComponent
+375. attr:DataBoundComponent.hiliteIcons is also implemented by interface:DataBoundComponent
+376. attr:DataBoundComponent.hiliteIconSize is also implemented by interface:DataBoundComponent
+377. attr:DataBoundComponent.hiliteIconSize is also implemented by interface:DataBoundComponent
+378. attr:DataBoundComponent.hiliteIconSize is also implemented by interface:DataBoundComponent
+379. attr:DataBoundComponent.hiliteIconSize is also implemented by interface:DataBoundComponent
+380. attr:DataBoundComponent.hiliteIconSize is also implemented by interface:DataBoundComponent
+381. attr:DataBoundComponent.hiliteIconSize is also implemented by interface:DataBoundComponent
+382. attr:DataBoundComponent.hiliteIconSize is also implemented by interface:DataBoundComponent
+383. attr:DataBoundComponent.hiliteIconSize is also implemented by interface:DataBoundComponent
+384. attr:DataBoundComponent.hiliteIconWidth is also implemented by interface:DataBoundComponent
+385. attr:DataBoundComponent.hiliteIconWidth is also implemented by interface:DataBoundComponent
+386. attr:DataBoundComponent.hiliteIconWidth is also implemented by interface:DataBoundComponent
+387. attr:DataBoundComponent.hiliteIconWidth is also implemented by interface:DataBoundComponent
+388. attr:DataBoundComponent.hiliteIconWidth is also implemented by interface:DataBoundComponent
+389. attr:DataBoundComponent.hiliteIconWidth is also implemented by interface:DataBoundComponent
+390. attr:DataBoundComponent.hiliteIconWidth is also implemented by interface:DataBoundComponent
+391. attr:DataBoundComponent.hiliteIconWidth is also implemented by interface:DataBoundComponent
+392. attr:DataBoundComponent.hiliteProperty is also implemented by interface:DataBoundComponent
+393. attr:DataBoundComponent.hiliteProperty is also implemented by interface:DataBoundComponent
+394. attr:DataBoundComponent.hiliteProperty is also implemented by interface:DataBoundComponent
+395. attr:DataBoundComponent.hiliteProperty is also implemented by interface:DataBoundComponent
+396. attr:DataBoundComponent.hiliteProperty is also implemented by interface:DataBoundComponent
+397. attr:DataBoundComponent.hiliteProperty is also implemented by interface:DataBoundComponent
+398. attr:DataBoundComponent.hiliteProperty is also implemented by interface:DataBoundComponent
+399. attr:DataBoundComponent.hiliteProperty is also implemented by interface:DataBoundComponent
+400. attr:DataBoundComponent.hilites is also implemented by interface:DataBoundComponent
+401. attr:DataBoundComponent.hilites is also implemented by interface:DataBoundComponent
+402. attr:DataBoundComponent.hilites is also implemented by interface:DataBoundComponent
+403. attr:DataBoundComponent.hilites is also implemented by interface:DataBoundComponent
+404. attr:DataBoundComponent.hilites is also implemented by interface:DataBoundComponent
+405. attr:DataBoundComponent.hilites is also implemented by interface:DataBoundComponent
+406. attr:DataBoundComponent.hilites is also implemented by interface:DataBoundComponent
+407. attr:DataBoundComponent.hilites is also implemented by interface:DataBoundComponent
+408. attr:DataBoundComponent.hiliteState is also implemented by interface:DataBoundComponent
+409. attr:DataBoundComponent.hiliteState is also implemented by interface:DataBoundComponent
+410. attr:DataBoundComponent.hiliteState is also implemented by interface:DataBoundComponent
+411. attr:DataBoundComponent.hiliteState is also implemented by interface:DataBoundComponent
+412. attr:DataBoundComponent.hiliteState is also implemented by interface:DataBoundComponent
+413. attr:DataBoundComponent.hiliteState is also implemented by interface:DataBoundComponent
+414. attr:DataBoundComponent.hiliteState is also implemented by interface:DataBoundComponent
+415. attr:DataBoundComponent.hiliteState is also implemented by interface:DataBoundComponent
+416. attr:DataBoundComponent.iconField is also implemented by interface:DataBoundComponent
+417. attr:DataBoundComponent.iconField is also implemented by interface:DataBoundComponent
+418. attr:DataBoundComponent.iconField is also implemented by interface:DataBoundComponent
+419. attr:DataBoundComponent.iconField is also implemented by interface:DataBoundComponent
+420. attr:DataBoundComponent.iconField is also implemented by interface:DataBoundComponent
+421. attr:DataBoundComponent.iconField is also implemented by interface:DataBoundComponent
+422. attr:DataBoundComponent.iconField is also implemented by interface:DataBoundComponent
+423. attr:DataBoundComponent.iconField is also implemented by interface:DataBoundComponent
+424. attr:DataBoundComponent.implicitCriteria is also implemented by interface:DataBoundComponent
+425. attr:DataBoundComponent.implicitCriteria is also implemented by interface:DataBoundComponent
+426. attr:DataBoundComponent.implicitCriteria is also implemented by interface:DataBoundComponent
+427. attr:DataBoundComponent.implicitCriteria is also implemented by interface:DataBoundComponent
+428. attr:DataBoundComponent.implicitCriteria is also implemented by interface:DataBoundComponent
+429. attr:DataBoundComponent.implicitCriteria is also implemented by interface:DataBoundComponent
+430. attr:DataBoundComponent.implicitCriteria is also implemented by interface:DataBoundComponent
+431. attr:DataBoundComponent.implicitCriteria is also implemented by interface:DataBoundComponent
+432. attr:DataBoundComponent.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+433. attr:DataBoundComponent.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+434. attr:DataBoundComponent.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+435. attr:DataBoundComponent.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+436. attr:DataBoundComponent.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+437. attr:DataBoundComponent.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+438. attr:DataBoundComponent.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+439. attr:DataBoundComponent.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+440. attr:DataBoundComponent.infoField is also implemented by interface:DataBoundComponent
+441. attr:DataBoundComponent.infoField is also implemented by interface:DataBoundComponent
+442. attr:DataBoundComponent.infoField is also implemented by interface:DataBoundComponent
+443. attr:DataBoundComponent.infoField is also implemented by interface:DataBoundComponent
+444. attr:DataBoundComponent.infoField is also implemented by interface:DataBoundComponent
+445. attr:DataBoundComponent.infoField is also implemented by interface:DataBoundComponent
+446. attr:DataBoundComponent.infoField is also implemented by interface:DataBoundComponent
+447. attr:DataBoundComponent.infoField is also implemented by interface:DataBoundComponent
+448. attr:DataBoundComponent.initialCriteria is also implemented by interface:DataBoundComponent
+449. attr:DataBoundComponent.initialCriteria is also implemented by interface:DataBoundComponent
+450. attr:DataBoundComponent.initialCriteria is also implemented by interface:DataBoundComponent
+451. attr:DataBoundComponent.initialCriteria is also implemented by interface:DataBoundComponent
+452. attr:DataBoundComponent.initialCriteria is also implemented by interface:DataBoundComponent
+453. attr:DataBoundComponent.initialCriteria is also implemented by interface:DataBoundComponent
+454. attr:DataBoundComponent.initialCriteria is also implemented by interface:DataBoundComponent
+455. attr:DataBoundComponent.initialCriteria is also implemented by interface:DataBoundComponent
+456. attr:DataBoundComponent.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+457. attr:DataBoundComponent.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+458. attr:DataBoundComponent.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+459. attr:DataBoundComponent.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+460. attr:DataBoundComponent.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+461. attr:DataBoundComponent.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+462. attr:DataBoundComponent.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+463. attr:DataBoundComponent.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+464. attr:DataBoundComponent.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+465. attr:DataBoundComponent.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+466. attr:DataBoundComponent.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+467. attr:DataBoundComponent.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+468. attr:DataBoundComponent.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+469. attr:DataBoundComponent.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+470. attr:DataBoundComponent.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+471. attr:DataBoundComponent.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+472. attr:DataBoundComponent.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+473. attr:DataBoundComponent.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+474. attr:DataBoundComponent.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+475. attr:DataBoundComponent.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+476. attr:DataBoundComponent.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+477. attr:DataBoundComponent.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+478. attr:DataBoundComponent.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+479. attr:DataBoundComponent.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+480. attr:DataBoundComponent.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+481. attr:DataBoundComponent.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+482. attr:DataBoundComponent.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+483. attr:DataBoundComponent.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+484. attr:DataBoundComponent.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+485. attr:DataBoundComponent.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+486. attr:DataBoundComponent.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+487. attr:DataBoundComponent.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+488. attr:DataBoundComponent.offlineMessage is also implemented by interface:DataBoundComponent
+489. attr:DataBoundComponent.offlineMessage is also implemented by interface:DataBoundComponent
+490. attr:DataBoundComponent.offlineMessage is also implemented by interface:DataBoundComponent
+491. attr:DataBoundComponent.offlineMessage is also implemented by interface:DataBoundComponent
+492. attr:DataBoundComponent.offlineMessage is also implemented by interface:DataBoundComponent
+493. attr:DataBoundComponent.offlineMessage is also implemented by interface:DataBoundComponent
+494. attr:DataBoundComponent.offlineMessage is also implemented by interface:DataBoundComponent
+495. attr:DataBoundComponent.offlineMessage is also implemented by interface:DataBoundComponent
+496. attr:DataBoundComponent.offlineSaveMessage is also implemented by interface:DataBoundComponent
+497. attr:DataBoundComponent.offlineSaveMessage is also implemented by interface:DataBoundComponent
+498. attr:DataBoundComponent.offlineSaveMessage is also implemented by interface:DataBoundComponent
+499. attr:DataBoundComponent.offlineSaveMessage is also implemented by interface:DataBoundComponent
+500. attr:DataBoundComponent.offlineSaveMessage is also implemented by interface:DataBoundComponent
+501. attr:DataBoundComponent.offlineSaveMessage is also implemented by interface:DataBoundComponent
+502. attr:DataBoundComponent.offlineSaveMessage is also implemented by interface:DataBoundComponent
+503. attr:DataBoundComponent.offlineSaveMessage is also implemented by interface:DataBoundComponent
+504. attr:DataBoundComponent.preventDuplicates is also implemented by interface:DataBoundComponent
+505. attr:DataBoundComponent.preventDuplicates is also implemented by interface:DataBoundComponent
+506. attr:DataBoundComponent.preventDuplicates is also implemented by interface:DataBoundComponent
+507. attr:DataBoundComponent.preventDuplicates is also implemented by interface:DataBoundComponent
+508. attr:DataBoundComponent.preventDuplicates is also implemented by interface:DataBoundComponent
+509. attr:DataBoundComponent.preventDuplicates is also implemented by interface:DataBoundComponent
+510. attr:DataBoundComponent.preventDuplicates is also implemented by interface:DataBoundComponent
+511. attr:DataBoundComponent.preventDuplicates is also implemented by interface:DataBoundComponent
+512. attr:DataBoundComponent.progressiveLoading is also implemented by interface:DataBoundComponent
+513. attr:DataBoundComponent.progressiveLoading is also implemented by interface:DataBoundComponent
+514. attr:DataBoundComponent.progressiveLoading is also implemented by interface:DataBoundComponent
+515. attr:DataBoundComponent.progressiveLoading is also implemented by interface:DataBoundComponent
+516. attr:DataBoundComponent.progressiveLoading is also implemented by interface:DataBoundComponent
+517. attr:DataBoundComponent.progressiveLoading is also implemented by interface:DataBoundComponent
+518. attr:DataBoundComponent.progressiveLoading is also implemented by interface:DataBoundComponent
+519. attr:DataBoundComponent.progressiveLoading is also implemented by interface:DataBoundComponent
+520. attr:DataBoundComponent.removeFormulaFieldText is also implemented by interface:DataBoundComponent
+521. attr:DataBoundComponent.removeFormulaFieldText is also implemented by interface:DataBoundComponent
+522. attr:DataBoundComponent.removeFormulaFieldText is also implemented by interface:DataBoundComponent
+523. attr:DataBoundComponent.removeFormulaFieldText is also implemented by interface:DataBoundComponent
+524. attr:DataBoundComponent.removeFormulaFieldText is also implemented by interface:DataBoundComponent
+525. attr:DataBoundComponent.removeFormulaFieldText is also implemented by interface:DataBoundComponent
+526. attr:DataBoundComponent.removeFormulaFieldText is also implemented by interface:DataBoundComponent
+527. attr:DataBoundComponent.removeFormulaFieldText is also implemented by interface:DataBoundComponent
+528. attr:DataBoundComponent.removeOperation is also implemented by interface:DataBoundComponent
+529. attr:DataBoundComponent.removeOperation is also implemented by interface:DataBoundComponent
+530. attr:DataBoundComponent.removeOperation is also implemented by interface:DataBoundComponent
+531. attr:DataBoundComponent.removeOperation is also implemented by interface:DataBoundComponent
+532. attr:DataBoundComponent.removeOperation is also implemented by interface:DataBoundComponent
+533. attr:DataBoundComponent.removeOperation is also implemented by interface:DataBoundComponent
+534. attr:DataBoundComponent.removeOperation is also implemented by interface:DataBoundComponent
+535. attr:DataBoundComponent.removeOperation is also implemented by interface:DataBoundComponent
+536. attr:DataBoundComponent.removeSummaryFieldText is also implemented by interface:DataBoundComponent
+537. attr:DataBoundComponent.removeSummaryFieldText is also implemented by interface:DataBoundComponent
+538. attr:DataBoundComponent.removeSummaryFieldText is also implemented by interface:DataBoundComponent
+539. attr:DataBoundComponent.removeSummaryFieldText is also implemented by interface:DataBoundComponent
+540. attr:DataBoundComponent.removeSummaryFieldText is also implemented by interface:DataBoundComponent
+541. attr:DataBoundComponent.removeSummaryFieldText is also implemented by interface:DataBoundComponent
+542. attr:DataBoundComponent.removeSummaryFieldText is also implemented by interface:DataBoundComponent
+543. attr:DataBoundComponent.removeSummaryFieldText is also implemented by interface:DataBoundComponent
+544. attr:DataBoundComponent.showComplexFields is also implemented by interface:DataBoundComponent
+545. attr:DataBoundComponent.showComplexFields is also implemented by interface:DataBoundComponent
+546. attr:DataBoundComponent.showComplexFields is also implemented by interface:DataBoundComponent
+547. attr:DataBoundComponent.showComplexFields is also implemented by interface:DataBoundComponent
+548. attr:DataBoundComponent.showComplexFields is also implemented by interface:DataBoundComponent
+549. attr:DataBoundComponent.showComplexFields is also implemented by interface:DataBoundComponent
+550. attr:DataBoundComponent.showComplexFields is also implemented by interface:DataBoundComponent
+551. attr:DataBoundComponent.showComplexFields is also implemented by interface:DataBoundComponent
+552. attr:DataBoundComponent.showDetailFields is also implemented by interface:DataBoundComponent
+553. attr:DataBoundComponent.showDetailFields is also implemented by interface:DataBoundComponent
+554. attr:DataBoundComponent.showDetailFields is also implemented by interface:DataBoundComponent
+555. attr:DataBoundComponent.showDetailFields is also implemented by interface:DataBoundComponent
+556. attr:DataBoundComponent.showDetailFields is also implemented by interface:DataBoundComponent
+557. attr:DataBoundComponent.showDetailFields is also implemented by interface:DataBoundComponent
+558. attr:DataBoundComponent.showDetailFields is also implemented by interface:DataBoundComponent
+559. attr:DataBoundComponent.showDetailFields is also implemented by interface:DataBoundComponent
+560. attr:DataBoundComponent.showHiddenFields is also implemented by interface:DataBoundComponent
+561. attr:DataBoundComponent.showHiddenFields is also implemented by interface:DataBoundComponent
+562. attr:DataBoundComponent.showHiddenFields is also implemented by interface:DataBoundComponent
+563. attr:DataBoundComponent.showHiddenFields is also implemented by interface:DataBoundComponent
+564. attr:DataBoundComponent.showHiddenFields is also implemented by interface:DataBoundComponent
+565. attr:DataBoundComponent.showHiddenFields is also implemented by interface:DataBoundComponent
+566. attr:DataBoundComponent.showHiddenFields is also implemented by interface:DataBoundComponent
+567. attr:DataBoundComponent.showHiddenFields is also implemented by interface:DataBoundComponent
+568. attr:DataBoundComponent.showOfflineMessage is also implemented by interface:DataBoundComponent
+569. attr:DataBoundComponent.showOfflineMessage is also implemented by interface:DataBoundComponent
+570. attr:DataBoundComponent.showOfflineMessage is also implemented by interface:DataBoundComponent
+571. attr:DataBoundComponent.showOfflineMessage is also implemented by interface:DataBoundComponent
+572. attr:DataBoundComponent.showOfflineMessage is also implemented by interface:DataBoundComponent
+573. attr:DataBoundComponent.showOfflineMessage is also implemented by interface:DataBoundComponent
+574. attr:DataBoundComponent.showOfflineMessage is also implemented by interface:DataBoundComponent
+575. attr:DataBoundComponent.showOfflineMessage is also implemented by interface:DataBoundComponent
+576. attr:DataBoundComponent.titleField is also implemented by interface:DataBoundComponent
+577. attr:DataBoundComponent.titleField is also implemented by interface:DataBoundComponent
+578. attr:DataBoundComponent.titleField is also implemented by interface:DataBoundComponent
+579. attr:DataBoundComponent.titleField is also implemented by interface:DataBoundComponent
+580. attr:DataBoundComponent.titleField is also implemented by interface:DataBoundComponent
+581. attr:DataBoundComponent.titleField is also implemented by interface:DataBoundComponent
+582. attr:DataBoundComponent.titleField is also implemented by interface:DataBoundComponent
+583. attr:DataBoundComponent.titleField is also implemented by interface:DataBoundComponent
+584. attr:DataBoundComponent.unknownErrorMessage is also implemented by interface:DataBoundComponent
+585. attr:DataBoundComponent.unknownErrorMessage is also implemented by interface:DataBoundComponent
+586. attr:DataBoundComponent.unknownErrorMessage is also implemented by interface:DataBoundComponent
+587. attr:DataBoundComponent.unknownErrorMessage is also implemented by interface:DataBoundComponent
+588. attr:DataBoundComponent.unknownErrorMessage is also implemented by interface:DataBoundComponent
+589. attr:DataBoundComponent.unknownErrorMessage is also implemented by interface:DataBoundComponent
+590. attr:DataBoundComponent.unknownErrorMessage is also implemented by interface:DataBoundComponent
+591. attr:DataBoundComponent.unknownErrorMessage is also implemented by interface:DataBoundComponent
+592. attr:DataBoundComponent.updateOperation is also implemented by interface:DataBoundComponent
+593. attr:DataBoundComponent.updateOperation is also implemented by interface:DataBoundComponent
+594. attr:DataBoundComponent.updateOperation is also implemented by interface:DataBoundComponent
+595. attr:DataBoundComponent.updateOperation is also implemented by interface:DataBoundComponent
+596. attr:DataBoundComponent.updateOperation is also implemented by interface:DataBoundComponent
+597. attr:DataBoundComponent.updateOperation is also implemented by interface:DataBoundComponent
+598. attr:DataBoundComponent.updateOperation is also implemented by interface:DataBoundComponent
+599. attr:DataBoundComponent.updateOperation is also implemented by interface:DataBoundComponent
+600. attr:DataBoundComponent.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+601. attr:DataBoundComponent.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+602. attr:DataBoundComponent.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+603. attr:DataBoundComponent.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+604. attr:DataBoundComponent.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+605. attr:DataBoundComponent.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+606. attr:DataBoundComponent.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+607. attr:DataBoundComponent.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+608. attr:DataBoundComponent.useFlatFields is also implemented by interface:DataBoundComponent
+609. attr:DataBoundComponent.useFlatFields is also implemented by interface:DataBoundComponent
+610. attr:DataBoundComponent.useFlatFields is also implemented by interface:DataBoundComponent
+611. attr:DataBoundComponent.useFlatFields is also implemented by interface:DataBoundComponent
+612. attr:DataBoundComponent.useFlatFields is also implemented by interface:DataBoundComponent
+613. attr:DataBoundComponent.useFlatFields is also implemented by interface:DataBoundComponent
+614. attr:DataBoundComponent.useFlatFields is also implemented by interface:DataBoundComponent
+615. attr:DataBoundComponent.useFlatFields is also implemented by interface:DataBoundComponent
+616. attr:DetailViewer.autoFetchData is also implemented by interface:DataBoundComponent
+617. attr:DetailViewer.dataFetchMode is also implemented by interface:DataBoundComponent
+618. attr:DetailViewer.dataSource is also implemented by interface:DataBoundComponent
+619. attr:DetailViewer.fields is also implemented by interface:DataBoundComponent
+620. attr:DetailViewer.hiliteIconHeight is also implemented by interface:DataBoundComponent
+621. attr:DetailViewer.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+622. attr:DetailViewer.hiliteIconPosition is also implemented by interface:DataBoundComponent
+623. attr:DetailViewer.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+624. attr:DetailViewer.hiliteIcons is also implemented by interface:DataBoundComponent
+625. attr:DetailViewer.hiliteIconSize is also implemented by interface:DataBoundComponent
+626. attr:DetailViewer.hiliteIconWidth is also implemented by interface:DataBoundComponent
+627. attr:DetailViewer.initialCriteria is also implemented by interface:DataBoundComponent
+628. attr:DetailViewer.showDetailFields is also implemented by interface:DataBoundComponent
+629. attr:DynamicForm.autoFetchData is also implemented by interface:DataBoundComponent
+630. attr:DynamicForm.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+631. attr:DynamicForm.dataFetchMode is also implemented by interface:DataBoundComponent
+632. attr:DynamicForm.dataSource is also implemented by interface:DataBoundComponent
+633. attr:DynamicForm.initialCriteria is also implemented by interface:DataBoundComponent
+634. attr:DynamicForm.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+635. attr:DynamicForm.showDetailFields is also implemented by interface:DataBoundComponent
+636. attr:DynamicForm.unknownErrorMessage is also implemented by interface:DataBoundComponent
+637. attr:FacetChart.chartType is also implemented by interface:Chart
+638. attr:FacetChart.data is also implemented by interface:Chart
+639. attr:FacetChart.facets is also implemented by interface:Chart
+640. attr:FacetChart.stacked is also implemented by interface:Chart
+641. attr:FacetChart.title is also implemented by interface:Chart
+642. attr:FacetChart.valueProperty is also implemented by interface:Chart
+643. attr:FacetChart.valueTitle is also implemented by interface:Chart
+644. attr:ListGrid.autoFetchData is also implemented by interface:DataBoundComponent
+645. attr:ListGrid.badFormulaResultValue is also implemented by interface:DataBoundComponent
+646. attr:ListGrid.canAddFormulaFields is also implemented by interface:DataBoundComponent
+647. attr:ListGrid.canAddSummaryFields is also implemented by interface:DataBoundComponent
+648. attr:ListGrid.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+649. attr:ListGrid.canEditHilites is also implemented by interface:DataBoundComponent
+650. attr:ListGrid.dataFetchDelay is also implemented by interface:DataBoundComponent
+651. attr:ListGrid.dataFetchMode is also implemented by interface:DataBoundComponent
+652. attr:ListGrid.dataPageSize is also implemented by interface:DataBoundComponent
+653. attr:ListGrid.dragDataAction is also implemented by interface:DataBoundComponent
+654. attr:ListGrid.dragTrackerStyle is also implemented by interface:DataBoundComponent
+655. attr:ListGrid.fields is also implemented by interface:DataBoundComponent
+656. attr:ListGrid.hiliteIconHeight is also implemented by interface:DataBoundComponent
+657. attr:ListGrid.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+658. attr:ListGrid.hiliteIconPosition is also implemented by interface:DataBoundComponent
+659. attr:ListGrid.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+660. attr:ListGrid.hiliteIcons is also implemented by interface:DataBoundComponent
+661. attr:ListGrid.hiliteIconSize is also implemented by interface:DataBoundComponent
+662. attr:ListGrid.hiliteIconWidth is also implemented by interface:DataBoundComponent
+663. attr:ListGrid.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+664. attr:ListGrid.initialCriteria is also implemented by interface:DataBoundComponent
+665. attr:ListGrid.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+666. attr:ListGrid.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+667. attr:ListGrid.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+668. attr:ListGrid.showDetailFields is also implemented by interface:DataBoundComponent
+669. attr:ListGrid.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+670. attr:Palette.defaultEditContext is also implemented by interface:Palette
+671. attr:Palette.defaultEditContext is also implemented by interface:Palette
+672. attr:Palette.defaultEditContext is also implemented by interface:Palette
+673. attr:Palette.defaultEditContext is also implemented by interface:Palette
+674. attr:Palette.defaultEditContext is also implemented by interface:Palette
+675. attr:Palette.generateNames is also implemented by interface:Palette
+676. attr:Palette.generateNames is also implemented by interface:Palette
+677. attr:Palette.generateNames is also implemented by interface:Palette
+678. attr:Palette.generateNames is also implemented by interface:Palette
+679. attr:Palette.generateNames is also implemented by interface:Palette
+680. attr:PickList.animatePickList is also implemented by interface:PickList
+681. attr:PickList.animatePickList is also implemented by interface:PickList
+682. attr:PickList.cachePickListResults is also implemented by interface:PickList
+683. attr:PickList.cachePickListResults is also implemented by interface:PickList
+684. attr:PickList.displayField is also implemented by interface:PickList
+685. attr:PickList.displayField is also implemented by interface:PickList
+686. attr:PickList.emptyPickListHeight is also implemented by interface:PickList
+687. attr:PickList.emptyPickListHeight is also implemented by interface:PickList
+688. attr:PickList.emptyPickListMessage is also implemented by interface:PickList
+689. attr:PickList.emptyPickListMessage is also implemented by interface:PickList
+690. attr:PickList.fetchDelay is also implemented by interface:PickList
+691. attr:PickList.fetchDelay is also implemented by interface:PickList
+692. attr:PickList.fetchDisplayedFieldsOnly is also implemented by interface:PickList
+693. attr:PickList.fetchDisplayedFieldsOnly is also implemented by interface:PickList
+694. attr:PickList.filterLocally is also implemented by interface:PickList
+695. attr:PickList.filterLocally is also implemented by interface:PickList
+696. attr:PickList.hideEmptyPickList is also implemented by interface:PickList
+697. attr:PickList.hideEmptyPickList is also implemented by interface:PickList
+698. attr:PickList.iconPlacement is also implemented by interface:PickList
+699. attr:PickList.iconPlacement is also implemented by interface:PickList
+700. attr:PickList.initialSort is also implemented by interface:PickList
+701. attr:PickList.initialSort is also implemented by interface:PickList
+702. attr:PickList.optionDataSource is also implemented by interface:PickList
+703. attr:PickList.optionDataSource is also implemented by interface:PickList
+704. attr:PickList.optionFilterContext is also implemented by interface:PickList
+705. attr:PickList.optionFilterContext is also implemented by interface:PickList
+706. attr:PickList.pickListAnimationTime is also implemented by interface:PickList
+707. attr:PickList.pickListAnimationTime is also implemented by interface:PickList
+708. attr:PickList.pickListApplyRowNumberStyle is also implemented by interface:PickList
+709. attr:PickList.pickListApplyRowNumberStyle is also implemented by interface:PickList
+710. attr:PickList.pickListBaseStyle is also implemented by interface:PickList
+711. attr:PickList.pickListBaseStyle is also implemented by interface:PickList
+712. attr:PickList.pickListCellHeight is also implemented by interface:PickList
+713. attr:PickList.pickListCellHeight is also implemented by interface:PickList
+714. attr:PickList.pickListConstructor is also implemented by interface:PickList
+715. attr:PickList.pickListConstructor is also implemented by interface:PickList
+716. attr:PickList.pickListCriteria is also implemented by interface:PickList
+717. attr:PickList.pickListCriteria is also implemented by interface:PickList
+718. attr:PickList.pickListFields is also implemented by interface:PickList
+719. attr:PickList.pickListFields is also implemented by interface:PickList
+720. attr:PickList.pickListHeaderHeight is also implemented by interface:PickList
+721. attr:PickList.pickListHeaderHeight is also implemented by interface:PickList
+722. attr:PickList.pickListHeight is also implemented by interface:PickList
+723. attr:PickList.pickListHeight is also implemented by interface:PickList
+724. attr:PickList.pickListMaxWidth is also implemented by interface:PickList
+725. attr:PickList.pickListMaxWidth is also implemented by interface:PickList
+726. attr:PickList.pickListProperties is also implemented by interface:PickList
+727. attr:PickList.pickListProperties is also implemented by interface:PickList
+728. attr:PickList.pickListTallBaseStyle is also implemented by interface:PickList
+729. attr:PickList.pickListTallBaseStyle is also implemented by interface:PickList
+730. attr:PickList.pickListWidth is also implemented by interface:PickList
+731. attr:PickList.pickListWidth is also implemented by interface:PickList
+732. attr:PickList.separatorRows is also implemented by interface:PickList
+733. attr:PickList.separatorRows is also implemented by interface:PickList
+734. attr:PickList.showAllOptions is also implemented by interface:PickList
+735. attr:PickList.showAllOptions is also implemented by interface:PickList
+736. attr:PickList.showOptionsFromDataSource is also implemented by interface:PickList
+737. attr:PickList.showOptionsFromDataSource is also implemented by interface:PickList
+738. attr:PickList.sortField is also implemented by interface:PickList
+739. attr:PickList.sortField is also implemented by interface:PickList
+740. attr:PickList.specialValues is also implemented by interface:PickList
+741. attr:PickList.specialValues is also implemented by interface:PickList
+742. attr:PickList.textMatchStyle is also implemented by interface:PickList
+743. attr:PickList.textMatchStyle is also implemented by interface:PickList
+744. attr:PickList.useClientFiltering is also implemented by interface:PickList
+745. attr:PickList.useClientFiltering is also implemented by interface:PickList
+746. attr:PickList.valueField is also implemented by interface:PickList
+747. attr:PickList.valueField is also implemented by interface:PickList
+748. attr:PickList.valueIconField is also implemented by interface:PickList
+749. attr:PickList.valueIconField is also implemented by interface:PickList
+750. attr:SelectItem.cachePickListResults is also implemented by interface:PickList
+751. attr:SelectItem.displayField is also implemented by interface:PickList
+752. attr:SelectItem.emptyPickListMessage is also implemented by interface:PickList
+753. attr:SelectItem.fetchDisplayedFieldsOnly is also implemented by interface:PickList
+754. attr:SelectItem.filterLocally is also implemented by interface:PickList
+755. attr:SelectItem.iconPlacement is also implemented by interface:PickList
+756. attr:SelectItem.initialSort is also implemented by interface:PickList
+757. attr:SelectItem.optionDataSource is also implemented by interface:PickList
+758. attr:SelectItem.optionFilterContext is also implemented by interface:PickList
+759. attr:SelectItem.pickListConstructor is also implemented by interface:PickList
+760. attr:SelectItem.pickListCriteria is also implemented by interface:PickList
+761. attr:SelectItem.pickListFields is also implemented by interface:PickList
+762. attr:SelectItem.pickListProperties is also implemented by interface:PickList
+763. attr:SelectItem.showOptionsFromDataSource is also implemented by interface:PickList
+764. attr:SelectItem.sortField is also implemented by interface:PickList
+765. attr:SelectItem.specialValues is also implemented by interface:PickList
+766. attr:SelectItem.textMatchStyle is also implemented by interface:PickList
+767. attr:SelectItem.useClientFiltering is also implemented by interface:PickList
+768. attr:SelectItem.valueField is also implemented by interface:PickList
+769. attr:TileGrid.autoFetchData is also implemented by interface:DataBoundComponent
+770. attr:TileGrid.dataFetchMode is also implemented by interface:DataBoundComponent
+771. attr:TileGrid.dataSource is also implemented by interface:DataBoundComponent
+772. attr:TileGrid.dragDataAction is also implemented by interface:DataBoundComponent
+773. attr:TileGrid.dragTrackerStyle is also implemented by interface:DataBoundComponent
+774. attr:TileGrid.fields is also implemented by interface:DataBoundComponent
+775. attr:TileGrid.initialCriteria is also implemented by interface:DataBoundComponent
+776. attr:TileGrid.showDetailFields is also implemented by interface:DataBoundComponent
+777. attr:TreeGrid.dataFetchMode is also implemented by interface:DataBoundComponent
+778. attr:TreeGrid.dataSource is also implemented by interface:DataBoundComponent
+779. attr:TreeGrid.dragDataAction is also implemented by interface:DataBoundComponent
+780. attr:TreeGrid.fields is also implemented by interface:DataBoundComponent
+781. attr:TreeGrid.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+782. classAttr:FacetChart.allChartTypes is also implemented by interface:Chart
+783. classAttr:FusionChart.allChartTypes is also implemented by interface:Chart
+784. method:ColumnTree.anySelected is also implemented by interface:DataBoundComponent
+785. method:ColumnTree.anySelected is also implemented by interface:DataBoundComponent
+786. method:ColumnTree.deselectAllRecords is also implemented by interface:DataBoundComponent
+787. method:ColumnTree.deselectAllRecords is also implemented by interface:DataBoundComponent
+788. method:ColumnTree.deselectRecord is also implemented by interface:DataBoundComponent
+789. method:ColumnTree.deselectRecord is also implemented by interface:DataBoundComponent
+790. method:ColumnTree.deselectRecords is also implemented by interface:DataBoundComponent
+791. method:ColumnTree.deselectRecords is also implemented by interface:DataBoundComponent
+792. method:ColumnTree.selectAllRecords is also implemented by interface:DataBoundComponent
+793. method:ColumnTree.selectAllRecords is also implemented by interface:DataBoundComponent
+794. method:ColumnTree.selectRecord is also implemented by interface:DataBoundComponent
+795. method:ColumnTree.selectRecord is also implemented by interface:DataBoundComponent
+796. method:ColumnTree.selectRecords is also implemented by interface:DataBoundComponent
+797. method:ColumnTree.selectRecords is also implemented by interface:DataBoundComponent
+798. method:ComboBoxItem.dataArrived is also implemented by interface:PickList
+799. method:ComboBoxItem.dataArrived is also implemented by interface:PickList
+800. method:ComboBoxItem.fetchData is also implemented by interface:PickList
+801. method:ComboBoxItem.fetchData is also implemented by interface:PickList
+802. method:ComboBoxItem.filterClientPickListData is also implemented by interface:PickList
+803. method:ComboBoxItem.filterClientPickListData is also implemented by interface:PickList
+804. method:ComboBoxItem.getClientPickListData is also implemented by interface:PickList
+805. method:ComboBoxItem.getClientPickListData is also implemented by interface:PickList
+806. method:ComboBoxItem.getDisplayFieldName is also implemented by interface:PickList
+807. method:ComboBoxItem.getDisplayFieldName is also implemented by interface:PickList
+808. method:ComboBoxItem.getPickListFilterCriteria is also implemented by interface:PickList
+809. method:ComboBoxItem.getPickListFilterCriteria is also implemented by interface:PickList
+810. method:ComboBoxItem.getValueFieldName is also implemented by interface:PickList
+811. method:ComboBoxItem.getValueFieldName is also implemented by interface:PickList
+812. method:DetailViewer.exportData is also implemented by interface:DataBoundComponent
+813. method:DetailViewer.exportData is also implemented by interface:DataBoundComponent
+814. method:DetailViewer.getRecordIndex is also implemented by interface:DataBoundComponent
+815. method:DetailViewer.getRecordIndex is also implemented by interface:DataBoundComponent
+816. method:DynamicForm.fieldIsEditable is also implemented by interface:DataBoundComponent
+817. method:DynamicForm.fieldIsEditable is also implemented by interface:DataBoundComponent
+818. method:DynamicForm.getField is also implemented by interface:DataBoundComponent
+819. method:DynamicForm.getField is also implemented by interface:DataBoundComponent
+820. method:FacetChart.getFacet is also implemented by interface:Chart
+821. method:FacetChart.getFacet is also implemented by interface:Chart
+822. method:FacetChart.getFacetValue is also implemented by interface:Chart
+823. method:FacetChart.getFacetValue is also implemented by interface:Chart
+824. method:ListGrid.anySelected is also implemented by interface:DataBoundComponent
+825. method:ListGrid.anySelected is also implemented by interface:DataBoundComponent
+826. method:ListGrid.askForSort is also implemented by interface:DataBoundComponent
+827. method:ListGrid.askForSort is also implemented by interface:DataBoundComponent
+828. method:ListGrid.deselectAllRecords is also implemented by interface:DataBoundComponent
+829. method:ListGrid.deselectAllRecords is also implemented by interface:DataBoundComponent
+830. method:ListGrid.deselectRange is also implemented by interface:DataBoundComponent
+831. method:ListGrid.deselectRange is also implemented by interface:DataBoundComponent
+832. method:ListGrid.deselectRecord is also implemented by interface:DataBoundComponent
+833. method:ListGrid.deselectRecord is also implemented by interface:DataBoundComponent
+834. method:ListGrid.deselectRecords is also implemented by interface:DataBoundComponent
+835. method:ListGrid.deselectRecords is also implemented by interface:DataBoundComponent
+836. method:ListGrid.exportData is also implemented by interface:DataBoundComponent
+837. method:ListGrid.exportData is also implemented by interface:DataBoundComponent
+838. method:ListGrid.fieldIsEditable is also implemented by interface:DataBoundComponent
+839. method:ListGrid.fieldIsEditable is also implemented by interface:DataBoundComponent
+840. method:ListGrid.getDragData is also implemented by interface:DataBoundComponent
+841. method:ListGrid.getDragData is also implemented by interface:DataBoundComponent
+842. method:ListGrid.getField is also implemented by interface:DataBoundComponent
+843. method:ListGrid.getField is also implemented by interface:DataBoundComponent
+844. method:ListGrid.getFieldNum is also implemented by interface:DataBoundComponent
+845. method:ListGrid.getFieldNum is also implemented by interface:DataBoundComponent
+846. method:ListGrid.getFormulaFieldValue is also implemented by interface:DataBoundComponent
+847. method:ListGrid.getFormulaFieldValue is also implemented by interface:DataBoundComponent
+848. method:ListGrid.getRecordIndex is also implemented by interface:DataBoundComponent
+849. method:ListGrid.getRecordIndex is also implemented by interface:DataBoundComponent
+850. method:ListGrid.getSort is also implemented by interface:DataBoundComponent
+851. method:ListGrid.getSort is also implemented by interface:DataBoundComponent
+852. method:ListGrid.getSummaryFieldValue is also implemented by interface:DataBoundComponent
+853. method:ListGrid.getSummaryFieldValue is also implemented by interface:DataBoundComponent
+854. method:ListGrid.getTitleField is also implemented by interface:DataBoundComponent
+855. method:ListGrid.getTitleField is also implemented by interface:DataBoundComponent
+856. method:ListGrid.selectAllRecords is also implemented by interface:DataBoundComponent
+857. method:ListGrid.selectAllRecords is also implemented by interface:DataBoundComponent
+858. method:ListGrid.selectionUpdated is also implemented by interface:DataBoundComponent
+859. method:ListGrid.selectionUpdated is also implemented by interface:DataBoundComponent
+860. method:ListGrid.selectRange is also implemented by interface:DataBoundComponent
+861. method:ListGrid.selectRange is also implemented by interface:DataBoundComponent
+862. method:ListGrid.selectRecord is also implemented by interface:DataBoundComponent
+863. method:ListGrid.selectRecord is also implemented by interface:DataBoundComponent
+864. method:ListGrid.selectRecords is also implemented by interface:DataBoundComponent
+865. method:ListGrid.selectRecords is also implemented by interface:DataBoundComponent
+866. method:ListGrid.selectSingleRecord is also implemented by interface:DataBoundComponent
+867. method:ListGrid.selectSingleRecord is also implemented by interface:DataBoundComponent
+868. method:ListGrid.setDataSource is also implemented by interface:DataBoundComponent
+869. method:ListGrid.setDataSource is also implemented by interface:DataBoundComponent
+870. method:ListGrid.setDragTracker is also implemented by interface:DataBoundComponent
+871. method:ListGrid.setDragTracker is also implemented by interface:DataBoundComponent
+872. method:ListGrid.setSort is also implemented by interface:DataBoundComponent
+873. method:ListGrid.setSort is also implemented by interface:DataBoundComponent
+874. method:ListGrid.shouldIncludeHiliteInSummaryField is also implemented by interface:DataBoundComponent
+875. method:ListGrid.shouldIncludeHiliteInSummaryField is also implemented by interface:DataBoundComponent
+876. method:ListGrid.transferDragData is also implemented by interface:DataBoundComponent
+877. method:ListGrid.transferDragData is also implemented by interface:DataBoundComponent
+878. method:ListGrid.transferSelectedData is also implemented by interface:DataBoundComponent
+879. method:ListGrid.transferSelectedData is also implemented by interface:DataBoundComponent
+880. method:ListGrid.willFetchData is also implemented by interface:DataBoundComponent
+881. method:ListGrid.willFetchData is also implemented by interface:DataBoundComponent
+882. method:ResultSet.duplicate is also implemented by interface:List
+883. method:ResultSet.duplicate is also implemented by interface:List
+884. method:ResultSet.find is also implemented by interface:List
+885. method:ResultSet.find is also implemented by interface:List
+886. method:ResultSet.findAll is also implemented by interface:List
+887. method:ResultSet.findAll is also implemented by interface:List
+888. method:ResultSet.findIndex is also implemented by interface:List
+889. method:ResultSet.findIndex is also implemented by interface:List
+890. method:ResultSet.findNextIndex is also implemented by interface:List
+891. method:ResultSet.findNextIndex is also implemented by interface:List
+892. method:ResultSet.get is also implemented by interface:List
+893. method:ResultSet.get is also implemented by interface:List
+894. method:ResultSet.getLength is also implemented by interface:List
+895. method:ResultSet.getLength is also implemented by interface:List
+896. method:ResultSet.getProperty is also implemented by interface:List
+897. method:ResultSet.getProperty is also implemented by interface:List
+898. method:ResultSet.getRange is also implemented by interface:List
+899. method:ResultSet.getRange is also implemented by interface:List
+900. method:ResultSet.getValueMap is also implemented by interface:List
+901. method:ResultSet.getValueMap is also implemented by interface:List
+902. method:ResultSet.indexOf is also implemented by interface:List
+903. method:ResultSet.indexOf is also implemented by interface:List
+904. method:ResultSet.sortByProperty is also implemented by interface:List
+905. method:ResultSet.sortByProperty is also implemented by interface:List
+906. method:SelectItem.dataArrived is also implemented by interface:PickList
+907. method:SelectItem.dataArrived is also implemented by interface:PickList
+908. method:SelectItem.fetchData is also implemented by interface:PickList
+909. method:SelectItem.fetchData is also implemented by interface:PickList
+910. method:SelectItem.getDisplayFieldName is also implemented by interface:PickList
+911. method:SelectItem.getDisplayFieldName is also implemented by interface:PickList
+912. method:SelectItem.getValueFieldName is also implemented by interface:PickList
+913. method:SelectItem.getValueFieldName is also implemented by interface:PickList
+914. method:TileGrid.anySelected is also implemented by interface:DataBoundComponent
+915. method:TileGrid.anySelected is also implemented by interface:DataBoundComponent
+916. method:TileGrid.deselectAllRecords is also implemented by interface:DataBoundComponent
+917. method:TileGrid.deselectAllRecords is also implemented by interface:DataBoundComponent
+918. method:TileGrid.deselectRange is also implemented by interface:DataBoundComponent
+919. method:TileGrid.deselectRange is also implemented by interface:DataBoundComponent
+920. method:TileGrid.deselectRecord is also implemented by interface:DataBoundComponent
+921. method:TileGrid.deselectRecord is also implemented by interface:DataBoundComponent
+922. method:TileGrid.deselectRecords is also implemented by interface:DataBoundComponent
+923. method:TileGrid.deselectRecords is also implemented by interface:DataBoundComponent
+924. method:TileGrid.exportData is also implemented by interface:DataBoundComponent
+925. method:TileGrid.exportData is also implemented by interface:DataBoundComponent
+926. method:TileGrid.getDragData is also implemented by interface:DataBoundComponent
+927. method:TileGrid.getDragData is also implemented by interface:DataBoundComponent
+928. method:TileGrid.getTitleField is also implemented by interface:DataBoundComponent
+929. method:TileGrid.getTitleField is also implemented by interface:DataBoundComponent
+930. method:TileGrid.selectAllRecords is also implemented by interface:DataBoundComponent
+931. method:TileGrid.selectAllRecords is also implemented by interface:DataBoundComponent
+932. method:TileGrid.selectRange is also implemented by interface:DataBoundComponent
+933. method:TileGrid.selectRange is also implemented by interface:DataBoundComponent
+934. method:TileGrid.selectRecord is also implemented by interface:DataBoundComponent
+935. method:TileGrid.selectRecord is also implemented by interface:DataBoundComponent
+936. method:TileGrid.selectRecords is also implemented by interface:DataBoundComponent
+937. method:TileGrid.selectRecords is also implemented by interface:DataBoundComponent
+938. method:TileGrid.setDragTracker is also implemented by interface:DataBoundComponent
+939. method:TileGrid.setDragTracker is also implemented by interface:DataBoundComponent
+940. method:TileGrid.transferDragData is also implemented by interface:DataBoundComponent
+941. method:TileGrid.transferDragData is also implemented by interface:DataBoundComponent
+942. method:TileGrid.transferSelectedData is also implemented by interface:DataBoundComponent
+943. method:TileGrid.transferSelectedData is also implemented by interface:DataBoundComponent
+944. method:Tree.add is also implemented by interface:List
+945. method:Tree.add is also implemented by interface:List
+946. method:Tree.addList is also implemented by interface:List
+947. method:Tree.addList is also implemented by interface:List
+948. method:Tree.dataChanged is also implemented by interface:List
+949. method:Tree.dataChanged is also implemented by interface:List
+950. method:Tree.find is also implemented by interface:List
+951. method:Tree.find is also implemented by interface:List
+952. method:Tree.findIndex is also implemented by interface:List
+953. method:Tree.findIndex is also implemented by interface:List
+954. method:Tree.findNextIndex is also implemented by interface:List
+955. method:Tree.findNextIndex is also implemented by interface:List
+956. method:Tree.getLength is also implemented by interface:List
+957. method:Tree.getLength is also implemented by interface:List
+958. method:Tree.indexOf is also implemented by interface:List
+959. method:Tree.indexOf is also implemented by interface:List
+960. method:Tree.lastIndexOf is also implemented by interface:List
+961. method:Tree.lastIndexOf is also implemented by interface:List
+962. method:Tree.remove is also implemented by interface:List
+963. method:Tree.remove is also implemented by interface:List
+964. method:Tree.removeList is also implemented by interface:List
+965. method:Tree.removeList is also implemented by interface:List
+966. method:TreeGrid.transferDragData is also implemented by interface:DataBoundComponent
+967. method:TreeGrid.transferDragData is also implemented by interface:DataBoundComponent
+968. method:TreeGrid.transferSelectedData is also implemented by interface:DataBoundComponent
+969. method:TreeGrid.transferSelectedData is also implemented by interface:DataBoundComponent
 
-======= For Display Somewhere =======
-Metrics for build SNAPSHOT_v12.0d_2017-09-20
+
+==== The following lines can be copied and pasted in to Excel ======
+Date	Types	Interfaces	Classes	Objects	Methods	Excluded Types	Excluded Classes	Excluded Methods	Excluded Attributes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated
+2017-09-26	249	5	297	82	3559	2	2	14	2	0	1	216	665	131	0	239	0	0	8	10	18	0	0	0	0	12	18	1	46	288	0	131	384	0	0	0	247	5	77	295	23	14	5	106	67	3346	1.108434	1	0.9390244	0.993266	0.9401518	
+
+====================================================================
+
+======= Same stuff used in the Progress.MD file =======
+Metrics for build SNAPSHOT_v12.0d_2017-09-26
 ===== Information =====
 (Informational only, not a problem)
 Types: 249
@@ -847,7 +1857,8 @@ Objects: 82
 Methods: 3,559
 Excluded Types: 2
 Excluded Classes: 2
-Excluded Methods: 19
+Excluded Methods: 14
+Excluded Attributes: 2
 string values with quotes: 216
 string values without quotes: 665
 string values with period: 131
@@ -856,14 +1867,14 @@ String values where reference is found: 131
 OR specified as ' \| ': 384
 Types Generated: 247
 Interfaces Generated: 5
-Objects Generated: 81
+Objects Generated: 77
 Classes Generated: 295
-Methods Generated: 3,314
+Methods Generated: 3,346
 Percentage of Types generated: 111 %
 Percentage of Interfaces generated: 100 %
-Percentage of Objects generated: 99 %
+Percentage of Objects generated: 94 %
 Percentage of Classes generated: 99 %
-Percentage of Methods generated: 93 %
+Percentage of Methods generated: 94 %
 
 ===== Warnings =====
 (Does not prevent item from being generated but might indicate a problem or inconsistency in the docs)
@@ -883,7 +1894,7 @@ Arrays defined as 'Array[] of': 0
 Arrays defined as 'array[] of': 0
 Arrays defined as 'array' or 'Array': 8
 Arrays defined as 'List of': 10
-String types without baseType: 17
+String types without baseType: 18
 Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0
@@ -891,9 +1902,9 @@ Methods with required parameters after optional parameters: 0
 Setter Methods with parameter type that does not match the attribute type: 12
 Getter Methods with return type that does not match the attribute type: 1
 String values without reference: 0
-Unknown types assumed to be string: 21
+Unknown types assumed to be string: 23
 Unknown Types mapped to any: 14
 Weird Types that require special handling: 5
-Properties that override a base property with a different type: 96
-Methods that override a base method with a different signature: 66
+Properties that override a base property with a different type: 106
+Methods that override a base method with a different signature: 67
 

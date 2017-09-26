@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 9/20/2017 1:59:38 PM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-20
+// Generated: 9/26/2017 7:01:44 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-26
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -25,6 +25,85 @@ interface ArrayConstructor {
 interface Array<T> {
     remove(obj: any): boolean;
 }
+
+// Special case DOMElement doesn't implement any methods and is really the same thing as an HTMLElement so define it as a type, not an object.
+type DOMElement = HTMLElement;
+
+/**
+ * Generic extensions to JavaScript Strings. You can call these on any String. 
+ */
+interface String {
+
+    /* Instance Method Overrides */
+    /**  
+     *  Returns true if this string contains the specified substring.
+     * 
+     * @param {String} substring - string to look for
+     * @return {boolean} true == this string contains the substring
+     */
+    contains(substring: String): boolean;
+
+    /**  
+     *  Returns true if this string ends with another string, or if the other string
+     * occurs in this string beginning at position - substring.length.
+     * 
+     * 
+     * @param {String} substring - other string to check
+     * @param {int} position - optional position in this string. Defaults to the length of this string.
+     * @return {boolean} <code>true</code> if <code>substring</code> occurs within this string ending with <code>position - 1</code>.
+     */
+    endsWith(substring: String, position?: number): boolean;
+
+    /**  
+     *  Returns true if this string starts with another string, or if the other string
+     * occurs at the given position within this string.
+     * 
+     * 
+     * @param {String} substring - other string to check
+     * @param {int} position - optional position in this string. Defaults to 0.
+     * @return {boolean} <code>true</code> if <code>substring</code> occurs within this string at position <code>position</code>.
+     */
+    startsWith(substring: String, position?: number): boolean;
+
+} // String
+
+/**
+ * Extra methods added to the Number object, available on all number variables. Attributes,
+ * parameters, or return values declared as Number may be null. 
+ */
+interface Number {
+
+    /* Instance Method Overrides */
+    /**  
+     *  Returns true if the number parameter falls between the 'first' and 'second' paramters.
+     * 
+     * 
+     * @param {number} number - Number object to be evaluated
+     * @param {number} first - Number at the lower boundary
+     * @param {number} second - Number at the upper boundary
+     * @param {number} inclusive - Whether or not the numbers at either end of the boundary should be included in the comparison
+     * @return {boolean} True if the given <code>number</code> falls inside the given range, false otherwise @example n = 3; bool = n.isBetween(3, 3, 6, true); // true&#010 @example n = 3; bool = n.isBetween(3, 3, 6);       // false
+     */
+    isBetween(number: number, first?: number, second?: number, inclusive?: number): boolean /* Boolean */;
+
+} // Number
+
+interface NumberConstructor {
+} // NumberStatic
+
+interface StringConstructor {
+
+    /* Methods */
+    /**  
+     *  Tests whether the given string is a valid JavaScript identifier.
+     * 
+     * 
+     * @param {String} string - the string to test.
+     * @return {boolean} true if string is a valid JavaScript identifier; false otherwise.
+     */
+    isValidID(string: String): boolean;
+
+} // StringStatic
 
 declare namespace Isc {
 
@@ -4610,11 +4689,6 @@ declare namespace Isc {
 		StretchImgButton: StretchImgButtonStatic<StretchImgButton, StretchImgButtonProps>;
 
 		/** 
-		 * Generic extensions to JavaScript Strings. You can call these on any String.
-		 */ 
-		String: StringStatic;
-
-		/** 
 		 * SubmitItem extends ButtonItem
 		 * Button that saves the data in the form, by calling DynamicForm.submit when clicked.
 		 * DynamicForm.submit for details on how to control what happens when a form is
@@ -5330,18 +5404,7 @@ declare namespace Isc {
 		ZoneCanvas: ZoneCanvasStatic<ZoneCanvas, ZoneCanvasProps>;
 
 
-    }
-
-	
-	export interface ListGrid {
-
-		/**
-		 * getDataSource - This is undocumented but works.
-		 * @return {DataSource} The DataSource that the grid is bound to
-		 */
-		//getDataSource(): DataSource;   // No longer needed because it's now in the referenceDocs.xml file and is generated.
-
-	}
+    }		
 }
 
 declare var isc: Isc.iscStatic;
