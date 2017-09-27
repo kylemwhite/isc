@@ -42,6 +42,11 @@ function play1() {
 
     let num: Number = 8;
 
+
+    let bool: boolean | null = false;
+
+
+
     //num = null;
 
 

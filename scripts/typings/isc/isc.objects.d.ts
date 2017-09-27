@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/26/2017 3:34:42 PM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-26
+// Generated: 9/27/2017 7:00:04 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-27
 
 declare namespace Isc {
 
@@ -5433,7 +5433,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly customCriteriaExpression?: String;
+		readonly customCriteriaExpression?: VelocityExpression;
 		 // ref="attr:DataSourceField.customInsertExpression"
 		/**
 		 * (Read only) This property is similar to DataSourceField.customUpdateExpression','customUpdateExpression; its value
@@ -5499,7 +5499,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly customInsertExpression?: String;
+		readonly customInsertExpression?: VelocityExpression;
 		 // ref="attr:DataSourceField.customSelectExpression"
 		/**
 		 * (Read only) This property indicates that this field represents a custom expression that should be 
@@ -5529,7 +5529,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly customSelectExpression?: String;
+		readonly customSelectExpression?: VelocityExpression;
 		 // ref="attr:DataSourceField.customSQL"
 		/**
 		 * (Read only) For a DataSource with DataSource.serverType','serverType "sql" or "hibernate",
@@ -5620,7 +5620,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly customUpdateExpression?: String;
+		readonly customUpdateExpression?: VelocityExpression;
 		 // ref="attr:DataSourceField.dateFormatter"
 		/**
 		 * (Advanced) Preferred display format to use for date type values within this field.

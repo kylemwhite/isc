@@ -26,6 +26,7 @@ function play() {
 }
 function play1() {
     var num = 8;
+    var bool = false;
     //num = null;
     //var bool = true;        // OK
     //console.log("typeof(bool) is " + typeof (bool));
