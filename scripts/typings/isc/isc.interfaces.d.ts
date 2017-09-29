@@ -4,8 +4,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/28/2017 7:00:05 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-28
+// Generated: 9/29/2017 7:00:06 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-29
 
 declare namespace Isc {
 
@@ -414,7 +414,7 @@ declare namespace Isc {
 		 * Canvas.dataPath','dataPaths.
 		 * Flags: IRWA
 		 */
-		readonly deepCloneOnEdit: boolean /* Boolean */;
+		readonly deepCloneOnEdit: boolean | null /* Boolean */;
 		 // ref="attr:DataBoundComponent.addOperation"
 		/**
 		 * From Interface DataBoundComponent
@@ -871,7 +871,7 @@ declare namespace Isc {
 		 * on the item
 		 * Flags: IRW, Group: dragging
 		 */
-		readonly addDropValues: boolean /* Boolean */;
+		readonly addDropValues: boolean | null /* Boolean */;
 		 // ref="attr:DataBoundComponent.infoField"
 		/**
 		 * From Interface DataBoundComponent
@@ -1189,7 +1189,7 @@ declare namespace Isc {
 		 * always passed to the DataSource directly.
 		 * Flags: IRA
 		 */
-		readonly useClientFiltering: boolean /* Boolean */;
+		readonly useClientFiltering: boolean | null /* Boolean */;
 		 // ref="attr:PickList.filterLocally"
 		/**
 		 * From Interface PickList
@@ -1207,7 +1207,7 @@ declare namespace Isc {
 		 * disable client-side filtering set the PickList.useClientFiltering property to false.
 		 * Flags: IRA
 		 */
-		readonly filterLocally: boolean /* Boolean */;
+		readonly filterLocally: boolean | null /* Boolean */;
 		 // ref="attr:PickList.pickListAnimationTime"
 		/**
 		 * From Interface PickList

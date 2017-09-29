@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 9/28/2017 7:00:05 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-28
+// Generated: 9/29/2017 7:00:06 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-09-29
 
 declare namespace Isc {
 
@@ -23,19 +23,19 @@ declare namespace Isc {
 		 * correspond to clockwise rotations of the default gradient.
 		 * Flags: IR
 		 */
-		readonly direction?: Float /* float */;
+		 direction?: Float /* float */;
 		 // ref="attr:SimpleGradient.endColor"
 		/**
 		 * (Read only) The end color of the gradient.
 		 * Flags: IR
 		 */
-		readonly endColor?: CSSColor;
+		 endColor?: CSSColor;
 		 // ref="attr:SimpleGradient.startColor"
 		/**
 		 * (Read only) The start color of the gradient.
 		 * Flags: IR
 		 */
-		readonly startColor?: CSSColor;
+		 startColor?: CSSColor;
 	} // SimpleGradient
 
 	export interface SimpleGradientStatic extends GradientStatic {
@@ -53,21 +53,21 @@ declare namespace Isc {
 		 * NavPanel.headerStyle.
 		 * Flags: IR
 		 */
-		readonly customStyle?: CSSStyleName;
+		 customStyle?: CSSStyleName;
 		 // ref="attr:NavItem.icon"
 		/**
 		 * (Read only) Icon to show for this NavItem. If not specified, the
 		 * TreeGrid.folderIcon','navGrid\'s folderIcon is used.
 		 * Flags: IR
 		 */
-		readonly icon?: SCImgURL;
+		 icon?: SCImgURL;
 		 // ref="attr:NavItem.id"
 		/**
 		 * (Read only) An optional ID for this NavItem. If specified, this must be unique within
 		 * the NavPanel.
 		 * Flags: IR
 		 */
-		readonly id?: Identifier;
+		//  id?: Identifier;   Skipped because the property override a property in the base class with a different type
 		 // ref="attr:NavItem.isHeader"
 		/**
 		 * (Read only) If set, this NavItem will be styled like a header. In this case NavItem.pane
@@ -75,20 +75,20 @@ declare namespace Isc {
 		 * still be configured to place items hierarchically under the header.
 		 * Flags: IR
 		 */
-		readonly isHeader?: boolean /* Boolean */;
+		 isHeader?: boolean | null /* Boolean */;
 		 // ref="attr:NavItem.isSeparator"
 		/**
 		 * (Read only) If set, this NavItem will be styled as a separator. A separator does not
 		 * have a NavItem.pane','pane and nothing happens when the separator is clicked.
 		 * Flags: IR
 		 */
-		readonly isSeparator?: boolean /* Boolean */;
+		 isSeparator?: boolean | null /* Boolean */;
 		 // ref="attr:NavItem.items"
 		/**
 		 * (Read only) Optional subitems of this NavItem.
 		 * Flags: IR
 		 */
-		readonly items?: Array<NavItem> /* Array of NavItem */;
+		 items?: Array<NavItem> /* Array of NavItem */;
 		 // ref="attr:NavItem.pane"
 		/**
 		 * (Read only) Component to display in the NavPanel.navDeck when this NavItem is
@@ -97,13 +97,13 @@ declare namespace Isc {
 		 * A component can be provided directly, or its ID can be provided.
 		 * Flags: IR
 		 */
-		readonly pane?: Canvas | Identifier;
+		 pane?: Canvas | Identifier;
 		 // ref="attr:NavItem.title"
 		/**
 		 * (Read only) Title to show for this NavItem.
 		 * Flags: IR
 		 */
-		readonly title?: HTMLString;
+		 title?: HTMLString;
 	} // NavItem
 
 	export interface NavItemStatic extends TreeNodeStatic {
@@ -127,14 +127,14 @@ declare namespace Isc {
 		 * the time period.
 		 * Flags: IR
 		 */
-		readonly rangePosition?: RelativeDateRangePosition;
+		 rangePosition?: RelativeDateRangePosition;
 		 // ref="attr:RelativeDate.value"
 		/**
 		 * (Read only) The value of this relative date, specified as a RelativeDateString 
 		 * or RelativeDateShortcut.
 		 * Flags: IR
 		 */
-		readonly value?: RelativeDateString | RelativeDateShortcut;
+		 value?: RelativeDateString | RelativeDateShortcut;
 	} // RelativeDate
 
 	export interface RelativeDateStatic {
@@ -150,7 +150,7 @@ declare namespace Isc {
 		 * (Read only) Effect to apply
 		 * Flags: IR
 		 */
-		readonly effect?: AnimateShowEffectId;
+		 effect?: AnimateShowEffectId;
 		 // ref="attr:AnimateShowEffect.endsAt"
 		/**
 		 * (Read only) For hide animations of type "wipe and 
@@ -160,7 +160,7 @@ declare namespace Isc {
 		 * canvas).
 		 * Flags: IR
 		 */
-		readonly endsAt?: String;
+		 endsAt?: String;
 		 // ref="attr:AnimateShowEffect.startFrom"
 		/**
 		 * (Read only) For show animations of type "wipe" and
@@ -169,7 +169,7 @@ declare namespace Isc {
 		 * default behavior), and "L" (horizontal animation from the left side).
 		 * Flags: IR
 		 */
-		readonly startFrom?: String;
+		 startFrom?: String;
 	} // AnimateShowEffect
 
 	export interface AnimateShowEffectStatic {
@@ -747,7 +747,7 @@ declare namespace Isc {
 		 * to indented and JSON defaults to non-indented.
 		 * Flags: IR
 		 */
-		readonly indent?: boolean /* Boolean */;
+		 indent?: boolean | null /* Boolean */;
 		 // ref="attr:SerializationSettings.outputComponentsIndividually"
 		/**
 		 * (Read only) Overrides the default component output setting during serialization. By default
@@ -755,14 +755,14 @@ declare namespace Isc {
 		 * containers.
 		 * Flags: IR
 		 */
-		readonly outputComponentsIndividually?: boolean /* Boolean */;
+		 outputComponentsIndividually?: boolean | null /* Boolean */;
 		 // ref="attr:SerializationSettings.serverless"
 		/**
 		 * (Read only) When true specify DataSources in full rather than assuming they can be
 		 * downloaded from the server.
 		 * Flags: IR
 		 */
-		readonly serverless?: boolean /* Boolean */;
+		 serverless?: boolean | null /* Boolean */;
 	} // SerializationSettings
 
 	export interface SerializationSettingsStatic {
@@ -783,7 +783,7 @@ declare namespace Isc {
 		 * example, CubeGrid.facetValueAlign).
 		 * Flags: IR
 		 */
-		readonly align?: Alignment;
+		 align?: Alignment;
 		 // ref="attr:FacetValue.borderAfter"
 		/**
 		 * (Read only) CSS line style to apply as a border after this facetValue.
@@ -791,7 +791,7 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IR
 		 */
-		readonly borderAfter?: String;
+		 borderAfter?: String;
 		 // ref="attr:FacetValue.borderBefore"
 		/**
 		 * (Read only) CSS line style to apply as a border before this facetValue.
@@ -799,7 +799,7 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IR
 		 */
-		readonly borderBefore?: String;
+		 borderBefore?: String;
 		 // ref="attr:FacetValue.canCollapse"
 		/**
 		 * (Read only) For individual parent facetValues within a hierarchical facet, this flag controls
@@ -809,7 +809,7 @@ declare namespace Isc {
 		 * example, CubeGrid.canCollapseFacets).
 		 * Flags: IR
 		 */
-		readonly canCollapse?: boolean /* Boolean */;
+		 canCollapse?: boolean | null /* Boolean */;
 		 // ref="attr:FacetValue.canEdit"
 		/**
 		 * Whether cells for this facetValue can be edited. Defaults to CubeGrid.canEdit.
@@ -817,7 +817,7 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IRW
 		 */
-		readonly canEdit?: boolean /* Boolean */;
+		 canEdit?: boolean | null /* Boolean */;
 		 // ref="attr:FacetValue.cellAlign"
 		/**
 		 * (Read only) Default alignment of cells (in the body) for this facetValue.
@@ -826,7 +826,7 @@ declare namespace Isc {
 		 * example, CubeGrid.cellAlign).
 		 * Flags: IR
 		 */
-		readonly cellAlign?: Alignment;
+		 cellAlign?: Alignment;
 		 // ref="attr:FacetValue.collapsed"
 		/**
 		 * (Read only) For tree facets, initial collapse state for this node. Defaults to Facet.collapsed.
@@ -834,13 +834,13 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IR
 		 */
-		readonly collapsed?: boolean /* Boolean */;
+		 collapsed?: boolean | null /* Boolean */;
 		 // ref="attr:FacetValue.id"
 		/**
 		 * id of this facetValue. Any string or number.
 		 * Flags: IRW
 		 */
-		readonly id?: String | Number;
+		 id?: String | Number;
 		 // ref="attr:FacetValue.isMinimizeValue"
 		/**
 		 * (Read only) Used to determine which facetValue is to be shown when the facet is minimized.
@@ -849,7 +849,7 @@ declare namespace Isc {
 		 * CubeGrid.canMinimizeFacets.
 		 * Flags: IR
 		 */
-		readonly isMinimizeValue?: boolean /* Boolean */;
+		 isMinimizeValue?: boolean | null /* Boolean */;
 		 // ref="attr:FacetValue.parentId"
 		/**
 		 * (Read only, Advanced) For tree facets (Facet.isTree','facet.isTree), id of this facetValue's
@@ -858,7 +858,7 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IRA
 		 */
-		readonly parentId?: String | Number;
+		 parentId?: String | Number;
 		 // ref="attr:FacetValue.selectionBoundary"
 		/**
 		 * (Read only) Selection boundary determining what facets / facetValues can be selected together by
@@ -867,13 +867,13 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IR
 		 */
-		readonly selectionBoundary?: SelectionBoundary;
+		 selectionBoundary?: SelectionBoundary;
 		 // ref="attr:FacetValue.title"
 		/**
 		 * User-visible title of this facetValue. Shown on the field header.
 		 * Flags: IRW
 		 */
-		readonly title?: String;
+		 title?: String;
 		 // ref="attr:FacetValue.titleHilite"
 		/**
 		 * (Read only) Hilite style to apply to the title for this facetValue.
@@ -882,7 +882,7 @@ declare namespace Isc {
 		 * CubeGrid.hilites.
 		 * Flags: IR
 		 */
-		readonly titleHilite?: String;
+		 titleHilite?: String;
 		 // ref="attr:FacetValue.width"
 		/**
 		 * (Read only) Width of the cube grid facetValue in pixels.
@@ -890,7 +890,7 @@ declare namespace Isc {
 		 * Note: This property is specific to CubeGrid','CubeGrids.
 		 * Flags: IR
 		 */
-		readonly width?: number;
+		 width?: number;
 
 		/* Instance Method Overrides */
 		/**  
@@ -1155,7 +1155,7 @@ declare namespace Isc {
 		 * See also FiscalCalendar.defaultYearMode.
 		 * Flags: IRW
 		 */
-		readonly defaultDate?: Integer;
+		 defaultDate?: Integer;
 		 // ref="attr:FiscalCalendar.defaultMonth"
 		/**
 		 * The default zero-based month-number to use for calculating fiscal dates when no
@@ -1166,7 +1166,7 @@ declare namespace Isc {
 		 * See also FiscalCalendar.defaultYearMode.
 		 * Flags: IRW
 		 */
-		readonly defaultMonth?: Integer;
+		 defaultMonth?: Integer;
 		 // ref="attr:FiscalCalendar.defaultYearMode"
 		/**
 		 * This attribute controls how the displayed fiscalYear value should be calculated for
@@ -1180,14 +1180,14 @@ declare namespace Isc {
 		 * dates within both 2020 and 2021 is reported as fiscalYear 2020 or 2021).
 		 * Flags: IRW
 		 */
-		readonly defaultYearMode?: FiscalYearMode;
+		 defaultYearMode?: FiscalYearMode;
 		 // ref="attr:FiscalCalendar.fiscalYears"
 		/**
 		 * An array of FiscalYear','FiscalYear objects which each represent the start date of a
 		 * single fiscal year.
 		 * Flags: IRW
 		 */
-		readonly fiscalYears?: Array<FiscalYear> /* Array of FiscalYear */;
+		 fiscalYears?: Array<FiscalYear> /* Array of FiscalYear */;
 	} // FiscalCalendar
 
 	export interface FiscalCalendarStatic {
@@ -1198,9 +1198,9 @@ declare namespace Isc {
 	 * A class used to define a shadow used in a Draw&lt;Shape&gt; Types. 
 	 */
 	export interface Shadow {
-		readonly blur?: int;
-		readonly color?: CSSColor;
-		readonly offset?: Point;
+		 blur?: int;
+		 color?: CSSColor;
+		 offset?: Point;
 	} // Shadow
 
 	export interface ShadowStatic {
@@ -1217,20 +1217,20 @@ declare namespace Isc {
 		 * to use for the markers.
 		 * Flags: IR
 		 */
-		readonly image?: SCImgURL;
+		 image?: SCImgURL;
 		 // ref="attr:ListProperties.startNumber"
 		/**
 		 * (Read only) For ordered lists, the number to start the first item with. Must be non-negative.
 		 * Flags: IR
 		 */
-		readonly startNumber?: int;
+		 startNumber?: int;
 		 // ref="attr:ListProperties.style"
 		/**
 		 * (Read only) The style of list item marker. If "custom-image", the ListProperties.image','image
 		 * should be specified.
 		 * Flags: IR
 		 */
-		readonly style?: ListStyleType;
+		 style?: ListStyleType;
 	} // ListProperties
 
 	export interface ListPropertiesStatic {
@@ -1256,13 +1256,13 @@ declare namespace Isc {
 		 * (Read only) The x coordinate of this point.
 		 * Flags: IR
 		 */
-		readonly x?: int;
+		 x?: int;
 		 // ref="attr:Point.y"
 		/**
 		 * (Read only) The y coordinate of this point.
 		 * Flags: IR
 		 */
-		readonly y?: int;
+		 y?: int;
 	} // Point
 
 	export interface PointStatic {
@@ -1303,7 +1303,7 @@ declare namespace Isc {
 		 * with additionalOutputs that differ from what was sent by the client is to create a new DSRequest
 		 * Flags: IRA
 		 */
-		readonly additionalOutputs?: String;
+		 additionalOutputs?: String;
 		 // ref="attr:DSRequest.callback"
 		/**
 		 * (Read only) A callback method that will be called with an instance of DSResponse, as sent by the server.
@@ -1319,7 +1319,7 @@ declare namespace Isc {
 		 * errorHandling','error handling overview below for more details.
 		 * Flags: IR, Group: errorHandling
 		 */
-		readonly callback?: DSCallback;
+		//  callback?: DSCallback;   Skipped because the property override a property in the base class with a different type
 		 // ref="attr:DSRequest.clientContext"
 		/**
 		 * An object to be held onto for the duration of the DSRequest turnaround to track
@@ -1334,7 +1334,7 @@ declare namespace Isc {
 		 * returned data.
 		 * Flags: IRW
 		 */
-		readonly clientContext?: Object;
+		 clientContext?: Object;
 		 // ref="attr:DSRequest.componentId"
 		/**
 		 * (Read only) For requests submitted by a DataBoundComponent, the Canvas.ID of the
@@ -1354,7 +1354,7 @@ declare namespace Isc {
 		 * dsRequestEquivalence','request equivalence.
 		 * Flags: IR
 		 */
-		readonly componentId?: String;
+		 componentId?: String;
 		 // ref="attr:DSRequest.data"
 		/**
 		 * (Read only) Data, such as search criteria or an updated record, to be acted upon. Contents differ by
@@ -1365,7 +1365,7 @@ declare namespace Isc {
 		 * ListGrid.fetchData.
 		 * Flags: IR
 		 */
-		readonly data?: Object | Array<Object> /* Object | Array of Object */;
+		//  data?: Object | Array<Object> /* Object | Array of Object */;   Skipped because the property override a property in the base class with a different type
 		 // ref="attr:DSRequest.dataProtocol"
 		/**
 		 * DataSource.dataProtocol','DataProtocol for this particular request.
@@ -1386,7 +1386,7 @@ declare namespace Isc {
 		 * DataSource.dataProtocol','dataSource levels.
 		 * Flags: IRW
 		 */
-		readonly dataProtocol?: DSProtocol;
+		 dataProtocol?: DSProtocol;
 		 // ref="attr:DSRequest.dataSource"
 		/**
 		 * (Read only) DataSource this DSRequest will act on.
@@ -1396,7 +1396,7 @@ declare namespace Isc {
 		 * DataSource.
 		 * Flags: IR
 		 */
-		readonly dataSource?: String;
+		 dataSource?: String;
 		 // ref="attr:DSRequest.endRow"
 		/**
 		 * (Read only) End row of requested results, used only with fetch operations.
@@ -1405,14 +1405,14 @@ declare namespace Isc {
 		 * the end (like substring), so startRow: 0, endRow: 1 is a request for the first record.
 		 * Flags: IR, Group: paging
 		 */
-		readonly endRow?: number;
+		 endRow?: number;
 		 // ref="attr:DSRequest.exportAs"
 		/**
 		 * (Read only) The format in which the data should be exported. See ExportFormat for more 
 		 * information.
 		 * Flags: IR
 		 */
-		readonly exportAs?: ExportFormat;
+		 exportAs?: ExportFormat;
 		 // ref="attr:DSRequest.exportCSS"
 		/**
 		 * (Read only) When using RPCManager.exportContent to produce a .pdf from a SmartClient UI, this property allows 
@@ -1425,14 +1425,14 @@ declare namespace Isc {
 		 * generated PDF to use landscape mode, so that all content fits without clipping.
 		 * Flags: IR
 		 */
-		readonly exportCSS?: String;
+		 exportCSS?: String;
 		 // ref="attr:DSRequest.exportData"
 		/**
 		 * (Read only) Only applies to request properties passed to ListGrid.exportClientData.
 		 * If specified this property contains an arbitrary set of data to be exported.
 		 * Flags: IR
 		 */
-		readonly exportData?: Array<Record> /* Array of Record */;
+		 exportData?: Array<Record> /* Array of Record */;
 		 // ref="attr:DSRequest.exportDatesAsFormattedString"
 		/**
 		 * (Read only) When exporting via ListGrid.exportClientData to an XLS or
@@ -1460,20 +1460,20 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly exportDatesAsFormattedString?: boolean;
+		 exportDatesAsFormattedString?: boolean;
 		 // ref="attr:DSRequest.exportDelimiter"
 		/**
 		 * (Read only) The character to use as a field-separator in CSV exports. The default delimiter is comma.
 		 * Flags: IR
 		 */
-		readonly exportDelimiter?: String;
+		 exportDelimiter?: String;
 		 // ref="attr:DSRequest.exportDisplay"
 		/**
 		 * (Read only) Specifies whether the exported data will be downloaded as an attachment or displayed in a 
 		 * new browser window. See ExportDisplay for more information.
 		 * Flags: IR
 		 */
-		readonly exportDisplay?: ExportDisplay;
+		 exportDisplay?: ExportDisplay;
 		 // ref="attr:DSRequest.exportFields"
 		/**
 		 * (Read only) The list of field names to export. If provided, the field list in the exported output is 
@@ -1496,7 +1496,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly exportFields?: Array<String> /* Array of String */;
+		 exportFields?: Array<String> /* Array of String */;
 		 // ref="attr:DSRequest.exportFilename"
 		/**
 		 * (Read only) The name of the file to save the exported data into. If 
@@ -1508,31 +1508,31 @@ declare namespace Isc {
 		 * it based on the ExportFormat specified by DSRequest.exportAs.
 		 * Flags: IR
 		 */
-		readonly exportFilename?: String;
+		 exportFilename?: String;
 		 // ref="attr:DSRequest.exportFooter"
 		/**
 		 * (Read only) Optional text to appear at the end of the file.
 		 * Flags: IR
 		 */
-		readonly exportFooter?: String;
+		 exportFooter?: String;
 		 // ref="attr:DSRequest.exportHeader"
 		/**
 		 * (Read only) Optional text to appear at the beginning of the file.
 		 * Flags: IR
 		 */
-		readonly exportHeader?: String;
+		 exportHeader?: String;
 		 // ref="attr:DSRequest.exportHeaderless"
 		/**
 		 * This property allows omitting column names from CSV and Excel exports (no effect on JSON or XML exports).
 		 * Flags: IRW
 		 */
-		readonly exportHeaderless?: boolean /* Boolean */;
+		 exportHeaderless?: boolean | null /* Boolean */;
 		 // ref="attr:DSRequest.exportImageFormat"
 		/**
 		 * (Read only) The image format in which the SVG graphic should be exported.
 		 * Flags: IR
 		 */
-		readonly exportImageFormat?: ExportImageFormat;
+		 exportImageFormat?: ExportImageFormat;
 		 // ref="attr:DSRequest.exportImageQuality"
 		/**
 		 * (Read only) If exporting in ExportImageFormat','JPEG format, the output JPEG quality level.
@@ -1540,7 +1540,7 @@ declare namespace Isc {
 		 * least quality but smallest file size.
 		 * Flags: IR
 		 */
-		readonly exportImageQuality?: Float /* float */;
+		 exportImageQuality?: Float /* float */;
 		 // ref="attr:DSRequest.exportPath"
 		/**
 		 * (Read only) If DSRequest.exportToFilesystem','exportToFilesystem is set, optionally specifies a 
@@ -1558,7 +1558,7 @@ declare namespace Isc {
 		 * is set.
 		 * Flags: IR
 		 */
-		readonly exportPath?: String;
+		 exportPath?: String;
 		 // ref="attr:DSRequest.exportPropertyIdentifier"
 		/**
 		 * Determines the PropertyIdentifier to be used in the exported data. This
@@ -1581,7 +1581,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IRW, Group: exportFormatting
 		 */
-		readonly exportPropertyIdentifier?: PropertyIdentifier;
+		 exportPropertyIdentifier?: PropertyIdentifier;
 		 // ref="attr:DSRequest.exportRawValues"
 		/**
 		 * Whether formatting settings should be applied to data being exported. Default behavior and
@@ -1589,7 +1589,7 @@ declare namespace Isc {
 		 * exportFormatting','Export Formatting overview.
 		 * Flags: IRW, Group: exportFormatting
 		 */
-		readonly exportRawValues?: boolean /* Boolean */;
+		 exportRawValues?: boolean | null /* Boolean */;
 		 // ref="attr:DSRequest.exportResults"
 		/**
 		 * (Read only) When set, causes the results of the DSRequest to be exported to a file, whose name 
@@ -1648,7 +1648,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly exportResults?: boolean /* Boolean */;
+		 exportResults?: boolean | null /* Boolean */;
 		 // ref="attr:DSRequest.exportShowHeaderSpanTitles"
 		/**
 		 * (Read only) When you erxport a ListGrid that has ListGrid.headerSpans','headerSpans,
@@ -1656,7 +1656,7 @@ declare namespace Isc {
 		 * of what it means to export headerSpans to different export targets.
 		 * Flags: IR
 		 */
-		readonly exportShowHeaderSpanTitles?: boolean /* Boolean */;
+		 exportShowHeaderSpanTitles?: boolean | null /* Boolean */;
 		 // ref="attr:DSRequest.exportSpanTitleSeparator"
 		/**
 		 * (Read only) When you export a ListGrid that has ListGrid.headerSpans','headerSpans
@@ -1674,7 +1674,7 @@ declare namespace Isc {
 		 * string used when constructing these amalgamated headers.
 		 * Flags: IR
 		 */
-		readonly exportSpanTitleSeparator?: String;
+		 exportSpanTitleSeparator?: String;
 		 // ref="attr:DSRequest.exportStreaming"
 		/**
 		 * (Read only) When exporting to OOXML format (this is the standard file format used by Excel 2007 and 
@@ -1696,14 +1696,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly exportStreaming?: boolean;
+		 exportStreaming?: boolean;
 		 // ref="attr:DSRequest.exportTitleSeparatorChar"
 		/**
 		 * (Read only) The character with which to replace spaces in field-titles when exporting to XML. If not
 		 * specified in the request, the server uses "".
 		 * Flags: IR
 		 */
-		readonly exportTitleSeparatorChar?: String;
+		 exportTitleSeparatorChar?: String;
 		 // ref="attr:DSRequest.exportToClient"
 		/**
 		 * (Read only) If set, SmartClient Server will export data back to the client, either as a file download 
@@ -1716,7 +1716,7 @@ declare namespace Isc {
 		 * <em>neither</em> property, the export no-ops.
 		 * Flags: IR
 		 */
-		readonly exportToClient?: boolean /* Boolean */;
+		 exportToClient?: boolean | null /* Boolean */;
 		 // ref="attr:DSRequest.exportToFilesystem"
 		/**
 		 * (Read only) If set, SmartClient Server will export data to a file on the server filesystem. The
@@ -1738,7 +1738,7 @@ declare namespace Isc {
 		 * database table. See the server-side Javadocs for DSRequest.setExportTo().
 		 * Flags: IR
 		 */
-		readonly exportToFilesystem?: boolean /* Boolean */;
+		 exportToFilesystem?: boolean | null /* Boolean */;
 		 // ref="attr:DSRequest.exportTZ"
 		/**
 		 * (Read only) For server-side export with ExportFormat "xls" or "ooxml" only, timezone to use
@@ -1765,7 +1765,7 @@ declare namespace Isc {
 		 * time.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly exportTZ?: String;
+		 exportTZ?: String;
 		 // ref="attr:DSRequest.exportValueFields"
 		/**
 		 * (Read only) This flag has a different meaning depending on whether you are doing a client-driven or
@@ -1795,7 +1795,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly exportValueFields?: boolean;
+		 exportValueFields?: boolean;
 		 // ref="attr:DSRequest.fieldValueExpressions"
 		/**
 		 * A set of key:value pairs, mapping field names to expressions that will be evaluated 
@@ -1836,7 +1836,7 @@ declare namespace Isc {
 		 * dataSource.allowClientFieldValueExpressions: false
 		 * Flags: IRW, Group: transactionChaining
 		 */
-		readonly fieldValueExpressions?: Object;
+		 fieldValueExpressions?: Object;
 		 // ref="attr:DSRequest.generateRelatedUpdates"
 		/**
 		 * Specifies should related updates have to be generated.
@@ -1891,7 +1891,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly generateRelatedUpdates?: boolean;
+		 generateRelatedUpdates?: boolean;
 		 // ref="attr:DSRequest.groupBy"
 		/**
 		 * (Read only) List of fields to group by when using serverSummaries','server-side summarization.
@@ -1900,7 +1900,7 @@ declare namespace Isc {
 		 * serverSummaries','Server Summaries overview for details and examples of usage.
 		 * Flags: IR, Group: serverSummaries
 		 */
-		readonly groupBy?: Array<String> /* Array of String */;
+		 groupBy?: Array<String> /* Array of String */;
 		 // ref="attr:DSRequest.headerData"
 		/**
 		 * For DataSources using SOAP messaging with a WSDL web service, data to be serialized to form
@@ -1916,7 +1916,7 @@ declare namespace Isc {
 		 * modified using RPCRequest.httpHeaders.
 		 * Flags: IRW
 		 */
-		readonly headerData?: Object;
+		 headerData?: Object;
 		 // ref="attr:DSRequest.keepParentsOnFilter"
 		/**
 		 * This property is for advanced use in integrating trees that 
@@ -1933,14 +1933,14 @@ declare namespace Isc {
 		 * the keepParentsOnFilter flag.
 		 * Flags: IRW, Group: treeDataBinding
 		 */
-		readonly keepParentsOnFilter?: boolean /* Boolean */;
+		 keepParentsOnFilter?: boolean | null /* Boolean */;
 		 // ref="attr:DSRequest.lineBreakStyle"
 		/**
 		 * (Read only) The style of line-breaks to use in the exported output. See LineBreakStyle for
 		 * more information.
 		 * Flags: IR
 		 */
-		readonly lineBreakStyle?: String;
+		 lineBreakStyle?: String;
 		 // ref="attr:DSRequest.oldValues"
 		/**
 		 * (Read only) For an update or remove operation, the original values from the
@@ -1960,7 +1960,7 @@ declare namespace Isc {
 		 * discarding edits, or reconciling new and old values in a special interface.
 		 * Flags: IR
 		 */
-		readonly oldValues?: Record;
+		 oldValues?: Record;
 		 // ref="attr:DSRequest.operationId"
 		/**
 		 * (Read only) When a DataBoundComponent sends a DSRequest, the
@@ -2002,7 +2002,7 @@ declare namespace Isc {
 		 * dsRequestEquivalence.
 		 * Flags: IR, Group: operations
 		 */
-		readonly operationId?: String;
+		 operationId?: String;
 		 // ref="attr:DSRequest.operationType"
 		/**
 		 * (Read only) Type of operation being performed: "fetch", "add", "remove", "update" or "custom".
@@ -2013,7 +2013,7 @@ declare namespace Isc {
 		 * automatically, they are always fired by your code.
 		 * Flags: IR
 		 */
-		readonly operationType?: DSOperationType;
+		 operationType?: DSOperationType;
 		 // ref="attr:DSRequest.outputs"
 		/**
 		 * (Read only) The list of fields to return in the response, specified as a comma-separated string (eg,
@@ -2027,7 +2027,7 @@ declare namespace Isc {
 		 * from the client side.
 		 * Flags: IR
 		 */
-		readonly outputs?: String;
+		 outputs?: String;
 		 // ref="attr:DSRequest.parentNode"
 		/**
 		 * (Read only) For advanced use in integrating trees that 
@@ -2047,7 +2047,7 @@ declare namespace Isc {
 		 * yourself.
 		 * Flags: R
 		 */
-		readonly parentNode?: TreeNode;
+		 parentNode?: TreeNode;
 		 // ref="attr:DSRequest.pendingAdd"
 		/**
 		 * (Read only) Indicates that a validation request is being made for a record that will ultimately be 
@@ -2058,7 +2058,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly pendingAdd?: boolean;
+		 pendingAdd?: boolean;
 		 // ref="attr:DSRequest.progressiveLoading"
 		/**
 		 * Sets DataSource.progressiveLoading','progressive loading mode for this specific
@@ -2068,14 +2068,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: progressiveLoading
 		 */
-		readonly progressiveLoading?: boolean;
+		 progressiveLoading?: boolean;
 		 // ref="attr:DSRequest.requestId"
 		/**
 		 * (Read only, Advanced) Automatically generated unique ID for this request. This ID will be required by developers 
 		 * making use of the DSProtocol','"clientCustom" dataProtocol.
 		 * Flags: RA
 		 */
-		readonly requestId?: String;
+		 requestId?: String;
 		 // ref="attr:DSRequest.resultSet"
 		/**
 		 * (Read only) For advanced use in integrating dataset paging with web services,
@@ -2086,7 +2086,7 @@ declare namespace Isc {
 		 * yourself.
 		 * Flags: R
 		 */
-		readonly resultSet?: ResultSet;
+		 resultSet?: ResultSet;
 		 // ref="attr:DSRequest.resultTree"
 		/**
 		 * (Read only) For advanced use in integrating trees that 
@@ -2098,7 +2098,7 @@ declare namespace Isc {
 		 * yourself.
 		 * Flags: R
 		 */
-		readonly resultTree?: ResultTree;
+		 resultTree?: ResultTree;
 		 // ref="attr:DSRequest.shouldUseCache"
 		/**
 		 * This is a per-request flag for explicitly controlling whether the cache is used (bypassing
@@ -2109,7 +2109,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly shouldUseCache?: boolean;
+		 shouldUseCache?: boolean;
 		 // ref="attr:DSRequest.sortBy"
 		/**
 		 * (Read only) Field name to sortBy, prefixed with optional "-" indicating descending sort. For example, to
@@ -2134,7 +2134,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly sortBy?: FieldName | Array<FieldName> | Array<SortSpecifier> /* FieldName | Array of FieldName | Array of SortSpecifiers */;
+		 sortBy?: FieldName | Array<FieldName> | Array<SortSpecifier> /* FieldName | Array of FieldName | Array of SortSpecifiers */;
 		 // ref="attr:DSRequest.startRow"
 		/**
 		 * (Read only) Starting row of requested results, used only with fetch operations. If unset, 0 is assumed.
@@ -2143,7 +2143,7 @@ declare namespace Isc {
 		 * the end (like substring), so startRow: 0, endRow: 1 is a request for the first record.
 		 * Flags: IR, Group: paging
 		 */
-		readonly startRow?: number;
+		 startRow?: number;
 		 // ref="attr:DSRequest.streamResults"
 		/**
 		 * (Read only) If true, results will be streamed on the server, rather than all records being read into 
@@ -2171,7 +2171,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly streamResults?: boolean;
+		 streamResults?: boolean;
 		 // ref="attr:DSRequest.summaryFunctions"
 		/**
 		 * (Read only) A mapping from field names to SummaryFunction','summary functions to be applied
@@ -2181,7 +2181,7 @@ declare namespace Isc {
 		 * serverSummaries','Server Summaries overview for examples of usage.
 		 * Flags: IR, Group: serverSummaries
 		 */
-		readonly summaryFunctions?: Map<String,SummaryFunction>;
+		 summaryFunctions?: Map<String,SummaryFunction>;
 		 // ref="attr:DSRequest.textMatchStyle"
 		/**
 		 * (Read only) For "fetch" operations, how search criteria should be interpreted for text fields: one of
@@ -2203,7 +2203,7 @@ declare namespace Isc {
 		 * loss.
 		 * Flags: IR
 		 */
-		readonly textMatchStyle?: TextMatchStyle;
+		 textMatchStyle?: TextMatchStyle;
 		 // ref="attr:DSRequest.useFlatFields"
 		/**
 		 * (Read only) When useFlatFields is set for a request to be sent to a WSDL web service, when
@@ -2267,7 +2267,7 @@ declare namespace Isc {
 		 * XML message.
 		 * Flags: IR, Group: flatFields
 		 */
-		readonly useFlatFields?: boolean /* Boolean */;
+		 useFlatFields?: boolean | null /* Boolean */;
 		 // ref="attr:DSRequest.useFlatHeaderFields"
 		/**
 		 * Cause the DSRequest.useFlatFields','useFlatFields XML serialization behavior to be used
@@ -2275,7 +2275,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: flatFields
 		 */
-		readonly useFlatHeaderFields?: boolean;
+		 useFlatHeaderFields?: boolean;
 		 // ref="attr:DSRequest.useStrictJSON"
 		/**
 		 * (Read only) Should the HTTP response to this request be formatted using the
@@ -2288,13 +2288,13 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly useStrictJSON?: boolean;
+		 useStrictJSON?: boolean;
 		 // ref="attr:DSRequest.validationMode"
 		/**
 		 * (Read only) Mode of validation for entered data.
 		 * Flags: IR
 		 */
-		readonly validationMode?: ValidationMode;
+		 validationMode?: ValidationMode;
 	} // DSRequest
 
 	export interface DSRequestStatic extends RPCRequestStatic {
@@ -2355,7 +2355,7 @@ declare namespace Isc {
 		 * you can use Velocity expressions if you have a Power or better license.
 		 * Flags: IR, Group: transactionChaining
 		 */
-		readonly end?: String;
+		 end?: String;
 		 // ref="attr:DSRequestModifier.fieldName"
 		/**
 		 * (Read only) The name of the field to add or replace on the DSRequest - whether this appears in the DSRequest's
@@ -2363,7 +2363,7 @@ declare namespace Isc {
 		 * OperationBinding.criteria attribute.
 		 * Flags: IR
 		 */
-		readonly fieldName?: FieldName;
+		 fieldName?: FieldName;
 		 // ref="attr:DSRequestModifier.operator"
 		/**
 		 * (Read only) The name of the operator to apply when constructing criteria. This property only applies 
@@ -2371,7 +2371,7 @@ declare namespace Isc {
 		 * attribute.
 		 * Flags: IR
 		 */
-		readonly operator?: String;
+		 operator?: String;
 		 // ref="attr:DSRequestModifier.start"
 		/**
 		 * (Read only) The value to use for the start of a range. This property only applies to criteria, and it 
@@ -2383,7 +2383,7 @@ declare namespace Isc {
 		 * you can use Velocity expressions if you have a Power or better license.
 		 * Flags: IR, Group: transactionChaining
 		 */
-		readonly start?: String;
+		 start?: String;
 		 // ref="attr:DSRequestModifier.value"
 		/**
 		 * (Read only) The value to assign to the field named by DSRequestModifier.fieldName','fieldName. This
@@ -2459,7 +2459,7 @@ declare namespace Isc {
 		 * com.isomorphic.velocity.ResponseDataHandler class.
 		 * Flags: IR, Group: transactionChaining
 		 */
-		readonly value?: String;
+		 value?: String;
 	} // DSRequestModifier
 
 	export interface DSRequestModifierStatic {
@@ -2478,13 +2478,13 @@ declare namespace Isc {
 		 * (Read only) The end of this DateRange.
 		 * Flags: IR
 		 */
-		readonly end?: RelativeDate | Date;
+		 end?: RelativeDate | Date;
 		 // ref="attr:DateRange.start"
 		/**
 		 * (Read only) The start of this DateRange.
 		 * Flags: IR
 		 */
-		readonly start?: RelativeDate | Date;
+		 start?: RelativeDate | Date;
 	} // DateRange
 
 	export interface DateRangeStatic {
@@ -2504,25 +2504,25 @@ declare namespace Isc {
 		 * (Read only) A DataBoundComponent providing the context for the sort-normalizer.
 		 * Flags: IR
 		 */
-		readonly context?: DataBoundComponent;
+		 context?: DataBoundComponent;
 		 // ref="attr:SortSpecifier.direction"
 		/**
 		 * (Read only) The direction in which this specifier should sort.
 		 * Flags: IR
 		 */
-		readonly direction?: SortDirection;
+		 direction?: SortDirection;
 		 // ref="attr:SortSpecifier.normalizer"
 		/**
 		 * (Read only) A normalizer function which this sortSpecifier will use to sort.
 		 * Flags: IR
 		 */
-		readonly normalizer?: Function;
+		 normalizer?: Function;
 		 // ref="attr:SortSpecifier.property"
 		/**
 		 * (Read only) The property name, eg a ListGridField','field name, to which this sortSpecifier applies.
 		 * Flags: IR
 		 */
-		readonly property?: String;
+		 property?: String;
 	} // SortSpecifier
 
 	export interface SortSpecifierStatic {
@@ -2545,7 +2545,7 @@ declare namespace Isc {
 		 * Callbacks.ValidatorActionCallback','ValidatorActionCallback.
 		 * Flags: IR
 		 */
-		readonly action?: StringMethod | ValidatorActionCallback;
+		 action?: StringMethod | ValidatorActionCallback;
 		 // ref="attr:ValidatorDefinition.condition"
 		/**
 		 * (Read only) Callback, function or JavaScript expression invoked to perform the actual validation
@@ -2563,21 +2563,21 @@ declare namespace Isc {
 		 * Callbacks.ValidatorConditionCallback','ValidatorConditionCallback.
 		 * Flags: IR
 		 */
-		readonly condition?: StringMethod | ValidatorConditionCallback;
+		 condition?: StringMethod | ValidatorConditionCallback;
 		 // ref="attr:ValidatorDefinition.defaultErrorMessage"
 		/**
 		 * (Read only) Default error message to be shown when validator fails validation. Can be overridden
 		 * for an individual validator by setting Validator.errorMessage.
 		 * Flags: IR
 		 */
-		readonly defaultErrorMessage?: String;
+		 defaultErrorMessage?: String;
 		 // ref="attr:ValidatorDefinition.requiresServer"
 		/**
 		 * (Read only) Does this validator only run server-side?
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly requiresServer?: boolean;
+		 requiresServer?: boolean;
 		 // ref="attr:ValidatorDefinition.shortName"
 		/**
 		 * (Read only) Optional name to be shown in tools that edit validators. If not specified,
@@ -2585,13 +2585,13 @@ declare namespace Isc {
 		 * camelCaps similar to DataSource.getAutoTitle.
 		 * Flags: IR
 		 */
-		readonly shortName?: String;
+		 shortName?: String;
 		 // ref="attr:ValidatorDefinition.type"
 		/**
 		 * (Read only) Type of the validator unique in ValidatorType.
 		 * Flags: IR
 		 */
-		readonly type?: String;
+		 type?: String;
 	} // ValidatorDefinition
 
 	export interface ValidatorDefinitionStatic {
@@ -2643,20 +2643,20 @@ declare namespace Isc {
 		 * FacetChart.chartRectProperties','chart rect. for each axis line.
 		 * Flags: IR
 		 */
-		readonly axisLineProperties?: DrawLineProps /* DrawLine Properties */;
+		 axisLineProperties?: DrawLineProps /* DrawLine Properties */;
 		 // ref="attr:MetricSettings.axisStartValue"
 		/**
 		 * (Read only) Same as FacetChart.axisStartValue but affects only one metric.
 		 * Flags: IR
 		 */
-		readonly axisStartValue?: Float;
+		 axisStartValue?: Float;
 		 // ref="attr:MetricSettings.chartType"
 		/**
 		 * See ChartType for a list of known types - Column, Bar, Line, Pie, Doughnut,
 		 * Area, Radar, and Histogram charts are supported.
 		 * Flags: IRW
 		 */
-		readonly chartType?: ChartType;
+		 chartType?: ChartType;
 		 // ref="attr:MetricSettings.dataColors"
 		/**
 		 * An array of colors to use for a series of visual elements representing data (eg columns,
@@ -2666,45 +2666,45 @@ declare namespace Isc {
 		 * "#FFFFFF" is white, "#FF0000" is pure red.
 		 * Flags: IRW
 		 */
-		readonly dataColors?: Array<CSSColor> /* Array of CSSColor */;
+		 dataColors?: Array<CSSColor> /* Array of CSSColor */;
 		 // ref="attr:MetricSettings.dataLineProperties"
 		/**
 		 * (Read only) Properties for lines that show data (as opposed to gradations or borders around the data
 		 * area).
 		 * Flags: IR
 		 */
-		readonly dataLineProperties?: DrawLineProps /* DrawLine Properties */;
+		 dataLineProperties?: DrawLineProps /* DrawLine Properties */;
 		 // ref="attr:MetricSettings.dataOutlineProperties"
 		/**
 		 * (Read only) Properties for lines that outline a data shape (in filled charts such as area or radar
 		 * charts).
 		 * Flags: IR
 		 */
-		readonly dataOutlineProperties?: DrawItemProps /* DrawItem Properties */;
+		 dataOutlineProperties?: DrawItemProps /* DrawItem Properties */;
 		 // ref="attr:MetricSettings.dataPointProperties"
 		/**
 		 * (Read only) Common properties to apply for all data points (see MetricSettings.showDataPoints).
 		 * Flags: IR
 		 */
-		readonly dataPointProperties?: DrawItemProps /* DrawItem Properties */;
+		 dataPointProperties?: DrawItemProps /* DrawItem Properties */;
 		 // ref="attr:MetricSettings.dataPointSize"
 		/**
 		 * (Read only) Size in pixels for data points drawn for line, area, radar and other chart types.
 		 * Flags: IR
 		 */
-		readonly dataPointSize?: int;
+		 dataPointSize?: int;
 		 // ref="attr:MetricSettings.dataShapeProperties"
 		/**
 		 * (Read only) Properties for data shapes (filled areas in area or radar charts).
 		 * Flags: IR
 		 */
-		readonly dataShapeProperties?: DrawPathProps /* DrawPath Properties */;
+		 dataShapeProperties?: DrawPathProps /* DrawPath Properties */;
 		 // ref="attr:MetricSettings.decimalPrecision"
 		/**
 		 * (Read only) The FacetChart.decimalPrecision used to render the numeric labels of this metric axis.
 		 * Flags: IR
 		 */
-		readonly decimalPrecision?: int;
+		 decimalPrecision?: int;
 		 // ref="attr:MetricSettings.filled"
 		/**
 		 * Whether shapes are filled, for example, whether a multi-series line chart appears as a
@@ -2719,7 +2719,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly filled?: boolean;
+		 filled?: boolean;
 		 // ref="attr:MetricSettings.fixedFacetValue"
 		/**
 		 * (Read only) For a MetricSettings.multiFacet','single-facet chart of an extra value axis, this property provides a constant facet value
@@ -2727,25 +2727,25 @@ declare namespace Isc {
 		 * obtains the series of values to plot. The default facet value is the first facet value of the second facet.
 		 * Flags: IR
 		 */
-		readonly fixedFacetValue?: String | Number;
+		 fixedFacetValue?: String | Number;
 		 // ref="attr:MetricSettings.gradationLabelProperties"
 		/**
 		 * (Read only) Properties for gradation labels
 		 * Flags: IR
 		 */
-		readonly gradationLabelProperties?: DrawLabelProps /* DrawLabel Properties */;
+		 gradationLabelProperties?: DrawLabelProps /* DrawLabel Properties */;
 		 // ref="attr:MetricSettings.gradationLineProperties"
 		/**
 		 * (Read only) Properties for gradation lines
 		 * Flags: IR
 		 */
-		readonly gradationLineProperties?: DrawLineProps /* DrawLine Properties */;
+		 gradationLineProperties?: DrawLineProps /* DrawLine Properties */;
 		 // ref="attr:MetricSettings.gradationZeroLineProperties"
 		/**
 		 * (Read only) Properties for the gradation line drawn for zero (slightly thicker by default).
 		 * Flags: IR
 		 */
-		readonly gradationZeroLineProperties?: DrawLineProps /* DrawLine Properties */;
+		 gradationZeroLineProperties?: DrawLineProps /* DrawLine Properties */;
 		 // ref="attr:MetricSettings.legendLabel"
 		/**
 		 * (Read only) For MetricSettings.multiFacet','single-facet charts embedded in a multi-facet main
@@ -2756,7 +2756,7 @@ declare namespace Isc {
 		 * legendLabel to provide custom text for the legend label.
 		 * Flags: IR
 		 */
-		readonly legendLabel?: String;
+		 legendLabel?: String;
 		 // ref="attr:MetricSettings.logBase"
 		/**
 		 * (Read only) When MetricSettings.useLogGradations, base value for logarithmic gradation lines. Gradation
@@ -2764,7 +2764,7 @@ declare namespace Isc {
 		 * MetricSettings.logGradations.
 		 * Flags: IR
 		 */
-		readonly logBase?: int;
+		 logBase?: int;
 		 // ref="attr:MetricSettings.logGradations"
 		/**
 		 * (Read only) When MetricSettings.useLogGradations is set, gradation lines to show in between powers,
@@ -2784,7 +2784,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly logGradations?: Array<Float> /* Array of Float */;
+		 logGradations?: Array<Float> /* Array of Float */;
 		 // ref="attr:MetricSettings.logScale"
 		/**
 		 * (Read only) Whether to use logarithmic scaling for values.
@@ -2794,7 +2794,7 @@ declare namespace Isc {
 		 * being a 10 times or 1000% increase).
 		 * Flags: IR
 		 */
-		readonly logScale?: boolean /* Boolean */;
+		 logScale?: boolean | null /* Boolean */;
 		 // ref="attr:MetricSettings.matchGradations"
 		/**
 		 * (Read only) When this property is set to the metric of another MetricSettings object, the extra
@@ -2804,7 +2804,7 @@ declare namespace Isc {
 		 * facet whose values will be displayed by the chart.
 		 * Flags: IR
 		 */
-		readonly matchGradations?: String;
+		 matchGradations?: String;
 		 // ref="attr:MetricSettings.minDataSpreadPercent"
 		/**
 		 * (Read only) Same as FacetChart.minDataSpreadPercent but affects only one metric. Default of
@@ -2812,14 +2812,14 @@ declare namespace Isc {
 		 * will be used.
 		 * Flags: IR
 		 */
-		readonly minDataSpreadPercent?: Integer;
+		 minDataSpreadPercent?: Integer;
 		 // ref="attr:MetricSettings.multiFacet"
 		/**
 		 * (Read only) Whether this extra value axis plots values while varying the facet values of just the
 		 * first facet (single-facet) or both first and second facets (multi-facet).
 		 * Flags: IR
 		 */
-		readonly multiFacet?: boolean /* Boolean */;
+		 multiFacet?: boolean | null /* Boolean */;
 		 // ref="attr:MetricSettings.proportional"
 		/**
 		 * For multi-facet charts, render data values as a proportion of the sum of all data
@@ -2834,7 +2834,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly proportional?: boolean;
+		 proportional?: boolean;
 		 // ref="attr:MetricSettings.proportionalAxisLabel"
 		/**
 		 * (Read only) Default title for the value axis label when the chart is in
@@ -2843,19 +2843,19 @@ declare namespace Isc {
 		 * Facet.proportionalTitle','proportionalTitle.
 		 * Flags: IR, Group: i18nMessages
 		 */
-		readonly proportionalAxisLabel?: String;
+		 proportionalAxisLabel?: String;
 		 // ref="attr:MetricSettings.shadowProperties"
 		/**
 		 * (Read only) Properties for shadows.
 		 * Flags: IR
 		 */
-		readonly shadowProperties?: DrawOvalProps /* DrawOval Properties */;
+		 shadowProperties?: DrawOvalProps /* DrawOval Properties */;
 		 // ref="attr:MetricSettings.showAxis"
 		/**
 		 * (Read only) Whether to show the extra value axis.
 		 * Flags: IR
 		 */
-		readonly showAxis?: boolean /* Boolean */;
+		 showAxis?: boolean | null /* Boolean */;
 		 // ref="attr:MetricSettings.showAxisLine"
 		/**
 		 * (Read only) Whether to show an axis line for this extra value axis if it is not placed
@@ -2864,7 +2864,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showAxisLine?: boolean;
+		 showAxisLine?: boolean;
 		 // ref="attr:MetricSettings.showDataPoints"
 		/**
 		 * (Read only) For Line, Area, Radar, Scatter or Bubble charts, whether to show data points for each
@@ -2874,7 +2874,7 @@ declare namespace Isc {
 		 * interactivity.
 		 * Flags: IR
 		 */
-		readonly showDataPoints?: boolean /* Boolean */;
+		 showDataPoints?: boolean | null /* Boolean */;
 		 // ref="attr:MetricSettings.showDataValues"
 		/**
 		 * (Read only) Should data values be shown as text labels near the shape representing the value, for example,
@@ -2888,13 +2888,13 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showDataValues?: boolean;
+		 showDataValues?: boolean;
 		 // ref="attr:MetricSettings.showShadows"
 		/**
 		 * (Read only) Whether to automatically show shadows for various charts.
 		 * Flags: IR
 		 */
-		readonly showShadows?: boolean /* Boolean */;
+		 showShadows?: boolean | null /* Boolean */;
 		 // ref="attr:MetricSettings.showValueAxisLabel"
 		/**
 		 * (Read only) Whether to show the MetricSettings.valueTitle','valueTitle (or, in the case of
@@ -2903,7 +2903,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showValueAxisLabel?: boolean;
+		 showValueAxisLabel?: boolean;
 		 // ref="attr:MetricSettings.showValueOnHover"
 		/**
 		 * (Read only) Shows the value of the nearest data value in a floating label whenever the mouse moves
@@ -2918,7 +2918,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showValueOnHover?: boolean;
+		 showValueOnHover?: boolean;
 		 // ref="attr:MetricSettings.stacked"
 		/**
 		 * If the ChartType is "Column" then the metric settings may include
@@ -2927,7 +2927,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly stacked?: boolean;
+		 stacked?: boolean;
 		 // ref="attr:MetricSettings.useLogGradations"
 		/**
 		 * (Read only) Whether to use classic logarithmic gradations, where each order of magnitude is shown as
@@ -2937,13 +2937,13 @@ declare namespace Isc {
 		 * Default gradations can be overridden via MetricSettings.logBase and MetricSettings.logGradations.
 		 * Flags: IR
 		 */
-		readonly useLogGradations?: boolean /* Boolean */;
+		 useLogGradations?: boolean | null /* Boolean */;
 		 // ref="attr:MetricSettings.valueAxisLabelProperties"
 		/**
 		 * (Read only) Properties for labels of value axis.
 		 * Flags: IR
 		 */
-		readonly valueAxisLabelProperties?: DrawLabelProps /* DrawLabel Properties */;
+		 valueAxisLabelProperties?: DrawLabelProps /* DrawLabel Properties */;
 		 // ref="attr:MetricSettings.valueLineProperties"
 		/**
 		 * (Read only) Properties for a "value line" - a line shows where a particular discrete value is
@@ -2951,20 +2951,20 @@ declare namespace Isc {
 		 * lines in a Radar chart.
 		 * Flags: IR
 		 */
-		readonly valueLineProperties?: DrawLineProps /* DrawLine Properties */;
+		 valueLineProperties?: DrawLineProps /* DrawLine Properties */;
 		 // ref="attr:MetricSettings.valueTitle"
 		/**
 		 * (Read only) A label for the data values, such as "Sales in Thousands", typically used as the label for
 		 * the value axis.
 		 * Flags: IR
 		 */
-		readonly valueTitle?: String;
+		 valueTitle?: String;
 		 // ref="attr:MetricSettings.xAxisEndValue"
 		/**
 		 * (Read only) Same as FacetChart.xAxisEndValue but affects only one metric.
 		 * Flags: IR
 		 */
-		readonly xAxisEndValue?: Float;
+		 xAxisEndValue?: Float;
 
 		/* Instance Method Overrides */
 		/**  
@@ -3164,7 +3164,7 @@ declare namespace Isc {
 		 * 
 		 * @param {boolean} filled - new value
 		 */
-		setFilled?(filled:boolean /* Boolean */): void; 
+		setFilled?(filled:boolean | null /* Boolean */): void; 
 
 		/**  
 		 *  Setter for MetricSettings.proportional.
@@ -3180,7 +3180,7 @@ declare namespace Isc {
 		 * 
 		 * @param {boolean} stacked - new value
 		 */
-		setStacked?(stacked:boolean /* Boolean */): void; 
+		setStacked?(stacked:boolean | null /* Boolean */): void; 
 
 	} // MetricSettings
 
@@ -3204,7 +3204,7 @@ declare namespace Isc {
 		 * attributes are set automatically.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly backgroundColor?: String;
+		 backgroundColor?: String;
 		 // ref="attr:Hilite.canEdit"
 		/**
 		 * (Read only) Can highlight be edited from header context menu? Setting attribute to
@@ -3212,20 +3212,20 @@ declare namespace Isc {
 		 * value allows editing.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly canEdit?: boolean /* Boolean */;
+		 canEdit?: boolean | null /* Boolean */;
 		 // ref="attr:Hilite.criteria"
 		/**
 		 * (Read only) Criteria defining what records this hilite should apply to.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly criteria?: Criteria | AdvancedCriteria;
+		 criteria?: Criteria | AdvancedCriteria;
 		 // ref="attr:Hilite.cssText"
 		/**
 		 * (Read only) CSS text to be applied to cells where this hilite is applied, for example,
 		 * "background-color:#FF0000"
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly cssText?: CSSText;
+		 cssText?: CSSText;
 		 // ref="attr:Hilite.disabled"
 		/**
 		 * Whether this hilite is currently disabled.
@@ -3233,7 +3233,7 @@ declare namespace Isc {
 		 * Hilites can be programmatically enabled and disabled via DataBoundComponent.enableHilite.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly disabled?: boolean /* Boolean */;
+		 disabled?: boolean | null /* Boolean */;
 		 // ref="attr:Hilite.fieldName"
 		/**
 		 * (Read only) Name of the field, or array of fieldNames, this hilite should be applied to. 
@@ -3241,19 +3241,19 @@ declare namespace Isc {
 		 * If unset, hilite is applied to every field of the record.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly fieldName?: FieldName | Array<FieldName> /* FieldName | Array of FieldName */;
+		 fieldName?: FieldName | Array<FieldName> /* FieldName | Array of FieldName */;
 		 // ref="attr:Hilite.htmlAfter"
 		/**
 		 * (Read only) HTML to append to the end of cell values where this hilite is applied.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly htmlAfter?: HTMLString;
+		 htmlAfter?: HTMLString;
 		 // ref="attr:Hilite.htmlBefore"
 		/**
 		 * (Read only) HTML to pre-pend to cell values where this hilite is applied.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly htmlBefore?: HTMLString;
+		 htmlBefore?: HTMLString;
 		 // ref="attr:Hilite.htmlValue"
 		/**
 		 * (Read only) Value to show in place of the actual value from the record, for a record that matches
@@ -3264,7 +3264,7 @@ declare namespace Isc {
 		 * "Negligible", and similar use cases.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly htmlValue?: String;
+		 htmlValue?: String;
 		 // ref="attr:Hilite.icon"
 		/**
 		 * (Read only) URL of an icon to show when this hilite is applied to a cell. Position of the icon 
@@ -3272,7 +3272,7 @@ declare namespace Isc {
 		 * ListGridField.hiliteIconPosition.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly icon?: SCImgURL;
+		 icon?: SCImgURL;
 		 // ref="attr:Hilite.id"
 		/**
 		 * (Read only) Unique id for this hilite definition. 
@@ -3283,7 +3283,7 @@ declare namespace Isc {
 		 * DataBoundComponent.hiliteProperty on the record to this id.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly id?: String;
+		 id?: String;
 		 // ref="attr:Hilite.replacementValue"
 		/**
 		 * (Read only) HTML which replaces the cell's textual value where this hilite is applied.
@@ -3294,7 +3294,7 @@ declare namespace Isc {
 		 * to be displayed as text such as "current" or "past due".
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly replacementValue?: HTMLString;
+		 replacementValue?: HTMLString;
 		 // ref="attr:Hilite.textColor"
 		/**
 		 * When edited via a HiliteEditor, the value for the foreground color of this 
@@ -3303,14 +3303,14 @@ declare namespace Isc {
 		 * attributes are set automatically.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly textColor?: String;
+		 textColor?: String;
 		 // ref="attr:Hilite.title"
 		/**
 		 * User-visible title for this hilite. Used for interfaces such as menus that can enable or
 		 * disable hilites.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly title?: String;
+		 title?: String;
 	} // Hilite
 
 	export interface HiliteStatic {
@@ -3327,20 +3327,20 @@ declare namespace Isc {
 		 * (Read only) The column number occupied by a Portlet within a PortalLayout.
 		 * Flags: IR
 		 */
-		readonly colNum?: int;
+		 colNum?: int;
 		 // ref="attr:PortalPosition.position"
 		/**
 		 * (Read only) The position occupied by a Portlet within a PortalLayout row
 		 * (generally 0, unless there is more than one Portlet in the row).
 		 * Flags: IR
 		 */
-		readonly position?: int;
+		 position?: int;
 		 // ref="attr:PortalPosition.rowNum"
 		/**
 		 * (Read only) The row number occupied by a Portlet within a PortalLayout column.
 		 * Flags: IR
 		 */
-		readonly rowNum?: int;
+		 rowNum?: int;
 	} // PortalPosition
 
 	export interface PortalPositionStatic {
@@ -3389,7 +3389,7 @@ declare namespace Isc {
 		 * has an effect on the innermost headerLevel.
 		 * Flags: IR
 		 */
-		readonly headerWidth?: Integer;
+		 headerWidth?: Integer;
 		 // ref="attr:HeaderLevel.titles"
 		/**
 		 * (Read only) Optional sparse array of titles for the spans on this headerLevel. If a given span in this
@@ -3400,13 +3400,13 @@ declare namespace Isc {
 		 * for further customization.
 		 * Flags: IR
 		 */
-		readonly titles?: Array<String> /* Array of String */;
+		 titles?: Array<String> /* Array of String */;
 		 // ref="attr:HeaderLevel.unit"
 		/**
 		 * (Read only) Unit of time shown at this level of header.
 		 * Flags: IR
 		 */
-		readonly unit?: TimeUnit;
+		 unit?: TimeUnit;
 
 		/* Instance Method Overrides */
 		/**  
@@ -3448,7 +3448,7 @@ declare namespace Isc {
 		 * the Developer Console.
 		 * Flags: IRW
 		 */
-		readonly actionURL?: URL;
+		 actionURL?: URL;
 		 // ref="attr:RPCRequest.allowIE9Leak"
 		/**
 		 * (Read only, Advanced) Advanced flag to avoid a potential memory leak in Internet Explorer 9 for requests
@@ -3474,14 +3474,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRA
 		 */
-		readonly allowIE9Leak?: boolean;
+		 allowIE9Leak?: boolean;
 		 // ref="attr:RPCRequest.bypassCache"
 		/**
 		 * (Advanced) For xmlHttp transport + httpMethod: "GET" only, set to true to force a conditional
 		 * GET request even if the browser thinks it has a current cached response.
 		 * Flags: IRWA
 		 */
-		readonly bypassCache?: boolean /* Boolean */;
+		 bypassCache?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.callback"
 		/**
 		 * If you expect to receive a response to your RPC request, you can specify a callback that
@@ -3498,7 +3498,7 @@ declare namespace Isc {
 		 * errorHandling','error handling overview for more details.
 		 * Flags: IRW, Group: errorHandling
 		 */
-		readonly callback?: Callback /* RPCCallback */;
+		 callback?: Callback /* RPCCallback */;
 		 // ref="attr:RPCRequest.callbackParam"
 		/**
 		 * For use only with the RPCTransport','scriptInclude transport, this attribute
@@ -3525,7 +3525,7 @@ declare namespace Isc {
 		 * scriptInclude.
 		 * Flags: IRW
 		 */
-		readonly callbackParam?: String;
+		 callbackParam?: String;
 		 // ref="attr:RPCRequest.clientContext"
 		/**
 		 * An object to be held onto for the duration of the RPC turnaround to track
@@ -3540,7 +3540,7 @@ declare namespace Isc {
 		 * returned data.
 		 * Flags: IRW
 		 */
-		readonly clientContext?: Object;
+		 clientContext?: Object;
 		 // ref="attr:RPCRequest.containsCredentials"
 		/**
 		 * (Advanced) For use during relogin','Relogin, this property marks this request an attempt to
@@ -3553,14 +3553,14 @@ declare namespace Isc {
 		 * that are not.
 		 * Flags: IRWA, Group: relogin
 		 */
-		readonly containsCredentials?: boolean /* Boolean */;
+		 containsCredentials?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.contentType"
 		/**
 		 * Valid with the xmlHttpRequest transport only and only when
 		 * RPCRequest.httpMethod is set to "POST".
 		 * Flags: IRW
 		 */
-		readonly contentType?: String;
+		 contentType?: String;
 		 // ref="attr:RPCRequest.data"
 		/**
 		 * This attribute specifies the payload of the RPCRequest. 
@@ -3601,7 +3601,7 @@ declare namespace Isc {
 		 * for details.
 		 * Flags: IRW
 		 */
-		readonly data?: String | Record | Object;
+		 data?: String | Record | Object;
 		 // ref="attr:RPCRequest.downloadResult"
 		/**
 		 * (Advanced) If enabled, causes the RPCRequest to download the requested resource as a file, either 
@@ -3612,14 +3612,14 @@ declare namespace Isc {
 		 * request will silently use RPCRequest.transport','transport: "hiddenFrame".
 		 * Flags: IRWA
 		 */
-		readonly downloadResult?: boolean /* Boolean */;
+		 downloadResult?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.downloadToNewWindow"
 		/**
 		 * (Advanced) When RPCRequest.downloadResult','downloadResult is true, setting this attribute to
 		 * true causes the content of the downloaded file to be displayed in a new browser window.
 		 * Flags: IRWA
 		 */
-		readonly downloadToNewWindow?: boolean /* Boolean */;
+		 downloadToNewWindow?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.evalResult"
 		/**
 		 * (Advanced) This works similarly to RPCRequest.serverOutputAsString except the resulting String
@@ -3655,7 +3655,7 @@ declare namespace Isc {
 		 * supported browsers. See platformDependencies for more information.
 		 * Flags: IRWA, Group: viewLoading
 		 */
-		readonly evalResult?: boolean /* Boolean */;
+		 evalResult?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.evalVars"
 		/**
 		 * (Advanced) If you've set RPCRequest.evalResult : true, then the property values of this object
@@ -3666,7 +3666,7 @@ declare namespace Isc {
 		 * variable foo in the result will evaluate to "bar".
 		 * Flags: IRWA, Group: viewLoading
 		 */
-		readonly evalVars?: Object;
+		 evalVars?: Object;
 		 // ref="attr:RPCRequest.httpHeaders"
 		/**
 		 * HTTP headers to send, as a Object mapping Header name -> Header value, eg
@@ -3675,7 +3675,7 @@ declare namespace Isc {
 		 * Valid with the xmlHttpRequest RPCRequest.transport','transport only.
 		 * Flags: IRW
 		 */
-		readonly httpHeaders?: Object;
+		 httpHeaders?: Object;
 		 // ref="attr:RPCRequest.httpMethod"
 		/**
 		 * Selects the HTTP method that will be used for the request. Typical values are "POST" and
@@ -3685,14 +3685,14 @@ declare namespace Isc {
 		 * are supported by the Safari browser previous to version 3.0.
 		 * Flags: IRW
 		 */
-		readonly httpMethod?: String;
+		 httpMethod?: String;
 		 // ref="attr:RPCRequest.httpProxyURL"
 		/**
 		 * (Read only) The proxy URL to use for this request (if RPCRequest.useHttpProxy is set for this
 		 * request). If unset, the value of RPCManager.httpProxyURL will be used instead.
 		 * Flags: IR
 		 */
-		readonly httpProxyURL?: String;
+		 httpProxyURL?: String;
 		 // ref="attr:RPCRequest.ignoreTimeout"
 		/**
 		 * (Advanced) When set to true, no reply is expected from the server. However, if a reply is received, it will
@@ -3702,7 +3702,7 @@ declare namespace Isc {
 		 * this request.
 		 * Flags: IRWA
 		 */
-		readonly ignoreTimeout?: boolean /* Boolean */;
+		 ignoreTimeout?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.mockMode"
 		/**
 		 * (Read only) If enabled and request is applied to RPCManager.cacheScreens or
@@ -3711,7 +3711,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly mockMode?: boolean;
+		 mockMode?: boolean;
 		 // ref="attr:RPCRequest.omitNullMapValuesInResponse"
 		/**
 		 * (Advanced) If enabled, the server omits any key/value pairs in map that have null values from the
@@ -3721,7 +3721,7 @@ declare namespace Isc {
 		 * in server_properties','server.properties.
 		 * Flags: IRWA
 		 */
-		readonly omitNullMapValuesInResponse?: boolean /* Boolean */;
+		 omitNullMapValuesInResponse?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.params"
 		/**
 		 * Values to be sent as simple HTTP params, as a JavaScript Object where each property/value
@@ -3764,7 +3764,7 @@ declare namespace Isc {
 		 * logged in the Developer Console if multiple RPCRequests specified params.
 		 * Flags: IRW
 		 */
-		readonly params?: Object;
+		 params?: Object;
 		 // ref="attr:RPCRequest.paramsOnly"
 		/**
 		 * (Advanced) When set to true, assume the request is not going to the SmartClient server, and hence send
@@ -3778,21 +3778,21 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRWA
 		 */
-		readonly paramsOnly?: boolean;
+		 paramsOnly?: boolean;
 		 // ref="attr:RPCRequest.prompt"
 		/**
 		 * Overrides RPCManager.defaultPrompt for this request only. If you're using queuing, note that the
 		 * prompt string from the first request in the queue is the one that is shown to the user.
 		 * Flags: IRW, Group: rpcPrompt
 		 */
-		readonly prompt?: HTMLString;
+		 prompt?: HTMLString;
 		 // ref="attr:RPCRequest.promptCursor"
 		/**
 		 * Controls the cursor shown when RPCManager.promptStyle is set to
 		 * "cursor" for this request only. Defaults to RPCManager.promptCursor.
 		 * Flags: IRW, Group: rpcPrompt
 		 */
-		readonly promptCursor?: String;
+		 promptCursor?: String;
 		 // ref="attr:RPCRequest.promptDelay"
 		/**
 		 * (Advanced) Overrides RPCManager.promptDelay for this request only. Defaults to RPCManager.promptDelay.
@@ -3800,20 +3800,20 @@ declare namespace Isc {
 		 * If you're using queuing, note that the promptDelay of the first request is used for the entire queue.
 		 * Flags: IRWA, Group: rpcPrompt
 		 */
-		readonly promptDelay?: number;
+		 promptDelay?: number;
 		 // ref="attr:RPCRequest.promptStyle"
 		/**
 		 * Controls the prompt style for this request only. Defaults to
 		 * RPCManager.promptStyle.
 		 * Flags: IRW, Group: rpcPrompt
 		 */
-		readonly promptStyle?: PromptStyle;
+		 promptStyle?: PromptStyle;
 		 // ref="attr:RPCRequest.sendNoQueue"
 		/**
 		 * (Advanced) When set to true, this request is sent to the server immediately, bypassing any current queue.
 		 * Flags: IRWA
 		 */
-		readonly sendNoQueue?: boolean /* Boolean */;
+		 sendNoQueue?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.serverOutputAsString"
 		/**
 		 * (Advanced) Setting this flag makes the body of the HTTP response available as a String in the
@@ -3839,7 +3839,7 @@ declare namespace Isc {
 		 * DataSource for loading structured data in various formats.
 		 * Flags: IRWA
 		 */
-		readonly serverOutputAsString?: boolean /* Boolean */;
+		 serverOutputAsString?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.showPrompt"
 		/**
 		 * Overrides RPCManager.showPrompt for this request only.
@@ -3852,7 +3852,7 @@ declare namespace Isc {
 		 * entire queue uses the "cursor" style for the prompt.
 		 * Flags: IRW, Group: rpcPrompt
 		 */
-		readonly showPrompt?: boolean /* Boolean */;
+		 showPrompt?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.suppressAutoDraw"
 		/**
 		 * (Advanced) If RPCRequest.evalResult is set, setting this property to true causes
@@ -3862,7 +3862,7 @@ declare namespace Isc {
 		 * This also effects components loaded via the RPCManager.loadScreen API.
 		 * Flags: IRWA
 		 */
-		readonly suppressAutoDraw?: boolean /* Boolean */;
+		 suppressAutoDraw?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.timeout"
 		/**
 		 * (Advanced) Sets the timeout on this request. Default is to use RPCManager.defaultTimeout. 
@@ -3893,7 +3893,7 @@ declare namespace Isc {
 		 * Messaging (see <a href='http://smartclient.com/product' target='_blank'>http://smartclient.com/product</a>).
 		 * Flags: IRWA
 		 */
-		readonly timeout?: int;
+		 timeout?: int;
 		 // ref="attr:RPCRequest.transport"
 		/**
 		 * (Advanced) Selects the transport used for this RPCRequest. If unset, the value of
@@ -3917,7 +3917,7 @@ declare namespace Isc {
 		 * RPCManager.xmlHttpRequestAvailable.
 		 * Flags: IRWA
 		 */
-		readonly transport?: RPCTransport;
+		 transport?: RPCTransport;
 		 // ref="attr:RPCRequest.useHttpProxy"
 		/**
 		 * (Read only) Indicates whether this request should use the HttpProxyServlet in order to enable contacting
@@ -3939,7 +3939,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly useHttpProxy?: boolean;
+		 useHttpProxy?: boolean;
 		 // ref="attr:RPCRequest.useSimpleHttp"
 		/**
 		 * (Advanced) When set to true, assume the request is not going to the SmartClient server, and hence send
@@ -3962,7 +3962,7 @@ declare namespace Isc {
 		 * RPCRequest.serverOutputAsString to true as well.
 		 * Flags: IRWA
 		 */
-		readonly useSimpleHttp?: boolean /* Boolean */;
+		 useSimpleHttp?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.useXmlHttpRequest"
 		/**
 		 * (Advanced) Selects the default http transport for this RPCRequest. If set to true, this request will use
@@ -3985,7 +3985,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRWA
 		 */
-		readonly useXmlHttpRequest?: boolean;
+		 useXmlHttpRequest?: boolean;
 		 // ref="attr:RPCRequest.willHandleError"
 		/**
 		 * With willHandleError:false, rpcResponses that indicate an error go through centralized
@@ -3997,7 +3997,7 @@ declare namespace Isc {
 		 * See also the error handling section in the RPCManager docs.
 		 * Flags: IRW, Group: errorHandling
 		 */
-		readonly willHandleError?: boolean /* Boolean */;
+		 willHandleError?: boolean | null /* Boolean */;
 		 // ref="attr:RPCRequest.withCredentials"
 		/**
 		 * (Read only, Advanced) In browsers that support <a href='http://www.w3.org/TR/cors/' target='_blank'>Cross-Origin Resource Sharing</a>
@@ -4015,7 +4015,7 @@ declare namespace Isc {
 		 * <a href='https://connect.microsoft.com/IE/Feedback/Details/759587/' target='_blank'>IE10 doesn't support cookies on cross origin XMLHttpRequest withCredentials=true</a>.
 		 * Flags: IRA
 		 */
-		readonly withCredentials?: boolean /* Boolean */;
+		 withCredentials?: boolean | null /* Boolean */;
 	} // RPCRequest
 
 	export interface RPCRequestStatic {
@@ -4029,7 +4029,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: rpcPrompt
 		 */
-		readonly useCursorTracker?: boolean;
+		 useCursorTracker?: boolean;
 	} // RPCRequestStatic
 
 
@@ -4063,14 +4063,14 @@ declare namespace Isc {
 		 * (Read only) An array of color stops for this gradient.
 		 * Flags: IR
 		 */
-		readonly colorStops?: Array<ColorStop> /* Array of ColorStop */;
+		 colorStops?: Array<ColorStop> /* Array of ColorStop */;
 		 // ref="attr:Gradient.endColor"
 		/**
 		 * (Read only) An end color for the gradient. If both Gradient.startColor','startColor and endColor
 		 * are set then Gradient.colorStops','colorStops is ignored.
 		 * Flags: IR
 		 */
-		readonly endColor?: CSSColor;
+		 endColor?: CSSColor;
 		 // ref="attr:Gradient.id"
 		/**
 		 * (Read only) Identifier which can be used by one or more DrawItems when gradient is assigned
@@ -4080,14 +4080,14 @@ declare namespace Isc {
 		 * The ID must be unique within DrawPane.gradients if defined.
 		 * Flags: IR
 		 */
-		readonly id?: Identifier;
+		 id?: Identifier;
 		 // ref="attr:Gradient.startColor"
 		/**
 		 * (Read only) A start color for the gradient. If both startColor and Gradient.endColor','endColor
 		 * are set then Gradient.colorStops','colorStops is ignored.
 		 * Flags: IR
 		 */
-		readonly startColor?: CSSColor;
+		 startColor?: CSSColor;
 	} // Gradient
 
 	export interface GradientStatic {
@@ -4104,7 +4104,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly useFlatFields?: boolean;
+		 useFlatFields?: boolean;
 	} // SerializationContext
 
 	export interface SerializationContextStatic {
@@ -4120,13 +4120,13 @@ declare namespace Isc {
 		 * (Read only) The command arguments. The number of arguments and their types depend on this command's DrawShapeCommand.type','type.
 		 * Flags: IR
 		 */
-		readonly args?: Array<any> /* Array */;
+		 args?: Array<any> /* Array */;
 		 // ref="attr:DrawShapeCommand.type"
 		/**
 		 * (Read only) The command type.
 		 * Flags: IR
 		 */
-		readonly type?: DrawShapeCommandType;
+		 type?: DrawShapeCommandType;
 	} // DrawShapeCommand
 
 	export interface DrawShapeCommandStatic {
@@ -4142,19 +4142,19 @@ declare namespace Isc {
 		 * Forcibly reload a dataSource if it's already loaded.
 		 * Flags: IRW
 		 */
-		readonly forceReload?: boolean /* Boolean */;
+		 forceReload?: boolean | null /* Boolean */;
 		 // ref="attr:DSLoadSettings.loadParents"
 		/**
 		 * Load parent DataSources
 		 * Flags: IRW
 		 */
-		readonly loadParents?: boolean /* Boolean */;
+		 loadParents?: boolean | null /* Boolean */;
 		 // ref="attr:DSLoadSettings.mockMode"
 		/**
 		 * Place loaded DataSource into DataSource.mockMode','mockMode
 		 * Flags: IRW
 		 */
-		readonly mockMode?: boolean /* Boolean */;
+		 mockMode?: boolean | null /* Boolean */;
 	} // DSLoadSettings
 
 	export interface DSLoadSettingsStatic {
@@ -4171,41 +4171,41 @@ declare namespace Isc {
 		 * determines how to chose the property that appears to contain child objects
 		 * Flags: IR
 		 */
-		readonly childrenMode?: ChildrenPropertyMode;
+		 childrenMode?: ChildrenPropertyMode;
 		 // ref="attr:DiscoverTreeSettings.nameProperty"
 		/**
 		 * For string leaf nodes (if allowed), the name of the property to store the string under
 		 * in the auto-created object
 		 * Flags: IRW
 		 */
-		readonly nameProperty?: String;
+		 nameProperty?: String;
 		 // ref="attr:DiscoverTreeSettings.newChildrenProperty"
 		/**
 		 * What to rename the array of children once discovered.
 		 * If not set, it will default to the value of Tree.childrenProperty inside discoverTree()
 		 * Flags: IRW
 		 */
-		readonly newChildrenProperty?: String;
+		 newChildrenProperty?: String;
 		 // ref="attr:DiscoverTreeSettings.scanMode"
 		/**
 		 * Determines how to scan for the Tree.childrenProperty
 		 * Flags: IRW
 		 */
-		readonly scanMode?: ScanMode;
+		 scanMode?: ScanMode;
 		 // ref="attr:DiscoverTreeSettings.tieMode"
 		/**
 		 * What to do if there is more than one possible Tree.childrenProperty
 		 * when using scanMode "branch" or "level"
 		 * Flags: IRW
 		 */
-		readonly tieMode?: TieMode;
+		 tieMode?: TieMode;
 		 // ref="attr:DiscoverTreeSettings.typeProperty"
 		/**
 		 * Each discovered child is labeled with a configurable "typeProperty" set to the value
 		 * of the property that held the children
 		 * Flags: IRW
 		 */
-		readonly typeProperty?: String;
+		 typeProperty?: String;
 	} // DiscoverTreeSettings
 
 	export interface DiscoverTreeSettingsStatic {
@@ -4233,13 +4233,13 @@ declare namespace Isc {
 		 * See PaletteNode.canDuplicate.
 		 * Flags: IRW
 		 */
-		readonly canDuplicate?: boolean /* Boolean */;
+		 canDuplicate?: boolean | null /* Boolean */;
 		 // ref="attr:EditNode.defaults"
 		/**
 		 * (Read only) Properties required to recreate the current EditNode.liveObject.
 		 * Flags: IR
 		 */
-		readonly defaults?: Properties;
+		 defaults?: Properties;
 		 // ref="attr:EditNode.editProxyProperties"
 		/**
 		 * (Read only) Properties to be applied to the
@@ -4249,28 +4249,28 @@ declare namespace Isc {
 		 * editMode, so any editProxyProperties must be set before then.
 		 * Flags: IR
 		 */
-		readonly editProxyProperties?: EditProxyProps /* EditProxy Properties */;
+		 editProxyProperties?: EditProxyProps /* EditProxy Properties */;
 		 // ref="attr:EditNode.liveObject"
 		/**
 		 * (Read only) Live version of the object created from the EditNode.defaults. For example, 
 		 * if EditNode.type is "ListGrid", liveObject would be a ListGrid.
 		 * Flags: IR
 		 */
-		readonly liveObject?: Object;
+		 liveObject?: Object;
 		 // ref="attr:EditNode.type"
 		/**
 		 * (Read only) SCClassName of the EditNode.liveObject
 		 * , for example, "ListGrid".
 		 * Flags: IR
 		 */
-		readonly type?: SCClassName;
+		 type?: SCClassName;
 		 // ref="attr:EditNode.useEditMask"
 		/**
 		 * (Read only) Shortcut property to be applied to the
 		 * EditNode.liveObject','liveObject.Canvas.editProxy','editProxy when created.
 		 * Flags: IR
 		 */
-		readonly useEditMask?: boolean /* Boolean */;
+		 useEditMask?: boolean | null /* Boolean */;
 	} // EditNode
 
 	export interface EditNodeStatic extends PaletteNodeStatic {
@@ -4289,7 +4289,7 @@ declare namespace Isc {
 		 * entire summary.
 		 * Flags: IRW
 		 */
-		readonly badFormulaResultValue?: String;
+		 badFormulaResultValue?: String;
 		 // ref="attr:SummaryConfiguration.invalidSummaryValue"
 		/**
 		 * (Advanced) The field value to treat as an invalid value from a summary row (see 
@@ -4300,7 +4300,7 @@ declare namespace Isc {
 		 * entire summary.
 		 * Flags: IRWA
 		 */
-		readonly invalidSummaryValue?: String;
+		 invalidSummaryValue?: String;
 	} // SummaryConfiguration
 
 	export interface SummaryConfigurationStatic {
@@ -4316,25 +4316,25 @@ declare namespace Isc {
 		 * (Read only) For bar and column charts, thickness of the bar representing this data value.
 		 * Flags: IR
 		 */
-		readonly barThickness?: int;
+		 barThickness?: int;
 		 // ref="attr:DrawnValue.endAngle"
 		/**
 		 * (Read only) For pie mode only, start angle of the segment for the data value.
 		 * Flags: IR
 		 */
-		readonly endAngle?: int;
+		 endAngle?: int;
 		 // ref="attr:DrawnValue.facetValues"
 		/**
 		 * (Read only) FacetValues for the data value.
 		 * Flags: IR
 		 */
-		readonly facetValues?: FacetValueMap;
+		 facetValues?: FacetValueMap;
 		 // ref="attr:DrawnValue.radius"
 		/**
 		 * (Read only) For pie mode only, the radius of the segment for the data value.
 		 * Flags: IR
 		 */
-		readonly radius?: Double;
+		 radius?: Double;
 		 // ref="attr:DrawnValue.record"
 		/**
 		 * (Read only) The data record of the data point from which this drawnValue was created.
@@ -4346,33 +4346,33 @@ declare namespace Isc {
 		 * is to use the DrawnValue.facetValues.
 		 * Flags: IR
 		 */
-		readonly record?: CellRecord;
+		 record?: CellRecord;
 		 // ref="attr:DrawnValue.startAngle"
 		/**
 		 * (Read only) For pie mode only, start angle of the segment for the data value.
 		 * Flags: IR
 		 */
-		readonly startAngle?: int;
+		 startAngle?: int;
 		 // ref="attr:DrawnValue.value"
 		/**
 		 * (Read only) Data value this drawnValue represents.
 		 * Flags: IR
 		 */
-		readonly value?: Float /* float */;
+		 value?: Float /* float */;
 		 // ref="attr:DrawnValue.x"
 		/**
 		 * (Read only) X coordinate where the data value is rendered. In pie mode, returns the X coordinate of the
 		 * center of the pie where the data value appears.
 		 * Flags: IR
 		 */
-		readonly x?: int;
+		 x?: int;
 		 // ref="attr:DrawnValue.y"
 		/**
 		 * (Read only) Y coordinate where the data value is rendered. In pie mode, returns the Y coordinate of the
 		 * center of the pie where the data value appears.
 		 * Flags: IR
 		 */
-		readonly y?: int;
+		 y?: int;
 	} // DrawnValue
 
 	export interface DrawnValueStatic {
@@ -4390,7 +4390,7 @@ declare namespace Isc {
 		 * (Read only) A DataBoundComponent providing the context for the group-normalizer.
 		 * Flags: IR
 		 */
-		readonly context?: DataBoundComponent;
+		 context?: DataBoundComponent;
 		 // ref="attr:GroupSpecifier.grouping"
 		/**
 		 * (Read only) The grouping mode applied by this specifier. The list of available modes can come either 
@@ -4398,19 +4398,19 @@ declare namespace Isc {
 		 * SimpleType.groupingModes','data-type.
 		 * Flags: IR
 		 */
-		readonly grouping?: String;
+		 grouping?: String;
 		 // ref="attr:GroupSpecifier.normalizer"
 		/**
 		 * (Read only) A normalizer function which this groupSpecifier will use to group.
 		 * Flags: IR
 		 */
-		readonly normalizer?: Function;
+		 normalizer?: Function;
 		 // ref="attr:GroupSpecifier.property"
 		/**
 		 * (Read only) The property name, eg a ListGridField','field name, to which this groupSpecifier applies.
 		 * Flags: IR
 		 */
-		readonly property?: String;
+		 property?: String;
 	} // GroupSpecifier
 
 	export interface GroupSpecifierStatic {
@@ -4428,28 +4428,28 @@ declare namespace Isc {
 		 * bounding box of the DrawItem to which it is applied.
 		 * Flags: IR
 		 */
-		readonly x1?: String;
+		 x1?: String;
 		 // ref="attr:LinearGradient.x2"
 		/**
 		 * (Read only) X coordinate of the end point. This can be a number or a percentage of the width of the
 		 * bounding box of the DrawItem to which it is applied.
 		 * Flags: IR
 		 */
-		readonly x2?: String;
+		 x2?: String;
 		 // ref="attr:LinearGradient.y1"
 		/**
 		 * (Read only) Y coordinate of the start point. This can be a number or a percentage of the height of the
 		 * bounding box of the DrawItem to which it is applied.
 		 * Flags: IR
 		 */
-		readonly y1?: String;
+		 y1?: String;
 		 // ref="attr:LinearGradient.y2"
 		/**
 		 * (Read only) Y coordinate of the end point. This can be a number or a percentage of the height of the
 		 * bounding box of the DrawItem to which it is applied.
 		 * Flags: IR
 		 */
-		readonly y2?: String;
+		 y2?: String;
 	} // LinearGradient
 
 	export interface LinearGradientStatic extends GradientStatic {
@@ -4474,7 +4474,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly enabled?: boolean;
+		 enabled?: boolean;
 	} // CellRecord
 
 	export interface CellRecordStatic {
@@ -4500,14 +4500,14 @@ declare namespace Isc {
 		 * regardless of this setting.
 		 * Flags: I
 		 */
-		readonly canCollapse?: boolean /* Boolean */;
+		 canCollapse?: boolean | null /* Boolean */;
 		 // ref="attr:SectionStackSection.canDropBefore"
 		/**
 		 * (Read only) When explicitly set to false, disallows drop before this member in the Layout.
 		 * boolean - Null not allowed
 		 * Flags: I, Group: layoutMember
 		 */
-		readonly canDropBefore?: boolean;
+		 canDropBefore?: boolean;
 		 // ref="attr:SectionStackSection.canReorder"
 		/**
 		 * (Read only) If set to false, then this sectionHeader will not be able to be dragged to perform a drag
@@ -4517,7 +4517,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: I
 		 */
-		readonly canReorder?: boolean;
+		 canReorder?: boolean;
 		 // ref="attr:SectionStackSection.canTabToHeader"
 		/**
 		 * (Read only) If true, the header for this Section will be included in the page's tab
@@ -4528,7 +4528,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canTabToHeader?: boolean;
+		 canTabToHeader?: boolean;
 		 // ref="attr:SectionStackSection.clipTitle"
 		/**
 		 * (Read only) If the title for this section header is too large for the available space, should the title be
@@ -4538,7 +4538,7 @@ declare namespace Isc {
 		 * property (IE6+, Firefox 7+, Safari, Chrome, Opera 9+).
 		 * Flags: IR
 		 */
-		readonly clipTitle?: boolean /* Boolean */;
+		 clipTitle?: boolean | null /* Boolean */;
 		 // ref="attr:SectionStackSection.controls"
 		/**
 		 * (Read only) Custom controls to be shown on top of this section header.
@@ -4552,7 +4552,7 @@ declare namespace Isc {
 		 * by manipulating the existing control(s) set up at init time.
 		 * Flags: IR
 		 */
-		readonly controls?: Array<Canvas> /* Array of Canvas */;
+		 controls?: Array<Canvas> /* Array of Canvas */;
 		 // ref="attr:SectionStackSection.expanded"
 		/**
 		 * (Read only) Sections default to the collapsed state unless SectionStackSection.showHeader is
@@ -4562,7 +4562,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: I
 		 */
-		readonly expanded?: boolean;
+		 expanded?: boolean;
 		 // ref="attr:SectionStackSection.hidden"
 		/**
 		 * (Read only) Sections default to the visible state. This
@@ -4571,7 +4571,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: I
 		 */
-		readonly hidden?: boolean;
+		 hidden?: boolean;
 		 // ref="attr:SectionStackSection.icon"
 		/**
 		 * (Read only) Base filename of the icon that represents open and closed states. The default settings
@@ -4581,7 +4581,7 @@ declare namespace Isc {
 		 * Not shown if SectionStackSection.canCollapse is false.
 		 * Flags: IR
 		 */
-		readonly icon?: SCImgURL;
+		 icon?: SCImgURL;
 		 // ref="attr:SectionStackSection.ID"
 		/**
 		 * (Read only) Optional ID for the section. If SectionStack.useGlobalSectionIDs is true, this property will
@@ -4599,14 +4599,14 @@ declare namespace Isc {
 		 * SectionStack.useGlobalSectionIDs to false.
 		 * Flags: IR
 		 */
-		readonly ID?: String;
+		 ID?: String;
 		 // ref="attr:SectionStackSection.items"
 		/**
 		 * (Read only) List of Canvases that constitute the section. These Canvases will be shown and hidden
 		 * together.
 		 * Flags: I
 		 */
-		readonly items?: Array<Canvas> /* Array of Canvas */;
+		 items?: Array<Canvas> /* Array of Canvas */;
 		 // ref="attr:SectionStackSection.name"
 		/**
 		 * (Read only) Identifier for the section. This can be used later in calls to SectionStack APIs such as
@@ -4616,7 +4616,7 @@ declare namespace Isc {
 		 * (should start with a letter and not contain space or special characters such as "*").
 		 * Flags: IR
 		 */
-		readonly name?: String;
+		 name?: String;
 		 // ref="attr:SectionStackSection.resizeable"
 		/**
 		 * (Read only) If set to false, then the items in this section will not be resized by sectionHeader
@@ -4625,26 +4625,26 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: I
 		 */
-		readonly resizeable?: boolean;
+		 resizeable?: boolean;
 		 // ref="attr:SectionStackSection.showClippedTitleOnHover"
 		/**
 		 * If true and the title is clipped, then a hover containing the full title of this section header
 		 * is enabled.
 		 * Flags: IRW, Group: hovers
 		 */
-		readonly showClippedTitleOnHover?: boolean /* Boolean */;
+		 showClippedTitleOnHover?: boolean | null /* Boolean */;
 		 // ref="attr:SectionStackSection.showHeader"
 		/**
 		 * (Read only) If true, a header will be shown for this section. If false, no header will be shown.
 		 * Flags: I
 		 */
-		readonly showHeader?: boolean /* Boolean */;
+		 showHeader?: boolean | null /* Boolean */;
 		 // ref="attr:SectionStackSection.title"
 		/**
 		 * (Read only) Title to show for the section
 		 * Flags: IR
 		 */
-		readonly title?: HTMLString;
+		 title?: HTMLString;
 	} // SectionStackSection
 
 	export interface SectionStackSectionStatic {
@@ -4805,7 +4805,7 @@ declare namespace Isc {
 		 * To suppress this behavior, this parameter should be set to false.
 		 * @return {String} formatted date string
 		 */
-		toNormalDatetime?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): String; 
+		toNormalDatetime?(format:DateDisplayFormat, useCustomTimezone?:boolean | null /* Boolean */): String; 
 
 		/**  
 		 * (Advanced)  Return this date in 'serialized' format YYYY-MM-DD HH:MM:SS
@@ -4823,7 +4823,7 @@ declare namespace Isc {
 		 * to suppress this behavior, this parameter should be set to false.
 		 * @return {String} formatted date string
 		 */
-		toShortDate?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): String; 
+		toShortDate?(format:DateDisplayFormat, useCustomTimezone?:boolean | null /* Boolean */): String; 
 
 		/**  
 		 *  Returns the datetime as a formatted string using the format set up via the
@@ -4834,7 +4834,7 @@ declare namespace Isc {
 		 * to suppress this behavior, this parameter should be set to false.
 		 * @return {String} formatted date string
 		 */
-		toShortDateTime?(format:DateDisplayFormat, useCustomTimezone?:boolean /* Boolean */): String; 
+		toShortDateTime?(format:DateDisplayFormat, useCustomTimezone?:boolean | null /* Boolean */): String; 
 
 		/**  
 		 *  Return this date in the format: MM/DD/YYYY
@@ -4866,7 +4866,7 @@ declare namespace Isc {
 		 * DateItem','DateItem class).
 		 * Flags: IRWA, Group: i18nMessages
 		 */
-		readonly dayNames?: Array<any> /* Array */;
+		 dayNames?: Array<any> /* Array */;
 		 // ref="classAttr:Date.monthNames"
 		/**
 		 * (Advanced) This property may be set to an array of names of months.
@@ -4880,7 +4880,7 @@ declare namespace Isc {
 		 * DateItem','DateItem class).
 		 * Flags: IRWA, Group: i18nMessages
 		 */
-		readonly monthNames?: Array<any> /* Array */;
+		 monthNames?: Array<any> /* Array */;
 		 // ref="classAttr:Date.shortDayNames"
 		/**
 		 * (Advanced) This property may be set to an array of names of days of the week. 
@@ -4903,7 +4903,7 @@ declare namespace Isc {
 		 * of day-names, and Monday first.
 		 * Flags: IRWA, Group: i18nMessages
 		 */
-		readonly shortDayNames?: Array<any> /* Array */;
+		 shortDayNames?: Array<any> /* Array */;
 		 // ref="classAttr:Date.shortMonthNames"
 		/**
 		 * (Advanced) This property may be set to an array of shortened month-names.
@@ -4916,7 +4916,7 @@ declare namespace Isc {
 		 * DateItem','DateItem class).
 		 * Flags: IRWA, Group: i18nMessages
 		 */
-		readonly shortMonthNames?: Array<any> /* Array */;
+		 shortMonthNames?: Array<any> /* Array */;
 		 // ref="classAttr:Date.weekendDays"
 		/**
 		 * (Read only) Days that are considered "weekend" days. Values should be the integers returned by the
@@ -4925,7 +4925,7 @@ declare namespace Isc {
 		 * (Sunday -> Thursday).
 		 * Flags: IR
 		 */
-		readonly weekendDays?: Array<int> /* Array of int */;
+		 weekendDays?: Array<int> /* Array of int */;
 
 	/* Methods */
 		/**
@@ -4949,7 +4949,7 @@ declare namespace Isc {
 		 */
 		compareLogicalDates(): int; 
 
-/* Skipped - because it conflicts with Class.create(). Not sure what to do about this yet.
+/* Skipped - because: Conflicts with Class.create(). Not sure what to do about this yet
 
 		/**
 		 * (DEPRECATED) Use DateUtil.create.
@@ -5134,7 +5134,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: serverSummaries
 		 */
-		readonly allowClientRequestedSummaries?: boolean;
+		 allowClientRequestedSummaries?: boolean;
 		 // ref="attr:DataSourceField.audit"
 		/**
 		 * (Read only) Setting audit to false explicitly indicates that this field will
@@ -5142,7 +5142,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly audit?: boolean;
+		 audit?: boolean;
 		 // ref="attr:DataSourceField.autoGenerated"
 		/**
 		 * (Read only) Indicates that values for this field are automatically generated by the database or ORM 
@@ -5167,7 +5167,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: dataType
 		 */
-		readonly autoGenerated?: boolean;
+		 autoGenerated?: boolean;
 		 // ref="attr:DataSourceField.autoQuoteCustomExpressions"
 		/**
 		 * (Read only) If explicitly set to false, switches off automatic quoting and escaping of values in
@@ -5195,7 +5195,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly autoQuoteCustomExpressions?: boolean;
+		 autoQuoteCustomExpressions?: boolean;
 		 // ref="attr:DataSourceField.canEdit"
 		/**
 		 * (Read only) Controls whether, by default, DataBoundComponents consider this field editable. 
@@ -5212,7 +5212,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly canEdit?: boolean;
+		 canEdit?: boolean;
 		 // ref="attr:DataSourceField.canExport"
 		/**
 		 * (Read only) Dictates whether the data in this field be exported. Explicitly setting 
@@ -5220,7 +5220,7 @@ declare namespace Isc {
 		 * as ListGridField.canExport','ListGrid fields.
 		 * Flags: IR
 		 */
-		readonly canExport?: boolean /* Boolean */;
+		 canExport?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.canFilter"
 		/**
 		 * (Read only) Should the user be able to filter data by this field?
@@ -5229,7 +5229,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canFilter?: boolean;
+		 canFilter?: boolean;
 		 // ref="attr:DataSourceField.canSave"
 		/**
 		 * (Read only) Whether values in this field can be updated and saved to the dataSource.
@@ -5248,14 +5248,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly canSave?: boolean;
+		 canSave?: boolean;
 		 // ref="attr:DataSourceField.canSortClientOnly"
 		/**
 		 * When true, this field can only be used for sorting if the data is entirely client-side.
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly canSortClientOnly?: boolean;
+		 canSortClientOnly?: boolean;
 		 // ref="attr:DataSourceField.canView"
 		/**
 		 * (Read only) If false, this property indicates that this field is considered "server only". This means:
@@ -5287,7 +5287,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly canView?: boolean;
+		 canView?: boolean;
 		 // ref="attr:DataSourceField.childrenProperty"
 		/**
 		 * (Read only) If true, this property indicates that this field will hold an explicit array of child nodes 
@@ -5296,7 +5296,7 @@ declare namespace Isc {
 		 * name.
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly childrenProperty?: boolean /* Boolean */;
+		 childrenProperty?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.childTagName"
 		/**
 		 * (Read only) For a field that is DataSourceField.multiple','multiple:"true", controls the name of the XML tag used for each
@@ -5307,13 +5307,13 @@ declare namespace Isc {
 		 * xmlSerialize() were called on the child DataSource).
 		 * Flags: IR, Group: xmlSerialize
 		 */
-		readonly childTagName?: String;
+		 childTagName?: String;
 		 // ref="attr:DataSourceField.columnCode"
 		/**
 		 * (Read only) See DataSource.tableCode.
 		 * Flags: R
 		 */
-		readonly columnCode?: String;
+		 columnCode?: String;
 		 // ref="attr:DataSourceField.creatorOverrides"
 		/**
 		 * (Read only) Indicates that normal declarative security rules specified on this field are waived for 
@@ -5330,7 +5330,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly creatorOverrides?: boolean;
+		 creatorOverrides?: boolean;
 		 // ref="attr:DataSourceField.customCriteriaExpression"
 		/**
 		 * (Read only) This property indicates that this field should be represented by a custom expression
@@ -5433,7 +5433,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly customCriteriaExpression?: VelocityExpression;
+		 customCriteriaExpression?: VelocityExpression;
 		 // ref="attr:DataSourceField.customInsertExpression"
 		/**
 		 * (Read only) This property is similar to DataSourceField.customUpdateExpression','customUpdateExpression; its value
@@ -5499,7 +5499,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly customInsertExpression?: VelocityExpression;
+		 customInsertExpression?: VelocityExpression;
 		 // ref="attr:DataSourceField.customSelectExpression"
 		/**
 		 * (Read only) This property indicates that this field represents a custom expression that should be 
@@ -5529,7 +5529,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly customSelectExpression?: VelocityExpression;
+		 customSelectExpression?: VelocityExpression;
 		 // ref="attr:DataSourceField.customSQL"
 		/**
 		 * (Read only) For a DataSource with DataSource.serverType','serverType "sql" or "hibernate",
@@ -5568,7 +5568,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly customSQL?: boolean;
+		 customSQL?: boolean;
 		 // ref="attr:DataSourceField.customUpdateExpression"
 		/**
 		 * (Read only) This property specifies the value to use to update this column on "update" operations.
@@ -5620,7 +5620,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly customUpdateExpression?: VelocityExpression;
+		 customUpdateExpression?: VelocityExpression;
 		 // ref="attr:DataSourceField.dateFormatter"
 		/**
 		 * (Advanced) Preferred display format to use for date type values within this field.
@@ -5634,7 +5634,7 @@ declare namespace Isc {
 		 * to Excel, rather than formatted strings or unformatted dates.
 		 * Flags: IRWA, Group: appearance
 		 */
-		readonly dateFormatter?: DateDisplayFormat;
+		 dateFormatter?: DateDisplayFormat;
 		 // ref="attr:DataSourceField.decimalPad"
 		/**
 		 * Applies only to fields of type "float" and enforces a minimum number of digits shown after
@@ -5646,7 +5646,7 @@ declare namespace Isc {
 		 * The original unpadded value is always shown when the value is edited.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly decimalPad?: number;
+		 decimalPad?: number;
 		 // ref="attr:DataSourceField.decimalPrecision"
 		/**
 		 * Applies only to fields of type "float" and affects how many significant digits are shown.
@@ -5659,7 +5659,7 @@ declare namespace Isc {
 		 * A number is always shown with its original precision when edited.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly decimalPrecision?: number;
+		 decimalPrecision?: number;
 		 // ref="attr:DataSourceField.deepCloneOnEdit"
 		/**
 		 * (Advanced) Before we start editing this field in a DataBoundComponent, should we perform a deep clone 
@@ -5674,7 +5674,7 @@ declare namespace Isc {
 		 * Canvas.dataPath','dataPaths.
 		 * Flags: IRWA
 		 */
-		readonly deepCloneOnEdit?: boolean /* Boolean */;
+		 deepCloneOnEdit?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.detail"
 		/**
 		 * (Read only) Whether this field should be considered a "detail" field by a DataBoundComponent.
@@ -5691,7 +5691,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly detail?: boolean;
+		 detail?: boolean;
 		 // ref="attr:DataSourceField.displayField"
 		/**
 		 * (Read only) Name of another field in this DataSource that should be used as the display value for this
@@ -5709,7 +5709,7 @@ declare namespace Isc {
 		 * For a more in-depth discussion, see DataSourceField.includeFrom.
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly displayField?: String;
+		 displayField?: String;
 		 // ref="attr:DataSourceField.displayFormat"
 		/**
 		 * (Read only) The default date formatter to use for displaying this field. Only applicable to fields of 
@@ -5719,7 +5719,7 @@ declare namespace Isc {
 		 * to Excel, rather than formatted strings or unformatted dates.
 		 * Flags: IR
 		 */
-		readonly displayFormat?: DateDisplayFormat;
+		 displayFormat?: DateDisplayFormat;
 		 // ref="attr:DataSourceField.editorType"
 		/**
 		 * (Read only) Sets the default FormItem to be used whenever this field is edited (whether in a grid, form,
@@ -5729,7 +5729,7 @@ declare namespace Isc {
 		 * rules explained FormItemType','here.
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly editorType?: FormItemClassName;
+		 editorType?: FormItemClassName;
 		 // ref="attr:DataSourceField.editRequires"
 		/**
 		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
@@ -5751,7 +5751,7 @@ declare namespace Isc {
 		 * DataSourceField.initRequires or DataSourceField.updateRequires.
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly editRequires?: VelocityExpression;
+		 editRequires?: VelocityExpression;
 		 // ref="attr:DataSourceField.editRequiresAuthentication"
 		/**
 		 * (Read only) Whether a user must be authenticated in order to write to this field. If this property is 
@@ -5773,7 +5773,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly editRequiresAuthentication?: boolean;
+		 editRequiresAuthentication?: boolean;
 		 // ref="attr:DataSourceField.editRequiresRole"
 		/**
 		 * (Read only) Comma-separated list of user roles that are allowed to write to this field. If the current
@@ -5788,14 +5788,14 @@ declare namespace Isc {
 		 * DataSourceField.initRequiresRole or DataSourceField.updateRequiresRole.
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly editRequiresRole?: String;
+		 editRequiresRole?: String;
 		 // ref="attr:DataSourceField.emptyDisplayValue"
 		/**
 		 * (Read only) Text to be used for display by client-side components when this field has a null or 
 		 * undefined value. This value will be overridden by a component's emptyCellValue, if set.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly emptyDisplayValue?: HTMLString;
+		 emptyDisplayValue?: HTMLString;
 		 // ref="attr:DataSourceField.encodeInResponse"
 		/**
 		 * When set for a field with binary data, binary data will be delivered as a Base64 encoded
@@ -5811,7 +5811,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly encodeInResponse?: boolean;
+		 encodeInResponse?: boolean;
 		 // ref="attr:DataSourceField.escapeHTML"
 		/**
 		 * (Read only) When data values are displayed in DataBound components, by default strings will be interpreted
@@ -5821,7 +5821,7 @@ declare namespace Isc {
 		 * that any HTML characters should be escaped when displaying values for this field.
 		 * Flags: IR
 		 */
-		readonly escapeHTML?: boolean /* Boolean */;
+		 escapeHTML?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.excludeFromState"
 		/**
 		 * (Read only) If true, then this field is excluded from the bound component's view state. In addition,
@@ -5830,7 +5830,7 @@ declare namespace Isc {
 		 * if DataBoundComponent.titleField is not provided.
 		 * Flags: IR, Group: viewState
 		 */
-		readonly excludeFromState?: boolean /* Boolean */;
+		 excludeFromState?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.exportForceText"
 		/**
 		 * (Read only) When using DataSource.recordsAsText, determines what approach (if any) should be used
@@ -5839,7 +5839,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly exportForceText?: boolean;
+		 exportForceText?: boolean;
 		 // ref="attr:DataSourceField.exportFormat"
 		/**
 		 * An optional FormatString for this field, for use when 
@@ -5965,13 +5965,13 @@ declare namespace Isc {
 		 * unique FormatStrings.
 		 * Flags: IRW
 		 */
-		readonly exportFormat?: FormatString;
+		 exportFormat?: FormatString;
 		 // ref="attr:DataSourceField.exportTitle"
 		/**
 		 * (Read only) Optional different field-title used for exports.
 		 * Flags: IR
 		 */
-		readonly exportTitle?: String;
+		 exportTitle?: String;
 		 // ref="attr:DataSourceField.filterEditorType"
 		/**
 		 * (Read only) Sets the default FormItem to be used for this field if it appears in a filter row,
@@ -5981,19 +5981,19 @@ declare namespace Isc {
 		 * DataSourceField.editorType property, or from the field's DataSourceField.type.
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly filterEditorType?: FormItemClassName;
+		 filterEditorType?: FormItemClassName;
 		 // ref="attr:DataSourceField.fkColumnCode"
 		/**
 		 * (Read only) See DataSource.tableCode.
 		 * Flags: R
 		 */
-		readonly fkColumnCode?: String;
+		 fkColumnCode?: String;
 		 // ref="attr:DataSourceField.fkTableCode"
 		/**
 		 * (Read only) See DataSource.tableCode.
 		 * Flags: R
 		 */
-		readonly fkTableCode?: String;
+		 fkTableCode?: String;
 		 // ref="attr:DataSourceField.foreignDisplayField"
 		/**
 		 * (Read only) Name of another field in a separate dataSource that should be used as the display
@@ -6010,7 +6010,7 @@ declare namespace Isc {
 		 * values from a related dataSource.
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly foreignDisplayField?: String;
+		 foreignDisplayField?: String;
 		 // ref="attr:DataSourceField.foreignKey"
 		/**
 		 * (Read only) Declares that this field holds values that can be matched to values from another DataSource
@@ -6041,7 +6041,7 @@ declare namespace Isc {
 		 * DataSource.autoDeriveSchema','autoDeriveSchema is set.
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly foreignKey?: String;
+		 foreignKey?: String;
 		 // ref="attr:DataSourceField.format"
 		/**
 		 * Format string to use when rendering the value in any DataBoundComponent or when
@@ -6068,7 +6068,7 @@ declare namespace Isc {
 		 * ListGrid.formatCellValue or FormItem.formatValue.
 		 * Flags: IRW
 		 */
-		readonly format?: FormatString;
+		 format?: FormatString;
 		 // ref="attr:DataSourceField.getFieldValue"
 		/**
 		 * (Read only, Advanced) A Callback, function, or JavaScript expression used to retrieve the field's value from
@@ -6082,14 +6082,14 @@ declare namespace Isc {
 		 * Callbacks.GetFieldValueCallback','GetFieldValueCallback.
 		 * Flags: IRA, Group: clientDataIntegration
 		 */
-		readonly getFieldValue?: GetFieldValueCallback;
+		 getFieldValue?: GetFieldValueCallback;
 		 // ref="attr:DataSourceField.group"
 		/**
 		 * (Read only) For use in componentSchema, indicates what group to place the property in when
 		 * editing in Visual Builder.
 		 * Flags: IR, Group: componentSchema
 		 */
-		readonly group?: String;
+		 group?: String;
 		 // ref="attr:DataSourceField.hidden"
 		/**
 		 * (Read only) Whether this field should be hidden from users by default within a DataBound component.
@@ -6106,7 +6106,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly hidden?: boolean;
+		 hidden?: boolean;
 		 // ref="attr:DataSourceField.ignore"
 		/**
 		 * (Read only) Whether this field should be completely excluded from this dataSource, as if it had never been
@@ -6117,7 +6117,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly ignore?: boolean;
+		 ignore?: boolean;
 		 // ref="attr:DataSourceField.ignoreTextMatchStyle"
 		/**
 		 * NOTE: Only applicable to DataSource.clientOnly','clientOnly DataSources and the
@@ -6135,7 +6135,7 @@ declare namespace Isc {
 		 * setting.
 		 * Flags: IRW
 		 */
-		readonly ignoreTextMatchStyle?: boolean /* Boolean */;
+		 ignoreTextMatchStyle?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.imageHeight"
 		/**
 		 * (Read only) Height of the image-content of this field. If set as a string, represents the name of 
@@ -6143,7 +6143,7 @@ declare namespace Isc {
 		 * type or fields that use a ViewFileItem','ViewFileItem as an editor.
 		 * Flags: IR
 		 */
-		readonly imageHeight?: number | String;
+		 imageHeight?: number | String;
 		 // ref="attr:DataSourceField.imageSize"
 		/**
 		 * (Read only) Width and height of the image-content of this field. If set as a string, represents the 
@@ -6151,7 +6151,7 @@ declare namespace Isc {
 		 * of image type or fields that use a ViewFileItem','ViewFileItem as an editor.
 		 * Flags: IR
 		 */
-		readonly imageSize?: number | String;
+		 imageSize?: number | String;
 		 // ref="attr:DataSourceField.imageWidth"
 		/**
 		 * (Read only) Width of the image-content of this field. If set as a string, represents the name of 
@@ -6159,7 +6159,7 @@ declare namespace Isc {
 		 * type or fields that use a ViewFileItem','ViewFileItem as an editor.
 		 * Flags: IR
 		 */
-		readonly imageWidth?: number | String;
+		 imageWidth?: number | String;
 		 // ref="attr:DataSourceField.implicitSequence"
 		/**
 		 * (Read only) For a field of FieldType','type "sequence" on a DataSource with 
@@ -6208,7 +6208,7 @@ declare namespace Isc {
 		 * mentioned above.
 		 * Flags: IR, Group: sqlDataSource
 		 */
-		readonly implicitSequence?: boolean /* Boolean */;
+		 implicitSequence?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.importStrategy"
 		/**
 		 * (Read only) Declares the FieldImportStrategy for this field. The default setting of null 
@@ -6231,7 +6231,7 @@ declare namespace Isc {
 		 * be overridden to carry out any other transformation you may require.
 		 * Flags: IR
 		 */
-		readonly importStrategy?: FieldImportStrategy;
+		 importStrategy?: FieldImportStrategy;
 		 // ref="attr:DataSourceField.inapplicable"
 		/**
 		 * (Read only) For use in componentSchema, a field DataSource.inheritsFrom','inherited from
@@ -6249,7 +6249,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: componentSchema
 		 */
-		readonly inapplicable?: boolean;
+		 inapplicable?: boolean;
 		 // ref="attr:DataSourceField.includeFrom"
 		/**
 		 * (Read only) Indicates this field should be fetched from another, related DataSource.
@@ -6326,7 +6326,7 @@ declare namespace Isc {
 		 * in the foreign dataSource.
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly includeFrom?: String;
+		 includeFrom?: String;
 		 // ref="attr:DataSourceField.includeSummaryFunction"
 		/**
 		 * (Read only) When DataSourceField.includeFrom','field.includeFrom is specified and multiple records
@@ -6374,7 +6374,7 @@ declare namespace Isc {
 		 * If both configurations are present, Server Summaries settings always take priority.
 		 * Flags: R, Group: serverSummaries
 		 */
-		readonly includeSummaryFunction?: SummaryFunction;
+		 includeSummaryFunction?: SummaryFunction;
 		 // ref="attr:DataSourceField.includeVia"
 		/**
 		 * (Read only) For a field that uses DataSourceField.includeFrom, specifies which
@@ -6493,7 +6493,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly includeVia?: String;
+		 includeVia?: String;
 		 // ref="attr:DataSourceField.initRequires"
 		/**
 		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
@@ -6515,7 +6515,7 @@ declare namespace Isc {
 		 * use DataSourceField.editRequires, which applies security for both types of write.
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly initRequires?: VelocityExpression;
+		 initRequires?: VelocityExpression;
 		 // ref="attr:DataSourceField.initRequiresAuthentication"
 		/**
 		 * (Read only) Whether a user must be authenticated in order to initialize to this field. If this property is 
@@ -6524,7 +6524,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly initRequiresAuthentication?: boolean;
+		 initRequiresAuthentication?: boolean;
 		 // ref="attr:DataSourceField.initRequiresRole"
 		/**
 		 * (Read only) Comma-separated list of user roles that are allowed to initialize this field. If the current
@@ -6536,7 +6536,7 @@ declare namespace Isc {
 		 * use DataSourceField.editRequiresRole, which applies security for both types of write.
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly initRequiresRole?: String;
+		 initRequiresRole?: String;
 		 // ref="attr:DataSourceField.javaClass"
 		/**
 		 * (Read only) Explicitly declares the Java class that should be used when data from the client is
@@ -6574,7 +6574,7 @@ declare namespace Isc {
 		 * in the server documentation for details.
 		 * Flags: IR
 		 */
-		readonly javaClass?: String;
+		 javaClass?: String;
 		 // ref="attr:DataSourceField.javaCollectionClass"
 		/**
 		 * (Read only) See DataSourceField.javaClass - when auto-populating of Java Beans / POJOs based on 
@@ -6596,7 +6596,7 @@ declare namespace Isc {
 		 * java.util.ArrayList, you will get a ClassCastException.
 		 * Flags: IR
 		 */
-		readonly javaCollectionClass?: String;
+		 javaCollectionClass?: String;
 		 // ref="attr:DataSourceField.javaKeyClass"
 		/**
 		 * (Read only) See DataSourceField.javaClass - when auto-populating of Java Beans / POJOs based on 
@@ -6607,7 +6607,7 @@ declare namespace Isc {
 		 * Note that javaKeyClass take precedence over generics if both are used.
 		 * Flags: IR
 		 */
-		readonly javaKeyClass?: String;
+		 javaKeyClass?: String;
 		 // ref="attr:DataSourceField.joinPrefix"
 		/**
 		 * (Read only) Defines prefix before concatenated values if field is used with 
@@ -6615,7 +6615,7 @@ declare namespace Isc {
 		 * SummaryFunction','summary function is "concat".
 		 * Flags: IR, Group: serverSummaries
 		 */
-		readonly joinPrefix?: String;
+		 joinPrefix?: String;
 		 // ref="attr:DataSourceField.joinString"
 		/**
 		 * (Read only) Defines the delimiter between concatenated values if field is used with 
@@ -6624,7 +6624,7 @@ declare namespace Isc {
 		 * value is ", ".
 		 * Flags: IR, Group: serverSummaries
 		 */
-		readonly joinString?: String;
+		 joinString?: String;
 		 // ref="attr:DataSourceField.joinSuffix"
 		/**
 		 * (Read only) Defines suffix after concatenated values if field is used with 
@@ -6632,7 +6632,7 @@ declare namespace Isc {
 		 * SummaryFunction','summary function is "concat".
 		 * Flags: IR, Group: serverSummaries
 		 */
-		readonly joinSuffix?: String;
+		 joinSuffix?: String;
 		 // ref="attr:DataSourceField.joinType"
 		/**
 		 * (Read only) This property is only applicable to fields of SQL DataSources that also specify a 
@@ -6651,7 +6651,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly joinType?: JoinType;
+		 joinType?: JoinType;
 		 // ref="attr:DataSourceField.length"
 		/**
 		 * (Read only) Maximum number of characters allowed. Applicable only to fields of text type.
@@ -6699,7 +6699,7 @@ declare namespace Isc {
 		 * change in storage type.
 		 * Flags: IR, Group: dataType
 		 */
-		readonly length?: number;
+		 length?: number;
 		 // ref="attr:DataSourceField.lenientXPath"
 		/**
 		 * (Read only) Indicates that getting DataSourceField.valueXPath for this field should
@@ -6711,7 +6711,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly lenientXPath?: boolean;
+		 lenientXPath?: boolean;
 		 // ref="attr:DataSourceField.maxFileSize"
 		/**
 		 * (Read only) For fields of a type that are represented by binary data initially uploaded from a file
@@ -6719,7 +6719,7 @@ declare namespace Isc {
 		 * file size allowed, in bytes.
 		 * Flags: IR
 		 */
-		readonly maxFileSize?: Integer;
+		 maxFileSize?: Integer;
 		 // ref="attr:DataSourceField.mimeType"
 		/**
 		 * (Read only) For a binaryFields','binary field, sets a fixed mime type for all files stored
@@ -6730,7 +6730,7 @@ declare namespace Isc {
 		 * filenames, since the extension of the file name is normally used to determine the mime type.
 		 * Flags: IR
 		 */
-		readonly mimeType?: String;
+		 mimeType?: String;
 		 // ref="attr:DataSourceField.multiple"
 		/**
 		 * (Read only) Indicates that this field should always be Array-valued. If the value derived from
@@ -6817,7 +6817,7 @@ declare namespace Isc {
 		 * See DataSourceField.childTagName for customizing the tagName used for subelements.
 		 * Flags: IR, Group: xmlSerialize
 		 */
-		readonly multiple?: boolean /* Boolean */;
+		 multiple?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.multipleStorage"
 		/**
 		 * (Read only) How values for a DataSourceField.multiple','multiple:true field should be stored.
@@ -6901,7 +6901,7 @@ declare namespace Isc {
 		 * effectively the String '","'.
 		 * Flags: IR, Group: multipleField
 		 */
-		readonly multipleStorage?: MultipleFieldStorage;
+		 multipleStorage?: MultipleFieldStorage;
 		 // ref="attr:DataSourceField.multipleStorageSeparator"
 		/**
 		 * (Read only) For fields that are DataSourceField.multiple','multiple:true and use DataSourceField.multipleStorage, the
@@ -6910,14 +6910,14 @@ declare namespace Isc {
 		 * Default value of null means the DataSourceField.multipleValueSeparator is used instead.
 		 * Flags: IR, Group: multipleField
 		 */
-		readonly multipleStorageSeparator?: String;
+		 multipleStorageSeparator?: String;
 		 // ref="attr:DataSourceField.multipleValueSeparator"
 		/**
 		 * (Read only) For fields that are DataSourceField.multiple','multiple:true, the separator used 
 		 * between values when they are displayed.
 		 * Flags: IR, Group: multipleField
 		 */
-		readonly multipleValueSeparator?: String;
+		 multipleValueSeparator?: String;
 		 // ref="attr:DataSourceField.name"
 		/**
 		 * (Read only) Name for this field. 
@@ -6929,7 +6929,7 @@ declare namespace Isc {
 		 * field.
 		 * Flags: IR, Group: basics
 		 */
-		readonly name?: FieldName;
+		 name?: FieldName;
 		 // ref="attr:DataSourceField.nativeName"
 		/**
 		 * (Read only) Only applicable to "sql" dataSources. If set, this property indicates that the field is 
@@ -6952,7 +6952,7 @@ declare namespace Isc {
 		 * bound to the same database table.
 		 * Flags: IR
 		 */
-		readonly nativeName?: String;
+		 nativeName?: String;
 		 // ref="attr:DataSourceField.nillable"
 		/**
 		 * (Read only) Controls whether an explicit null-valued Record attribute for this field
@@ -6969,7 +6969,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: dataType
 		 */
-		readonly nillable?: boolean;
+		 nillable?: boolean;
 		 // ref="attr:DataSourceField.nullReplacementValue"
 		/**
 		 * (Read only) If DataSource.noNullUpdates is set, the value to use for this field when a null
@@ -6983,7 +6983,7 @@ declare namespace Isc {
 		 * is appropriate and valid.
 		 * Flags: IR
 		 */
-		readonly nullReplacementValue?: any /* Any */;
+		 nullReplacementValue?: any /* Any */;
 		 // ref="attr:DataSourceField.precision"
 		/**
 		 * Applies only to fields of type "float" or "integer" and affects how many significant
@@ -6995,7 +6995,7 @@ declare namespace Isc {
 		 * The original value is always shown when the value is edited.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly precision?: number;
+		 precision?: number;
 		 // ref="attr:DataSourceField.primaryKey"
 		/**
 		 * (Read only) Indicates either that this field holds a value unique across all records in this
@@ -7043,7 +7043,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly primaryKey?: boolean;
+		 primaryKey?: boolean;
 		 // ref="attr:DataSourceField.propertiesOnly"
 		/**
 		 * (Read only) For use in componentSchema for fields that contain other components, this flag
@@ -7066,7 +7066,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: componentSchema
 		 */
-		readonly propertiesOnly?: boolean;
+		 propertiesOnly?: boolean;
 		 // ref="attr:DataSourceField.readOnlyEditorType"
 		/**
 		 * (Read only) Sets the default FormItem to be used if this field is marked as 
@@ -7077,7 +7077,7 @@ declare namespace Isc {
 		 * SimpleType.readOnlyEditorType.
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly readOnlyEditorType?: FormItemClassName;
+		 readOnlyEditorType?: FormItemClassName;
 		 // ref="attr:DataSourceField.relatedTableAlias"
 		/**
 		 * (Read only) For a sqlDataSource','SQL DataSource field that specifies a
@@ -7093,7 +7093,7 @@ declare namespace Isc {
 		 * will result in invalid SQL.
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly relatedTableAlias?: String;
+		 relatedTableAlias?: String;
 		 // ref="attr:DataSourceField.required"
 		/**
 		 * (Read only) Indicates this field must be non-null in order for a record to pass validation. Or, in the
@@ -7160,7 +7160,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: dataType
 		 */
-		readonly required?: boolean;
+		 required?: boolean;
 		 // ref="attr:DataSourceField.requiredMessage"
 		/**
 		 * The required message when a field that has been marked as
@@ -7169,7 +7169,7 @@ declare namespace Isc {
 		 * Note that this setting wins over DataSource.requiredMessage if both are set.
 		 * Flags: IRW, Group: formTitles
 		 */
-		readonly requiredMessage?: String;
+		 requiredMessage?: String;
 		 // ref="attr:DataSourceField.rootValue"
 		/**
 		 * (Read only) For a field that is a foreignKey establishing a tree relationship, what value indicates a
@@ -7181,7 +7181,7 @@ declare namespace Isc {
 		 * the hierarchical data from this dataSource starting at a particular node.
 		 * Flags: IR, Group: dataSourceRelations
 		 */
-		readonly rootValue?: any /* Any */;
+		 rootValue?: any /* Any */;
 		 // ref="attr:DataSourceField.sequenceName"
 		/**
 		 * (Read only) For a DataSource with DataSource.serverType','serverType:"sql" with a field of type
@@ -7206,7 +7206,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR, Group: sqlDataSource
 		 */
-		readonly sequenceName?: String;
+		 sequenceName?: String;
 		 // ref="attr:DataSourceField.showFileInline"
 		/**
 		 * (Read only) For a field of type:"imageFile", indicates whether to stream the image and display it
@@ -7214,7 +7214,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showFileInline?: boolean;
+		 showFileInline?: boolean;
 		 // ref="attr:DataSourceField.sortByField"
 		/**
 		 * (Read only) Causes values for this field to be sorted according to values for another field, for
@@ -7228,7 +7228,7 @@ declare namespace Isc {
 		 * way to populate the sortByField with the results of a SQL expression.
 		 * Flags: IR
 		 */
-		readonly sortByField?: String;
+		 sortByField?: String;
 		 // ref="attr:DataSourceField.sqlDateFormat"
 		/**
 		 * (Read only) For fields of type "date", "time", and "datetime" that specify an
@@ -7258,7 +7258,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly sqlDateFormat?: String;
+		 sqlDateFormat?: String;
 		 // ref="attr:DataSourceField.sqlFalseValue"
 		/**
 		 * (Read only) For fields of type "boolean" that specify a 
@@ -7275,7 +7275,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly sqlFalseValue?: String;
+		 sqlFalseValue?: String;
 		 // ref="attr:DataSourceField.sqlStorageStrategy"
 		/**
 		 * (Read only) For certain field types, indicates the strategy to be used to store values to the underlying
@@ -7340,7 +7340,7 @@ declare namespace Isc {
 		 * type "sql".
 		 * Flags: IR
 		 */
-		readonly sqlStorageStrategy?: String;
+		 sqlStorageStrategy?: String;
 		 // ref="attr:DataSourceField.sqlTrueValue"
 		/**
 		 * (Read only) For fields of type "boolean" that specify a 
@@ -7352,7 +7352,7 @@ declare namespace Isc {
 		 * to persist for true values that require using the entire value.
 		 * Flags: IR
 		 */
-		readonly sqlTrueValue?: String;
+		 sqlTrueValue?: String;
 		 // ref="attr:DataSourceField.storeMilliseconds"
 		/**
 		 * (Read only) For fields of type "datetime", indicates whether the framework should attempt to preserve
@@ -7407,14 +7407,14 @@ declare namespace Isc {
 		 * and retrieve with precision to the nearest minute only.
 		 * Flags: IR
 		 */
-		readonly storeMilliseconds?: boolean /* Boolean */;
+		 storeMilliseconds?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.storeWithHash"
 		/**
 		 * (Read only) If set, causes the field to be securely hashed before saving on an "add" or "update" 
 		 * operation.
 		 * Flags: IR
 		 */
-		readonly storeWithHash?: HashAlgorithm;
+		 storeWithHash?: HashAlgorithm;
 		 // ref="attr:DataSourceField.stringInBrowser"
 		/**
 		 * (Read only) Server-side setting that causes values for fields of type "integer" or "float" to be represented 
@@ -7485,7 +7485,7 @@ declare namespace Isc {
 		 * datasource.defaultStringInBrowser server.properties flag.
 		 * Flags: IR
 		 */
-		readonly stringInBrowser?: boolean /* Boolean */;
+		 stringInBrowser?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.summaryFunction"
 		/**
 		 * (Read only) If ListGrid.showGridSummary or ListGrid.showGroupSummary is true,
@@ -7498,14 +7498,14 @@ declare namespace Isc {
 		 * containing the resulting values.
 		 * Flags: IR
 		 */
-		readonly summaryFunction?: SummaryFunction;
+		 summaryFunction?: SummaryFunction;
 		 // ref="attr:DataSourceField.summaryValueTitle"
 		/**
 		 * (Read only) Title to show in a SummaryFunction','Summary of type "title" for this field. If unspecified
 		 * title summaries will show the DataSourceField.title for the field.
 		 * Flags: IR
 		 */
-		readonly summaryValueTitle?: String;
+		 summaryValueTitle?: String;
 		 // ref="attr:DataSourceField.tableName"
 		/**
 		 * (Read only) Only applicable to "sql" dataSources, setting tableName indicates that this
@@ -7525,7 +7525,7 @@ declare namespace Isc {
 		 * default table specified by DataSource.tableName.
 		 * Flags: IR
 		 */
-		readonly tableName?: String;
+		 tableName?: String;
 		 // ref="attr:DataSourceField.timeFormatter"
 		/**
 		 * (Advanced) Preferred time-format to apply to date type values within this field. If this property is
@@ -7540,7 +7540,7 @@ declare namespace Isc {
 		 * See ListGridField.timeFormatter and FormItem.timeFormatter for more information.
 		 * Flags: IRWA, Group: appearance
 		 */
-		readonly timeFormatter?: TimeDisplayFormat;
+		 timeFormatter?: TimeDisplayFormat;
 		 // ref="attr:DataSourceField.title"
 		/**
 		 * (Read only) Default user-visible title for this field.
@@ -7556,7 +7556,7 @@ declare namespace Isc {
 		 * different string for display in the listGrid column header.
 		 * Flags: IR, Group: componentBinding
 		 */
-		readonly title?: String;
+		 title?: String;
 		 // ref="attr:DataSourceField.type"
 		/**
 		 * (Read only) Type of this field. Required for all DataSource fields.
@@ -7567,7 +7567,7 @@ declare namespace Isc {
 		 * automatically choose a date-editing interface with pop-up date picker.
 		 * Flags: IR, Group: basics
 		 */
-		readonly type?: FieldType;
+		 type?: FieldType;
 		 // ref="attr:DataSourceField.updateRequires"
 		/**
 		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
@@ -7589,7 +7589,7 @@ declare namespace Isc {
 		 * use DataSourceField.editRequires, which applies security for both types of write.
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly updateRequires?: VelocityExpression;
+		 updateRequires?: VelocityExpression;
 		 // ref="attr:DataSourceField.updateRequiresAuthentication"
 		/**
 		 * (Read only) Whether a user must be authenticated in order to update to this field. If this property is 
@@ -7598,7 +7598,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly updateRequiresAuthentication?: boolean;
+		 updateRequiresAuthentication?: boolean;
 		 // ref="attr:DataSourceField.updateRequiresRole"
 		/**
 		 * (Read only) Comma-separated list of user roles that are allowed to update this field. If the current
@@ -7611,7 +7611,7 @@ declare namespace Isc {
 		 * types of write.
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly updateRequiresRole?: String;
+		 updateRequiresRole?: String;
 		 // ref="attr:DataSourceField.uploadFieldName"
 		/**
 		 * (Read only) Used by the BatchUploader to map a field in an upload file to this 
@@ -7621,7 +7621,7 @@ declare namespace Isc {
 		 * on field name).
 		 * Flags: IR
 		 */
-		readonly uploadFieldName?: String;
+		 uploadFieldName?: String;
 		 // ref="attr:DataSourceField.useLocalDisplayFieldValue"
 		/**
 		 * (Read only) If this field has a specified DataSourceField.displayField, this attribute
@@ -7637,7 +7637,7 @@ declare namespace Isc {
 		 * if not explicitly specified in the dataSource configuration file.
 		 * Flags: IR
 		 */
-		readonly useLocalDisplayFieldValue?: boolean /* Boolean */;
+		 useLocalDisplayFieldValue?: boolean | null /* Boolean */;
 		 // ref="attr:DataSourceField.validators"
 		/**
 		 * (Read only) Validators to be applied to this field.
@@ -7648,7 +7648,7 @@ declare namespace Isc {
 		 * Validator class.
 		 * Flags: IR, Group: dataType
 		 */
-		readonly validators?: Array<Validator> /* Array of Validator */;
+		 validators?: Array<Validator> /* Array of Validator */;
 		 // ref="attr:DataSourceField.validOperators"
 		/**
 		 * (Read only) List of operators valid on this field. 
@@ -7656,7 +7656,7 @@ declare namespace Isc {
 		 * If not specified, all operators that are valid for the field type are allowed.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly validOperators?: Array<OperatorId> /* Array of OperatorId */;
+		 validOperators?: Array<OperatorId> /* Array of OperatorId */;
 		 // ref="attr:DataSourceField.valueMap"
 		/**
 		 * (Read only) A ValueMap is a set of legal values for a field.
@@ -7694,7 +7694,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR, Group: dataType
 		 */
-		readonly valueMap?: ValueMap;
+		 valueMap?: ValueMap;
 		 // ref="attr:DataSourceField.valueMapEnum"
 		/**
 		 * (Read only) Fully qualified Java className of an Enum that should be used to derive this field's
@@ -7709,7 +7709,7 @@ declare namespace Isc {
 		 * restrictive).
 		 * Flags: IR
 		 */
-		readonly valueMapEnum?: String;
+		 valueMapEnum?: String;
 		 // ref="attr:DataSourceField.valueWriteXPath"
 		/**
 		 * (Read only) Alternative XPath expression used to set the field's value.
@@ -7718,7 +7718,7 @@ declare namespace Isc {
 		 * used, see its description for details.
 		 * Flags: IR, Group: clientDataIntegration
 		 */
-		readonly valueWriteXPath?: XPathExpression;
+		 valueWriteXPath?: XPathExpression;
 		 // ref="attr:DataSourceField.valueXPath"
 		/**
 		 * (Read only) XPath expression used to retrieve the field's value.
@@ -7782,7 +7782,7 @@ declare namespace Isc {
 		 * server-side XML.
 		 * Flags: IR, Group: clientDataIntegration
 		 */
-		readonly valueXPath?: XPathExpression;
+		 valueXPath?: XPathExpression;
 		 // ref="attr:DataSourceField.viewRequires"
 		/**
 		 * (Read only) Indicates that the specified VelocityExpression must evaluate to true if
@@ -7800,7 +7800,7 @@ declare namespace Isc {
 		 * checks for multiple fields and dataSources.
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly viewRequires?: VelocityExpression;
+		 viewRequires?: VelocityExpression;
 		 // ref="attr:DataSourceField.viewRequiresAuthentication"
 		/**
 		 * (Read only) Whether a user must be authenticated in order to fetch this field. If this property is 
@@ -7841,7 +7841,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly viewRequiresAuthentication?: boolean;
+		 viewRequiresAuthentication?: boolean;
 		 // ref="attr:DataSourceField.viewRequiresRole"
 		/**
 		 * (Read only) Comma-separated list of user roles that are allowed to fetch this field. If the current user
@@ -7852,7 +7852,7 @@ declare namespace Isc {
 		 * of how declarative field-level security settings can be overridden per-request.
 		 * Flags: IR, Group: fieldLevelAuth
 		 */
-		readonly viewRequiresRole?: String;
+		 viewRequiresRole?: String;
 		 // ref="attr:DataSourceField.xmlAttribute"
 		/**
 		 * (Read only) Indicates that DataSource.xmlSerialize should serialize this value as an XML
@@ -7864,7 +7864,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: xmlSerialize
 		 */
-		readonly xmlAttribute?: boolean;
+		 xmlAttribute?: boolean;
 	} // DataSourceField
 
 	export interface DataSourceFieldStatic {
@@ -7881,13 +7881,13 @@ declare namespace Isc {
 		 * FormItemIcon.name for the icon.
 		 * Flags: IR
 		 */
-		readonly icon?: String;
+		 icon?: String;
 		 // ref="attr:FormItemEventInfo.item"
 		/**
 		 * (Read only) Item over which the event occurred.
 		 * Flags: R
 		 */
-		readonly item?: FormItem;
+		 item?: FormItem;
 		 // ref="attr:FormItemEventInfo.overElement"
 		/**
 		 * (Read only) True if the event occurred over the item's data or input element. Note that it can be bad 
@@ -7895,14 +7895,14 @@ declare namespace Isc {
 		 * replace browser-default menus that users might expect.
 		 * Flags: R
 		 */
-		readonly overElement?: boolean /* Boolean */;
+		 overElement?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemEventInfo.overInlineError"
 		/**
 		 * (Read only) True if the event occurred over the form's 
 		 * DynamicForm.errorItemProperties','single error item.
 		 * Flags: R
 		 */
-		readonly overInlineError?: boolean /* Boolean */;
+		 overInlineError?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemEventInfo.overItem"
 		/**
 		 * (Read only) True if the event occurred over the main body of the item (for example the text-box), rather
@@ -7910,19 +7910,19 @@ declare namespace Isc {
 		 * text box area.
 		 * Flags: R
 		 */
-		readonly overItem?: boolean /* Boolean */;
+		 overItem?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemEventInfo.overTextBox"
 		/**
 		 * (Read only) True if the event occurred within the item's FormItem.textBoxStyle','textBox.
 		 * Flags: R
 		 */
-		readonly overTextBox?: boolean /* Boolean */;
+		 overTextBox?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemEventInfo.overTitle"
 		/**
 		 * (Read only) True if the event occurred over the item's title.
 		 * Flags: R
 		 */
-		readonly overTitle?: boolean /* Boolean */;
+		 overTitle?: boolean | null /* Boolean */;
 	} // FormItemEventInfo
 
 	export interface FormItemEventInfoStatic {
@@ -7938,31 +7938,31 @@ declare namespace Isc {
 		 * (Read only) x coordinate of outer radial
 		 * Flags: IR
 		 */
-		readonly cx?: String;
+		 cx?: String;
 		 // ref="attr:RadialGradient.cy"
 		/**
 		 * (Read only) y coordinate of outer radial
 		 * Flags: IR
 		 */
-		readonly cy?: String;
+		 cy?: String;
 		 // ref="attr:RadialGradient.fx"
 		/**
 		 * (Read only) x coordinate of inner radial
 		 * Flags: IR
 		 */
-		readonly fx?: String;
+		 fx?: String;
 		 // ref="attr:RadialGradient.fy"
 		/**
 		 * (Read only) y coordinate of inner radial
 		 * Flags: IR
 		 */
-		readonly fy?: String;
+		 fy?: String;
 		 // ref="attr:RadialGradient.r"
 		/**
 		 * (Read only) radius
 		 * Flags: IR
 		 */
-		readonly r?: String;
+		 r?: String;
 	} // RadialGradient
 
 	export interface RadialGradientStatic extends GradientStatic {
@@ -7979,25 +7979,25 @@ declare namespace Isc {
 		 * (Read only) If set, whether the Alt key must be held down.
 		 * Flags: IR
 		 */
-		readonly altKey?: boolean /* Boolean */;
+		 altKey?: boolean | null /* Boolean */;
 		 // ref="attr:KeyIdentifier.ctrlKey"
 		/**
 		 * (Read only) If set, whether the Control key must be held down.
 		 * Flags: IR
 		 */
-		readonly ctrlKey?: boolean /* Boolean */;
+		 ctrlKey?: boolean | null /* Boolean */;
 		 // ref="attr:KeyIdentifier.keyName"
 		/**
 		 * (Read only) Name of the key.
 		 * Flags: IR
 		 */
-		readonly keyName?: KeyName;
+		 keyName?: KeyName;
 		 // ref="attr:KeyIdentifier.shiftKey"
 		/**
 		 * (Read only) If set, whether the Shift key must be held down.
 		 * Flags: IR
 		 */
-		readonly shiftKey?: boolean /* Boolean */;
+		 shiftKey?: boolean | null /* Boolean */;
 	} // KeyIdentifier
 
 	export interface KeyIdentifierStatic {
@@ -8042,7 +8042,7 @@ declare namespace Isc {
 		 * Menu.autoDismiss.
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly autoDismiss?: boolean /* Boolean */;
+		 autoDismiss?: boolean | null /* Boolean */;
 		 // ref="attr:MenuItem.canSelectParent"
 		/**
 		 * (Read only) A MenuItem that has a submenu normally cannot be selected, instead clicking or hitting Enter
@@ -8051,7 +8051,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canSelectParent?: boolean;
+		 canSelectParent?: boolean;
 		 // ref="attr:MenuItem.checked"
 		/**
 		 * (Read only) If true, this item displays a standard checkmark image to the left of its title. You
@@ -8061,7 +8061,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly checked?: boolean;
+		 checked?: boolean;
 		 // ref="attr:MenuItem.disabledIcon"
 		/**
 		 * (Read only) The filename for this item's custom icon when the item is disabled. If both this property
@@ -8072,7 +8072,7 @@ declare namespace Isc {
 		 * If you need to set this state dynamically, use MenuItem.dynamicIcon instead.
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly disabledIcon?: String;
+		 disabledIcon?: String;
 		 // ref="attr:MenuItem.embeddedComponent"
 		/**
 		 * (Read only) Arbitrary UI component that should appear in this MenuItem. See
@@ -8092,21 +8092,21 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly embeddedComponent?: Canvas;
+		 embeddedComponent?: Canvas;
 		 // ref="attr:MenuItem.embeddedComponentFields"
 		/**
 		 * (Read only) See ListGridRecord.embeddedComponentFields. Default for a MenuItem is to cover the
 		 * title and key fields, leaving the icon and submenu fields visible.
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly embeddedComponentFields?: Array<String> /* Array of String */;
+		 embeddedComponentFields?: Array<String> /* Array of String */;
 		 // ref="attr:MenuItem.embeddedComponentPosition"
 		/**
 		 * (Read only) See ListGridRecord.embeddedComponentPosition, except that when used in a
 		 * menuItem, default behavior is EmbeddedPosition "expand".
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly embeddedComponentPosition?: EmbeddedPosition;
+		 embeddedComponentPosition?: EmbeddedPosition;
 		 // ref="attr:MenuItem.enabled"
 		/**
 		 * (Read only) Affects the visual style and interactivity of the menu item. If set to
@@ -8115,7 +8115,7 @@ declare namespace Isc {
 		 * If you need to set this state dynamically, use MenuItem.enableIf instead.
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly enabled?: boolean /* Boolean */;
+		//  enabled?: boolean | null /* Boolean */;   Skipped because the property override a property in the base class with a different type
 		 // ref="attr:MenuItem.enableWhen"
 		/**
 		 * (Read only) Criteria to be evaluated to determine whether this MenuItem should be disabled. Re-evaluated
@@ -8126,14 +8126,14 @@ declare namespace Isc {
 		 * xmlCriteriaShorthand','shorthand formats for defining criteria.
 		 * Flags: IR, Group: ruleCriteria
 		 */
-		readonly enableWhen?: AdvancedCriteria;
+		 enableWhen?: AdvancedCriteria;
 		 // ref="attr:MenuItem.fetchSubmenus"
 		/**
 		 * (Read only) If false, no submenus will be fetched for this MenuItem. This can be set globally via
 		 * Menu.fetchSubmenus.
 		 * Flags: IR
 		 */
-		readonly fetchSubmenus?: boolean /* Boolean */;
+		 fetchSubmenus?: boolean | null /* Boolean */;
 		 // ref="attr:MenuItem.icon"
 		/**
 		 * (Read only) The filename for this item's custom icon. If both this property and
@@ -8145,21 +8145,21 @@ declare namespace Isc {
 		 * If you need to set this state dynamically, use MenuItem.dynamicIcon instead.
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly icon?: String;
+		 icon?: String;
 		 // ref="attr:MenuItem.iconHeight"
 		/**
 		 * (Read only) The height applied to this item's icon. The default of 16 can be changed
 		 * for all MenuItems by overriding Menu.iconHeight.
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly iconHeight?: number;
+		 iconHeight?: number;
 		 // ref="attr:MenuItem.iconWidth"
 		/**
 		 * (Read only) The width applied to this item's icon. The default of 16 can be changed
 		 * for all MenuItems by overriding Menu.iconWidth.
 		 * Flags: IR, Group: menuIcons
 		 */
-		readonly iconWidth?: number;
+		 iconWidth?: number;
 		 // ref="attr:MenuItem.isSeparator"
 		/**
 		 * (Read only) When set to true, this menu item shows a horizontal separator instead of
@@ -8167,7 +8167,7 @@ declare namespace Isc {
 		 * since the separator will not respond to mouse events.
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly isSeparator?: boolean /* Boolean */;
+		//  isSeparator?: boolean | null /* Boolean */;   Skipped because the property override a property in the base class with a different type
 		 // ref="attr:MenuItem.keys"
 		/**
 		 * (Read only) Shortcut key(s) to fire the menu item action. Each key can be defined as a KeyIdentifier.
@@ -8175,14 +8175,14 @@ declare namespace Isc {
 		 * identifiers.
 		 * Flags: IR, Group: menuKeys
 		 */
-		readonly keys?: KeyIdentifier | Array<KeyIdentifier> /* KeyIdentifier | Array of KeyIdentifier */;
+		 keys?: KeyIdentifier | Array<KeyIdentifier> /* KeyIdentifier | Array of KeyIdentifier */;
 		 // ref="attr:MenuItem.keyTitle"
 		/**
 		 * (Read only) A string to display in the shortcut-key column for this item. If not
 		 * specified, the first KeyName value in MenuItem.keys will be used by default.
 		 * Flags: IR, Group: menuKeys
 		 */
-		readonly keyTitle?: String;
+		 keyTitle?: String;
 		 // ref="attr:MenuItem.showIconOnlyInline"
 		/**
 		 * (Read only) When used in an AdaptiveMenu, should this MenuItem show only it's
@@ -8190,20 +8190,20 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showIconOnlyInline?: boolean;
+		 showIconOnlyInline?: boolean;
 		 // ref="attr:MenuItem.submenu"
 		/**
 		 * (Read only) A reference to another menu, to display as a submenu when the mouse cursor hovers over
 		 * this menu item.
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly submenu?: Menu;
+		 submenu?: Menu;
 		 // ref="attr:MenuItem.title"
 		/**
 		 * (Read only) The text displayed for the menu item
 		 * Flags: IR, Group: menuBasic
 		 */
-		readonly title?: HTMLString;
+		 title?: HTMLString;
 
 		/* Instance Method Overrides */
 		/**  
@@ -8306,7 +8306,7 @@ declare namespace Isc {
 		 * included when printing, even if a superclass is listed in PrintProperties.omitControls.
 		 * Flags: IR, Group: printing
 		 */
-		readonly includeControls?: Array<String> /* Array of String */;
+		 includeControls?: Array<String> /* Array of String */;
 		 // ref="attr:PrintProperties.omitControls"
 		/**
 		 * (Read only) An array of Strings indicating the classNames of controls that should be omitted from
@@ -8318,7 +8318,7 @@ declare namespace Isc {
 		 * See also PrintProperties.includeControls.
 		 * Flags: IR, Group: printing
 		 */
-		readonly omitControls?: Array<String> /* Array of String */;
+		 omitControls?: Array<String> /* Array of String */;
 		 // ref="attr:PrintProperties.printForExport"
 		/**
 		 * (Read only) If true, generates HTML for export.
@@ -8330,7 +8330,7 @@ declare namespace Isc {
 		 * Canvas.getPrintHTML must have printForExport:true.
 		 * Flags: IR, Group: printing
 		 */
-		readonly printForExport?: boolean /* Boolean */;
+		 printForExport?: boolean | null /* Boolean */;
 	} // PrintProperties
 
 	export interface PrintPropertiesStatic {
@@ -8358,7 +8358,7 @@ declare namespace Isc {
 		 * Calendar.getEventCanvasStyle','getEventCanvasStyle() for more information.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly eventStyleName?: CSSStyleName;
+		 eventStyleName?: CSSStyleName;
 		 // ref="attr:Lane.height"
 		/**
 		 * (Read only) In Timelines, the height of this Lane's row. Has no effect when set on a Lane 
@@ -8372,14 +8372,14 @@ declare namespace Isc {
 		 * initial slice and the specified one.
 		 * Flags: IR
 		 */
-		readonly height?: Number;
+		 height?: Number;
 		 // ref="attr:Lane.name"
 		/**
 		 * (Read only) To determine whether a CalendarEvent should be placed in this lane, the value of this 
 		 * attribute is compared with the Calendar.laneNameField property on the CalendarEvent.
 		 * Flags: IR
 		 */
-		readonly name?: String;
+		 name?: String;
 		 // ref="attr:Lane.sublanes"
 		/**
 		 * (Read only) Array of Lane objects that will share the available space in the parent Lane,
@@ -8393,13 +8393,13 @@ declare namespace Isc {
 		 * Calendar.eventAutoArrange','auto arrangement of events that share time.
 		 * Flags: IR
 		 */
-		readonly sublanes?: Array<Lane> /* Array of Lane */;
+		 sublanes?: Array<Lane> /* Array of Lane */;
 		 // ref="attr:Lane.title"
 		/**
 		 * (Read only) Title to show for this lane. Has no effect if set directly on Lane.sublanes','sublanes.
 		 * Flags: IR
 		 */
-		readonly title?: HTMLString;
+		 title?: HTMLString;
 		 // ref="attr:Lane.width"
 		/**
 		 * (Read only) When set on a Lane being displayed in a Calendar.dayView','day view as a result of 
@@ -8413,7 +8413,7 @@ declare namespace Isc {
 		 * initial slice and the specified one.
 		 * Flags: IR
 		 */
-		readonly width?: Number;
+		 width?: Number;
 	} // Lane
 
 	export interface LaneStatic {
@@ -8433,7 +8433,7 @@ declare namespace Isc {
 		 * (Read only) Data to be serialized to XML to form the SOAP body.
 		 * Flags: IR
 		 */
-		readonly data?: any /* Any */;
+		 data?: any /* Any */;
 		 // ref="attr:WSRequest.headerData"
 		/**
 		 * (Read only) Data to be serialized to form the SOAP headers, as a map from the header part name to the
@@ -8453,7 +8453,7 @@ declare namespace Isc {
 		 * DataSource.xmlSerialize
 		 * Flags: IR
 		 */
-		readonly headerData?: any /* Any */;
+		 headerData?: any /* Any */;
 		 // ref="attr:WSRequest.useFlatFields"
 		/**
 		 * (Read only) When useFlatFields is set for a request to be sent to a WSDL web service, when
@@ -8518,13 +8518,13 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: flatFields
 		 */
-		readonly useFlatFields?: boolean;
+		 useFlatFields?: boolean;
 		 // ref="attr:WSRequest.wsOperation"
 		/**
 		 * (Read only) Name of the web service operation to invoke.
 		 * Flags: IR
 		 */
-		readonly wsOperation?: String;
+		 wsOperation?: String;
 		 // ref="attr:WSRequest.xmlNamespaces"
 		/**
 		 * (Read only) Optional object declaring namespace prefixes for use in evaluating the
@@ -8535,7 +8535,7 @@ declare namespace Isc {
 		 * bindings are also identical.
 		 * Flags: IR
 		 */
-		readonly xmlNamespaces?: Object;
+		 xmlNamespaces?: Object;
 		 // ref="attr:WSRequest.xmlResult"
 		/**
 		 * (Read only) Valid only with WebService.callOperation. If set, do not transform XML results to
@@ -8544,7 +8544,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly xmlResult?: boolean;
+		 xmlResult?: boolean;
 	} // WSRequest
 
 	export interface WSRequestStatic {
@@ -8569,7 +8569,7 @@ declare namespace Isc {
 		 * (Read only) Horizontal alignment of the title of this headerSpan.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly align?: Alignment;
+		 align?: Alignment;
 		 // ref="attr:HeaderSpan.fields"
 		/**
 		 * (Read only) List of fields that this header spans. Fields should be identified by their value for
@@ -8579,7 +8579,7 @@ declare namespace Isc {
 		 * however a span cannot be specified with both fields and spans.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly fields?: Array<String> /* Array of String */;
+		 fields?: Array<String> /* Array of String */;
 		 // ref="attr:HeaderSpan.headerBaseStyle"
 		/**
 		 * Custom base style to apply to the header button created for this span instead
@@ -8589,7 +8589,7 @@ declare namespace Isc {
 		 * HeaderSpan.headerTitleStyle as well.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly headerBaseStyle?: CSSStyleName;
+		 headerBaseStyle?: CSSStyleName;
 		 // ref="attr:HeaderSpan.headerTitle"
 		/**
 		 * (Read only) Optional title for the headerSpan button for this headerSpan. If specified this will be
@@ -8597,7 +8597,7 @@ declare namespace Isc {
 		 * string to suppress the title in the header button entirely.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly headerTitle?: String;
+		 headerTitle?: String;
 		 // ref="attr:HeaderSpan.headerTitleStyle"
 		/**
 		 * Custom titleStyle to apply to the header button created for this span instead of
@@ -8608,13 +8608,13 @@ declare namespace Isc {
 		 * thereof.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly headerTitleStyle?: CSSStyleName;
+		 headerTitleStyle?: CSSStyleName;
 		 // ref="attr:HeaderSpan.height"
 		/**
 		 * (Read only) Height of this headerSpan. Defaults to ListGrid.headerSpanHeight.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly height?: Integer;
+		 height?: Integer;
 		 // ref="attr:HeaderSpan.name"
 		/**
 		 * (Read only) Name for this headerSpan, for use in APIs like ListGrid.setHeaderSpanTitle.
@@ -8625,7 +8625,7 @@ declare namespace Isc {
 		 * identifier).
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly name?: Identifier;
+		 name?: Identifier;
 		 // ref="attr:HeaderSpan.spans"
 		/**
 		 * (Read only) This property allows developer to "nest" header spans, grouping fields together by
@@ -8647,7 +8647,7 @@ declare namespace Isc {
 		 * and HeaderSpan.fields','fields.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly spans?: Array<HeaderSpan> /* Array of HeaderSpan */;
+		 spans?: Array<HeaderSpan> /* Array of HeaderSpan */;
 		 // ref="attr:HeaderSpan.title"
 		/**
 		 * (Read only) A title for this headerSpan, to display in the headerSpan button for this headerSpan
@@ -8658,7 +8658,7 @@ declare namespace Isc {
 		 * appears in the UI are not affected. Refer to discussion at ListGridField.title.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly title?: String;
+		 title?: String;
 		 // ref="attr:HeaderSpan.valign"
 		/**
 		 * (Read only) Vertical alignment of the title of this headerSpan.
@@ -8666,7 +8666,7 @@ declare namespace Isc {
 		 * Defaults to listGrid.headerSpanVAlign if unset.
 		 * Flags: IR, Group: headerSpan
 		 */
-		readonly valign?: VerticalAlignment;
+		 valign?: VerticalAlignment;
 		 // ref="attr:HeaderSpan.wrap"
 		/**
 		 * (Read only) Should the span title wrap if there is not enough space horizontally to accommodate it.
@@ -8674,7 +8674,7 @@ declare namespace Isc {
 		 * is a soft-wrap - if set the title will wrap at word boundaries.)
 		 * Flags: IR
 		 */
-		readonly wrap?: boolean /* Boolean */;
+		 wrap?: boolean | null /* Boolean */;
 	} // HeaderSpan
 
 	export interface HeaderSpanStatic {
@@ -8744,7 +8744,7 @@ declare namespace Isc {
 		 * current Canvas.ruleScope','rule context.
 		 * Flags: IR
 		 */
-		readonly formulaVars?: Map<any, any> /* Map */;
+		 formulaVars?: Map<any, any> /* Map */;
 		 // ref="attr:UserFormula.text"
 		/**
 		 * Formula to be evaluated.
@@ -8762,7 +8762,7 @@ declare namespace Isc {
 		 * mapping with UserFormula.formulaVars is needed.
 		 * Flags: IRW
 		 */
-		readonly text?: String;
+		 text?: String;
 	} // UserFormula
 
 	export interface UserFormulaStatic {
@@ -8781,41 +8781,41 @@ declare namespace Isc {
 		 * alwaysShowLeftButtonTitle setting is not changed.
 		 * Flags: IRW
 		 */
-		readonly alwaysShowLeftButtonTitle?: boolean /* Boolean */;
+		 alwaysShowLeftButtonTitle?: boolean | null /* Boolean */;
 		 // ref="attr:NavigationBarViewState.controls"
 		/**
 		 * The new NavigationBar.controls setting. If unset, the controls array
 		 * is not changed.
 		 * Flags: IRW
 		 */
-		readonly controls?: Array<String> | Array<Canvas> /* Array of String | Array of Canvas */;
+		 controls?: Array<String> | Array<Canvas> /* Array of String | Array of Canvas */;
 		 // ref="attr:NavigationBarViewState.leftButtonTitle"
 		/**
 		 * The new NavigationBar.leftButtonTitle setting. If unset, the
 		 * leftButtonTitle is not changed.
 		 * Flags: IRW
 		 */
-		readonly leftButtonTitle?: HTMLString;
+		 leftButtonTitle?: HTMLString;
 		 // ref="attr:NavigationBarViewState.shortLeftButtonTitle"
 		/**
 		 * The new NavigationBar.shortLeftButtonTitle setting. If unset, the
 		 * shortLeftButtonTitle is not changed.
 		 * Flags: IRW
 		 */
-		readonly shortLeftButtonTitle?: HTMLString;
+		 shortLeftButtonTitle?: HTMLString;
 		 // ref="attr:NavigationBarViewState.showLeftButton"
 		/**
 		 * The new NavigationBar.showLeftButton setting. If unset, the
 		 * showLeftButton setting is not changed.
 		 * Flags: IRW
 		 */
-		readonly showLeftButton?: boolean /* Boolean */;
+		 showLeftButton?: boolean | null /* Boolean */;
 		 // ref="attr:NavigationBarViewState.title"
 		/**
 		 * The new NavigationBar.title setting. If unset, the title is not changed.
 		 * Flags: IRW
 		 */
-		readonly title?: HTMLString;
+		 title?: HTMLString;
 	} // NavigationBarViewState
 
 	export interface NavigationBarViewStateStatic {
@@ -8831,19 +8831,19 @@ declare namespace Isc {
 		 * Specifies the additional attributes to write in the tag.
 		 * Flags: IRW
 		 */
-		readonly extraStuff?: String;
+		 extraStuff?: String;
 		 // ref="attr:ImgProperties.height"
 		/**
 		 * Specifies the height of the image.
 		 * Flags: IRW
 		 */
-		readonly height?: number;
+		 height?: number;
 		 // ref="attr:ImgProperties.imgDir"
 		/**
 		 * Specifies the image-specific image directory to override the default.
 		 * Flags: IRW
 		 */
-		readonly imgDir?: URL;
+		 imgDir?: URL;
 		 // ref="attr:ImgProperties.name"
 		/**
 		 * Specifies the name of the image. This is an identifier unique to the canvas, and subsequent
@@ -8852,19 +8852,19 @@ declare namespace Isc {
 		 * with this name will act on the image object created using this ImgProperties object.
 		 * Flags: IRW
 		 */
-		readonly name?: String;
+		 name?: String;
 		 // ref="attr:ImgProperties.src"
 		/**
 		 * Specifies the URL of the image local to the skin or application directory.
 		 * Flags: IRW
 		 */
-		readonly src?: URL;
+		 src?: URL;
 		 // ref="attr:ImgProperties.width"
 		/**
 		 * Specifies the width of the image.
 		 * Flags: IRW
 		 */
-		readonly width?: number;
+		 width?: number;
 	} // ImgProperties
 
 	export interface ImgPropertiesStatic {
@@ -9168,7 +9168,7 @@ declare namespace Isc {
 		 * property name can be changed via ListGrid.recordBaseStyleProperty.
 		 * Flags: IRW
 		 */
-		readonly _baseStyle?: CSSStyleName;
+		 _baseStyle?: CSSStyleName;
 		 // ref="attr:ListGridRecord._canEdit"
 		/**
 		 * (Read only) Default property name denoting whether this record can be edited. Property name may be
@@ -9176,7 +9176,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: editing
 		 */
-		readonly _canEdit?: boolean;
+		 _canEdit?: boolean;
 		 // ref="attr:ListGridRecord._canRemove"
 		/**
 		 * Default property name denoting whether this record can be removed. Property name may be
@@ -9184,7 +9184,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: editing
 		 */
-		readonly _canRemove?: boolean;
+		 _canRemove?: boolean;
 		 // ref="attr:ListGridRecord.backgroundComponent"
 		/**
 		 * (Read only) Has no effect unless ListGrid.showBackgroundComponents is true.
@@ -9196,7 +9196,7 @@ declare namespace Isc {
 		 * it will only be visible if the cell styling is transparent.
 		 * Flags: IR, Group: rowEffects
 		 */
-		readonly backgroundComponent?: Canvas;
+		 backgroundComponent?: Canvas;
 		 // ref="attr:ListGridRecord.canAcceptDrop"
 		/**
 		 * (Read only) When set to false, other records cannot be dropped on (i.e., inserted
@@ -9204,7 +9204,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canAcceptDrop?: boolean;
+		 canAcceptDrop?: boolean;
 		 // ref="attr:ListGridRecord.canDrag"
 		/**
 		 * (Read only) When set to false, this record cannot be dragged. If canDrag is false for
@@ -9212,7 +9212,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canDrag?: boolean;
+		 canDrag?: boolean;
 		 // ref="attr:ListGridRecord.canExpand"
 		/**
 		 * (Read only) Default property name denoting whether this record can be expanded. Property name may be
@@ -9220,7 +9220,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: expansionField
 		 */
-		readonly canExpand?: boolean;
+		 canExpand?: boolean;
 		 // ref="attr:ListGridRecord.canSelect"
 		/**
 		 * (Read only) Default property name denoting whether this record can be selected. Property name may be
@@ -9228,7 +9228,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canSelect?: boolean;
+		 canSelect?: boolean;
 		 // ref="attr:ListGridRecord.customStyle"
 		/**
 		 * Name of a CSS style to use for all cells for this particular record.
@@ -9248,13 +9248,13 @@ declare namespace Isc {
 		 * property name can be changed via ListGrid.recordCustomStyleProperty.
 		 * Flags: IRW
 		 */
-		readonly customStyle?: CSSStyleName;
+		 customStyle?: CSSStyleName;
 		 // ref="attr:ListGridRecord.detailDS"
 		/**
 		 * (Advanced) The default value of ListGrid.recordDetailDSProperty.
 		 * Flags: IRWA
 		 */
-		readonly detailDS?: DataSource;
+		 detailDS?: DataSource;
 		 // ref="attr:ListGridRecord.embeddedComponent"
 		/**
 		 * (Read only) A component that should be rendered on top of this record, similar to a
@@ -9290,7 +9290,7 @@ declare namespace Isc {
 		 * subsystem.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly embeddedComponent?: Canvas;
+		 embeddedComponent?: Canvas;
 		 // ref="attr:ListGridRecord.embeddedComponentFields"
 		/**
 		 * (Read only) Fields where the ListGridRecord.embeddedComponent will be displayed, if specified.
@@ -9307,7 +9307,7 @@ declare namespace Isc {
 		 * are shown.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly embeddedComponentFields?: Array<String> /* Array of String */;
+		 embeddedComponentFields?: Array<String> /* Array of String */;
 		 // ref="attr:ListGridRecord.embeddedComponentPosition"
 		/**
 		 * (Read only) Sizing policy applied to the embedded component. Default behavior if unspecified is the same
@@ -9316,7 +9316,7 @@ declare namespace Isc {
 		 * the embedded components' specified sizes instead.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly embeddedComponentPosition?: EmbeddedPosition;
+		 embeddedComponentPosition?: EmbeddedPosition;
 		 // ref="attr:ListGridRecord.enabled"
 		/**
 		 * (Read only) Default property name denoting whether this record is enabled. Property name may be
@@ -9324,7 +9324,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly enabled?: boolean;
+		 enabled?: boolean;
 		 // ref="attr:ListGridRecord.includeInSummary"
 		/**
 		 * If specified as false this record should be ignored when calculating summary totals
@@ -9335,7 +9335,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly includeInSummary?: boolean;
+		 includeInSummary?: boolean;
 		 // ref="attr:ListGridRecord.isGridSummary"
 		/**
 		 * This attribute will automatically be set to true for the record representing the
@@ -9345,7 +9345,7 @@ declare namespace Isc {
 		 * it may be modified by setting ListGrid.gridSummaryRecordProperty
 		 * Flags: IRW
 		 */
-		readonly isGridSummary?: boolean /* Boolean */;
+		 isGridSummary?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridRecord.isGroupSummary"
 		/**
 		 * This attribute will automatically be set to true for records representing
@@ -9355,7 +9355,7 @@ declare namespace Isc {
 		 * it may be modified by setting ListGrid.groupSummaryRecordProperty
 		 * Flags: IRW
 		 */
-		readonly isGroupSummary?: boolean /* Boolean */;
+		 isGroupSummary?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridRecord.isSeparator"
 		/**
 		 * (Read only) Default property name denoting a separator row.
@@ -9366,14 +9366,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly isSeparator?: boolean;
+		 isSeparator?: boolean;
 		 // ref="attr:ListGridRecord.linkText"
 		/**
 		 * The HTML to display in this row for fields with fieldType set to link. This overrides
 		 * ListGridField.linkText.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly linkText?: String;
+		 linkText?: String;
 		 // ref="attr:ListGridRecord.showRollOver"
 		/**
 		 * (Read only) Set to false to disable rollover for this individual record when ListGrid.showRollOver
@@ -9383,7 +9383,7 @@ declare namespace Isc {
 		 * ListGrid.recordShowRollOverProperty.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly showRollOver?: boolean /* Boolean */;
+		 showRollOver?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridRecord.singleCellValue"
 		/**
 		 * Default property name denoting the single value to display for all fields of this row.
@@ -9393,7 +9393,7 @@ declare namespace Isc {
 		 * Note: this attribute name is governed by ListGrid.singleCellValueProperty.
 		 * Flags: IRW
 		 */
-		readonly singleCellValue?: HTMLString;
+		 singleCellValue?: HTMLString;
 	} // ListGridRecord
 
 	export interface ListGridRecordStatic extends RecordStatic {
@@ -9409,19 +9409,19 @@ declare namespace Isc {
 		 * (Read only) eg #ff0000 or red or rgb(255,0,0)
 		 * Flags: IR
 		 */
-		readonly color?: CSSColor;
+		 color?: CSSColor;
 		 // ref="attr:ColorStop.offset"
 		/**
 		 * (Read only) The relative offset for the color.
 		 * Flags: IR
 		 */
-		readonly offset?: Float /* float */;
+		 offset?: Float /* float */;
 		 // ref="attr:ColorStop.opacity"
 		/**
 		 * (Read only) 0 is transparent, 1 is fully opaque
 		 * Flags: IR
 		 */
-		readonly opacity?: Float /* float */;
+		 opacity?: Float /* float */;
 	} // ColorStop
 
 	export interface ColorStopStatic {
@@ -9450,13 +9450,13 @@ declare namespace Isc {
 		 * sub-criteria that are grouped together by the operator.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly criteria?: Array<Criterion> /* Array of Criterion */;
+		 criteria?: Array<Criterion> /* Array of Criterion */;
 		 // ref="attr:Criterion.end"
 		/**
 		 * (Read only) End value of a criterion with an operator of type "valueRange".
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly end?: any /* Any */;
+		 end?: any /* Any */;
 		 // ref="attr:Criterion.fieldName"
 		/**
 		 * (Read only) Name of the field in each Record that this criterion applies to. Not applicable for a
@@ -9465,19 +9465,19 @@ declare namespace Isc {
 		 * DataPath','dataPath for more information.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly fieldName?: String;
+		 fieldName?: String;
 		 // ref="attr:Criterion.operator"
 		/**
 		 * (Read only) Operator this criterion applies.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly operator?: OperatorId;
+		 operator?: OperatorId;
 		 // ref="attr:Criterion.start"
 		/**
 		 * (Read only) Start value of a criterion with an operator of type "valueRange".
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly start?: any /* Any */;
+		 start?: any /* Any */;
 		 // ref="attr:Criterion.value"
 		/**
 		 * (Read only) Value to be used in the application of this criterion.
@@ -9486,7 +9486,7 @@ declare namespace Isc {
 		 * OperatorValueType of the operator.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly value?: any /* Any */;
+		 value?: any /* Any */;
 		 // ref="attr:Criterion.valuePath"
 		/**
 		 * (Read only) Wherever dynamicCriteria are supported, valuePath can be
@@ -9503,7 +9503,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly valuePath?: String;
+		 valuePath?: String;
 	} // Criterion
 
 	export interface CriterionStatic {
@@ -9530,7 +9530,7 @@ declare namespace Isc {
 		 * canExport: false.
 		 * Flags: IR
 		 */
-		readonly canExport?: boolean /* Boolean */;
+		 canExport?: boolean | null /* Boolean */;
 		 // ref="attr:TreeGridField.treeField"
 		/**
 		 * The field containing treeField: true will display the Tree. If no
@@ -9544,7 +9544,7 @@ declare namespace Isc {
 		 * display the Tree.
 		 * Flags: IRW, Group: treeField
 		 */
-		readonly treeField?: boolean /* Boolean */;
+		 treeField?: boolean | null /* Boolean */;
 	} // TreeGridField
 
 	export interface TreeGridFieldStatic extends ListGridFieldStatic {
@@ -9565,7 +9565,7 @@ declare namespace Isc {
 		 * alignment of cells in the body will also be reflected in any editors for the field.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly align?: Alignment;
+		 align?: Alignment;
 		 // ref="attr:ListGridField.allowFilterExpressions"
 		/**
 		 * (Read only) Field-level setting for ListGrid.allowFilterExpressions:true - controls whether search 
@@ -9577,7 +9577,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly allowFilterExpressions?: boolean;
+		 allowFilterExpressions?: boolean;
 		 // ref="attr:ListGridField.allowFilterOperators"
 		/**
 		 * (Read only) Per-field setting for ListGrid.allowFilterOperators. Can be used to enable
@@ -9586,7 +9586,7 @@ declare namespace Isc {
 		 * is enabled.
 		 * Flags: IR
 		 */
-		readonly allowFilterOperators?: boolean /* Boolean */;
+		 allowFilterOperators?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.alwaysShowOperatorIcon"
 		/**
 		 * (Read only) Per-field setting for ListGrid.alwaysShowOperatorIcon. Can be used to force a particular
@@ -9594,7 +9594,7 @@ declare namespace Isc {
 		 * filter-value, or is using the default ListGridField.filterOperator','search operator.
 		 * Flags: IR
 		 */
-		readonly alwaysShowOperatorIcon?: boolean /* Boolean */;
+		 alwaysShowOperatorIcon?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.applyAfterSummary"
 		/**
 		 * If ListGridField.userFormula is set for this field, and this grid is showing
@@ -9607,7 +9607,7 @@ declare namespace Isc {
 		 * Default behavior may be specified at the grid level via ListGrid.applyFormulaAfterSummary
 		 * Flags: IRW
 		 */
-		readonly applyAfterSummary?: boolean /* Boolean */;
+		 applyAfterSummary?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.autoComplete"
 		/**
 		 * Whether to allow browser autoComplete when editing this field.
@@ -9615,7 +9615,7 @@ declare namespace Isc {
 		 * If unset, defaults to listGrid.autoComplete
 		 * Flags: IRW
 		 */
-		readonly autoComplete?: AutoComplete;
+		 autoComplete?: AutoComplete;
 		 // ref="attr:ListGridField.autoFetchDisplayMap"
 		/**
 		 * If true, automatically fetches records and derives a valueMap from
@@ -9625,7 +9625,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly autoFetchDisplayMap?: boolean;
+		 autoFetchDisplayMap?: boolean;
 		 // ref="attr:ListGridField.autoFitWidth"
 		/**
 		 * (Read only) Should this listGrid field autofit its width to either titles or content?
@@ -9644,7 +9644,7 @@ declare namespace Isc {
 		 * by record-components.
 		 * Flags: IR, Group: autoFitFields
 		 */
-		readonly autoFitWidth?: boolean /* Boolean */;
+		 autoFitWidth?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.autoFitWidthApproach"
 		/**
 		 * When a user requests column autofitting via the
@@ -9653,7 +9653,7 @@ declare namespace Isc {
 		 * setting overrides the autoFitWidthApproach specified at the ListGrid level.
 		 * Flags: IRW, Group: autoFitFields
 		 */
-		readonly autoFitWidthApproach?: AutoFitWidthApproach;
+		 autoFitWidthApproach?: AutoFitWidthApproach;
 		 // ref="attr:ListGridField.autoFreeze"
 		/**
 		 * (Read only) Whether this field should be automatically frozen when other fields are frozen. When
@@ -9668,7 +9668,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: frozenFields
 		 */
-		readonly autoFreeze?: boolean;
+		 autoFreeze?: boolean;
 		 // ref="attr:ListGridField.baseStyle"
 		/**
 		 * Custom base style to apply to all cells in this field instead of ListGrid.baseStyle
@@ -9677,7 +9677,7 @@ declare namespace Isc {
 		 * instead.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly baseStyle?: CSSStyleName;
+		 baseStyle?: CSSStyleName;
 		 // ref="attr:ListGridField.canAutoFitWidth"
 		/**
 		 * (Read only) Should the user be allowed to perform one-time autofitting of this field via
@@ -9708,7 +9708,7 @@ declare namespace Isc {
 		 * by record-components.
 		 * Flags: IR
 		 */
-		readonly canAutoFitWidth?: boolean /* Boolean */;
+		 canAutoFitWidth?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.canDragResize"
 		/**
 		 * (Read only) Whether this field can be dragResized using the mouse. If unset, the default behavior
@@ -9716,7 +9716,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canDragResize?: boolean;
+		 canDragResize?: boolean;
 		 // ref="attr:ListGridField.canEdit"
 		/**
 		 * Can this field be edited? May be overridden by setting the 'canEdit' property at the
@@ -9730,7 +9730,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: editing
 		 */
-		readonly canEdit?: boolean;
+		 canEdit?: boolean;
 		 // ref="attr:ListGridField.canEditFormula"
 		/**
 		 * (Read only) Can formula be edited from header context menu? Setting attribute to
@@ -9740,7 +9740,7 @@ declare namespace Isc {
 		 * Has no effect when ListGrid.canAddFormulaFields is false.
 		 * Flags: IR
 		 */
-		readonly canEditFormula?: boolean /* Boolean */;
+		 canEditFormula?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.canEditSummary"
 		/**
 		 * (Read only) Can summary be edited from header context menu? Setting attribute to
@@ -9750,7 +9750,7 @@ declare namespace Isc {
 		 * Has no effect when ListGrid.canAddSummaryFields is false.
 		 * Flags: IR
 		 */
-		readonly canEditSummary?: boolean /* Boolean */;
+		 canEditSummary?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.canExport"
 		/**
 		 * (Read only) Dictates whether the data in this field be exported. Explicitly set this
@@ -9759,7 +9759,7 @@ declare namespace Isc {
 		 * canExport: false.
 		 * Flags: IR
 		 */
-		readonly canExport?: boolean /* Boolean */;
+		 canExport?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.canFilter"
 		/**
 		 * If showing a filter row for this ListGrid, should the filter criteria for this
@@ -9767,7 +9767,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: filterEditor
 		 */
-		readonly canFilter?: boolean;
+		 canFilter?: boolean;
 		 // ref="attr:ListGridField.canFreeze"
 		/**
 		 * (Read only) Whether this field should display freezing/unfreezing options in its header context menu.
@@ -9775,13 +9775,13 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: frozenFields
 		 */
-		readonly canFreeze?: boolean;
+		 canFreeze?: boolean;
 		 // ref="attr:ListGridField.canGroupBy"
 		/**
 		 * Determines whether this field will be groupable in the header context menu.
 		 * Flags: IRW
 		 */
-		readonly canGroupBy?: boolean /* Boolean */;
+		 canGroupBy?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.canHide"
 		/**
 		 * (Read only) If set to false, this field will be omitted from the column picker that appears in the
@@ -9797,7 +9797,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: appearance
 		 */
-		readonly canHide?: boolean;
+		 canHide?: boolean;
 		 // ref="attr:ListGridField.canHilite"
 		/**
 		 * Determines whether this field can be hilited. Set to false to prevent this
@@ -9805,7 +9805,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly canHilite?: boolean;
+		 canHilite?: boolean;
 		 // ref="attr:ListGridField.canReorder"
 		/**
 		 * (Read only) Whether this field can be reordered using the mouse. If unset, the default behavior is
@@ -9821,7 +9821,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canReorder?: boolean;
+		 canReorder?: boolean;
 		 // ref="attr:ListGridField.canSort"
 		/**
 		 * Enables or disables sorting by this column. If false, interactive
@@ -9830,13 +9830,13 @@ declare namespace Isc {
 		 * expected.
 		 * Flags: IRW, Group: sorting
 		 */
-		readonly canSort?: boolean /* Boolean */;
+		 canSort?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.canSortClientOnly"
 		/**
 		 * When true, this field can only be used for sorting if the data is entirely client-side.
 		 * Flags: IRW
 		 */
-		readonly canSortClientOnly?: boolean /* Boolean */;
+		 canSortClientOnly?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.canToggle"
 		/**
 		 * (Advanced) Allows a boolean or ValueMap','valueMapped field to be edited without going into
@@ -9859,7 +9859,7 @@ declare namespace Isc {
 		 * for the record.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly canToggle?: boolean /* Boolean */;
+		 canToggle?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.cellAlign"
 		/**
 		 * Horizontal alignment for cells in this field's column: "left", "right"
@@ -9868,7 +9868,7 @@ declare namespace Isc {
 		 * the alignment of cells in the body will also be reflected in any editors for the field.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly cellAlign?: Alignment;
+		 cellAlign?: Alignment;
 		 // ref="attr:ListGridField.cellIcon"
 		/**
 		 * (Read only) For a field of type:"icon" only, set the icon that appears in body cells. Unless
@@ -9879,14 +9879,14 @@ declare namespace Isc {
 		 * use ListGrid.setFieldCellIcon.
 		 * Flags: IR
 		 */
-		readonly cellIcon?: SCImgURL;
+		 cellIcon?: SCImgURL;
 		 // ref="attr:ListGridField.dataPath"
 		/**
 		 * (Read only, Advanced) dataPath for this field. This property allows the grid to display details of nested data
 		 * structures in a flat list of columns.
 		 * Flags: IRA, Group: data
 		 */
-		readonly dataPath?: String;
+		 dataPath?: String;
 		 // ref="attr:ListGridField.dateFormatter"
 		/**
 		 * Display format to use for date type values within this field.
@@ -9912,7 +9912,7 @@ declare namespace Isc {
 		 * for standard DateDisplayFormats.
 		 * Flags: IRW
 		 */
-		readonly dateFormatter?: DateDisplayFormat;
+		 dateFormatter?: DateDisplayFormat;
 		 // ref="attr:ListGridField.decimalPad"
 		/**
 		 * Applies only to fields of type "float" and enforces a minimum number of digits shown after
@@ -9924,7 +9924,7 @@ declare namespace Isc {
 		 * The original unpadded value is always shown when the value is edited.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly decimalPad?: number;
+		 decimalPad?: number;
 		 // ref="attr:ListGridField.decimalPrecision"
 		/**
 		 * Applies only to fields of type "float" and affects how many significant digits are shown.
@@ -9937,14 +9937,14 @@ declare namespace Isc {
 		 * A number is always shown with its original precision when edited.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly decimalPrecision?: number;
+		 decimalPrecision?: number;
 		 // ref="attr:ListGridField.defaultFilterValue"
 		/**
 		 * (Advanced) If this ListGrid is showing a filter row, this property can be used to apply a default
 		 * value to show in the filter editor for this field.
 		 * Flags: IRWA, Group: filterEditor
 		 */
-		readonly defaultFilterValue?: any /* Any */;
+		 defaultFilterValue?: any /* Any */;
 		 // ref="attr:ListGridField.defaultGroupingMode"
 		/**
 		 * (Read only) Default groupingMode used when the user does not specify a mode or grouping is triggered
@@ -9952,21 +9952,21 @@ declare namespace Isc {
 		 * See ListGridField.groupingModes','field.groupingModes.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly defaultGroupingMode?: Identifier;
+		 defaultGroupingMode?: Identifier;
 		 // ref="attr:ListGridField.defaultIconSrc"
 		/**
 		 * (Read only, Advanced) If this field is editable, this property will be passed to editors displayed for
 		 * cells within this field as FormItem.defaultIconSrc.
 		 * Flags: IRA, Group: editing
 		 */
-		readonly defaultIconSrc?: String;
+		 defaultIconSrc?: String;
 		 // ref="attr:ListGridField.defaultValue"
 		/**
 		 * If this field ListGridField.canEdit','can be edited, this property can be used to
 		 * specify a default value for this field's editor when adding new rows to the grid.
 		 * Flags: IRW, Group: editing
 		 */
-		readonly defaultValue?: any /* Any */;
+		 defaultValue?: any /* Any */;
 		 // ref="attr:ListGridField.defaultWidth"
 		/**
 		 * (Read only) Optional "default width" for this field. If set, this value will be returned by the
@@ -9974,7 +9974,7 @@ declare namespace Isc {
 		 * the field's content.
 		 * Flags: IR, Group: autoFitFields
 		 */
-		readonly defaultWidth?: Integer;
+		 defaultWidth?: Integer;
 		 // ref="attr:ListGridField.displayField"
 		/**
 		 * Specifies the ListGridField.optionDataSource field used to retrieve the display
@@ -9993,7 +9993,7 @@ declare namespace Isc {
 		 * picked up via ListGrid.getDisplayValue.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly displayField?: String;
+		 displayField?: String;
 		 // ref="attr:ListGridField.displayFormat"
 		/**
 		 * (Advanced) For fields of type "date", set this property to a valid
@@ -10007,7 +10007,7 @@ declare namespace Isc {
 		 * to edit this field. For dates you may also need to set ListGridField.inputFormat.
 		 * Flags: IRWA
 		 */
-		readonly displayFormat?: any /* Varies */;
+		 displayFormat?: any /* Varies */;
 		 // ref="attr:ListGridField.displayValueFromRecord"
 		/**
 		 * (Advanced) If a ListGridField.displayField is set, should this field show record values from
@@ -10029,14 +10029,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRWA
 		 */
-		readonly displayValueFromRecord?: boolean;
+		 displayValueFromRecord?: boolean;
 		 // ref="attr:ListGridField.editorFormula"
 		/**
 		 * (Read only) Shortcut to configure a FormItem.formula for the ListGridField.editorType','editor used when this
 		 * field is ListGrid.canEdit','edited.
 		 * Flags: IR
 		 */
-		readonly editorFormula?: UserFormula;
+		 editorFormula?: UserFormula;
 		 // ref="attr:ListGridField.editorIconHeight"
 		/**
 		 * (Read only, Advanced) If this field is editable, this property will be passed to editors displayed for
@@ -10045,7 +10045,7 @@ declare namespace Isc {
 		 * ListGridField.iconHeight instead.
 		 * Flags: IRA, Group: editing
 		 */
-		readonly editorIconHeight?: number;
+		 editorIconHeight?: number;
 		 // ref="attr:ListGridField.editorIconWidth"
 		/**
 		 * (Read only, Advanced) If this field is editable, this property will be passed to editors displayed for
@@ -10054,7 +10054,7 @@ declare namespace Isc {
 		 * ListGridField.iconWidth instead.
 		 * Flags: IRA, Group: editing
 		 */
-		readonly editorIconWidth?: number;
+		 editorIconWidth?: number;
 		 // ref="attr:ListGridField.editorImageURLPrefix"
 		/**
 		 * (Advanced) When some cell in this field is being edited, this property can be used to apply
@@ -10064,7 +10064,7 @@ declare namespace Isc {
 		 * instead.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorImageURLPrefix?: String;
+		 editorImageURLPrefix?: String;
 		 // ref="attr:ListGridField.editorImageURLSuffix"
 		/**
 		 * (Advanced) When some cell in this field is being edited, this property can be used to apply
@@ -10074,7 +10074,7 @@ declare namespace Isc {
 		 * instead.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorImageURLSuffix?: String;
+		 editorImageURLSuffix?: String;
 		 // ref="attr:ListGridField.editorProperties"
 		/**
 		 * (Advanced) Properties to apply the the form item created to edit this field. (Only used if
@@ -10092,14 +10092,14 @@ declare namespace Isc {
 		 * 
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorProperties?: FormItemProps /* FormItem Properties */;
+		 editorProperties?: FormItemProps /* FormItem Properties */;
 		 // ref="attr:ListGridField.editorTextFormula"
 		/**
 		 * (Read only) Shortcut to configure a FormItem.textFormula for the ListGridField.editorType','editor used when this
 		 * field is ListGrid.canEdit','edited.
 		 * Flags: IR
 		 */
-		readonly editorTextFormula?: UserSummary;
+		 editorTextFormula?: UserSummary;
 		 // ref="attr:ListGridField.editorType"
 		/**
 		 * (Advanced) Name of form item class to use for the form item created to edit this field.
@@ -10111,7 +10111,7 @@ declare namespace Isc {
 		 * fields.
 		 * Flags: IRWA, Group: editing
 		 */
-		readonly editorType?: FormItemClassName;
+		 editorType?: FormItemClassName;
 		 // ref="attr:ListGridField.editorValueIconHeight"
 		/**
 		 * When some cell in this field is being edited, setting this property will specify the
@@ -10119,7 +10119,7 @@ declare namespace Isc {
 		 * height will be determined in the same way as it would be for a static cell.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly editorValueIconHeight?: number;
+		 editorValueIconHeight?: number;
 		 // ref="attr:ListGridField.editorValueIcons"
 		/**
 		 * When some cell in this field is being edited, setting this property will specify the
@@ -10127,7 +10127,7 @@ declare namespace Isc {
 		 * will be determined in the same way as it would be for a static cell.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly editorValueIcons?: Map<String,String>;
+		 editorValueIcons?: Map<String,String>;
 		 // ref="attr:ListGridField.editorValueIconWidth"
 		/**
 		 * When some cell in this field is being edited, setting this property will specify the
@@ -10135,7 +10135,7 @@ declare namespace Isc {
 		 * height will be determined in the same way as it would be for a static cell.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly editorValueIconWidth?: number;
+		 editorValueIconWidth?: number;
 		 // ref="attr:ListGridField.editorValueMap"
 		/**
 		 * A valueMap to use for editors shown for this field. By default if this is not
@@ -10144,7 +10144,7 @@ declare namespace Isc {
 		 * Dynamic valueMaps can be provided by implementing ListGrid.getEditorValueMap.
 		 * Flags: IRW, Group: editing
 		 */
-		readonly editorValueMap?: ValueMap;
+		 editorValueMap?: ValueMap;
 		 // ref="attr:ListGridField.emptyCellValue"
 		/**
 		 * The value to display for a cell whose value is null or the empty string after
@@ -10154,7 +10154,7 @@ declare namespace Isc {
 		 * level to define the emptyCellValue for all empty fields in the grid.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly emptyCellValue?: HTMLString;
+		 emptyCellValue?: HTMLString;
 		 // ref="attr:ListGridField.enterKeyEditAction"
 		/**
 		 * What to do when a user hits enter while editing this field?
@@ -10162,7 +10162,7 @@ declare namespace Isc {
 		 * focus is in this field.
 		 * Flags: IRW, Group: editing
 		 */
-		readonly enterKeyEditAction?: EnterKeyEditAction;
+		 enterKeyEditAction?: EnterKeyEditAction;
 		 // ref="attr:ListGridField.escapeHTML"
 		/**
 		 * By default HTML values in ListGrid cells will be interpreted by the browser.
@@ -10172,7 +10172,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly escapeHTML?: boolean;
+		 escapeHTML?: boolean;
 		 // ref="attr:ListGridField.escapeKeyEditAction"
 		/**
 		 * What to do when a user hits escape while editing this field?
@@ -10180,7 +10180,7 @@ declare namespace Isc {
 		 * focus is in this field.
 		 * Flags: IRW, Group: editing
 		 */
-		readonly escapeKeyEditAction?: EscapeKeyEditAction;
+		 escapeKeyEditAction?: EscapeKeyEditAction;
 		 // ref="attr:ListGridField.excludeFromState"
 		/**
 		 * (Read only) If true, then this field is excluded from the bound component's view state. In addition,
@@ -10189,7 +10189,7 @@ declare namespace Isc {
 		 * if DataBoundComponent.titleField is not provided.
 		 * Flags: IR, Group: viewState
 		 */
-		readonly excludeFromState?: boolean /* Boolean */;
+		 excludeFromState?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.exportFieldWidth"
 		/**
 		 * When exporting data to Excel/OpenOffice format using ListGrid.exportData or
@@ -10202,14 +10202,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly exportFieldWidth?: boolean;
+		 exportFieldWidth?: boolean;
 		 // ref="attr:ListGridField.exportFormat"
 		/**
 		 * (Read only) FormatString used during exports for numeric or date formatting. See
 		 * DataSourceField.exportFormat.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly exportFormat?: FormatString;
+		 exportFormat?: FormatString;
 		 // ref="attr:ListGridField.exportRawValues"
 		/**
 		 * (Read only) Dictates whether the data in this field should be exported raw by
@@ -10218,7 +10218,7 @@ declare namespace Isc {
 		 * Decreases the time taken for large exports.
 		 * Flags: IR
 		 */
-		readonly exportRawValues?: boolean /* Boolean */;
+		 exportRawValues?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.filterEditorProperties"
 		/**
 		 * (Advanced) If this ListGrid is showing a filter row
@@ -10226,7 +10226,7 @@ declare namespace Isc {
 		 * can be used to specify properties for the appropriate filter form item.
 		 * Flags: IRWA, Group: filterEditor
 		 */
-		readonly filterEditorProperties?: FormItemProps /* FormItem Properties */;
+		 filterEditorProperties?: FormItemProps /* FormItem Properties */;
 		 // ref="attr:ListGridField.filterEditorType"
 		/**
 		 * (Advanced) If this ListGrid is showing a filter row, this property can be used to
@@ -10238,7 +10238,7 @@ declare namespace Isc {
 		 * 'type' of the field (showing the appropriate form item for the data-type).
 		 * Flags: IRWA, Group: filterEditor
 		 */
-		readonly filterEditorType?: FormItemClassName;
+		 filterEditorType?: FormItemClassName;
 		 // ref="attr:ListGridField.filterEditorValueMap"
 		/**
 		 * If this listGrid is showing a filter row, this property can be used to specify a
@@ -10246,7 +10246,7 @@ declare namespace Isc {
 		 * row form item.
 		 * Flags: IRW, Group: filterEditor
 		 */
-		readonly filterEditorValueMap?: Object;
+		 filterEditorValueMap?: Object;
 		 // ref="attr:ListGridField.filterOnKeypress"
 		/**
 		 * (Advanced) If we're showing the filterEditor (listGrid.showFilterEditor is true), this property
@@ -10258,7 +10258,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: filterEditor
 		 */
-		readonly filterOnKeypress?: boolean;
+		 filterOnKeypress?: boolean;
 		 // ref="attr:ListGridField.filterOperator"
 		/**
 		 * (Read only) With the ListGrid.showFilterEditor','FilterEditor showing, the Operator to
@@ -10274,13 +10274,13 @@ declare namespace Isc {
 		 * AdvancedCriteria.
 		 * Flags: IR
 		 */
-		readonly filterOperator?: OperatorId;
+		 filterOperator?: OperatorId;
 		 // ref="attr:ListGridField.format"
 		/**
 		 * (Read only) FormatString for numeric or date formatting. See DataSourceField.format.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly format?: FormatString;
+		 format?: FormatString;
 		 // ref="attr:ListGridField.formatGridSummary"
 		/**
 		 * (Read only) Optional stringMethod to format the summary value displayed
@@ -10296,7 +10296,7 @@ declare namespace Isc {
 		 * such fields, specify an explicit 'formatGridSummary' and/or 'formatGroupSummary' method
 		 * Flags: IR
 		 */
-		readonly formatGridSummary?: StringMethod;
+		 formatGridSummary?: StringMethod;
 		 // ref="attr:ListGridField.formatGroupSummary"
 		/**
 		 * (Read only) Optional stringMethod to format the group level summary values for this field displayed via
@@ -10312,7 +10312,7 @@ declare namespace Isc {
 		 * such fields, specify an explicit 'formatGridSummary' and/or 'formatGroupSummary' method
 		 * Flags: IR
 		 */
-		readonly formatGroupSummary?: StringMethod;
+		 formatGroupSummary?: StringMethod;
 		 // ref="attr:ListGridField.frozen"
 		/**
 		 * (Read only) Whether this field should be "frozen" for the purposes of horizontal scrolling. See
@@ -10320,7 +10320,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: frozenFields
 		 */
-		readonly frozen?: boolean;
+		 frozen?: boolean;
 		 // ref="attr:ListGridField.groupGranularity"
 		/**
 		 * (Read only) Granularity of grouping for numeric fields.
@@ -10329,7 +10329,7 @@ declare namespace Isc {
 		 * example, if groupGranularity were 1000, groups would be 0-1000, 1000-2000, etc.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly groupGranularity?: Integer;
+		 groupGranularity?: Integer;
 		 // ref="attr:ListGridField.groupingMode"
 		/**
 		 * (Read only) For a field that allows multiple ListGridField.groupingModes','grouping modes,
@@ -10339,7 +10339,7 @@ declare namespace Isc {
 		 * ListGrid creation to affect the initial grouping.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly groupingMode?: Identifier;
+		 groupingMode?: Identifier;
 		 // ref="attr:ListGridField.groupingModes"
 		/**
 		 * (Read only) If this field can be grouped, this attribute represents the set of grouping styles that 
@@ -10362,7 +10362,7 @@ declare namespace Isc {
 		 * builtinGroupingModes','builtin grouping modes for more information.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly groupingModes?: ValueMap;
+		 groupingModes?: ValueMap;
 		 // ref="attr:ListGridField.groupPrecision"
 		/**
 		 * (Read only) For fields of type:"float" or derived from float, number of digits after the decimal point
@@ -10375,7 +10375,7 @@ declare namespace Isc {
 		 * ranges.
 		 * Flags: IR, Group: grouping
 		 */
-		readonly groupPrecision?: Integer;
+		 groupPrecision?: Integer;
 		 // ref="attr:ListGridField.headerBaseStyle"
 		/**
 		 * Custom base style to apply to this field's header button instead of
@@ -10384,7 +10384,7 @@ declare namespace Isc {
 		 * ListGridField.headerTitleStyle as well.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly headerBaseStyle?: CSSStyleName;
+		 headerBaseStyle?: CSSStyleName;
 		 // ref="attr:ListGridField.headerHoverDelay"
 		/**
 		 * Delay in ms for hovers shown over this field's header.
@@ -10393,7 +10393,7 @@ declare namespace Isc {
 		 * and hovers shown over cells in the grid's body.
 		 * Flags: IRW
 		 */
-		readonly headerHoverDelay?: Integer;
+		 headerHoverDelay?: Integer;
 		 // ref="attr:ListGridField.headerTitle"
 		/**
 		 * (Read only) Optional title for the header button for this field. If specified this will be
@@ -10402,7 +10402,7 @@ declare namespace Isc {
 		 * header button entirely.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly headerTitle?: String;
+		 headerTitle?: String;
 		 // ref="attr:ListGridField.headerTitleStyle"
 		/**
 		 * Custom titleStyle to apply to this field's header button instead of
@@ -10412,7 +10412,7 @@ declare namespace Isc {
 		 * thereof.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly headerTitleStyle?: CSSStyleName;
+		 headerTitleStyle?: CSSStyleName;
 		 // ref="attr:ListGridField.hidden"
 		/**
 		 * (Read only) Marks field as initially hidden.
@@ -10425,7 +10425,7 @@ declare namespace Isc {
 		 * DataSourceField.hidden instead.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly hidden?: boolean /* Boolean */;
+		 hidden?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.hiliteHTMLAfterFormat"
 		/**
 		 * (Read only) If set to true, custom HTML applied as part of hiliting will be applied after
@@ -10436,7 +10436,7 @@ declare namespace Isc {
 		 * component level.
 		 * Flags: IR
 		 */
-		readonly hiliteHTMLAfterFormat?: boolean /* Boolean */;
+		 hiliteHTMLAfterFormat?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.hiliteIconHeight"
 		/**
 		 * Height for hilite icons for this field.
@@ -10444,7 +10444,7 @@ declare namespace Isc {
 		 * ListGridField.hiliteIconSize.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconHeight?: number;
+		 hiliteIconHeight?: number;
 		 // ref="attr:ListGridField.hiliteIconLeftPadding"
 		/**
 		 * How much padding should there be on the left of DataBoundComponent.hiliteIcons','hilite icons
@@ -10452,7 +10452,7 @@ declare namespace Isc {
 		 * Overrides ListGrid.hiliteIconLeftPadding
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconLeftPadding?: number;
+		 hiliteIconLeftPadding?: number;
 		 // ref="attr:ListGridField.hiliteIconPosition"
 		/**
 		 * (Read only) When ListGrid.hiliteIcons are present, where the hilite icon will be placed
@@ -10460,7 +10460,7 @@ declare namespace Isc {
 		 * Overrides ListGrid.hiliteIconPosition.
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly hiliteIconPosition?: HiliteIconPosition;
+		 hiliteIconPosition?: HiliteIconPosition;
 		 // ref="attr:ListGridField.hiliteIconRightPadding"
 		/**
 		 * How much padding should there be on the right of DataBoundComponent.hiliteIcons','hilite icons
@@ -10468,7 +10468,7 @@ declare namespace Isc {
 		 * Overrides ListGrid.hiliteIconRightPadding
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconRightPadding?: number;
+		 hiliteIconRightPadding?: number;
 		 // ref="attr:ListGridField.hiliteIconSize"
 		/**
 		 * Default width and height of ListGrid.hiliteIcons','hilite icons in this field.
@@ -10478,7 +10478,7 @@ declare namespace Isc {
 		 * ListGridField.hiliteIconHeight
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconSize?: number;
+		 hiliteIconSize?: number;
 		 // ref="attr:ListGridField.hiliteIconWidth"
 		/**
 		 * Width for hilite icons for this field.
@@ -10486,7 +10486,7 @@ declare namespace Isc {
 		 * ListGridField.hiliteIconSize.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconWidth?: number;
+		 hiliteIconWidth?: number;
 		 // ref="attr:ListGridField.hoverDelay"
 		/**
 		 * Delay in ms for hovers shown for cells in this field. If unset, the grid's
@@ -10497,7 +10497,7 @@ declare namespace Isc {
 		 * in addition to this property.
 		 * Flags: IRW
 		 */
-		readonly hoverDelay?: Integer;
+		 hoverDelay?: Integer;
 		 // ref="attr:ListGridField.hoverWidth"
 		/**
 		 * Specifies the width of the canvas shown when the mouse hovers over cells in this field. 
@@ -10505,7 +10505,7 @@ declare namespace Isc {
 		 * If unset, default behavior is derived from ListGrid.headerHoverWidth.
 		 * Flags: IRW
 		 */
-		readonly hoverWidth?: Integer;
+		 hoverWidth?: Integer;
 		 // ref="attr:ListGridField.hoverWrap"
 		/**
 		 * This property may be set to customize the wrap attribute for the
@@ -10515,7 +10515,7 @@ declare namespace Isc {
 		 * If unset, default behavior is derived from ListGrid.headerHoverWrap.
 		 * Flags: IRW
 		 */
-		readonly hoverWrap?: boolean /* Boolean */;
+		 hoverWrap?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.icon"
 		/**
 		 * (Read only) Optional icon to show next to the title for this field.
@@ -10530,7 +10530,7 @@ declare namespace Isc {
 		 * use ListGrid.setFieldIcon.
 		 * Flags: IR
 		 */
-		readonly icon?: SCImgURL;
+		 icon?: SCImgURL;
 		 // ref="attr:ListGridField.iconHeight"
 		/**
 		 * (Read only) If ListGridField.icon is specified, this property can be used to specify the
@@ -10542,21 +10542,21 @@ declare namespace Isc {
 		 * in the editor.
 		 * Flags: IR
 		 */
-		readonly iconHeight?: Integer;
+		 iconHeight?: Integer;
 		 // ref="attr:ListGridField.iconOrientation"
 		/**
 		 * (Read only) If this field is showing an icon, should it appear to the left or right of the title?
 		 * Valid options are "left" or "right"
 		 * Flags: IR
 		 */
-		readonly iconOrientation?: String;
+		 iconOrientation?: String;
 		 // ref="attr:ListGridField.icons"
 		/**
 		 * (Read only, Advanced) If this field is editable, this property can be used to specify
 		 * FormItem.icons','icons to be displayed in the editors displayed for this field
 		 * Flags: IRA, Group: editing
 		 */
-		readonly icons?: Array<FormItemIcon> /* Array of FormItemIcon Properties */;
+		 icons?: Array<FormItemIcon> /* Array of FormItemIcon Properties */;
 		 // ref="attr:ListGridField.iconSize"
 		/**
 		 * (Read only) If ListGridField.icon is specified, this property can be used to specify the
@@ -10564,20 +10564,20 @@ declare namespace Isc {
 		 * (See StatefulCanvas.iconSize)
 		 * Flags: IR
 		 */
-		readonly iconSize?: Integer;
+		 iconSize?: Integer;
 		 // ref="attr:ListGridField.iconSpacing"
 		/**
 		 * (Read only) Pixels between icon and title text.
 		 * Flags: IR, Group: buttonIcon
 		 */
-		readonly iconSpacing?: int;
+		 iconSpacing?: int;
 		 // ref="attr:ListGridField.iconVAlign"
 		/**
 		 * (Read only, Advanced) If this field is editable, this property will be passed to editors displayed for
 		 * cells within this field as FormItem.iconVAlign.
 		 * Flags: IRA, Group: editing
 		 */
-		readonly iconVAlign?: String;
+		 iconVAlign?: String;
 		 // ref="attr:ListGridField.iconWidth"
 		/**
 		 * (Read only) If ListGridField.icon is specified, this property can be used to specify the
@@ -10589,7 +10589,7 @@ declare namespace Isc {
 		 * in the editor.
 		 * Flags: IR
 		 */
-		readonly iconWidth?: Integer;
+		 iconWidth?: Integer;
 		 // ref="attr:ListGridField.ignoreKeyboardClicks"
 		/**
 		 * If the user is navigating through the grid using the keyboard, record click or double click
@@ -10603,7 +10603,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: events
 		 */
-		readonly ignoreKeyboardClicks?: boolean;
+		 ignoreKeyboardClicks?: boolean;
 		 // ref="attr:ListGridField.imageHeight"
 		/**
 		 * Height of image shown for fieldTypes image and imageFile in this field.
@@ -10613,7 +10613,7 @@ declare namespace Isc {
 		 * record.logoHeight will control the height of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageHeight?: number;
+		 imageHeight?: number;
 		 // ref="attr:ListGridField.imageSize"
 		/**
 		 * Size of images shown for fieldTypes image and imageFile in this field.
@@ -10624,7 +10624,7 @@ declare namespace Isc {
 		 * record.logoSize will control the size of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageSize?: number;
+		 imageSize?: number;
 		 // ref="attr:ListGridField.imageURLPrefix"
 		/**
 		 * (Advanced) If this field has type [ListGridFieldType] set to "image"
@@ -10635,7 +10635,7 @@ declare namespace Isc {
 		 * URL for the image.
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLPrefix?: String;
+		 imageURLPrefix?: String;
 		 // ref="attr:ListGridField.imageURLSuffix"
 		/**
 		 * (Advanced) If any cells in this field are showing a value icon (see: ListGridField.valueIcons)
@@ -10647,7 +10647,7 @@ declare namespace Isc {
 		 * FormItem.imageURLSuffix.
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLSuffix?: String;
+		 imageURLSuffix?: String;
 		 // ref="attr:ListGridField.imageWidth"
 		/**
 		 * Width of images shown for fieldTypes image and imageFile in this field.
@@ -10657,7 +10657,7 @@ declare namespace Isc {
 		 * record.logoWidth will control the width of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageWidth?: number;
+		 imageWidth?: number;
 		 // ref="attr:ListGridField.includeFrom"
 		/**
 		 * (Read only) Indicates this field's values should be fetched from another, related DataSource.
@@ -10698,7 +10698,7 @@ declare namespace Isc {
 		 * always included in server responses, avoiding the issue.
 		 * Flags: IR, Group: display_values
 		 */
-		readonly includeFrom?: String;
+		 includeFrom?: String;
 		 // ref="attr:ListGridField.includeInRecordSummary"
 		/**
 		 * (Read only) If a listGrid is showing a field of type summary, should this field be passed to the
@@ -10709,7 +10709,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly includeInRecordSummary?: boolean;
+		 includeInRecordSummary?: boolean;
 		 // ref="attr:ListGridField.includeInRecordSummaryFields"
 		/**
 		 * (Read only) If this listGrid has any fields of type "summary" and
@@ -10721,7 +10721,7 @@ declare namespace Isc {
 		 * record summary value calculations for summary fields who's name is included in this array.
 		 * Flags: IR
 		 */
-		readonly includeInRecordSummaryFields?: Array<FieldName> /* Array of FieldName */;
+		 includeInRecordSummaryFields?: Array<FieldName> /* Array of FieldName */;
 		 // ref="attr:ListGridField.initialValue"
 		/**
 		 * (Read only) In an editable ListGrid, initial value for this field when the user begins editing a new
@@ -10733,7 +10733,7 @@ declare namespace Isc {
 		 * initialValues argument.
 		 * Flags: IR, Group: editing
 		 */
-		readonly initialValue?: any /* Any */;
+		 initialValue?: any /* Any */;
 		 // ref="attr:ListGridField.inputFormat"
 		/**
 		 * (Advanced) For fields of type "date" or "datetime", if this is an editable
@@ -10741,7 +10741,7 @@ declare namespace Isc {
 		 * applied to the editor for this field.
 		 * Flags: IRWA
 		 */
-		readonly inputFormat?: DateInputFormat;
+		 inputFormat?: DateInputFormat;
 		 // ref="attr:ListGridField.isRemoveField"
 		/**
 		 * (Read only, Advanced) If set to true and ListGrid.canRemoveRecords is true, this field will be rendered
@@ -10752,7 +10752,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRA
 		 */
-		readonly isRemoveField?: boolean;
+		 isRemoveField?: boolean;
 		 // ref="attr:ListGridField.leaveHeaderMenuButtonSpace"
 		/**
 		 * (Advanced) If ListGrid.showHeaderMenuButton is true, when auto-fitting fields to
@@ -10768,7 +10768,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IWA, Group: headerMenuButton
 		 */
-		readonly leaveHeaderMenuButtonSpace?: boolean;
+		 leaveHeaderMenuButtonSpace?: boolean;
 		 // ref="attr:ListGridField.linkText"
 		/**
 		 * The HTML to display in cells of this field if the fieldType is set to link.
@@ -10777,28 +10777,28 @@ declare namespace Isc {
 		 * on a per-record basis via ListGridRecord.linkText.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly linkText?: String;
+		 linkText?: String;
 		 // ref="attr:ListGridField.linkTextProperty"
 		/**
 		 * Name of the property in a ListGridRecord that holds the HTML to display in cells of this
 		 * field if the fieldType is set to "link".
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly linkTextProperty?: String;
+		 linkTextProperty?: String;
 		 // ref="attr:ListGridField.linkURLPrefix"
 		/**
 		 * (Advanced) If this field has type [ListGridFieldType] set to "link",
 		 * setting this property will apply a standard prefix to the link URL for cells in this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLPrefix?: String;
+		 linkURLPrefix?: String;
 		 // ref="attr:ListGridField.linkURLSuffix"
 		/**
 		 * (Advanced) If this field has type [ListGridFieldType] set to "link",
 		 * setting this property will apply a standard suffix to the link URL for cells in this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLSuffix?: String;
+		 linkURLSuffix?: String;
 		 // ref="attr:ListGridField.maxWidth"
 		/**
 		 * When ListGrid.showHeader is false and a field is subject to autofitting (see
@@ -10807,7 +10807,7 @@ declare namespace Isc {
 		 * ListGridField.minWidth dominates this property.)
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly maxWidth?: Number;
+		 maxWidth?: Number;
 		 // ref="attr:ListGridField.minWidth"
 		/**
 		 * When a field is subject to autofitting (see ListGrid.autoFitFieldWidths), sets the
@@ -10819,7 +10819,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly minWidth?: Number;
+		 minWidth?: Number;
 		 // ref="attr:ListGridField.multiple"
 		/**
 		 * (Read only) Indicates that this field should always be Array-valued. This property will be
@@ -10831,7 +10831,7 @@ declare namespace Isc {
 		 * rather than setting the property directly on the ListGridField object.
 		 * Flags: IR, Group: editing
 		 */
-		readonly multiple?: boolean /* Boolean */;
+		 multiple?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.name"
 		/**
 		 * (Read only) Name of this field. Must be unique within this ListGrid as well as a valid JavaScript
@@ -10845,7 +10845,7 @@ declare namespace Isc {
 		 * ListGridField overriding those on the DataSourceField.
 		 * Flags: IR, Group: data
 		 */
-		readonly name?: FieldName;
+		 name?: FieldName;
 		 // ref="attr:ListGridField.operator"
 		/**
 		 * (Read only) This value is managed by the menu item titled ListGrid.filterUsingText','"Filter using"
@@ -10858,7 +10858,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: R
 		 */
-		readonly operator?: String;
+		 operator?: String;
 		 // ref="attr:ListGridField.optionCriteria"
 		/**
 		 * If ListGridField.optionDataSource is set for this ListGridField, criteria specified in this
@@ -10866,7 +10866,7 @@ declare namespace Isc {
 		 * determine data-value to display-value mappings
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly optionCriteria?: Criteria;
+		 optionCriteria?: Criteria;
 		 // ref="attr:ListGridField.optionDataSource"
 		/**
 		 * Derive a ValueMap by fetching records from another DataSource and extracting
@@ -10937,7 +10937,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly optionDataSource?: String;
+		 optionDataSource?: String;
 		 // ref="attr:ListGridField.optionFilterContext"
 		/**
 		 * (Read only) If this field has an optionDataSource specified and
@@ -10947,7 +10947,7 @@ declare namespace Isc {
 		 * server to return summary records.
 		 * Flags: IR, Group: display_values
 		 */
-		readonly optionFilterContext?: DSRequest /* DSRequest Properties */;
+		 optionFilterContext?: DSRequest /* DSRequest Properties */;
 		 // ref="attr:ListGridField.optionOperationId"
 		/**
 		 * (Read only) If this field has an optionDataSource specified and
@@ -10957,7 +10957,7 @@ declare namespace Isc {
 		 * dataSource.
 		 * Flags: IR, Group: display_values
 		 */
-		readonly optionOperationId?: String;
+		 optionOperationId?: String;
 		 // ref="attr:ListGridField.optionTextMatchStyle"
 		/**
 		 * (Read only) For fields with an ListGridField.optionDataSource, where
@@ -10967,7 +10967,7 @@ declare namespace Isc {
 		 * a basis for this field's valueMap.
 		 * Flags: IR, Group: display_values
 		 */
-		readonly optionTextMatchStyle?: TextMatchStyle;
+		 optionTextMatchStyle?: TextMatchStyle;
 		 // ref="attr:ListGridField.partialSummary"
 		/**
 		 * (Read only) Only applies to fields of type "summary".
@@ -10980,14 +10980,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly partialSummary?: boolean;
+		 partialSummary?: boolean;
 		 // ref="attr:ListGridField.prompt"
 		/**
 		 * (Read only) Causes a tooltip hover to appear on the header generated for this field (effectively
 		 * sets Canvas.prompt for the header).
 		 * Flags: IR
 		 */
-		readonly prompt?: HTMLString;
+		 prompt?: HTMLString;
 		 // ref="attr:ListGridField.recordSummaryFunction"
 		/**
 		 * (Read only) Only applies to fields of type "summary".
@@ -11008,7 +11008,7 @@ declare namespace Isc {
 		 * attributes.
 		 * Flags: IR
 		 */
-		readonly recordSummaryFunction?: RecordSummaryFunction;
+		 recordSummaryFunction?: RecordSummaryFunction;
 		 // ref="attr:ListGridField.required"
 		/**
 		 * When the user edits cells in this field, is this value required to be non-empty
@@ -11017,7 +11017,7 @@ declare namespace Isc {
 		 * DataSourceField, enabling both client and server side validation.
 		 * Flags: IRW, Group: gridValidation
 		 */
-		readonly required?: boolean /* Boolean */;
+		 required?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.selectCellTextOnClick"
 		/**
 		 * Should the cell content be natively selected (ready for copying to clip-board) 
@@ -11026,41 +11026,41 @@ declare namespace Isc {
 		 * See ListGrid.selectCellTextOnClick for more information.
 		 * Flags: IRW
 		 */
-		readonly selectCellTextOnClick?: boolean /* Boolean */;
+		 selectCellTextOnClick?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.shouldPrint"
 		/**
 		 * Whether this field should be included in the printable representation of the grid.
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: printing
 		 */
-		readonly shouldPrint?: boolean;
+		 shouldPrint?: boolean;
 		 // ref="attr:ListGridField.showAlternateStyle"
 		/**
 		 * (Advanced) When set to false, don't apply alternate-row styling to this field.
 		 * boolean - Null not allowed
 		 * Flags: IRWA
 		 */
-		readonly showAlternateStyle?: boolean;
+		 showAlternateStyle?: boolean;
 		 // ref="attr:ListGridField.showDefaultContextMenu"
 		/**
 		 * When set to false, this field will not show a context menu in its header.
 		 * Flags: IRW
 		 */
-		readonly showDefaultContextMenu?: boolean /* Boolean */;
+		 showDefaultContextMenu?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showDisabledIcon"
 		/**
 		 * (Read only) If using an icon for this button, whether to switch the icon image if the button becomes
 		 * disabled.
 		 * Flags: IR, Group: buttonIcon
 		 */
-		readonly showDisabledIcon?: boolean /* Boolean */;
+		 showDisabledIcon?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showDownIcon"
 		/**
 		 * (Read only) If using an icon for this button, whether to switch the icon image when the mouse goes
 		 * down on the button.
 		 * Flags: IR, Group: buttonIcon
 		 */
-		readonly showDownIcon?: boolean /* Boolean */;
+		 showDownIcon?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showFileInline"
 		/**
 		 * (Read only) For a field of type:"imageFile", indicates whether to stream the image and display it
@@ -11068,7 +11068,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showFileInline?: boolean;
+		 showFileInline?: boolean;
 		 // ref="attr:ListGridField.showFocusedIcon"
 		/**
 		 * (Read only) If using an icon for this button, whether to switch the icon image when the button
@@ -11079,7 +11079,7 @@ declare namespace Isc {
 		 * will be displayed
 		 * Flags: IR, Group: buttonIcon
 		 */
-		readonly showFocusedIcon?: boolean /* Boolean */;
+		 showFocusedIcon?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showGridSummary"
 		/**
 		 * (Read only) If ListGrid.showGridSummary is true, should this field show a summary value.
@@ -11089,7 +11089,7 @@ declare namespace Isc {
 		 * for the specified field type.
 		 * Flags: IR
 		 */
-		readonly showGridSummary?: boolean /* Boolean */;
+		 showGridSummary?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showGroupSummary"
 		/**
 		 * (Read only) If ListGrid.showGroupSummary is true, should this field show a summary value
@@ -11101,7 +11101,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showGroupSummary?: boolean;
+		 showGroupSummary?: boolean;
 		 // ref="attr:ListGridField.showHilitesInGroupSummary"
 		/**
 		 * Determines whether hiliting for this field is shown in a group summary.
@@ -11111,7 +11111,7 @@ declare namespace Isc {
 		 * ListGrid.showHilitesInGroupSummary property.
 		 * Flags: IRW
 		 */
-		readonly showHilitesInGroupSummary?: boolean /* Boolean */;
+		 showHilitesInGroupSummary?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showHover"
 		/**
 		 * Whether to show hovers for this field. The default hover will be the contents of the
@@ -11127,7 +11127,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly showHover?: boolean;
+		 showHover?: boolean;
 		 // ref="attr:ListGridField.showHoverComponents"
 		/**
 		 * (Advanced) When set to true and showHover is also true for the field, shows a widget hovering at 
@@ -11138,20 +11138,20 @@ declare namespace Isc {
 		 * Also supported at the ListGrid.showHoverComponents','ListGrid-level.
 		 * Flags: IRWA, Group: hoverComponents
 		 */
-		readonly showHoverComponents?: boolean /* Boolean */;
+		 showHoverComponents?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showRollOverIcon"
 		/**
 		 * (Read only) If using an icon for this button, whether to switch the icon image on mouse rollover.
 		 * Flags: IR, Group: buttonIcon
 		 */
-		readonly showRollOverIcon?: boolean /* Boolean */;
+		 showRollOverIcon?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showSelectedIcon"
 		/**
 		 * (Read only) If using an icon for this button, whether to switch the icon image when the button
 		 * becomes selected.
 		 * Flags: IR, Group: buttonIcon
 		 */
-		readonly showSelectedIcon?: boolean /* Boolean */;
+		 showSelectedIcon?: boolean | null /* Boolean */;
 		 // ref="attr:ListGridField.showTitle"
 		/**
 		 * This property may be set to false to explicitly suppress display of
@@ -11159,7 +11159,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly showTitle?: boolean;
+		 showTitle?: boolean;
 		 // ref="attr:ListGridField.showValueIconOnly"
 		/**
 		 * If this field has a valueIcons property specified, setting this property causes
@@ -11175,7 +11175,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly showValueIconOnly?: boolean;
+		 showValueIconOnly?: boolean;
 		 // ref="attr:ListGridField.sortByDisplayField"
 		/**
 		 * For a field with displayField configured, should client-side sorting
@@ -11184,7 +11184,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly sortByDisplayField?: boolean;
+		 sortByDisplayField?: boolean;
 		 // ref="attr:ListGridField.sortByMappedValue"
 		/**
 		 * If ListGridField.valueMap is set, and the grid is ListGrid.setSort','sorted
@@ -11195,7 +11195,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW
 		 */
-		readonly sortByMappedValue?: boolean;
+		 sortByMappedValue?: boolean;
 		 // ref="attr:ListGridField.sortDirection"
 		/**
 		 * Specifies the default sorting direction for this column. If specified on the
@@ -11207,14 +11207,14 @@ declare namespace Isc {
 		 * Overrides ListGrid.sortDirection
 		 * Flags: IRW, Group: sorting
 		 */
-		readonly sortDirection?: SortDirection;
+		 sortDirection?: SortDirection;
 		 // ref="attr:ListGridField.spannedHeaderBaseStyle"
 		/**
 		 * Custom base style to apply to this field's header button instead of
 		 * ListGrid.spannedHeaderBaseStyle when the grid is showing header spans.
 		 * Flags: IRW, Group: gridHeader
 		 */
-		readonly spannedHeaderBaseStyle?: CSSStyleName;
+		 spannedHeaderBaseStyle?: CSSStyleName;
 		 // ref="attr:ListGridField.summaryFunction"
 		/**
 		 * (Read only) If ListGrid.showGridSummary or ListGrid.showGroupSummary is true,
@@ -11227,7 +11227,7 @@ declare namespace Isc {
 		 * containing the resulting values.
 		 * Flags: IR
 		 */
-		readonly summaryFunction?: SummaryFunction | Array<SummaryFunction> /* SummaryFunction | Array of SummaryFunction */;
+		 summaryFunction?: SummaryFunction | Array<SummaryFunction> /* SummaryFunction | Array of SummaryFunction */;
 		 // ref="attr:ListGridField.summaryTitle"
 		/**
 		 * (Advanced) Optional long summary title for this field, provided in addition to
@@ -11239,7 +11239,7 @@ declare namespace Isc {
 		 * for showing/hiding the listGrid field when the user right-clicks on the ListGrid header.
 		 * Flags: IRWA, Group: appearance
 		 */
-		readonly summaryTitle?: String;
+		 summaryTitle?: String;
 		 // ref="attr:ListGridField.summaryValue"
 		/**
 		 * The value to display for a ListGridField when it appears in the ListGrid.summaryRow','summaryRow. The
@@ -11247,7 +11247,7 @@ declare namespace Isc {
 		 * the default is to show a blank value (a non-breaking space).
 		 * Flags: IRW
 		 */
-		readonly summaryValue?: HTMLString;
+		 summaryValue?: HTMLString;
 		 // ref="attr:ListGridField.summaryValueTitle"
 		/**
 		 * (Read only) If ListGrid.showGridSummary or ListGrid.showGroupSummary is true and the
@@ -11256,7 +11256,7 @@ declare namespace Isc {
 		 * ListGridField.title will show up in the summary.
 		 * Flags: IR
 		 */
-		readonly summaryValueTitle?: String;
+		 summaryValueTitle?: String;
 		 // ref="attr:ListGridField.suppressValueIcon"
 		/**
 		 * If this field has a valueIcons property specified, setting this property to true will
@@ -11268,7 +11268,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly suppressValueIcon?: boolean;
+		 suppressValueIcon?: boolean;
 		 // ref="attr:ListGridField.target"
 		/**
 		 * By default, clicking a link rendered by this item opens it in a new browser window. You
@@ -11281,7 +11281,7 @@ declare namespace Isc {
 		 * ListGrid.cellClick event is fired for the containing cell.
 		 * Flags: IRW
 		 */
-		readonly target?: String;
+		 target?: String;
 		 // ref="attr:ListGridField.timeFormatter"
 		/**
 		 * (Advanced) Time-format to apply to date type values within this field. If specified, any
@@ -11298,7 +11298,7 @@ declare namespace Isc {
 		 * edit this field as FormItem.timeFormatter.
 		 * Flags: IRWA, Group: appearance
 		 */
-		readonly timeFormatter?: TimeDisplayFormat;
+		 timeFormatter?: TimeDisplayFormat;
 		 // ref="attr:ListGridField.title"
 		/**
 		 * A title for this field, to display in the header for the field and in other
@@ -11315,14 +11315,14 @@ declare namespace Isc {
 		 * HTML for the field title.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly title?: String;
+		 title?: String;
 		 // ref="attr:ListGridField.type"
 		/**
 		 * (Read only) ListGrids picks a renderer for the view and edit mode of a field based on this attribute.
 		 * See ListGridFieldType for a summary of how types are rendered.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly type?: ListGridFieldType;
+		 type?: ListGridFieldType;
 		 // ref="attr:ListGridField.userFormula"
 		/**
 		 * Formula definition for this field.
@@ -11333,7 +11333,7 @@ declare namespace Isc {
 		 * ListGrid.formulaUpdated notification.
 		 * Flags: IRW
 		 */
-		readonly userFormula?: UserFormula;
+		 userFormula?: UserFormula;
 		 // ref="attr:ListGridField.userSummary"
 		/**
 		 * Summary definition for this field.
@@ -11344,7 +11344,7 @@ declare namespace Isc {
 		 * ListGrid.summaryUpdated notification.
 		 * Flags: IRW
 		 */
-		readonly userSummary?: UserSummary;
+		 userSummary?: UserSummary;
 		 // ref="attr:ListGridField.validateOnChange"
 		/**
 		 * If set to true, any ListGridField.validators for this field will be run whenever
@@ -11354,7 +11354,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: gridValidation
 		 */
-		readonly validateOnChange?: boolean;
+		 validateOnChange?: boolean;
 		 // ref="attr:ListGridField.validators"
 		/**
 		 * Array of Validator objects for this field. When the user edits cells in
@@ -11363,7 +11363,7 @@ declare namespace Isc {
 		 * DataSourceField, enabling both client and server side validation.
 		 * Flags: IRW, Group: gridValidation
 		 */
-		readonly validators?: Array<Validator> /* Array of Validator */;
+		 validators?: Array<Validator> /* Array of Validator */;
 		 // ref="attr:ListGridField.valueField"
 		/**
 		 * Specifies the ListGridField.optionDataSource field used to retrieve the stored
@@ -11372,7 +11372,7 @@ declare namespace Isc {
 		 * be applied to this field's editors.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly valueField?: String;
+		 valueField?: String;
 		 // ref="attr:ListGridField.valueIconHeight"
 		/**
 		 * Height for value icons for this listGrid field.
@@ -11380,14 +11380,14 @@ declare namespace Isc {
 		 * ListGridField.valueIconSize.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIconHeight?: number;
+		 valueIconHeight?: number;
 		 // ref="attr:ListGridField.valueIconLeftPadding"
 		/**
 		 * How much padding should there be on the left of valueIcons for this field
 		 * Overrides ListGrid.valueIconLeftPadding
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIconLeftPadding?: number;
+		 valueIconLeftPadding?: number;
 		 // ref="attr:ListGridField.valueIconOrientation"
 		/**
 		 * If we're showing a valueIcon for this field should it appear to the left or the right
@@ -11396,14 +11396,14 @@ declare namespace Isc {
 		 * Has no effect if ListGridField.showValueIconOnly is true
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIconOrientation?: String;
+		 valueIconOrientation?: String;
 		 // ref="attr:ListGridField.valueIconRightPadding"
 		/**
 		 * How much padding should there be on the right of valueIcons for this field
 		 * Overrides ListGrid.valueIconRightPadding
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIconRightPadding?: number;
+		 valueIconRightPadding?: number;
 		 // ref="attr:ListGridField.valueIcons"
 		/**
 		 * This property is a mapping from data values for this field to SCImgURL','urls for
@@ -11458,7 +11458,7 @@ declare namespace Isc {
 		 * method will execute when the user clicks the icon.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIcons?: Map<String,String>;
+		 valueIcons?: Map<String,String>;
 		 // ref="attr:ListGridField.valueIconSize"
 		/**
 		 * Default width and height of value icons in this field.
@@ -11467,7 +11467,7 @@ declare namespace Isc {
 		 * Can be overridden via ListGridField.valueIconWidth and {ListGridField.valueIconHeight}
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIconSize?: number;
+		 valueIconSize?: number;
 		 // ref="attr:ListGridField.valueIconWidth"
 		/**
 		 * Width for value icons for this listGrid field.
@@ -11475,7 +11475,7 @@ declare namespace Isc {
 		 * ListGridField.valueIconSize.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly valueIconWidth?: number;
+		 valueIconWidth?: number;
 		 // ref="attr:ListGridField.valueMap"
 		/**
 		 * Array of legal values for this field, or an Object where each property maps a stored
@@ -11487,7 +11487,7 @@ declare namespace Isc {
 		 * See also DataSourceField.valueMap.
 		 * Flags: IRW, Group: display_values
 		 */
-		readonly valueMap?: Object | Array<String> /* Object | Array of String */;
+		 valueMap?: Object | Array<String> /* Object | Array of String */;
 		 // ref="attr:ListGridField.width"
 		/**
 		 * The width of this field, specified as either an absolute number of pixels,
@@ -11509,7 +11509,7 @@ declare namespace Isc {
 		 * the ListGrid is drawn.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly width?: Number | String;
+		 width?: Number | String;
 		 // ref="attr:ListGridField.wrap"
 		/**
 		 * Should the field title wrap if there is not enough space horizontally to accommodate it.
@@ -11523,7 +11523,7 @@ declare namespace Isc {
 		 * clipHeaderTitles will be disabled for wrapping fields.
 		 * Flags: IRW
 		 */
-		readonly wrap?: boolean /* Boolean */;
+		 wrap?: boolean | null /* Boolean */;
 
 		/* Instance Method Overrides */
 		/**  
@@ -11562,9 +11562,9 @@ declare namespace Isc {
 		 * - the rowNum being edited [item.rowNum]
 		 * @param {any} value - The new value of the form item
 		 * @param {any} oldValue - The previous value of the form item
-		 * @return {boolean} The change may be cancelled by returning false
+		 * @return {boolean | null} The change may be cancelled by returning false
 		 */
-		change?(form:DynamicForm, item:FormItem, value:any /* Any */, oldValue:any /* Any */): boolean /* Boolean */; 
+		change?(form:DynamicForm, item:FormItem, value:any /* Any */, oldValue:any /* Any */): boolean | null /* Boolean */; 
 
 		/**  
 		 *  If this field is editable, any FormItem.changed','changed handler specified
@@ -11995,7 +11995,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRA
 		 */
-		readonly canAcceptDrop?: boolean;
+		 canAcceptDrop?: boolean;
 		 // ref="attr:TreeNode.canDrag"
 		/**
 		 * (Read only, Advanced) Governs whether this node can be dragged. Only has an effect if this node is displayed in
@@ -12004,7 +12004,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRA
 		 */
-		readonly canDrag?: boolean;
+		 canDrag?: boolean;
 		 // ref="attr:TreeNode.children"
 		/**
 		 * For trees with the modelType "children", this property specifies the children of this
@@ -12013,7 +12013,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.childrenProperty
 		 * Flags: IRW
 		 */
-		readonly children?: Array<TreeNode> /* List of TreeNode */;
+		 children?: Array<TreeNode> /* List of TreeNode */;
 		 // ref="attr:TreeNode.enabled"
 		/**
 		 * (Read only) Default property name denoting whether this record is enabled. Property name may be
@@ -12021,7 +12021,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly enabled?: boolean;
+		 enabled?: boolean;
 		 // ref="attr:TreeNode.icon"
 		/**
 		 * This Property allows the developer to customize the icon displayed next to a node.
@@ -12036,7 +12036,7 @@ declare namespace Isc {
 		 * TreeGrid.customIconProperty.
 		 * Flags: IRW, Group: treeIcons
 		 */
-		readonly icon?: SCImgURL;
+		 icon?: SCImgURL;
 		 // ref="attr:TreeNode.id"
 		/**
 		 * (Read only) Specifies the unique ID of this node. 
@@ -12048,7 +12048,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.idField.
 		 * Flags: IR
 		 */
-		readonly id?: String | Number;
+		 id?: String | Number;
 		 // ref="attr:TreeNode.isFolder"
 		/**
 		 * (Read only) Set to true or a string that is not equal to (ignoring case)
@@ -12058,7 +12058,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.isFolderProperty.
 		 * Flags: IR
 		 */
-		readonly isFolder?: boolean | String /* Boolean | String */;
+		 isFolder?: boolean | null | String /* Boolean | String */;
 		 // ref="attr:TreeNode.name"
 		/**
 		 * (Read only) Provides a name for the node that is unique among its immediate siblings, thus allowing a
@@ -12081,7 +12081,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.nameProperty.
 		 * Flags: IR
 		 */
-		readonly name?: String;
+		 name?: String;
 		 // ref="attr:TreeNode.parentId"
 		/**
 		 * (Read only) For trees with modelType:"parent", this property specifies the unique ID of this node's 
@@ -12092,7 +12092,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.parentIdField.
 		 * Flags: IR
 		 */
-		readonly parentId?: String | Number;
+		 parentId?: String | Number;
 		 // ref="attr:TreeNode.showDropIcon"
 		/**
 		 * (Advanced) For folder nodes showing custom icons (set via TreeNode.icon),
@@ -12107,7 +12107,7 @@ declare namespace Isc {
 		 * TreeGrid.customIconDropProperty.
 		 * Flags: IRWA, Group: treeIcons
 		 */
-		readonly showDropIcon?: boolean /* Boolean */;
+		 showDropIcon?: boolean | null /* Boolean */;
 		 // ref="attr:TreeNode.showOpenIcon"
 		/**
 		 * (Advanced) For folder nodes showing custom icons (set via TreeNode.icon),
@@ -12121,7 +12121,7 @@ declare namespace Isc {
 		 * TreeGrid.customIconOpenProperty.
 		 * Flags: IRWA, Group: treeIcons
 		 */
-		readonly showOpenIcon?: boolean /* Boolean */;
+		 showOpenIcon?: boolean | null /* Boolean */;
 		 // ref="attr:TreeNode.showSelectedIcon"
 		/**
 		 * (Advanced) For folder nodes showing custom icons (set via TreeNode.icon),
@@ -12135,7 +12135,7 @@ declare namespace Isc {
 		 * TreeGrid.customIconSelectedProperty.
 		 * Flags: IRWA, Group: treeIcons
 		 */
-		readonly showSelectedIcon?: boolean /* Boolean */;
+		 showSelectedIcon?: boolean | null /* Boolean */;
 		 // ref="attr:TreeNode.title"
 		/**
 		 * (Read only) The title of the node as it should appear next to the node icon in the Tree. If left
@@ -12145,7 +12145,7 @@ declare namespace Isc {
 		 * Note: the name of this property can be changed by setting Tree.titleProperty.
 		 * Flags: IR
 		 */
-		readonly title?: HTMLString;
+		 title?: HTMLString;
 	} // TreeNode
 
 	export interface TreeNodeStatic {
@@ -12254,7 +12254,7 @@ declare namespace Isc {
 		 * more detail.
 		 * Flags: IRWA, Group: advancedFilter
 		 */
-		readonly strictSQLFiltering?: boolean /* Boolean */;
+		 strictSQLFiltering?: boolean | null /* Boolean */;
 	} // AdvancedCriteria
 
 	export interface AdvancedCriteriaStatic extends CriterionStatic {
@@ -12276,7 +12276,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly backgroundColor?: String;
+		 backgroundColor?: String;
 		 // ref="attr:CalendarEvent.borderColor"
 		/**
 		 * An optional border color for the body portion of EventCanvas','canvases
@@ -12287,7 +12287,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly borderColor?: String;
+		 borderColor?: String;
 		 // ref="attr:CalendarEvent.canDrag"
 		/**
 		 * Optional boolean value controlling whether this event can be dragged with the mouse.
@@ -12298,7 +12298,7 @@ declare namespace Isc {
 		 * You can separately disallow drag-resize via CalendarEvent.canResize','canResize.
 		 * Flags: IRW
 		 */
-		readonly canDrag?: boolean /* Boolean */;
+		 canDrag?: boolean | null /* Boolean */;
 		 // ref="attr:CalendarEvent.canEdit"
 		/**
 		 * Optional boolean value controlling the editability of this particular calendarEvent.
@@ -12306,7 +12306,7 @@ declare namespace Isc {
 		 * Calendar.canEditField.
 		 * Flags: IRW
 		 */
-		readonly canEdit?: boolean /* Boolean */;
+		 canEdit?: boolean | null /* Boolean */;
 		 // ref="attr:CalendarEvent.canEditLane"
 		/**
 		 * Boolean indicating whether this event can be moved between lanes. Can also be set at the
@@ -12316,7 +12316,7 @@ declare namespace Isc {
 		 * Calendar.canEditLaneField.
 		 * Flags: IRW
 		 */
-		readonly canEditLane?: boolean /* Boolean */;
+		 canEditLane?: boolean | null /* Boolean */;
 		 // ref="attr:CalendarEvent.canEditSublane"
 		/**
 		 * Boolean indicating whether this event can be moved between lanes. Can also be set at the
@@ -12326,7 +12326,7 @@ declare namespace Isc {
 		 * Calendar.canEditSublaneField.
 		 * Flags: IRW
 		 */
-		readonly canEditSublane?: boolean /* Boolean */;
+		 canEditSublane?: boolean | null /* Boolean */;
 		 // ref="attr:CalendarEvent.canResize"
 		/**
 		 * Optional boolean value controlling whether this event can be drag-resized with the mouse.
@@ -12337,7 +12337,7 @@ declare namespace Isc {
 		 * Calendar.canDragEvents','dragging are also enabled.
 		 * Flags: IRW
 		 */
-		readonly canResize?: boolean /* Boolean */;
+		 canResize?: boolean | null /* Boolean */;
 		 // ref="attr:CalendarEvent.description"
 		/**
 		 * String which represents the description of a CalendarEvent
@@ -12345,7 +12345,7 @@ declare namespace Isc {
 		 * Calendar.descriptionField
 		 * Flags: IRW
 		 */
-		readonly description?: String;
+		 description?: String;
 		 // ref="attr:CalendarEvent.duration"
 		/**
 		 * The duration of this event. May be specified instead of an 
@@ -12353,14 +12353,14 @@ declare namespace Isc {
 		 * set to zero, implies an "Instant" type event - an event with a start date but no length.
 		 * Flags: IRW
 		 */
-		readonly duration?: Integer;
+		 duration?: Integer;
 		 // ref="attr:CalendarEvent.durationUnit"
 		/**
 		 * When a CalendarEvent.duration','duration is set for this event, this is the unit of
 		 * that duration. The default is minutes.
 		 * Flags: IRW
 		 */
-		readonly durationUnit?: TimeUnit;
+		 durationUnit?: TimeUnit;
 		 // ref="attr:CalendarEvent.endDate"
 		/**
 		 * Date object which represents the end date of a CalendarEvent
@@ -12368,7 +12368,7 @@ declare namespace Isc {
 		 * Calendar.endDateField
 		 * Flags: IRW
 		 */
-		readonly endDate?: Date;
+		 endDate?: Date;
 		 // ref="attr:CalendarEvent.eventWindowStyle"
 		/**
 		 * (Read only) CSS style series to use for the draggable event window that represents this event. If
@@ -12378,7 +12378,7 @@ declare namespace Isc {
 		 * Calendar.eventWindowStyleField
 		 * Flags: IR
 		 */
-		readonly eventWindowStyle?: CSSStyleName;
+		 eventWindowStyle?: CSSStyleName;
 		 // ref="attr:CalendarEvent.headerBackgroundColor"
 		/**
 		 * An optional background color for the header portion of EventCanvas','canvases
@@ -12389,7 +12389,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly headerBackgroundColor?: String;
+		 headerBackgroundColor?: String;
 		 // ref="attr:CalendarEvent.headerBorderColor"
 		/**
 		 * An optional border color for the header portion of EventCanvas','canvases
@@ -12400,7 +12400,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly headerBorderColor?: String;
+		 headerBorderColor?: String;
 		 // ref="attr:CalendarEvent.headerTextColor"
 		/**
 		 * An optional text color for the header portion of EventCanvas','canvases
@@ -12411,7 +12411,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly headerTextColor?: String;
+		 headerTextColor?: String;
 		 // ref="attr:CalendarEvent.lane"
 		/**
 		 * When in Timeline mode, or when Calendar.showDayLanes is true, a string that 
@@ -12420,7 +12420,7 @@ declare namespace Isc {
 		 * Calendar.laneNameField.
 		 * Flags: IRW
 		 */
-		readonly lane?: String;
+		 lane?: String;
 		 // ref="attr:CalendarEvent.name"
 		/**
 		 * String which represents the name of a CalendarEvent
@@ -12428,7 +12428,7 @@ declare namespace Isc {
 		 * Calendar.nameField
 		 * Flags: IRW
 		 */
-		readonly name?: String;
+		 name?: String;
 		 // ref="attr:CalendarEvent.startDate"
 		/**
 		 * Date object which represents the start date of a CalendarEvent.
@@ -12436,7 +12436,7 @@ declare namespace Isc {
 		 * Calendar.startDateField
 		 * Flags: IRW
 		 */
-		readonly startDate?: Date;
+		 startDate?: Date;
 		 // ref="attr:CalendarEvent.styleName"
 		/**
 		 * (Read only) CSS style series to use for Calendar.eventCanvas','canvas instances that 
@@ -12451,7 +12451,7 @@ declare namespace Isc {
 		 * Calendar.eventStyleNameField
 		 * Flags: IR
 		 */
-		readonly styleName?: CSSStyleName;
+		 styleName?: CSSStyleName;
 		 // ref="attr:CalendarEvent.sublane"
 		/**
 		 * When in Timeline mode, or when Calendar.showDayLanes is true, a string that 
@@ -12460,7 +12460,7 @@ declare namespace Isc {
 		 * Calendar.sublaneNameField.
 		 * Flags: IRW
 		 */
-		readonly sublane?: String;
+		 sublane?: String;
 		 // ref="attr:CalendarEvent.textColor"
 		/**
 		 * An optional text color for the body portion of EventCanvas','canvases
@@ -12471,7 +12471,7 @@ declare namespace Isc {
 		 * of both header and body portions.
 		 * Flags: IRW
 		 */
-		readonly textColor?: String;
+		 textColor?: String;
 	} // CalendarEvent
 
 	export interface CalendarEventStatic {
@@ -12493,7 +12493,7 @@ declare namespace Isc {
 		 * (StretchImg.vertical is true).
 		 * Flags: IR
 		 */
-		readonly height?: number | String;
+		 height?: number | String;
 		 // ref="attr:StretchItem.name"
 		/**
 		 * (Read only) A string that is appended as a suffix to the StretchImg's StretchImg.src','src
@@ -12505,13 +12505,13 @@ declare namespace Isc {
 		 * and a name of "stretch", the resulting URL would be "button_Over_stretch.png".
 		 * Flags: IR
 		 */
-		readonly name?: String;
+		 name?: String;
 		 // ref="attr:StretchItem.src"
 		/**
 		 * (Read only) The URL of the media file for this StretchItem.
 		 * Flags: IR
 		 */
-		readonly src?: SCImgURL;
+		 src?: SCImgURL;
 		 // ref="attr:StretchItem.width"
 		/**
 		 * (Read only) The width of the image. This can either be a number (for the number of pixels wide), the string
@@ -12522,7 +12522,7 @@ declare namespace Isc {
 		 * (StretchImg.vertical is false).
 		 * Flags: IR
 		 */
-		readonly width?: number | String;
+		 width?: number | String;
 	} // StretchItem
 
 	export interface StretchItemStatic {
@@ -12538,20 +12538,20 @@ declare namespace Isc {
 		 * The format of the file, e.g. "xml" or "js"
 		 * Flags: IRW
 		 */
-		readonly fileFormat?: String;
+		 fileFormat?: String;
 		 // ref="attr:FileSpec.fileName"
 		/**
 		 * The name of the file, without any extension to indicate FileSpec.fileType','type or
 		 * FileSpec.fileFormat','format.
 		 * Flags: IRW
 		 */
-		readonly fileName?: String;
+		 fileName?: String;
 		 // ref="attr:FileSpec.fileType"
 		/**
 		 * The type of the file, e.g. "ds" for datasource, or "proj" for project.
 		 * Flags: IRW
 		 */
-		readonly fileType?: String;
+		 fileType?: String;
 	} // FileSpec
 
 	export interface FileSpecStatic {
@@ -12570,7 +12570,7 @@ declare namespace Isc {
 		 * year starts.
 		 * Flags: IRW
 		 */
-		readonly date?: Integer;
+		 date?: Integer;
 		 // ref="attr:FiscalYear.fiscalYear"
 		/**
 		 * The actual fiscal year that this date relates to.
@@ -12584,19 +12584,19 @@ declare namespace Isc {
 		 * FiscalYear.year would be set to 2019
 		 * Flags: IRW
 		 */
-		readonly fiscalYear?: Integer;
+		 fiscalYear?: Integer;
 		 // ref="attr:FiscalYear.month"
 		/**
 		 * The zero-based month-number when this fiscal year starts.
 		 * Flags: IRW
 		 */
-		readonly month?: Integer;
+		 month?: Integer;
 		 // ref="attr:FiscalYear.year"
 		/**
 		 * The 4-digit calendar year when this fiscal year starts.
 		 * Flags: IRW
 		 */
-		readonly year?: Integer;
+		 year?: Integer;
 	} // FiscalYear
 
 	export interface FiscalYearStatic {
@@ -12616,7 +12616,7 @@ declare namespace Isc {
 		 * canExport: false.
 		 * Flags: IR
 		 */
-		readonly canExport?: boolean /* Boolean */;
+		 canExport?: boolean | null /* Boolean */;
 		 // ref="attr:DetailViewerField.canHilite"
 		/**
 		 * Determines whether this field can be hilited. Set to false to prevent this
@@ -12624,20 +12624,20 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly canHilite?: boolean;
+		 canHilite?: boolean;
 		 // ref="attr:DetailViewerField.cellStyle"
 		/**
 		 * If specified, cells in this field will be rendered using this css className rather than
 		 * DetailViewer.cellStyle
 		 * Flags: IRW
 		 */
-		readonly cellStyle?: CSSStyleName;
+		 cellStyle?: CSSStyleName;
 		 // ref="attr:DetailViewerField.dataPath"
 		/**
 		 * (Read only, Advanced) dataPath property allows this field to display detail from nested data structures
 		 * Flags: IRA
 		 */
-		readonly dataPath?: String;
+		 dataPath?: String;
 		 // ref="attr:DetailViewerField.dateFormatter"
 		/**
 		 * Display format to use for date type values within this field. 
@@ -12657,7 +12657,7 @@ declare namespace Isc {
 		 * DateDisplayFormat to change the format used by this item.
 		 * Flags: IRW
 		 */
-		readonly dateFormatter?: DateDisplayFormat;
+		 dateFormatter?: DateDisplayFormat;
 		 // ref="attr:DetailViewerField.decimalPad"
 		/**
 		 * Applies only to fields of type "float" and enforces a minimum number of digits shown after
@@ -12669,7 +12669,7 @@ declare namespace Isc {
 		 * The original unpadded value is always shown when the value is edited.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly decimalPad?: number;
+		 decimalPad?: number;
 		 // ref="attr:DetailViewerField.decimalPrecision"
 		/**
 		 * Applies only to fields of type "float" and affects how many significant digits are shown.
@@ -12682,7 +12682,7 @@ declare namespace Isc {
 		 * A number is always shown with its original precision when edited.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly decimalPrecision?: number;
+		 decimalPrecision?: number;
 		 // ref="attr:DetailViewerField.displayField"
 		/**
 		 * (Read only) If displayField is defined for the field then the DetailViewer will
@@ -12690,7 +12690,7 @@ declare namespace Isc {
 		 * given by the DetailViewerField.name of the field.
 		 * Flags: IR
 		 */
-		readonly displayField?: String;
+		 displayField?: String;
 		 // ref="attr:DetailViewerField.emptyCellValue"
 		/**
 		 * (Read only) The value to display for a cell whose value is null or the empty
@@ -12700,7 +12700,7 @@ declare namespace Isc {
 		 * level to define the emptyCellValue for all empty fields in the viewer.
 		 * Flags: IR, Group: appearance
 		 */
-		readonly emptyCellValue?: HTMLString;
+		 emptyCellValue?: HTMLString;
 		 // ref="attr:DetailViewerField.escapeHTML"
 		/**
 		 * (Read only) By default HTML values in DetailViewer cells will be interpreted by the browser.
@@ -12710,14 +12710,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly escapeHTML?: boolean;
+		 escapeHTML?: boolean;
 		 // ref="attr:DetailViewerField.exportFormat"
 		/**
 		 * (Read only) FormatString used during exports for numeric or date formatting. See
 		 * DataSourceField.exportFormat.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly exportFormat?: FormatString;
+		 exportFormat?: FormatString;
 		 // ref="attr:DetailViewerField.exportRawValues"
 		/**
 		 * (Read only) Dictates whether the data in this field should be exported raw by
@@ -12725,20 +12725,20 @@ declare namespace Isc {
 		 * field, the values in the field-formatters will not be executed for data in this field.
 		 * Flags: IR
 		 */
-		readonly exportRawValues?: boolean /* Boolean */;
+		 exportRawValues?: boolean | null /* Boolean */;
 		 // ref="attr:DetailViewerField.format"
 		/**
 		 * (Read only) FormatString for numeric or date formatting. See DataSourceField.format.
 		 * Flags: IR, Group: exportFormatting
 		 */
-		readonly format?: FormatString;
+		 format?: FormatString;
 		 // ref="attr:DetailViewerField.height"
 		/**
 		 * (Read only) For DetailViewerField.type: "separator", this attribute specifies
 		 * the height of the separator.
 		 * Flags: IR
 		 */
-		readonly height?: Number;
+		 height?: Number;
 		 // ref="attr:DetailViewerField.hiliteIconHeight"
 		/**
 		 * Height for hilite icons for this field.
@@ -12746,7 +12746,7 @@ declare namespace Isc {
 		 * DetailViewerField.hiliteIconSize.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconHeight?: number;
+		 hiliteIconHeight?: number;
 		 // ref="attr:DetailViewerField.hiliteIconLeftPadding"
 		/**
 		 * How much padding should there be on the left of DetailViewer.hiliteIcons','hilite icons 
@@ -12754,7 +12754,7 @@ declare namespace Isc {
 		 * Overrides DetailViewer.hiliteIconLeftPadding
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconLeftPadding?: number;
+		 hiliteIconLeftPadding?: number;
 		 // ref="attr:DetailViewerField.hiliteIconPosition"
 		/**
 		 * (Read only) When DetailViewer.hiliteIcons are present, where the hilite icon will be placed 
@@ -12762,7 +12762,7 @@ declare namespace Isc {
 		 * Overrides DetailViewer.hiliteIconPosition
 		 * Flags: IR, Group: hiliting
 		 */
-		readonly hiliteIconPosition?: HiliteIconPosition;
+		 hiliteIconPosition?: HiliteIconPosition;
 		 // ref="attr:DetailViewerField.hiliteIconRightPadding"
 		/**
 		 * How much padding should there be on the right of DetailViewer.hiliteIcons','hilite icons 
@@ -12770,7 +12770,7 @@ declare namespace Isc {
 		 * Overrides DetailViewer.hiliteIconRightPadding
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconRightPadding?: number;
+		 hiliteIconRightPadding?: number;
 		 // ref="attr:DetailViewerField.hiliteIconSize"
 		/**
 		 * Default width and height of DetailViewer.hiliteIcons','hilite icons in this field.
@@ -12779,7 +12779,7 @@ declare namespace Isc {
 		 * Can be overridden via DetailViewerField.hiliteIconWidth','hiliteIconWidth and DetailViewerField.hiliteIconHeight','hiliteIconHeight
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconSize?: number;
+		 hiliteIconSize?: number;
 		 // ref="attr:DetailViewerField.hiliteIconWidth"
 		/**
 		 * Width for hilite icons for this field.
@@ -12787,7 +12787,7 @@ declare namespace Isc {
 		 * DetailViewerField.hiliteIconSize.
 		 * Flags: IRW, Group: hiliting
 		 */
-		readonly hiliteIconWidth?: number;
+		 hiliteIconWidth?: number;
 		 // ref="attr:DetailViewerField.imageHeight"
 		/**
 		 * Height of image shown for fieldTypes image in this field.
@@ -12797,7 +12797,7 @@ declare namespace Isc {
 		 * record.logoHeight will control the height of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageHeight?: Integer | String;
+		 imageHeight?: Integer | String;
 		 // ref="attr:DetailViewerField.imageSize"
 		/**
 		 * Size of images shown for fieldTypes image in this field.
@@ -12807,7 +12807,7 @@ declare namespace Isc {
 		 * record.logoSize will control the size of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageSize?: Integer | String;
+		 imageSize?: Integer | String;
 		 // ref="attr:DetailViewerField.imageURLPrefix"
 		/**
 		 * (Advanced) If this field has type set to "image"
@@ -12815,7 +12815,7 @@ declare namespace Isc {
 		 * to this string
 		 * Flags: IRWA, Group: imageColumns
 		 */
-		readonly imageURLPrefix?: String;
+		 imageURLPrefix?: String;
 		 // ref="attr:DetailViewerField.imageWidth"
 		/**
 		 * Width of images shown for fieldTypes image in this field.
@@ -12825,7 +12825,7 @@ declare namespace Isc {
 		 * record.logoWidth will control the width of the image.
 		 * Flags: IRW, Group: imageColumns
 		 */
-		readonly imageWidth?: Integer | String;
+		 imageWidth?: Integer | String;
 		 // ref="attr:DetailViewerField.includeFrom"
 		/**
 		 * (Read only) Indicates this field's values come from another, related DataSource. 
@@ -12834,7 +12834,7 @@ declare namespace Isc {
 		 * fields from the primary DataSource.
 		 * Flags: IR
 		 */
-		readonly includeFrom?: String;
+		 includeFrom?: String;
 		 // ref="attr:DetailViewerField.linkText"
 		/**
 		 * The HTML to display for values of this field if the field type is set to "link". 
@@ -12843,28 +12843,28 @@ declare namespace Isc {
 		 * on a per-record basis via DetailViewerRecord.linkText.
 		 * Flags: IRW
 		 */
-		readonly linkText?: String;
+		 linkText?: String;
 		 // ref="attr:DetailViewerField.linkTextProperty"
 		/**
 		 * Name of the property in a DetailViewerRecord that holds the HTML to display for values
 		 * of this field if the field type is set to "link".
 		 * Flags: IRW
 		 */
-		readonly linkTextProperty?: String;
+		 linkTextProperty?: String;
 		 // ref="attr:DetailViewerField.linkURLPrefix"
 		/**
 		 * (Advanced) If this field has type set to "link", setting this property will apply a
 		 * standard prefix to the link URL when displaying values of this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLPrefix?: String;
+		 linkURLPrefix?: String;
 		 // ref="attr:DetailViewerField.linkURLSuffix"
 		/**
 		 * (Advanced) If this field has type set to "link", setting this property will apply a
 		 * standard suffix to the link URL when displaying values of this field.
 		 * Flags: IRWA
 		 */
-		readonly linkURLSuffix?: String;
+		 linkURLSuffix?: String;
 		 // ref="attr:DetailViewerField.name"
 		/**
 		 * (Read only) Name property used to identify the field, and determines which attribute from
@@ -12877,7 +12877,7 @@ declare namespace Isc {
 		 * DetailViewerField.displayField.
 		 * Flags: IR
 		 */
-		readonly name?: FieldName;
+		 name?: FieldName;
 		 // ref="attr:DetailViewerField.printCellStyle"
 		/**
 		 * If specified, when generating print HTML for this detailViewer, 
@@ -12885,7 +12885,7 @@ declare namespace Isc {
 		 * DetailViewer.printCellStyle
 		 * Flags: IRW
 		 */
-		readonly printCellStyle?: CSSStyleName;
+		 printCellStyle?: CSSStyleName;
 		 // ref="attr:DetailViewerField.showFileInline"
 		/**
 		 * (Read only) For a field of type:"imageFile", indicates whether to stream the image and display it
@@ -12893,7 +12893,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly showFileInline?: boolean;
+		 showFileInline?: boolean;
 		 // ref="attr:DetailViewerField.target"
 		/**
 		 * By default, clicking a link rendered by this item opens it in a new browser window. You 
@@ -12902,7 +12902,7 @@ declare namespace Isc {
 		 * the link. target is applicable only if the field type is set to "link".
 		 * Flags: IRW
 		 */
-		readonly target?: String;
+		 target?: String;
 		 // ref="attr:DetailViewerField.timeFormatter"
 		/**
 		 * (Advanced) Time-format to apply to date type values within this field. If specified, any
@@ -12916,7 +12916,7 @@ declare namespace Isc {
 		 * of type "time".
 		 * Flags: IRWA, Group: appearance
 		 */
-		readonly timeFormatter?: TimeDisplayFormat;
+		 timeFormatter?: TimeDisplayFormat;
 		 // ref="attr:DetailViewerField.title"
 		/**
 		 * (Read only) The title of the field as displayed on the left-hand side. If left unspecified, the
@@ -12925,7 +12925,7 @@ declare namespace Isc {
 		 * is the value of its "name" property.
 		 * Flags: IR
 		 */
-		readonly title?: HTMLString;
+		 title?: HTMLString;
 		 // ref="attr:DetailViewerField.type"
 		/**
 		 * (Read only) Specifies the type of this DetailViewerField. By default (value is null)
@@ -12956,21 +12956,21 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly type?: String;
+		 type?: String;
 		 // ref="attr:DetailViewerField.value"
 		/**
 		 * (Read only) When a field specifies its DetailViewerField.type to be "header", the value of
 		 * this attribute specifies the header text.
 		 * Flags: IR
 		 */
-		readonly value?: HTMLString;
+		 value?: HTMLString;
 		 // ref="attr:DetailViewerField.valueMap"
 		/**
 		 * (Read only) A property list (or an expression that evaluates to a property list)
 		 * specifying a mapping of internal values to display values for the field (row).
 		 * Flags: IR
 		 */
-		readonly valueMap?: Object;
+		 valueMap?: Object;
 
 		/* Instance Method Overrides */
 		/**  
@@ -13039,13 +13039,13 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly emptyTestValue?: boolean;
+		 emptyTestValue?: boolean;
 		 // ref="attr:TestFunctionResult.errorText"
 		/**
 		 * If the formula or summary format caused a JavaScript error, this contains the JavaScript error text.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly errorText?: String;
+		 errorText?: String;
 		 // ref="attr:TestFunctionResult.failedExecution"
 		/**
 		 * Set to true if calling the formula or summary format resulted in a JavaScript Error.
@@ -13056,7 +13056,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly failedExecution?: boolean;
+		 failedExecution?: boolean;
 		 // ref="attr:TestFunctionResult.failedGeneration"
 		/**
 		 * Set to true if there is a syntax error in the formula or summary being checked.
@@ -13065,21 +13065,21 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly failedGeneration?: boolean;
+		 failedGeneration?: boolean;
 		 // ref="attr:TestFunctionResult.record"
 		/**
 		 * Set to the record that was used when testing the generated function. This is the record
 		 * selected by FormulaBuilder.getTestRecord.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly record?: Record;
+		 record?: Record;
 		 // ref="attr:TestFunctionResult.result"
 		/**
 		 * When a formula or summary format is valid, result contains the result returned by the
 		 * generated function when it was executed.
 		 * Flags: IRW, Group: formulaFields
 		 */
-		readonly result?: String;
+		 result?: String;
 	} // TestFunctionResult
 
 	export interface TestFunctionResultStatic {
@@ -13129,7 +13129,7 @@ declare namespace Isc {
 		 * title on hover, unless an explicit hover has been specified such as by Tab.prompt.
 		 * Flags: IR
 		 */
-		readonly canAdaptWidth?: boolean /* Boolean */;
+		 canAdaptWidth?: boolean | null /* Boolean */;
 		 // ref="attr:Tab.canClose"
 		/**
 		 * (Read only) Determines whether this tab should show a close icon allowing the user to dismiss the tab
@@ -13148,7 +13148,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canClose?: boolean;
+		 canClose?: boolean;
 		 // ref="attr:Tab.canEditTitle"
 		/**
 		 * (Read only) If specified, overrides the TabSet.canEditTabTitles setting, for this one tab
@@ -13163,7 +13163,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly canEditTitle?: boolean;
+		 canEditTitle?: boolean;
 		 // ref="attr:Tab.canReorder"
 		/**
 		 * (Read only) If TabSet.canReorderTabs is set to true, setting canReorder
@@ -13178,21 +13178,21 @@ declare namespace Isc {
 		 * drag reorder other tabs around it which may ultimately change its position.
 		 * Flags: IR
 		 */
-		readonly canReorder?: boolean /* Boolean */;
+		 canReorder?: boolean | null /* Boolean */;
 		 // ref="attr:Tab.closeIcon"
 		/**
 		 * (Read only) Custom src for the close icon for this tab to display if it is closeable.
 		 * See Tab.canClose and TabSet.canCloseTabs.
 		 * Flags: IR
 		 */
-		readonly closeIcon?: SCImgURL;
+		 closeIcon?: SCImgURL;
 		 // ref="attr:Tab.closeIconSize"
 		/**
 		 * (Read only) Size of the Tab.closeIcon for this tab. If unspecified the icon will be sized
 		 * according to TabSet.closeTabIconSize
 		 * Flags: IR
 		 */
-		readonly closeIconSize?: number;
+		 closeIconSize?: number;
 		 // ref="attr:Tab.disabled"
 		/**
 		 * (Read only) If specified, this tab will initially be rendered in a disabled state. To
@@ -13202,7 +13202,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly disabled?: boolean;
+		 disabled?: boolean;
 		 // ref="attr:Tab.enableWhen"
 		/**
 		 * (Read only) Criteria to be evaluated to determine whether this Tab should be enabled. Re-evaluated
@@ -13211,7 +13211,7 @@ declare namespace Isc {
 		 * It works the same as Canvas.enableWhen
 		 * Flags: IR, Group: ruleCriteria
 		 */
-		readonly enableWhen?: AdvancedCriteria;
+		 enableWhen?: AdvancedCriteria;
 		 // ref="attr:Tab.icon"
 		/**
 		 * (Read only) If specified, this tab will show an icon next to the tab title. 
@@ -13234,7 +13234,7 @@ declare namespace Isc {
 		 * calling TabSet.setTabIcon.
 		 * Flags: IR
 		 */
-		readonly icon?: SCImgURL;
+		 icon?: SCImgURL;
 		 // ref="attr:Tab.iconHeight"
 		/**
 		 * (Read only) If Tab.icon is specified, this property may be used to specify a height for the
@@ -13244,7 +13244,7 @@ declare namespace Isc {
 		 * property by calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly iconHeight?: Integer;
+		 iconHeight?: Integer;
 		 // ref="attr:Tab.iconSize"
 		/**
 		 * (Read only) If Tab.icon is specified, this property may be used to specify a size for the icon.
@@ -13254,7 +13254,7 @@ declare namespace Isc {
 		 * by calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly iconSize?: Integer;
+		 iconSize?: Integer;
 		 // ref="attr:Tab.iconWidth"
 		/**
 		 * (Read only) If Tab.icon is specified, this property may be used to specify a width for the
@@ -13264,7 +13264,7 @@ declare namespace Isc {
 		 * by calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly iconWidth?: Integer;
+		 iconWidth?: Integer;
 		 // ref="attr:Tab.ID"
 		/**
 		 * (Read only) Optional ID for the tab, which can later be used to reference the tab.
@@ -13277,7 +13277,7 @@ declare namespace Isc {
 		 * globally unique identifier, set Tab.name instead.
 		 * Flags: IR
 		 */
-		readonly ID?: GlobalId;
+		 ID?: GlobalId;
 		 // ref="attr:Tab.name"
 		/**
 		 * (Read only) Optional name for the tab, which can later be used to reference the tab.
@@ -13290,7 +13290,7 @@ declare namespace Isc {
 		 * a global reference to the Tab. If you want a global reference, set Tab.ID instead.
 		 * Flags: IR
 		 */
-		readonly name?: TabName;
+		 name?: TabName;
 		 // ref="attr:Tab.pane"
 		/**
 		 * (Read only) Specifies the pane associated with this tab. You have two options for the value of
@@ -13303,14 +13303,14 @@ declare namespace Isc {
 		 * been created by calling TabSet.updateTab.
 		 * Flags: IR
 		 */
-		readonly pane?: Canvas | string /* Canvas | ID */;
+		 pane?: Canvas | string /* Canvas | ID */;
 		 // ref="attr:Tab.paneMargin"
 		/**
 		 * (Read only) Space to leave around the pane within this Tab.
 		 * If specified, this property takes precedence over TabSet.paneMargin
 		 * Flags: IR
 		 */
-		readonly paneMargin?: int;
+		 paneMargin?: int;
 		 // ref="attr:Tab.pickerTitle"
 		/**
 		 * (Read only) If TabSet.showTabPicker is true for this TabSet, if set this property will determine
@@ -13321,7 +13321,7 @@ declare namespace Isc {
 		 * property by calling TabSet.setTabProperties.
 		 * Flags: IR, Group: tabBarControls
 		 */
-		readonly pickerTitle?: HTMLString;
+		 pickerTitle?: HTMLString;
 		 // ref="attr:Tab.prompt"
 		/**
 		 * (Read only) Specifies the prompt to be displayed when the mouse hovers over the tab.
@@ -13330,14 +13330,14 @@ declare namespace Isc {
 		 * calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly prompt?: HTMLString;
+		 prompt?: HTMLString;
 		 // ref="attr:Tab.title"
 		/**
 		 * (Read only) Specifies the title of the this tab. To change the title after the TabSet
 		 * has been created, call TabSet.setTabTitle.
 		 * Flags: IR
 		 */
-		readonly title?: HTMLString;
+		 title?: HTMLString;
 		 // ref="attr:Tab.width"
 		/**
 		 * (Read only) You can specify an explicit width for the tab using this property. Note that tabs
@@ -13348,7 +13348,7 @@ declare namespace Isc {
 		 * property by calling TabSet.setTabProperties.
 		 * Flags: IR
 		 */
-		readonly width?: number;
+		 width?: number;
 
 		/* Instance Method Overrides */
 		/**  
@@ -13408,7 +13408,7 @@ declare namespace Isc {
 		 * current Canvas.ruleScope','rule context.
 		 * Flags: IR
 		 */
-		readonly summaryVars?: Map<any, any> /* Map */;
+		 summaryVars?: Map<any, any> /* Map */;
 		 // ref="attr:UserSummary.text"
 		/**
 		 * Summary to be evaluated.
@@ -13424,7 +13424,7 @@ declare namespace Isc {
 		 * mapping with UserSummary.summaryVars is needed.
 		 * Flags: IRW
 		 */
-		readonly text?: String;
+		 text?: String;
 	} // UserSummary
 
 	export interface UserSummaryStatic {
@@ -13460,7 +13460,7 @@ declare namespace Isc {
 		 * PaletteNode','PaletteNode.
 		 * Flags: IR
 		 */
-		readonly canDuplicate?: boolean /* Boolean */;
+		 canDuplicate?: boolean | null /* Boolean */;
 		 // ref="attr:PaletteNode.defaults"
 		/**
 		 * (Read only) Defaults for the component to be created from this palette. 
@@ -13474,33 +13474,33 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly defaults?: Properties;
+		 defaults?: Properties;
 		 // ref="attr:PaletteNode.editNodeProperties"
 		/**
 		 * (Read only) Properties to be applied to the EditNode','editNode when created.
 		 * Flags: IR
 		 */
-		readonly editNodeProperties?: EditNode /* EditNode Properties */;
+		 editNodeProperties?: EditNode /* EditNode Properties */;
 		 // ref="attr:PaletteNode.editProxyProperties"
 		/**
 		 * (Read only) Properties to be applied to the 
 		 * PaletteNode.liveObject','liveObject.Canvas.editProxy','editProxy when created.
 		 * Flags: IR
 		 */
-		readonly editProxyProperties?: EditProxyProps /* EditProxy Properties */;
+		 editProxyProperties?: EditProxyProps /* EditProxy Properties */;
 		 // ref="attr:PaletteNode.icon"
 		/**
 		 * (Read only) Icon for this paletteNode.
 		 * Flags: IR
 		 */
-		readonly icon?: SCImgURL;
+		 icon?: SCImgURL;
 		 // ref="attr:PaletteNode.idPrefix"
 		/**
 		 * (Read only) Prefix used to create unique component ID. If not specified, PaletteNode.type
 		 * is used.
 		 * Flags: IR
 		 */
-		readonly idPrefix?: String;
+		 idPrefix?: String;
 		 // ref="attr:PaletteNode.liveObject"
 		/**
 		 * (Read only) For a paletteNode which should be a "singleton", that is, always provides the exact same
@@ -13511,19 +13511,19 @@ declare namespace Isc {
 		 * simply be assigned to EditNode.liveObject for the created editNode.
 		 * Flags: IR
 		 */
-		readonly liveObject?: Object;
+		 liveObject?: Object;
 		 // ref="attr:PaletteNode.title"
 		/**
 		 * (Read only) Textual title for this paletteNode.
 		 * Flags: IR
 		 */
-		readonly title?: String;
+		 title?: String;
 		 // ref="attr:PaletteNode.type"
 		/**
 		 * (Read only) SCClassName this paletteNode creates, for example, "ListGrid".
 		 * Flags: IR
 		 */
-		readonly type?: SCClassName;
+		 type?: SCClassName;
 	} // PaletteNode
 
 	export interface PaletteNodeStatic {
@@ -13534,10 +13534,10 @@ declare namespace Isc {
 	 * Represents a sector on the gauge. 
 	 */
 	export interface GaugeSector {
-		readonly endAngle?: Float /* float */;
-		readonly fillColor?: CSSColor;
-		readonly startAngle?: Float /* float */;
-		readonly value?: Float /* float */;
+		 endAngle?: Float /* float */;
+		 fillColor?: CSSColor;
+		 startAngle?: Float /* float */;
+		 value?: Float /* float */;
 	} // GaugeSector
 
 	export interface GaugeSectorStatic {
@@ -13624,7 +13624,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: RW
 		 */
-		readonly addVersionToLoadTags?: boolean;
+		 addVersionToLoadTags?: boolean;
 		 // ref="classAttr:FileLoader.defaultModules"
 		/**
 		 * Default list of modules for
@@ -13632,14 +13632,14 @@ declare namespace Isc {
 		 * provided by the user.
 		 * Flags: RW
 		 */
-		readonly defaultModules?: String;
+		 defaultModules?: String;
 		 // ref="classAttr:FileLoader.defaultSkin"
 		/**
 		 * Default skin for FileLoader.loadISC/FileLoader.cacheISC to
 		 * use if one is not provided by the user.
 		 * Flags: RW
 		 */
-		readonly defaultSkin?: String;
+		 defaultSkin?: String;
 		 // ref="classAttr:FileLoader.modulesDir"
 		/**
 		 * (Read only) Path to module files (ISC_Core.js et al) relative to the isomorphicDir (see
@@ -13648,7 +13648,7 @@ declare namespace Isc {
 		 * Does not normally need to be set for SmartClient. If using Smart GWT, set to "modules/".
 		 * Flags: IR
 		 */
-		readonly modulesDir?: String;
+		 modulesDir?: String;
 		 // ref="classAttr:FileLoader.versionParamName"
 		/**
 		 * Name of the query parameter to use for version-specific cache-busting. This will be used by
@@ -13659,7 +13659,7 @@ declare namespace Isc {
 		 * in the url's generated by FileLoader.
 		 * Flags: RW
 		 */
-		readonly versionParamName?: String;
+		 versionParamName?: String;
 
 	/* Methods */
 		/**  
@@ -13697,7 +13697,7 @@ declare namespace Isc {
 		 * of colors.
 		 * @param {String | Function} onload - Optional code to execute when the last of the specified URLs has completed caching.
 		 */
-		cacheEdgeImages(baseURLs:String | Array<any> /* String | Array */, showCenter?:boolean /* Boolean */, edges?:String | Array<any> /* String | Array */, colors?:String | Array<any> /* String | Array */, onload?:String | Function): void; 
+		cacheEdgeImages(baseURLs:String | Array<any> /* String | Array */, showCenter?:boolean | null /* Boolean */, edges?:String | Array<any> /* String | Array */, colors?:String | Array<any> /* String | Array */, onload?:String | Function): void; 
 
 		/**  
 		 * 
@@ -13933,7 +13933,7 @@ declare namespace Isc {
 		 * is enabled, then an "RTL" suffix will be added.
 		 * Flags: IRWA
 		 */
-		readonly baseStyle?: CSSStyleName;
+		 baseStyle?: CSSStyleName;
 		 // ref="attr:FormItemIcon.disabled"
 		/**
 		 * Whether this icon is disabled. Can be updated at runtime via the FormItem.setIconDisabled
@@ -13941,7 +13941,7 @@ declare namespace Isc {
 		 * behave in a disabled manner regardless of the setting of the icon.disabled property.
 		 * Flags: IRW, Group: appearance
 		 */
-		readonly disabled?: boolean /* Boolean */;
+		 disabled?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemIcon.disableOnReadOnly"
 		/**
 		 * (Advanced) If FormItem.canEdit is set to false, should this icon be disabled.
@@ -13951,7 +13951,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly disableOnReadOnly?: boolean;
+		 disableOnReadOnly?: boolean;
 		 // ref="attr:FormItemIcon.enableWhen"
 		/**
 		 * (Read only) Criteria to be evaluated to determine whether this icon should appear enabled.
@@ -13968,14 +13968,14 @@ declare namespace Isc {
 		 * its FormItem.
 		 * Flags: IR, Group: ruleCriteria
 		 */
-		readonly enableWhen?: AdvancedCriteria;
+		 enableWhen?: AdvancedCriteria;
 		 // ref="attr:FormItemIcon.height"
 		/**
 		 * If set, this property determines the height of this icon in px.
 		 * If unset the form item's iconHeight property will be used instead.
 		 * Flags: IRW, Group: formIcons
 		 */
-		readonly height?: number;
+		 height?: number;
 		 // ref="attr:FormItemIcon.hspace"
 		/**
 		 * (Read only) If set, this property determines the number of pixels space to be displayed on 
@@ -13987,7 +13987,7 @@ declare namespace Isc {
 		 * If unset, the form item's FormItem.iconHSpace','iconHSpace will be used instead.
 		 * Flags: IR, Group: formIcons
 		 */
-		readonly hspace?: Integer;
+		 hspace?: Integer;
 		 // ref="attr:FormItemIcon.iconPlacement"
 		/**
 		 * (Read only) For PickList items with PickListItemIconPlacement set such that the pickList does
@@ -14001,7 +14001,7 @@ declare namespace Isc {
 		 * the navigation bar may be easier for the user to interact with.
 		 * Flags: IR
 		 */
-		readonly iconPlacement?: PickListItemIconPlacement;
+		 iconPlacement?: PickListItemIconPlacement;
 		 // ref="attr:FormItemIcon.inline"
 		/**
 		 * (Read only) When set, this icon is rendered inside the FormItem.textBoxStyle','textBox area
@@ -14023,7 +14023,7 @@ declare namespace Isc {
 		 * HTML instead. See FormItemIcon.text.
 		 * Flags: IR
 		 */
-		readonly inline?: boolean /* Boolean */;
+		 inline?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemIcon.inlineIconAlign"
 		/**
 		 * (Read only) Horizontal alignment for icons marked FormItemIcon.inline','inline.
@@ -14037,7 +14037,7 @@ declare namespace Isc {
 		 * results in the icon being placed on the left.
 		 * Flags: IR
 		 */
-		readonly inlineIconAlign?: Alignment;
+		 inlineIconAlign?: Alignment;
 		 // ref="attr:FormItemIcon.name"
 		/**
 		 * (Read only) Identifier for this form item icon. This identifier (if set) should be unique
@@ -14045,7 +14045,7 @@ declare namespace Isc {
 		 * via FormItem.getIcon.
 		 * Flags: IR
 		 */
-		readonly name?: Identifier;
+		 name?: Identifier;
 		 // ref="attr:FormItemIcon.neverDisable"
 		/**
 		 * (Advanced) If icon.neverDisable is true, when this form item is disabled, the 
@@ -14061,7 +14061,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly neverDisable?: boolean;
+		 neverDisable?: boolean;
 		 // ref="attr:FormItemIcon.prompt"
 		/**
 		 * (Advanced) If set, this property will be displayed as a prompt (and tooltip text) for this form
@@ -14070,7 +14070,7 @@ declare namespace Isc {
 		 * If unset the form item's iconPrompt property will be used instead.
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly prompt?: HTMLString;
+		 prompt?: HTMLString;
 		 // ref="attr:FormItemIcon.showDisabledOnFocus"
 		/**
 		 * (Advanced) If show-on-focus behavior is enabled for this icon via FormItemIcon.showOnFocus
@@ -14080,14 +14080,14 @@ declare namespace Isc {
 		 * FormItem.showDisabledPickerIconOnFocus settings.
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly showDisabledOnFocus?: boolean /* Boolean */;
+		 showDisabledOnFocus?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemIcon.showFocused"
 		/**
 		 * (Advanced) Should this icon's image and/or FormItemIcon.baseStyle','baseStyle switch to the
 		 * appropriate "Focused" value when the user puts focus on the form item or icon?
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly showFocused?: boolean /* Boolean */;
+		 showFocused?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemIcon.showFocusedWithItem"
 		/**
 		 * (Advanced) If this icon will be updated to show focus (see FormItemIcon.showFocused, 
@@ -14098,7 +14098,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly showFocusedWithItem?: boolean;
+		 showFocusedWithItem?: boolean;
 		 // ref="attr:FormItemIcon.showOnFocus"
 		/**
 		 * (Advanced) Show this icon when its item gets focus, and hide it when it loses focus. If
@@ -14108,7 +14108,7 @@ declare namespace Isc {
 		 * interacted with, and helps draw attention to the item currently in focus.
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly showOnFocus?: boolean /* Boolean */;
+		 showOnFocus?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemIcon.showOver"
 		/**
 		 * (Advanced) Should this icon's image and/or FormItemIcon.baseStyle','baseStyle switch to the
@@ -14121,7 +14121,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly showOver?: boolean;
+		 showOver?: boolean;
 		 // ref="attr:FormItemIcon.showOverWhen"
 		/**
 		 * (Advanced) If FormItemIcon.showOver or FormItem.showOverIcons is true,
@@ -14130,7 +14130,7 @@ declare namespace Isc {
 		 * the icon only.
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly showOverWhen?: IconOverTrigger;
+		 showOverWhen?: IconOverTrigger;
 		 // ref="attr:FormItemIcon.showRTL"
 		/**
 		 * (Read only, Advanced) Should this icon's FormItemIcon.src','src and/or FormItemIcon.baseStyle','baseStyle
@@ -14144,7 +14144,7 @@ declare namespace Isc {
 		 * for the image source and "myFormIconDownRTL" for the style name.
 		 * Flags: IRA, Group: RTL
 		 */
-		readonly showRTL?: boolean /* Boolean */;
+		 showRTL?: boolean | null /* Boolean */;
 		 // ref="attr:FormItemIcon.src"
 		/**
 		 * If set, this property determines this icon's image source.
@@ -14167,7 +14167,7 @@ declare namespace Isc {
 		 * a SCSpriteConfig formatted string.
 		 * Flags: IRW, Group: formIcons
 		 */
-		readonly src?: SCImgURL;
+		 src?: SCImgURL;
 		 // ref="attr:FormItemIcon.tabIndex"
 		/**
 		 * (Read only, Advanced) TabIndex for this formItemIcon.
@@ -14181,7 +14181,7 @@ declare namespace Isc {
 		 * FormItem.globalTabIndex.
 		 * Flags: IRA, Group: formIcons
 		 */
-		readonly tabIndex?: int;
+		 tabIndex?: int;
 		 // ref="attr:FormItemIcon.text"
 		/**
 		 * (Advanced) As an alternative to displaying an image, an FormItemIcon.inline','inline
@@ -14203,7 +14203,7 @@ declare namespace Isc {
 		 * FormItemIcon.width','width and FormItemIcon.height','height.
 		 * Flags: IRWA, Group: formIcons
 		 */
-		readonly text?: HTMLString;
+		 text?: HTMLString;
 		 // ref="attr:FormItemIcon.visibleWhen"
 		/**
 		 * (Read only) Criteria to be evaluated to determine whether this icon should be visible.
@@ -14220,14 +14220,14 @@ declare namespace Isc {
 		 * its FormItem.
 		 * Flags: IR, Group: ruleCriteria
 		 */
-		readonly visibleWhen?: AdvancedCriteria;
+		 visibleWhen?: AdvancedCriteria;
 		 // ref="attr:FormItemIcon.width"
 		/**
 		 * If set, this property determines the width of this icon in px.
 		 * If unset the form item's iconWidth property will be used instead.
 		 * Flags: IRW, Group: formIcons
 		 */
-		readonly width?: number;
+		 width?: number;
 
 		/* Instance Method Overrides */
 		/**  
@@ -14283,13 +14283,13 @@ declare namespace Isc {
 		 * SmartClient Class to use to construct the tile for this particular record.
 		 * Flags: IRW
 		 */
-		readonly tileConstructor?: String;
+		 tileConstructor?: String;
 		 // ref="attr:TileRecord.tileProperties"
 		/**
 		 * Additional properties to be passed when creating a tile for this record.
 		 * Flags: IRW
 		 */
-		readonly tileProperties?: CanvasProps /* Canvas Properties */;
+		 tileProperties?: CanvasProps /* Canvas Properties */;
 	} // TileRecord
 
 	export interface TileRecordStatic {
@@ -14309,7 +14309,7 @@ declare namespace Isc {
 		 * null means an ordinary TextItem is fine.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly editorType?: FormItemClassName;
+		 editorType?: FormItemClassName;
 		 // ref="attr:Operator.fieldTypes"
 		/**
 		 * (Read only) List of types that this Operator is valid for.
@@ -14318,7 +14318,7 @@ declare namespace Isc {
 		 * FieldTypes is passed to DataSource.addSearchOperator.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly fieldTypes?: Array<FieldType> /* Array of FieldType */;
+		 fieldTypes?: Array<FieldType> /* Array of FieldType */;
 		 // ref="attr:Operator.hidden"
 		/**
 		 * (Read only) Whether this operator should be offered to users by default in interfaces such as the
@@ -14329,7 +14329,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly hidden?: boolean;
+		 hidden?: boolean;
 		 // ref="attr:Operator.ID"
 		/**
 		 * (Read only) Unique id for an operator, which appears within AdvancedCriteria as the
@@ -14338,7 +14338,7 @@ declare namespace Isc {
 		 * A list of built-in identifiers is OperatorId','here.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly ID?: OperatorId;
+		 ID?: OperatorId;
 		 // ref="attr:Operator.requiresServer"
 		/**
 		 * (Read only) Whether this operator needs to be executed on the server side.
@@ -14349,14 +14349,14 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly requiresServer?: boolean;
+		 requiresServer?: boolean;
 		 // ref="attr:Operator.symbol"
 		/**
 		 * (Read only) The text use when using this operator as an 
 		 * FormItem.allowExpressions','expression in a FormItem.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly symbol?: String;
+		 symbol?: String;
 		 // ref="attr:Operator.textTitle"
 		/**
 		 * (Read only) User-visible title for this operator when used with text-based fields - eg, 
@@ -14366,14 +14366,14 @@ declare namespace Isc {
 		 * specify Operator.textTitleProperty instead of this property.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly textTitle?: String;
+		 textTitle?: String;
 		 // ref="attr:Operator.textTitleProperty"
 		/**
 		 * (Read only) Name of a property on the Operators class that provides the title for this operator
 		 * when used with text-based fields.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly textTitleProperty?: Identifier;
+		 textTitleProperty?: Identifier;
 		 // ref="attr:Operator.title"
 		/**
 		 * (Read only) User-visible title for this operator, such as "doesn't contain".
@@ -14382,13 +14382,13 @@ declare namespace Isc {
 		 * specify Operator.titleProperty instead of this property.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly title?: String;
+		 title?: String;
 		 // ref="attr:Operator.titleProperty"
 		/**
 		 * (Read only) Name of a property on the Operators class that provides the title for this operator.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly titleProperty?: Identifier;
+		 titleProperty?: Identifier;
 		 // ref="attr:Operator.valueType"
 		/**
 		 * (Read only) Indicates the kind of value expected in a Criterion that uses this operator.
@@ -14399,7 +14399,7 @@ declare namespace Isc {
 		 * indicated by Criterion.fieldName.
 		 * Flags: IR, Group: advancedFilter
 		 */
-		readonly valueType?: OperatorValueType;
+		 valueType?: OperatorValueType;
 
 		/* Instance Method Overrides */
 		/**  
@@ -14495,7 +14495,7 @@ declare namespace Isc {
 		 * consulted only when the value of ServerObject.lookupStyle is "attribute".
 		 * Flags: IR
 		 */
-		readonly attributeName?: String;
+		 attributeName?: String;
 		 // ref="attr:ServerObject.attributeScope"
 		/**
 		 * (Read only) Specifies the scope in which the DMI instance is to be looked up. Valid values are: 
@@ -14507,14 +14507,14 @@ declare namespace Isc {
 		 * "attribute".
 		 * Flags: IR
 		 */
-		readonly attributeScope?: "request" | "session" | "application";
+		 attributeScope?: "request" | "session" | "application";
 		 // ref="attr:ServerObject.bean"
 		/**
 		 * (Read only) For use when ServerObject.lookupStyle is "spring" or "cdi", 
 		 * id (name) of the bean to ask Spring (CDI) to create.
 		 * Flags: IR
 		 */
-		readonly bean?: String;
+		 bean?: String;
 		 // ref="attr:ServerObject.className"
 		/**
 		 * (Read only) Specifies the fully-qualified class name that provides the server-side endpoint of the DMI
@@ -14531,7 +14531,7 @@ declare namespace Isc {
 		 * class name of the bean to ask CDI to create.
 		 * Flags: IR
 		 */
-		readonly className?: String;
+		 className?: String;
 		 // ref="attr:ServerObject.crudOnly"
 		/**
 		 * (Read only) For a ServerObject defined at the DataSource.serverObject','DataSource level, by 
@@ -14550,7 +14550,7 @@ declare namespace Isc {
 		 * boolean - Null not allowed
 		 * Flags: IR
 		 */
-		readonly crudOnly?: boolean;
+		 crudOnly?: boolean;
 		 // ref="attr:ServerObject.dropExtraFields"
 		/**
 		 * (Read only) By default, for DMI DSResponses, DSResponse.data is filtered on the server to just the set
@@ -14559,7 +14559,7 @@ declare namespace Isc {
 		 * DataSource.dropExtraFields.
 		 * Flags: IR
 		 */
-		readonly dropExtraFields?: boolean /* Boolean */;
+		 dropExtraFields?: boolean | null /* Boolean */;
 		 // ref="attr:ServerObject.ID"
 		/**
 		 * (Read only) You can optionally specify an ID on the ServerObject config block - in which case you can
@@ -14568,7 +14568,7 @@ declare namespace Isc {
 		 * the browser as a security precaution.
 		 * Flags: IR
 		 */
-		readonly ID?: String;
+		 ID?: String;
 		 // ref="attr:ServerObject.lookupStyle"
 		/**
 		 * (Read only) Specifies the mechanism for locating the class instance on which to invoke the method.
@@ -14600,7 +14600,7 @@ declare namespace Isc {
 		 * 
 		 * Flags: IR
 		 */
-		readonly lookupStyle?: "new" | "factory" | "attribute" | "spring" | "cdi";
+		 lookupStyle?: "new" | "factory" | "attribute" | "spring" | "cdi";
 		 // ref="attr:ServerObject.methodName"
 		/**
 		 * (Read only) Specifies the name of the method to call for operations using this ServerObject. This is 
@@ -14611,7 +14611,7 @@ declare namespace Isc {
 		 * latter takes precedence)
 		 * Flags: IR
 		 */
-		readonly methodName?: String;
+		 methodName?: String;
 		 // ref="attr:ServerObject.targetXPath"
 		/**
 		 * (Read only) If set, the SmartClient server will use JXPath to call your server code. The
@@ -14621,7 +14621,7 @@ declare namespace Isc {
 		 * and reduce the need to write SmartClient-specific server code.
 		 * Flags: IR
 		 */
-		readonly targetXPath?: String;
+		 targetXPath?: String;
 		 // ref="attr:ServerObject.visibleMethods"
 		/**
 		 * (Read only) When the ServerObject appears in a .app.xml file (for RPC DMI), this property
@@ -14630,7 +14630,7 @@ declare namespace Isc {
 		 * visibleMethods declaration block.
 		 * Flags: IR
 		 */
-		readonly visibleMethods?: List;
+		 visibleMethods?: List;
 	} // ServerObject
 
 	export interface ServerObjectStatic {
@@ -14665,7 +14665,7 @@ declare namespace Isc {
 		 * DetailViewerField.linkText.
 		 * Flags: IRW
 		 */
-		readonly linkText?: String;
+		 linkText?: String;
 	} // DetailViewerRecord
 
 	export interface DetailViewerRecordStatic {

@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-09-28 at 9/28/2017 7:01:32 AM by kwhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-09-29 at 9/29/2017 7:01:37 AM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -20,7 +20,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |5|Methods|3,560|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|Excluded Types|2|Number of Types excluded from generation for various reasons.|
 |7|Excluded Classes|2|Number of Classes excluded from generation for various reasons.|
-|8|Excluded Methods|14|Number of Methods excluded from generation for various reasons.|
+|8|Excluded Methods|11|Number of Methods excluded from generation for various reasons.|
 |9|Excluded Attributes|2|Number of Attributes excluded from generation for various reasons.|
 |10|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |11|string values without quotes|665|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
@@ -32,12 +32,14 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |17|Interfaces Generated|5||
 |18|Objects Generated|77||
 |19|Classes Generated|295||
-|20|Methods Generated|3,347||
-|21|Percentage of Types generated|111%|May be more than 100% because the Callbacks methods are generated as types.|
-|22|Percentage of Interfaces generated|100%||
-|23|Percentage of Objects generated|94%||
-|24|Percentage of Classes generated|99%||
-|25|Percentage of Methods generated|94%||
+|20|Methods Generated|3,287||
+|21|Methods Skipped|183||
+|22|Percentage of Types generated|111%|May be more than 100% because the Callbacks methods are generated as types.|
+|23|Percentage of Interfaces generated|100%||
+|24|Percentage of Objects generated|94%||
+|25|Percentage of Classes generated|99%||
+|26|Percentage of Methods generated|92%||
+|27|Percentage of Methods skipped|5%||
 
 
 ### Issues with referenceDocs.xml file
@@ -54,7 +56,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |6|OR specified as ' \|\| '|0|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 |7|OR specified as ', '|0|Since most ORs are NOT defined this way, it is assumed to be an incorrect way.|
 ||**Errors**||**May or may not be an error in the isc system but prevents proper code generation unless special handling is implemented**|
-|1|Properties that override a base property with a different type|106|In TypeScript, a property cannot override a property with the same name in a base class if it has a different type. Some of these are probably intentional with good reason but many are just inconsistencies.|
+|1|Properties that override a base property with a different type|116|In TypeScript, a property cannot override a property with the same name in a base class if it has a different type. Some of these are probably intentional with good reason but many are just inconsistencies.|
 |2|Methods that override a base method with a different signature|67|In TypeScript, a method cannot override a method with the same name in a base class if it has a different signature. Some of these are probably intentional with good reason but many are just inconsistencies.|
 |3|Unknown types assumed to be string|23|Used as a Type but there is no definition for the type. Assumed to be and generated as [string].|
 |4|String types without baseType|18|Types that are really just strings should have their own type or have the baseType='string'.|
@@ -62,7 +64,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |6|Setter Methods with parameter type that does not match the attribute type|12|If a property has a setter, it should take the same type as the property. NOTE: Sometimes they are equivalent (i.e. string vs. URL) but still listed here in hopes of making the docs consistent.|
 |7|Arrays defined as 'List of'|10|Since most arrays are NOT described this way, this is assumed to be incorrect.|
 |8|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|9|Weird Types that require special handling|5|Types that would be difficult to make a general rule for.|
+|9|Weird Types that require special handling|8|Types that would be difficult to make a general rule for.|
 |10|Classes without inheritsFrom attribute|1|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute. The only Class that should not have an inheritsFrom attribute is the base 'Class'.|
 |11|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
 |12|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
