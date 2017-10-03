@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-09-30 at 10/2/2017 7:01:37 AM by kwhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-10-03 at 10/3/2017 7:01:37 AM by kwhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -17,7 +17,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
 |3|Classes|297|Number of classes found in the referenceDocs.xml file|
 |4|Objects|82|Number of objects found in the referenceDocs.xml file|
-|5|Methods|3,560|Number of methods (instance and class) found in the referenceDocs.xml file|
+|5|Methods|3,559|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|Excluded Types|2|Number of Types excluded from generation for various reasons.|
 |7|Excluded Classes|2|Number of Classes excluded from generation for various reasons.|
 |8|Excluded Methods|11|Number of Methods excluded from generation for various reasons.|
@@ -25,14 +25,14 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |10|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |11|string values without quotes|665|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |12|string values with period|131|These usually are really references to a constant.|
-|13|Arrays defined as 'Array of'|239|Since most arrays are described this way, this is assumed to be the 'correct' way.|
+|13|Arrays defined as 'Array of'|240|Since most arrays are described this way, this is assumed to be the 'correct' way.|
 |14|String values where reference is found|131|Possible string values that refer to a constant where the constant was found.|
 |15|OR specified as ' \| '|385|Since most ORs are defined this way, it is assumed to be the correct way.|
 |16|Types Generated|247||
 |17|Interfaces Generated|5||
 |18|Objects Generated|77||
 |19|Classes Generated|295||
-|20|Methods Generated|3,287||
+|20|Methods Generated|3,286||
 |21|Methods Skipped|183||
 |22|Percentage of Types generated|111%|May be more than 100% because the Callbacks methods are generated as types.|
 |23|Percentage of Interfaces generated|100%||
