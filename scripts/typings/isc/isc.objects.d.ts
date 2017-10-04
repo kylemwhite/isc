@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 10/3/2017 7:00:05 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-10-03
+// Generated: 10/4/2017 7:00:04 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-10-04
 
 declare namespace Isc {
 
@@ -14005,7 +14005,7 @@ declare namespace Isc {
 		 // ref="attr:FormItemIcon.inline"
 		/**
 		 * (Read only) When set, this icon is rendered inside the FormItem.textBoxStyle','textBox area
-		 * of the FormItem (where input occurs in a TextItem or
+		 * of the FormItem (where input occurs in a TextItem, TextAreaItem or
 		 * ComboBoxItem) as opposed to as a trailing icon.
 		 * 
 		 * Use FormItemIcon.inlineIconAlign','inlineIconAlign to control alignment of the
@@ -14014,8 +14014,8 @@ declare namespace Isc {
 		 * between multiple adjacent icons.
 		 * 
 		 * Inline icons are not supported in Internet Explorer 6, or when the FormItem
-		 * is not a TextItem or ComboBoxItem. When unsupported, the
-		 * icon will fall back to non-inline mode.
+		 * is not a TextItem, TextAreaItem or ComboBoxItem.
+		 * When unsupported, the icon will fall back to non-inline mode.
 		 * 
 		 * The FormItem.showPickerIcon','picker icon, if any, cannot be inlined.
 		 * 
