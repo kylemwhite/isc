@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 10/5/2017 7:00:10 AM by kwhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-10-05
+// Generated: 10/6/2017 7:00:07 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-10-06
 
 declare namespace Isc {
 
@@ -11686,6 +11686,25 @@ declare namespace Isc {
 		 * @return {any} formatted value to display in the editor
 		 */
 		formatEditorValue?(value:any /* Any */, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid /* ListGrid Instance */): any /* Any */; 
+
+		/**  
+		 *  Field-level formatter for inactive content.
+		 * 
+		 * If present, this method will be invoked instead of ListGridField.formatCellValue in cases 
+		 * where the grid is rendering non-interactive content outside. 
+		 * See ListGrid.formatInactiveCellValue for more details.
+		 * 
+		 * 
+		 * @param {any} value - raw value for the cell, from the record for the row
+		 * @param {ListGridRecord} record - Record object for the cell. Note: If this is a new row that has not been saved, in an
+		 * editable grid, it has no associated record object. In this case the edit values will
+		 * be passed in as this parameter (see ListGrid.getEditValues)
+		 * @param {number} rowNum - row number for the cell
+		 * @param {number} colNum - column number for the cell.
+		 * @param {ListGrid} grid - the ListGrid displaying the cell
+		 * @return {HTMLString} HTML to display in the cell
+		 */
+		formatInactiveCellValue?(value:any /* Any */, record:ListGridRecord, rowNum:number, colNum:number, grid:ListGrid): HTMLString; 
 
 		/**  
 		 *  When a field has ListGridField.autoFreeze','autoFreeze set to true, developers can
