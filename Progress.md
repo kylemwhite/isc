@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-10-26 at 10/26/2017 7:12:54 AM by KWhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-10-27 at 10/27/2017 7:01:26 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -17,7 +17,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
 |3|Classes|297|Number of classes found in the referenceDocs.xml file|
 |4|Objects|82|Number of objects found in the referenceDocs.xml file|
-|5|Methods|3,561|Number of methods (instance and class) found in the referenceDocs.xml file|
+|5|Methods|3,564|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|Excluded Types|2|Number of Types excluded from generation for various reasons.|
 |7|Excluded Classes|2|Number of Classes excluded from generation for various reasons.|
 |8|Excluded Methods|11|Number of Methods excluded from generation for various reasons.|
@@ -32,7 +32,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |17|Interfaces Generated|5||
 |18|Objects Generated|77||
 |19|Classes Generated|295||
-|20|Methods Generated|3,288||
+|20|Methods Generated|3,291||
 |21|Methods Skipped|183||
 |22|Percentage of Types generated|111%|May be more than 100% because the Callbacks methods are generated as types.|
 |23|Percentage of Interfaces generated|100%||
