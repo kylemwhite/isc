@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 11/1/2017 7:00:03 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-10-30
+// Generated: 11/2/2017 7:00:06 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-02
 
 declare namespace Isc {
 
@@ -4485,12 +4485,12 @@ declare namespace Isc {
 	 * Section descriptor used by a SectionStack to describe a section of items which are shown
 	 * or hidden together along with their associated header. 
 	 * 
-	 * A section header (see SectionStack.sectionHeaderClass) is created from this descriptor when
-	 * the SectionStack is drawn. Any changes after creation must be made to the section header:
-	 * SectionStack.getSectionHeader.
+	 * A section header (see SectionStack.sectionHeaderClass) is created from this
+	 * descriptor when the SectionStack is created. Any changes after creation must be made to
+	 * the section header: SectionStack.getSectionHeader.
 	 * 
-	 * Additional SectionHeader properties set on the SectionStackSection not explicitly documented such as
-	 * "iconAlign" or "prompt" is supported. 
+	 * Additional SectionHeader properties set on the SectionStackSection not explicitly
+	 * documented, such as "iconAlign" or "prompt", are supported. 
 	 */
 	export interface SectionStackSection {
 		 // ref="attr:SectionStackSection.canCollapse"
@@ -14250,13 +14250,23 @@ declare namespace Isc {
 
 		/* Instance Method Overrides */
 		/**  
-		 *  Called when this icon is clicked. The default action is to call FormItem.showPicker.
+		 *  Click handler for this icon.
+		 * 
+		 * 
+		 * Return false to cancel this event. 
+		 * 
+		 * 
+		 * If this event is not cancelled by the icon-level click handler, it may also
+		 * be handled at the FormItem level via FormItem.pickerIconClick [for the
+		 * picker icon only], and then FormItem.iconClick
+		 * 
 		 * 
 		 * @param {DynamicForm} form - The Dynamic Form to which this icon's item belongs.
 		 * @param {FormItem} item - The Form Item containing this icon
 		 * @param {FormItemIcon} icon - A pointer to the form item icon clicked
+		 * @return {boolean} Return false to cancel the event.
 		 */
-		click?(form:DynamicForm, item:FormItem, icon:FormItemIcon): void; 
+		click?(form:DynamicForm, item:FormItem, icon:FormItemIcon): boolean; 
 
 		/**  
 		 *  StringMethod action to fire when this icon has focus and receives a keypress
