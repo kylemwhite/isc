@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 11/4/2017 7:00:03 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-04
+// Generated: 11/5/2017 7:00:13 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-05
 
 declare namespace Isc {
 
@@ -6587,7 +6587,7 @@ declare namespace Isc {
 		 * java.util.ArrayList is used for fields of type List
 		 * java.util.HashSet is used for fields of type Set
 		 * java.util.LinkedList is used for fields of type Queue
-		 * org.apache.commons.collections.map.LinkedMap is used for fields of type Map
+		 * java.util.LinkedHashMap is used for fields of type Map
 		 * java.util.ArrayList is used for fields that are otherwise of type Collection
 		 * 
 		 * Note that this value is used even if the target Collection or Map is declared as a concrete
