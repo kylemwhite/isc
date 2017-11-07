@@ -119,8 +119,10 @@ class Greeter {
 }
 
 window.onload = () => {
-    let contentDomElement = isc.AutoTest.getElement('content'); // This produces an Isc.DOMElement
-   // let contentElement =  document.getElementById('content');  // This is a JavaScript HTMLElement
+   // let contentDomElement = isc.AutoTest.getElement(isc.AutoTest.getLocator( 'content')); // This produces an Isc.DOMElement
+    let strContentElement = document.getElementById('content');  // This is a JavaScript HTMLElement
+
+    let contentDomElement = strContentElement as HTMLElement;
 
     var greeter = new Greeter(contentDomElement);
 

@@ -75,8 +75,9 @@ var Greeter = (function () {
     return Greeter;
 }());
 window.onload = function () {
-    var contentDomElement = isc.AutoTest.getElement('content'); // This produces an Isc.DOMElement
-    // let contentElement =  document.getElementById('content');  // This is a JavaScript HTMLElement
+    // let contentDomElement = isc.AutoTest.getElement(isc.AutoTest.getLocator( 'content')); // This produces an Isc.DOMElement
+    var strContentElement = document.getElementById('content'); // This is a JavaScript HTMLElement
+    var contentDomElement = strContentElement;
     var greeter = new Greeter(contentDomElement);
     // greeter.start();
     // Add a couple buttons to the 'content' DIV
