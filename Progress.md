@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-11-08 at 11/8/2017 7:01:45 AM by KWhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-11-09 at 11/9/2017 7:01:45 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
