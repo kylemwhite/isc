@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-13
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-14
 
 Errors during generation
-Generated: 11/13/2017 9:26:40 AM by KWhite
+Generated: 11/14/2017 7:01:30 AM by KWhite
 
 Summary
 Total Types  : 249
@@ -542,8 +542,9 @@ Method parameters with bad name: 0
 Methods with one or more parameters missing a type: 0
 
 
-Methods with required parameter after optional parameter: 0
+Methods with required parameter after optional parameter: 1
 (Required parameters should all be listed BEFORE optional parameters)
+1. method:ListGrid.getBaseStyle
 
 
 Setter Methods with parameter type that does not match the attribute type: 12
@@ -602,32 +603,35 @@ The following methods were excluded
 === Getter method return type does not match attribute type ===
 1. method:SectionStack.getSections
 
+=== Has required parameter after optional parameter ===
+2. method:ListGrid.getBaseStyle
+
 === Setter method param type does not match attribute type ===
-2. method:AdaptiveMenu.setItems
-3. method:Canvas.setValuesManager
-4. method:DateItem.setEndDate
-5. method:DateItem.setStartDate
-6. method:Deck.setCurrentPane
-7. method:DrawItem.setFillGradient
-8. method:FormItem.setOptionDataSource
-9. method:NavigationBar.setCustomNavControl
-10. method:Portlet.setHeight
-11. method:Portlet.setRowHeight
-12. method:Progressbar.setLength
-13. method:TileGrid.setData
+3. method:AdaptiveMenu.setItems
+4. method:Canvas.setValuesManager
+5. method:DateItem.setEndDate
+6. method:DateItem.setStartDate
+7. method:Deck.setCurrentPane
+8. method:DrawItem.setFillGradient
+9. method:FormItem.setOptionDataSource
+10. method:NavigationBar.setCustomNavControl
+11. method:Portlet.setHeight
+12. method:Portlet.setRowHeight
+13. method:Progressbar.setLength
+14. method:TileGrid.setData
 
 === From a hard-coded list ====
-14. toShortTime: [Datetime] is not a valid type
-15. toTime: [Datetime] is not a valid type
-16. addProperties: Because A rest parameter must be of an array type
-17. setState: Process.setState is an attribute AND a method
-18. init: Because A rest parameter must be of an array type
-19. initWidget: Because A rest parameter must be of an array type
-20. getCallTrace: Arguments?
-21. getButtonNumber: What is [number | String  | Button Object | Button Widget] ?
-22. hiliteCellList: What is [Array of Cell Object] ?  What is a Cell?
-23. hiliteCell: [cell object | row number] - What is a Cell?
-24. intersect: [All List Arguments] is not a valid type - should probably be defined as ...lists: List[] or Arguments 0-N: List[]
+15. toShortTime: [Datetime] is not a valid type
+16. toTime: [Datetime] is not a valid type
+17. addProperties: Because A rest parameter must be of an array type
+18. setState: Process.setState is an attribute AND a method
+19. init: Because A rest parameter must be of an array type
+20. initWidget: Because A rest parameter must be of an array type
+21. getCallTrace: Arguments?
+22. getButtonNumber: What is [number | String  | Button Object | Button Widget] ?
+23. hiliteCellList: What is [Array of Cell Object] ?  What is a Cell?
+24. hiliteCell: [cell object | row number] - What is a Cell?
+25. intersect: [All List Arguments] is not a valid type - should probably be defined as ...lists: List[] or Arguments 0-N: List[]
 
 Properties that override a base class property with a different type: 116
 1. Property [attr:BlurbItem.textBoxStyle] has type [CSSStyleName] which overrides property [attr:FormItem.textBoxStyle] with type [FormItemBaseStyle]
@@ -1096,7 +1100,7 @@ Attributes and methods that duplicate the same attribute or method defined in an
 215. method:TreeGrid.transferSelectedData is also implemented by interface:DataBoundComponent
 
 
-Skipped methods: 183
+Skipped methods: 184
 1. classMethod:DateUtil.create skipped because: Conflicts with Class.create(). Not sure what to do about this yet
 2. classMethod:FormItem.create skipped because: Conflicts with Class.create(). Not sure what to do about this yet
 3. classMethod:RPCResponse.create skipped because: Conflicts with Class.create(). Not sure what to do about this yet
@@ -1176,120 +1180,121 @@ Skipped methods: 183
 77. method:ListGrid.deselectRecords skipped because: method:ListGrid.deselectRecords is already implemented by class:ListGrid
 78. method:ListGrid.exportData skipped because: method:ListGrid.exportData is already implemented by class:ListGrid
 79. method:ListGrid.fieldIsEditable skipped because: method:ListGrid.fieldIsEditable is already implemented by class:ListGrid
-80. method:ListGrid.getDragData skipped because: method:ListGrid.getDragData is already implemented by class:ListGrid
-81. method:ListGrid.getField skipped because: method:ListGrid.getField is already implemented by class:ListGrid
-82. method:ListGrid.getFieldNum skipped because: method:ListGrid.getFieldNum is already implemented by class:ListGrid
-83. method:ListGrid.getFormulaFieldValue skipped because: method:ListGrid.getFormulaFieldValue is already implemented by class:ListGrid
-84. method:ListGrid.getRecordIndex skipped because: method:ListGrid.getRecordIndex is already implemented by class:ListGrid
-85. method:ListGrid.getSort skipped because: method:ListGrid.getSort is already implemented by class:ListGrid
-86. method:ListGrid.getSummaryFieldValue skipped because: method:ListGrid.getSummaryFieldValue is already implemented by class:ListGrid
-87. method:ListGrid.getTitleField skipped because: method:ListGrid.getTitleField is already implemented by class:ListGrid
-88. method:ListGrid.selectAllRecords skipped because: method:ListGrid.selectAllRecords is already implemented by class:ListGrid
-89. method:ListGrid.selectionUpdated skipped because: method:ListGrid.selectionUpdated is already implemented by class:ListGrid
-90. method:ListGrid.selectRange skipped because: method:ListGrid.selectRange is already implemented by class:ListGrid
-91. method:ListGrid.selectRecord skipped because: method:ListGrid.selectRecord is already implemented by class:ListGrid
-92. method:ListGrid.selectRecords skipped because: method:ListGrid.selectRecords is already implemented by class:ListGrid
-93. method:ListGrid.selectSingleRecord skipped because: method:ListGrid.selectSingleRecord is already implemented by class:ListGrid
-94. method:ListGrid.setDataSource skipped because: method:ListGrid.setDataSource is already implemented by class:ListGrid
-95. method:ListGrid.setDragTracker skipped because: method:ListGrid.setDragTracker is already implemented by class:ListGrid
-96. method:ListGrid.setSort skipped because: method:ListGrid.setSort is already implemented by class:ListGrid
-97. method:ListGrid.shouldIncludeHiliteInSummaryField skipped because: method:ListGrid.shouldIncludeHiliteInSummaryField is already implemented by class:ListGrid
-98. method:ListGrid.transferDragData skipped because: method:ListGrid.transferDragData is already implemented by class:ListGrid
-99. method:ListGrid.transferSelectedData skipped because: method:ListGrid.transferSelectedData is already implemented by class:ListGrid
-100. method:ListGrid.willFetchData skipped because: method:ListGrid.willFetchData is already implemented by class:ListGrid
-101. method:Menu.setData skipped because: Overrides a method in a base class with a different signature
-102. method:Menu.showContextMenu skipped because: Overrides a method in a base class with a different signature
-103. method:MiniDateRangeItem.getCriterion skipped because: Overrides a method in a base class with a different signature
-104. method:MiniDateRangeItem.getValue skipped because: Overrides a method in a base class with a different signature
-105. method:MiniDateRangeItem.setValue skipped because: Overrides a method in a base class with a different signature
-106. method:NavigationBar.setCustomNavControl skipped because: Setter method param type does not match attribute type
-107. method:Portlet.closeClick skipped because: Overrides a method in a base class with a different signature
-108. method:Portlet.setHeight skipped because: Setter method param type does not match attribute type
-109. method:Portlet.setRowHeight skipped because: Setter method param type does not match attribute type
-110. method:PresetCriteriaItem.getCriterion skipped because: Overrides a method in a base class with a different signature
-111. method:Progressbar.setLength skipped because: Setter method param type does not match attribute type
-112. method:RadioGroupItem.valueHoverHTML skipped because: Overrides a method in a base class with a different signature
-113. method:RelativeDateItem.formatEditorValue skipped because: Overrides a method in a base class with a different signature
-114. method:RelativeDateItem.getCriterion skipped because: Overrides a method in a base class with a different signature
-115. method:RelativeDateItem.parseEditorValue skipped because: Overrides a method in a base class with a different signature
-116. method:RestDataSource.transformRequest skipped because: Overrides a method in a base class with a different signature
-117. method:ResultSet.duplicate skipped because: method:ResultSet.duplicate is already implemented by class:ResultSet
-118. method:ResultSet.find skipped because: method:ResultSet.find is already implemented by class:ResultSet
-119. method:ResultSet.findAll skipped because: method:ResultSet.findAll is already implemented by class:ResultSet
-120. method:ResultSet.findIndex skipped because: method:ResultSet.findIndex is already implemented by class:ResultSet
-121. method:ResultSet.findNextIndex skipped because: method:ResultSet.findNextIndex is already implemented by class:ResultSet
-122. method:ResultSet.get skipped because: method:ResultSet.get is already implemented by class:ResultSet
-123. method:ResultSet.getLength skipped because: method:ResultSet.getLength is already implemented by class:ResultSet
-124. method:ResultSet.getProperty skipped because: method:ResultSet.getProperty is already implemented by class:ResultSet
-125. method:ResultSet.getRange skipped because: method:ResultSet.getRange is already implemented by class:ResultSet
-126. method:ResultSet.getValueMap skipped because: method:ResultSet.getValueMap is already implemented by class:ResultSet
-127. method:ResultSet.indexOf skipped because: method:ResultSet.indexOf is already implemented by class:ResultSet
-128. method:ResultSet.sortByProperty skipped because: method:ResultSet.sortByProperty is already implemented by class:ResultSet
-129. method:ResultTree.setChildren skipped because: Overrides a method in a base class with a different signature
-130. method:SelectItem.dataArrived skipped because: method:SelectItem.dataArrived is already implemented by class:SelectItem
-131. method:SelectItem.defaultDynamicValue skipped because: Overrides a method in a base class with a different signature
-132. method:SelectItem.fetchData skipped because: method:SelectItem.fetchData is already implemented by class:SelectItem
-133. method:SelectItem.getDisplayFieldName skipped because: method:SelectItem.getDisplayFieldName is already implemented by class:SelectItem
-134. method:SelectItem.getValueFieldName skipped because: method:SelectItem.getValueFieldName is already implemented by class:SelectItem
-135. method:StretchImg.setState skipped because: Overrides a method in a base class with a different signature
-136. method:StretchImgButton.setSelected skipped because: Overrides a method in a base class with a different signature
-137. method:StretchImgButton.setState skipped because: Overrides a method in a base class with a different signature
-138. method:TileGrid.addTile skipped because: Overrides a method in a base class with a different signature
-139. method:TileGrid.anySelected skipped because: method:TileGrid.anySelected is already implemented by class:TileGrid
-140. method:TileGrid.deselectAllRecords skipped because: method:TileGrid.deselectAllRecords is already implemented by class:TileGrid
-141. method:TileGrid.deselectRange skipped because: method:TileGrid.deselectRange is already implemented by class:TileGrid
-142. method:TileGrid.deselectRecord skipped because: method:TileGrid.deselectRecord is already implemented by class:TileGrid
-143. method:TileGrid.deselectRecords skipped because: method:TileGrid.deselectRecords is already implemented by class:TileGrid
-144. method:TileGrid.exportData skipped because: method:TileGrid.exportData is already implemented by class:TileGrid
-145. method:TileGrid.getDragData skipped because: method:TileGrid.getDragData is already implemented by class:TileGrid
-146. method:TileGrid.getTile skipped because: Overrides a method in a base class with a different signature
-147. method:TileGrid.getTitleField skipped because: method:TileGrid.getTitleField is already implemented by class:TileGrid
-148. method:TileGrid.removeTile skipped because: Overrides a method in a base class with a different signature
-149. method:TileGrid.selectAllRecords skipped because: method:TileGrid.selectAllRecords is already implemented by class:TileGrid
-150. method:TileGrid.selectRange skipped because: method:TileGrid.selectRange is already implemented by class:TileGrid
-151. method:TileGrid.selectRecord skipped because: method:TileGrid.selectRecord is already implemented by class:TileGrid
-152. method:TileGrid.selectRecords skipped because: method:TileGrid.selectRecords is already implemented by class:TileGrid
-153. method:TileGrid.setData skipped because: Setter method param type does not match attribute type
-154. method:TileGrid.setDragTracker skipped because: method:TileGrid.setDragTracker is already implemented by class:TileGrid
-155. method:TileGrid.transferDragData skipped because: method:TileGrid.transferDragData is already implemented by class:TileGrid
-156. method:TileGrid.transferSelectedData skipped because: method:TileGrid.transferSelectedData is already implemented by class:TileGrid
-157. method:Toolbar.getButtonNumber skipped because: Hard-coded list: What is [number | String  | Button Object | Button Widget] ?.
-158. method:Tree.add skipped because: method:Tree.add is already implemented by class:Tree
-159. method:Tree.addList skipped because: method:Tree.addList is already implemented by class:Tree
-160. method:Tree.dataChanged skipped because: method:Tree.dataChanged is already implemented by class:Tree
-161. method:Tree.find skipped because: method:Tree.find is already implemented by class:Tree
-162. method:Tree.findIndex skipped because: method:Tree.findIndex is already implemented by class:Tree
-163. method:Tree.findNextIndex skipped because: method:Tree.findNextIndex is already implemented by class:Tree
-164. method:Tree.getLength skipped because: method:Tree.getLength is already implemented by class:Tree
-165. method:Tree.indexOf skipped because: method:Tree.indexOf is already implemented by class:Tree
-166. method:Tree.lastIndexOf skipped because: method:Tree.lastIndexOf is already implemented by class:Tree
-167. method:Tree.remove skipped because: method:Tree.remove is already implemented by class:Tree
-168. method:Tree.removeList skipped because: method:Tree.removeList is already implemented by class:Tree
-169. method:TreeGrid.canEditCell skipped because: Overrides a method in a base class with a different signature
-170. method:TreeGrid.dataArrived skipped because: Overrides a method in a base class with a different signature
-171. method:TreeGrid.getViewState skipped because: Overrides a method in a base class with a different signature
-172. method:TreeGrid.recordDoubleClick skipped because: Overrides a method in a base class with a different signature
-173. method:TreeGrid.recordDrop skipped because: Overrides a method in a base class with a different signature
-174. method:TreeGrid.rowClick skipped because: Overrides a method in a base class with a different signature
-175. method:TreeGrid.setData skipped because: Overrides a method in a base class with a different signature
-176. method:TreeGrid.setViewState skipped because: Overrides a method in a base class with a different signature
-177. method:TreeGrid.startEditingNew skipped because: Overrides a method in a base class with a different signature
-178. method:TreeGrid.transferDragData skipped because: method:TreeGrid.transferDragData is already implemented by class:TreeGrid
-179. method:TreeGrid.transferSelectedData skipped because: method:TreeGrid.transferSelectedData is already implemented by class:TreeGrid
-180. method:UploadItem.setSelectionRange skipped because: Overrides a method in a base class with a different signature
-181. method:UploadItem.setValue skipped because: Overrides a method in a base class with a different signature
-182. staticMethod:Date.create skipped because: Conflicts with Class.create(). Not sure what to do about this yet
-183. staticMethod:isc.addProperties skipped because: Hard-coded list: Because A rest parameter must be of an array type.
+80. method:ListGrid.getBaseStyle skipped because: Has required parameter after optional parameter
+81. method:ListGrid.getDragData skipped because: method:ListGrid.getDragData is already implemented by class:ListGrid
+82. method:ListGrid.getField skipped because: method:ListGrid.getField is already implemented by class:ListGrid
+83. method:ListGrid.getFieldNum skipped because: method:ListGrid.getFieldNum is already implemented by class:ListGrid
+84. method:ListGrid.getFormulaFieldValue skipped because: method:ListGrid.getFormulaFieldValue is already implemented by class:ListGrid
+85. method:ListGrid.getRecordIndex skipped because: method:ListGrid.getRecordIndex is already implemented by class:ListGrid
+86. method:ListGrid.getSort skipped because: method:ListGrid.getSort is already implemented by class:ListGrid
+87. method:ListGrid.getSummaryFieldValue skipped because: method:ListGrid.getSummaryFieldValue is already implemented by class:ListGrid
+88. method:ListGrid.getTitleField skipped because: method:ListGrid.getTitleField is already implemented by class:ListGrid
+89. method:ListGrid.selectAllRecords skipped because: method:ListGrid.selectAllRecords is already implemented by class:ListGrid
+90. method:ListGrid.selectionUpdated skipped because: method:ListGrid.selectionUpdated is already implemented by class:ListGrid
+91. method:ListGrid.selectRange skipped because: method:ListGrid.selectRange is already implemented by class:ListGrid
+92. method:ListGrid.selectRecord skipped because: method:ListGrid.selectRecord is already implemented by class:ListGrid
+93. method:ListGrid.selectRecords skipped because: method:ListGrid.selectRecords is already implemented by class:ListGrid
+94. method:ListGrid.selectSingleRecord skipped because: method:ListGrid.selectSingleRecord is already implemented by class:ListGrid
+95. method:ListGrid.setDataSource skipped because: method:ListGrid.setDataSource is already implemented by class:ListGrid
+96. method:ListGrid.setDragTracker skipped because: method:ListGrid.setDragTracker is already implemented by class:ListGrid
+97. method:ListGrid.setSort skipped because: method:ListGrid.setSort is already implemented by class:ListGrid
+98. method:ListGrid.shouldIncludeHiliteInSummaryField skipped because: method:ListGrid.shouldIncludeHiliteInSummaryField is already implemented by class:ListGrid
+99. method:ListGrid.transferDragData skipped because: method:ListGrid.transferDragData is already implemented by class:ListGrid
+100. method:ListGrid.transferSelectedData skipped because: method:ListGrid.transferSelectedData is already implemented by class:ListGrid
+101. method:ListGrid.willFetchData skipped because: method:ListGrid.willFetchData is already implemented by class:ListGrid
+102. method:Menu.setData skipped because: Overrides a method in a base class with a different signature
+103. method:Menu.showContextMenu skipped because: Overrides a method in a base class with a different signature
+104. method:MiniDateRangeItem.getCriterion skipped because: Overrides a method in a base class with a different signature
+105. method:MiniDateRangeItem.getValue skipped because: Overrides a method in a base class with a different signature
+106. method:MiniDateRangeItem.setValue skipped because: Overrides a method in a base class with a different signature
+107. method:NavigationBar.setCustomNavControl skipped because: Setter method param type does not match attribute type
+108. method:Portlet.closeClick skipped because: Overrides a method in a base class with a different signature
+109. method:Portlet.setHeight skipped because: Setter method param type does not match attribute type
+110. method:Portlet.setRowHeight skipped because: Setter method param type does not match attribute type
+111. method:PresetCriteriaItem.getCriterion skipped because: Overrides a method in a base class with a different signature
+112. method:Progressbar.setLength skipped because: Setter method param type does not match attribute type
+113. method:RadioGroupItem.valueHoverHTML skipped because: Overrides a method in a base class with a different signature
+114. method:RelativeDateItem.formatEditorValue skipped because: Overrides a method in a base class with a different signature
+115. method:RelativeDateItem.getCriterion skipped because: Overrides a method in a base class with a different signature
+116. method:RelativeDateItem.parseEditorValue skipped because: Overrides a method in a base class with a different signature
+117. method:RestDataSource.transformRequest skipped because: Overrides a method in a base class with a different signature
+118. method:ResultSet.duplicate skipped because: method:ResultSet.duplicate is already implemented by class:ResultSet
+119. method:ResultSet.find skipped because: method:ResultSet.find is already implemented by class:ResultSet
+120. method:ResultSet.findAll skipped because: method:ResultSet.findAll is already implemented by class:ResultSet
+121. method:ResultSet.findIndex skipped because: method:ResultSet.findIndex is already implemented by class:ResultSet
+122. method:ResultSet.findNextIndex skipped because: method:ResultSet.findNextIndex is already implemented by class:ResultSet
+123. method:ResultSet.get skipped because: method:ResultSet.get is already implemented by class:ResultSet
+124. method:ResultSet.getLength skipped because: method:ResultSet.getLength is already implemented by class:ResultSet
+125. method:ResultSet.getProperty skipped because: method:ResultSet.getProperty is already implemented by class:ResultSet
+126. method:ResultSet.getRange skipped because: method:ResultSet.getRange is already implemented by class:ResultSet
+127. method:ResultSet.getValueMap skipped because: method:ResultSet.getValueMap is already implemented by class:ResultSet
+128. method:ResultSet.indexOf skipped because: method:ResultSet.indexOf is already implemented by class:ResultSet
+129. method:ResultSet.sortByProperty skipped because: method:ResultSet.sortByProperty is already implemented by class:ResultSet
+130. method:ResultTree.setChildren skipped because: Overrides a method in a base class with a different signature
+131. method:SelectItem.dataArrived skipped because: method:SelectItem.dataArrived is already implemented by class:SelectItem
+132. method:SelectItem.defaultDynamicValue skipped because: Overrides a method in a base class with a different signature
+133. method:SelectItem.fetchData skipped because: method:SelectItem.fetchData is already implemented by class:SelectItem
+134. method:SelectItem.getDisplayFieldName skipped because: method:SelectItem.getDisplayFieldName is already implemented by class:SelectItem
+135. method:SelectItem.getValueFieldName skipped because: method:SelectItem.getValueFieldName is already implemented by class:SelectItem
+136. method:StretchImg.setState skipped because: Overrides a method in a base class with a different signature
+137. method:StretchImgButton.setSelected skipped because: Overrides a method in a base class with a different signature
+138. method:StretchImgButton.setState skipped because: Overrides a method in a base class with a different signature
+139. method:TileGrid.addTile skipped because: Overrides a method in a base class with a different signature
+140. method:TileGrid.anySelected skipped because: method:TileGrid.anySelected is already implemented by class:TileGrid
+141. method:TileGrid.deselectAllRecords skipped because: method:TileGrid.deselectAllRecords is already implemented by class:TileGrid
+142. method:TileGrid.deselectRange skipped because: method:TileGrid.deselectRange is already implemented by class:TileGrid
+143. method:TileGrid.deselectRecord skipped because: method:TileGrid.deselectRecord is already implemented by class:TileGrid
+144. method:TileGrid.deselectRecords skipped because: method:TileGrid.deselectRecords is already implemented by class:TileGrid
+145. method:TileGrid.exportData skipped because: method:TileGrid.exportData is already implemented by class:TileGrid
+146. method:TileGrid.getDragData skipped because: method:TileGrid.getDragData is already implemented by class:TileGrid
+147. method:TileGrid.getTile skipped because: Overrides a method in a base class with a different signature
+148. method:TileGrid.getTitleField skipped because: method:TileGrid.getTitleField is already implemented by class:TileGrid
+149. method:TileGrid.removeTile skipped because: Overrides a method in a base class with a different signature
+150. method:TileGrid.selectAllRecords skipped because: method:TileGrid.selectAllRecords is already implemented by class:TileGrid
+151. method:TileGrid.selectRange skipped because: method:TileGrid.selectRange is already implemented by class:TileGrid
+152. method:TileGrid.selectRecord skipped because: method:TileGrid.selectRecord is already implemented by class:TileGrid
+153. method:TileGrid.selectRecords skipped because: method:TileGrid.selectRecords is already implemented by class:TileGrid
+154. method:TileGrid.setData skipped because: Setter method param type does not match attribute type
+155. method:TileGrid.setDragTracker skipped because: method:TileGrid.setDragTracker is already implemented by class:TileGrid
+156. method:TileGrid.transferDragData skipped because: method:TileGrid.transferDragData is already implemented by class:TileGrid
+157. method:TileGrid.transferSelectedData skipped because: method:TileGrid.transferSelectedData is already implemented by class:TileGrid
+158. method:Toolbar.getButtonNumber skipped because: Hard-coded list: What is [number | String  | Button Object | Button Widget] ?.
+159. method:Tree.add skipped because: method:Tree.add is already implemented by class:Tree
+160. method:Tree.addList skipped because: method:Tree.addList is already implemented by class:Tree
+161. method:Tree.dataChanged skipped because: method:Tree.dataChanged is already implemented by class:Tree
+162. method:Tree.find skipped because: method:Tree.find is already implemented by class:Tree
+163. method:Tree.findIndex skipped because: method:Tree.findIndex is already implemented by class:Tree
+164. method:Tree.findNextIndex skipped because: method:Tree.findNextIndex is already implemented by class:Tree
+165. method:Tree.getLength skipped because: method:Tree.getLength is already implemented by class:Tree
+166. method:Tree.indexOf skipped because: method:Tree.indexOf is already implemented by class:Tree
+167. method:Tree.lastIndexOf skipped because: method:Tree.lastIndexOf is already implemented by class:Tree
+168. method:Tree.remove skipped because: method:Tree.remove is already implemented by class:Tree
+169. method:Tree.removeList skipped because: method:Tree.removeList is already implemented by class:Tree
+170. method:TreeGrid.canEditCell skipped because: Overrides a method in a base class with a different signature
+171. method:TreeGrid.dataArrived skipped because: Overrides a method in a base class with a different signature
+172. method:TreeGrid.getViewState skipped because: Overrides a method in a base class with a different signature
+173. method:TreeGrid.recordDoubleClick skipped because: Overrides a method in a base class with a different signature
+174. method:TreeGrid.recordDrop skipped because: Overrides a method in a base class with a different signature
+175. method:TreeGrid.rowClick skipped because: Overrides a method in a base class with a different signature
+176. method:TreeGrid.setData skipped because: Overrides a method in a base class with a different signature
+177. method:TreeGrid.setViewState skipped because: Overrides a method in a base class with a different signature
+178. method:TreeGrid.startEditingNew skipped because: Overrides a method in a base class with a different signature
+179. method:TreeGrid.transferDragData skipped because: method:TreeGrid.transferDragData is already implemented by class:TreeGrid
+180. method:TreeGrid.transferSelectedData skipped because: method:TreeGrid.transferSelectedData is already implemented by class:TreeGrid
+181. method:UploadItem.setSelectionRange skipped because: Overrides a method in a base class with a different signature
+182. method:UploadItem.setValue skipped because: Overrides a method in a base class with a different signature
+183. staticMethod:Date.create skipped because: Conflicts with Class.create(). Not sure what to do about this yet
+184. staticMethod:isc.addProperties skipped because: Hard-coded list: Because A rest parameter must be of an array type.
 
 
 ==== The following lines can be copied and pasted in to Excel ======
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Types	Excluded Classes	Excluded Methods	Excluded Attributes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Methods Skipped	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated	Percentage of Methods skipped
-2017-11-13	249	5	297	82	3565	2	2	11	2	0	1	216	665	131	0	240	0	0	8	10	18	0	0	0	0	12	18	1	46	288	0	131	386	0	0	0	247	5	77	295	23	14	8	116	67	3292	183	1.108434	1	0.9390244	0.993266	0.9234222	0.0513324	
+2017-11-14	249	5	297	82	3565	2	2	11	2	0	1	216	665	131	0	240	0	0	8	10	18	0	0	0	1	12	18	1	46	288	0	131	386	0	0	0	247	5	77	295	23	14	8	116	67	3291	184	1.108434	1	0.9390244	0.993266	0.9231417	0.0516129	
 
 ====================================================================
 
 ======= Same stuff used in the Progress.MD file =======
-Metrics for build SNAPSHOT_v12.0d_2017-11-13
+Metrics for build SNAPSHOT_v12.0d_2017-11-14
 ===== Information =====
 (Informational only, not a problem)
 Types: 249
@@ -1311,8 +1316,8 @@ Types Generated: 247
 Interfaces Generated: 5
 Objects Generated: 77
 Classes Generated: 295
-Methods Generated: 3,292
-Methods Skipped: 183
+Methods Generated: 3,291
+Methods Skipped: 184
 Percentage of Types generated: 111 %
 Percentage of Interfaces generated: 100 %
 Percentage of Objects generated: 94 %
@@ -1342,7 +1347,7 @@ String types without baseType: 18
 Method params with missing name: 0
 Method params with bad name: 0
 Method params missing type: 0
-Methods with required parameters after optional parameters: 0
+Methods with required parameters after optional parameters: 1
 Setter Methods with parameter type that does not match the attribute type: 12
 Getter Methods with return type that does not match the attribute type: 1
 String values without reference: 0

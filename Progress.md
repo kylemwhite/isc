@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-11-13 at 11/13/2017 9:26:40 AM by KWhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-11-14 at 11/14/2017 7:01:30 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -32,8 +32,8 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |17|Interfaces Generated|5||
 |18|Objects Generated|77||
 |19|Classes Generated|295||
-|20|Methods Generated|3,292||
-|21|Methods Skipped|183||
+|20|Methods Generated|3,291||
+|21|Methods Skipped|184||
 |22|Percentage of Types generated|111%|May be more than 100% because the Callbacks methods are generated as types.|
 |23|Percentage of Interfaces generated|100%||
 |24|Percentage of Objects generated|94%||
@@ -66,12 +66,12 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |8|Arrays defined as 'array' or 'Array'|8|Since most arrays are NOT described this way, this is assumed to be incorrect.|
 |9|Weird Types that require special handling|8|Types that would be difficult to make a general rule for.|
 |10|Classes without inheritsFrom attribute|1|Although not an error in the isc system, this prevents automated code-generation from working because there's no way to tell if a class inherits from Class or if it is just missing the attribute. The only Class that should not have an inheritsFrom attribute is the base 'Class'.|
-|11|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
-|12|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|13|Arrays defined as 'Array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|14|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
-|15|Method params with missing name|0|All parameters should have a name.|
-|16|Method params with bad name|0|All parameters should have a name without special characters.|
-|17|Method params missing type|0|All parameters should have a type.|
-|18|Methods with required parameters after optional parameters|0|Required parameters should always be at the end of the parameter list.|
+|11|Methods with required parameters after optional parameters|1|Required parameters should always be at the end of the parameter list.|
+|12|Getter Methods with return type that does not match the attribute type|1|If a property has a getter, it should return the same type as the property. NOTE: Sometimes they are equivalent(i.e. string vs.URL) but still listed here hopes of making the docs consistent.|
+|13|Arrays defined as 'array of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|14|Arrays defined as 'Array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|15|Arrays defined as 'array[] of'|0|Since most arrays are NOT described this way, this is assumed to be incorrect.|
+|16|Method params with missing name|0|All parameters should have a name.|
+|17|Method params with bad name|0|All parameters should have a name without special characters.|
+|18|Method params missing type|0|All parameters should have a type.|
 |19|String values without reference|0|These are possible values of types that refer to a classAttr that doesn't exist. For example DateItem.DAY_MONTH|
