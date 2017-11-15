@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 11/14/2017 7:00:04 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-14
+// Generated: 11/15/2017 7:00:05 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-15
 
 declare namespace Isc {
 
@@ -3191,6 +3191,21 @@ declare namespace Isc {
 
 
 	/**
+	 * What the JSONEncoder should do when it encounters a circular reference in an object
+	 * structure.
+	 */
+	export type JSONCircularReferenceMode = 
+		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
+		"omit"
+		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
+		| "marker"
+		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
+	 * This potentially allows the original object graph to be reconstructed. */
+		| "path"
+		;
+
+
+	/**
 	 * Specifies the layout of the combo box and buttons in a MultiComboBoxItem.
 	 */
 	export type MultiComboBoxLayoutStyle = 
@@ -3206,21 +3221,6 @@ declare namespace Isc {
 		| "vertical"
 		/** Use a vertical layout with the combo box at the bottom */
 		| "verticalReverse"
-		;
-
-
-	/**
-	 * What the JSONEncoder should do when it encounters a circular reference in an object
-	 * structure.
-	 */
-	export type JSONCircularReferenceMode = 
-		/** circular references in Arrays will be represented as a null entry, and objects will have a property with a null value */
-		"omit"
-		/** leave a string marker, the JSONEncoder.circularReferenceMarker, wherever a circular reference is found */
-		| "marker"
-		/** leave a string marker followed by the path to the first occurrence of the circular reference from the top of the object tree that was serialized.
-	 * This potentially allows the original object graph to be reconstructed. */
-		| "path"
 		;
 
 
