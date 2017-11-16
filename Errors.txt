@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-15
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-16
 
 Errors during generation
-Generated: 11/15/2017 7:01:46 AM by KWhite
+Generated: 11/16/2017 7:04:08 AM by KWhite
 
 Summary
 Total Types  : 249
@@ -1289,12 +1289,12 @@ Skipped methods: 184
 
 ==== The following lines can be copied and pasted in to Excel ======
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Types	Excluded Classes	Excluded Methods	Excluded Attributes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Methods Skipped	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated	Percentage of Methods skipped
-2017-11-15	249	5	297	82	3565	2	2	11	2	0	1	216	665	131	0	240	0	0	8	10	18	0	0	0	1	12	18	1	46	288	0	131	386	0	0	0	247	5	77	295	23	14	8	116	67	3291	184	1.108434	1	0.9390244	0.993266	0.9231417	0.0516129	
+2017-11-16	249	5	297	82	3565	2	2	11	2	0	1	216	665	131	0	240	0	0	8	10	18	0	0	0	1	12	18	1	46	288	0	131	386	0	0	0	247	5	77	295	23	14	8	116	67	3291	184	1.108434	1	0.9390244	0.993266	0.9231417	0.0516129	
 
 ====================================================================
 
 ======= Same stuff used in the Progress.MD file =======
-Metrics for build SNAPSHOT_v12.0d_2017-11-15
+Metrics for build SNAPSHOT_v12.0d_2017-11-16
 ===== Information =====
 (Informational only, not a problem)
 Types: 249
