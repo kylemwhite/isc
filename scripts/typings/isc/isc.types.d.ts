@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 11/27/2017 7:00:03 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-26
+// Generated: 11/28/2017 7:00:12 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-11-28
 
 declare namespace Isc {
 
@@ -76,6 +76,14 @@ declare namespace Isc {
 
 
 	/**
+	 * An object containing the stored grouping information for a listGrid.
+	 * Note that this object is not intended to be interrogated directly, but may be stored
+	 * (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridGroupState = String; // baseType='String'
+
+
+	/**
 	 * CSS class name to apply to some HTML element on this page. This is a string that should
 	 * match the css class defined for the page in an external stylesheet or in inline
 	 * html &lt;STYLE&gt; tags.
@@ -115,14 +123,6 @@ declare namespace Isc {
 	 * effect on sizing or layout.
 	 */
 	export type CSSStyleName = String; // baseType='String'
-
-
-	/**
-	 * An object containing the stored grouping information for a listGrid.
-	 * Note that this object is not intended to be interrogated directly, but may be stored
-	 * (for example) as a blob on the server for state persistence across sessions.
-	 */
-	export type ListGridGroupState = String; // baseType='String'
 
 
 	/**
