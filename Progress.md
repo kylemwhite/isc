@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-11-29 at 11/29/2017 7:01:43 AM by KWhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-11-30 at 11/30/2017 7:01:43 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -25,7 +25,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |10|string values with quotes|216|String values surrounded by quotes. This indicates a literal string and is easy to generate.|
 |11|string values without quotes|665|String values NOT surrounded by quotes. This usually indicates a reference to a constant somewhere.|
 |12|string values with period|131|These usually are really references to a constant.|
-|13|Arrays defined as 'Array of'|240|Since most arrays are described this way, this is assumed to be the 'correct' way.|
+|13|Arrays defined as 'Array of'|241|Since most arrays are described this way, this is assumed to be the 'correct' way.|
 |14|String values where reference is found|131|Possible string values that refer to a constant where the constant was found.|
 |15|OR specified as ' \| '|387|Since most ORs are defined this way, it is assumed to be the correct way.|
 |16|Types Generated|247||
