@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 12/6/2017 7:00:26 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-02
+// Generated: 12/7/2017 7:00:06 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-07
 
 declare namespace Isc {
 
@@ -10803,10 +10803,9 @@ declare namespace Isc {
 		/**
 		 * When ListGrid.showHeader is false and a field is subject to autofitting (see
 		 * ListGrid.autoFitFieldWidths), sets the maximum width of the field. The actual
-		 * computed minimum described in the documentation for ListGridField.minWidth dominates this
-		 * property, and will thus be the actual field width if it exceeds maxWidth.
-		 * 
-		 * You can use maxWidth to limit the width of ListGridField.width','"stretch size"\n fields.
+		 * effective maximum will be the largest of this property, ListGridField.minWidth, and 
+		 * ListGrid.minFieldWidth. That is, ListGridField.minWidth and 
+		 * ListGrid.minFieldWidth dominate this property.
 		 * Flags: IRW, Group: appearance
 		 */
 		 maxWidth?: Number;
