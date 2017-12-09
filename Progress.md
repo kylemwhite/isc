@@ -4,7 +4,7 @@ By Kyle White ( [KMW Tech Solutions, Inc.](http://kmwTech.com/) )
 
 ## Progress Report
  
-Generated from SmartClient SNAPSHOT_v12.0d_2017-12-08 at 12/8/2017 7:01:29 AM by KWhite
+Generated from SmartClient SNAPSHOT_v12.0d_2017-12-09 at 12/9/2017 7:01:27 AM by KWhite
 
 To see the details, look in the [Errors.txt](./Errors.txt) file.
 
@@ -15,7 +15,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 ||**Information**||**Informational only, not a problem**|
 |1|Types|249|Number of types found in the referenceDocs.xml file|
 |2|Interfaces|5|Number of interfaces found in the referenceDocs.xml file|
-|3|Classes|297|Number of classes found in the referenceDocs.xml file|
+|3|Classes|298|Number of classes found in the referenceDocs.xml file|
 |4|Objects|82|Number of objects found in the referenceDocs.xml file|
 |5|Methods|3,568|Number of methods (instance and class) found in the referenceDocs.xml file|
 |6|Excluded Types|2|Number of Types excluded from generation for various reasons.|
@@ -31,7 +31,7 @@ To see the details, look in the [Errors.txt](./Errors.txt) file.
 |16|Types Generated|247||
 |17|Interfaces Generated|5||
 |18|Objects Generated|77||
-|19|Classes Generated|295||
+|19|Classes Generated|296||
 |20|Methods Generated|3,294||
 |21|Methods Skipped|184||
 |22|Percentage of Types generated|111%|May be more than 100% because the Callbacks methods are generated as types.|

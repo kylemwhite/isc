@@ -4,8 +4,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 12/8/2017 7:00:04 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-08
+// Generated: 12/9/2017 7:00:04 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-09
 
 declare namespace Isc {
 
@@ -1114,8 +1114,9 @@ declare namespace Isc {
 
 	/**
 	 * Interface to show a drop-down list of pickable options. Used by the SelectItem and
-	 * ComboBoxItem classes. The generated drop down list of options must be an instance of
-	 * PickListMenu, or a subclass thereof. 
+	 * ComboBoxItem classes. Depending on the value of PickList.listType, the 
+	 * generated drop down list of options must be an instance of PickListMenu or
+	 * PickTreeMenu, or a subclass thereof. 
 	 */
 	export interface PickList  {
 		 // ref="attr:PickList.showAllOptions"
@@ -1208,6 +1209,15 @@ declare namespace Isc {
 		 * Flags: IRA
 		 */
 		readonly filterLocally: boolean | null /* Boolean */;
+		 // ref="attr:PickList.pickTreeConstructor"
+		/**
+		 * From Interface PickList
+		 * (Read only) The Class to use when creating a picker of PickList.listType','type "tree" for 
+		 * a FormItem. Must be a subclass of the builtin default, 
+		 * PickTreeMenu','PickTreeMenu.
+		 * Flags: IR
+		 */
+		readonly pickTreeConstructor: SCClassName;
 		 // ref="attr:PickList.pickListAnimationTime"
 		/**
 		 * From Interface PickList
@@ -1219,8 +1229,9 @@ declare namespace Isc {
 		 // ref="attr:PickList.pickListConstructor"
 		/**
 		 * From Interface PickList
-		 * (Read only) The Class to use when creating the pickList for a FormItem. Must be a subclass of the
-		 * builtin default, PickListMenu','PickListMenu.
+		 * (Read only) The Class to use when creating a picker of PickList.listType','type "list" for 
+		 * a FormItem. Must be a subclass of the builtin default, 
+		 * PickListMenu','PickListMenu.
 		 * Flags: IR
 		 */
 		readonly pickListConstructor: SCClassName;
@@ -1523,6 +1534,17 @@ declare namespace Isc {
 		 * Flags: IRW
 		 */
 		readonly hideEmptyPickList: boolean;
+		 // ref="attr:PickList.listType"
+		/**
+		 * From Interface PickList
+		 * (Read only) Whether to show the picker as a flat list, or a collapsible tree.
+		 * 
+		 * The default value, "list", will use an instance of the
+		 * PickList.pickListConstructor','pickListConstructor as the picker - "tree" will 
+		 * show an instance of PickList.pickTreeConstructor','pickTreeConstructor.
+		 * Flags: IR
+		 */
+		readonly listType: String;
 		 // ref="attr:PickList.optionDataSource"
 		/**
 		 * From Interface PickList

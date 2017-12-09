@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 12/8/2017 7:01:29 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-08
+// Generated: 12/9/2017 7:01:27 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-09
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -3058,8 +3058,10 @@ declare namespace Isc {
 		/** 
 		 * PickListMenu extends ListGrid
 		 * ListGrid subclass used, by default, by FormItems which implement
-		 * PickList to display
-		 * a list of selectable options. Can be subclassed, customized and assigned to FormItems 
+		 * PickList to display a PickList.listType','flat list of selectable 
+		 * options.
+		 * 
+		 * Can be subclassed, customized and assigned to FormItems 
 		 * via the ComboBoxItem.pickListConstructor','pickListConstructor attribute.
 		 */ 
 		PickListMenu: PickListMenuStatic<PickListMenu, PickListMenuProps>;
@@ -3069,6 +3071,17 @@ declare namespace Isc {
 		 * FormItem that allows picking a value from a hierarchical data model.
 		 */ 
 		PickTreeItem: PickTreeItemStatic<PickTreeItem, PickTreeItemProps>;
+
+		/** 
+		 * PickTreeMenu extends TreeGrid
+		 * TreeGrid subclass used, by default, by FormItems which implement
+		 * PickList to display a PickList.listType','collapsible tree of 
+		 * selectable options.
+		 * 
+		 * Can be subclassed, customized and assigned to FormItems 
+		 * via the ComboBoxItem.pickTreeConstructor','pickTreeConstructor attribute.
+		 */ 
+		PickTreeMenu: PickTreeMenuStatic<PickTreeMenu, PickTreeMenuProps>;
 
 		/** 
 		 * PortalLayout extends Layout

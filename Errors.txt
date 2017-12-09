@@ -1,13 +1,13 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-08
+Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-09
 
 Errors during generation
-Generated: 12/8/2017 7:01:29 AM by KWhite
+Generated: 12/9/2017 7:01:27 AM by KWhite
 
 Summary
 Total Types  : 249
-Total Classes: 297
+Total Classes: 298
 Total Objects: 82
 Total Methods: 3568
 
@@ -882,7 +882,7 @@ String types no longer found in the refDocs file (can be removed): 0
 Any types no longer found in the refDocs file (can be removed): 0
 
 
-Attributes and methods that duplicate the same attribute or method defined in an implemented interface: 215
+Attributes and methods that duplicate the same attribute or method defined in an implemented interface: 219
 1. attr:Calendar.autoFetchData is also implemented by interface:DataBoundComponent
 2. attr:Calendar.dataFetchMode is also implemented by interface:DataBoundComponent
 3. attr:Calendar.dataSource is also implemented by interface:DataBoundComponent
@@ -902,202 +902,206 @@ Attributes and methods that duplicate the same attribute or method defined in an
 17. attr:ComboBoxItem.filterLocally is also implemented by interface:PickList
 18. attr:ComboBoxItem.iconPlacement is also implemented by interface:PickList
 19. attr:ComboBoxItem.initialSort is also implemented by interface:PickList
-20. attr:ComboBoxItem.optionDataSource is also implemented by interface:PickList
-21. attr:ComboBoxItem.optionFilterContext is also implemented by interface:PickList
-22. attr:ComboBoxItem.pickListConstructor is also implemented by interface:PickList
-23. attr:ComboBoxItem.pickListCriteria is also implemented by interface:PickList
-24. attr:ComboBoxItem.pickListFields is also implemented by interface:PickList
-25. attr:ComboBoxItem.pickListProperties is also implemented by interface:PickList
-26. attr:ComboBoxItem.separatorRows is also implemented by interface:PickList
-27. attr:ComboBoxItem.showAllOptions is also implemented by interface:PickList
-28. attr:ComboBoxItem.showOptionsFromDataSource is also implemented by interface:PickList
-29. attr:ComboBoxItem.sortField is also implemented by interface:PickList
-30. attr:ComboBoxItem.specialValues is also implemented by interface:PickList
-31. attr:ComboBoxItem.textMatchStyle is also implemented by interface:PickList
-32. attr:ComboBoxItem.useClientFiltering is also implemented by interface:PickList
-33. attr:ComboBoxItem.valueField is also implemented by interface:PickList
-34. attr:DetailViewer.autoFetchData is also implemented by interface:DataBoundComponent
-35. attr:DetailViewer.dataFetchMode is also implemented by interface:DataBoundComponent
-36. attr:DetailViewer.dataSource is also implemented by interface:DataBoundComponent
-37. attr:DetailViewer.fields is also implemented by interface:DataBoundComponent
-38. attr:DetailViewer.hiliteIconHeight is also implemented by interface:DataBoundComponent
-39. attr:DetailViewer.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
-40. attr:DetailViewer.hiliteIconPosition is also implemented by interface:DataBoundComponent
-41. attr:DetailViewer.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
-42. attr:DetailViewer.hiliteIcons is also implemented by interface:DataBoundComponent
-43. attr:DetailViewer.hiliteIconSize is also implemented by interface:DataBoundComponent
-44. attr:DetailViewer.hiliteIconWidth is also implemented by interface:DataBoundComponent
-45. attr:DetailViewer.initialCriteria is also implemented by interface:DataBoundComponent
-46. attr:DetailViewer.showDetailFields is also implemented by interface:DataBoundComponent
-47. attr:DynamicForm.autoFetchData is also implemented by interface:DataBoundComponent
-48. attr:DynamicForm.canEditFieldAttribute is also implemented by interface:DataBoundComponent
-49. attr:DynamicForm.dataFetchMode is also implemented by interface:DataBoundComponent
-50. attr:DynamicForm.dataSource is also implemented by interface:DataBoundComponent
-51. attr:DynamicForm.initialCriteria is also implemented by interface:DataBoundComponent
-52. attr:DynamicForm.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
-53. attr:DynamicForm.showDetailFields is also implemented by interface:DataBoundComponent
-54. attr:DynamicForm.unknownErrorMessage is also implemented by interface:DataBoundComponent
-55. attr:FacetChart.chartType is also implemented by interface:Chart
-56. attr:FacetChart.data is also implemented by interface:Chart
-57. attr:FacetChart.facets is also implemented by interface:Chart
-58. attr:FacetChart.stacked is also implemented by interface:Chart
-59. attr:FacetChart.title is also implemented by interface:Chart
-60. attr:FacetChart.valueProperty is also implemented by interface:Chart
-61. attr:FacetChart.valueTitle is also implemented by interface:Chart
-62. attr:ListGrid.autoFetchData is also implemented by interface:DataBoundComponent
-63. attr:ListGrid.badFormulaResultValue is also implemented by interface:DataBoundComponent
-64. attr:ListGrid.canAddFormulaFields is also implemented by interface:DataBoundComponent
-65. attr:ListGrid.canAddSummaryFields is also implemented by interface:DataBoundComponent
-66. attr:ListGrid.canEditFieldAttribute is also implemented by interface:DataBoundComponent
-67. attr:ListGrid.canEditHilites is also implemented by interface:DataBoundComponent
-68. attr:ListGrid.dataFetchDelay is also implemented by interface:DataBoundComponent
-69. attr:ListGrid.dataFetchMode is also implemented by interface:DataBoundComponent
-70. attr:ListGrid.dataPageSize is also implemented by interface:DataBoundComponent
-71. attr:ListGrid.dragDataAction is also implemented by interface:DataBoundComponent
-72. attr:ListGrid.dragTrackerStyle is also implemented by interface:DataBoundComponent
-73. attr:ListGrid.fields is also implemented by interface:DataBoundComponent
-74. attr:ListGrid.hiliteIconHeight is also implemented by interface:DataBoundComponent
-75. attr:ListGrid.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
-76. attr:ListGrid.hiliteIconPosition is also implemented by interface:DataBoundComponent
-77. attr:ListGrid.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
-78. attr:ListGrid.hiliteIcons is also implemented by interface:DataBoundComponent
-79. attr:ListGrid.hiliteIconSize is also implemented by interface:DataBoundComponent
-80. attr:ListGrid.hiliteIconWidth is also implemented by interface:DataBoundComponent
-81. attr:ListGrid.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
-82. attr:ListGrid.initialCriteria is also implemented by interface:DataBoundComponent
-83. attr:ListGrid.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
-84. attr:ListGrid.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
-85. attr:ListGrid.multiSortDialogProperties is also implemented by interface:DataBoundComponent
-86. attr:ListGrid.showDetailFields is also implemented by interface:DataBoundComponent
-87. attr:ListGrid.useAllDataSourceFields is also implemented by interface:DataBoundComponent
-88. attr:SelectItem.cachePickListResults is also implemented by interface:PickList
-89. attr:SelectItem.displayField is also implemented by interface:PickList
-90. attr:SelectItem.emptyPickListMessage is also implemented by interface:PickList
-91. attr:SelectItem.fetchDisplayedFieldsOnly is also implemented by interface:PickList
-92. attr:SelectItem.filterLocally is also implemented by interface:PickList
-93. attr:SelectItem.iconPlacement is also implemented by interface:PickList
-94. attr:SelectItem.initialSort is also implemented by interface:PickList
-95. attr:SelectItem.optionDataSource is also implemented by interface:PickList
-96. attr:SelectItem.optionFilterContext is also implemented by interface:PickList
-97. attr:SelectItem.pickListConstructor is also implemented by interface:PickList
-98. attr:SelectItem.pickListCriteria is also implemented by interface:PickList
-99. attr:SelectItem.pickListFields is also implemented by interface:PickList
-100. attr:SelectItem.pickListProperties is also implemented by interface:PickList
-101. attr:SelectItem.showOptionsFromDataSource is also implemented by interface:PickList
-102. attr:SelectItem.sortField is also implemented by interface:PickList
-103. attr:SelectItem.specialValues is also implemented by interface:PickList
-104. attr:SelectItem.textMatchStyle is also implemented by interface:PickList
-105. attr:SelectItem.useClientFiltering is also implemented by interface:PickList
-106. attr:SelectItem.valueField is also implemented by interface:PickList
-107. attr:TileGrid.autoFetchData is also implemented by interface:DataBoundComponent
-108. attr:TileGrid.dataFetchMode is also implemented by interface:DataBoundComponent
-109. attr:TileGrid.dataSource is also implemented by interface:DataBoundComponent
-110. attr:TileGrid.dragDataAction is also implemented by interface:DataBoundComponent
-111. attr:TileGrid.dragTrackerStyle is also implemented by interface:DataBoundComponent
-112. attr:TileGrid.fields is also implemented by interface:DataBoundComponent
-113. attr:TileGrid.initialCriteria is also implemented by interface:DataBoundComponent
-114. attr:TileGrid.showDetailFields is also implemented by interface:DataBoundComponent
-115. attr:TreeGrid.dataFetchMode is also implemented by interface:DataBoundComponent
-116. attr:TreeGrid.dataSource is also implemented by interface:DataBoundComponent
-117. attr:TreeGrid.dragDataAction is also implemented by interface:DataBoundComponent
-118. attr:TreeGrid.fields is also implemented by interface:DataBoundComponent
-119. attr:TreeGrid.useAllDataSourceFields is also implemented by interface:DataBoundComponent
-120. classAttr:FacetChart.allChartTypes is also implemented by interface:Chart
-121. classAttr:FusionChart.allChartTypes is also implemented by interface:Chart
-122. classMethod:DataBoundComponent.requestsArePending is also implemented by interface:DataBoundComponent
-123. method:ColumnTree.anySelected is also implemented by interface:DataBoundComponent
-124. method:ColumnTree.deselectAllRecords is also implemented by interface:DataBoundComponent
-125. method:ColumnTree.deselectRecord is also implemented by interface:DataBoundComponent
-126. method:ColumnTree.deselectRecords is also implemented by interface:DataBoundComponent
-127. method:ColumnTree.selectAllRecords is also implemented by interface:DataBoundComponent
-128. method:ColumnTree.selectRecord is also implemented by interface:DataBoundComponent
-129. method:ColumnTree.selectRecords is also implemented by interface:DataBoundComponent
-130. method:ComboBoxItem.dataArrived is also implemented by interface:PickList
-131. method:ComboBoxItem.fetchData is also implemented by interface:PickList
-132. method:ComboBoxItem.filterClientPickListData is also implemented by interface:PickList
-133. method:ComboBoxItem.getClientPickListData is also implemented by interface:PickList
-134. method:ComboBoxItem.getDisplayFieldName is also implemented by interface:PickList
-135. method:ComboBoxItem.getPickListFilterCriteria is also implemented by interface:PickList
-136. method:ComboBoxItem.getValueFieldName is also implemented by interface:PickList
-137. method:DetailViewer.exportData is also implemented by interface:DataBoundComponent
-138. method:DetailViewer.getRecordIndex is also implemented by interface:DataBoundComponent
-139. method:DynamicForm.fieldIsEditable is also implemented by interface:DataBoundComponent
-140. method:DynamicForm.getField is also implemented by interface:DataBoundComponent
-141. method:FacetChart.getFacet is also implemented by interface:Chart
-142. method:FacetChart.getFacetValue is also implemented by interface:Chart
-143. method:ListGrid.anySelected is also implemented by interface:DataBoundComponent
-144. method:ListGrid.askForSort is also implemented by interface:DataBoundComponent
-145. method:ListGrid.deselectAllRecords is also implemented by interface:DataBoundComponent
-146. method:ListGrid.deselectRange is also implemented by interface:DataBoundComponent
-147. method:ListGrid.deselectRecord is also implemented by interface:DataBoundComponent
-148. method:ListGrid.deselectRecords is also implemented by interface:DataBoundComponent
-149. method:ListGrid.exportData is also implemented by interface:DataBoundComponent
-150. method:ListGrid.fieldIsEditable is also implemented by interface:DataBoundComponent
-151. method:ListGrid.getDragData is also implemented by interface:DataBoundComponent
-152. method:ListGrid.getField is also implemented by interface:DataBoundComponent
-153. method:ListGrid.getFieldNum is also implemented by interface:DataBoundComponent
-154. method:ListGrid.getFormulaFieldValue is also implemented by interface:DataBoundComponent
-155. method:ListGrid.getRecordIndex is also implemented by interface:DataBoundComponent
-156. method:ListGrid.getSort is also implemented by interface:DataBoundComponent
-157. method:ListGrid.getSummaryFieldValue is also implemented by interface:DataBoundComponent
-158. method:ListGrid.getTitleField is also implemented by interface:DataBoundComponent
-159. method:ListGrid.selectAllRecords is also implemented by interface:DataBoundComponent
-160. method:ListGrid.selectionUpdated is also implemented by interface:DataBoundComponent
-161. method:ListGrid.selectRange is also implemented by interface:DataBoundComponent
-162. method:ListGrid.selectRecord is also implemented by interface:DataBoundComponent
-163. method:ListGrid.selectRecords is also implemented by interface:DataBoundComponent
-164. method:ListGrid.selectSingleRecord is also implemented by interface:DataBoundComponent
-165. method:ListGrid.setDataSource is also implemented by interface:DataBoundComponent
-166. method:ListGrid.setDragTracker is also implemented by interface:DataBoundComponent
-167. method:ListGrid.setSort is also implemented by interface:DataBoundComponent
-168. method:ListGrid.shouldIncludeHiliteInSummaryField is also implemented by interface:DataBoundComponent
-169. method:ListGrid.transferDragData is also implemented by interface:DataBoundComponent
-170. method:ListGrid.transferSelectedData is also implemented by interface:DataBoundComponent
-171. method:ListGrid.willFetchData is also implemented by interface:DataBoundComponent
-172. method:ResultSet.duplicate is also implemented by interface:List
-173. method:ResultSet.find is also implemented by interface:List
-174. method:ResultSet.findAll is also implemented by interface:List
-175. method:ResultSet.findIndex is also implemented by interface:List
-176. method:ResultSet.findNextIndex is also implemented by interface:List
-177. method:ResultSet.get is also implemented by interface:List
-178. method:ResultSet.getLength is also implemented by interface:List
-179. method:ResultSet.getProperty is also implemented by interface:List
-180. method:ResultSet.getRange is also implemented by interface:List
-181. method:ResultSet.getValueMap is also implemented by interface:List
-182. method:ResultSet.indexOf is also implemented by interface:List
-183. method:ResultSet.sortByProperty is also implemented by interface:List
-184. method:SelectItem.dataArrived is also implemented by interface:PickList
-185. method:SelectItem.fetchData is also implemented by interface:PickList
-186. method:SelectItem.getDisplayFieldName is also implemented by interface:PickList
-187. method:SelectItem.getValueFieldName is also implemented by interface:PickList
-188. method:TileGrid.anySelected is also implemented by interface:DataBoundComponent
-189. method:TileGrid.deselectAllRecords is also implemented by interface:DataBoundComponent
-190. method:TileGrid.deselectRange is also implemented by interface:DataBoundComponent
-191. method:TileGrid.deselectRecord is also implemented by interface:DataBoundComponent
-192. method:TileGrid.deselectRecords is also implemented by interface:DataBoundComponent
-193. method:TileGrid.exportData is also implemented by interface:DataBoundComponent
-194. method:TileGrid.getDragData is also implemented by interface:DataBoundComponent
-195. method:TileGrid.getTitleField is also implemented by interface:DataBoundComponent
-196. method:TileGrid.selectAllRecords is also implemented by interface:DataBoundComponent
-197. method:TileGrid.selectRange is also implemented by interface:DataBoundComponent
-198. method:TileGrid.selectRecord is also implemented by interface:DataBoundComponent
-199. method:TileGrid.selectRecords is also implemented by interface:DataBoundComponent
-200. method:TileGrid.setDragTracker is also implemented by interface:DataBoundComponent
-201. method:TileGrid.transferDragData is also implemented by interface:DataBoundComponent
-202. method:TileGrid.transferSelectedData is also implemented by interface:DataBoundComponent
-203. method:Tree.add is also implemented by interface:List
-204. method:Tree.addList is also implemented by interface:List
-205. method:Tree.dataChanged is also implemented by interface:List
-206. method:Tree.find is also implemented by interface:List
-207. method:Tree.findIndex is also implemented by interface:List
-208. method:Tree.findNextIndex is also implemented by interface:List
-209. method:Tree.getLength is also implemented by interface:List
-210. method:Tree.indexOf is also implemented by interface:List
-211. method:Tree.lastIndexOf is also implemented by interface:List
-212. method:Tree.remove is also implemented by interface:List
-213. method:Tree.removeList is also implemented by interface:List
-214. method:TreeGrid.transferDragData is also implemented by interface:DataBoundComponent
-215. method:TreeGrid.transferSelectedData is also implemented by interface:DataBoundComponent
+20. attr:ComboBoxItem.listType is also implemented by interface:PickList
+21. attr:ComboBoxItem.optionDataSource is also implemented by interface:PickList
+22. attr:ComboBoxItem.optionFilterContext is also implemented by interface:PickList
+23. attr:ComboBoxItem.pickListConstructor is also implemented by interface:PickList
+24. attr:ComboBoxItem.pickListCriteria is also implemented by interface:PickList
+25. attr:ComboBoxItem.pickListFields is also implemented by interface:PickList
+26. attr:ComboBoxItem.pickListProperties is also implemented by interface:PickList
+27. attr:ComboBoxItem.pickTreeConstructor is also implemented by interface:PickList
+28. attr:ComboBoxItem.separatorRows is also implemented by interface:PickList
+29. attr:ComboBoxItem.showAllOptions is also implemented by interface:PickList
+30. attr:ComboBoxItem.showOptionsFromDataSource is also implemented by interface:PickList
+31. attr:ComboBoxItem.sortField is also implemented by interface:PickList
+32. attr:ComboBoxItem.specialValues is also implemented by interface:PickList
+33. attr:ComboBoxItem.textMatchStyle is also implemented by interface:PickList
+34. attr:ComboBoxItem.useClientFiltering is also implemented by interface:PickList
+35. attr:ComboBoxItem.valueField is also implemented by interface:PickList
+36. attr:DetailViewer.autoFetchData is also implemented by interface:DataBoundComponent
+37. attr:DetailViewer.dataFetchMode is also implemented by interface:DataBoundComponent
+38. attr:DetailViewer.dataSource is also implemented by interface:DataBoundComponent
+39. attr:DetailViewer.fields is also implemented by interface:DataBoundComponent
+40. attr:DetailViewer.hiliteIconHeight is also implemented by interface:DataBoundComponent
+41. attr:DetailViewer.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+42. attr:DetailViewer.hiliteIconPosition is also implemented by interface:DataBoundComponent
+43. attr:DetailViewer.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+44. attr:DetailViewer.hiliteIcons is also implemented by interface:DataBoundComponent
+45. attr:DetailViewer.hiliteIconSize is also implemented by interface:DataBoundComponent
+46. attr:DetailViewer.hiliteIconWidth is also implemented by interface:DataBoundComponent
+47. attr:DetailViewer.initialCriteria is also implemented by interface:DataBoundComponent
+48. attr:DetailViewer.showDetailFields is also implemented by interface:DataBoundComponent
+49. attr:DynamicForm.autoFetchData is also implemented by interface:DataBoundComponent
+50. attr:DynamicForm.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+51. attr:DynamicForm.dataFetchMode is also implemented by interface:DataBoundComponent
+52. attr:DynamicForm.dataSource is also implemented by interface:DataBoundComponent
+53. attr:DynamicForm.initialCriteria is also implemented by interface:DataBoundComponent
+54. attr:DynamicForm.noErrorDetailsMessage is also implemented by interface:DataBoundComponent
+55. attr:DynamicForm.showDetailFields is also implemented by interface:DataBoundComponent
+56. attr:DynamicForm.unknownErrorMessage is also implemented by interface:DataBoundComponent
+57. attr:FacetChart.chartType is also implemented by interface:Chart
+58. attr:FacetChart.data is also implemented by interface:Chart
+59. attr:FacetChart.facets is also implemented by interface:Chart
+60. attr:FacetChart.stacked is also implemented by interface:Chart
+61. attr:FacetChart.title is also implemented by interface:Chart
+62. attr:FacetChart.valueProperty is also implemented by interface:Chart
+63. attr:FacetChart.valueTitle is also implemented by interface:Chart
+64. attr:ListGrid.autoFetchData is also implemented by interface:DataBoundComponent
+65. attr:ListGrid.badFormulaResultValue is also implemented by interface:DataBoundComponent
+66. attr:ListGrid.canAddFormulaFields is also implemented by interface:DataBoundComponent
+67. attr:ListGrid.canAddSummaryFields is also implemented by interface:DataBoundComponent
+68. attr:ListGrid.canEditFieldAttribute is also implemented by interface:DataBoundComponent
+69. attr:ListGrid.canEditHilites is also implemented by interface:DataBoundComponent
+70. attr:ListGrid.dataFetchDelay is also implemented by interface:DataBoundComponent
+71. attr:ListGrid.dataFetchMode is also implemented by interface:DataBoundComponent
+72. attr:ListGrid.dataPageSize is also implemented by interface:DataBoundComponent
+73. attr:ListGrid.dragDataAction is also implemented by interface:DataBoundComponent
+74. attr:ListGrid.dragTrackerStyle is also implemented by interface:DataBoundComponent
+75. attr:ListGrid.fields is also implemented by interface:DataBoundComponent
+76. attr:ListGrid.hiliteIconHeight is also implemented by interface:DataBoundComponent
+77. attr:ListGrid.hiliteIconLeftPadding is also implemented by interface:DataBoundComponent
+78. attr:ListGrid.hiliteIconPosition is also implemented by interface:DataBoundComponent
+79. attr:ListGrid.hiliteIconRightPadding is also implemented by interface:DataBoundComponent
+80. attr:ListGrid.hiliteIcons is also implemented by interface:DataBoundComponent
+81. attr:ListGrid.hiliteIconSize is also implemented by interface:DataBoundComponent
+82. attr:ListGrid.hiliteIconWidth is also implemented by interface:DataBoundComponent
+83. attr:ListGrid.includeHilitesInSummaryFields is also implemented by interface:DataBoundComponent
+84. attr:ListGrid.initialCriteria is also implemented by interface:DataBoundComponent
+85. attr:ListGrid.missingSummaryFieldValue is also implemented by interface:DataBoundComponent
+86. attr:ListGrid.multiSortDialogDefaults is also implemented by interface:DataBoundComponent
+87. attr:ListGrid.multiSortDialogProperties is also implemented by interface:DataBoundComponent
+88. attr:ListGrid.showDetailFields is also implemented by interface:DataBoundComponent
+89. attr:ListGrid.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+90. attr:SelectItem.cachePickListResults is also implemented by interface:PickList
+91. attr:SelectItem.displayField is also implemented by interface:PickList
+92. attr:SelectItem.emptyPickListMessage is also implemented by interface:PickList
+93. attr:SelectItem.fetchDisplayedFieldsOnly is also implemented by interface:PickList
+94. attr:SelectItem.filterLocally is also implemented by interface:PickList
+95. attr:SelectItem.iconPlacement is also implemented by interface:PickList
+96. attr:SelectItem.initialSort is also implemented by interface:PickList
+97. attr:SelectItem.listType is also implemented by interface:PickList
+98. attr:SelectItem.optionDataSource is also implemented by interface:PickList
+99. attr:SelectItem.optionFilterContext is also implemented by interface:PickList
+100. attr:SelectItem.pickListConstructor is also implemented by interface:PickList
+101. attr:SelectItem.pickListCriteria is also implemented by interface:PickList
+102. attr:SelectItem.pickListFields is also implemented by interface:PickList
+103. attr:SelectItem.pickListProperties is also implemented by interface:PickList
+104. attr:SelectItem.pickTreeConstructor is also implemented by interface:PickList
+105. attr:SelectItem.showOptionsFromDataSource is also implemented by interface:PickList
+106. attr:SelectItem.sortField is also implemented by interface:PickList
+107. attr:SelectItem.specialValues is also implemented by interface:PickList
+108. attr:SelectItem.textMatchStyle is also implemented by interface:PickList
+109. attr:SelectItem.useClientFiltering is also implemented by interface:PickList
+110. attr:SelectItem.valueField is also implemented by interface:PickList
+111. attr:TileGrid.autoFetchData is also implemented by interface:DataBoundComponent
+112. attr:TileGrid.dataFetchMode is also implemented by interface:DataBoundComponent
+113. attr:TileGrid.dataSource is also implemented by interface:DataBoundComponent
+114. attr:TileGrid.dragDataAction is also implemented by interface:DataBoundComponent
+115. attr:TileGrid.dragTrackerStyle is also implemented by interface:DataBoundComponent
+116. attr:TileGrid.fields is also implemented by interface:DataBoundComponent
+117. attr:TileGrid.initialCriteria is also implemented by interface:DataBoundComponent
+118. attr:TileGrid.showDetailFields is also implemented by interface:DataBoundComponent
+119. attr:TreeGrid.dataFetchMode is also implemented by interface:DataBoundComponent
+120. attr:TreeGrid.dataSource is also implemented by interface:DataBoundComponent
+121. attr:TreeGrid.dragDataAction is also implemented by interface:DataBoundComponent
+122. attr:TreeGrid.fields is also implemented by interface:DataBoundComponent
+123. attr:TreeGrid.useAllDataSourceFields is also implemented by interface:DataBoundComponent
+124. classAttr:FacetChart.allChartTypes is also implemented by interface:Chart
+125. classAttr:FusionChart.allChartTypes is also implemented by interface:Chart
+126. classMethod:DataBoundComponent.requestsArePending is also implemented by interface:DataBoundComponent
+127. method:ColumnTree.anySelected is also implemented by interface:DataBoundComponent
+128. method:ColumnTree.deselectAllRecords is also implemented by interface:DataBoundComponent
+129. method:ColumnTree.deselectRecord is also implemented by interface:DataBoundComponent
+130. method:ColumnTree.deselectRecords is also implemented by interface:DataBoundComponent
+131. method:ColumnTree.selectAllRecords is also implemented by interface:DataBoundComponent
+132. method:ColumnTree.selectRecord is also implemented by interface:DataBoundComponent
+133. method:ColumnTree.selectRecords is also implemented by interface:DataBoundComponent
+134. method:ComboBoxItem.dataArrived is also implemented by interface:PickList
+135. method:ComboBoxItem.fetchData is also implemented by interface:PickList
+136. method:ComboBoxItem.filterClientPickListData is also implemented by interface:PickList
+137. method:ComboBoxItem.getClientPickListData is also implemented by interface:PickList
+138. method:ComboBoxItem.getDisplayFieldName is also implemented by interface:PickList
+139. method:ComboBoxItem.getPickListFilterCriteria is also implemented by interface:PickList
+140. method:ComboBoxItem.getValueFieldName is also implemented by interface:PickList
+141. method:DetailViewer.exportData is also implemented by interface:DataBoundComponent
+142. method:DetailViewer.getRecordIndex is also implemented by interface:DataBoundComponent
+143. method:DynamicForm.fieldIsEditable is also implemented by interface:DataBoundComponent
+144. method:DynamicForm.getField is also implemented by interface:DataBoundComponent
+145. method:FacetChart.getFacet is also implemented by interface:Chart
+146. method:FacetChart.getFacetValue is also implemented by interface:Chart
+147. method:ListGrid.anySelected is also implemented by interface:DataBoundComponent
+148. method:ListGrid.askForSort is also implemented by interface:DataBoundComponent
+149. method:ListGrid.deselectAllRecords is also implemented by interface:DataBoundComponent
+150. method:ListGrid.deselectRange is also implemented by interface:DataBoundComponent
+151. method:ListGrid.deselectRecord is also implemented by interface:DataBoundComponent
+152. method:ListGrid.deselectRecords is also implemented by interface:DataBoundComponent
+153. method:ListGrid.exportData is also implemented by interface:DataBoundComponent
+154. method:ListGrid.fieldIsEditable is also implemented by interface:DataBoundComponent
+155. method:ListGrid.getDragData is also implemented by interface:DataBoundComponent
+156. method:ListGrid.getField is also implemented by interface:DataBoundComponent
+157. method:ListGrid.getFieldNum is also implemented by interface:DataBoundComponent
+158. method:ListGrid.getFormulaFieldValue is also implemented by interface:DataBoundComponent
+159. method:ListGrid.getRecordIndex is also implemented by interface:DataBoundComponent
+160. method:ListGrid.getSort is also implemented by interface:DataBoundComponent
+161. method:ListGrid.getSummaryFieldValue is also implemented by interface:DataBoundComponent
+162. method:ListGrid.getTitleField is also implemented by interface:DataBoundComponent
+163. method:ListGrid.selectAllRecords is also implemented by interface:DataBoundComponent
+164. method:ListGrid.selectionUpdated is also implemented by interface:DataBoundComponent
+165. method:ListGrid.selectRange is also implemented by interface:DataBoundComponent
+166. method:ListGrid.selectRecord is also implemented by interface:DataBoundComponent
+167. method:ListGrid.selectRecords is also implemented by interface:DataBoundComponent
+168. method:ListGrid.selectSingleRecord is also implemented by interface:DataBoundComponent
+169. method:ListGrid.setDataSource is also implemented by interface:DataBoundComponent
+170. method:ListGrid.setDragTracker is also implemented by interface:DataBoundComponent
+171. method:ListGrid.setSort is also implemented by interface:DataBoundComponent
+172. method:ListGrid.shouldIncludeHiliteInSummaryField is also implemented by interface:DataBoundComponent
+173. method:ListGrid.transferDragData is also implemented by interface:DataBoundComponent
+174. method:ListGrid.transferSelectedData is also implemented by interface:DataBoundComponent
+175. method:ListGrid.willFetchData is also implemented by interface:DataBoundComponent
+176. method:ResultSet.duplicate is also implemented by interface:List
+177. method:ResultSet.find is also implemented by interface:List
+178. method:ResultSet.findAll is also implemented by interface:List
+179. method:ResultSet.findIndex is also implemented by interface:List
+180. method:ResultSet.findNextIndex is also implemented by interface:List
+181. method:ResultSet.get is also implemented by interface:List
+182. method:ResultSet.getLength is also implemented by interface:List
+183. method:ResultSet.getProperty is also implemented by interface:List
+184. method:ResultSet.getRange is also implemented by interface:List
+185. method:ResultSet.getValueMap is also implemented by interface:List
+186. method:ResultSet.indexOf is also implemented by interface:List
+187. method:ResultSet.sortByProperty is also implemented by interface:List
+188. method:SelectItem.dataArrived is also implemented by interface:PickList
+189. method:SelectItem.fetchData is also implemented by interface:PickList
+190. method:SelectItem.getDisplayFieldName is also implemented by interface:PickList
+191. method:SelectItem.getValueFieldName is also implemented by interface:PickList
+192. method:TileGrid.anySelected is also implemented by interface:DataBoundComponent
+193. method:TileGrid.deselectAllRecords is also implemented by interface:DataBoundComponent
+194. method:TileGrid.deselectRange is also implemented by interface:DataBoundComponent
+195. method:TileGrid.deselectRecord is also implemented by interface:DataBoundComponent
+196. method:TileGrid.deselectRecords is also implemented by interface:DataBoundComponent
+197. method:TileGrid.exportData is also implemented by interface:DataBoundComponent
+198. method:TileGrid.getDragData is also implemented by interface:DataBoundComponent
+199. method:TileGrid.getTitleField is also implemented by interface:DataBoundComponent
+200. method:TileGrid.selectAllRecords is also implemented by interface:DataBoundComponent
+201. method:TileGrid.selectRange is also implemented by interface:DataBoundComponent
+202. method:TileGrid.selectRecord is also implemented by interface:DataBoundComponent
+203. method:TileGrid.selectRecords is also implemented by interface:DataBoundComponent
+204. method:TileGrid.setDragTracker is also implemented by interface:DataBoundComponent
+205. method:TileGrid.transferDragData is also implemented by interface:DataBoundComponent
+206. method:TileGrid.transferSelectedData is also implemented by interface:DataBoundComponent
+207. method:Tree.add is also implemented by interface:List
+208. method:Tree.addList is also implemented by interface:List
+209. method:Tree.dataChanged is also implemented by interface:List
+210. method:Tree.find is also implemented by interface:List
+211. method:Tree.findIndex is also implemented by interface:List
+212. method:Tree.findNextIndex is also implemented by interface:List
+213. method:Tree.getLength is also implemented by interface:List
+214. method:Tree.indexOf is also implemented by interface:List
+215. method:Tree.lastIndexOf is also implemented by interface:List
+216. method:Tree.remove is also implemented by interface:List
+217. method:Tree.removeList is also implemented by interface:List
+218. method:TreeGrid.transferDragData is also implemented by interface:DataBoundComponent
+219. method:TreeGrid.transferSelectedData is also implemented by interface:DataBoundComponent
 
 
 Skipped methods: 184
@@ -1289,17 +1293,17 @@ Skipped methods: 184
 
 ==== The following lines can be copied and pasted in to Excel ======
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Types	Excluded Classes	Excluded Methods	Excluded Attributes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Methods Skipped	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated	Percentage of Methods skipped
-2017-12-08	249	5	297	82	3568	2	2	11	2	0	1	216	665	131	0	241	0	0	8	10	18	0	0	0	1	12	18	1	46	288	0	131	387	0	0	0	247	5	77	295	23	14	8	116	67	3294	184	1.108434	1	0.9390244	0.993266	0.9232063	0.05156951	
+2017-12-09	249	5	298	82	3568	2	2	11	2	0	1	216	665	131	0	241	0	0	8	10	18	0	0	0	1	12	18	1	46	288	0	131	387	0	0	0	247	5	77	296	23	14	8	116	67	3294	184	1.108434	1	0.9390244	0.9932886	0.9232063	0.05156951	
 
 ====================================================================
 
 ======= Same stuff used in the Progress.MD file =======
-Metrics for build SNAPSHOT_v12.0d_2017-12-08
+Metrics for build SNAPSHOT_v12.0d_2017-12-09
 ===== Information =====
 (Informational only, not a problem)
 Types: 249
 Interfaces: 5
-Classes: 297
+Classes: 298
 Objects: 82
 Methods: 3,568
 Excluded Types: 2
@@ -1315,7 +1319,7 @@ OR specified as ' \| ': 387
 Types Generated: 247
 Interfaces Generated: 5
 Objects Generated: 77
-Classes Generated: 295
+Classes Generated: 296
 Methods Generated: 3,294
 Methods Skipped: 184
 Percentage of Types generated: 111 %
