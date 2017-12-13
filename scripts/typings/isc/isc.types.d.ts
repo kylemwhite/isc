@@ -3,8 +3,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 12/12/2017 7:00:04 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-12
+// Generated: 12/13/2017 7:00:05 AM by KWhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-13
 
 declare namespace Isc {
 
@@ -76,6 +76,14 @@ declare namespace Isc {
 
 
 	/**
+	 * An object containing the stored grouping information for a listGrid.
+	 * Note that this object is not intended to be interrogated directly, but may be stored
+	 * (for example) as a blob on the server for state persistence across sessions.
+	 */
+	export type ListGridGroupState = String; // baseType='String'
+
+
+	/**
 	 * CSS class name to apply to some HTML element on this page. This is a string that should
 	 * match the css class defined for the page in an external stylesheet or in inline
 	 * html &lt;STYLE&gt; tags.
@@ -115,14 +123,6 @@ declare namespace Isc {
 	 * effect on sizing or layout.
 	 */
 	export type CSSStyleName = String; // baseType='String'
-
-
-	/**
-	 * An object containing the stored grouping information for a listGrid.
-	 * Note that this object is not intended to be interrogated directly, but may be stored
-	 * (for example) as a blob on the server for state persistence across sessions.
-	 */
-	export type ListGridGroupState = String; // baseType='String'
 
 
 	/**
@@ -1342,6 +1342,27 @@ declare namespace Isc {
 
 
 	/**
+	 * A Callback is an arbitrary action to be fired - usually passed into a 
+	 * method to be fired asynchronously as a notificaction of some event.
+	 * The callback can be defined in the following formats:
+	 * a function
+	 * A string containing an expression to evaluate
+	 * An object with the following properties:
+	 * - target: fire in the scope of this target - when the action fires,
+	 * the target will be available as this.
+	 * - methodName: if specified we'll check for a method on the target object with this 
+	 * name.
+	 * 
+	 * Callbacks are fired via the Class.fireCallback method, which allows
+	 * named parameters to be passed into the callback at runtime. If the Callback was specified
+	 * as a string of script, these parameters are available as local variables at eval time.
+	 * For specific SmartClient methods that make use of Callback objects, see
+	 * local documentation for information on parameters and scope.
+	 */
+	export type Callback = any; // baseType='<none>'
+
+
+	/**
 	 * Strings to identify the various keys on the keyboard.
 	 * 
 	 * For alpha keys, the single (uppercase) character value is used, such as "Q"
@@ -1373,27 +1394,6 @@ declare namespace Isc {
 	 * [Note: Some keys may not be available for capture on every platform]
 	 */
 	export type KeyName = String; // baseType='String'
-
-
-	/**
-	 * A Callback is an arbitrary action to be fired - usually passed into a 
-	 * method to be fired asynchronously as a notificaction of some event.
-	 * The callback can be defined in the following formats:
-	 * a function
-	 * A string containing an expression to evaluate
-	 * An object with the following properties:
-	 * - target: fire in the scope of this target - when the action fires,
-	 * the target will be available as this.
-	 * - methodName: if specified we'll check for a method on the target object with this 
-	 * name.
-	 * 
-	 * Callbacks are fired via the Class.fireCallback method, which allows
-	 * named parameters to be passed into the callback at runtime. If the Callback was specified
-	 * as a string of script, these parameters are available as local variables at eval time.
-	 * For specific SmartClient methods that make use of Callback objects, see
-	 * local documentation for information on parameters and scope.
-	 */
-	export type Callback = any; // baseType='<none>'
 
 
 	/**
