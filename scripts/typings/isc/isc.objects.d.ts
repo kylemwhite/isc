@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 12/15/2017 7:00:10 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-15
+// Generated: 1/2/2018 7:12:50 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2018-01-02
 
 declare namespace Isc {
 
@@ -11501,6 +11501,11 @@ declare namespace Isc {
 		 * autofit width for that field (so it will not be stretched larger to fill available
 		 * space). Otherwise, if not autofitting, the width will default to "*" causing it to be
 		 * automatically stretched.
+		 * 
+		 * The width may be defaulted to a numerical value based on DataSourceField.length
+		 * if no ListGridField.valueMap is set, subject to the initial values of
+		 * ListGridField.minWidth and ListGrid.minFieldWidth. If you'd rather have the field
+		 * stretched-sized to fit the available space, set its initial width to "*".
 		 * 
 		 * See also ListGrid.minFieldWidth to ensure no field goes below a minimum size.
 		 * 

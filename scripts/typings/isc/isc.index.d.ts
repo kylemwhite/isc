@@ -6,8 +6,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/kylemwhite/isc
-// Generated: 12/15/2017 7:01:41 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-15
+// Generated: 1/2/2018 7:15:03 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2018-01-02
 
 /**
  * Generic extensions to JavaScript Arrays. You can call these on any Array.
@@ -3058,7 +3058,7 @@ declare namespace Isc {
 		/** 
 		 * PickListMenu extends ListGrid
 		 * ListGrid subclass used, by default, by FormItems which implement
-		 * PickList to display a PickList.listType','flat list of selectable 
+		 * PickList to display a PickList.dataSetType','flat list of selectable 
 		 * options.
 		 * 
 		 * Can be subclassed, customized and assigned to FormItems 
@@ -3075,7 +3075,7 @@ declare namespace Isc {
 		/** 
 		 * PickTreeMenu extends TreeGrid
 		 * TreeGrid subclass used, by default, by FormItems which implement
-		 * PickList to display a PickList.listType','collapsible tree of 
+		 * PickList to display a PickList.dataSetType','collapsible tree of 
 		 * selectable options.
 		 * 
 		 * Can be subclassed, customized and assigned to FormItems 

@@ -4,8 +4,8 @@
 // Project: https://gihub.com/kylemwhite/isc
 // Definitions by: Kyle White <http://kmwTech.com>
 // Definitions: https://gihub.com/DefinitelyTyped/DefinitelyTyped
-// Generated: 12/15/2017 7:00:10 AM by KWhite
-// Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-15
+// Generated: 1/2/2018 7:12:50 AM by kwhite
+// Generated from SmartClient version SNAPSHOT_v12.0d_2018-01-02
 
 declare namespace Isc {
 
@@ -470,6 +470,28 @@ declare namespace Isc {
 		 * Flags: IRW, Group: i18nMessages
 		 */
 		readonly offlineMessage: String;
+		 // ref="attr:DataBoundComponent.canChangeNonFieldValues"
+		/**
+		 * From Interface DataBoundComponent
+		 * (Advanced) If this attribute is set to false, any attributes in the component's values object that do
+		 * not map to a DataSourceField','field or FormItem','formItem will not 
+		 * be tracked when checking for changes. You should only set this flag to false if you know 
+		 * that your code does not store additional, non-field values in the component's data, or if 
+		 * you do store such values, but you don't care that they are not checked for changes. 
+		 * This flag is primarily provided to avoid performance issues in cases where developers are
+		 * storing large numbers of extra attributes in component data; generally speaking, you should
+		 * only consider setting it to false if you have a use case like this.
+		 * 
+		 * Note, even with this flag set to false, these extra values will still be managed and stored 
+		 * by SmartClient; they just will not be checked when the component's values are inspected to 
+		 * see if they have changed. This may lead to methods like ListGrid.rowHasChanges
+		 * returning false when you are expecting it to return true. In this case, either switch this 
+		 * flag back to true (or just do not set it false), or provide a field definition for the 
+		 * affected attribute(s).
+		 * boolean - Null not allowed
+		 * Flags: IRWA
+		 */
+		readonly canChangeNonFieldValues: boolean;
 		 // ref="attr:DataBoundComponent.implicitCriteria"
 		/**
 		 * From Interface DataBoundComponent
@@ -1114,7 +1136,7 @@ declare namespace Isc {
 
 	/**
 	 * Interface to show a drop-down list of pickable options. Used by the SelectItem and
-	 * ComboBoxItem classes. Depending on the value of PickList.listType, the 
+	 * ComboBoxItem classes. Depending on the value of PickList.dataSetType, the 
 	 * generated drop down list of options must be an instance of PickListMenu or
 	 * PickTreeMenu, or a subclass thereof. 
 	 */
@@ -1212,7 +1234,7 @@ declare namespace Isc {
 		 // ref="attr:PickList.pickTreeConstructor"
 		/**
 		 * From Interface PickList
-		 * (Read only) The Class to use when creating a picker of PickList.listType','type "tree" for 
+		 * (Read only) The Class to use when creating a picker of PickList.dataSetType','type "tree" for 
 		 * a FormItem. Must be a subclass of the builtin default, 
 		 * PickTreeMenu','PickTreeMenu.
 		 * Flags: IR
@@ -1229,7 +1251,7 @@ declare namespace Isc {
 		 // ref="attr:PickList.pickListConstructor"
 		/**
 		 * From Interface PickList
-		 * (Read only) The Class to use when creating a picker of PickList.listType','type "list" for 
+		 * (Read only) The Class to use when creating a picker of PickList.dataSetType','type "list" for 
 		 * a FormItem. Must be a subclass of the builtin default, 
 		 * PickListMenu','PickListMenu.
 		 * Flags: IR
@@ -1429,6 +1451,17 @@ declare namespace Isc {
 		 * Flags: IR
 		 */
 		readonly textMatchStyle: TextMatchStyle;
+		 // ref="attr:PickList.dataSetType"
+		/**
+		 * From Interface PickList
+		 * (Read only) Whether to show the picker as a flat list, or a collapsible tree.
+		 * 
+		 * The default value, "list", will use an instance of the
+		 * PickList.pickListConstructor','pickListConstructor as the picker - "tree" will 
+		 * show an instance of PickList.pickTreeConstructor','pickTreeConstructor.
+		 * Flags: IR
+		 */
+		readonly dataSetType: String;
 		 // ref="attr:PickList.valueIconField"
 		/**
 		 * From Interface PickList
@@ -1534,17 +1567,6 @@ declare namespace Isc {
 		 * Flags: IRW
 		 */
 		readonly hideEmptyPickList: boolean;
-		 // ref="attr:PickList.listType"
-		/**
-		 * From Interface PickList
-		 * (Read only) Whether to show the picker as a flat list, or a collapsible tree.
-		 * 
-		 * The default value, "list", will use an instance of the
-		 * PickList.pickListConstructor','pickListConstructor as the picker - "tree" will 
-		 * show an instance of PickList.pickTreeConstructor','pickTreeConstructor.
-		 * Flags: IR
-		 */
-		readonly listType: String;
 		 // ref="attr:PickList.optionDataSource"
 		/**
 		 * From Interface PickList

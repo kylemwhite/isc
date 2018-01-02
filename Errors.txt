@@ -1,9 +1,9 @@
 SmartClientTypeScriptDefinitionGenerator
 By Kyle White (http://kmwTech.com)
-Generated from SmartClient version SNAPSHOT_v12.0d_2017-12-15
+Generated from SmartClient version SNAPSHOT_v12.0d_2018-01-02
 
 Errors during generation
-Generated: 12/15/2017 7:01:41 AM by KWhite
+Generated: 1/2/2018 7:15:03 AM by kwhite
 
 Summary
 Total Types  : 249
@@ -896,13 +896,13 @@ Attributes and methods that duplicate the same attribute or method defined in an
 11. attr:ColumnTree.initialCriteria is also implemented by interface:DataBoundComponent
 12. attr:ColumnTree.showDetailFields is also implemented by interface:DataBoundComponent
 13. attr:ComboBoxItem.cachePickListResults is also implemented by interface:PickList
-14. attr:ComboBoxItem.displayField is also implemented by interface:PickList
-15. attr:ComboBoxItem.emptyPickListMessage is also implemented by interface:PickList
-16. attr:ComboBoxItem.fetchDisplayedFieldsOnly is also implemented by interface:PickList
-17. attr:ComboBoxItem.filterLocally is also implemented by interface:PickList
-18. attr:ComboBoxItem.iconPlacement is also implemented by interface:PickList
-19. attr:ComboBoxItem.initialSort is also implemented by interface:PickList
-20. attr:ComboBoxItem.listType is also implemented by interface:PickList
+14. attr:ComboBoxItem.dataSetType is also implemented by interface:PickList
+15. attr:ComboBoxItem.displayField is also implemented by interface:PickList
+16. attr:ComboBoxItem.emptyPickListMessage is also implemented by interface:PickList
+17. attr:ComboBoxItem.fetchDisplayedFieldsOnly is also implemented by interface:PickList
+18. attr:ComboBoxItem.filterLocally is also implemented by interface:PickList
+19. attr:ComboBoxItem.iconPlacement is also implemented by interface:PickList
+20. attr:ComboBoxItem.initialSort is also implemented by interface:PickList
 21. attr:ComboBoxItem.optionDataSource is also implemented by interface:PickList
 22. attr:ComboBoxItem.optionFilterContext is also implemented by interface:PickList
 23. attr:ComboBoxItem.pickListConstructor is also implemented by interface:PickList
@@ -973,13 +973,13 @@ Attributes and methods that duplicate the same attribute or method defined in an
 88. attr:ListGrid.showDetailFields is also implemented by interface:DataBoundComponent
 89. attr:ListGrid.useAllDataSourceFields is also implemented by interface:DataBoundComponent
 90. attr:SelectItem.cachePickListResults is also implemented by interface:PickList
-91. attr:SelectItem.displayField is also implemented by interface:PickList
-92. attr:SelectItem.emptyPickListMessage is also implemented by interface:PickList
-93. attr:SelectItem.fetchDisplayedFieldsOnly is also implemented by interface:PickList
-94. attr:SelectItem.filterLocally is also implemented by interface:PickList
-95. attr:SelectItem.iconPlacement is also implemented by interface:PickList
-96. attr:SelectItem.initialSort is also implemented by interface:PickList
-97. attr:SelectItem.listType is also implemented by interface:PickList
+91. attr:SelectItem.dataSetType is also implemented by interface:PickList
+92. attr:SelectItem.displayField is also implemented by interface:PickList
+93. attr:SelectItem.emptyPickListMessage is also implemented by interface:PickList
+94. attr:SelectItem.fetchDisplayedFieldsOnly is also implemented by interface:PickList
+95. attr:SelectItem.filterLocally is also implemented by interface:PickList
+96. attr:SelectItem.iconPlacement is also implemented by interface:PickList
+97. attr:SelectItem.initialSort is also implemented by interface:PickList
 98. attr:SelectItem.optionDataSource is also implemented by interface:PickList
 99. attr:SelectItem.optionFilterContext is also implemented by interface:PickList
 100. attr:SelectItem.pickListConstructor is also implemented by interface:PickList
@@ -1293,12 +1293,12 @@ Skipped methods: 184
 
 ==== The following lines can be copied and pasted in to Excel ======
 Date	Types	Interfaces	Classes	Objects	Methods	Excluded Types	Excluded Classes	Excluded Methods	Excluded Attributes	Methods with bad flags	Classes without inheritsFrom attribute	string values with quotes	string values without quotes	string values with period	Arrays defined as 'array of'	Arrays defined as 'Array of'	Arrays defined as 'Array[] of'	Arrays defined as 'array[] of'	Arrays defined as 'array' or 'Array'	Arrays defined as 'List of'	String types without baseType	Method params with missing name	Method params with bad name	Method params missing type	Methods with required parameters after optional parameters	Setter Methods with parameter type that does not match the attribute type	Suspected optional parameters that are marked with optional='false'	Getter Methods with return type that does not match the attribute type	Attributes missing R flag	Object attributes marked with W flag	String values without reference	String values where reference is found	OR specified as ' \| '	OR specified as ' or '	OR specified as ' \|\| '	OR specified as ', '	Types Generated	Interfaces Generated	Objects Generated	Classes Generated	Unknown types assumed to be string	Unknown Types mapped to any	Weird Types that require special handling	Properties that override a base property with a different type	Methods that override a base method with a different signature	Methods Generated	Methods Skipped	Percentage of Types generated	Percentage of Interfaces generated	Percentage of Objects generated	Percentage of Classes generated	Percentage of Methods generated	Percentage of Methods skipped
-2017-12-15	249	5	298	82	3568	2	2	11	2	0	1	216	666	131	0	241	0	0	8	10	18	0	0	0	1	12	18	1	46	288	0	131	387	0	0	0	247	5	77	296	23	14	8	116	67	3294	184	1.108434	1	0.9390244	0.9932886	0.9232063	0.05156951	
+2018-01-02	249	5	298	82	3568	2	2	11	2	0	1	216	666	131	0	241	0	0	8	10	18	0	0	0	1	12	18	1	46	288	0	131	387	0	0	0	247	5	77	296	23	14	8	116	67	3294	184	1.108434	1	0.9390244	0.9932886	0.9232063	0.05156951	
 
 ====================================================================
 
 ======= Same stuff used in the Progress.MD file =======
-Metrics for build SNAPSHOT_v12.0d_2017-12-15
+Metrics for build SNAPSHOT_v12.0d_2018-01-02
 ===== Information =====
 (Informational only, not a problem)
 Types: 249
