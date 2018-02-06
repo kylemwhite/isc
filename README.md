@@ -1,4 +1,7 @@
 ## Isomorphic SmartClient TypeScript type definitions
+
+## UPDATE: Isomorphic has announced that they will support [TypeScript in their next release (12.0)](http://blog.isomorphic.com/5-more-release-12-0-features/). I will keep this project on GitHub for the time being but am not actively updating it as it covers most of the SmartClient methods already and is 'good enough' for now.
+
 SmartClient Version: SNAPSHOT_v12.0d_2018-01-02
 
 Generated: 1/2/2018 7:15:03 AM
